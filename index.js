@@ -74,7 +74,7 @@ async function startServer() {
         // Initialize database
         await initializeDatabase();
 
-        app.listen(PORT, () => {
+        app.listen(PORT, '0.0.0.0', () => {
             console.log(`
 ╔══════════════════════════════════════════════════════════╗
 ║         🎤 AI Mock Interview Server Started 🎤           ║
