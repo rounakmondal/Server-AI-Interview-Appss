@@ -1,0 +1,23 @@
+{
+  "name": "ai-interview-server",
+  "version": "1.0.0",
+  "description": "AI Mock Interview Backend Server",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-rate-limit": "^7.1.5",
+    "helmet": "^7.1.0",
+    "multer": "^1.4.5-lts.1",
+    "openai": "^4.28.0",
+    "pdf-parse": "^1.1.1",
+    "sql.js": "^1.9.0",
+    "uuid": "^9.0.1"
+  }
+}
