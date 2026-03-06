@@ -8,6 +8,7 @@ import { fileURLToPath } from 'url';
 import { initializeDatabase } from './database/db.js';
 import interviewRoutes from './routes/interview.js';
 import { apiLimiter } from './middleware/security.js';
+import { handleContact } from './routes/contact.js';
 
 // Load environment variables
 dotenv.config();
