@@ -1,4 +1,4 @@
-import { PDFParse } from "pdf-parse";
+import pdf from "pdf-parse";
 
 export const handleExtractPdf = async (req, res) => {
   try {
@@ -10,13 +10,12 @@ export const handleExtractPdf = async (req, res) => {
 
     const buffer = Buffer.from(data, "base64");
 
-    const parser = new PDFParse({ data: buffer });
-    const result = await parser.getText();
+    const result = await pdf(buffer);
     const text = result.text.trim();
 
     if (text.length < 30) {
       return res.status(422).json({
-        error: "Could not extract readable text. The PDF may be image-based or scanned."
+        error: "Could not extract readable text. The PDF may be scanned."
       });
     }
 
