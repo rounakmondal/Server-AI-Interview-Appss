@@ -50,6 +50,7 @@ app.get('/api/health', (req, res) => {
 // Interview routes
 app.use('/api/interview', interviewRoutes);
 app.post('/api/contact', handleContact);
+app.post("/api/extract-pdf", handleExtractPdf);
 // Error handling middleware
 app.use((err, req, res, next) => {
     console.error('Server error:', err);
