@@ -7,6 +7,8 @@ import { fileURLToPath } from 'url';
 
 import { initializeDatabase } from './database/db.js';
 import interviewRoutes from './routes/interview.js';
+import govtRoutes from './routes/govt.js';
+import studyRoutes from './routes/study.js';
 import { handleContact } from './routes/contact.js';
 import { handleExtractPdf } from './routes/extractPdf.js';
 import { apiLimiter } from './middleware/security.js';
@@ -50,6 +52,12 @@ app.get('/api/health', (req, res) => {
 
 // Interview routes
 app.use('/api/interview', interviewRoutes);
+
+// Govt exam routes
+app.use('/api/govt', govtRoutes);
+
+// Study bot routes
+app.use('/api/study', studyRoutes);
 
 // Contact route
     app.post('/api/contact', handleContact);
