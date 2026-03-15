@@ -719,7 +719,7 @@ const FALLBACK_LEADERBOARD = [
 
 const FALLBACK_DASHBOARD = {
   stats: {
-    totalQuestions: QUESTIONS.length,
+    totalQuestions: FALLBACK_QUESTIONS.length,
     totalExams: 5,
     totalSubjects: 6,
     questionsWithPrevYear: FALLBACK_QUESTIONS.filter(q => q.year !== undefined).length,
