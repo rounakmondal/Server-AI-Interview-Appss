@@ -19,10 +19,14 @@
     "openai": "^4.28.0",
     "pdf-parse": "^1.1.1",
     "sql.js": "^1.9.0",
+<<<<<<< HEAD
     "uuid": "^9.0.1",
     "mongodb": "^6.12.0",
     "bcryptjs": "^2.4.3",
     "jsonwebtoken": "^9.0.2"
+=======
+    "uuid": "^9.0.1"
+>>>>>>> 7a20ccd (added)
   },
   "devDependencies": {
     "@types/express": "^5.0.6",

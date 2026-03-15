@@ -11,7 +11,10 @@ import { seedExamData } from './database/examDb.js';
 import interviewRoutes from './routes/interview.js';
 import govtRoutes from './routes/govt.js';
 import studyRoutes from './routes/study.js';
+<<<<<<< HEAD
 import authRoutes from './routes/auth.js';
+=======
+>>>>>>> 7a20ccd (added)
 import { handleContact } from './routes/contact.js';
 import { handleExtractPdf } from './routes/extractPdf.js';
 import { apiLimiter } from './middleware/security.js';
@@ -67,9 +70,12 @@ app.use('/api/govt', govtRoutes);
 // Study bot routes
 app.use('/api/study', studyRoutes);
 
+<<<<<<< HEAD
 // Auth routes
 app.use('/api/auth', authRoutes);
 
+=======
+>>>>>>> 7a20ccd (added)
 // Contact route
     app.post('/api/contact', handleContact);
   app.post("/api/extract-pdf", handleExtractPdf);

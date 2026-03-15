@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+import OpenAI from 'openai';
+
+// Initialize OpenAI client for vision capabilities
+const openai = new OpenAI({
+    apiKey: process.env.OPENAI_API_KEY,
+});
+>>>>>>> 7a20ccd (added)
 
 // Fallback to Groq for text-only if OpenAI not available
 async function getGroqChatCompletion(messages, maxTokens = 500) {
@@ -37,7 +46,11 @@ async function getGroqChatCompletion(messages, maxTokens = 500) {
                 }),
                 signal: controller.signal
             });
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> 7a20ccd (added)
             clearTimeout(timeoutId);
 
             if (!response.ok) {
