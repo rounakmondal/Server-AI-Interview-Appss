@@ -1,9 +1,3 @@
-import OpenAI from 'openai';
-
-// Initialize OpenAI client for vision capabilities
-const openai = new OpenAI({
-    apiKey: process.env.OPENAI_API_KEY,
-});
 
 // Fallback to Groq for text-only if OpenAI not available
 async function getGroqChatCompletion(messages, maxTokens = 500) {
