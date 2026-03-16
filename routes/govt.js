@@ -4,23 +4,36 @@ const router = Router();
 
 // ─── Valid Enums ──────────────────────────────────────────────────────────────
 
-const VALID_EXAMS       = ['WBCS', 'SSC', 'Railway', 'Banking', 'Police'];
-const VALID_SUBJECTS    = ['History', 'Geography', 'Polity', 'Reasoning', 'Math', 'Current Affairs'];
+const VALID_EXAMS        = ['WBCS', 'SSC', 'Railway', 'Banking', 'Police'];
+const VALID_SUBJECTS     = ['History', 'Geography', 'Polity', 'Reasoning', 'Math', 'Current Affairs'];
 const VALID_DIFFICULTIES = ['Easy', 'Medium', 'Hard'];
 
 // ─── Groq Helper ─────────────────────────────────────────────────────────────
 
+// NOTE: openai/gpt-oss-120b is intentionally placed LAST.
+// It tends to truncate large JSON responses. We prefer llama models first.
 const GROQ_MODELS = [
   'llama-3.3-70b-versatile',
-  'openai/gpt-oss-120b',
   'llama-3.1-8b-instant',
+  'openai/gpt-oss-120b',
 ];
+
+// Max tokens each model can reliably produce without truncation.
+// openai/gpt-oss-120b consistently truncates above ~1500 tokens.
+const MODEL_TOKEN_CAPS = {
+  'llama-3.3-70b-versatile': 8000,
+  'llama-3.1-8b-instant':    4000,
+  'openai/gpt-oss-120b':     1200, // conservative cap to avoid truncation
+};
 
 async function callGroq(systemPrompt, userPrompt, maxTokens = 2000) {
   const apiKey = process.env.GROQ_API_KEY;
   if (!apiKey) throw new Error('GROQ_API_KEY not set');
 
   for (const model of GROQ_MODELS) {
+    // Cap tokens to what this model can reliably handle
+    const effectiveTokens = Math.min(maxTokens, MODEL_TOKEN_CAPS[model] ?? 2000);
+
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), 30000);
     try {
@@ -30,7 +43,7 @@ async function callGroq(systemPrompt, userPrompt, maxTokens = 2000) {
         body: JSON.stringify({
           model,
           temperature: 0.7,
-          max_tokens: maxTokens,
+          max_tokens: effectiveTokens,
           top_p: 0.9,
           messages: [
             { role: 'system', content: systemPrompt },
@@ -40,11 +53,25 @@ async function callGroq(systemPrompt, userPrompt, maxTokens = 2000) {
         signal: controller.signal,
       });
       clearTimeout(timer);
-      if (!res.ok) { console.warn(`[govt] model ${model} HTTP ${res.status}`); continue; }
-      const data = await res.json();
+
+      if (!res.ok) {
+        const errText = await res.text().catch(() => '');
+        console.warn(`[govt] model ${model} HTTP ${res.status}: ${errText.slice(0, 120)}`);
+        continue;
+      }
+
+      const data    = await res.json();
       const content = data.choices?.[0]?.message?.content?.trim();
+      const finishReason = data.choices?.[0]?.finish_reason;
+
       if (!content) { console.warn(`[govt] model ${model} empty content`); continue; }
-      console.log(`[govt] success with ${model}`);
+
+      // Warn if the model stopped because it ran out of tokens (likely truncated JSON)
+      if (finishReason === 'length') {
+        console.warn(`[govt] model ${model} hit token limit (finish_reason=length) — response may be truncated`);
+      }
+
+      console.log(`[govt] success with ${model} (finish_reason=${finishReason}, tokens=${effectiveTokens})`);
       return content;
     } catch (err) {
       clearTimeout(timer);
@@ -54,28 +81,213 @@ async function callGroq(systemPrompt, userPrompt, maxTokens = 2000) {
   throw new Error('All Groq models failed');
 }
 
+// ─── JSON Extraction & Repair ─────────────────────────────────────────────────
+
+/**
+ * Attempts to extract valid JSON from a raw string.
+ * If the JSON is truncated (unmatched brackets), tries to repair it by
+ * closing open arrays/objects before parsing.
+ */
 function extractJSON(text) {
-  const stripped = text.replace(/```(?:json)?\s*/gi, '').replace(/```/g, '').trim();
-  const start = Math.min(
-    stripped.indexOf('[') === -1 ? Infinity : stripped.indexOf('['),
-    stripped.indexOf('{') === -1 ? Infinity : stripped.indexOf('{'),
-  );
-  if (start === Infinity) throw new Error('No JSON found in AI response');
-  return JSON.parse(stripped.slice(start));
+  try {
+    const cleaned = text.replace(/```json\s*/gi, '').replace(/```\s*/g, '').trim();
+
+    const startBrace   = cleaned.indexOf('{');
+    const startBracket = cleaned.indexOf('[');
+    const start = Math.min(
+      startBrace   === -1 ? Infinity : startBrace,
+      startBracket === -1 ? Infinity : startBracket,
+    );
+
+    if (start === Infinity) {
+      console.error('[extractJSON] No JSON start found');
+      return null;
+    }
+
+    const isArray  = cleaned[start] === '[';
+    const openChar  = isArray ? '[' : '{';
+    const closeChar = isArray ? ']' : '}';
+
+    let depth      = 0;
+    let inString   = false;
+    let escapeNext = false;
+    let end        = -1;
+
+    for (let i = start; i < cleaned.length; i++) {
+      const char = cleaned[i];
+      if (escapeNext)           { escapeNext = false; continue; }
+      if (char === '\\')        { escapeNext = true;  continue; }
+      if (char === '"')         { inString = !inString; continue; }
+      if (!inString) {
+        if (char === openChar)  depth++;
+        else if (char === closeChar) {
+          depth--;
+          if (depth === 0) { end = i + 1; break; }
+        }
+      }
+    }
+
+    // Perfect parse
+    if (end !== -1) {
+      const json = cleaned.substring(start, end);
+      console.log(`[extractJSON] Clean extract: ${end - start} chars`);
+      return JSON.parse(json);
+    }
+
+    // Truncated — attempt repair
+    console.warn('[extractJSON] Unmatched brackets detected — attempting repair');
+    return repairTruncatedJSON(cleaned.substring(start), isArray);
+
+  } catch (err) {
+    console.error(`[extractJSON] Parse failed: ${err.message}`);
+    return null;
+  }
 }
+
+/**
+ * Tries to salvage partial JSON by:
+ * 1. Removing incomplete last element
+ * 2. Closing all open brackets/braces in correct order
+ */
+function repairTruncatedJSON(partial, isArray) {
+  try {
+    // Track bracket stack to know what needs closing
+    const stack    = [];
+    let inString   = false;
+    let escapeNext = false;
+    let lastComma  = -1; // position of last top-level comma (to trim incomplete trailing element)
+
+    for (let i = 0; i < partial.length; i++) {
+      const char = partial[i];
+      if (escapeNext)     { escapeNext = false; continue; }
+      if (char === '\\')  { escapeNext = true;  continue; }
+      if (char === '"')   { inString = !inString; continue; }
+      if (inString) continue;
+
+      if (char === '{' || char === '[') {
+        stack.push(char);
+        if (stack.length === 1 && i > 0) lastComma = -1; // reset for nested
+      } else if (char === '}' || char === ']') {
+        stack.pop();
+      } else if (char === ',' && stack.length === 1) {
+        lastComma = i;
+      }
+    }
+
+    if (stack.length === 0) {
+      // Brackets are balanced — might just be a trailing comma issue
+      return JSON.parse(partial.replace(/,\s*([}\]])/g, '$1'));
+    }
+
+    // Trim the partial text: cut off at the last safe comma at depth-1
+    let safe = partial;
+    if (lastComma > 0) {
+      safe = partial.substring(0, lastComma);
+    }
+
+    // Close all open structures in reverse order
+    const closings = stack.reverse().map(c => c === '{' ? '}' : ']').join('');
+    const repaired = safe + closings;
+
+    console.log(`[repairJSON] Repaired: trimmed to ${safe.length} chars, appended "${closings}"`);
+    const parsed = JSON.parse(repaired);
+
+    // For arrays, validate we got at least something useful
+    if (Array.isArray(parsed) && parsed.length === 0) {
+      console.warn('[repairJSON] Repair produced empty array');
+      return null;
+    }
+
+    console.log(`[repairJSON] Success — recovered ${Array.isArray(parsed) ? parsed.length + ' items' : 'object'}`);
+    return parsed;
+  } catch (err) {
+    console.error(`[repairJSON] Repair failed: ${err.message}`);
+    return null;
+  }
+}
+
+// ─── Fetch JSON with retries ──────────────────────────────────────────────────
 
 async function fetchJSONFromGroq(systemPrompt, userPrompt, maxTokens, maxRetries = 3) {
   let lastErr;
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
     try {
-      const raw = await callGroq(systemPrompt, userPrompt, maxTokens);
-      return extractJSON(raw);
+      const raw       = await callGroq(systemPrompt, userPrompt, maxTokens);
+      const extracted = extractJSON(raw);
+
+      if (!extracted) {
+        lastErr = new Error('Failed to extract valid JSON from AI response');
+        console.warn(`[govt] attempt ${attempt}/${maxRetries} failed: ${lastErr.message}`);
+        continue;
+      }
+
+      return extracted;
     } catch (err) {
       lastErr = err;
       console.warn(`[govt] attempt ${attempt}/${maxRetries} failed:`, err.message);
     }
   }
-  throw lastErr;
+  throw lastErr || new Error('All retries exhausted');
+}
+
+// ─── Batched Question Generation ─────────────────────────────────────────────
+// Generates questions in small batches to avoid token limit truncation,
+// then merges all batches into one result array.
+
+const BATCH_SIZE = 5; // safe size per AI call — keeps response well under token caps
+
+async function generateQuestionsBatched(exam, subject, difficulty, totalCount) {
+  const batches     = Math.ceil(totalCount / BATCH_SIZE);
+  const allQuestions = [];
+
+  const system = `You are an expert question-setter for Indian government competitive exams.
+Always respond with ONLY a valid JSON array — no markdown, no explanation, no prose.
+Each array element must be a complete, self-contained question object.`;
+
+  for (let b = 0; b < batches; b++) {
+    const batchN      = Math.min(BATCH_SIZE, totalCount - allQuestions.length);
+    const startId     = allQuestions.length + 1;
+
+    const user = `Generate exactly ${batchN} multiple-choice questions for:
+- Exam: ${exam}
+- Subject: ${subject}
+- Difficulty: ${difficulty}
+- Start IDs from: ${startId}
+
+Each question MUST follow this exact JSON shape (no extra fields):
+{
+  "id": <number>,
+  "exam": "${exam}",
+  "subject": "${subject}",
+  "difficulty": "${difficulty}",
+  "year": <YYYY or null>,
+  "question": "<question text>",
+  "options": ["<A>","<B>","<C>","<D>"],
+  "correctIndex": <0|1|2|3>,
+  "explanation": "<English explanation>",
+  "explanationBn": "<Bengali explanation>"
+}
+
+Return ONLY a JSON array of exactly ${batchN} objects. No markdown fences. No preamble.`;
+
+    // ~350 tokens per question is a safe estimate for this format
+    const tokenBudget = batchN * 400 + 200;
+
+    try {
+      const questions = await fetchJSONFromGroq(system, user, tokenBudget, 2);
+      if (Array.isArray(questions)) {
+        allQuestions.push(...questions);
+        console.log(`[govt] batch ${b + 1}/${batches}: got ${questions.length} questions (total: ${allQuestions.length})`);
+      }
+    } catch (err) {
+      console.warn(`[govt] batch ${b + 1}/${batches} failed:`, err.message);
+      // Continue — we'll use what we have + fallback for the rest
+    }
+
+    if (allQuestions.length >= totalCount) break;
+  }
+
+  return allQuestions;
 }
 
 // ─── Fallback Seed: Questions ─────────────────────────────────────────────────
@@ -320,7 +532,7 @@ const FALLBACK_QUESTIONS = [
     question: 'If 6×4=20 and 7×5=24, then 9×8=?',
     options: ['34', '40', '72', '42'],
     correctIndex: 0,
-    explanation: 'Pattern: a+b+(a+b-2) = 2(a+b)-2. For 9,8: 2×17-2 = 32. Alternate: a+b+ab/6. Actually a×b-(a+b)/2: 6×4-5=19≠20. Try a+b+10=20 for (6,4)→20; (7,5)→24; (9,8)→25≠34. Pattern: (a-1)(b-1)+5: (5)(3)+5=20✓; (6)(4)+5=29≠24. Pattern a×b-ab/something. Sum pattern: 6+4=10+10=20; 7+5=12+12=24; 9+8=17+17=34.',
+    explanation: 'Pattern: sum × 2 = result. 6+4=10→20; 7+5=12→24; 9+8=17→34.',
     explanationBn: 'ধারার নিয়ম: a+b এর দ্বিগুণ = ৩৪।'
   },
   {
@@ -672,9 +884,9 @@ const FALLBACK_CURRENT_AFFAIRS = {
     }
   ],
   weeklyQuiz: [
-    { id: 1, topic: 'Current Affairs – February 2025',           questionCount: 10, duration: '10 min', difficulty: 'Medium' },
+    { id: 1, topic: 'Current Affairs – February 2025',            questionCount: 10, duration: '10 min', difficulty: 'Medium' },
     { id: 2, topic: 'West Bengal Special Focus – Districts & History', questionCount: 10, duration: '10 min', difficulty: 'Easy' },
-    { id: 3, topic: 'Indian Polity & Constitution',               questionCount: 15, duration: '15 min', difficulty: 'Hard'  }
+    { id: 3, topic: 'Indian Polity & Constitution',                questionCount: 15, duration: '15 min', difficulty: 'Hard' }
   ],
   monthlyTopics: [
     {
@@ -742,15 +954,15 @@ const FALLBACK_DASHBOARD = {
     { subject: 'Math',            attemptCount: 20100, avgScore: 55 },
   ],
   recentActivity: [
-    { type: 'quiz_completed', user: 'Arjun M.',  score: 9,  total: 10, subject: 'History',   timeAgo: '5 min ago'  },
-    { type: 'quiz_completed', user: 'Priya B.',  score: 8,  total: 10, subject: 'Geography', timeAgo: '12 min ago' },
-    { type: 'quiz_completed', user: 'Suvam C.',  score: 7,  total: 10, subject: 'Polity',    timeAgo: '20 min ago' },
-    { type: 'quiz_completed', user: 'Debjani R.',score: 10, total: 10, subject: 'Reasoning', timeAgo: '35 min ago' },
-    { type: 'quiz_completed', user: 'Rahul D.',  score: 6,  total: 10, subject: 'Math',      timeAgo: '47 min ago' },
+    { type: 'quiz_completed', user: 'Arjun M.',   score: 9,  total: 10, subject: 'History',   timeAgo: '5 min ago'  },
+    { type: 'quiz_completed', user: 'Priya B.',   score: 8,  total: 10, subject: 'Geography', timeAgo: '12 min ago' },
+    { type: 'quiz_completed', user: 'Suvam C.',   score: 7,  total: 10, subject: 'Polity',    timeAgo: '20 min ago' },
+    { type: 'quiz_completed', user: 'Debjani R.', score: 10, total: 10, subject: 'Reasoning', timeAgo: '35 min ago' },
+    { type: 'quiz_completed', user: 'Rahul D.',   score: 6,  total: 10, subject: 'Math',      timeAgo: '47 min ago' },
   ],
 };
 
-// ─── Helper ───────────────────────────────────────────────────────────────────
+// ─── Helpers ──────────────────────────────────────────────────────────────────
 
 function shuffle(arr) {
   const a = [...arr];
@@ -767,53 +979,69 @@ function assignRanks(arr, scoreKey) {
     .map((entry, idx) => ({ ...entry, rank: idx + 1 }));
 }
 
+// Validates that a question object has all required fields
+function isValidQuestion(q) {
+  return (
+    q &&
+    typeof q.question === 'string' && q.question.length > 5 &&
+    Array.isArray(q.options) && q.options.length === 4 &&
+    typeof q.correctIndex === 'number' && q.correctIndex >= 0 && q.correctIndex <= 3 &&
+    typeof q.explanation === 'string'
+  );
+}
+
 // ─── Endpoint 1: GET /questions ───────────────────────────────────────────────
 
 router.get('/questions', async (req, res) => {
   const { exam, subject, difficulty, count } = req.query;
 
   if (!VALID_EXAMS.includes(exam))
-    return res.status(400).json({ error: 'Invalid exam/subject/difficulty value' });
+    return res.status(400).json({ error: 'Invalid exam value' });
   if (!VALID_SUBJECTS.includes(subject))
-    return res.status(400).json({ error: 'Invalid exam/subject/difficulty value' });
+    return res.status(400).json({ error: 'Invalid subject value' });
   if (!VALID_DIFFICULTIES.includes(difficulty))
-    return res.status(400).json({ error: 'Invalid exam/subject/difficulty value' });
+    return res.status(400).json({ error: 'Invalid difficulty value' });
 
   const n = Math.min(100, Math.max(10, parseInt(count ?? '10', 10) || 10));
 
-  const system = `You are an expert question-setter for Indian government competitive exams.
-Always respond with ONLY a valid JSON array, no markdown, no explanation.`;
-
-  const user = `Generate exactly ${n} multiple-choice questions for:
-- Exam: ${exam}
-- Subject: ${subject}
-- Difficulty: ${difficulty}
-
-Each question must follow this exact JSON shape:
-{
-  "id": <number>,
-  "exam": "${exam}",
-  "subject": "${subject}",
-  "difficulty": "${difficulty}",
-  "year": <YYYY>,
-  "question": "<question text>",
-  "options": ["<A>","<B>","<C>","<D>"],
-  "correctIndex": <0|1|2|3>,
-  "explanation": "<English explanation>",
-  "explanationBn": "<Bengali explanation>"
-}
-
-Return a JSON array of exactly ${n} such objects. No markdown fences.`;
-
   try {
-    const questions = await fetchJSONFromGroq(system, user, Math.min(4000, n * 350));
-    if (!Array.isArray(questions) || questions.length === 0) throw new Error('AI returned empty array');
-    return res.json(shuffle(questions).slice(0, n));
+    // Use batched generation — each batch is only 5 questions to stay within token limits
+    const aiQuestions = await generateQuestionsBatched(exam, subject, difficulty, n);
+
+    // Filter out any malformed questions the AI might have returned
+    const valid = aiQuestions.filter(isValidQuestion);
+
+    if (valid.length >= Math.min(n, 5)) {
+      // Tag each question with correct metadata (AI sometimes gets these wrong)
+      const tagged = valid.map((q, i) => ({
+        ...q,
+        id: i + 1,
+        exam,
+        subject,
+        difficulty,
+      }));
+      console.log(`[govt /questions] Returning ${tagged.length} AI questions`);
+      return res.json(shuffle(tagged).slice(0, n));
+    }
+
+    throw new Error(`AI returned only ${valid.length} valid questions out of ${aiQuestions.length}`);
   } catch (err) {
-    console.error('[govt /questions] AI failed after retries, using fallback:', err.message);
-    let pool = FALLBACK_QUESTIONS.filter(q => q.exam === exam && q.subject === subject && q.difficulty === difficulty);
-    if (pool.length < n) pool = FALLBACK_QUESTIONS.filter(q => q.exam === exam && q.subject === subject);
-    if (pool.length < n) pool = FALLBACK_QUESTIONS.filter(q => q.exam === exam);
+    console.error('[govt /questions] AI failed, using fallback:', err.message);
+
+    // Multi-tier fallback: exact match → same exam+subject → same exam → all
+    let pool = FALLBACK_QUESTIONS.filter(q =>
+      q.exam === exam && q.subject === subject && q.difficulty === difficulty
+    );
+    if (pool.length < n) {
+      pool = FALLBACK_QUESTIONS.filter(q => q.exam === exam && q.subject === subject);
+    }
+    if (pool.length < n) {
+      pool = FALLBACK_QUESTIONS.filter(q => q.exam === exam);
+    }
+    if (pool.length === 0) {
+      pool = FALLBACK_QUESTIONS;
+    }
+
     return res.json(shuffle(pool).slice(0, n));
   }
 });
@@ -823,7 +1051,7 @@ Return a JSON array of exactly ${n} such objects. No markdown fences.`;
 router.get('/prev-year-questions', async (req, res) => {
   const { exam, year, subject } = req.query;
 
-  if (exam    && !VALID_EXAMS.includes(exam))    return res.status(400).json({ error: 'Invalid exam value' });
+  if (exam    && !VALID_EXAMS.includes(exam))       return res.status(400).json({ error: 'Invalid exam value' });
   if (subject && !VALID_SUBJECTS.includes(subject)) return res.status(400).json({ error: 'Invalid subject value' });
 
   const examLabel    = exam    ? `Exam: ${exam}`       : 'any govt exam (WBCS/SSC/Railway/Banking/Police)';
@@ -831,9 +1059,10 @@ router.get('/prev-year-questions', async (req, res) => {
   const subjectLabel = subject ? `Subject: ${subject}` : 'mixed subjects';
 
   const system = `You are an expert on previous-year Indian government competitive exam questions.
-Always respond with ONLY a valid JSON array, no markdown, no explanation.`;
+Always respond with ONLY a valid JSON array — no markdown, no explanation.`;
 
-  const user = `Generate 15 previous-year multiple-choice questions for:
+  // Generate in a single small batch (15 questions max for prev-year)
+  const user = `Generate exactly 10 previous-year multiple-choice questions for:
 - ${examLabel}
 - ${yearLabel}
 - ${subjectLabel}
@@ -852,15 +1081,19 @@ Each question MUST have a "year" field and follow this JSON shape:
   "explanationBn": "<Bengali explanation>"
 }
 
-Return a JSON array. No markdown fences.`;
+Return a JSON array of exactly 10 objects. No markdown fences. No preamble.`;
 
   try {
-    const questions = await fetchJSONFromGroq(system, user, 5000);
+    // 10 questions × ~400 tokens each = ~4000 token budget
+    const questions = await fetchJSONFromGroq(system, user, 4200, 2);
     if (!Array.isArray(questions) || questions.length === 0) throw new Error('AI returned empty array');
-    let result = questions.filter(q => q.year !== undefined);
+
+    let result = questions.filter(q => q.year !== undefined && isValidQuestion(q));
     if (exam)    result = result.filter(q => q.exam === exam);
     if (year)    result = result.filter(q => String(q.year) === String(year));
     if (subject) result = result.filter(q => q.subject === subject);
+
+    if (result.length === 0) throw new Error('No matching questions after filtering');
     return res.json(result);
   } catch (err) {
     console.error('[govt /prev-year-questions] AI failed, using fallback:', err.message);
@@ -878,30 +1111,30 @@ router.get('/current-affairs', async (_req, res) => {
   const today = new Date().toISOString().split('T')[0];
 
   const system = `You are an expert on Indian current affairs, especially West Bengal.
-Always respond with ONLY a valid JSON object, no markdown, no explanation.`;
+Always respond with ONLY a valid JSON object — no markdown, no explanation.`;
 
   const user = `Generate current affairs data as of ${today} in this exact JSON shape:
 {
   "news": [
-    { "id": <n>, "title": "<headline>", "summary": "<2-3 sentence summary>", "category": "<category>", "date": "<YYYY-MM-DD>", "source": "<source>", "tags": ["<tag1>","<tag2>"] }
+    { "id": 1, "title": "<headline>", "summary": "<2-3 sentence summary>", "category": "<category>", "date": "<YYYY-MM-DD>", "source": "<source>", "tags": ["<tag1>","<tag2>"] }
   ],
   "weeklyQuiz": [
-    { "id": <n>, "topic": "<topic>", "questionCount": <10|15>, "duration": "<N min>", "difficulty": "<Easy|Medium|Hard>" }
+    { "id": 1, "topic": "<topic>", "questionCount": 10, "duration": "<N min>", "difficulty": "<Easy|Medium|Hard>" }
   ],
   "monthlyTopics": [
-    { "id": <n>, "topic": "<topic>", "subtopics": ["<sub1>","<sub2>","<sub3>"], "targetExams": ["<exam1>","<exam2>"] }
+    { "id": 1, "topic": "<topic>", "subtopics": ["<sub1>","<sub2>","<sub3>"], "targetExams": ["<exam1>","<exam2>"] }
   ]
 }
 
 Requirements:
-- Exactly 7 news items with real, relevant 2025 events for WBCS/SSC/Railway/Banking/Police aspirants
+- Exactly 7 news items relevant to 2025 for WBCS/SSC/Railway/Banking/Police aspirants
 - Exactly 3 weeklyQuiz items
 - Exactly 3 monthlyTopics
-No markdown fences.`;
+No markdown fences. No preamble.`;
 
   try {
     const data = await fetchJSONFromGroq(system, user, 3000);
-    if (!data.news || !Array.isArray(data.news)) throw new Error('Invalid structure');
+    if (!data || !Array.isArray(data.news)) throw new Error('Invalid structure');
     return res.json(data);
   } catch (err) {
     console.error('[govt /current-affairs] AI failed, using fallback:', err.message);
@@ -917,9 +1150,9 @@ router.get('/leaderboard', async (req, res) => {
     return res.status(400).json({ error: "filter must be 'weekly' or 'monthly'" });
 
   const system = `You are generating a mock leaderboard for a West Bengal government exam prep platform.
-Always respond with ONLY a valid JSON array, no markdown, no explanation.`;
+Always respond with ONLY a valid JSON array — no markdown, no explanation.`;
 
-  const user = `Generate 12 unique leaderboard entries. Each entry:
+  const user = `Generate exactly 12 unique leaderboard entries. Each entry:
 {
   "name": "<Bengali full name>",
   "district": "<West Bengal district>",
@@ -929,7 +1162,7 @@ Always respond with ONLY a valid JSON array, no markdown, no explanation.`;
 }
 
 Use real WB districts (Kolkata, Howrah, Bardhaman, Nadia, Murshidabad, Hooghly, North 24 Parganas, South 24 Parganas, Purba Medinipur, Malda, Jalpaiguri, Cooch Behar).
-Return a JSON array of exactly 12 entries. No markdown fences.`;
+Return a JSON array of exactly 12 entries. No markdown fences. No preamble.`;
 
   try {
     const entries = await fetchJSONFromGroq(system, user, 1500);
@@ -949,21 +1182,31 @@ router.get('/dashboard', async (_req, res) => {
   const today = new Date().toISOString().split('T')[0];
 
   const system = `You are generating a dashboard summary for a West Bengal government exam prep platform.
-Always respond with ONLY a valid JSON object, no markdown, no explanation.`;
+Always respond with ONLY a valid JSON object — no markdown, no explanation.`;
 
   const user = `Generate a dashboard JSON object as of ${today}:
 {
-  "stats": { "totalQuestions": <n>, "totalExams": 5, "totalSubjects": 6, "questionsWithPrevYear": <n>, "registeredUsers": <n>, "totalAttempts": <n> },
-  "upcomingExams": [ { "exam": "<name>", "date": "<YYYY-MM-DD>", "daysLeft": <n>, "registrationOpen": <true|false> } ],
-  "topSubjects": [ { "subject": "<History|Geography|Polity|Reasoning|Math|Current Affairs>", "attemptCount": <n>, "avgScore": <40-90> } ],
-  "recentActivity": [ { "type": "quiz_completed", "user": "<name>", "score": <1-10>, "total": 10, "subject": "<subject>", "timeAgo": "<N min ago>" } ]
+  "stats": { "totalQuestions": 5000, "totalExams": 5, "totalSubjects": 6, "questionsWithPrevYear": 2000, "registeredUsers": 28750, "totalAttempts": 142300 },
+  "upcomingExams": [
+    { "exam": "<name>", "date": "<YYYY-MM-DD>", "daysLeft": <n>, "registrationOpen": <true|false> }
+  ],
+  "topSubjects": [
+    { "subject": "<History|Geography|Polity|Reasoning|Math|Current Affairs>", "attemptCount": <n>, "avgScore": <40-90> }
+  ],
+  "recentActivity": [
+    { "type": "quiz_completed", "user": "<name>", "score": <1-10>, "total": 10, "subject": "<subject>", "timeAgo": "<N min ago>" }
+  ]
 }
 
-Requirements: 5 upcoming WB/central govt exams with realistic 2025-2026 dates, all 6 subjects in topSubjects, 5 recentActivity entries. No markdown fences.`;
+Requirements:
+- 5 upcoming WB/central govt exams with realistic 2025-2026 dates
+- All 6 subjects in topSubjects
+- 5 recentActivity entries
+No markdown fences. No preamble.`;
 
   try {
     const data = await fetchJSONFromGroq(system, user, 2000);
-    if (!data.stats || !data.upcomingExams) throw new Error('Invalid structure');
+    if (!data || !data.stats || !data.upcomingExams) throw new Error('Invalid structure');
     return res.json(data);
   } catch (err) {
     console.error('[govt /dashboard] AI failed, using fallback:', err.message);
