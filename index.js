@@ -18,7 +18,7 @@ dotenv.config();
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
-const PORT =8000;
+const PORT =5000;
 
 // Security middleware
 app.use(helmet({
@@ -88,16 +88,16 @@ async function startServer() {
         await initializeDatabase();
 
         app.listen(PORT, '0.0.0.0', () => {
-            console.log(`
+    console.log(`
 ╔══════════════════════════════════════════════════════════╗
 ║         🎤 AI Mock Interview Server Started 🎤           ║
 ╠══════════════════════════════════════════════════════════╣
-║  Server running at: http://localhost:${PORT}               ║
-║  Environment: ${process.env.NODE_ENV || 'development'}                          ║
-║  API Health: http://localhost:${PORT}/api/health           ║
+║  Server running at: http://localhost:${PORT}             ║
+║  Environment: ${process.env.NODE_ENV || 'development'}   ║
+║  API Health: http://localhost:${PORT}/api/health         ║
 ╚══════════════════════════════════════════════════════════╝
-            `);
-        });
+    `);
+})
     } catch (error) {
         console.error('❌ Failed to start server:', error);
         process.exit(1);

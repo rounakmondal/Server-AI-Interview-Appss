@@ -37,7 +37,7 @@ async function getGroqChatCompletion(messages, maxTokens = 500) {
                 }),
                 signal: controller.signal
             });
-
+  
             clearTimeout(timeoutId);
 
             if (!response.ok) {

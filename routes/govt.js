@@ -795,6 +795,7 @@ Each question must follow this exact JSON shape:
   "exam": "${exam}",
   "subject": "${subject}",
   "difficulty": "${difficulty}",
+  "year": <YYYY>,
   "question": "<question text>",
   "options": ["<A>","<B>","<C>","<D>"],
   "correctIndex": <0|1|2|3>,
