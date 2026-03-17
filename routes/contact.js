@@ -117,7 +117,7 @@ export const handleContact = async (req, res) => {
               In the meantime, feel free to explore our platform and start practicing your interview skills!
             </p>
             <div style="text-align: center; margin: 28px 0;">
-              <a href="${process.env.VITE_APP_URL || "https://interviewai.in"}/setup" 
+              <a href="${process.env.VITE_APP_URL || "https://interviewsathi.online/setup"}/setup" 
                  style="background: #2F50B7; color: white; padding: 12px 28px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 15px;">
                 Start Practicing
               </a>

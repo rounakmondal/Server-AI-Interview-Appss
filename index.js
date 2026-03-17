@@ -6,12 +6,20 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 import { initializeDatabase } from './database/db.js';
+import { connectMongo } from './database/mongo.js';
+import { seedExamData } from './database/examDb.js';
 import interviewRoutes from './routes/interview.js';
 import govtRoutes from './routes/govt.js';
 import studyRoutes from './routes/study.js';
+import authRoutes from './routes/auth.js';
 import { handleContact } from './routes/contact.js';
 import { handleExtractPdf } from './routes/extractPdf.js';
 import { apiLimiter } from './middleware/security.js';
+import examSyllabusRoutes  from './routes/examSyllabus.js';
+import examProgressRoutes  from './routes/examProgress.js';
+import examTestRoutes      from './routes/examTest.js';
+import examStudyPlanRoutes from './routes/examStudyPlan.js';
+import examAiRoutes        from './routes/examAi.js';
 
 // Load environment variables
 dotenv.config();
@@ -59,9 +67,19 @@ app.use('/api/govt', govtRoutes);
 // Study bot routes
 app.use('/api/study', studyRoutes);
 
+// Auth routes
+app.use('/api/auth', authRoutes);
+
 // Contact route
     app.post('/api/contact', handleContact);
   app.post("/api/extract-pdf", handleExtractPdf);
+
+// ── Exam Prep routes ──────────────────────────────────────────────────────────
+app.use('/api', examSyllabusRoutes);   // GET /api/exams, /api/exams/:id/subjects, etc.
+app.use('/api', examProgressRoutes);   // GET /api/progress/:userId/:examId
+app.use('/api', examTestRoutes);       // GET /api/test/:chapterId/questions, POST /api/test/submit
+app.use('/api', examStudyPlanRoutes);  // GET|POST /api/studyplan/...
+app.use('/api', examAiRoutes);         // POST /api/ai/chapter-guide
 // Error handling middleware
 app.use((err, req, res, next) => {
     console.error('Server error:', err);
@@ -84,8 +102,12 @@ app.use((req, res) => {
 // Initialize database and start server
 async function startServer() {
     try {
-        // Initialize database
+        // Initialize databases
         await initializeDatabase();
+        await connectMongo();
+
+        // Seed exam prep data (no-op if already seeded)
+        seedExamData();
 
         app.listen(PORT, '0.0.0.0', () => {
     console.log(`

@@ -1,4 +1,7 @@
 import { Router } from 'express';
+import { ObjectId } from 'mongodb';
+import { getDb } from '../database/mongo.js';
+import { authMiddleware } from '../middleware/auth.js';
 
 const router = Router();
 
@@ -236,13 +239,17 @@ async function fetchJSONFromGroq(systemPrompt, userPrompt, maxTokens, maxRetries
 
 const BATCH_SIZE = 5; // safe size per AI call — keeps response well under token caps
 
-async function generateQuestionsBatched(exam, subject, difficulty, totalCount) {
+async function generateQuestionsBatched(exam, subject, difficulty, totalCount, language = 'English') {
   const batches     = Math.ceil(totalCount / BATCH_SIZE);
   const allQuestions = [];
 
+  const langInstruction = language !== 'English'
+    ? `\nIMPORTANT: The "question" and "options" fields MUST be written in ${language} language. The "explanation" field should be in English and "explanationBn" in Bengali.`
+    : '';
+
   const system = `You are an expert question-setter for Indian government competitive exams.
 Always respond with ONLY a valid JSON array — no markdown, no explanation, no prose.
-Each array element must be a complete, self-contained question object.`;
+Each array element must be a complete, self-contained question object.${langInstruction}`;
 
   for (let b = 0; b < batches; b++) {
     const batchN      = Math.min(BATCH_SIZE, totalCount - allQuestions.length);
@@ -267,7 +274,7 @@ Each question MUST follow this exact JSON shape (no extra fields):
   "explanation": "<English explanation>",
   "explanationBn": "<Bengali explanation>"
 }
-
+${language !== 'English' ? `\nIMPORTANT: Write the "question" and "options" values in ${language} language.` : ''}
 Return ONLY a JSON array of exactly ${batchN} objects. No markdown fences. No preamble.`;
 
     // ~350 tokens per question is a safe estimate for this format
@@ -993,7 +1000,7 @@ function isValidQuestion(q) {
 // ─── Endpoint 1: GET /questions ───────────────────────────────────────────────
 
 router.get('/questions', async (req, res) => {
-  const { exam, subject, difficulty, count } = req.query;
+  const { exam, subject, difficulty, count, language } = req.query;
 
   if (!VALID_EXAMS.includes(exam))
     return res.status(400).json({ error: 'Invalid exam value' });
@@ -1006,7 +1013,8 @@ router.get('/questions', async (req, res) => {
 
   try {
     // Use batched generation — each batch is only 5 questions to stay within token limits
-    const aiQuestions = await generateQuestionsBatched(exam, subject, difficulty, n);
+    const lang = language || 'English';
+    const aiQuestions = await generateQuestionsBatched(exam, subject, difficulty, n, lang);
 
     // Filter out any malformed questions the AI might have returned
     const valid = aiQuestions.filter(isValidQuestion);
@@ -1142,9 +1150,9 @@ No markdown fences. No preamble.`;
   }
 });
 
-// ─── Endpoint 4: GET /leaderboard ────────────────────────────────────────────
+// ─── Endpoint 4: GET /leaderboard-ai (AI mock data — legacy) ─────────────────
 
-router.get('/leaderboard', async (req, res) => {
+router.get('/leaderboard-ai', async (req, res) => {
   const filter = req.query.filter ?? 'weekly';
   if (filter !== 'weekly' && filter !== 'monthly')
     return res.status(400).json({ error: "filter must be 'weekly' or 'monthly'" });
@@ -1176,9 +1184,9 @@ Return a JSON array of exactly 12 entries. No markdown fences. No preamble.`;
   }
 });
 
-// ─── Endpoint 5: GET /dashboard ──────────────────────────────────────────────
+// ─── Endpoint 5: GET /overview (public AI dashboard) ─────────────────────────
 
-router.get('/dashboard', async (_req, res) => {
+router.get('/overview', async (_req, res) => {
   const today = new Date().toISOString().split('T')[0];
 
   const system = `You are generating a dashboard summary for a West Bengal government exam prep platform.
@@ -1209,8 +1217,237 @@ No markdown fences. No preamble.`;
     if (!data || !data.stats || !data.upcomingExams) throw new Error('Invalid structure');
     return res.json(data);
   } catch (err) {
-    console.error('[govt /dashboard] AI failed, using fallback:', err.message);
+    console.error('[govt /overview] AI failed, using fallback:', err.message);
     return res.json(FALLBACK_DASHBOARD);
+  }
+});
+
+// ─── Endpoint 6: POST /submit-score (Auth required) ──────────────────────────
+
+router.post('/submit-score', authMiddleware, async (req, res) => {
+  try {
+    const { exam, subject, difficulty, totalQuestions, correct, wrong, unanswered, accuracy, timeTakenSeconds } = req.body;
+
+    if (!VALID_EXAMS.includes(exam))
+      return res.status(400).json({ success: false, message: 'Invalid exam' });
+    if (!VALID_SUBJECTS.includes(subject))
+      return res.status(400).json({ success: false, message: 'Invalid subject' });
+    if (!VALID_DIFFICULTIES.includes(difficulty))
+      return res.status(400).json({ success: false, message: 'Invalid difficulty' });
+    if (typeof totalQuestions !== 'number' || typeof correct !== 'number' ||
+        typeof wrong !== 'number' || typeof unanswered !== 'number' ||
+        typeof accuracy !== 'number' || typeof timeTakenSeconds !== 'number')
+      return res.status(400).json({ success: false, message: 'All numeric fields are required' });
+
+    const db = getDb();
+    const userId = new ObjectId(req.userId);
+
+    await db.collection('scores').insertOne({
+      userId,
+      exam,
+      subject,
+      difficulty,
+      totalQuestions,
+      correct,
+      wrong,
+      unanswered,
+      accuracy,
+      timeTakenSeconds,
+      createdAt: new Date(),
+    });
+
+    // Total tests by this user
+    const totalTests = await db.collection('scores').countDocuments({ userId });
+
+    // Calculate rank: avg accuracy per user, sorted desc
+    const rankings = await db.collection('scores').aggregate([
+      { $group: { _id: '$userId', avgAcc: { $avg: '$accuracy' } } },
+      { $sort: { avgAcc: -1 } },
+    ]).toArray();
+
+    const newRank = rankings.findIndex(r => r._id.equals(userId)) + 1;
+
+    return res.status(201).json({ success: true, message: 'Score submitted', newRank, totalTests });
+  } catch (err) {
+    console.error('[govt /submit-score]', err);
+    return res.status(500).json({ success: false, message: 'Failed to submit score' });
+  }
+});
+
+// ─── Endpoint 7: GET /leaderboard (Public) ────────────────────────────────────
+
+router.get('/leaderboard', async (req, res) => {
+  const filter = req.query.filter === 'monthly' ? 'monthly' : 'weekly';
+  try {
+    const db = getDb();
+    const now = new Date();
+    const weekAgo  = new Date(now.getTime() - 7  * 24 * 60 * 60 * 1000);
+    const monthAgo = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000);
+
+    // Build a pipeline that calculates BOTH weekly and monthly scores,
+    // then sorts by the requested filter
+    const pipeline = [
+      { $match: { createdAt: { $gte: monthAgo } } },
+      {
+        $facet: {
+          weekly: [
+            { $match: { createdAt: { $gte: weekAgo } } },
+            { $group: { _id: '$userId', weeklyScore: { $avg: '$accuracy' }, weeklyTests: { $sum: 1 } } },
+          ],
+          monthly: [
+            { $group: { _id: '$userId', monthlyScore: { $avg: '$accuracy' }, monthlyTests: { $sum: 1 } } },
+          ],
+        },
+      },
+    ];
+
+    const [facetResult] = await db.collection('scores').aggregate(pipeline).toArray();
+
+    // Merge weekly + monthly by userId
+    const userMap = new Map();
+    for (const m of facetResult.monthly) {
+      userMap.set(m._id.toString(), {
+        userId: m._id,
+        monthlyScore: Math.round(m.monthlyScore),
+        totalTests: m.monthlyTests,
+        weeklyScore: 0,
+      });
+    }
+    for (const w of facetResult.weekly) {
+      const key = w._id.toString();
+      if (userMap.has(key)) {
+        userMap.get(key).weeklyScore = Math.round(w.weeklyScore);
+      } else {
+        userMap.set(key, {
+          userId: w._id,
+          weeklyScore: Math.round(w.weeklyScore),
+          monthlyScore: 0,
+          totalTests: w.weeklyTests,
+        });
+      }
+    }
+
+    // Sort by the requested score
+    const sortKey = filter === 'monthly' ? 'monthlyScore' : 'weeklyScore';
+    const sorted = [...userMap.values()]
+      .sort((a, b) => b[sortKey] - a[sortKey])
+      .slice(0, 50);
+
+    // Lookup user details
+    const userIds = sorted.map(s => s.userId);
+    const users = await db.collection('users').find({ _id: { $in: userIds } }).toArray();
+    const userLookup = new Map(users.map(u => [u._id.toString(), u]));
+
+    const badges = ['gold', 'silver', 'bronze'];
+    const result = sorted.map((entry, idx) => {
+      const u = userLookup.get(entry.userId.toString()) || {};
+      const name = u.name || 'Anonymous';
+      const initials = name.split(' ').map(w => w[0]).join('').toUpperCase().slice(0, 2);
+      return {
+        rank: idx + 1,
+        name,
+        district: u.district || '',
+        state: u.state || 'West Bengal',
+        avatar: initials,
+        weeklyScore: entry.weeklyScore,
+        monthlyScore: entry.monthlyScore,
+        totalTests: entry.totalTests,
+        badge: badges[idx] || 'standard',
+      };
+    });
+
+    return res.json(result);
+  } catch (err) {
+    console.error('[govt /leaderboard]', err);
+    return res.json(assignRanks(FALLBACK_LEADERBOARD, filter === 'monthly' ? 'monthlyScore' : 'weeklyScore'));
+  }
+});
+
+// ─── Endpoint 8: GET /dashboard (Auth required — personal stats) ──────────────
+
+router.get('/dashboard', authMiddleware, async (req, res) => {
+  try {
+    const db = getDb();
+    const userId = new ObjectId(req.userId);
+    const now = new Date();
+    const weekAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
+
+    const allScores = await db.collection('scores')
+      .find({ userId })
+      .sort({ createdAt: -1 })
+      .toArray();
+
+    if (allScores.length === 0) {
+      return res.json({
+        totalTests: 0,
+        averageScore: 0,
+        weeklyTests: 0,
+        strongSubjects: [],
+        weakSubjects: [],
+        recentTests: [],
+        subjectScores: [],
+        progressData: [],
+      });
+    }
+
+    const totalTests = allScores.length;
+    const averageScore = Math.round(allScores.reduce((s, q) => s + q.accuracy, 0) / totalTests);
+    const weeklyTests = allScores.filter(s => s.createdAt >= weekAgo).length;
+
+    // Subject breakdown
+    const subjectMap = new Map();
+    for (const s of allScores) {
+      if (!subjectMap.has(s.subject)) subjectMap.set(s.subject, { total: 0, count: 0 });
+      const entry = subjectMap.get(s.subject);
+      entry.total += s.accuracy;
+      entry.count++;
+    }
+    const subjectScores = [...subjectMap.entries()].map(([subject, data]) => ({
+      subject,
+      score: Math.round(data.total / data.count),
+      tests: data.count,
+    }));
+    subjectScores.sort((a, b) => b.score - a.score);
+
+    const strongSubjects = subjectScores.filter(s => s.score >= 75).map(s => s.subject);
+    const weakSubjects   = subjectScores.filter(s => s.score < 60).map(s => s.subject);
+
+    // Recent 10 tests
+    const recentTests = allScores.slice(0, 10).map(s => ({
+      date: s.createdAt.toISOString().split('T')[0],
+      exam: s.exam,
+      score: s.correct,
+      total: s.totalQuestions,
+    }));
+
+    // Weekly progress — last 9 weeks
+    const MONTH_ABBR = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    const progressData = [];
+    for (let w = 8; w >= 0; w--) {
+      const weekStart = new Date(now.getTime() - (w + 1) * 7 * 24 * 60 * 60 * 1000);
+      const weekEnd   = new Date(now.getTime() - w * 7 * 24 * 60 * 60 * 1000);
+      const weekScores = allScores.filter(s => s.createdAt >= weekStart && s.createdAt < weekEnd);
+      const avg = weekScores.length > 0
+        ? Math.round(weekScores.reduce((sum, s) => sum + s.accuracy, 0) / weekScores.length)
+        : 0;
+      const mon = MONTH_ABBR[weekEnd.getMonth()];
+      const weekNum = Math.ceil(weekEnd.getDate() / 7);
+      progressData.push({ week: `${mon} W${weekNum}`, score: avg });
+    }
+
+    return res.json({
+      totalTests,
+      averageScore,
+      weeklyTests,
+      strongSubjects,
+      weakSubjects,
+      recentTests,
+      subjectScores,
+      progressData,
+    });
+  } catch (err) {
+    console.error('[govt /dashboard]', err);
+    return res.status(500).json({ success: false, message: 'Failed to load dashboard' });
   }
 });
 
