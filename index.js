@@ -104,7 +104,12 @@ async function startServer() {
     try {
         // Initialize databases
         await initializeDatabase();
-        await connectMongo();
+        try {
+            await connectMongo();
+        } catch (mongoErr) {
+            console.warn('⚠️  MongoDB unavailable (auth features disabled):', mongoErr.message.split('\n')[0]);
+            console.warn('   → Whitelist your IP at cloud.mongodb.com → Network Access to restore auth.');
+        }
 
         // Seed exam prep data (no-op if already seeded)
         seedExamData();
