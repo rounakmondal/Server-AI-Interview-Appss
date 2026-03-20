@@ -1,7 +1,6 @@
 import { MongoClient } from 'mongodb';
 
-const MONGO_URI = process.env.MONGO_URI
-  || 'mongodb+srv://rounakmondal198_db_user:WtBrPHpvvHTDN8cV@cluster0.ukl5poj.mongodb.net/?appName=Cluster0';
+const MONGO_URI = process.env.MONGO_URI;
 
 const DB_NAME = 'interviewsathi';
 
