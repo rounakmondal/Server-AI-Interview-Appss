@@ -63,7 +63,8 @@ function sanitiseUser(user) {
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-// ─── 1. POST /send-otp ───────────────────────────────────────────────────────
+// ─── 1. POST /send-otp ───
+// //────────────────────────────────────────────────────
 
 router.post('/send-otp', async (req, res) => {
   try {
