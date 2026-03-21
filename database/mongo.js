@@ -1,8 +1,8 @@
 import { MongoClient } from 'mongodb';
-
+import dotenv from 'dotenv';
+dotenv.config();
 const MONGO_URI = process.env.MONGO_URI;
-
-const DB_NAME = 'interviewsathi';
+const DB_NAME = 'rounakmondal198_db_user';
 
 let client;
 let db;

@@ -11,10 +11,9 @@ import { seedExamData } from './database/examDb.js';
 import interviewRoutes from './routes/interview.js';
 import govtRoutes from './routes/govt.js';
 import studyRoutes from './routes/study.js';
-<<<<<<< HEAD
+
 import authRoutes from './routes/auth.js';
-=======
->>>>>>> 7a20ccd (added)
+
 import { handleContact } from './routes/contact.js';
 import { handleExtractPdf } from './routes/extractPdf.js';
 import { apiLimiter } from './middleware/security.js';
@@ -36,7 +35,7 @@ app.use(helmet({
     crossOriginResourcePolicy: { policy: "cross-origin" }
 }));
 
-// CORS configuration
+// CORS configuration  9220446597
 app.use(cors({
     // Allow all origins (permissive). Reflects request origin so `credentials: true` works.
     origin: true,
@@ -70,12 +69,10 @@ app.use('/api/govt', govtRoutes);
 // Study bot routes
 app.use('/api/study', studyRoutes);
 
-<<<<<<< HEAD
+
 // Auth routes
 app.use('/api/auth', authRoutes);
 
-=======
->>>>>>> 7a20ccd (added)
 // Contact route
     app.post('/api/contact', handleContact);
   app.post("/api/extract-pdf", handleExtractPdf);
@@ -113,11 +110,17 @@ async function startServer() {
         try {
             await connectMongo();
         } catch (mongoErr) {
-            console.warn('⚠️  MongoDB unavailable (auth features disabled):', mongoErr.message.split('\n')[0]);
-            console.warn('   → Whitelist your IP at cloud.mongodb.com → Network Access to restore auth.');
+            const msg = mongoErr.message.split('\n')[0];
+            if (msg.includes('MONGO_URI not set') || msg.includes('MONGO_URI is invalid')) {
+                console.warn('⚠️  MongoDB configuration error (auth features disabled):', msg);
+                console.warn('   → Set MONGO_URI in environment variables before starting the server.');
+            } else {
+                console.warn('⚠️  MongoDB unavailable (auth features disabled):', msg);
+                console.warn('   → Whitelist your IP at cloud.mongodb.com → Network Access to restore auth.');
+            }
         }
 
-        // Seed exam prep data (no-op if already seeded)
+        // Seed exam prep data (no-op if already seeded)-->>>  9220446597
         seedExamData();
 
         app.listen(PORT, '0.0.0.0', () => {
