@@ -41,7 +41,9 @@ router.get('/exams/:examId/subjects', (req, res) => {
 // GET /api/subjects/:subjectId/chapters
 router.get('/subjects/:subjectId/chapters', (req, res) => {
     try {
-        const subjectId = parseInt(req.params.subjectId, 10);
+        // Accept both numeric and 'sub_5' style
+        const subjectIdRaw = req.params.subjectId;
+        const subjectId = parseInt(String(subjectIdRaw).replace(/\D/g, ''), 10);
         if (isNaN(subjectId) || subjectId < 1) {
             return res.status(400).json({ success: false, error: 'Invalid subjectId' });
         }
@@ -58,7 +60,9 @@ router.get('/subjects/:subjectId/chapters', (req, res) => {
 // GET /api/chapters/:chapterId/topics
 router.get('/chapters/:chapterId/topics', (req, res) => {
     try {
-        const chapterId = parseInt(req.params.chapterId, 10);
+        // Accept both numeric and 'ch_18' style
+        const chapterIdRaw = req.params.chapterId;
+        const chapterId = parseInt(String(chapterIdRaw).replace(/\D/g, ''), 10);
         if (isNaN(chapterId) || chapterId < 1) {
             return res.status(400).json({ success: false, error: 'Invalid chapterId' });
         }
