@@ -33,6 +33,10 @@ function runMigrations() {
         db.run('ALTER TABLE sessions ADD COLUMN job_description TEXT');
         console.log('✅ Migration: Added job_description column to sessions');
     }
+    if (!columnExists('evaluations', 'question_reviews')) {
+        db.run('ALTER TABLE evaluations ADD COLUMN question_reviews TEXT');
+        console.log('✅ Migration: Added question_reviews column to evaluations');
+    }
 }
 
 // Initialize database
@@ -156,13 +160,22 @@ export const conversationQueries = {
 
 // Evaluation operations
 export const evaluationQueries = {
-    create: (sessionId, overallScore, communicationScore, technicalScore, confidenceScore, weakAreas, improvementPlan, detailedFeedback) => {
-        db.run(`
-            INSERT INTO evaluations (
-                session_id, overall_score, communication_score, technical_score,
-                confidence_score, weak_areas, improvement_plan, detailed_feedback
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-        `, [sessionId, overallScore, communicationScore, technicalScore, confidenceScore, weakAreas, improvementPlan, detailedFeedback]);
+    create: (sessionId, overallScore, communicationScore, technicalScore, confidenceScore, weakAreas, improvementPlan, detailedFeedback, questionReviewsJson = null) => {
+        if (columnExists('evaluations', 'question_reviews')) {
+            db.run(`
+                INSERT INTO evaluations (
+                    session_id, overall_score, communication_score, technical_score,
+                    confidence_score, weak_areas, improvement_plan, detailed_feedback, question_reviews
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+            `, [sessionId, overallScore, communicationScore, technicalScore, confidenceScore, weakAreas, improvementPlan, detailedFeedback, questionReviewsJson]);
+        } else {
+            db.run(`
+                INSERT INTO evaluations (
+                    session_id, overall_score, communication_score, technical_score,
+                    confidence_score, weak_areas, improvement_plan, detailed_feedback
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+            `, [sessionId, overallScore, communicationScore, technicalScore, confidenceScore, weakAreas, improvementPlan, detailedFeedback]);
+        }
         saveDatabase();
     },
 

@@ -36,6 +36,7 @@ CREATE TABLE IF NOT EXISTS evaluations (
     weak_areas TEXT,
     improvement_plan TEXT,
     detailed_feedback TEXT,
+    question_reviews TEXT,
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (session_id) REFERENCES sessions(id) ON DELETE CASCADE
 );

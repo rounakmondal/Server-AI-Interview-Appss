@@ -1,4 +1,9 @@
-import { buildInterviewPrompt, buildCrossQuestionPrompt, EVALUATION_PROMPT } from '../prompts/interviewer.js';
+import {
+    buildInterviewPrompt,
+    buildCrossQuestionPrompt,
+    INTERVIEW_COACH_SYSTEM_PROMPT,
+    BATCH_QUESTION_REVIEWS_INSTRUCTION
+} from '../prompts/interviewer.js';
 
 // Initialize Groq API client
 async function getGroqChatCompletion(messages, maxTokens = 500) {
@@ -443,4 +448,210 @@ ${conversationText}`;
             error: error.message
         };
     }
+}
+
+/** Maps session.language to coach payload language codes (english | hindi | bengali). */
+function normalizeLanguageForCoach(lang) {
+    if (!lang || typeof lang !== 'string') return 'english';
+    const l = lang.trim().toLowerCase();
+    if (l.startsWith('hindi') || l === 'hi') return 'hindi';
+    if (l.startsWith('bengali') || l === 'bangla' || l === 'bn') return 'bengali';
+    return 'english';
+}
+
+function extractLeadingJsonObject(text) {
+    if (!text || typeof text !== 'string') return null;
+    let s = text.trim();
+    if (s.startsWith('```')) {
+        s = s.replace(/^```(?:json)?\s*/i, '').replace(/\s*```\s*$/i, '').trim();
+    }
+    const start = s.indexOf('{');
+    if (start === -1) return null;
+    let depth = 0;
+    for (let i = start; i < s.length; i++) {
+        const c = s[i];
+        if (c === '{') depth++;
+        else if (c === '}') {
+            depth--;
+            if (depth === 0) {
+                try {
+                    return JSON.parse(s.slice(start, i + 1));
+                } catch {
+                    return null;
+                }
+            }
+        }
+    }
+    return null;
+}
+
+function validateQuestionReviewsShape(parsed, expectedLength) {
+    if (!parsed || typeof parsed !== 'object') return false;
+    const reviews = parsed.questionReviews;
+    if (!Array.isArray(reviews) || reviews.length !== expectedLength) return false;
+    const keys = ['questionText', 'userAnswer', 'idealAnswer', 'shortFeedback'];
+    for (const r of reviews) {
+        if (!r || typeof r !== 'object') return false;
+        for (const k of keys) {
+            if (typeof r[k] !== 'string') return false;
+        }
+    }
+    return true;
+}
+
+function mapQuestionReviewsToSnake(reviews) {
+    return reviews.map(r => ({
+        question_text: r.questionText,
+        user_answer: r.userAnswer,
+        ideal_answer: r.idealAnswer,
+        short_feedback: r.shortFeedback
+    }));
+}
+
+function safeQuestionReviewsFromTurns(turns) {
+    return turns.map(t => ({
+        question_text: t.questionText,
+        user_answer: t.userAnswer,
+        ideal_answer: '',
+        short_feedback: 'Coaching feedback was temporarily unavailable. Please try finishing the interview again.'
+    }));
+}
+
+function validateSingleTurnCoachShape(parsed) {
+    if (!parsed || typeof parsed !== 'object') return false;
+    if (typeof parsed.idealAnswer !== 'string' || typeof parsed.shortFeedback !== 'string') return false;
+    return true;
+}
+
+function jobDescriptionSnippetForCoach(session) {
+    if (!session?.job_description) return null;
+    return session.job_description.substring(0, 500);
+}
+
+/**
+ * One Q&A pair per LLM call (smaller prompt, lower max_tokens than batch).
+ * @param {object} session - DB session row
+ * @param {{ questionText: string, userAnswer: string }} turn
+ * @returns {{ success: boolean, question_review: { question_text, user_answer, ideal_answer, short_feedback } }}
+ */
+export async function generateQuestionReviewSingleTurn(session, turn) {
+    const language = normalizeLanguageForCoach(session.language);
+    const interviewType = session.interview_type || 'General';
+    const jobDescriptionSnippet = jobDescriptionSnippetForCoach(session);
+
+    const userPayload = {
+        interviewType,
+        language,
+        questionText: turn.questionText,
+        userAnswer: turn.userAnswer,
+        jobDescriptionSnippet,
+        schema: {
+            idealAnswer: 'string',
+            shortFeedback: 'string'
+        }
+    };
+
+    const messages = [
+        { role: 'system', content: INTERVIEW_COACH_SYSTEM_PROMPT },
+        { role: 'user', content: JSON.stringify(userPayload) }
+    ];
+
+    const maxTokens = parseInt(process.env.GROQ_COACH_TURN_MAX_TOKENS, 10) || 2000;
+
+    const toReview = (idealAnswer, shortFeedback) => ({
+        question_text: turn.questionText,
+        user_answer: turn.userAnswer,
+        ideal_answer: idealAnswer,
+        short_feedback: shortFeedback
+    });
+
+    const attemptParse = (rawText) => {
+        const parsed = extractLeadingJsonObject(rawText);
+        if (!validateSingleTurnCoachShape(parsed)) return null;
+        return toReview(parsed.idealAnswer, parsed.shortFeedback);
+    };
+
+    for (let attempt = 1; attempt <= 2; attempt++) {
+        try {
+            const rawText = await getGroqChatCompletion(messages, maxTokens);
+            const review = attemptParse(rawText);
+            if (review) {
+                return { success: true, question_review: review };
+            }
+            console.warn(`questionReview single-turn: invalid JSON or shape (attempt ${attempt})`);
+        } catch (err) {
+            console.warn(`questionReview single-turn attempt ${attempt} failed:`, err.message);
+        }
+    }
+
+    return {
+        success: true,
+        question_review: toReview(
+            '',
+            'Coaching feedback was temporarily unavailable. Please try again.'
+        )
+    };
+}
+
+/**
+ * Batch LLM: all Q&A turns in one call. Retries once on parse/validation failure.
+ * A single turn uses {@link generateQuestionReviewSingleTurn} instead of the batch prompt.
+ */
+export async function generateQuestionReviewsBatch(session, transcriptTurns) {
+    if (!transcriptTurns?.length) {
+        return { success: true, question_reviews: [] };
+    }
+
+    if (transcriptTurns.length === 1) {
+        const { question_review } = await generateQuestionReviewSingleTurn(session, transcriptTurns[0]);
+        return { success: true, question_reviews: [question_review] };
+    }
+
+    const language = normalizeLanguageForCoach(session.language);
+    const interviewType = session.interview_type || 'General';
+    const jobDescription = session.job_description
+        ? session.job_description.substring(0, 500)
+        : null;
+
+    const userPayload = {
+        interviewType,
+        language,
+        jobDescription,
+        transcriptTurns
+    };
+
+    const userContent = `${JSON.stringify(userPayload)}
+
+${BATCH_QUESTION_REVIEWS_INSTRUCTION}`;
+
+    const messages = [
+        { role: 'system', content: INTERVIEW_COACH_SYSTEM_PROMPT },
+        { role: 'user', content: userContent }
+    ];
+
+    const maxTokens = parseInt(process.env.GROQ_FINISH_MAX_TOKENS, 10) || 8000;
+
+    const attemptParse = (rawText) => {
+        const parsed = extractLeadingJsonObject(rawText);
+        if (!validateQuestionReviewsShape(parsed, transcriptTurns.length)) return null;
+        return mapQuestionReviewsToSnake(parsed.questionReviews);
+    };
+
+    for (let attempt = 1; attempt <= 2; attempt++) {
+        try {
+            const rawText = await getGroqChatCompletion(messages, maxTokens);
+            const mapped = attemptParse(rawText);
+            if (mapped) {
+                return { success: true, question_reviews: mapped };
+            }
+            console.warn(`questionReviews batch: invalid JSON or shape (attempt ${attempt})`);
+        } catch (err) {
+            console.warn(`questionReviews batch attempt ${attempt} failed:`, err.message);
+        }
+    }
+
+    return {
+        success: true,
+        question_reviews: safeQuestionReviewsFromTurns(transcriptTurns)
+    };
 }

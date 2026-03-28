@@ -2,7 +2,12 @@ import express from 'express';
 import { v4 as uuidv4 } from 'uuid';
 import multer from 'multer';
 import { sessionQueries, conversationQueries, evaluationQueries } from '../database/db.js';
-import { generateInterviewResponse, generateEvaluation } from '../services/aiEngine.js';
+import {
+    generateInterviewResponse,
+    generateEvaluation,
+    generateQuestionReviewsBatch,
+    generateQuestionReviewSingleTurn
+} from '../services/aiEngine.js';
 import { parseCV } from '../services/cvParser.js';
 import {
     aiLimiter,
@@ -13,6 +18,14 @@ import {
 } from '../middleware/security.js';
 
 const router = express.Router();
+
+function normalizeTranscriptTurns(raw) {
+    if (!Array.isArray(raw)) return [];
+    return raw.map(t => ({
+        questionText: typeof t?.questionText === 'string' ? t.questionText : String(t?.questionText ?? ''),
+        userAnswer: typeof t?.userAnswer === 'string' ? t.userAnswer : String(t?.userAnswer ?? '')
+    }));
+}
 
 // Configure multer for CV uploads
 const storage = multer.memoryStorage();
@@ -269,11 +282,26 @@ router.post('/next-question',
 );
 
 // POST /api/interview/finish - End interview and generate evaluation
+// Body: { sessionId, transcriptTurns?: [{ questionText, userAnswer }] }
 router.post('/finish',
     aiLimiter,
     async (req, res) => {
         try {
-            const { sessionId } = req.body;
+            const { sessionId, transcriptTurns: transcriptTurnsBody } = req.body;
+
+            if (!sessionId) {
+                return res.status(400).json({
+                    success: false,
+                    error: 'sessionId is required'
+                });
+            }
+
+            if (transcriptTurnsBody !== undefined && !Array.isArray(transcriptTurnsBody)) {
+                return res.status(400).json({
+                    success: false,
+                    error: 'transcriptTurns must be an array'
+                });
+            }
 
             const session = sessionQueries.getById(sessionId);
             if (!session) {
@@ -283,14 +311,17 @@ router.post('/finish',
                 });
             }
 
+            const transcriptTurns = normalizeTranscriptTurns(transcriptTurnsBody);
+
             // Update session status
             sessionQueries.updateStatus('completed', sessionId);
 
-            // Get full conversation history
             const history = conversationQueries.getBySession(sessionId);
 
-            // Generate evaluation
-            const evalResult = await generateEvaluation(session, history);
+            const [evalResult, reviewsResult] = await Promise.all([
+                generateEvaluation(session, history),
+                generateQuestionReviewsBatch(session, transcriptTurns)
+            ]);
 
             if (!evalResult.success) {
                 return res.status(500).json({
@@ -300,27 +331,86 @@ router.post('/finish',
             }
 
             const { evaluation } = evalResult;
+            const questionReviews = reviewsResult.question_reviews || [];
 
-            // Save evaluation to database
+            const transcriptTurnsEcho = transcriptTurns.map(t => ({
+                question_text: t.questionText,
+                user_answer: t.userAnswer
+            }));
+
+            const evaluationOut = {
+                ...evaluation,
+                question_reviews: questionReviews,
+                transcript_turns: transcriptTurnsEcho
+            };
+
             evaluationQueries.create(
                 sessionId,
-                evaluation.overall_score,
-                evaluation.communication_score,
-                evaluation.technical_score,
-                evaluation.confidence_score,
-                JSON.stringify(evaluation.weak_areas),
-                JSON.stringify(evaluation.improvement_plan),
-                evaluation.detailed_feedback
+                evaluationOut.overall_score,
+                evaluationOut.communication_score,
+                evaluationOut.technical_score,
+                evaluationOut.confidence_score,
+                JSON.stringify(evaluationOut.weak_areas),
+                JSON.stringify(evaluationOut.improvement_plan),
+                evaluationOut.detailed_feedback,
+                JSON.stringify(questionReviews)
             );
 
             res.json({
                 success: true,
                 sessionId,
-                evaluation
+                evaluation: evaluationOut
             });
 
         } catch (error) {
             console.error('Finish interview error:', error);
+            res.status(500).json({
+                success: false,
+                error: error.message
+            });
+        }
+    }
+);
+
+// POST /api/interview/coach-turn — one question/answer pair, one LLM call (ideal answer + short feedback)
+// Body: { sessionId, questionText, userAnswer }
+router.post('/coach-turn',
+    aiLimiter,
+    sanitizeInput,
+    protectPromptInjection,
+    async (req, res) => {
+        try {
+            const { sessionId, questionText, userAnswer } = req.body;
+
+            if (!sessionId || questionText === undefined || questionText === null || userAnswer === undefined || userAnswer === null) {
+                return res.status(400).json({
+                    success: false,
+                    error: 'sessionId, questionText, and userAnswer are required'
+                });
+            }
+
+            const session = sessionQueries.getById(sessionId);
+            if (!session) {
+                return res.status(404).json({
+                    success: false,
+                    error: 'Interview session not found'
+                });
+            }
+
+            const turn = {
+                questionText: typeof questionText === 'string' ? questionText : String(questionText),
+                userAnswer: typeof userAnswer === 'string' ? userAnswer : String(userAnswer)
+            };
+
+            const result = await generateQuestionReviewSingleTurn(session, turn);
+
+            res.json({
+                success: true,
+                sessionId,
+                question_review: result.question_review
+            });
+        } catch (error) {
+            console.error('Coach turn error:', error);
             res.status(500).json({
                 success: false,
                 error: error.message
@@ -369,7 +459,15 @@ router.get('/result/:sessionId', async (req, res) => {
                     confidenceScore: evaluation.confidence_score,
                     weakAreas: JSON.parse(evaluation.weak_areas || '[]'),
                     improvementPlan: JSON.parse(evaluation.improvement_plan || '{}'),
-                    detailedFeedback: evaluation.detailed_feedback
+                    detailedFeedback: evaluation.detailed_feedback,
+                    questionReviews: (() => {
+                        if (!evaluation.question_reviews) return [];
+                        try {
+                            return JSON.parse(evaluation.question_reviews);
+                        } catch {
+                            return [];
+                        }
+                    })()
                 },
                 conversation: conversation.map(c => ({
                     role: c.role,
