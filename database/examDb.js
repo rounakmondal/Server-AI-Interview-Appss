@@ -74,6 +74,10 @@ export const chapterQueries = {
         queryAll('SELECT * FROM chapters WHERE subject_id = ? ORDER BY sort_order, id', [subjectId]),
     getById: (id) =>
         queryOne('SELECT * FROM chapters WHERE id = ?', [id]),
+    getByName: (name) =>
+        queryOne('SELECT * FROM chapters WHERE name = ? COLLATE NOCASE OR name_bn = ? COLLATE NOCASE', [name, name]),
+    getByNameFuzzy: (name) =>
+        queryOne('SELECT * FROM chapters WHERE name LIKE ? COLLATE NOCASE OR name_bn LIKE ? COLLATE NOCASE LIMIT 1', [`%${name}%`, `%${name}%`]),
     countBySubject: (subjectId) =>
         queryOne('SELECT COUNT(*) AS cnt FROM chapters WHERE subject_id = ?', [subjectId]),
 };

@@ -920,18 +920,18 @@ const FALLBACK_CURRENT_AFFAIRS = {
 // ─── Seed: Leaderboard ────────────────────────────────────────────────────────
 
 const FALLBACK_LEADERBOARD = [
-  { rank: 0, name: 'Arjun Mukherjee',  district: 'Kolkata',           weeklyScore: 980, monthlyScore: 3850, avatar: 'AM' },
-  { rank: 0, name: 'Priya Banerjee',   district: 'Howrah',            weeklyScore: 965, monthlyScore: 3820, avatar: 'PB' },
-  { rank: 0, name: 'Suvam Chatterjee', district: 'Bardhaman',         weeklyScore: 950, monthlyScore: 3790, avatar: 'SC' },
-  { rank: 0, name: 'Debjani Roy',      district: 'Nadia',             weeklyScore: 935, monthlyScore: 3760, avatar: 'DR' },
-  { rank: 0, name: 'Rahul Das',        district: 'Murshidabad',       weeklyScore: 920, monthlyScore: 3740, avatar: 'RD' },
-  { rank: 0, name: 'Ananya Ghosh',     district: 'North 24 Parganas', weeklyScore: 905, monthlyScore: 3710, avatar: 'AG' },
-  { rank: 0, name: 'Sourav Mondal',    district: 'Hooghly',           weeklyScore: 890, monthlyScore: 3685, avatar: 'SM' },
-  { rank: 0, name: 'Tanushree Pal',    district: 'Purba Medinipur',   weeklyScore: 875, monthlyScore: 3650, avatar: 'TP' },
-  { rank: 0, name: 'Bikash Sen',       district: 'Malda',             weeklyScore: 860, monthlyScore: 3620, avatar: 'BS' },
-  { rank: 0, name: 'Nilanjana Dutta',  district: 'Jalpaiguri',        weeklyScore: 845, monthlyScore: 3590, avatar: 'ND' },
-  { rank: 0, name: 'Pratik Sarkar',    district: 'Cooch Behar',       weeklyScore: 830, monthlyScore: 3550, avatar: 'PS' },
-  { rank: 0, name: 'Moumita Bera',     district: 'South 24 Parganas', weeklyScore: 815, monthlyScore: 3520, avatar: 'MB' },
+  { rank: 0, name: 'Arjun Mukherjee',  district: 'Kolkata',           weeklyScore: 94, monthlyScore: 91, avatar: 'AM', totalTests: 87 },
+  { rank: 0, name: 'Priya Banerjee',   district: 'Howrah',            weeklyScore: 92, monthlyScore: 89, avatar: 'PB', totalTests: 74 },
+  { rank: 0, name: 'Suvam Chatterjee', district: 'Bardhaman',         weeklyScore: 89, monthlyScore: 88, avatar: 'SC', totalTests: 92 },
+  { rank: 0, name: 'Debjani Roy',      district: 'Nadia',             weeklyScore: 86, monthlyScore: 85, avatar: 'DR', totalTests: 68 },
+  { rank: 0, name: 'Rahul Das',        district: 'Murshidabad',       weeklyScore: 84, monthlyScore: 84, avatar: 'RD', totalTests: 71 },
+  { rank: 0, name: 'Ananya Ghosh',     district: 'North 24 Parganas', weeklyScore: 82, monthlyScore: 81, avatar: 'AG', totalTests: 65 },
+  { rank: 0, name: 'Sourav Mondal',    district: 'Hooghly',           weeklyScore: 79, monthlyScore: 79, avatar: 'SM', totalTests: 58 },
+  { rank: 0, name: 'Tanushree Pal',    district: 'Purba Medinipur',   weeklyScore: 76, monthlyScore: 77, avatar: 'TP', totalTests: 72 },
+  { rank: 0, name: 'Bikash Sen',       district: 'Malda',             weeklyScore: 73, monthlyScore: 75, avatar: 'BS', totalTests: 61 },
+  { rank: 0, name: 'Nilanjana Dutta',  district: 'Jalpaiguri',        weeklyScore: 71, monthlyScore: 73, avatar: 'ND', totalTests: 55 },
+  { rank: 0, name: 'Pratik Sarkar',    district: 'Cooch Behar',       weeklyScore: 68, monthlyScore: 71, avatar: 'PS', totalTests: 48 },
+  { rank: 0, name: 'Moumita Bera',     district: 'South 24 Parganas', weeklyScore: 65, monthlyScore: 68, avatar: 'MB', totalTests: 52 },
 ];
 
 // ─── Seed: Dashboard ─────────────────────────────────────────────────────────
@@ -1338,13 +1338,21 @@ router.get('/leaderboard', async (req, res) => {
     const users = await db.collection('users').find({ _id: { $in: userIds } }).toArray();
     const userLookup = new Map(users.map(u => [u._id.toString(), u]));
 
-    const badges = ['gold', 'silver', 'bronze'];
+    // Assign badges based on rank (1-3: gold, 4-6: silver, 7-9: bronze, 10+: standard)
+    const getBadge = (rank) => {
+      if (rank <= 3) return 'gold';
+      if (rank <= 6) return 'silver';
+      if (rank <= 9) return 'bronze';
+      return 'standard';
+    };
+
     const result = sorted.map((entry, idx) => {
+      const rank = idx + 1;
       const u = userLookup.get(entry.userId.toString()) || {};
       const name = u.name || 'Anonymous';
       const initials = name.split(' ').map(w => w[0]).join('').toUpperCase().slice(0, 2);
       return {
-        rank: idx + 1,
+        rank,
         name,
         district: u.district || '',
         state: u.state || 'West Bengal',
@@ -1352,7 +1360,7 @@ router.get('/leaderboard', async (req, res) => {
         weeklyScore: entry.weeklyScore,
         monthlyScore: entry.monthlyScore,
         totalTests: entry.totalTests,
-        badge: badges[idx] || 'standard',
+        badge: getBadge(rank),
       };
     });
 

@@ -10,6 +10,7 @@ const router = Router();
  * Request body:
  * {
  *   "chapterId": 3,
+ *   "chapterName": "Seating Arrangement",  (optional, used for fallback lookup)
  *   "userQuery": "Give me a comprehensive overview and all key concepts for this chapter."
  * }
  *
@@ -18,18 +19,25 @@ const router = Router();
  * data: [DONE]
  */
 router.post('/ai/chapter-guide', async (req, res) => {
-    const { chapterId, userQuery } = req.body;
+    const { chapterId, chapterName, userQuery } = req.body;
 
     // Validate required fields
-    if (!chapterId || !userQuery || !String(userQuery).trim()) {
+    if (!userQuery || !String(userQuery).trim()) {
         return res.status(400).json({
             success: false,
-            error: 'chapterId and userQuery are required',
+            error: 'userQuery is required',
+        });
+    }
+
+    if (!chapterId && !chapterName) {
+        return res.status(400).json({
+            success: false,
+            error: 'Either chapterId or chapterName is required',
         });
     }
 
     // Stream response from AI service
-    await streamChapterGuide(res, req, chapterId, userQuery);
+    await streamChapterGuide(res, req, chapterId, userQuery, chapterName);
 });
 
 /**
@@ -39,6 +47,7 @@ router.post('/ai/chapter-guide', async (req, res) => {
  * Request body:
  * {
  *   "chapterId": 3,
+ *   "chapterName": "Seating Arrangement",  (optional, used for fallback lookup)
  *   "userQuery": "Explain this concept"
  * }
  *
@@ -49,18 +58,25 @@ router.post('/ai/chapter-guide', async (req, res) => {
  * }
  */
 router.post('/ai/chapter-guide-full', async (req, res) => {
-    const { chapterId, userQuery } = req.body;
+    const { chapterId, chapterName, userQuery } = req.body;
 
     // Validate required fields
-    if (!chapterId || !userQuery || !String(userQuery).trim()) {
+    if (!userQuery || !String(userQuery).trim()) {
         return res.status(400).json({
             success: false,
-            error: 'chapterId and userQuery are required',
+            error: 'userQuery is required',
+        });
+    }
+
+    if (!chapterId && !chapterName) {
+        return res.status(400).json({
+            success: false,
+            error: 'Either chapterId or chapterName is required',
         });
     }
 
     try {
-        const answer = await getChapterGuideFull(chapterId, userQuery);
+        const answer = await getChapterGuideFull(chapterId, userQuery, chapterName);
         res.json({
             success: true,
             answer,

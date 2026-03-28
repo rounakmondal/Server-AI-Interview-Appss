@@ -56,26 +56,37 @@ Do not make up facts. If unsure, say so.`;
  * @param {Object} req - Express request object
  * @param {number} chapterId - Chapter ID
  * @param {string} userQuery - User's question
+ * @param {string} chapterName - Optional: Chapter name for fallback lookup
  * @returns {Promise<void>}
  */
-export async function streamChapterGuide(res, req, chapterId, userQuery) {
+export async function streamChapterGuide(res, req, chapterId, userQuery, chapterName) {
     try {
-        // Validate chapterId
-        const cid = parseInt(chapterId, 10);
-        if (isNaN(cid) || cid < 1) {
-            if (!res.headersSent) {
-                return res.status(400).json({ success: false, error: 'Invalid chapterId' });
+        let chapter = null;
+
+        // Try to get chapter by ID first
+        if (chapterId) {
+            const cid = parseInt(chapterId, 10);
+            if (!isNaN(cid) && cid > 0) {
+                chapter = chapterQueries.getById(cid);
             }
-            res.write(`data: ${JSON.stringify({ error: 'Invalid chapterId' })}\n\n`);
-            res.end();
-            return;
         }
 
-        // Get chapter and related data
-        const chapter = chapterQueries.getById(cid);
+        // Fallback: Try to get chapter by name if ID lookup failed
+        if (!chapter && chapterName) {
+            chapter = chapterQueries.getByName(chapterName);
+            // If exact match fails, try fuzzy search
+            if (!chapter) {
+                chapter = chapterQueries.getByNameFuzzy(chapterName);
+            }
+        }
+
+        // If still not found, return error
         if (!chapter) {
             if (!res.headersSent) {
-                return res.status(404).json({ success: false, error: 'Chapter not found' });
+                return res.status(404).json({
+                    success: false,
+                    error: `Chapter not found (id: ${chapterId}, name: ${chapterName || 'not provided'})`
+                });
             }
             res.write(`data: ${JSON.stringify({ error: 'Chapter not found' })}\n\n`);
             res.end();
@@ -200,20 +211,33 @@ async function streamGroqResponse(res, apiKey, systemPrompt, userQuery, timer, c
  * Gets non-streaming chapter guidance (full response at once)
  * @param {number} chapterId - Chapter ID
  * @param {string} userQuery - User's question
+ * @param {string} chapterName - Optional: Chapter name for fallback lookup
  * @returns {Promise<string>} Complete AI response
  */
-export async function getChapterGuideFull(chapterId, userQuery) {
+export async function getChapterGuideFull(chapterId, userQuery, chapterName) {
     try {
-        // Validate chapterId
-        const cid = parseInt(chapterId, 10);
-        if (isNaN(cid) || cid < 1) {
-            throw new Error('Invalid chapterId');
+        let chapter = null;
+
+        // Try to get chapter by ID first
+        if (chapterId) {
+            const cid = parseInt(chapterId, 10);
+            if (!isNaN(cid) && cid > 0) {
+                chapter = chapterQueries.getById(cid);
+            }
         }
 
-        // Get chapter and related data
-        const chapter = chapterQueries.getById(cid);
+        // Fallback: Try to get chapter by name if ID lookup failed
+        if (!chapter && chapterName) {
+            chapter = chapterQueries.getByName(chapterName);
+            // If exact match fails, try fuzzy search
+            if (!chapter) {
+                chapter = chapterQueries.getByNameFuzzy(chapterName);
+            }
+        }
+
+        // If still not found, throw error
         if (!chapter) {
-            throw new Error('Chapter not found');
+            throw new Error(`Chapter not found (id: ${chapterId}, name: ${chapterName || 'not provided'})`);
         }
 
         const subject = subjectQueries.getById(chapter.subject_id);
