@@ -1,0 +1,1208 @@
+{
+  "exam_title": "WBP Lady Constable Preliminary Question Paper 2018",
+  "exam_code": "RB/LC/2018",
+  "total_questions": 100,
+  "languages": ["Bengali", "Hindi/Nepali"],
+  "questions": [
+    {
+      "q_no": 1,
+      "question": "তিনটি ঘণ্টা একবার একসাথে বাজার পর 10, 12 ও 15 সেকেন্ড অন্তর বাজতে থাকে। কতক্ষণ পরে তারা আবার একসাথে বাজবে?",
+      "options": {
+        "A": "50 সেকেন্ড",
+        "B": "70 সেকেন্ড",
+        "C": "60 সেকেন্ড",
+        "D": "40 সেকেন্ড"
+      },
+      "correct_answer": "C",
+      "topic": "Mathematics - LCM"
+    },
+    {
+      "q_no": 2,
+      "question": "600-এর 20% = X-এর 25%। X-এর মান (value) কত?",
+      "options": {
+        "A": "460",
+        "B": "500",
+        "C": "480",
+        "D": "440"
+      },
+      "correct_answer": "C",
+      "topic": "Mathematics - Percentage"
+    },
+    {
+      "q_no": 3,
+      "question": "এক ব্যক্তি প্রথম 160 কিমি, 64 কিমি/ঘণ্টা বেগে এবং পরের 160 কিমি, 80 কিমি/ঘণ্টা বেগে অতিক্রম করে। ব্যক্তিটির গড়বেগ (average speed) কত?",
+      "options": {
+        "A": "36 কিমি/ঘণ্টা",
+        "B": "71 কিমি/ঘণ্টা",
+        "C": "71.11 কিমি/ঘণ্টা",
+        "D": "35.55 কিমি/ঘণ্টা"
+      },
+      "correct_answer": "C",
+      "topic": "Mathematics - Average Speed"
+    },
+    {
+      "q_no": 4,
+      "question": "একটি ক্যাম্পে 800 জন লোকের 20 দিনের খাবার মজুদ ছিল। কিন্তু ক্যাম্পে 640 জন ছিল। ঐ খাবার দিয়ে 640 জন লোকের কতদিন চলবে?",
+      "options": {
+        "A": "23 দিন",
+        "B": "30 দিন",
+        "C": "25 দিন",
+        "D": "18 দিন"
+      },
+      "correct_answer": "C",
+      "topic": "Mathematics - Work and Time"
+    },
+    {
+      "q_no": 5,
+      "question": "একটি সাইকেলের ক্রয়মূল্য (cost price) 4,000 টাকা। সাইকেলটি যদি 3,200 টাকায় বিক্রয় (sale) করা হয় তবে ছাড়ের (discount) শতকরা হার (rate per cent) কত?",
+      "options": {
+        "A": "16%",
+        "B": "20%",
+        "C": "18%",
+        "D": "14%"
+      },
+      "correct_answer": "B",
+      "topic": "Mathematics - Discount"
+    },
+    {
+      "q_no": 6,
+      "question": "কোন ক্ষুদ্রতম সংখ্যাকে 8, 12, 16 এবং 20 দিয়ে ভাগ (divide) করলে প্রতিবারই 5 ভাগশেষ (remainder) থাকে?",
+      "options": {
+        "A": "245",
+        "B": "235",
+        "C": "265",
+        "D": "240"
+      },
+      "correct_answer": "A",
+      "topic": "Mathematics - LCM and Remainder"
+    },
+    {
+      "q_no": 7,
+      "question": "দুটি সংখ্যার অনুপাত (ratio) 9 : 14। যদি বৃহত্তর সংখ্যাটি ক্ষুদ্রতর সংখ্যা থেকে 55 বেশি হয়, তবে সংখ্যাগুলি কী কী?",
+      "options": {
+        "A": "99, 156",
+        "B": "43, 98",
+        "C": "47, 102",
+        "D": "99, 154"
+      },
+      "correct_answer": "D",
+      "topic": "Mathematics - Ratio"
+    },
+    {
+      "q_no": 8,
+      "question": "A এবং B এককভাবে একটি কাজ যথাক্রমে 6 এবং 12 দিনে করতে পারে। দুজনে একসাথে 3 দিন কাজ করার পর A চলে যায় এবং B বাকি কাজটি একা সম্পন্ন করে। কাজটি সম্পন্ন করতে মোট কতদিন সময় লেগেছিল?",
+      "options": {
+        "A": "4 দিন",
+        "B": "5 দিন",
+        "C": "9 দিন",
+        "D": "6 দিন"
+      },
+      "correct_answer": "B",
+      "topic": "Mathematics - Work and Time"
+    },
+    {
+      "q_no": 9,
+      "question": "একটি আয়তক্ষেত্রের (rectangle) ক্ষেত্রফল (area) 460 sq.m.। যদি আয়তক্ষেত্রের দৈর্ঘ্য (length) প্রস্থের (width) থেকে 15% বেশি হয়, তবে আয়তক্ষেত্রটির প্রস্থ কত?",
+      "options": {
+        "A": "20 m",
+        "B": "25 m",
+        "C": "23 m",
+        "D": "18 m"
+      },
+      "correct_answer": "A",
+      "topic": "Mathematics - Area"
+    },
+    {
+      "q_no": 10,
+      "question": "যদি A : B = 3 : 4 এবং B : C = 6 : 5 হয়, তবে A : C = ?",
+      "options": {
+        "A": "9 : 10",
+        "B": "9 : 8",
+        "C": "8 : 9",
+        "D": "10 : 9"
+      },
+      "correct_answer": "A",
+      "topic": "Mathematics - Ratio"
+    },
+    {
+      "q_no": 11,
+      "question": "নিম্নলিখিত আন্দোলনগুলিকে (movement) কালক্রমানুসারে (chronologically) সাজালে, কোনটি সঠিক?\n(i) আইন অমান্য আন্দোলন (Civil Disobedience movement)\n(ii) খিলাফৎ আন্দোলন (Khilafat movement)\n(iii) হোমরুল আন্দোলন (Home Rule movement)\n(iv) ভারত ছাড়ো আন্দোলন (Quit India movement)",
+      "options": {
+        "A": "(iv), (iii), (ii), (i)",
+        "B": "(ii), (iv), (i), (iii)",
+        "C": "(iii), (ii), (i), (iv)",
+        "D": "(i), (ii), (iii), (iv)"
+      },
+      "correct_answer": "C",
+      "topic": "General Knowledge - Indian History"
+    },
+    {
+      "q_no": 12,
+      "question": "URL-এর পুরো কথাটি কী?",
+      "options": {
+        "A": "Uniform Resource Link",
+        "B": "Uniform Registered Locator",
+        "C": "Unified Resource Link",
+        "D": "Uniform Resource Locator"
+      },
+      "correct_answer": "D",
+      "topic": "General Knowledge - Computer"
+    },
+    {
+      "q_no": 13,
+      "question": "ভারতবর্ষের কোন রাজ্যে 2022 সালে 39তম জাতীয় ক্রীড়া প্রতিযোগিতা (National Games) অনুষ্ঠিত হবে?",
+      "options": {
+        "A": "নাগাল্যান্ড",
+        "B": "আসাম",
+        "C": "মিজোরাম",
+        "D": "মেঘালয়"
+      },
+      "correct_answer": "A",
+      "topic": "General Knowledge - Sports"
+    },
+    {
+      "q_no": 14,
+      "question": "'দেওধর ট্রফি' কোন খেলার সাথে যুক্ত?",
+      "options": {
+        "A": "ফুটবল",
+        "B": "বাস্কেটবল",
+        "C": "হকি",
+        "D": "ক্রিকেট"
+      },
+      "correct_answer": "D",
+      "topic": "General Knowledge - Sports"
+    },
+    {
+      "q_no": 15,
+      "question": "UNESCO দ্বারা ঘোষিত বিশ্বের কোন ঐতিহাসিক (heritage) নির্মাণ পশ্চিমবঙ্গে অবস্থিত?",
+      "options": {
+        "A": "ভিক্টোরিয়া মেমোরিয়াল",
+        "B": "রাজা রামমোহন রায় মেমোরিয়াল",
+        "C": "করোনেশন ব্রীজ",
+        "D": "দার্জিলিং হিমালয়ান রেলওয়ে"
+      },
+      "correct_answer": "D",
+      "topic": "General Knowledge - Heritage"
+    },
+    {
+      "q_no": 16,
+      "question": "কোন স্থানে গৌতম বুদ্ধের মহাপ্রয়াণ হয়েছিল?",
+      "options": {
+        "A": "কুশিনগর",
+        "B": "কটক",
+        "C": "লুষিনী",
+        "D": "বৈশালী"
+      },
+      "correct_answer": "A",
+      "topic": "General Knowledge - History"
+    },
+    {
+      "q_no": 17,
+      "question": "পশ্চিমবঙ্গের কোন জেলার সাথে মানভূম জেলার একটি অংশ যুক্ত হয়েছে?",
+      "options": {
+        "A": "বাঁকুড়া",
+        "B": "পশ্চিম মেদিনীপুর",
+        "C": "বীরভূম",
+        "D": "পুরুলিয়া"
+      },
+      "correct_answer": "D",
+      "topic": "General Knowledge - Geography"
+    },
+    {
+      "q_no": 18,
+      "question": "কোন এশিয়াবাসী প্রথম নোবেল পুরস্কার পান?",
+      "options": {
+        "A": "আং সাং সু কি",
+        "B": "রবীন্দ্রনাথ ঠাকুর",
+        "C": "ইউসুফজাই মালালা",
+        "D": "সি. ভি. রমন"
+      },
+      "correct_answer": "B",
+      "topic": "General Knowledge - Awards"
+    },
+    {
+      "q_no": 19,
+      "question": "কিসের জন্য গান্ধীজী অসহযোগ আন্দোলন (Non-Cooperation movement) বন্ধ করে দিয়েছিলেন?",
+      "options": {
+        "A": "দ্বিতীয় বিশ্বযুদ্ধ",
+        "B": "চৌরিচৌরার ঘটনা",
+        "C": "প্রথম বিশ্বযুদ্ধ",
+        "D": "জালিয়ানওয়ালাবাগ হত্যাকাণ্ড"
+      },
+      "correct_answer": "B",
+      "topic": "General Knowledge - Indian History"
+    },
+    {
+      "q_no": 20,
+      "question": "'আইন-ই-আকবরী' গ্রন্থটি কে রচনা করেছিলেন?",
+      "options": {
+        "A": "হুমায়ুন",
+        "B": "আবুল ফজল",
+        "C": "শাহজাহান",
+        "D": "আকবর"
+      },
+      "correct_answer": "B",
+      "topic": "General Knowledge - History"
+    },
+    {
+      "q_no": 21,
+      "question": "Wi-Fi-র পুরো কথাটি কী?",
+      "options": {
+        "A": "Wired Fidelity",
+        "B": "Wired Field",
+        "C": "Wireless Field",
+        "D": "Wireless Fidelity"
+      },
+      "correct_answer": "D",
+      "topic": "General Knowledge - Computer"
+    },
+    {
+      "q_no": 22,
+      "question": "'এ প্যাসেজ টু ইন্ডিয়া' বইটি কার লেখা?",
+      "options": {
+        "A": "জওহরলাল নেহরু",
+        "B": "ই. এম. ফস্টার",
+        "C": "ভিক্টর ব্যানার্জী",
+        "D": "মিনু মাসানী"
+      },
+      "correct_answer": "B",
+      "topic": "General Knowledge - Literature"
+    },
+    {
+      "q_no": 23,
+      "question": "বৌদ্ধ ধর্মাবলম্বীদের জন্য কোন পাল রাজা বিখ্যাত 'বিক্রমশীলা বিশ্ববিদ্যালয়' (university) তৈরি করেছিলেন?",
+      "options": {
+        "A": "দেবপাল",
+        "B": "ধর্মপাল",
+        "C": "গোপাল",
+        "D": "মহীপাল"
+      },
+      "correct_answer": "B",
+      "topic": "General Knowledge - History"
+    },
+    {
+      "q_no": 24,
+      "question": "রান্নার গ্যাসের মুখ্য উপাদানগুলি (constituents) কী কী?",
+      "options": {
+        "A": "তরল বিউটেন ও আইসোবিউটেন",
+        "B": "হাইড্রোজেন ও অ্যাসিটিলিন",
+        "C": "ইথিলিন ও কার্বন মনোক্সাইড",
+        "D": "মিথেন ও ইথেন"
+      },
+      "correct_answer": "A",
+      "topic": "General Knowledge - Science"
+    },
+    {
+      "q_no": 25,
+      "question": "কেরালার উপকূলভাগ (coastline) কী নামে পরিচিত?",
+      "options": {
+        "A": "মালাবার",
+        "B": "উৎকল",
+        "C": "করমণ্ডল",
+        "D": "কোঙ্কন"
+      },
+      "correct_answer": "A",
+      "topic": "General Knowledge - Geography"
+    },
+    {
+      "q_no": 26,
+      "question": "কোন আন্তর্জাতিক সংস্থা (International Organisation) কন্যাশ্রী প্রকল্পকে পুরস্কৃত করেছে?",
+      "options": {
+        "A": "UNICEF",
+        "B": "BRICS",
+        "C": "ASEAN",
+        "D": "SAARC"
+      },
+      "correct_answer": "A",
+      "topic": "General Knowledge - Current Affairs"
+    },
+    {
+      "q_no": 27,
+      "question": "1 GB = ?",
+      "options": {
+        "A": "1024 MB",
+        "B": "1024 KB",
+        "C": "1000 KB",
+        "D": "1000 MB"
+      },
+      "correct_answer": "A",
+      "topic": "General Knowledge - Computer"
+    },
+    {
+      "q_no": 28,
+      "question": "মুঘল সম্রাট শাহজাহানের আসল নাম কী?",
+      "options": {
+        "A": "মুরাদ",
+        "B": "সেলিম",
+        "C": "দারা",
+        "D": "খুররম"
+      },
+      "correct_answer": "D",
+      "topic": "General Knowledge - History"
+    },
+    {
+      "q_no": 29,
+      "question": "নব্যপ্রস্তর যুগে (Neolithic age) ভারতে কোন ধাতুর (metal) ব্যবহার প্রচলিত ছিল?",
+      "options": {
+        "A": "তামা (Copper)",
+        "B": "রূপা (Silver)",
+        "C": "সোনা (Gold)",
+        "D": "লোহা (Iron)"
+      },
+      "correct_answer": "A",
+      "topic": "General Knowledge - History"
+    },
+    {
+      "q_no": 30,
+      "question": "সিনেমা দেখানোর প্রক্ষেপণ যন্ত্রে (projector) কী ধরনের লন্স ব্যবহার করা হয়?",
+      "options": {
+        "A": "অবতল (concave)",
+        "B": "মেনিসকাস (meniscus)",
+        "C": "জুম (zoom)",
+        "D": "উত্তল (convex)"
+      },
+      "correct_answer": "D",
+      "topic": "General Knowledge - Science"
+    },
+    {
+      "q_no": 31,
+      "question": "ভূপৃষ্ঠে (earth crust) কোন ধাতুটি (metal) সর্বাপেক্ষা বেশি পরিমাণে পাওয়া যায়?",
+      "options": {
+        "A": "তামা (copper)",
+        "B": "লোহা (iron)",
+        "C": "অ্যালুমিনিয়াম (aluminium)",
+        "D": "দস্তা (zinc)"
+      },
+      "correct_answer": "C",
+      "topic": "General Knowledge - Science"
+    },
+    {
+      "q_no": 32,
+      "question": "বিধবা বিবাহ আইন (Widow Remarriage Act) কবে প্রবর্তিত হয়েছিল?",
+      "options": {
+        "A": "1856",
+        "B": "1860",
+        "C": "1858",
+        "D": "1854"
+      },
+      "correct_answer": "A",
+      "topic": "General Knowledge - History"
+    },
+    {
+      "q_no": 33,
+      "question": "আলোর গতিবেগ (velocity) প্রতি সেকেন্ডে কত?",
+      "options": {
+        "A": "1,68,000 মাইল",
+        "B": "68,000 মাইল",
+        "C": "86,000 মাইল",
+        "D": "1,86,000 মাইল"
+      },
+      "correct_answer": "D",
+      "topic": "General Knowledge - Science"
+    },
+    {
+      "q_no": 34,
+      "question": "সম্প্রতি কোন ভারতীয় মহিলা ক্রিকেটার 200 উইকেট দখল করেন?",
+      "options": {
+        "A": "ঝুলন গোস্বামী",
+        "B": "মনপ্রীত কৌর",
+        "C": "মানসী বিস্ত",
+        "D": "মিতালী রাজ"
+      },
+      "correct_answer": "A",
+      "topic": "General Knowledge - Sports"
+    },
+    {
+      "q_no": 35,
+      "question": "সম্প্রতি 'ডোকালাম' বিতর্ক কোন কোন দেশের মধ্যে হয়েছিল?",
+      "options": {
+        "A": "ভারত ও নেপাল",
+        "B": "ভারত ও ভুটান",
+        "C": "ভারত ও চীন",
+        "D": "ভারত ও পাকিস্তান"
+      },
+      "correct_answer": "C",
+      "topic": "General Knowledge - Current Affairs"
+    },
+    {
+      "q_no": 36,
+      "question": "A, C-এর পুত্র। C এবং Q দুই বোন। Z, Q-এর মা। P যদি Z-এর পুত্র হয়, তবে নিম্নলিখিত কোন নিবৃত্তিটি সত্য?",
+      "options": {
+        "A": "P, A-এর মামা (maternal uncle)",
+        "B": "Z, C-এর ভাই (brother)",
+        "C": "P, A-এর খুড়তুতো ভাই (cousin brother)",
+        "D": "Q, A-এর ঠাকুরদা (grandfather)"
+      },
+      "correct_answer": "A",
+      "topic": "Reasoning - Blood Relation"
+    },
+    {
+      "q_no": 37,
+      "question": "নিম্নলিখিত তথ্যগুলি যন্ত্রসহকারে পড়ুন এবং প্রশ্নটির উত্তর দিন।\n(i) P × Q মানে P, Q-এর বাবা\n(ii) P – Q মানে P, Q-এর বোন\n(iii) P + Q মানে P, Q-এর মা\n(iv) P ÷ Q মানে P, Q-এর ভাই\nতাহলে B + D × M ÷ N সংকেতে M, B-এর কে হন?",
+      "options": {
+        "A": "নাতি (grand son)",
+        "B": "কন্যা (daughter)",
+        "C": "নাতনি (grand daughter)",
+        "D": "পুত্র (son)"
+      },
+      "correct_answer": "A",
+      "topic": "Reasoning - Blood Relation"
+    },
+    {
+      "q_no": 38,
+      "question": "Influenza : Virus :: Typhoid : ?",
+      "options": {
+        "A": "Parasite",
+        "B": "Bacteria",
+        "C": "Protozoa",
+        "D": "Bacillus"
+      },
+      "correct_answer": "B",
+      "topic": "Reasoning - Analogy"
+    },
+    {
+      "q_no": 39,
+      "question": "মোহিনী 9 দিন আগে সিনেমা দেখতে গিয়েছিল। সে শুধুমাত্র বৃহস্পতিবার (Thursday) সিনেমা দেখতে যায়। তাহলে আজ কী বার?",
+      "options": {
+        "A": "শনিবার (Saturday)",
+        "B": "মঙ্গলবার (Tuesday)",
+        "C": "রবিবার (Sunday)",
+        "D": "বৃহস্পতিবার (Thursday)"
+      },
+      "correct_answer": "B",
+      "topic": "Reasoning - Calendar"
+    },
+    {
+      "q_no": 40,
+      "question": "নীচের ছবিটিতে কতগুলি আয়তক্ষেত্র (rectangle) আছে? [একটি আয়তাকার গ্রিড চিত্র দেওয়া আছে]",
+      "options": {
+        "A": "9",
+        "B": "11",
+        "C": "10",
+        "D": "8"
+      },
+      "correct_answer": "C",
+      "topic": "Reasoning - Figure Counting"
+    },
+    {
+      "q_no": 41,
+      "question": "A-র ঘর থেকে হাসপাতাল 12 km পূর্ব দিকে অবস্থিত। তার স্কুল হাসপাতাল থেকে 5 km দক্ষিণ দিকে অবস্থিত হলে, A-র ঘর থেকে স্কুলের মধ্যে ন্যূনতম দূরত্ব কত?",
+      "options": {
+        "A": "17 km",
+        "B": "13 km",
+        "C": "12 km",
+        "D": "16 km"
+      },
+      "correct_answer": "B",
+      "topic": "Reasoning - Direction"
+    },
+    {
+      "q_no": 42,
+      "question": "নিম্নলিখিত চিত্রে কতগুলি বর্গক্ষেত্র (square) আছে? [একটি ত্রিভুজ ও বর্গক্ষেত্র সম্বলিত চিত্র দেওয়া আছে]",
+      "options": {
+        "A": "8",
+        "B": "6",
+        "C": "5",
+        "D": "7"
+      },
+      "correct_answer": "A",
+      "topic": "Reasoning - Figure Counting"
+    },
+    {
+      "q_no": 43,
+      "question": "নিম্নলিখিত চিত্রে প্রশ্নবোধক চিহ্নে কোন ছবিটি বসবে? [একটি ডায়মন্ড আকৃতির প্যাটার্ন সিরিজ দেওয়া আছে]",
+      "options": {
+        "A": "2",
+        "B": "4",
+        "C": "3",
+        "D": "1"
+      },
+      "correct_answer": "C",
+      "topic": "Reasoning - Pattern"
+    },
+    {
+      "q_no": 44,
+      "question": "নিম্নলিখিত কোন চিত্রের দ্বারা সঠিকভাবে হাতি, নেকড়ে এবং পশুর সম্পর্কে প্রকাশ করা যায়? [ভেন ডায়াগ্রাম ভিত্তিক প্রশ্ন]",
+      "options": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      },
+      "correct_answer": "C",
+      "topic": "Reasoning - Venn Diagram"
+    },
+    {
+      "q_no": 45,
+      "question": "যদি কোনো সাংকেতিক ভাষায় DELHI-কে CCIDD লেখা হয়, তবে সেই ভাষায় BOMBAY কে কী লেখা হবে?",
+      "options": {
+        "A": "MJXVSU",
+        "B": "WXYZAX",
+        "C": "AJMTVT",
+        "D": "AMJXVS"
+      },
+      "correct_answer": "A",
+      "topic": "Reasoning - Coding-Decoding"
+    },
+    {
+      "q_no": 46,
+      "question": "রীনা একটি সংস্থা থেকে 1200 টাকা সরল সুদে কিছু বছরের জন্য ঋণ নেয় যেখানে সরল সুদের হার (Rate of Simple Interest) যত বছরের জন্য ঋণ নেওয়া হয় তার সমান। যদি সে 432 টাকা সুদ হিসাবে পরিশোধ করে তবে সুদের হার কত ছিল?",
+      "options": {
+        "A": "6%",
+        "B": "12%",
+        "C": "18%",
+        "D": "3.6%"
+      },
+      "correct_answer": "A",
+      "topic": "Mathematics - Simple Interest"
+    },
+    {
+      "q_no": 47,
+      "question": "A, B, C, D-এর মধ্যে কিছু টাকা 5 : 2 : 4 : 3 অনুপাতে (ratio) ভাগ করা হয়। C যদি D-র থেকে 1000 টাকা বেশি পায়, তবে B কত টাকা পাবে?",
+      "options": {
+        "A": "1500",
+        "B": "700",
+        "C": "2000",
+        "D": "500"
+      },
+      "correct_answer": "C",
+      "topic": "Mathematics - Ratio"
+    },
+    {
+      "q_no": 48,
+      "question": "একটি ত্রিভুজের (triangle) তিনটি বাহুর (sides) অনুপাত (ratio) 1/2 : 1/3 : 1/4। যদি ত্রিভুজটির পরিসীমা (perimeter) 52 cm হয়, তবে ক্ষুদ্রতম বাহুটির (smallest side) দৈর্ঘ্য (length) কত?",
+      "options": {
+        "A": "14 cm",
+        "B": "18 cm",
+        "C": "16 cm",
+        "D": "12 cm"
+      },
+      "correct_answer": "D",
+      "topic": "Mathematics - Triangle"
+    },
+    {
+      "q_no": 49,
+      "question": "একটি নৌকা স্রোতের অনুকূলে (downstream) 2 ঘণ্টায় 16 কিমি যায় কিন্তু সমপরিমাণ পথ স্রোতের প্রতিকূলে (upstream) গেলে 4 ঘণ্টা সময় লাগে। স্থির জলে নৌকার বেগ কত?",
+      "options": {
+        "A": "6 কিমি/ঘণ্টা",
+        "B": "10 কিমি/ঘণ্টা",
+        "C": "8 কিমি/ঘণ্টা",
+        "D": "4 কিমি/ঘণ্টা"
+      },
+      "correct_answer": "A",
+      "topic": "Mathematics - Boats and Streams"
+    },
+    {
+      "q_no": 50,
+      "question": "একটি আয়তক্ষেত্রের (rectangle) কর্ণ (diagonal) √41 cm এবং তার ক্ষেত্রফল (area) 20 sq. cm হলে আয়তক্ষেত্রটির পরিসীমা (perimeter) কত?",
+      "options": {
+        "A": "18 cm",
+        "B": "41 cm",
+        "C": "20 cm",
+        "D": "9 cm"
+      },
+      "correct_answer": "A",
+      "topic": "Mathematics - Rectangle"
+    },
+    {
+      "q_no": 51,
+      "question": "একটি আয়তক্ষেত্রের (rectangle) দৈর্ঘ্য (length) ও প্রস্থের (width) অন্তর (difference) 23m। যদি আয়তক্ষেত্রটির পরিসীমা (perimeter) 206 m হয়, তবে আয়তক্ষেত্রটির ক্ষেত্রফল (area) কত?",
+      "options": {
+        "A": "2540 sq. m.",
+        "B": "2640 sq. m.",
+        "C": "2620 sq. m.",
+        "D": "2520 sq. m."
+      },
+      "correct_answer": "B",
+      "topic": "Mathematics - Rectangle"
+    },
+    {
+      "q_no": 52,
+      "question": "96 ÷ 8 {13 – 3 – (–13 + 4) – 12 + 5} = ?",
+      "options": {
+        "A": "42",
+        "B": "1",
+        "C": "22",
+        "D": "24"
+      },
+      "correct_answer": "D",
+      "topic": "Mathematics - BODMAS"
+    },
+    {
+      "q_no": 53,
+      "question": "24, 36 এবং 60 এর গ.সা.গু. (H.C.F.) কত?",
+      "options": {
+        "A": "12",
+        "B": "24",
+        "C": "20",
+        "D": "16"
+      },
+      "correct_answer": "A",
+      "topic": "Mathematics - HCF"
+    },
+    {
+      "q_no": 54,
+      "question": "60 m দৈর্ঘ্য (length) এবং 40 m প্রস্থ (width) বিশিষ্ট একটি খেলার মাঠের বাইরের চারধারে 1 m চওড়া একটি রাস্তা থাকলে, রাস্তাটির ক্ষেত্রফল (area) কত?",
+      "options": {
+        "A": "240 sq. m.",
+        "B": "206 sq. m.",
+        "C": "204 sq. m.",
+        "D": "264 sq. m."
+      },
+      "correct_answer": "D",
+      "topic": "Mathematics - Area"
+    },
+    {
+      "q_no": 55,
+      "question": "সাম্প্রতিককালে পশ্চিমবঙ্গে বসবাসকারী মহিলাদের দ্বারা প্রস্তুত 'ফুটবল' টির নাম কী?",
+      "options": {
+        "A": "বিজয়ী",
+        "B": "বিজয়িনী",
+        "C": "জয়িতা",
+        "D": "জয়ী"
+      },
+      "correct_answer": "C",
+      "topic": "General Knowledge - Current Affairs"
+    },
+    {
+      "q_no": 56,
+      "question": "'আজাদ-হিন্দ-ফৌজ' কোন সালে গঠিত হয়?",
+      "options": {
+        "A": "1943",
+        "B": "1947",
+        "C": "1945",
+        "D": "1941"
+      },
+      "correct_answer": "A",
+      "topic": "General Knowledge - History"
+    },
+    {
+      "q_no": 57,
+      "question": "ডঃ ভি কুরিয়েন কীসের সঙ্গে যুক্ত?",
+      "options": {
+        "A": "হাঁস মুরগির খামার (Poultry Farms)",
+        "B": "দুগ্ধজাত দ্রব্য উৎপাদন (Dairy Production)",
+        "C": "আর্থিক সংস্কার (Economic Reforms)",
+        "D": "পারমাণবিক শক্তি (Atomic Energy)"
+      },
+      "correct_answer": "B",
+      "topic": "General Knowledge - Personalities"
+    },
+    {
+      "q_no": 58,
+      "question": "ওয়ার্ল্ড ট্রেড অর্গানাইজেশনের (WTO) সদর দপ্তর (Head Quarter) কোথায় অবস্থিত?",
+      "options": {
+        "A": "জার্মানি",
+        "B": "সুইৎজারল্যান্ড",
+        "C": "চীন",
+        "D": "স্পেন"
+      },
+      "correct_answer": "B",
+      "topic": "General Knowledge - International Organizations"
+    },
+    {
+      "q_no": 59,
+      "question": "ডঃ সেলিম আলী কীসের জন্য বিখ্যাত?",
+      "options": {
+        "A": "ভূতত্ত্ববিদ্যা (Geology)",
+        "B": "পক্ষী বিষয়ক বিদ্যা (Ornithology)",
+        "C": "মহাকাশ বিজ্ঞান (Space Science)",
+        "D": "রেশমগুটির চাষ (Sericulture)"
+      },
+      "correct_answer": "B",
+      "topic": "General Knowledge - Personalities"
+    },
+    {
+      "q_no": 60,
+      "question": "'গ্রিন হাউস এফেক্ট' মুখ্যত কোন কোন গ্যাসের জন্য হয়?",
+      "options": {
+        "A": "কার্বন মনোক্সাইড ও সালফার ডাইঅক্সাইড",
+        "B": "কার্বন ডাইঅক্সাইড ও মিথেন",
+        "C": "অ্যামোনিয়া ও ওজোন",
+        "D": "কার্বন টেট্রা ফ্লুরাইড ও নাইট্রাস অক্সাইড"
+      },
+      "correct_answer": "B",
+      "topic": "General Knowledge - Environment"
+    },
+    {
+      "q_no": 61,
+      "question": "CD-র পুরো কথাটি কী?",
+      "options": {
+        "A": "Compact Disc",
+        "B": "Compact Data",
+        "C": "Carried Data",
+        "D": "Compressed Disc"
+      },
+      "correct_answer": "A",
+      "topic": "General Knowledge - Computer"
+    },
+    {
+      "q_no": 62,
+      "question": "কে প্রথম বলেছিলেন পরমাণু (atom) অবিভাজ্য (indivisible)?",
+      "options": {
+        "A": "আর্নেস্ট রাদারফোর্ড",
+        "B": "আলবার্ট আইনস্টাইন",
+        "C": "অ্যামিদিও অ্যাভোগাড্রো",
+        "D": "জন ডালটন"
+      },
+      "correct_answer": "D",
+      "topic": "General Knowledge - Science"
+    },
+    {
+      "q_no": 63,
+      "question": "নিম্নলিখিত তথ্যগুলির মধ্যে কোনটি সঠিক?",
+      "options": {
+        "A": "ইয়াসিন মার্চেন্ট – স্নুকার",
+        "B": "যুবরাজ সিং – হকি",
+        "C": "সানিয়া মির্জা – টেবিল টেনিস",
+        "D": "বিশ্বনাথন আনন্দ – ক্রিকেট"
+      },
+      "correct_answer": "A",
+      "topic": "General Knowledge - Sports"
+    },
+    {
+      "q_no": 64,
+      "question": "মেঘলী ঘোষ কোন খেলার সাথে যুক্ত?",
+      "options": {
+        "A": "টেবিল টেনিস",
+        "B": "এয়ার রাইফেল শুটিং",
+        "C": "ব্যাডমিন্টন",
+        "D": "বাস্কেটবল"
+      },
+      "correct_answer": "B",
+      "topic": "General Knowledge - Sports"
+    },
+    {
+      "q_no": 65,
+      "question": "নীচের চিত্র অনুসারে প্রশ্নবোধক চিহ্নে কোন ছবিটি আসবে? [স্মাইলি ফেস সিরিজ প্যাটার্ন]",
+      "options": {
+        "A": "2",
+        "B": "4",
+        "C": "3",
+        "D": "1"
+      },
+      "correct_answer": "B",
+      "topic": "Reasoning - Pattern"
+    },
+    {
+      "q_no": 66,
+      "question": "TEACHERS শব্দটির (word) প্রতিটি বর্ণ (letter) কেবলমাত্র একবার ব্যবহার করে কোন শব্দটি তৈরি করা যায় না?",
+      "options": {
+        "A": "CHAIR",
+        "B": "SEARCH",
+        "C": "CHEER",
+        "D": "REACH"
+      },
+      "correct_answer": "C",
+      "topic": "Reasoning - Word Formation"
+    },
+    {
+      "q_no": 67,
+      "question": "নিম্নলিখিত চিত্র অনুসারে প্রশ্নবোধক চিহ্নে কোন সংখ্যাটি বসবে?\n27 → 9, 54 → 14, 42 → 7, 84 → ?, ? → 42",
+      "options": {
+        "A": "21",
+        "B": "35",
+        "C": "24",
+        "D": "12"
+      },
+      "correct_answer": "D",
+      "topic": "Reasoning - Number Series"
+    },
+    {
+      "q_no": 68,
+      "question": "প্রশ্নবোধক চিহ্নে কোন সংখ্যাটি বসবে?\n[584 এবং 694 এর pattern অনুযায়ী তৃতীয় বৃত্তের মান কত?]",
+      "options": {
+        "A": "769",
+        "B": "937",
+        "C": "824",
+        "D": "678"
+      },
+      "correct_answer": "C",
+      "topic": "Reasoning - Number Pattern"
+    },
+    {
+      "q_no": 69,
+      "question": "দুটি সংখ্যার গুণফল (product) 4107। যদি সংখ্যা দুটির গ.সা.গু. (H.C.F.) 37 হয়, তবে বৃহত্তর (greater) সংখ্যাটি কত?",
+      "options": {
+        "A": "107",
+        "B": "185",
+        "C": "111",
+        "D": "101"
+      },
+      "correct_answer": "C",
+      "topic": "Mathematics - HCF"
+    },
+    {
+      "q_no": 70,
+      "question": "A এবং B-র মাসিক গড় (average) আয় 15,050 টাকা, B এবং C-র মাসিক গড় আয় 15,350 টাকা এবং A ও C-র মাসিক গড় আয় 15,200 টাকা হলে A-র মাসিক আয় কত?",
+      "options": {
+        "A": "15,500 টাকা",
+        "B": "15,200 টাকা",
+        "C": "15,900 টাকা",
+        "D": "14,900 টাকা"
+      },
+      "correct_answer": "C",
+      "topic": "Mathematics - Average"
+    },
+    {
+      "q_no": 71,
+      "question": "একটি ট্রেন 800 m এবং 400 m লম্বা দুটি সেতু যথাক্রমে 100 সেকেন্ডে এবং 60 সেকেন্ডে অতিক্রম করে। ট্রেনটির দৈর্ঘ্য (length) কত?",
+      "options": {
+        "A": "250 m",
+        "B": "350 m",
+        "C": "300 m",
+        "D": "200 m"
+      },
+      "correct_answer": "D",
+      "topic": "Mathematics - Train"
+    },
+    {
+      "q_no": 72,
+      "question": "একটি আয়তক্ষেত্রের (rectangle) ক্ষেত্রফল (area) 1200 sq.cm.। 5 cm দৈর্ঘ্য (length) এবং 4 cm প্রস্থ (width) বিশিষ্ট কতগুলি টাইলি দিয়ে আয়তক্ষেত্রটিকে আবৃত করা যাবে?",
+      "options": {
+        "A": "50",
+        "B": "70",
+        "C": "60",
+        "D": "40"
+      },
+      "correct_answer": "C",
+      "topic": "Mathematics - Area"
+    },
+    {
+      "q_no": 73,
+      "question": "মান (value) নির্ণয় করুন: [(2.39)² – (1.61)²] / [2.39 – 1.61]",
+      "options": {
+        "A": "4",
+        "B": "8",
+        "C": "6",
+        "D": "2"
+      },
+      "correct_answer": "A",
+      "topic": "Mathematics - Algebra"
+    },
+    {
+      "q_no": 74,
+      "question": "কোনো সংখ্যার 5% যদি 12 হয়, সংখ্যাটি কত?",
+      "options": {
+        "A": "180",
+        "B": "320",
+        "C": "240",
+        "D": "120"
+      },
+      "correct_answer": "C",
+      "topic": "Mathematics - Percentage"
+    },
+    {
+      "q_no": 75,
+      "question": "একটি সমকোণী ত্রিভুজের (right angled triangle) ভূমি (base) 12 cm এবং অতিভুজ (hypotenuse) 13 cm হলে, ত্রিভুজটির ক্ষেত্রফল (area) কত?",
+      "options": {
+        "A": "20 sq. cm.",
+        "B": "30 sq. cm.",
+        "C": "25 sq. cm.",
+        "D": "10 sq. cm."
+      },
+      "correct_answer": "B",
+      "topic": "Mathematics - Triangle"
+    },
+    {
+      "q_no": 76,
+      "question": "দুটি ট্রেনের বেগের (speed) অনুপাত (ratio) 7 : 8। যদি দ্বিতীয় ট্রেনটি 5 ঘণ্টায় 400 কিমি অতিক্রম করে তবে প্রথম ট্রেনের বেগ (speed) কত?",
+      "options": {
+        "A": "55 কিমি/ঘণ্টা",
+        "B": "75 কিমি/ঘণ্টা",
+        "C": "70 কিমি/ঘণ্টা",
+        "D": "60 কিমি/ঘণ্টা"
+      },
+      "correct_answer": "C",
+      "topic": "Mathematics - Speed and Distance"
+    },
+    {
+      "q_no": 77,
+      "question": "পিতলকে (brass) খোলা হাওয়ায় (air) রাখলে কীসের উপস্থিতিতে এর রং পরিবর্তিত হয়?",
+      "options": {
+        "A": "নাইট্রোজেন ডাইঅক্সাইড",
+        "B": "হাইড্রোজেন সালফাইড",
+        "C": "নাইট্রোজেন",
+        "D": "অক্সিজেন সালফাইড"
+      },
+      "correct_answer": "B",
+      "topic": "General Knowledge - Science / Chemistry"
+    },
+    {
+      "q_no": 78,
+      "question": "বিশিষ্ট পদার্থবিদ (physicist) স্টিফেন হকিং কোন দেশের নাগরিক ছিলেন?",
+      "options": {
+        "A": "ইংল্যান্ড",
+        "B": "জার্মানি",
+        "C": "ফ্রান্স",
+        "D": "রাশিয়া"
+      },
+      "correct_answer": "A",
+      "topic": "General Knowledge - Personalities"
+    },
+    {
+      "q_no": 79,
+      "question": "মহাকবি কালিদাস কোন সম্রাটের সভাকবি ছিলেন?",
+      "options": {
+        "A": "সমুদ্রগুপ্ত",
+        "B": "চন্দ্রগুপ্ত মৌর্য",
+        "C": "অশোক",
+        "D": "দ্বিতীয় চন্দ্রগুপ্ত"
+      },
+      "correct_answer": "D",
+      "topic": "General Knowledge - History"
+    },
+    {
+      "q_no": 80,
+      "question": "কে 'লেডি উইথ দ্য ল্যাম্প' নামে পরিচিত ছিলেন?",
+      "options": {
+        "A": "অ্যানি বেসান্ত",
+        "B": "সিস্টার নিবেদিতা",
+        "C": "ফ্লোরেন্স নাইটিঙ্গেল",
+        "D": "জোয়ান অব আর্ক"
+      },
+      "correct_answer": "C",
+      "topic": "General Knowledge - Personalities"
+    },
+    {
+      "q_no": 81,
+      "question": "কম্পিউটারের ইন্টিগ্রেটেড চিপ (IC) কী দিয়ে তৈরি?",
+      "options": {
+        "A": "গ্রাফাইট",
+        "B": "ম্যাগানিজ",
+        "C": "সিলিকন",
+        "D": "ক্যালশিয়াম"
+      },
+      "correct_answer": "C",
+      "topic": "General Knowledge - Computer"
+    },
+    {
+      "q_no": 82,
+      "question": "সাহিত্যে (literature) ভারতের সর্বোচ্চ পুরস্কার কোনটি?",
+      "options": {
+        "A": "দাদাসাহেব ফালকে পুরস্কার",
+        "B": "সাহিত্য অ্যাকাডেমী পুরস্কার",
+        "C": "পদ্মভূষণ পুরস্কার",
+        "D": "জ্ঞানপীঠ পুরস্কার"
+      },
+      "correct_answer": "D",
+      "topic": "General Knowledge - Awards"
+    },
+    {
+      "q_no": 83,
+      "question": "ভারতের কোন রাজ্যে সর্বাধিক প্রাকৃতিক (natural) রবার পাওয়া যায়?",
+      "options": {
+        "A": "কেরালা",
+        "B": "অন্ধ্রপ্রদেশ",
+        "C": "আসাম",
+        "D": "তামিলনাড়ু"
+      },
+      "correct_answer": "A",
+      "topic": "General Knowledge - Geography"
+    },
+    {
+      "q_no": 84,
+      "question": "আলেকজান্ডারের ভারত আক্রমণের সময় মগধে কোন বংশ রাজত্ব করছিল?",
+      "options": {
+        "A": "নন্দবংশ",
+        "B": "পালবংশ",
+        "C": "মৌর্যবংশ",
+        "D": "গুপ্তবংশ"
+      },
+      "correct_answer": "A",
+      "topic": "General Knowledge - History"
+    },
+    {
+      "q_no": 85,
+      "question": "জালিয়ানওয়ালাবাগে গুলি চালানোর আদেশ কে দিয়েছিলেন?",
+      "options": {
+        "A": "জন সাইমন",
+        "B": "লর্ড চেমসফোর্ড",
+        "C": "জেনারেল ডায়ার",
+        "D": "লর্ড মাউন্টব্যাটেন"
+      },
+      "correct_answer": "C",
+      "topic": "General Knowledge - History"
+    },
+    {
+      "q_no": 86,
+      "question": "আর্দ্রতা (humidity) পরিমাপ করার যন্ত্রের (instrument) নাম কী?",
+      "options": {
+        "A": "থার্মোমিটার",
+        "B": "হাইগ্রোমিটার",
+        "C": "হাইড্রোমিটার",
+        "D": "ব্যারোমিটার"
+      },
+      "correct_answer": "B",
+      "topic": "General Knowledge - Science"
+    },
+    {
+      "q_no": 87,
+      "question": "চক্ষুদানের সময় চোখের কোন অংশটি দাতার (donor) কাছ থেকে নেওয়া হয়?",
+      "options": {
+        "A": "রেটিনা",
+        "B": "আইরিস",
+        "C": "লেন্স",
+        "D": "কর্নিয়া"
+      },
+      "correct_answer": "D",
+      "topic": "General Knowledge - Science / Biology"
+    },
+    {
+      "q_no": 88,
+      "question": "পৃথিবীর সর্বাপেক্ষা লবণাক্ত (salty) সমুদ্র (sea) কী?",
+      "options": {
+        "A": "লোহিত সাগর (Red Sea)",
+        "B": "কৃষ্ণ সাগর (Black Sea)",
+        "C": "আরল সাগর (Ural Sea)",
+        "D": "মৃত সাগর (Dead Sea)"
+      },
+      "correct_answer": "D",
+      "topic": "General Knowledge - Geography"
+    },
+    {
+      "q_no": 89,
+      "question": "AIDS / HIV ভাইরাস কী ধরনের ভাইরাস?",
+      "options": {
+        "A": "RNA ভাইরাস",
+        "B": "DNA এবং RNA ভাইরাস",
+        "C": "DNA অথবা RNA ভাইরাস",
+        "D": "DNA ভাইরাস"
+      },
+      "correct_answer": "A",
+      "topic": "General Knowledge - Biology"
+    },
+    {
+      "q_no": 90,
+      "question": "কোন উদ্ভিদে শ্বাসমূল (aerial root) দেখতে পাওয়া যায়?",
+      "options": {
+        "A": "দেবদার",
+        "B": "গরান",
+        "C": "ইউক্যালিপটাস",
+        "D": "ফার্ন"
+      },
+      "correct_answer": "B",
+      "topic": "General Knowledge - Biology"
+    },
+    {
+      "q_no": 91,
+      "question": "GST পুরো কথাটি কী?",
+      "options": {
+        "A": "Goods and Sales Tax",
+        "B": "Government Supplementary Tax",
+        "C": "Government State Tax",
+        "D": "Goods and Services Tax"
+      },
+      "correct_answer": "D",
+      "topic": "General Knowledge - Economy"
+    },
+    {
+      "q_no": 92,
+      "question": "প্রশ্নবোধক চিহ্নে কোন সংখ্যাটি বসবে?\n9, 25, 49, ?, 121",
+      "options": {
+        "A": "91",
+        "B": "81",
+        "C": "64",
+        "D": "100"
+      },
+      "correct_answer": "B",
+      "topic": "Reasoning - Number Series"
+    },
+    {
+      "q_no": 93,
+      "question": "K, X-এর ভাই। Z, X-এর পুত্র। P, K-এর কন্যা এবং সে N-এর সাথে বিবাহিতা। G এবং X বোন। G-এর সাথে Z-এর সম্পর্ক কী?",
+      "options": {
+        "A": "মা (mother)",
+        "B": "ঠাকুমা (grand mother)",
+        "C": "কাকিমা/মাসিমা (aunt)",
+        "D": "বোন (sister)"
+      },
+      "correct_answer": "C",
+      "topic": "Reasoning - Blood Relation"
+    },
+    {
+      "q_no": 94,
+      "question": "যদি কোনো সাংকেতিক ভাষায় MYSTIFY-কে NZTUJGZ লেখা হয়, তবে সেই ভাষায় NEMESIS-কে কীভাবে লেখা হবে?",
+      "options": {
+        "A": "OFNFTJT",
+        "B": "PGOKUGU",
+        "C": "ODNHTDR",
+        "D": "MDLHRDR"
+      },
+      "correct_answer": "A",
+      "topic": "Reasoning - Coding-Decoding"
+    },
+    {
+      "q_no": 95,
+      "question": "প্রশ্নবোধক চিহ্নে কোন সংখ্যাটি বসবে?\n[বৃত্তের চার ভাগে: ?, 9, 18, 12]",
+      "options": {
+        "A": "15",
+        "B": "27",
+        "C": "22",
+        "D": "11"
+      },
+      "correct_answer": "A",
+      "topic": "Reasoning - Number Pattern"
+    },
+    {
+      "q_no": 96,
+      "question": "নিম্নলিখিত চিত্রে প্রশ্নবোধক চিহ্নে কোন ছবিটি বসবে?\n△□△ | □○□ | ○◇○ | ◇□?",
+      "options": {
+        "A": "2 (◇)",
+        "B": "4 (△)",
+        "C": "3 (○)",
+        "D": "1 (□)"
+      },
+      "correct_answer": "A",
+      "topic": "Reasoning - Pattern Series"
+    },
+    {
+      "q_no": 97,
+      "question": "প্রশ্নবোধক চিহ্নে কোন সংখ্যাটি বসবে?\n[প্রথম ক্রস: 5, 6, 93, 15, 3 → 93; দ্বিতীয় ক্রস: 7, 9, ?, 5, 6; তৃতীয় ক্রস: 18, 4, 50, 1, 8 → 50]",
+      "options": {
+        "A": "19",
+        "B": "51",
+        "C": "89",
+        "D": "27"
+      },
+      "correct_answer": "D",
+      "topic": "Reasoning - Number Pattern"
+    },
+    {
+      "q_no": 98,
+      "question": "একটি নির্বাচনে দুজন প্রার্থীর মধ্যে একজন বৈধ ভোটের 55% পান। 20% ভোট অবৈধ ছিল। যদি মোট প্রদত্ত ভোটের সংখ্যা 7500 হয়, তবে অপর প্রার্থী কতগুলি বৈধ ভোট পেয়েছিলেন?",
+      "options": {
+        "A": "2900",
+        "B": "3100",
+        "C": "3000",
+        "D": "2700"
+      },
+      "correct_answer": "D",
+      "topic": "Mathematics - Percentage"
+    },
+    {
+      "q_no": 99,
+      "question": "দুটি সংখ্যার অনুপাত (ratio) 3 : 4 এবং সংখ্যা দুটির গ.সা.গু. (H.C.F.) 4 হলে, সংখ্যা দুটির ল.সা.গু. (L.C.M.) কত?",
+      "options": {
+        "A": "48",
+        "B": "27",
+        "C": "56",
+        "D": "22"
+      },
+      "correct_answer": "A",
+      "topic": "Mathematics - HCF and LCM"
+    },
+    {
+      "q_no": 100,
+      "question": "যদি A : B : C = 2 : 3 : 4 হয়, তবে A/B : B/C : C/A = ?",
+      "options": {
+        "A": "2 : 3 : 8",
+        "B": "8 : 9 : 24",
+        "C": "7 : 9 : 24",
+        "D": "5 : 9 : 24"
+      },
+      "correct_answer": "B",
+      "topic": "Mathematics - Ratio"
+    }
+  ]
+}

@@ -1,0 +1,1008 @@
+{
+    "exam": "WBPSC Clerkship 2019",
+    "set": "Set 2 / Series A",
+    "subject": "General Studies, Arithmetic and English",
+    "total_questions": 100,
+    "questions": [
+        {
+            "q_no": 1,
+            "question": "Mahatma Gandhi had first started his non-violent non-cooperation movement in",
+            "options": {
+                "A": "UK",
+                "B": "South Africa",
+                "C": "India",
+                "D": "Zimbabwe"
+            }
+        },
+        {
+            "q_no": 2,
+            "question": "The India-Bangladesh Border is guarded on the Indian side by",
+            "options": {
+                "A": "The Indian Army",
+                "B": "Border Security Forces (BSF)",
+                "C": "CRPF",
+                "D": "Indo-Tibetan Border Police"
+            }
+        },
+        {
+            "q_no": 3,
+            "question": "Which one of the following states of Indi has lost its special status due to abolition o Article 370?",
+            "options": {
+                "A": "Manipur",
+                "B": "Jammu and Kashmir",
+                "C": "Nagaland",
+                "D": "Sikkim"
+            }
+        },
+        {
+            "q_no": 4,
+            "question": "Mahatma Gandhi was assassinated on 30t January",
+            "options": {
+                "A": "1947",
+                "B": "1948",
+                "C": "1949",
+                "D": "1950"
+            }
+        },
+        {
+            "q_no": 5,
+            "question": "The Rafale deal relates to the acquisition",
+            "options": {
+                "A": "helicopters",
+                "B": "fighter planes",
+                "C": "submarines",
+                "D": "long range missiles"
+            }
+        },
+        {
+            "q_no": 6,
+            "question": "Gautam Buddha was born in",
+            "options": {
+                "A": "KapilaVastu",
+                "B": "Sarnath",
+                "C": "Bodh Gaya",
+                "D": "Lumbini"
+            }
+        },
+        {
+            "q_no": 7,
+            "question": "Vidyasagar’ s birth place ‘Birsingha’ village is in",
+            "options": {
+                "A": "Hooghly district",
+                "B": "Nadia district",
+                "C": "West Medinipur district",
+                "D": "Howrah district"
+            }
+        },
+        {
+            "q_no": 8,
+            "question": "Who among the following persons is a Boxer?",
+            "options": {
+                "A": "Dibyendu Barua",
+                "B": "Chand Ram",
+                "C": "Manju Rani",
+                "D": "Dipa Karmakar"
+            }
+        },
+        {
+            "q_no": 9,
+            "question": "Jaideep Mukherjee represented India in",
+            "options": {
+                "A": "Tennis",
+                "B": "Badminton",
+                "C": "Cricket",
+                "D": "Football"
+            }
+        },
+        {
+            "q_no": 10,
+            "question": "Which one of the following rivers does not flow across the India-Bangladesh border?",
+            "options": {
+                "A": "The Ganges",
+                "B": "Teesta",
+                "C": "Atrayee",
+                "D": "Damodar ddae 7"
+            }
+        },
+        {
+            "q_no": 11,
+            "question": "Which one of the following items is sought to be banned for protection of environment?",
+            "options": {
+                "A": "Jute bags",
+                "B": "Plastic bags",
+                "C": "Paper bags",
+                "D": "Cloth bags"
+            }
+        },
+        {
+            "q_no": 12,
+            "question": "Which one of the following states is not a Member of SAARC?",
+            "options": {
+                "A": "Bangladesh",
+                "B": "Myanmar",
+                "C": "Sri Lanka",
+                "D": "Nepal"
+            }
+        },
+        {
+            "q_no": 13,
+            "question": "Which one of the following is not an independent state?",
+            "options": {
+                "A": "Australia",
+                "B": "Scotland",
+                "C": "Belgium",
+                "D": "Spain"
+            }
+        },
+        {
+            "q_no": 14,
+            "question": "S-400 missiles are being acquired from",
+            "options": {
+                "A": "Sweden",
+                "B": "UK",
+                "C": "Russia",
+                "D": "USA"
+            }
+        },
+        {
+            "q_no": 15,
+            "question": "President Donald Trump succeeded",
+            "options": {
+                "A": "Bill Clinton",
+                "B": "Barack Obama",
+                "C": "Colin Powel",
+                "D": "George Bush Jr."
+            }
+        },
+        {
+            "q_no": 16,
+            "question": "Who is the present President of France?",
+            "options": {
+                "A": "Nicolas Sarkozy",
+                "B": "Jean Monnet",
+                "C": "Emmanuel Macron",
+                "D": "Francois Hollande"
+            }
+        },
+        {
+            "q_no": 17,
+            "question": "Lionel Messi hails from",
+            "options": {
+                "A": "Brazil",
+                "B": "Argentina",
+                "C": "Bolivia",
+                "D": "Portugal"
+            }
+        },
+        {
+            "q_no": 18,
+            "question": "The Magsaysay Award (2019) in Journalism was given to",
+            "options": {
+                "A": "Swapan Dasgupta",
+                "B": "Raveesh Kumar",
+                "C": "Arnab Goswami",
+                "D": "Ravindra Kumar"
+            }
+        },
+        {
+            "q_no": 19,
+            "question": "Who among the following was awarded the Nobel Prize in Literature in 2019?",
+            "options": {
+                "A": "Peter Handke",
+                "B": "Bob Dylan",
+                "C": "Olga Tokarcezuk",
+                "D": "Salman Rushdie"
+            }
+        },
+        {
+            "q_no": 20,
+            "question": "ExceptHong Kong, how many other Special Administrative Regions (SARs) are there in China?",
+            "options": {
+                "A": "2",
+                "B": "1",
+                "C": "3",
+                "D": "None of the above"
+            }
+        },
+        {
+            "q_no": 21,
+            "question": "Which of the following team won the Cricket World Cup in 2019?",
+            "options": {
+                "A": "South Africa",
+                "B": "England",
+                "C": "New Zealand",
+                "D": "India"
+            }
+        },
+        {
+            "q_no": 22,
+            "question": "The 2016 Olympic games were held in",
+            "options": {
+                "A": "London",
+                "B": "Rio-de-Janeiro",
+                "C": "Moscow",
+                "D": "Mexico city"
+            }
+        },
+        {
+            "q_no": 23,
+            "question": "How many seats are there in Lok Sabha?",
+            "options": {
+                "A": "540",
+                "B": "543",
+                "C": "545",
+                "D": "550"
+            }
+        },
+        {
+            "q_no": 24,
+            "question": "Who is currently the Chairman of IMF?",
+            "options": {
+                "A": "Christine Lagarde",
+                "B": "Kristalina Georgieva",
+                "C": "Jean Claude Juncker",
+                "D": "Donald Tusk"
+            }
+        },
+        {
+            "q_no": 25,
+            "question": "The UN Human Rights Commission has its headquarters in",
+            "options": {
+                "A": "1757",
+                "B": "1758",
+                "C": "1857",
+                "D": "1858"
+            }
+        },
+        {
+            "q_no": 26,
+            "question": "Before becoming the president of India, Pranab Mukherjee never held the post of",
+            "options": {
+                "A": "Defence Minister",
+                "B": "Finance Minister",
+                "C": "Minister for Railways",
+                "D": "Minister for External Affairs"
+            }
+        },
+        {
+            "q_no": 27,
+            "question": "The battle of Plassey was fought in",
+            "options": {
+                "A": "1757",
+                "B": "1758",
+                "C": "1857",
+                "D": "1858"
+            }
+        },
+        {
+            "q_no": 28,
+            "question": "The first Asian games were held in",
+            "options": {
+                "A": "",
+                "B": "New Delhi",
+                "C": "",
+                "D": "Bangkok"
+            }
+        },
+        {
+            "q_no": 29,
+            "question": "The Easter Sunday suicide bombings in 2019 had taken place in",
+            "options": {
+                "A": "Christ Church",
+                "B": "Colombo",
+                "C": "Bradford",
+                "D": "Jerusalem"
+            }
+        },
+        {
+            "q_no": 30,
+            "question": "Who is the author of the book ‘The Third Pillar’?",
+            "options": {
+                "A": "Amartya Sen",
+                "B": "Padma Desai",
+                "C": "Raghuram Rajan",
+                "D": "Jagdish Bhagwati"
+            }
+        },
+        {
+            "q_no": 31,
+            "question": "Who won the World Championship in Badminton (women’s single) in 2019?",
+            "options": {
+                "A": "Sania Mirza",
+                "B": "Saina Nehwal",
+                "C": "P. V. Sindhu",
+                "D": "Nozomi Okuhara"
+            }
+        },
+        {
+            "q_no": 32,
+            "question": "Khudiram Bose was hanged in",
+            "options": {
+                "A": "Medinipur",
+                "B": "Dum Dum Central Jail",
+                "C": "Muzaffarpur",
+                "D": "Presidency Jail, Kolkata"
+            }
+        },
+        {
+            "q_no": 33,
+            "question": "Where does the Dalai Lama live?",
+            "options": {
+                "A": "Mussoorie",
+                "B": "Rumtek Monastery",
+                "C": "Tawang",
+                "D": "Mcleodganj, Dharmashala"
+            }
+        },
+        {
+            "q_no": 34,
+            "question": "How many districts are there in West Bengal?",
+            "options": {
+                "A": "21",
+                "B": "19",
+                "C": "24",
+                "D": "22"
+            }
+        },
+        {
+            "q_no": 35,
+            "question": "Balakot is in",
+            "options": {
+                "A": "India’s north-east",
+                "B": "Pakistan’s north-west",
+                "C": "Afghanistan",
+                "D": "Iran-Afghanistan border"
+            }
+        },
+        {
+            "q_no": 36,
+            "question": "Fiji is in",
+            "options": {
+                "A": "the Asia-Pacific region",
+                "B": "the North Atlantic region",
+                "C": "North Africa",
+                "D": "South America"
+            }
+        },
+        {
+            "q_no": 37,
+            "question": "Which one of the following is not a Union Territory?",
+            "options": {
+                "A": "Chandigarh",
+                "B": "Andaman and Nicobar Islands",
+                "C": "Puducherry",
+                "D": "Tripura"
+            }
+        },
+        {
+            "q_no": 38,
+            "question": "The Howdy Modi programme was held in",
+            "options": {
+                "A": "Los Angeles",
+                "B": "New York",
+                "C": "Houston",
+                "D": "Washington"
+            }
+        },
+        {
+            "q_no": 39,
+            "question": "Who among the following persons was not a famous sculptor?",
+            "options": {
+                "A": "Jogen Chowdhury",
+                "B": "Nandalal Bose",
+                "C": "Ramkinkar Baij",
+                "D": "Tarasankar Bandhopadhyay"
+            }
+        },
+        {
+            "q_no": 40,
+            "question": "Greta Thunberg is",
+            "options": {
+                "A": "an Actor",
+                "B": "a Tennis player",
+                "C": "an Environmental activist",
+                "D": "a Human Rights activist ddaleui7 d"
+            }
+        },
+        {
+            "q_no": 41,
+            "question": "IfA:B=2:3,B:C=4:5,C:D=3:7, then the ratio of A: B: C: Dis (Ade 812 5153 85",
+            "options": {
+                "A": "",
+                "B": "8:15:12: 35 (Cy 1238): 15 235",
+                "C": "",
+                "D": "12°82 35205"
+            }
+        },
+        {
+            "q_no": 42,
+            "question": "A boat can be rowed 9 km. upstream or 18 km. downstream in a period of 3 hrs. What is the speed of the boat in still water in km/hr?",
+            "options": {
+                "A": "4 km/hr",
+                "B": "4:5 km/hr",
+                "C": "3 km/hr",
+                "D": "3-5 km/hr"
+            }
+        },
+        {
+            "q_no": 43,
+            "question": "Two pipes can seperately fill a tank in 9 hours and 12 hours respectively. If both pipes are in operation, the tank will be filled in",
+            "options": {
+                "A": "5s hours",
+                "B": "3s hours ©) 33 hours",
+                "C": "",
+                "D": "5 hours"
+            }
+        },
+        {
+            "q_no": 44,
+            "question": "Sum of three consecutive even integers is",
+            "options": {
+                "A": "",
+                "B": "",
+                "C": "",
+                "D": ""
+            }
+        },
+        {
+            "q_no": 45,
+            "question": "Two numbers are in the ratio 5 ; 7 and their LCM is 315, their product is",
+            "options": {
+                "A": "2358",
+                "B": "2538",
+                "C": "2835",
+                "D": "2853"
+            }
+        },
+        {
+            "q_no": 46,
+            "question": "150 gm of sugar solution has 20% sugar in it. How much sugar should be added to make it 25% in the solution?",
+            "options": {
+                "A": "10 gms",
+                "B": "35 gms",
+                "C": "40 gms",
+                "D": "45 gms"
+            }
+        },
+        {
+            "q_no": 47,
+            "question": "A person travels from P to Q at a speed of 40 kmph and returns by increasing his speed by 50%. What is his average speed for both the trips?",
+            "options": {
+                "A": "36 kmph",
+                "B": "45 kmph",
+                "C": "48 kmph",
+                "D": "50 kmph"
+            }
+        },
+        {
+            "q_no": 48,
+            "question": "A can do 1 ofa work in5 days and B can do 2 of the work in 10 days. In how many days both A and B can do the work?",
+            "options": {
+                "A": "73 days () 03 days",
+                "B": "",
+                "C": "si days",
+                "D": "10 days"
+            }
+        },
+        {
+            "q_no": 49,
+            "question": "Find the smallest number which when divided by 57, 76 and 190, leaves the remainder 1 in each case.",
+            "options": {
+                "A": "1140",
+                "B": "1141",
+                "C": "1150",
+                "D": "1151"
+            }
+        },
+        {
+            "q_no": 50,
+            "question": "$ rd of anumber is 26, Find out 25% of that number.",
+            "options": {
+                "A": "9:25",
+                "B": "9:35",
+                "C": "9:55",
+                "D": "9:75"
+            }
+        },
+        {
+            "q_no": 51,
+            "question": "The simple interest on Rs. 500 for 6 years at 5% per annum is",
+            "options": {
+                "A": "Rs. 250",
+                "B": "Rs. 150",
+                "C": "Rs. 140",
+                "D": "Rs. 120"
+            }
+        },
+        {
+            "q_no": 52,
+            "question": "If 53 - 35 — = 1, then the « mark place",
+            "options": {
+                "A": "",
+                "B": "",
+                "C": "PL la Re eI",
+                "D": ""
+            }
+        },
+        {
+            "q_no": 53,
+            "question": "A alone can do a piece of work in 12 days. B, whois 60% more efficient than A, will finish the work in",
+            "options": {
+                "A": "Rs. 12,340",
+                "B": "Rs. 13,210",
+                "C": "Rs. 13,320",
+                "D": "Rs. 13,310 2:3x2:3x2:3— 0-027 2:3x2:3+0:69+009"
+            }
+        },
+        {
+            "q_no": 54,
+            "question": "Find the least among them.",
+            "options": {
+                "A": "18",
+                "B": "15",
+                "C": "20",
+                "D": "16"
+            }
+        },
+        {
+            "q_no": 55,
+            "question": "Find the amount on Rs. 10,000 for 3 years at 10% compound interest, interest being payable annually.",
+            "options": {
+                "A": "Rs. 12,340",
+                "B": "Rs. 13,210",
+                "C": "Rs. 13,320",
+                "D": "Rs. 13,310"
+            }
+        },
+        {
+            "q_no": 56,
+            "question": "Thesimplified value of",
+            "options": {
+                "A": "1",
+                "B": "2",
+                "C": "3",
+                "D": "4"
+            }
+        },
+        {
+            "q_no": 57,
+            "question": "If 50% of P = 25% of Q, then P= x% of Q. Find x =?",
+            "options": {
+                "A": "0:5",
+                "B": "2",
+                "C": "50",
+                "D": "0:005"
+            }
+        },
+        {
+            "q_no": 58,
+            "question": "The ratio of two numbers is 10 : 7 and their difference is 105. The sum of the numbers is",
+            "options": {
+                "A": "595",
+                "B": "805",
+                "C": "1190",
+                "D": "1610"
+            }
+        },
+        {
+            "q_no": 59,
+            "question": "A fruit seller bought 11 apples for Rs. 10 and sold 10 apples for Rs. 11. How much profit or loss did he make?",
+            "options": {
+                "A": "20% loss",
+                "B": "21% loss",
+                "C": "20% profit",
+                "D": "21% profit"
+            }
+        },
+        {
+            "q_no": 60,
+            "question": "The ratio of the ages of A, B and C is 5:8: 9. If the sum of the ages of A and C be 56 years, then the age of B is",
+            "options": {
+                "A": "20 years",
+                "B": "32 years",
+                "C": "36 years",
+                "D": "40 years ddale47)"
+            }
+        },
+        {
+            "q_no": 61,
+            "question": "A certain number when divided by 175 leaves a remainder 132. When the same number is divided by 25, the remainder is",
+            "options": {
+                "A": "6",
+                "B": "7",
+                "C": "8",
+                "D": "9"
+            }
+        },
+        {
+            "q_no": 62,
+            "question": "0:2 + 0:2 — 0:2 + 0:2 x (0:2 x 0:2), or simplification is",
+            "options": {
+                "A": "0:04",
+                "B": "0-2 (©) 1",
+                "C": "",
+                "D": "0:36"
+            }
+        },
+        {
+            "q_no": 63,
+            "question": "Asum of money becomes 27 times of itsel! in 3 years at compound interest. The rate of interes per annum is",
+            "options": {
+                "A": "100%",
+                "B": "150%",
+                "C": "75%",
+                "D": "200%"
+            }
+        },
+        {
+            "q_no": 64,
+            "question": ",/0.02+/0-0049 =?",
+            "options": {
+                "A": "0:03",
+                "B": "0-42",
+                "C": "0:003",
+                "D": "0:3"
+            }
+        },
+        {
+            "q_no": 65,
+            "question": "If 579 « 2 be divisible by 11, the * mark digit is",
+            "options": {
+                "A": "3",
+                "B": "7",
+                "C": "9",
+                "D": "11"
+            }
+        },
+        {
+            "q_no": 66,
+            "question": "Ina200 m. race, A runs at 5 km/hr. A gives B a start of 8 m and still beats him by 8 seconds. Find the speed of B in metre per second.",
+            "options": {
+                "A": "— m/sec",
+                "B": "— m/sec",
+                "C": "= m/sec",
+                "D": "— m/sec"
+            }
+        },
+        {
+            "q_no": 67,
+            "question": "A,B, C can doa piece of work in 6, 12 and 24 days respectively. They all together will complete the work in",
+            "options": {
+                "A": "73 days",
+                "B": "9 days (©) 82 days 4 ) 33 days",
+                "C": "",
+                "D": ""
+            }
+        },
+        {
+            "q_no": 68,
+            "question": "A certain principal amounts to’Rs. 560 in 3 years and Rs. 600 in 5S years. Determine the rate of interest per annum.",
+            "options": {
+                "A": "2%",
+                "B": "4%",
+                "C": "6%",
+                "D": "8%"
+            }
+        },
+        {
+            "q_no": 69,
+            "question": "The value of /0.01+/081+V121+/0-0009 is",
+            "options": {
+                "A": "2:03",
+                "B": "2:1",
+                "C": "2:11",
+                "D": "2:13"
+            }
+        },
+        {
+            "q_no": 70,
+            "question": "If the ratio of cost price and selling price of an article be 10 : 11, what is the profit per cent?",
+            "options": {
+                "A": "5%",
+                "B": "10%",
+                "C": "15%",
+                "D": "20% ddale47,"
+            }
+        },
+        {
+            "q_no": 71,
+            "question": "Fill in the blank with an appropriat preposition from the list below: He was successful completing the jol within four days.",
+            "options": {
+                "A": "on",
+                "B": "in",
+                "C": "with",
+                "D": "of"
+            }
+        },
+        {
+            "q_no": 72,
+            "question": "Find the word which has the same meanin; as ‘Commence’.",
+            "options": {
+                "A": "Announce",
+                "B": "Commend",
+                "C": "Begin",
+                "D": "Comment"
+            }
+        },
+        {
+            "q_no": 73,
+            "question": "Complete the idiom by choosing the righ word from the options given below: When Deepak could not solve the problen he decided to give",
+            "options": {
+                "A": "off",
+                "B": "up",
+                "C": "out",
+                "D": "back"
+            }
+        },
+        {
+            "q_no": 74,
+            "question": "Replace the missing word with the righ word from the options below: The man was so that he believed that God Himself had drunk the milk offered.",
+            "options": {
+                "A": "credible",
+                "B": "creditable",
+                "C": "credulous",
+                "D": "incredible"
+            }
+        },
+        {
+            "q_no": 75,
+            "question": "Choose the correct form of the verb from the options given below: He rushed to the hospital after he the news.",
+            "options": {
+                "A": "has heard",
+                "B": "has been heard",
+                "C": "has been hearing",
+                "D": "had heard"
+            }
+        },
+        {
+            "q_no": 76,
+            "question": "Choose from the following the correct indirect form of the sentence given: He said to me, ‘I have never seen such a brilliant boy in my life’.",
+            "options": {
+                "A": "That Ihave never seen such a brilliant boy in my life, he said to me.",
+                "B": "Such a brilliant boy was never seen in my life, he told me.",
+                "C": "The boy was so brilliant that he had never seen the like of him.",
+                "D": "He told me that he had never seen such a brilliant boy in his life."
+            }
+        },
+        {
+            "q_no": 77,
+            "question": "Change from Passive to Active Voice, choosing from the options below: The crazy girl was laughed at.",
+            "options": {
+                "A": "They laughed at the crazy girl.",
+                "B": "At the crazy girl they laughed.",
+                "C": "They were laughed at by the crazy girl.",
+                "D": "The crazy girl laughed at them."
+            }
+        },
+        {
+            "q_no": 78,
+            "question": "Find from below the word that means a plant that grows in hot-dry regions covered in spines but without leaves:",
+            "options": {
+                "A": "Creeper",
+                "B": "Cactus",
+                "C": "Eucalyptus",
+                "D": "Sugarcane"
+            }
+        },
+        {
+            "q_no": 79,
+            "question": "Find out from the given words the opposite of ‘Attack’.",
+            "options": {
+                "A": "fight",
+                "B": "return",
+                "C": "defend",
+                "D": "pounce"
+            }
+        },
+        {
+            "q_no": 80,
+            "question": "Find from below the word that means ‘Enormous’.",
+            "options": {
+                "A": "Famous",
+                "B": "Normal",
+                "C": "Incongruous",
+                "D": "Huge 17 Google Play"
+            }
+        },
+        {
+            "q_no": 81,
+            "question": "Choose from the list below the most appropriate word to fill in the blank: A is a person who gets things secretly and illegally into or out of a country.",
+            "options": {
+                "A": "importer",
+                "B": "criminal",
+                "C": "smuggler",
+                "D": "exporter"
+            }
+        },
+        {
+            "q_no": 82,
+            "question": "Find out the appropriate word, that be fits the underlined part of the sentence: The handkerchief was turned into a bird by the magician.",
+            "options": {
+                "A": "stuffed",
+                "B": "put",
+                "C": "transformed",
+                "D": "puffed"
+            }
+        },
+        {
+            "q_no": 83,
+            "question": "He was too preoccupied his studies to think of other matters.",
+            "options": {
+                "A": "with",
+                "B": "in",
+                "C": "at",
+                "D": "on"
+            }
+        },
+        {
+            "q_no": 84,
+            "question": "Change from Active to Passive Voice, choosing from the options below: The boys are flying kites in the sky.",
+            "options": {
+                "A": "Kites are flying in the sky by the boys.",
+                "B": "Inthe sky, kites are flown by the boys.",
+                "C": "Kites are being flown by the boys in the sky.",
+                "D": "The flying of kites in the sky is done by the boys."
+            }
+        },
+        {
+            "q_no": 85,
+            "question": "Fill in the blank with an appropriate preposition listed below: The tired hawker sat the tree.",
+            "options": {
+                "A": "up",
+                "B": "in",
+                "C": "from",
+                "D": "under"
+            }
+        },
+        {
+            "q_no": 86,
+            "question": "Fill in the blank with an appropriate preposition from the list below: Sita and Meera quarrelled themselves.",
+            "options": {
+                "A": "among",
+                "B": "between",
+                "C": "with",
+                "D": "for"
+            }
+        },
+        {
+            "q_no": 87,
+            "question": "Replace the underlined verb with the most appropriate phrasal verbs He decided to visit him at his home.",
+            "options": {
+                "A": "Call for",
+                "B": "Call on",
+                "C": "Call up",
+                "D": "Call off"
+            }
+        },
+        {
+            "q_no": 88,
+            "question": "Fill in the blank with an appropriate preposition given below: Ram was good",
+            "options": {
+                "A": "at",
+                "B": "_with",
+                "C": "about",
+                "D": "over Chemistry."
+            }
+        },
+        {
+            "q_no": 89,
+            "question": "Change the following statement into an interrogative sentence: You have had your dinner.",
+            "options": {
+                "A": "Had you have your dinner?",
+                "B": "Have you had your dinner?",
+                "C": "What about your dinner, did you have it?",
+                "D": "Did you have your dinner?"
+            }
+        },
+        {
+            "q_no": 90,
+            "question": "Fill in the blank with an appropriate preposition from the list below: Rita’s mother did not approve her returning home so late at night.",
+            "options": {
+                "A": "for",
+                "B": "on",
+                "C": "to",
+                "D": "of 4-18 Google Play"
+            }
+        },
+        {
+            "q_no": 91,
+            "question": "Fill in the blank with an appropriate word from the list below: Neither Lata nor Sujata on 14th October.",
+            "options": {
+                "A": "were",
+                "B": "are",
+                "C": "was",
+                "D": "have been present in class"
+            }
+        },
+        {
+            "q_no": 92,
+            "question": "Replace the missing word with the right word from the options below: All Alok were present during the meeting.",
+            "options": {
+                "A": "except",
+                "B": "expect",
+                "C": "exceed",
+                "D": "accept"
+            }
+        },
+        {
+            "q_no": 93,
+            "question": "Choose the correct spelling from the options below:",
+            "options": {
+                "A": "Exaggerate",
+                "B": "Exagarate",
+                "C": "Exaggarate",
+                "D": "Exagerate"
+            }
+        },
+        {
+            "q_no": 94,
+            "question": "Find from below the word that means ‘Essential’:",
+            "options": {
+                "A": "Unimportant",
+                "B": "Irrelevant",
+                "C": "Essence",
+                "D": "Vital"
+            }
+        },
+        {
+            "q_no": 95,
+            "question": "Complete the idiom by choosing the right word from the options given below: The old lady was murdered in cold",
+            "options": {
+                "A": "ice",
+                "B": "water",
+                "C": "blood",
+                "D": "milk"
+            }
+        },
+        {
+            "q_no": 96,
+            "question": "Fill in the blank with an appropriate preposition from the list below: The policeman seized him his arm and led him away.",
+            "options": {
+                "A": "by",
+                "B": "with",
+                "C": "at",
+                "D": "on"
+            }
+        },
+        {
+            "q_no": 97,
+            "question": "Choose the correct spelling from the options below:",
+            "options": {
+                "A": "Hyphanated",
+                "B": "Hyphennated",
+                "C": "Hyphannated",
+                "D": "Hyphenated"
+            }
+        },
+        {
+            "q_no": 98,
+            "question": "Complete the idiom by choosing the right word from the options given below: His old shoes have stood him in good in his travels.",
+            "options": {
+                "A": "stead",
+                "B": "years",
+                "C": "price",
+                "D": ", manner"
+            }
+        },
+        {
+            "q_no": 99,
+            "question": "Choose the most appropriate word to fill in the blank: The examiner could not understand the candidate’ s handwriting because it was",
+            "options": {
+                "A": "distinct",
+                "B": "shining",
+                "C": "stylish",
+                "D": "illegible"
+            }
+        },
+        {
+            "q_no": 100,
+            "question": "Replace the underlined word with the right alternative from the options given: The time allowed for the work should have been adequate.",
+            "options": {
+                "A": "indefinite",
+                "B": "subsequent",
+                "C": "efficient",
+                "D": "sufficient"
+            }
+        }
+    ]
+}

@@ -1,0 +1,611 @@
+{
+  "exam_title": "WBP Constable Preliminary Question Paper 2016",
+  "exam_code": "RB/CN/2016",
+  "total_questions": 60,
+  "total_marks": 90,
+  "time_allotted": "1 hour",
+  "negative_marking": "0.375 per wrong answer",
+  "languages": ["English", "Bengali", "Hindi", "Nepali"],
+  "questions": [
+    {
+      "q_no": "Q1",
+      "question": "The only woman ruler to sit on the throne of Delhi Sultanate was",
+      "options": {
+        "a": "Jahan-Ara",
+        "b": "Mumtaz Mahal",
+        "c": "Noor Jahan",
+        "d": "Raziya Sultana"
+      }
+    },
+    {
+      "q_no": "Q2",
+      "question": "Fill in the blank: ZA5, Y4B, XC6, W3D, _______",
+      "options": {
+        "a": "V2E",
+        "b": "E7V",
+        "c": "VE5",
+        "d": "VE7"
+      }
+    },
+    {
+      "q_no": "Q3",
+      "question": "An author who writes the story of another person's life is known as",
+      "options": {
+        "a": "Historian",
+        "b": "Biographer",
+        "c": "Chronicler",
+        "d": "Diarist"
+      }
+    },
+    {
+      "q_no": "Q4",
+      "question": "Choose from the following alternatives the word which is opposite in meaning to the word 'Ample'.",
+      "options": {
+        "a": "Sufficient",
+        "b": "Rare",
+        "c": "Insufficient",
+        "d": "Enough"
+      }
+    },
+    {
+      "q_no": "Q5",
+      "question": "A copper sphere of radius 6 cm is melted to form spheres of radius of 2 cm. How many such spheres can be formed?",
+      "options": {
+        "a": "27",
+        "b": "31",
+        "c": "14",
+        "d": "36"
+      }
+    },
+    {
+      "q_no": "Q6",
+      "question": "The change of state of a matter directly from solid to gas is called",
+      "options": {
+        "a": "Sublimation",
+        "b": "Condensation",
+        "c": "Evaporation",
+        "d": "Deposition"
+      }
+    },
+    {
+      "q_no": "Q7",
+      "question": "Conversion of 0.5% in decimal is",
+      "options": {
+        "a": "0.005",
+        "b": "0.05",
+        "c": "5/100",
+        "d": "0.5 × 10"
+      }
+    },
+    {
+      "q_no": "Q8",
+      "question": "Rabindranath Tagore wrote under the pseudonym of",
+      "options": {
+        "a": "Parasuram",
+        "b": "Birbal",
+        "c": "Bonophul",
+        "d": "Bhanu Singha"
+      }
+    },
+    {
+      "q_no": "Q9",
+      "question": "A child who has lost both of his parents is called —",
+      "options": {
+        "a": "A prodigy",
+        "b": "A vagrant",
+        "c": "A street child",
+        "d": "An orphan"
+      }
+    },
+    {
+      "q_no": "Q10",
+      "question": "Choose the correct antonym of the underlined word: 'Angels descend from heaven.'",
+      "options": {
+        "a": "Blaze forth",
+        "b": "Float",
+        "c": "Gallop",
+        "d": "Come down"
+      }
+    },
+    {
+      "q_no": "Q11",
+      "question": "How many tiers are there in the Panchayat system in West Bengal?",
+      "options": {
+        "a": "Five",
+        "b": "Two",
+        "c": "Four",
+        "d": "Three"
+      }
+    },
+    {
+      "q_no": "Q12",
+      "question": "The Right to Information Act was passed in the year",
+      "options": {
+        "a": "1952",
+        "b": "1977",
+        "c": "2005",
+        "d": "2000"
+      }
+    },
+    {
+      "q_no": "Q13",
+      "question": "The age of the father 10 years ago was thrice the age of his son. Ten years hence, father's age will be twice that of his son. The ratio of their present age is",
+      "options": {
+        "a": "7:3",
+        "b": "5:2",
+        "c": "9:2",
+        "d": "13:4"
+      }
+    },
+    {
+      "q_no": "Q14",
+      "question": "A rectangle has width of 5 cm and diagonal of 13 cm. Find its perimeter.",
+      "options": {
+        "a": "34 cm",
+        "b": "36 cm",
+        "c": "30 cm",
+        "d": "38 cm"
+      }
+    },
+    {
+      "q_no": "Q15",
+      "question": "The average age of mother and her six children is 12 years, which is reduced by 5 years if the age of the mother is excluded. The age of the mother is",
+      "options": {
+        "a": "40 years",
+        "b": "48 years",
+        "c": "50 years",
+        "d": "42 years"
+      }
+    },
+    {
+      "q_no": "Q16",
+      "question": "Find the exact number of squares in the following figure (a 4×4 grid with an inner 2×2 square pattern)",
+      "options": {
+        "a": "16",
+        "b": "15",
+        "c": "12",
+        "d": "18"
+      }
+    },
+    {
+      "q_no": "Q17",
+      "question": "Full form of FIR is",
+      "options": {
+        "a": "First Investigation Report",
+        "b": "First Information Report",
+        "c": "First Incident Report",
+        "d": "First Instance Report"
+      }
+    },
+    {
+      "q_no": "Q18",
+      "question": "Who was popularly known as 'Sher-e-Punjab'?",
+      "options": {
+        "a": "Bhagat Singh",
+        "b": "Jai Prakash Narayan",
+        "c": "Lala Lajpat Rai",
+        "d": "Ram Monohar Lohia"
+      }
+    },
+    {
+      "q_no": "Q19",
+      "question": "A man has some hens and cows. If the number of heads be 48 and the number of legs equals to 140, then the number of hen will be",
+      "options": {
+        "a": "22",
+        "b": "23",
+        "c": "26",
+        "d": "24"
+      }
+    },
+    {
+      "q_no": "Q20",
+      "question": "An autorickshaw is moving at a speed of 40 km/hr for 2 hours and 30 minutes. If it reaches the destination in another 1 hour, then the total distance covered by the auto will be",
+      "options": {
+        "a": "120 km",
+        "b": "140 km",
+        "c": "160 km",
+        "d": "200 km"
+      }
+    },
+    {
+      "q_no": "Q21",
+      "question": "Each occupation has it own _______; bankers, lawyers and computer professionals, for example, all use among themselves language which outsiders have difficulty to follow.",
+      "options": {
+        "a": "rewards",
+        "b": "jargon",
+        "c": "disadvantages",
+        "d": "merits"
+      }
+    },
+    {
+      "q_no": "Q22",
+      "question": "Which of the following are primary colours?",
+      "options": {
+        "a": "Blue, Red, Yellow",
+        "b": "Red, Yellow, Green",
+        "c": "Yellow, Blue, Green",
+        "d": "Red, Blue, Green"
+      }
+    },
+    {
+      "q_no": "Q23",
+      "question": "Opposite of 'SYNTHETIC' is",
+      "options": {
+        "a": "Cosmetic",
+        "b": "Plastic",
+        "c": "Natural",
+        "d": "Artificial"
+      }
+    },
+    {
+      "q_no": "Q24",
+      "question": "Change the following interrogative sentence into indirect speech: He asked me 'do you like music?'",
+      "options": {
+        "a": "He said that whether I like music.",
+        "b": "He told that whether you like music.",
+        "c": "He asked me whether I liked music.",
+        "d": "He asked me did you like music."
+      }
+    },
+    {
+      "q_no": "Q25",
+      "question": "Which number replaces the letter 'X'? (Tree diagram: 1, 5, 13 → 29; 61, 125, X)",
+      "options": {
+        "a": "263",
+        "b": "253",
+        "c": "273",
+        "d": "283"
+      }
+    },
+    {
+      "q_no": "Q26",
+      "question": "Complete the series: JAK, KBL, LCM, MDN, _______",
+      "options": {
+        "a": "OEB",
+        "b": "NEO",
+        "c": "PFQ",
+        "d": "MEN"
+      }
+    },
+    {
+      "q_no": "Q27",
+      "question": "The word 'Jhum' is meant for —",
+      "options": {
+        "a": "Political movement in the North East of India",
+        "b": "Agricultural activities in the North East of India",
+        "c": "Tribal goddess of North East India",
+        "d": "Traditional dance form of North East India"
+      }
+    },
+    {
+      "q_no": "Q28",
+      "question": "When you see any traffic signal, which sequence of signal do you observe from top to bottom?",
+      "options": {
+        "a": "Red - Green - Amber",
+        "b": "Green - Amber - Red",
+        "c": "Green - Red - Amber",
+        "d": "Red - Amber - Green"
+      }
+    },
+    {
+      "q_no": "Q29",
+      "question": "Which day is observed as 'World Environment Day' each year?",
+      "options": {
+        "a": "5th July",
+        "b": "25th June",
+        "c": "5th June",
+        "d": "15th June"
+      }
+    },
+    {
+      "q_no": "Q30",
+      "question": "In the computer software terminology, PDF stands for",
+      "options": {
+        "a": "Portable Document Format",
+        "b": "Portable Digital Form",
+        "c": "Printable Digital Format",
+        "d": "Printable Document Format"
+      }
+    },
+    {
+      "q_no": "Q31",
+      "question": "Find out the word which can most appropriately replace that group of words 'The one who knows everything'.",
+      "options": {
+        "a": "Knowledgeable",
+        "b": "Omniscient",
+        "c": "Clever",
+        "d": "Intelligent"
+      }
+    },
+    {
+      "q_no": "Q32",
+      "question": "A pump can fill a tank with water in 2 hours. Because of a leak in the tank, it takes 2 1/3 hours to fill the tank. The leak can empty the filled tank in",
+      "options": {
+        "a": "2 1/3 hours",
+        "b": "8 hours",
+        "c": "7 hours",
+        "d": "14 hours"
+      }
+    },
+    {
+      "q_no": "Q33",
+      "question": "The father was anxious _______ the safety of his daughter.",
+      "options": {
+        "a": "at",
+        "b": "for",
+        "c": "about",
+        "d": "with"
+      }
+    },
+    {
+      "q_no": "Q34",
+      "question": "When a plot of land is sold for ₹18,700, the owner loses 15%. At which price the plot be sold in order to gain 15%?",
+      "options": {
+        "a": "₹22,500",
+        "b": "₹21,000",
+        "c": "₹25,300",
+        "d": "₹25,800"
+      }
+    },
+    {
+      "q_no": "Q35",
+      "question": "If P denotes '+', R denotes '×', S denotes '−' and T denotes '/'(÷) then what would be the value of 5 R 9 P 7 S 9 T 3 P 6?",
+      "options": {
+        "a": "55",
+        "b": "39",
+        "c": "54",
+        "d": "128"
+      }
+    },
+    {
+      "q_no": "Q36",
+      "question": "Which of the following is not a session of the Indian Parliament?",
+      "options": {
+        "a": "Summer session",
+        "b": "Winter session",
+        "c": "Monsoon session",
+        "d": "Budget session"
+      }
+    },
+    {
+      "q_no": "Q37",
+      "question": "Which one of the following gland is located very near the brain?",
+      "options": {
+        "a": "Pituitary gland",
+        "b": "Thyroid gland",
+        "c": "Adrenal gland",
+        "d": "Pancreas"
+      }
+    },
+    {
+      "q_no": "Q38",
+      "question": "Arrange these four districts of West Bengal from North to South: (i) Burdwan, (ii) Bankura, (iii) Birbhum, (iv) Howrah",
+      "options": {
+        "a": "(ii), (iii), (i), (iv)",
+        "b": "(i), (iii), (ii), (iv)",
+        "c": "(iii), (i), (ii), (iv)",
+        "d": "(i), (ii), (iii), (iv)"
+      }
+    },
+    {
+      "q_no": "Q39",
+      "question": "Change the voice of the following sentence: 'Who is creating this mess?'",
+      "options": {
+        "a": "By whom this mess is being created.",
+        "b": "Who has created this mess.",
+        "c": "By whom is this mess being created.",
+        "d": "By whom has this mess been created."
+      }
+    },
+    {
+      "q_no": "Q40",
+      "question": "Choose the correct synonym of the word 'Insurgency'.",
+      "options": {
+        "a": "Rebellion",
+        "b": "Hostility",
+        "c": "Attack",
+        "d": "Enmity"
+      }
+    },
+    {
+      "q_no": "Q41",
+      "question": "A clock loses 5 seconds a hour. If the time in the clock is set right on sunday noon, then what time will it indicate on monday noon (i.e., the next day)?",
+      "options": {
+        "a": "12:00 Noon",
+        "b": "11:58 PM",
+        "c": "12:02 PM",
+        "d": "11:58 AM"
+      }
+    },
+    {
+      "q_no": "Q42",
+      "question": "Sum of two numbers is 45. Their difference is 1/9th of their sum. Their L.C.M. is",
+      "options": {
+        "a": "100",
+        "b": "150",
+        "c": "250",
+        "d": "200"
+      }
+    },
+    {
+      "q_no": "Q43",
+      "question": "A person who helps another to commit a crime is called",
+      "options": {
+        "a": "Colleague",
+        "b": "Accomplice",
+        "c": "Assistant",
+        "d": "Gangster"
+      }
+    },
+    {
+      "q_no": "Q44",
+      "question": "Introducing a boy, a girl said 'He is the son of the daughter of the father of my uncle.' How is the boy related to the girl?",
+      "options": {
+        "a": "Nephew",
+        "b": "Cousin",
+        "c": "Brother",
+        "d": "Son-in-law"
+      }
+    },
+    {
+      "q_no": "Q45",
+      "question": "P, Q, R, S and T are five boys. Given that P is taller than Q, R is shorter than P, S is taller than T but shorter than Q, the tallest boy is",
+      "options": {
+        "a": "P",
+        "b": "Q",
+        "c": "T",
+        "d": "R"
+      }
+    },
+    {
+      "q_no": "Q46",
+      "question": "The State with highest population density is",
+      "options": {
+        "a": "West Bengal",
+        "b": "Bihar",
+        "c": "Uttar Pradesh",
+        "d": "Maharashtra"
+      }
+    },
+    {
+      "q_no": "Q47",
+      "question": "Dipa Karmakar participated in which game in Olympics?",
+      "options": {
+        "a": "Athletic",
+        "b": "Swimming",
+        "c": "Gymnastics",
+        "d": "Boxing"
+      }
+    },
+    {
+      "q_no": "Q48",
+      "question": "The sides of a triangle are in the ratio of 7:9:12. The difference between the lengths of the largest and smallest sides is 15 cm. The length of the largest side is",
+      "options": {
+        "a": "12 cm",
+        "b": "24 cm",
+        "c": "60 cm",
+        "d": "36 cm"
+      }
+    },
+    {
+      "q_no": "Q49",
+      "question": "Choose the correct one word substitution of the following sentence: 'A decision on which one cannot go back'.",
+      "options": {
+        "a": "Incorrigible",
+        "b": "Irreplaceable",
+        "c": "Irrevocable",
+        "d": "Infallible"
+      }
+    },
+    {
+      "q_no": "Q50",
+      "question": "630 items are divided among X, Y and Z in such a way that X gets thrice that of Y and Y gets 5 times that of Z. Find the number of items received by X.",
+      "options": {
+        "a": "425",
+        "b": "400",
+        "c": "450",
+        "d": "475"
+      }
+    },
+    {
+      "q_no": "Q51",
+      "question": "If y = 3x + 12 and y = 5, then the value of x is",
+      "options": {
+        "a": "3/7",
+        "b": "7/3",
+        "c": "-7",
+        "d": "-7/3"
+      }
+    },
+    {
+      "q_no": "Q52",
+      "question": "In India, supply of money is controlled by",
+      "options": {
+        "a": "Ministry of Finance",
+        "b": "Reserve Bank of India",
+        "c": "Finance Commission",
+        "d": "State Bank of India"
+      }
+    },
+    {
+      "q_no": "Q53",
+      "question": "When a number is first increased by 10% and then reduced by 10%, the number",
+      "options": {
+        "a": "decreases by 1%",
+        "b": "does not change",
+        "c": "increases by 1%",
+        "d": "increases by 9%"
+      }
+    },
+    {
+      "q_no": "Q54",
+      "question": "In a certain code 'PROSE' is written as 'PPOQE', how is 'LIGHT' be written in that code?",
+      "options": {
+        "a": "LIGHT",
+        "b": "LGGFT",
+        "c": "LGGHT",
+        "d": "LLGFE"
+      }
+    },
+    {
+      "q_no": "Q55",
+      "question": "Satyajit Ray Film & Television Institute is located at",
+      "options": {
+        "a": "Ranchi",
+        "b": "Delhi",
+        "c": "Kolkata",
+        "d": "Mumbai"
+      }
+    },
+    {
+      "q_no": "Q56",
+      "question": "ELISA test is used to detect which of the following disease?",
+      "options": {
+        "a": "Cancer",
+        "b": "HIV/AIDS",
+        "c": "Brain tumor",
+        "d": "Malaria"
+      }
+    },
+    {
+      "q_no": "Q57",
+      "question": "The exact word which denotes the highest degree of comparison to the word 'strong' is",
+      "options": {
+        "a": "stronger",
+        "b": "strongful",
+        "c": "strongest",
+        "d": "strengthen"
+      }
+    },
+    {
+      "q_no": "Q58",
+      "question": "Choose the best prefix which matches with the word 'Spoken'?",
+      "options": {
+        "a": "De",
+        "b": "Out",
+        "c": "Dis",
+        "d": "En"
+      }
+    },
+    {
+      "q_no": "Q59",
+      "question": "Fill in the blank with appropriate words given below: 'A police team was _______ to _______ the case.'",
+      "options": {
+        "a": "formed, following",
+        "b": "constituted, investigate",
+        "c": "committed, study",
+        "d": "located, adjudge"
+      }
+    },
+    {
+      "q_no": "Q60",
+      "question": "Evaluate the following: (√81 × 3) − (√16 × 4) / (√16 × 4) − (√81 × 3)",
+      "options": {
+        "a": "1",
+        "b": "-11",
+        "c": "11",
+        "d": "-1"
+      }
+    }
+  ]
+}

@@ -1,0 +1,1536 @@
+{
+    "exam": "West Bengal Primary TET 2017",
+    "total_questions": 150,
+    "sections": [
+        {
+            "section": "I",
+            "subject": "Language-I (Bengali)",
+            "questions": [
+                {
+                    "q_no": "Q1",
+                    "question": "নীচে প্রদত্ত বিকল্পগুলির মধ্যে কোনটি ঠিক?",
+                    "options": {
+                        "A": "পশ্চাৎ + আগত = পশ্চাতাগত",
+                        "B": "বড়ু + দর্শন = বড়দর্শন",
+                        "C": "নিচু + অন্ত = নিজন্ত",
+                        "D": "পণ্ড + আচার = পণ্ডাচার"
+                    }
+                },
+                {
+                    "q_no": "Q2",
+                    "question": "নীচের মন্তব্যগুলির শুদ্ধাশুদ্ধ বিচারের নিরিখে প্রদত্ত বিকল্প থেকে ঠিক উত্তরটি চিহ্নিত করুন। (a) বাংলায় বর্গের প্রথম ও দ্বিতীয় ব্যঞ্জনধ্বনি অঘোষ (b) বাংলায় বর্গের তৃতীয়, চতুর্থ ও পঞ্চম ব্যঞ্জনধ্বনি ঘোষ (c) বাংলায় বর্গের প্রথম ও দ্বিতীয় ব্যঞ্জনধ্বনি ঘোষ (d) বাংলায় বর্গের তৃতীয়, চতুর্থ ও পঞ্চম ব্যঞ্জনধ্বনি অঘোষ",
+                    "options": {
+                        "A": "(a) শুদ্ধ, (b) অশুদ্ধ, (c) শুদ্ধ, (d) অশুদ্ধ",
+                        "B": "(a) শুদ্ধ, (b) শুদ্ধ, (c) অশুদ্ধ, (d) শুদ্ধ",
+                        "C": "(a) অশুদ্ধ, (b) অশুদ্ধ, (c) শুদ্ধ, (d) শুদ্ধ",
+                        "D": "(a) শুদ্ধ, (b) শুদ্ধ, (c) অশুদ্ধ, (d) অশুদ্ধ"
+                    }
+                },
+                {
+                    "q_no": "Q3",
+                    "question": "নীচের মন্তব্যগুলির শুদ্ধাশুদ্ধ বিচারের নিরিখে প্রদত্ত বিকল্প থেকে ঠিক উত্তরটি চিহ্নিত করুন। (a) বাংলায় বর্গের প্রথম ও তৃতীয় ব্যঞ্জনধ্বনি অল্পপ্রাণ (b) বাংলায় বর্গের দ্বিতীয় ও চতুর্থ ব্যঞ্জনধ্বনি মহাপ্রাণ (c) বাংলায় 'ছ' মহাপ্রাণ ধ্বনি (d) বাংলায় 'চ' মহাপ্রাণ ধ্বনি",
+                    "options": {
+                        "A": "(a) শুদ্ধ, (b) অশুদ্ধ, (c) শুদ্ধ, (d) অশুদ্ধ",
+                        "B": "(a) শুদ্ধ, (b) শুদ্ধ, (c) অশুদ্ধ, (d) শুদ্ধ",
+                        "C": "(a) অশুদ্ধ, (b) অশুদ্ধ, (c) শুদ্ধ, (d) শুদ্ধ",
+                        "D": "(a) শুদ্ধ, (b) শুদ্ধ, (c) অশুদ্ধ, (d) অশুদ্ধ"
+                    }
+                },
+                {
+                    "q_no": "Q4",
+                    "question": "প্রাণপণ যত্ন ব্যতিরেকে বিদ্যালাভ সম্ভব নয়। নিম্নরেখ পদটি কী অব্যয়?",
+                    "options": {
+                        "A": "পদান্বয়ী অব্যয়",
+                        "B": "সমুচ্চয়ী অব্যয়",
+                        "C": "নিত্যসম্বন্ধী অব্যয়",
+                        "D": "অনন্বয়ী অব্যয়"
+                    }
+                },
+                {
+                    "q_no": "Q5",
+                    "question": "নীচের যুক্তব্যঞ্জনগুলি ভেঙে যে ব্যঞ্জন পাওয়া যায়, তার নিরিখে নীচের কোন বিকল্পটি অশুদ্ধ?",
+                    "options": {
+                        "A": "ক্ষ = ক্ + য + ম",
+                        "B": "ণ্ঠ = ণ + ম",
+                        "C": "জ্ঞ = গ্ঞ + জ্ঞ",
+                        "D": "হ্ন = হ + ন"
+                    }
+                },
+                {
+                    "q_no": "Q6",
+                    "question": "আমি তোমায় কিছু কথা বলতে চাই। উদ্ধৃত বাক্যটিতে—",
+                    "options": {
+                        "A": "'তোমায়' মুখ্যকর্ম, 'কথা' গৌণকর্ম",
+                        "B": "'তোমায়' গৌণকর্ম, 'কথা' মুখ্যকর্ম",
+                        "C": "'তোমায়', 'কথা' দুটিই মুখ্যকর্ম",
+                        "D": "'তোমায়', 'কথা' দুটিই গৌণকর্ম"
+                    }
+                },
+                {
+                    "q_no": "Q7",
+                    "question": "উদ্ধৃত গদ্যাংশে 'অনতিস্ফুট' শব্দটির অর্থ হল",
+                    "options": {
+                        "A": "ফোটেনি এমন",
+                        "B": "সম্পূর্ণ ফোটেনি এমন",
+                        "C": "সম্পূর্ণ ফুটেছে এমন",
+                        "D": "ফুটে গিয়ে ঝরে পড়েছে এমন"
+                    }
+                },
+                {
+                    "q_no": "Q8",
+                    "question": "উদ্ধৃত গদ্যাংশে 'এক-দমকায়' পদটি যেভাবে ব্যবহৃত হয়েছে",
+                    "options": {
+                        "A": "ক্রিয়াবিশেষণ রূপে",
+                        "B": "বিশেষ্যের বিশেষণ রূপে",
+                        "C": "সর্বনামের বিশেষণ রূপে",
+                        "D": "বিশেষ্য রূপে"
+                    }
+                },
+                {
+                    "q_no": "Q9",
+                    "question": "\"বাড়িতে যিনি কনিষ্ঠা বধূ ছিলেন তিনিই মাতৃহীন বালকদের ভার লইলেন।\" উদ্ধৃত বাক্যটিতে বিশেষণ পদ রয়েছে",
+                    "options": {
+                        "A": "২টি",
+                        "B": "৩টি",
+                        "C": "৬টি",
+                        "D": "৪টি"
+                    }
+                },
+                {
+                    "q_no": "Q10",
+                    "question": "\"তখনই বৌঠাকুরানী তাড়াতাড়ি তাহাকে ভর্ৎসনা করিয়া ঘর হইতে টানিয়া বাহির করিয়া লইয়া গেলেন।\" উদ্ধৃত বাক্যটিতে অসমাপিকা ক্রিয়াপদের সংখ্যা",
+                    "options": {
+                        "A": "২টি",
+                        "B": "৪টি",
+                        "C": "৬টি",
+                        "D": "৭টি"
+                    }
+                },
+                {
+                    "q_no": "Q11",
+                    "question": "\"... শিশুকালে সেই প্রাণশক্তি নবীন ও প্রবল থাকে...\" উদ্ধৃত বাক্যাংশটির বিধেয় হল",
+                    "options": {
+                        "A": "শিশুকালে সেই প্রাণশক্তি প্রবল থাকে",
+                        "B": "সেই প্রাণশক্তি নবীন ও প্রবল থাকে",
+                        "C": "শিশুকালে নবীন ও প্রবল থাকে",
+                        "D": "সেই প্রাণশক্তি"
+                    }
+                },
+                {
+                    "q_no": "Q12",
+                    "question": "নীচে প্রদত্ত বিকল্পগুলির মধ্যে কোনটি ঠিক?",
+                    "options": {
+                        "A": "নিয়ন + তা = নিয়ন্তা",
+                        "B": "বৃন + হিত = বৃংহিত",
+                        "C": "উন + নয়ন = উন্নয়ন",
+                        "D": "তদ + অ্ব = তত্ত্ব"
+                    }
+                },
+                {
+                    "q_no": "Q13",
+                    "question": "সন্ধির সূত্র অনুযায়ী নীচে প্রদত্ত বিকল্পগুলির মধ্যে কোনটি ঠিক নয়?",
+                    "options": {
+                        "A": "দ্ + ক হলে 'দ'-এর জায়গায় 'ৎ' হয়।",
+                        "B": "দ্ + প হলে 'দ'-এর জায়গায় 'ৎ' হয়।",
+                        "C": "দ্ + ল হলে 'দ'-এর জায়গায় 'ৎ' হয়।",
+                        "D": "দ্ + স হলে 'দ'-এর জায়গায় 'ৎ' হয়।"
+                    }
+                },
+                {
+                    "q_no": "Q14",
+                    "question": "নীচে প্রদত্ত মন্তব্য ও তার সমর্থনে যুক্তির মধ্যে শুদ্ধ-অশুদ্ধ বিচারের নিরিখে বিকল্প থেকে ঠিক উত্তরটি নির্বাচন করুন। মন্তব্য: ব্যাকরণের পুরুষ কথাটির সঙ্গে স্ত্রী-পুরুষ লিঙ্গবোধের কোনো সম্পর্ক নেই। যুক্তি: ব্যাকরণে পুরুষ হল ক্রিয়ার আশ্রয়।",
+                    "options": {
+                        "A": "মন্তব্য ও যুক্তি দুই-ই শুদ্ধ",
+                        "B": "মন্তব্য ও যুক্তি দুই-ই অশুদ্ধ",
+                        "C": "মন্তব্য শুদ্ধ কিন্তু যুক্তি অশুদ্ধ",
+                        "D": "মন্তব্য অশুদ্ধ কিন্তু যুক্তি শুদ্ধ"
+                    }
+                },
+                {
+                    "q_no": "Q15",
+                    "question": "নীচের কোনটি 'আকাশ' শব্দের সমার্থক শব্দ নয়?",
+                    "options": {
+                        "A": "ত্রিদিব",
+                        "B": "রত্নাবতী",
+                        "C": "সুরবর্ত্ম",
+                        "D": "সুরপথ"
+                    }
+                },
+                {
+                    "q_no": "Q16",
+                    "question": "তোমার স্কুল কি আজ ছুটি ছিল? উদ্ধৃত বাক্যটির উদ্দেশ্য হল",
+                    "options": {
+                        "A": "তুমি (উহ্য)",
+                        "B": "তোমার",
+                        "C": "তোমার স্কুল",
+                        "D": "আজ"
+                    }
+                },
+                {
+                    "q_no": "Q17",
+                    "question": "নীচের কোনটি 'সমুদ্র' শব্দের সমার্থক?",
+                    "options": {
+                        "A": "ইরাবান",
+                        "B": "সমুজ্জ্বল",
+                        "C": "পাটক",
+                        "D": "কলাভৃৎ"
+                    }
+                },
+                {
+                    "q_no": "Q18",
+                    "question": "\"হঠাৎ বললেন, 'গেলুম গেলুম, আমায় ধরে তোল!'\" উদ্ধৃত অংশটির নিদর্শক ক্রিয়াপদের কাল",
+                    "options": {
+                        "A": "সাধারণ বর্তমান কাল",
+                        "B": "পুরাঘটিত বর্তমান কাল",
+                        "C": "সাধারণ অতীত কাল",
+                        "D": "পুরাঘটিত অতীত কাল"
+                    }
+                },
+                {
+                    "q_no": "Q19",
+                    "question": "নীচের কোন বাক্যটিতে গঠনগত ভুল আছে?",
+                    "options": {
+                        "A": "আকাশ থেকে ইন্দ্রকেতু করছি।",
+                        "B": "সব ছোছলরা, চলে এসো।",
+                        "C": "সবাই শুধু আমার কথা শোনো।",
+                        "D": "নিজের নিজের বই হাতে রাখো।"
+                    }
+                },
+                {
+                    "q_no": "Q20",
+                    "question": "\"সেই পত্রে প্রতি সপ্তাহেই আমি ছোটো গল্প সমালোচনা ও সাহিত্যপ্রবন্ধ লিখিতাম।\" উদ্ধৃত অংশটিতে 'সেই পত্রে' বলতে যে পত্রিকার কথা বোঝানো হয়েছে, সেটি হল",
+                    "options": {
+                        "A": "বঙ্গদর্শন",
+                        "B": "প্রবাসী",
+                        "C": "হিতবাদী",
+                        "D": "তত্ত্ববোধিনী"
+                    }
+                },
+                {
+                    "q_no": "Q21",
+                    "question": "\"এই সময়েই আমি বোলপুর শান্তিনিকেতন আশ্রমে ব্রহ্মচর্যাশ্রম নামক বিদ্যালয়ের প্রতিষ্ঠা করি।\" নিম্নরেখ ক্রিয়াপদের রূপটির কাল",
+                    "options": {
+                        "A": "সাধারণ বর্তমান কাল",
+                        "B": "সাধারণ অতীত কাল",
+                        "C": "পুরাঘটিত বর্তমান কাল",
+                        "D": "পুরাঘটিত অতীত কাল"
+                    }
+                },
+                {
+                    "q_no": "Q22",
+                    "question": "\"এই শেষ বয়সে বিদ্যালয় স্থাপন করিয়া তাহার শোধ দিতেছি...\" উদ্ধৃত অংশে কোন ঘটনার শোধ দেওয়ার কথা বলা হয়েছে?",
+                    "options": {
+                        "A": "বাবার কাছে ইংরেজি ও সংস্কৃত ভাষা শেখার।",
+                        "B": "বিদ্যালয় স্থাপন করেও মনোমতো উপায়ে কাজ করতে না পারার।",
+                        "C": "বাবার সঙ্গে ঘুরে আসার পরে আর বিদ্যালয়ে যোগদান না করার।",
+                        "D": "ছাত্রদের সর্বদা পালানোর পথ খুঁজতে চাওয়ার।"
+                    }
+                },
+                {
+                    "q_no": "Q23",
+                    "question": "\"এই সময়ে তিনি আমার কাব্যগ্রন্থাবলী বিস্তর পরিশ্রমে Edit করিয়াছিলেন।\" নিম্নরেখ পদটির বর্ণ বিশ্লেষণ করে পাওয়া যায়",
+                    "options": {
+                        "A": "ক্ + আ + ব্ + অ + য্ + অ + গ্ + র্ + অ + ন্ + হ্ + আ + ব্ + অ + ল্ + ই",
+                        "B": "ক্ + আ + ব্ + য্ + অ + গ্ + র্ + অ + ন্ + হ্ + আ + ব্ + অ + ল্ + ঈ",
+                        "C": "ক্ + আ + ব্ + য্ + অ + গ্ + র্ + অ + ন্ + থ্ + আ + ব্ + অ + ল্ + ই",
+                        "D": "ক্ + আ + ব্ + অ + য্ + অ + গ্ + র্ + অ + ন্ + থ্ + আ + ব্ + অ + ল্ + ই"
+                    }
+                },
+                {
+                    "q_no": "Q24",
+                    "question": "উদ্ধৃত অংশটিতে কতগুলি সাময়িক পত্রের নাম রয়েছে?",
+                    "options": {
+                        "A": "৩টি",
+                        "B": "৪টি",
+                        "C": "৫টি",
+                        "D": "৬টি"
+                    }
+                },
+                {
+                    "q_no": "Q25",
+                    "question": "নীচের কোন বানানটি শুদ্ধ?",
+                    "options": {
+                        "A": "দক্ষিণায়ন",
+                        "B": "দক্ষিণায়ণ",
+                        "C": "দক্ষিণায়ন",
+                        "D": "দক্ষিণায়ন"
+                    }
+                },
+                {
+                    "q_no": "Q26",
+                    "question": "নীচের মন্তব্যগুলির শুদ্ধাশুদ্ধ বিচারের নিরিখে প্রদত্ত বিকল্প থেকে ঠিক উত্তরটি চিহ্নিত করুন। (a) বাংলায় 'ই', 'এ', 'অ্যা' পশ্চাৎ ধ্বনি (b) বাংলায় 'উ', 'ও', 'অ' সম্মুখ ধ্বনি (c) বাংলায় 'আ' কেন্দ্রীয় ধ্বনি (d) বাংলায় 'উ', 'ও', 'অ' পশ্চাৎ ধ্বনি",
+                    "options": {
+                        "A": "(a) শুদ্ধ, (b) অশুদ্ধ, (c) শুদ্ধ, (d) অশুদ্ধ",
+                        "B": "(a) শুদ্ধ, (b) শুদ্ধ, (c) অশুদ্ধ, (d) শুদ্ধ",
+                        "C": "(a) অশুদ্ধ, (b) অশুদ্ধ, (c) শুদ্ধ, (d) শুদ্ধ",
+                        "D": "(a) শুদ্ধ, (b) শুদ্ধ, (c) বণ্ড, (d) বণ্ড"
+                    }
+                },
+                {
+                    "q_no": "Q27",
+                    "question": "লিঙ্গ পরিবর্তনের দিক থেকে নীচের কোন মন্তব্যটি শুদ্ধ?",
+                    "options": {
+                        "A": "'ওজনী' শব্দটি স্ত্রীলিঙ্গবাচক।",
+                        "B": "'ওজনী' শব্দের স্ত্রীলিঙ্গ 'ওজনিনী'।",
+                        "C": "'ওজনীন' শব্দের স্ত্রীলিঙ্গ 'ওজনী'।",
+                        "D": "'ওজনী' শব্দের স্ত্রীলিঙ্গ 'ওজনিনী'।"
+                    }
+                },
+                {
+                    "q_no": "Q28",
+                    "question": "'স্ত্রী'-এর মধ্যে যুক্ত হয়ে থাকা বর্ণের সংখ্যা",
+                    "options": {
+                        "A": "১ টি",
+                        "B": "২ টি",
+                        "C": "৩ টি",
+                        "D": "৪ টি"
+                    }
+                },
+                {
+                    "q_no": "Q29",
+                    "question": "বাংলা ভাষায় 'ন' ধ্বনিটি",
+                    "options": {
+                        "A": "দন্ত্য ধ্বনি",
+                        "B": "মূর্ধন্য ধ্বনি",
+                        "C": "তালব্য ধ্বনি",
+                        "D": "কণ্ঠ্য ধ্বনি"
+                    }
+                },
+                {
+                    "q_no": "Q30",
+                    "question": "নীচে প্রদত্ত বিকল্পগুলির মধ্যে কোনটি ঠিক নয়?",
+                    "options": {
+                        "A": "মহা + ঋষভ = মহার্ষভ",
+                        "B": "ভরত + ঋষভ = ভরতর্ষভ",
+                        "C": "উত্তম + ঋণ = উত্তমর্ণ",
+                        "D": "শীত + ঋতু = শীতার্ত"
+                    }
+                }
+            ]
+        },
+        {
+            "section": "II",
+            "subject": "Language-II (English)",
+            "questions": [
+                {
+                    "q_no": "Q31",
+                    "question": "A man's indigenous speech is almost like his",
+                    "options": {
+                        "A": "soul",
+                        "B": "shadow",
+                        "C": "pillow",
+                        "D": "attire"
+                    }
+                },
+                {
+                    "q_no": "Q32",
+                    "question": "Through the vernacular, most human beings accomplish",
+                    "options": {
+                        "A": "artificiality",
+                        "B": "fragmented expression",
+                        "C": "wrong ideas",
+                        "D": "characteristic expression"
+                    }
+                },
+                {
+                    "q_no": "Q33",
+                    "question": "According to the old saying, we should drink water out of our own",
+                    "options": {
+                        "A": "packet",
+                        "B": "tavern",
+                        "C": "cistern",
+                        "D": "box"
+                    }
+                },
+                {
+                    "q_no": "Q34",
+                    "question": "In education, training in the free use of mother tongue should be given",
+                    "options": {
+                        "A": "secondary place",
+                        "B": "primary place",
+                        "C": "tertiary place",
+                        "D": "intermediary place"
+                    }
+                },
+                {
+                    "q_no": "Q35",
+                    "question": "Mark the correct arrangement of the following words as they would appear in the dictionary, from first to last: (i) receptacle (ii) reception (iii) receptionist (iv) receptive",
+                    "options": {
+                        "A": "(i), (ii), (iii), (iv)",
+                        "B": "(ii), (i), (iv), (iii)",
+                        "C": "(iii), (iv), (i), (ii)",
+                        "D": "(iv), (iii), (i), (ii)"
+                    }
+                },
+                {
+                    "q_no": "Q36",
+                    "question": "Mark the correct arrangement of the following words as they would appear in the dictionary, from first to last: (i) precipitate (ii) precedent (iii) precision (iv) precious",
+                    "options": {
+                        "A": "(iii), (i), (iv), (ii)",
+                        "B": "(ii), (iv), (i), (iii)",
+                        "C": "(i), (iii), (ii), (iv)",
+                        "D": "(ii), (i), (iv), (iii)"
+                    }
+                },
+                {
+                    "q_no": "Q37",
+                    "question": "Mark correctly the antonym of: sporadic",
+                    "options": {
+                        "A": "continuous",
+                        "B": "interval",
+                        "C": "decent",
+                        "D": "repel"
+                    }
+                },
+                {
+                    "q_no": "Q38",
+                    "question": "Mark correctly the antonym of: malice",
+                    "options": {
+                        "A": "intention",
+                        "B": "benevolence",
+                        "C": "spite",
+                        "D": "morose"
+                    }
+                },
+                {
+                    "q_no": "Q39",
+                    "question": "Mark correctly the plural form of: corpus",
+                    "options": {
+                        "A": "corpusses",
+                        "B": "corpora",
+                        "C": "corpos",
+                        "D": "corpori"
+                    }
+                },
+                {
+                    "q_no": "Q40",
+                    "question": "Mark correctly the plural form of: appendix",
+                    "options": {
+                        "A": "appendixes",
+                        "B": "appendices",
+                        "C": "appendiexes",
+                        "D": "appendieces"
+                    }
+                },
+                {
+                    "q_no": "Q41",
+                    "question": "Mark correctly the plural form of: cactus",
+                    "options": {
+                        "A": "cactuss",
+                        "B": "cacti",
+                        "C": "cactu",
+                        "D": "cactis"
+                    }
+                },
+                {
+                    "q_no": "Q42",
+                    "question": "Mark correctly the change in gender of: protector",
+                    "options": {
+                        "A": "protecti",
+                        "B": "protectoress",
+                        "C": "protectress",
+                        "D": "protectum"
+                    }
+                },
+                {
+                    "q_no": "Q43",
+                    "question": "Mark correctly the change in gender of: gander",
+                    "options": {
+                        "A": "goose",
+                        "B": "heifer",
+                        "C": "gandress",
+                        "D": "duchess"
+                    }
+                },
+                {
+                    "q_no": "Q44",
+                    "question": "Mark correctly the change in gender of: colt",
+                    "options": {
+                        "A": "doe",
+                        "B": "sow",
+                        "C": "filly",
+                        "D": "ewe"
+                    }
+                },
+                {
+                    "q_no": "Q45",
+                    "question": "Mark correctly the synonym of: conscientious",
+                    "options": {
+                        "A": "scrupulous",
+                        "B": "rebellious",
+                        "C": "mischievous",
+                        "D": "ridiculous"
+                    }
+                },
+                {
+                    "q_no": "Q46",
+                    "question": "Mark correctly the synonym of: abhor",
+                    "options": {
+                        "A": "simplicity",
+                        "B": "boast",
+                        "C": "abstract",
+                        "D": "detest"
+                    }
+                },
+                {
+                    "q_no": "Q47",
+                    "question": "The course is to be taken with",
+                    "options": {
+                        "A": "wisdom and hesitation",
+                        "B": "care and thoughtless action",
+                        "C": "bravery and whimsicality",
+                        "D": "firmness and wisdom"
+                    }
+                },
+                {
+                    "q_no": "Q48",
+                    "question": "In the passage, an indecisive man is compared to a",
+                    "options": {
+                        "A": "wall clock",
+                        "B": "magnet",
+                        "C": "compass",
+                        "D": "weathercock"
+                    }
+                },
+                {
+                    "q_no": "Q49",
+                    "question": "With firm spirit and proper dedication, the universe can be",
+                    "options": {
+                        "A": "won",
+                        "B": "lost",
+                        "C": "sold",
+                        "D": "hired"
+                    }
+                },
+                {
+                    "q_no": "Q50",
+                    "question": "One can advance to prominence in any field if one",
+                    "options": {
+                        "A": "thinks only",
+                        "B": "only resolves wisely",
+                        "C": "only plans to execute the purpose properly",
+                        "D": "resolves, consults and executes properly"
+                    }
+                },
+                {
+                    "q_no": "Q51",
+                    "question": "If I ______ a bird, I would fly.",
+                    "options": {
+                        "A": "am",
+                        "B": "was",
+                        "C": "were",
+                        "D": "have been"
+                    }
+                },
+                {
+                    "q_no": "Q52",
+                    "question": "He found the book he ______.",
+                    "options": {
+                        "A": "has lost",
+                        "B": "was lost",
+                        "C": "had lost",
+                        "D": "would have lost"
+                    }
+                },
+                {
+                    "q_no": "Q53",
+                    "question": "Hardly had the girl ______ writing, when the teacher collected her answer script.",
+                    "options": {
+                        "A": "had finished",
+                        "B": "have finished",
+                        "C": "finished",
+                        "D": "finishes"
+                    }
+                },
+                {
+                    "q_no": "Q54",
+                    "question": "Mark the correct spelling from the options given below:",
+                    "options": {
+                        "A": "assimilate",
+                        "B": "asimillate",
+                        "C": "assimillate",
+                        "D": "asimilate"
+                    }
+                },
+                {
+                    "q_no": "Q55",
+                    "question": "Mark the correct spelling from the options given below:",
+                    "options": {
+                        "A": "apalling",
+                        "B": "appalinng",
+                        "C": "appalling",
+                        "D": "appaling"
+                    }
+                },
+                {
+                    "q_no": "Q56",
+                    "question": "Mark the correct spelling from the options given below:",
+                    "options": {
+                        "A": "rejuvinate",
+                        "B": "rejuvenate",
+                        "C": "rijuvinate",
+                        "D": "rejuvenete"
+                    }
+                },
+                {
+                    "q_no": "Q57",
+                    "question": "Mark correctly the part of the sentence which has an error: Samir has to trudge over the steep mountain path. No error.",
+                    "options": {
+                        "A": "Samir has to",
+                        "B": "trudge over the",
+                        "C": "steep mountain path",
+                        "D": "No error"
+                    }
+                },
+                {
+                    "q_no": "Q58",
+                    "question": "Mark correctly the part of the sentence which has an error: Treasure Island is one of the best pirate stories that ever written. No error.",
+                    "options": {
+                        "A": "Treasure Island is",
+                        "B": "one of the best pirate stories",
+                        "C": "that ever written",
+                        "D": "No error"
+                    }
+                },
+                {
+                    "q_no": "Q59",
+                    "question": "An application was written to the officer in pursuance ______ the instructions given.",
+                    "options": {
+                        "A": "by",
+                        "B": "upon",
+                        "C": "for",
+                        "D": "of"
+                    }
+                },
+                {
+                    "q_no": "Q60",
+                    "question": "The distance of the school ______ the railway station is two kilometres.",
+                    "options": {
+                        "A": "over",
+                        "B": "from",
+                        "C": "on",
+                        "D": "to"
+                    }
+                }
+            ]
+        },
+        {
+            "section": "III",
+            "subject": "Child Development & Pedagogy",
+            "questions": [
+                {
+                    "q_no": "Q61",
+                    "question": "Learning Assessment is purposeful if / শিখনের আসেসমেন্ট অর্থবহ সাধন করে যখন",
+                    "options": {
+                        "A": "it serves as a feedback for the students as well as the teachers / এটি শিক্ষার্থী ও শিক্ষকের 'ফিডব্যাক' হিসেবে কাজ করে।",
+                        "B": "it is done only once at the end of the year / এটি বছরের শেষে একবার মাত্র করা হয়।",
+                        "C": "comparative evaluations are made to differentiate the student's achievements / এটি তুলনামূলক মূল্যায়নের মাধ্যমে ছাত্রছাত্রীদের পার্থক্য বিচার করে।",
+                        "D": "it induces fear and stress among the students / এটি ছাত্রছাত্রীদের মধ্যে ভয় ও চাপের সৃষ্টি করে।"
+                    }
+                },
+                {
+                    "q_no": "Q62",
+                    "question": "Which one of the following skills should be stressed more for mentally under-developed children? / নিম্নোক্ত কোন দক্ষতাগুলি মানসিকভাবে কম বিকাশপ্রাপ্ত শিশুদের জন্য জরুরি?",
+                    "options": {
+                        "A": "Life skills / জীবন দক্ষতাসমূহ",
+                        "B": "Adaptation skills / অভিযোজন দক্ষতাসমূহ",
+                        "C": "Communication skills / যোগাযোগ দক্ষতাসমূহ",
+                        "D": "Numerical skills / সংখ্যাগত দক্ষতাসমূহ"
+                    }
+                },
+                {
+                    "q_no": "Q63",
+                    "question": "A teacher always helps the students so that they can relate the knowledge acquired in one subject with another subject. It helps in / একজন শিক্ষক শিক্ষার্থীদের সর্বদা সাহায্য করে যাতে তারা একটি বিষয়ে অর্জিত জ্ঞানের সঙ্গে অপর বিষয়ের সম্পর্ক স্থাপন করতে পারে।",
+                    "options": {
+                        "A": "individual difference / ব্যক্তিগত পার্থক্যে",
+                        "B": "learner's independence / শিক্ষার্থীর স্বাধীনতায়",
+                        "C": "distribution of reinforcer / শক্তিদায়ী উপকরণের সরবরাহে",
+                        "D": "correlate and transfer of knowledge / অনুবন্ধ এবং জ্ঞানের সম্প্রসারণে"
+                    }
+                },
+                {
+                    "q_no": "Q64",
+                    "question": "In teaching process student's performance is / শিক্ষাদান প্রক্রিয়ায় শিক্ষার্থীর পারফরম্যান্স একটি",
+                    "options": {
+                        "A": "dependent variable / নির্ভরশীল চল",
+                        "B": "independent variable / স্বাধীন চল",
+                        "C": "intervening variable / মধ্যস্থ চল",
+                        "D": "control variable / নিয়ন্ত্রিত চল"
+                    }
+                },
+                {
+                    "q_no": "Q65",
+                    "question": "A collection of a student's work in an area showing growth, self reflection and achievement is known as / শিক্ষার্থীর কাজের একটি সংগ্রহ যাতে একটি বিশেষ স্থানের শিক্ষার্থীর বৃদ্ধি, আত্ম-প্রতিবিম্ব এবং কৃতিত্ব জানা যায় তাকে বলা হয়",
+                    "options": {
+                        "A": "assessment / মূল্যায়ন",
+                        "B": "judgement / বিচারকরণ",
+                        "C": "portfolio / পোর্টফোলিও",
+                        "D": "cumulative record / কিউমুলেটিভ নথি"
+                    }
+                },
+                {
+                    "q_no": "Q66",
+                    "question": "Educational Characteristics: Measuring devices — (a) achievement (I) Examination (b) learning (II) Assessment (c) interest (III) Interview. The matching pair is / শিক্ষাগত বৈশিষ্ট্য: পরিমাপের উপায়",
+                    "options": {
+                        "A": "(a) (III)",
+                        "B": "(b) (II)",
+                        "C": "(c) (I)",
+                        "D": "(b) (I)"
+                    }
+                },
+                {
+                    "q_no": "Q67",
+                    "question": "Inclusion of children with special needs / বিশেষ চাহিদাসম্পন্ন শিশুর অন্তর্ভুক্তিকরণ",
+                    "options": {
+                        "A": "is detrimental to children without disabilities / সাধারণ শিশুদের পক্ষে ক্ষতিকারক।",
+                        "B": "will increase the burden on schools / বিদ্যালয়ের বোঝা বাড়িয়ে তুলবে।",
+                        "C": "requires a change in attitude, content and approach to teaching / মনোভাব, বিষয়বস্তু এবং শিক্ষাদানের পদ্ধতির বদল দাবি করে।",
+                        "D": "is an unrealistic goal / একটি অবাস্তব লক্ষ্য।"
+                    }
+                },
+                {
+                    "q_no": "Q68",
+                    "question": "With reference to the gifted learners, 'acceleration' means / প্রতিভাবান শিক্ষার্থীদের নিরিখে 'acceleration'-এর অর্থ",
+                    "options": {
+                        "A": "accelerating the process of their assessment / তাদের মূল্যায়নের পদ্ধতি ত্বরান্বিত করা।",
+                        "B": "accelerating the transaction of their scholastic activities / তাদের পাঠসংক্রান্ত কার্যাবলীর লেনদেন ত্বরান্বিত করা।",
+                        "C": "promoting them to the next higher grade earlier than normal learners / স্বাভাবিক শিক্ষার্থীদের থেকে আগেই উপরের শ্রেণিতে উত্তীর্ণ করা।",
+                        "D": "speeding up their co-scholastic activities / তাদের সহপাঠক্রমিক কার্যাবলী ত্বরান্বিত করা।"
+                    }
+                },
+                {
+                    "q_no": "Q69",
+                    "question": "Four MCQ questions I, II, III & IV are correctly answered by 05%, 20%, 50% and 85% of students respectively. Other things remaining same the best question is / I, II, III এবং IV এই চারটি MCQ ধরনের প্রশ্নে সঠিক উত্তরের শতকরা হার হল যথাক্রমে 05, 20, 50 এবং 85। অন্যসব বিষয় একই থাকলে সর্বোত্তম প্রশ্নটি হবে",
+                    "options": {
+                        "A": "I",
+                        "B": "II",
+                        "C": "III",
+                        "D": "IV"
+                    }
+                },
+                {
+                    "q_no": "Q70",
+                    "question": "Sufficient number of questions are set on the same concept in a test. The test is / একটি অভীক্ষায় একই জাতীয় অনেক প্রশ্ন আছে। অভীক্ষাটি হবে",
+                    "options": {
+                        "A": "achievement type / পারদর্শিতার অভীক্ষা",
+                        "B": "diagnostic type / নির্ণায়ক অভীক্ষা",
+                        "C": "prognostic type / পূর্বানুমানমূলক অভীক্ষা",
+                        "D": "criterion referenced type / ক্রাইটেরিয়ান রেফারেন্সড টাইপ"
+                    }
+                },
+                {
+                    "q_no": "Q71",
+                    "question": "Stages of developments are important for a teacher to (i) produce a comfortable environment for teaching and learning process (ii) know and understand the problems faced by a child (iii) establish an effective communication with the child. Which set (A, B, C, D) of the above statements is suitable for effective teaching?",
+                    "options": {
+                        "A": "only (i)",
+                        "B": "only (ii)",
+                        "C": "Both (i) and (iii)",
+                        "D": "(i), (ii) and (iii)"
+                    }
+                },
+                {
+                    "q_no": "Q72",
+                    "question": "Though calculator gives the result of multiplication easily, we teach children to calculate manually to / গণক সহজেই গুণফল বের করতে পারে, তবুও শিক্ষার্থীদের হাতে-কলমে গণ শেখানো হয় কারণ",
+                    "options": {
+                        "A": "maintain tradition of teaching / শিক্ষার ঐতিহ্য বজায় রাখা",
+                        "B": "verify the result of multiplication / গণের ফলাফল যাচাই করা",
+                        "C": "develop creativity / সৃজনশীলতার বিকাশ",
+                        "D": "develop thinking & reasoning / চিন্তা ও যুক্তির বিকাশ"
+                    }
+                },
+                {
+                    "q_no": "Q73",
+                    "question": "The stages of 5E as per 5E teaching-learning model are (i) Evaluation (ii) Exploration (iii) Elaboration (iv) Explanation (v) Engagement. The correct sequence of the stages is / 5E মডেলের 5E শিখন-শিক্ষণের স্তরগুলি হল (i) মূল্যায়ন (ii) অন্বেষণ (iii) সম্প্রসারণ (iv) ব্যাখ্যা (v) নিযুক্তি",
+                    "options": {
+                        "A": "(i), (ii), (iii), (iv), (v)",
+                        "B": "(i), (iii), (ii), (iv), (v)",
+                        "C": "(v), (ii), (iv), (iii), (i)",
+                        "D": "(v), (iv), (ii), (iii), (i)"
+                    }
+                },
+                {
+                    "q_no": "Q74",
+                    "question": "The cephalocaudal principle of development explains how development proceeds from / বিকাশের cephalocaudal সূত্র অনুসারে বিকাশ অগ্রগতি পায়",
+                    "options": {
+                        "A": "differentiated to integrated functions / বিভিন্ন থেকে সমন্বিত কার্যাবলীর দিকে",
+                        "B": "head to toe / মাথা থেকে পায়ের আঙুলের দিকে",
+                        "C": "rural to urban areas / গ্রাম থেকে শহরে এলাকার দিকে",
+                        "D": "general to specific functions / সাধারণ থেকে বিশেষ কার্যাবলীর দিকে"
+                    }
+                },
+                {
+                    "q_no": "Q75",
+                    "question": "Gender is a/an / লিঙ্গভেদ একটি",
+                    "options": {
+                        "A": "physiological construct / শারীরবৃত্তীয় ধারণা",
+                        "B": "innate quality / জন্মগত গুণ",
+                        "C": "social construct / সামাজিক ধারণা",
+                        "D": "biological entity / জীবতাত্ত্বিক অস্তিত্ব/সত্তা"
+                    }
+                },
+                {
+                    "q_no": "Q76",
+                    "question": "In the context of education, socialization means / শিক্ষার নিরিখে সামাজিকীকরণ হল",
+                    "options": {
+                        "A": "adapting and adjusting to social environment / সামাজিক পরিবেশের সাথে অভিযোজন ও সংগতিসাধন।",
+                        "B": "always following social norms / সবসময় সামাজিক নিয়ম মেনে চলা।",
+                        "C": "creating one's own social norms / নিজের জন্য সামাজিক নিয়ম সৃষ্টি করা।",
+                        "D": "respecting elders in society / সমাজে বড়দের শ্রদ্ধা করা।"
+                    }
+                },
+                {
+                    "q_no": "Q77",
+                    "question": "Teaching of Geography and History of Murshidabad may be meaningful, quick and interesting if conducted together by an approach of / মুর্শিদাবাদের ভূগোল এবং ইতিহাস একসাথে অর্থপূর্ণ, দ্রুত ও আকর্ষণীয়ভাবে পড়ানোর উপায়টি হবে",
+                    "options": {
+                        "A": "play way / খেলাভিত্তিক",
+                        "B": "correlation / অনুবন্ধ পদ্ধতি",
+                        "C": "induction / আরোহ পদ্ধতি",
+                        "D": "story telling / গল্প বলা"
+                    }
+                },
+                {
+                    "q_no": "Q78",
+                    "question": "A child knows 4+2=6 but not 4=6-2. The child may be in the stage / একটি শিশু জানে 4+2=6, কিন্তু জানে না 4=6-2। শিশুটির বিকাশের স্তর হল",
+                    "options": {
+                        "A": "Sensorimotor / সেন্সরিমোটর",
+                        "B": "Preoperation / প্রি-অপারেশন",
+                        "C": "Concrete operation / কনক্রিট অপারেশন",
+                        "D": "Formal operation / ফর্মাল অপারেশন"
+                    }
+                },
+                {
+                    "q_no": "Q79",
+                    "question": "By the word 'individual' Woodworth has referred to / উদ্ধৃতার্থে 'individual' কথাটি দ্বারা বুঝিয়েছেন",
+                    "options": {
+                        "A": "human body / দেহকে",
+                        "B": "human mind / মনকে",
+                        "C": "human behaviour / ব্যক্তির আচরণকে",
+                        "D": "both mental process and physical behaviour / মানসিক প্রক্রিয়া ও দৈহিক আচরণ উভয়কে"
+                    }
+                },
+                {
+                    "q_no": "Q80",
+                    "question": "Which of these does not imply practical intelligence in the Triarchic theory? / বুদ্ধির Triarchic তত্ত্ব অনুযায়ী বাস্তব বুদ্ধি প্রসঙ্গে নিম্নলিখিত কোন বিকল্পটি ভুল?",
+                    "options": {
+                        "A": "Re-shaping the environment / পরিবেশকে পুনরায় আকার দেওয়া",
+                        "B": "Thinking practically about oneself only / বাস্তবসম্মতভাবে একজনের প্রসঙ্গেই ভাবা",
+                        "C": "Choosing an environment in which you can succeed / যে পরিবেশে শিশু সফল হয় সেই পরিবেশটি নির্বাচন করা",
+                        "D": "Adapting to the environment / পরিবেশের সঙ্গে মানিয়ে নেওয়া"
+                    }
+                },
+                {
+                    "q_no": "Q81",
+                    "question": "'Right to Education Act 2009' has its main objective to ensure each child in India 6 to 14 years receives quality education. The term quality education means / 'শিক্ষার অধিকার আইন-2009' 6 থেকে 14 বছর পর্যন্ত সমস্ত শিশুর জন্য উৎকর্ষতা আছে এমন শিক্ষার নিশ্চয়তা প্রদান করে। এখানে শিক্ষার উৎকর্ষতা বলতে বোঝায়",
+                    "options": {
+                        "A": "Use of costly TLM / ব্যয়বহুল টি. এল. এম.-এর ব্যবহার",
+                        "B": "Rote learning / মুখস্থ বিদ্যা",
+                        "C": "Establishment of relation between classroom and real environment / শ্রেণিকক্ষের সাথে বাস্তব জগতের/পরিবেশের সঙ্গে সম্পর্ক স্থাপন",
+                        "D": "Imposed discipline / চাপিয়ে দেওয়া শৃঙ্খলা"
+                    }
+                },
+                {
+                    "q_no": "Q82",
+                    "question": "Questionnaire refers to / প্রশ্নাবলি হল",
+                    "options": {
+                        "A": "a device for securing answers to questions by using a form which the respondent fills in himself / একটি যন্ত্র যেখানে অনেক প্রশ্ন থাকে যার উত্তর উত্তরদাতা নিজেই পূরণ করে।",
+                        "B": "a device for collecting questions from many individuals / একটি যন্ত্র যেখানে অনেক লোকের কাছ থেকে প্রশ্ন সংগ্রহ করা হয়।",
+                        "C": "a device for collecting response from class-work / একটি যন্ত্র যার দ্বারা শ্রেণিকক্ষের কাজের থেকে উত্তর সংগ্রহ করা হয়।",
+                        "D": "a device for developing various questions / একটি যন্ত্র যার দ্বারা বিভিন্ন প্রশ্ন প্রস্তুত করা হয়।"
+                    }
+                },
+                {
+                    "q_no": "Q83",
+                    "question": "According to social constructivist theory of Lev Vygotsky, which of the following methods is appropriate for assessing students? / লেভ ভাইগটস্কির সামাজিক নির্মিতিবাদ তত্ত্ব অনুযায়ী নিম্নোক্ত কোন পদ্ধতিটি ছাত্রছাত্রীদের মূল্যায়নের জন্য উপযোগী?",
+                    "options": {
+                        "A": "Standardised tests / আদর্শায়িত অভীক্ষা",
+                        "B": "Fact-based recall questions / বাস্তববিত্তিক অনুস্মরণ প্রশ্নাবলী",
+                        "C": "Objective multiple-choice type questions / নৈর্ব্যক্তিক বহুনির্বাচনী প্রশ্নাবলী",
+                        "D": "Collaborative projects / সহযোগিতামূলক প্রকল্প"
+                    }
+                },
+                {
+                    "q_no": "Q84",
+                    "question": "'Cockroach is not bird'. Starting a lesson on bird with such negative example was discouraged by / 'আরশোলা পাখি নয়' এই ভাবে পাখির উপর প্রথম পাঠে জ্ঞানার্জক উদাহরণের সাহায্যে পাঠদান শুরু করতে নিষেধ করেছিলেন",
+                    "options": {
+                        "A": "Bruner / ব্রুনার",
+                        "B": "Piaget / পিয়াজে",
+                        "C": "Skinner / স্কিনার",
+                        "D": "Binet / বিনে"
+                    }
+                },
+                {
+                    "q_no": "Q85",
+                    "question": "Which one of the following characteristics is not related to organization of co-curricular activities in school? / বিদ্যালয়ে সহপাঠক্রম সংক্রান্ত কার্যক্রমে নিম্নলিখিত কোনটি অপ্রয়োজনীয়?",
+                    "options": {
+                        "A": "Educationally relevant / শিক্ষাক্ষেত্রে প্রাসঙ্গিকতা",
+                        "B": "Constructive / গঠনমূলক",
+                        "C": "Democratic atmosphere / গণতান্ত্রিক পরিবেশ",
+                        "D": "Non co-operation / অসহযোগিতা"
+                    }
+                },
+                {
+                    "q_no": "Q86",
+                    "question": "Some statements about children: (i) Children are passive recipients of knowledge (ii) Children are problem solvers (iii) Children are interested in scientific investigation (iv) Children are active explorers of the environment. Which set of the above statements is correct? / শিক্ষার্থীদের সম্পর্কে কয়েকটি উক্তি: (i) শিশুরা জ্ঞানের নিষ্ক্রিয় গ্রাহক (ii) শিশুরা সমস্যা সমাধানকারী (iii) শিশুরা বিজ্ঞানসম্মত অনুসন্ধানে আগ্রহী (iv) শিশুরা পরিবেশের সক্রিয় অনুসন্ধানকারী",
+                    "options": {
+                        "A": "(ii), (iii) and (iv)",
+                        "B": "(i), (ii), (iii) and (iv)",
+                        "C": "(i), (ii) and (iii)",
+                        "D": "(i), (ii) and (iv)"
+                    }
+                },
+                {
+                    "q_no": "Q87",
+                    "question": "According to Chomsky, an innate capacity to acquire language is the result of our uniquely human biological inheritance, which is called / চমস্কির মতে ভাষাশিক্ষার ক্ষেত্রে ব্যক্তির একটি জন্মগত ক্ষমতা হল তার অন্যান্য জীববৈজ্ঞানিক বংশগতির ফলস্বরূপ, একে বলে",
+                    "options": {
+                        "A": "Language Adaptation Degree / ল্যাঙ্গুয়েজ অ্যাডাপটেশন ডিগ্রী",
+                        "B": "Language Acquisition Device / ল্যাঙ্গুয়েজ অ্যাকুইজিশন ডিভাইস",
+                        "C": "Language Acceptance Desire / ল্যাঙ্গুয়েজ অ্যাকসেপটাল ডিসায়ার",
+                        "D": "Language Acquire Domain / ল্যাঙ্গুয়েজ অ্যাকুয়ার ডোমেইন"
+                    }
+                },
+                {
+                    "q_no": "Q88",
+                    "question": "Which one of the following is best suited for emotional development of children? / নিম্নলিখিত কোন বিকল্পটি শিশুর আবেগগত বিকাশের জন্য সবচেয়ে ভালো ব্যবস্থাপনা?",
+                    "options": {
+                        "A": "Democratic classroom environment / শ্রেণিকক্ষের গণতান্ত্রিক পরিবেশ",
+                        "B": "No involvement of the teachers as it is the task of the parents / যেহেতু এটি পিতা-মাতার কাজ তাই শিক্ষকের কোনো ভূমিকা না থাকা",
+                        "C": "Controlled classroom environment / নিয়ন্ত্রিত শ্রেণিকক্ষের পরিবেশ",
+                        "D": "Authoritarian classroom environment / শ্রেণিকক্ষে স্বৈরাচারী পরিবেশ"
+                    }
+                },
+                {
+                    "q_no": "Q89",
+                    "question": "In the case of learning Law of Readiness corresponds to / শিখনের ক্ষেত্রে প্রস্তুতির সূত্রটির সাথে সাদৃশ্যপূর্ণ হল",
+                    "options": {
+                        "A": "schema / স্কীমা",
+                        "B": "motivation / প্রেষণা",
+                        "C": "stimulus / উদ্দীপক",
+                        "D": "response / প্রতিক্রিয়া"
+                    }
+                },
+                {
+                    "q_no": "Q90",
+                    "question": "A student modifies an essay in the book and then memorizes it. This is a process of / একজন শিক্ষার্থী বই-এর রচনাকে কিছু পরিবর্তন করে মুখস্থ করল। এই প্রক্রিয়াটি হবে",
+                    "options": {
+                        "A": "Adoption / অ্যাডপশন",
+                        "B": "Organization / অর্গানাইজেশন",
+                        "C": "Assimilation / অ্যাসিমিলেশন",
+                        "D": "Accommodation / অ্যাকোমোডেশন"
+                    }
+                }
+            ]
+        },
+        {
+            "section": "IV",
+            "subject": "Mathematics",
+            "questions": [
+                {
+                    "q_no": "Q91",
+                    "question": "Simplify / সরল করুন: [(1/9 × 1/9 + 10/10 × 9/9) / (1/9 × 9/10 × 10/10 × 9/9)] ÷ [(1/9 + 10 - 1/9 - 10/10) / (1/9 + 1/9 - 1/9 + 9/10)] × (1/9 + 9/10) / (9/10 + 1/9)",
+                    "options": {
+                        "A": "0",
+                        "B": "81/100",
+                        "C": "1",
+                        "D": "2"
+                    }
+                },
+                {
+                    "q_no": "Q92",
+                    "question": "In a triangle ABC, AB=AC=20 cm. ∠BAC = 30°. What will be the area of the triangle? / ABC ত্রিভুজের AB=AC=20 সেমি। ∠BAC = 30°। ত্রিভুজটির ক্ষেত্রফল কত?",
+                    "options": {
+                        "A": "200 sq. cm. / 200 বর্গসেমি",
+                        "B": "150 sq. cm. / 150 বর্গসেমি",
+                        "C": "100 sq. cm. / 100 বর্গসেমি",
+                        "D": "50 sq. cm. / 50 বর্গসেমি"
+                    }
+                },
+                {
+                    "q_no": "Q93",
+                    "question": "(1·1)×(1·1)×(1·1)+(1·2)×(1·2)×(1·2)+(1·3)(1·3)(1·3)−3×(1·1)×(1·2)×(1·3)=",
+                    "options": {
+                        "A": "(0·5)×(1·1+2+1·3)×{(1·1−1·2)²+(1·2−1·3)²+(1·3−1·1)²}",
+                        "B": "1/2×(1·1+2+1·3)×{(1·1−1·2)²+(1·2−1·3)²+(1·3+1·1)²}",
+                        "C": "(0·5)×(1·1+2−1·3)×{(1·1−1·2)²+(1·2−1·3)²+(1·3−1·1)²}",
+                        "D": "1/2×(1·1−1·2+1·3)×{(1·1−1·2)²+(1·2−1·3)²+(1·3−1·1)²}"
+                    }
+                },
+                {
+                    "q_no": "Q94",
+                    "question": "Of the three different numbers, the product of two numbers taken at a time in order are 42, 84 and 72 respectively. What is the L.C.M. of the numbers? / তিনটি ভিন্ন সংখ্যার মধ্যে দুটি করে নিয়ে গুণ করলে গুণফল যথাক্রমে 42, 84 ও 72 হয়। সংখ্যা তিনটির ল.সা.গু কত?",
+                    "options": {
+                        "A": "84",
+                        "B": "724",
+                        "C": "420",
+                        "D": "504"
+                    }
+                },
+                {
+                    "q_no": "Q95",
+                    "question": "Simplify: [1 + 1/0.1] / [6/0.11 + 3/0.1 + 3/(0.1)×(0.11)] − [(0.1)×(0.11)/3] / [2×(0.1) + 0.11 + 1]",
+                    "options": {
+                        "A": "0.1 / (0.6+0.33+3)",
+                        "B": "0.1 / (0.6+0.66+3)",
+                        "C": "0.11 / (0.6+0.33+3)",
+                        "D": "0.11 / (0.3+0.66+3)"
+                    }
+                },
+                {
+                    "q_no": "Q96",
+                    "question": "2 men and 3 boys can do 3/4 of a piece of work in 6 days; 3 men and 5 boys can do 19/24 of it in 4 days. In what time can a boy do the whole work? / ২ জন পূর্ণবয়স্ক ব্যক্তি ও ৩ জন বালক কোনো একটি কাজের ৩/৪ অংশ ৬ দিনে সম্পন্ন করে; ৩ জন পূর্ণবয়স্ক ব্যক্তি ও ৫ জন বালক ওই কাজের ১৯/২৪ অংশ ৪ দিনে সম্পন্ন করে; একজন বালক কত সময়ে ওই কাজ সম্পন্ন করবে?",
+                    "options": {
+                        "A": "12 days / ১২ দিনে",
+                        "B": "24 days / ২৪ দিনে",
+                        "C": "36 days / ৩৬ দিনে",
+                        "D": "48 days / ৪৮ দিনে"
+                    }
+                },
+                {
+                    "q_no": "Q97",
+                    "question": "Simplify / সরল করুন: [(1/9+1/11)(1/9+1/11-1/13) + (1/11+1/13)(1/11+1/13-1/9) + (1/13+1/9)(1/13+1/9-1/11)] / [(1/9×1/11) + (1/11×1/13) + (1/13×1/9)]",
+                    "options": {
+                        "A": "0",
+                        "B": "6",
+                        "C": "4",
+                        "D": "2"
+                    }
+                },
+                {
+                    "q_no": "Q98",
+                    "question": "There are two sections in a class of a co-educational school. The no. of students in each section is 35. If 7 girl students of section A go to section B, the number of girl students in these two sections are interchanged. If 4 girl students of section B go to section A, the number of girl students of section A changes to double of the actual number of girl students of section B. The number of boys of section A and B are respectively / একটি সহশিক্ষামূলক বিদ্যালয়ের একটি শ্রেণিতে দুটি বিভাগ A ও B-প্রতিটিতে ছাত্রছাত্রী সংখ্যা 35।",
+                    "options": {
+                        "A": "18, 11",
+                        "B": "24, 17",
+                        "C": "17, 24",
+                        "D": "18, 27"
+                    }
+                },
+                {
+                    "q_no": "Q99",
+                    "question": "AB and CD are two chords intersecting at X of a circle with centre O. Then / O কেন্দ্রীয় বৃত্তে AB ও CD জ্যা দুটি X বিন্দুতে ছেদ করেছে।",
+                    "options": {
+                        "A": "AX · XB = CX · XD",
+                        "B": "AX · XD = CX · XB",
+                        "C": "AB · CD = AX · XD",
+                        "D": "CX · XB = AB · CD"
+                    }
+                },
+                {
+                    "q_no": "Q100",
+                    "question": "Answering all questions 'A' gets 32. For a correct answer he has been awarded 5 marks and his marks has been deducted by 2 number for each wrong answer. Again if he has been awarded 4 marks per correct answer and be deducted 1 mark per wrong answer, he gets 28. How many questions are there in the examination? / 'A' একটি পরীক্ষায় সকল প্রশ্নের উত্তর দিয়ে 32 নম্বর পেয়েছে। প্রতিটি সঠিক উত্তরের জন্য 5 নম্বর পেয়েছে এবং প্রতিটি ভুল উত্তরের জন্য 2 নম্বর বাদ দেওয়া হয়েছে।",
+                    "options": {
+                        "A": "14",
+                        "B": "10",
+                        "C": "16",
+                        "D": "12"
+                    }
+                },
+                {
+                    "q_no": "Q101",
+                    "question": "Simplify / সরল করুন: [5.25(5.25×5.25 − 3.17×1.58) + 3.17(3.17×3.17 − 1.58×5.25) + 1.58(1.58×1.58 − 5.25×3.17)] / [5.25(5.25 − 3.17) + 3.17(3.17 − 1.58) + 1.58(1.58 − 5.25)]",
+                    "options": {
+                        "A": "1",
+                        "B": "0",
+                        "C": "10",
+                        "D": "9"
+                    }
+                },
+                {
+                    "q_no": "Q102",
+                    "question": "1213 and 1231 are two numbers. / 1213 এবং 1231 দুটি সংখ্যা।",
+                    "options": {
+                        "A": "First number is prime and the second is composite / সংখ্যা দুটির প্রথমটি মৌলিক এবং পরেরটি যৌগিক।",
+                        "B": "First number is composite and the second is prime / সংখ্যা দুটির প্রথমটি যৌগিক এবং পরেরটি মৌলিক।",
+                        "C": "Both the numbers are composite / সংখ্যা দুটিই যৌগিক।",
+                        "D": "Both the numbers are prime / সংখ্যা দুটিই মৌলিক।"
+                    }
+                },
+                {
+                    "q_no": "Q103",
+                    "question": "ABC is a triangle. AP is perpendicular to BC. BQ is perpendicular to CA. CR is perpendicular to AB. AP, BQ and CR cuts at O. ∠BAC = 40°, then ∠BOC = ? / ABC ত্রিভুজের AP, BC বাহুর উপর লম্ব। BQ, CA-এর উপর লম্ব। CR, AB-এর উপর লম্ব। AP, BQ ও CR পরস্পর O বিন্দুতে ছেদ করেছে। ∠BAC = 40° হলে ∠BOC = কত?",
+                    "options": {
+                        "A": "80°",
+                        "B": "140°",
+                        "C": "110°",
+                        "D": "40°"
+                    }
+                },
+                {
+                    "q_no": "Q104",
+                    "question": "Simplify / সরল করুন: [(3/4×3/4×2/3+3/5×3/5×2/5−3×3/4×2/3×3/5) / (3/4+2/3+3/5)] × [(3/4×2/3+3/5×3/4+3/5×3/5) / (3/4×3/4+2/3×2/3+3/5×3/5)]",
+                    "options": {
+                        "A": "1647/98420",
+                        "B": "1633/98420",
+                        "C": "1647/98320",
+                        "D": "1633/98320"
+                    }
+                },
+                {
+                    "q_no": "Q105",
+                    "question": "100000+10000+1000+100+10+1 + 1/10 + 1/100 + 1/1000 + 1/10000 + 1/100000 =",
+                    "options": {
+                        "A": "11111·11111",
+                        "B": "111111·11111",
+                        "C": "111101·01111",
+                        "D": "101111·01101"
+                    }
+                },
+                {
+                    "q_no": "Q106",
+                    "question": "(4 3/29)×(4 3/29)² + 3×(4 3/29)²×(6 26/29) + 3×(4 3/29)×(6 26/29)² + (6 26/29)×(6 26/29)² =",
+                    "options": {
+                        "A": "1×10000+3×1000+3×100+1",
+                        "B": "1×10000+3×100+3×10+1",
+                        "C": "1×1000+1×100+3×10+1",
+                        "D": "1×1000+3×10+3×100+1"
+                    }
+                },
+                {
+                    "q_no": "Q107",
+                    "question": "101001.01011 =",
+                    "options": {
+                        "A": "100000+10000+1 + 1/100000 + 1/10000 + 1/100",
+                        "B": "100000+1000+1 + 1/100000 + 1/1000 + 1/100",
+                        "C": "1/100000 + 1/10000 + 1/100 + 1 + 1000 + 100000",
+                        "D": "1/100000 + 1/1000 + 1/100 + 1 + 1000 + 100000"
+                    }
+                },
+                {
+                    "q_no": "Q108",
+                    "question": "A sweeper is appointed in a condition that he will receive wages of Rs. 50 per day for his work, but if he will be absent, he will not receive any wages and will be fined Rs. 10 for that day. After 30 days he has received Rs. 1140. How many days was he absent? / একজন ঝাড়ুদার এই চুক্তিতে নিযুক্ত হল যে, যে দিন সে কাজ করবে, সে দিনের মজুরি 50 টাকা করে পাবে। কিন্তু যে দিন সে অনুপস্থিত থাকবে সে দিন মজুরি তো পাবেই না বরং 10 টাকা করে জরিমানা দিতে হবে। 30 দিন পর সে 1140 টাকা পেল। সে কতদিন অনুপস্থিত ছিল?",
+                    "options": {
+                        "A": "9 days / ৯ দিন",
+                        "B": "5 days / ৫ দিন",
+                        "C": "4 days / ৪ দিন",
+                        "D": "6 days / ৬ দিন"
+                    }
+                },
+                {
+                    "q_no": "Q109",
+                    "question": "The distance between X and Y is 270 km. At 9 am 'A' starts from X towards Y and 'B' starts from Y towards X. The speed of A and B is 50 km in an hour and 40 km in an hour respectively. When shall they meet each other? / X এবং Y-এর দূরত্ব 270 কিমি। সকাল ৯টায় A, X থেকে Y-এর দিকে যাত্রা শুরু করে। যদি A এবং B-এর গতিবেগ যথাক্রমে ঘণ্টায় 50 কিমি এবং ঘণ্টায় 40 কিমি হয়, তবে কখন তাদের সাক্ষাৎ হবে?",
+                    "options": {
+                        "A": "11 am / সকাল ১১টা",
+                        "B": "12 noon / দুপুর ১২টা",
+                        "C": "1 pm / দুপুর ১টা",
+                        "D": "2 pm / দুপুর ২টা"
+                    }
+                },
+                {
+                    "q_no": "Q110",
+                    "question": "Simplify / সরল করুন: [0.088×0.088 − 5×0.088] / [3×0.088 − 4×0.099] × [9×0.088×0.088 − 16×0.099×0.099] / [0.088×0.088 − 25] + [3×0.088×0.088 + 4×0.099×0.088] / [0.099×0.088 + 5×0.099]",
+                    "options": {
+                        "A": "0.099",
+                        "B": "0.088",
+                        "C": "0.99",
+                        "D": "0.88"
+                    }
+                },
+                {
+                    "q_no": "Q111",
+                    "question": "Simplify: [(0.1)²/(37/25−0.1) + (0.2)²/(37/25−0.2) + (0.3)²/(37/25−0.3) + (0.1)+(0.2)+(0.3)] / [0.1/(37/25−0.1) + 0.2/(37/25−0.2) + 0.3/(37/25−0.3)]",
+                    "options": {
+                        "A": "0.1",
+                        "B": "0.2",
+                        "C": "0.3",
+                        "D": "37/25"
+                    }
+                },
+                {
+                    "q_no": "Q112",
+                    "question": "'A' can do a piece of work in 20 days, 'B' can do it in 24 days and 'C' can do the same in 30 days. They agree to do the work in Rs. 5,400 and they start the work together. But 'B' leaves the work before 2 days of the completion of the work and 'C' leaves the work before 5 days of the completion of the work. 'A' completes the remaining work. What amount has 'A' get for the work? / 'A', 'B' ও 'C' একাকী একটি কাজ যথাক্রমে 20 মিন, 24 মিন ও 30 মিনে শেষ করতে পারে।",
+                    "options": {
+                        "A": "Rs. 2,700 / ২,৭০০ টাকা",
+                        "B": "Rs. 5,400 / ৫,৪০০ টাকা",
+                        "C": "Rs. 1,600 / ১,৬০০ টাকা",
+                        "D": "Rs. 3,600 / ৩,৬০০ টাকা"
+                    }
+                },
+                {
+                    "q_no": "Q113",
+                    "question": "A person starts from A at 6 am. towards B and reaches at B on 10 am. Another person starts from B at 8 am. towards A and reaches at A on 11·30 am. When shall they meet each other? / একজন লোক সকাল ৬টায়, A স্থান থেকে B স্থানের উদ্দেশ্যে রওনা হয়ে সকাল ১০টায় B-তে পৌঁছাল।",
+                    "options": {
+                        "A": "7·45 am. / সকাল ৭টা ৪৫ মি.",
+                        "B": "8·26 am. / সকাল ৮টা ২৬ মি.",
+                        "C": "8·56 am. / সকাল ৮টা ৫৬ মি.",
+                        "D": "8·40 am. / সকাল ৮টা ৪০ মি."
+                    }
+                },
+                {
+                    "q_no": "Q114",
+                    "question": "'A' can do a piece of work in 12 days and 'B' can do it in 18 days. They started the work together but 'A' left 3 days before the completion of work. 'B' finishes the remaining work. The total number of days to complete the work is / একটি কাজ 'A', 12 দিনে এবং 'B', 18 দিনে শেষ করতে পারে।",
+                    "options": {
+                        "A": "8",
+                        "B": "9",
+                        "C": "6",
+                        "D": "3"
+                    }
+                },
+                {
+                    "q_no": "Q115",
+                    "question": "Find the sum of the following expressions / নীচের সংখ্যামালার যোগফল কত: (2/3×2/3−3/3×5/6−2×2/3×8)(2/3×2/3−3/3−5/6+2×2/3×8) + (2/3×5/6+2/3×3/8+3/5×8)(2/3×5/6+2/3×3/8−3/5×8)",
+                    "options": {
+                        "A": "611/900",
+                        "B": "27/30",
+                        "C": "25/30",
+                        "D": "1"
+                    }
+                },
+                {
+                    "q_no": "Q116",
+                    "question": "The numbers 7*82, 83*9, 147* are divisible by 9. * marked numbers respectively will be / 7*82, 83*9, 147* সংখ্যাগুলি 9 দ্বারা বিভাজ্য হলে, * চিহ্নিত স্থানগুলি যথাক্রমে হবে",
+                    "options": {
+                        "A": "2, 3, 5",
+                        "B": "4, 2, 8",
+                        "C": "0, 9, 2",
+                        "D": "1, 7, 6"
+                    }
+                },
+                {
+                    "q_no": "Q117",
+                    "question": "2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 87, 89, 97 are 26 numbers. / 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 87, 89, 97 এখানে 26 টি সংখ্যার",
+                    "options": {
+                        "A": "Here all the numbers are prime / সবকটিই মৌলিক।",
+                        "B": "Here all the numbers are prime except one / একটি বাদে সবকটিই মৌলিক।",
+                        "C": "Here all the numbers are prime except two / দুটি বাদে সবকটিই মৌলিক।",
+                        "D": "Here all the numbers are prime except three / তিনটি বাদে সবকটিই মৌলিক।"
+                    }
+                },
+                {
+                    "q_no": "Q118",
+                    "question": "The perimeters of a rectangle and a square are 80 cm each. The difference of areas of square and rectangle is 100 sq. cm. The sides of the rectangle are / একটি আয়তক্ষেত্রের ও বর্গক্ষেত্রের প্রত্যেকটির পরিসীমা 80 সেমি। বর্গক্ষেত্রের ও আয়তক্ষেত্রের ক্ষেত্রফলের পার্থক্য 100 বর্গসেমি। আয়তক্ষেত্রের বাহুগুলির দৈর্ঘ্য হয়",
+                    "options": {
+                        "A": "35 cm, 5 cm / ৩৫ সেমি, ৫ সেমি",
+                        "B": "32 cm, 8 cm / ৩২ সেমি, ৮ সেমি",
+                        "C": "30 cm, 10 cm / ৩০ সেমি, ১০ সেমি",
+                        "D": "28 cm, 12 cm / ২৮ সেমি, ১২ সেমি"
+                    }
+                },
+                {
+                    "q_no": "Q119",
+                    "question": "Simplify / সরল করুন: [(1/5×1/5+1/5×1/7+1/7×1/7) / (1/3−1/5)(1/7−1/3)] + [(1/7×1/7+1/7×1/3+1/3×1/3) / (1/3−1/5)(1/5−1/7)] − [(1/3×1/3+1/3×1/5+1/5×1/5) / (1/5−1/7)(1/3−1/7)]",
+                    "options": {
+                        "A": "1/105",
+                        "B": "0",
+                        "C": "61/105",
+                        "D": "1"
+                    }
+                },
+                {
+                    "q_no": "Q120",
+                    "question": "(7·001−1)(7·001+3)(7·001−2)(7·001−6)+96 =",
+                    "options": {
+                        "A": "(7·001−5)(7·001+2){(7·001)²+3×7·001+6}",
+                        "B": "(7·001−5)(7·001+2){(7·001)²−3×7·001−6}",
+                        "C": "(7·001+5)(7·001+2){(7·001)²−3×7·001−6}",
+                        "D": "(7·001−5)(7·001−2){(7·001)²−3×7·001−6}"
+                    }
+                }
+            ]
+        },
+        {
+            "section": "V",
+            "subject": "Environmental Science",
+            "questions": [
+                {
+                    "q_no": "Q121",
+                    "question": "The medicinal forest belonging to Khasi-Jayantias in Meghalaya is in / মেঘালয়ের খাসি-জয়ন্তিয়াদের একটি ভেষজ উদ্ভিদ বনভূমি রয়েছে",
+                    "options": {
+                        "A": "Cherrapunji / চেরাপুঞ্জিতে",
+                        "B": "Moflong / মফলং-এ",
+                        "C": "Shillong / শিলং-এ",
+                        "D": "Haflong / হাফলং-এ"
+                    }
+                },
+                {
+                    "q_no": "Q122",
+                    "question": "Talking during eating may sometimes lead food particles to enter into the windpipe. There is a flap-shaped structure that prevents food particles from entering the windpipe and lungs. This flap like structure is called / খাওয়ার সময় কথা বললে, কখনো কখনো খাবারের টুকরো শ্বাসনলিতে ঢুকে পড়ে। একটি ঢাকনির মতো অংশ আছে যা খাদ্যকণাকে শ্বাসনলি ও ফুসফুসের ভেতরে ঢুকতে বাধা প্রদান করে। সেই ঢাকনির মতো অংশটি হল",
+                    "options": {
+                        "A": "Tongue / জিহ্বা",
+                        "B": "Epiglottis / এপিগ্লটিস",
+                        "C": "Pharynx / গলবিল",
+                        "D": "Glottis / গ্লটিস"
+                    }
+                },
+                {
+                    "q_no": "Q123",
+                    "question": "S.I. system of units has / S.I. পদ্ধতিতে মোট একক হল",
+                    "options": {
+                        "A": "three base units and one supplementary unit / তিনটি মূল একক এবং একটি সহায়ক একক।",
+                        "B": "five base units and one supplementary unit / পাঁচটি মূল একক এবং একটি সহায়ক একক।",
+                        "C": "seven base units and two supplementary units / সাতটি মূল একক এবং দুটি সহায়ক একক।",
+                        "D": "seven base units and seven supplementary units / সাতটি মূল একক এবং সাতটি সহায়ক একক।"
+                    }
+                },
+                {
+                    "q_no": "Q124",
+                    "question": "Shreya noticed that her mother's nails have become spoon-shaped. She is really worried. This condition may result from / শ্রেয়া খেয়াল করল যে তার মায়ের নখগুলি চামচ আকৃতির হয়ে গেছে। সে জীবন চিন্তিত। এই অবস্থা কী থেকে হতে পারে?",
+                    "options": {
+                        "A": "Cholera / কলেরা",
+                        "B": "Anaemia / আনিমিয়া",
+                        "C": "Fever / জ্বর",
+                        "D": "Malaria / ম্যালেরিয়া"
+                    }
+                },
+                {
+                    "q_no": "Q125",
+                    "question": "Where we get maximum cotton of 1 kg by the help of Spring Balance at / স্প্রিং তুলার সাহায্যে কোথায় 1 কিগ্রা তুলো বেশি পাওয়া যাবে?",
+                    "options": {
+                        "A": "Pole / মেরুতে",
+                        "B": "45° Latitude / ৪৫° অক্ষাংশে",
+                        "C": "45° Longitude / ৪৫° দ্রাঘিমাংশে",
+                        "D": "Equator / বিষুবরেখায়"
+                    }
+                },
+                {
+                    "q_no": "Q126",
+                    "question": "Which of the following is the valid reason for Solar Eclipse? / সূর্য গ্রহণের জন্য কোনটি ঠিক নির্ণয় করুন।",
+                    "options": {
+                        "A": "Earth between Sun and Moon / পৃথিবী থাকে সূর্য ও চাঁদের মাঝখানে।",
+                        "B": "Sun between Earth and Moon / সূর্য থাকে চাঁদ ও পৃথিবীর মাঝখানে।",
+                        "C": "Moon between Sun and Earth / চাঁদ থাকে সূর্য ও পৃথিবীর মাঝখানে।",
+                        "D": "In any condition no three are same line / কোন অবস্থায় তিনটি একই সরলরেখায় থাকে না।"
+                    }
+                },
+                {
+                    "q_no": "Q127",
+                    "question": "Which metal remains liquid in room temperature? / ঘরের তাপমাত্রায় তরল থাকে কোন ধাতু?",
+                    "options": {
+                        "A": "Sodium / সোডিয়াম",
+                        "B": "Magnesium / ম্যাগনেসিয়াম",
+                        "C": "Mercury / পারদ",
+                        "D": "Lithium / লিথিয়াম"
+                    }
+                },
+                {
+                    "q_no": "Q128",
+                    "question": "Which of the following diseases is caused due to the poisoning of mercury present in soil? / নিম্নলিখিত কোন রোগটি মাটিতে উপস্থিত পারদের বিষক্রিয়া থেকে হয়?",
+                    "options": {
+                        "A": "Itai-itai disease / ইটাই ইটাই রোগ",
+                        "B": "Minamata disease / মিনামাটা রোগ",
+                        "C": "Dyslexia / ডিসলেক্সিয়া",
+                        "D": "Albinism / অ্যালবিনিজম"
+                    }
+                },
+                {
+                    "q_no": "Q129",
+                    "question": "The distance between Earth and Moon is about / পৃথিবী থেকে চাঁদের দূরত্ব প্রায়",
+                    "options": {
+                        "A": "three lakh kilometer / তিন লক্ষ কিলোমিটার",
+                        "B": "four lakh kilometer / চার লক্ষ কিলোমিটার",
+                        "C": "five lakh kilometer / পাঁচ লক্ষ কিলোমিটার",
+                        "D": "six lakh kilometer / ছয় লক্ষ কিলোমিটার"
+                    }
+                },
+                {
+                    "q_no": "Q130",
+                    "question": "Enzymes are secreted from different glands of the digestive system to aid in the digestion of food. Which of the following enzymes is secreted by the intestinal gland? / খাদ্য পরিপাক করার জন্য পৌষ্টিক তন্ত্রের বিভিন্ন গ্রন্থি থেকে উদ্দীপক ক্ষরিত হয়। নিম্নলিখিত কোন উদ্দীপকটি আন্ত্রিক গ্রন্থি দ্বারা ক্ষরিত হয়?",
+                    "options": {
+                        "A": "Erepsin / ইরেপসিন",
+                        "B": "Chymotrypsin / কাইমোট্রিপসিন",
+                        "C": "Ptyalin / টায়ালিন",
+                        "D": "Pepsin / পেপসিন"
+                    }
+                },
+                {
+                    "q_no": "Q131",
+                    "question": "Which of the following would you cite as an example of ex-situ conservation being a teacher of the Environmental Studies? / পরিবেশবিদ্যার শিক্ষক/শিক্ষিকা হিসেবে আপনি নিম্নলিখিত কোনটি এক্স-সিটু সংরক্ষণের উদাহরণ হিসেবে দেবেন?",
+                    "options": {
+                        "A": "Zoo / চিড়িয়াখানা",
+                        "B": "National Park / জাতীয় উদ্যান",
+                        "C": "Sanctuary / অভয়ারণ্য",
+                        "D": "Biosphere Reserve / বায়োস্ফিয়ার রিজার্ভ"
+                    }
+                },
+                {
+                    "q_no": "Q132",
+                    "question": "What is most desirable way to control soil pollution and as well as maintain fertility? / মৃত্তিকার উর্বরতাশক্তি বজায় রাখতে এবং মৃত্তিকা দূষণ নিয়ন্ত্রণ করতে কোনটি সর্বাধিক কাম্য?",
+                    "options": {
+                        "A": "Application of Chemical fertilizer / রাসায়নিক সার প্রয়োগ",
+                        "B": "To keep land fallow for a few years / ব্যবহার না করে জমি পরিত্যক্ত রেখে প্রাকৃতিক প্রক্রিয়ায় উর্বরতা বৃদ্ধি",
+                        "C": "To apply compost and organic manure / কম্পোস্ট ও জৈব সার ব্যবহার",
+                        "D": "'Jhum' cultivation where ashes from trees make the soil very fertile / অরণ্যের বনভূমি কেটে পুড়িয়ে যে ছাই উৎপন্ন হয় তার মিশ্রণের ফলে উর্বরতা বৃদ্ধি (জুম চাষ)"
+                    }
+                },
+                {
+                    "q_no": "Q133",
+                    "question": "Galaxy is actually / ছায়াপথ প্রকৃতপক্ষে",
+                    "options": {
+                        "A": "the transitional day between Krishnapaksha and Shuklapaksha / কৃষ্ণপক্ষ ও শুক্লপক্ষের সীমা নির্দেশ করে।",
+                        "B": "the seasonal boundaries / প্রতিটি ঋতুর সীমা নির্দেশ করে।",
+                        "C": "the effects of rotation / পৃথিবীর আবর্তনের ফলাফল নির্দেশ করে।",
+                        "D": "an assembly of a lot of star-worlds including solar system / সৌরজগৎ এবং অন্যান্য অনেক নক্ষত্রের সমাহার নির্দেশ করে।"
+                    }
+                },
+                {
+                    "q_no": "Q134",
+                    "question": "Chandraketugarh (now ruins) was formed on / চন্দ্রকেতুগড়ের (বর্তমান ভগ্নাবশেষ) অস্তিত্ব গড়ে উঠেছিল",
+                    "options": {
+                        "A": "the Ichamati basin / ইছামতী নদীর অববাহিকায়",
+                        "B": "the Churni basin / চুর্ণী নদীর অববাহিকায়",
+                        "C": "the Jalongi basin / জলঙ্গি নদীর অববাহিকায়",
+                        "D": "the Bidyadhari basin / বিদ্যাধরী নদীর অববাহিকায়"
+                    }
+                },
+                {
+                    "q_no": "Q135",
+                    "question": "Why did Afsana Khatoon receive the presidential felicitations on May 14, 2009? / আফসানা খাতুন 2009 সালের 14ই মে কেন তৎকালীন রাষ্ট্রপতির শুভেচ্ছা পেয়েছিলেন?",
+                    "options": {
+                        "A": "She discarded her own child/juvenile marriage by protesting publicly / নিজের বাল্যবিবাহ নিজে রোধ করেছিলেন প্রতিবাদ করে।",
+                        "B": "She protested against unlawful child labour / শিশুশ্রমিকদের অন্যায়ভাবে কাজ করানোর বিরুদ্ধে প্রতিবাদ করেছিলেন।",
+                        "C": "She saved a juvenile girl from being attacked by goons / অন্য একটি নাবালিকাকে আক্রমণের হাত থেকে বাঁচিয়েছিলেন।",
+                        "D": "She got a sexual molester arrested by the police / এক যৌনগ্রহণকারী ব্যক্তিকে পুলিশে ধরিয়ে দিয়েছিলেন।"
+                    }
+                },
+                {
+                    "q_no": "Q136",
+                    "question": "One of the diseases caused due to air-pollution is / বায়ুদূষণের ফলে সৃষ্ট একটি রোগ হল",
+                    "options": {
+                        "A": "Silicosis / সিলিকোসিস",
+                        "B": "Minamata / মিনামাটা",
+                        "C": "Blackfoot / ব্ল্যাকফুট",
+                        "D": "Encephalitis / এনকেফেলাইটিস"
+                    }
+                },
+                {
+                    "q_no": "Q137",
+                    "question": "Which salt is used in Mid-day Meal? / মিড ডে মিলে রান্নার জন্য যে লবণ ব্যবহৃত হয় তার ফর্মুলা হল",
+                    "options": {
+                        "A": "NaCl",
+                        "B": "KCl",
+                        "C": "MgCl₂",
+                        "D": "CaCl₂"
+                    }
+                },
+                {
+                    "q_no": "Q138",
+                    "question": "Soil washed away by running water is called / মাটির কণা জলে ধুয়ে গেলে তাকে বলে",
+                    "options": {
+                        "A": "Regolith / রেগোলিথ",
+                        "B": "Soil profile / সয়েল প্রোফাইল",
+                        "C": "Eluviation / এলুভিয়েশন",
+                        "D": "Illuviation / ইলুভিয়েশন"
+                    }
+                },
+                {
+                    "q_no": "Q139",
+                    "question": "As a teacher of Environmental Studies, which of the following physiological processes would you cite as an example of catabolism? / পরিবেশবিদ্যার শিক্ষক/শিক্ষিকা হিসেবে আপনি নিম্নলিখিত কোন শারীরবৃত্তীয় প্রক্রিয়া অপচিতি বিপাকের উদাহরণ হিসেবে দেবেন?",
+                    "options": {
+                        "A": "Respiration / শ্বসন",
+                        "B": "Nutrition / পুষ্টি",
+                        "C": "Photosynthesis / সালোকসংশ্লেষ",
+                        "D": "Growth / বৃদ্ধি"
+                    }
+                },
+                {
+                    "q_no": "Q140",
+                    "question": "Given other circumstances constant, the relation between the level of underground water and rainfall is / অন্যান্য বিষয় অপরিবর্তিত থাকলে ভৌমজলের স্তরের বৃদ্ধির সঙ্গে বৃষ্টিপাতের সম্পর্ক হল",
+                    "options": {
+                        "A": "simple/regular / সরল",
+                        "B": "opposite / বিপরীত",
+                        "C": "proportionate / সমানুপাতিক",
+                        "D": "inversely related / ব্যস্তানুপাতিক"
+                    }
+                },
+                {
+                    "q_no": "Q141",
+                    "question": "The disorder of eye in which distant objects appear blurry but near vision is normal, is called / চোখের যে সমস্যায় দূরের বস্তুকে ঝাপসা দেখা যায় কিন্তু নিকট দৃষ্টি ঠিক থাকে তাকে বলে",
+                    "options": {
+                        "A": "Myopia / মায়োপিয়া",
+                        "B": "Hypermetropia / হাইপারমেট্রোপিয়া",
+                        "C": "Cataract / ক্যাটারাক্ট",
+                        "D": "Presbyopia / প্রেসবায়োপিয়া"
+                    }
+                },
+                {
+                    "q_no": "Q142",
+                    "question": "Jan 26, 1950 is celebrated as the Republic Day because on that day / 1950 সালের 26 জানুয়ারিতে 'সাধারণতন্ত্র দিবস' পালিত হয় কারণ ওইদিন থেকে",
+                    "options": {
+                        "A": "India got her freedom as a separate country / ভারতবর্ষ স্বাধীনরাষ্ট্র হিসেবে স্বীকৃতি পেয়েছিল।",
+                        "B": "India and Pakistan were treated as two separate countries / ভারতবর্ষ ও পাকিস্তান দুটি পৃথক দেশ হিসেবে পরিগণিত হয়েছিল।",
+                        "C": "Indian Constitution was granted as the country's own law system / দেশের নিজস্ব আইনবিধি হিসাবে ভারতবর্ষে সংবিধান প্রচলিত হয়েছিল।",
+                        "D": "Jawaharlal Nehru became the first Prime Minister of India / ভারতবর্ষের প্রথম প্রধানমন্ত্রী হয়েছিলেন পণ্ডিত জওহরলাল নেহরু।"
+                    }
+                },
+                {
+                    "q_no": "Q143",
+                    "question": "Among the following which one is the best conductor of electricity? / নিম্নলিখিত পদার্থগুলির মধ্যে কোনটি তড়িতের সবচেয়ে ভালো পরিবাহী?",
+                    "options": {
+                        "A": "Ag / রুপো",
+                        "B": "Au / সোনা",
+                        "C": "Zn / জিংক",
+                        "D": "Cu / তামা"
+                    }
+                },
+                {
+                    "q_no": "Q144",
+                    "question": "One liquid non-metal is / একটি তরল অধাতু হল",
+                    "options": {
+                        "A": "Mercury / পারদ",
+                        "B": "Bromine / ব্রোমিন",
+                        "C": "Carbon / কার্বন",
+                        "D": "Sulphur / সালফার"
+                    }
+                },
+                {
+                    "q_no": "Q145",
+                    "question": "Different parts of plants are used to prepare medicines. As for example, reserpine is used to reduce high blood pressure. Reserpine is obtained from the roots of which of the following plants? / গাছের বিভিন্ন অংশ ওষুধ তৈরির কাজে ব্যবহৃত হয়। যেমন, উচ্চ রক্তচাপ কমাতে রেসার্পিন ব্যবহার করা হয়। নিম্নলিখিত কোন গাছের মূল থেকে রেসার্পিন পাওয়া যায়?",
+                    "options": {
+                        "A": "Datura / ধুতুরা",
+                        "B": "Tobacco / তামাক",
+                        "C": "Rauvolfia / সর্পগন্ধা",
+                        "D": "Coffee / কফি"
+                    }
+                },
+                {
+                    "q_no": "Q146",
+                    "question": "The river Ganga is known as river Hugli at / গঙ্গা নদীর নাম হুগলি নদী হয়েছে",
+                    "options": {
+                        "A": "the confluence of Damodar and Bhagirathi / যেখানে ভাগীরথী নদীতে দামোদর মিশেছে।",
+                        "B": "the confluence of Rupnarayan and Bhagirathi / যেখানে ভাগীরথী নদীতে রূপনারায়ণ মিশেছে।",
+                        "C": "the confluence of Haldi and Bhagirathi / যেখানে ভাগীরথী নদীতে হলদি মিশেছে।",
+                        "D": "the confluence of Ajay and Bhagirathi / যেখানে ভাগীরথী নদীতে অজয় মিশেছে।"
+                    }
+                },
+                {
+                    "q_no": "Q147",
+                    "question": "As a teacher of Environmental Studies, you have shown the pictures of the following animals to your students. In the list, which of the following animals is not an invertebrate? / পরিবেশবিদ্যার শিক্ষক/শিক্ষিকা হিসেবে আপনি নিম্নলিখিত প্রাণীগুলির ছবি শিক্ষার্থীদের দেখিয়েছেন। এই তালিকায়, কোন প্রাণীটি অমেরুদণ্ডী নয়?",
+                    "options": {
+                        "A": "Sycon / সাইকন",
+                        "B": "Jellyfish / জেলিফিস",
+                        "C": "Cuttle fish / কাটলফিস",
+                        "D": "Shark / হাঙর"
+                    }
+                },
+                {
+                    "q_no": "Q148",
+                    "question": "Rita taught her students about tuberculosis. The causal organism of this disease enters the human body through lungs. Which of the following is the causal organism of tuberculosis? / রীতা তার ছাত্রদের যক্ষ্মা সম্বন্ধে পড়ালেন। এই রোগের জীবাণু মানবদেহে ফুসফুসের মাধ্যমে প্রবেশ করে। নিম্নলিখিত কোনটি যক্ষ্মা রোগের জীবাণু?",
+                    "options": {
+                        "A": "Salmonella / সালমোনেলা",
+                        "B": "Mycobacterium / মাইকোব্যাকটেরিয়াম",
+                        "C": "Fungi / ছত্রাক",
+                        "D": "Clostridium / ক্লসট্রিডিয়াম"
+                    }
+                },
+                {
+                    "q_no": "Q149",
+                    "question": "It takes more time to cook meals on a hill station. The reason is due to / পাহাড়ে রান্না হতে বেশি সময় লাগে",
+                    "options": {
+                        "A": "less humidity / কম আর্দ্রতার জন্য",
+                        "B": "low pressure / কম চাপের জন্য",
+                        "C": "cooking is difficult at high altitude / উঁচুতে রান্না করতে অসুবিধা বলে",
+                        "D": "low temperature / কম তাপমাত্রার জন্য"
+                    }
+                },
+                {
+                    "q_no": "Q150",
+                    "question": "Why on hills than on plain tennis balls bounce higher? / কেন পাহাড়ে টেনিস বল সমভূমির তুলনায় বেশি লাফায়?",
+                    "options": {
+                        "A": "Less weight of the ball / বলের ওজন কম বলে",
+                        "B": "Nature of surface not plane / পাহাড়ে ভূমি সমতল নয় বলে",
+                        "C": "Less gravitational pull / কম অভিকর্ষ বল বলে",
+                        "D": "Atmospheric state changes continuously / বায়ুমণ্ডলীয় অবস্থা বারবার পরিবর্তন হয় বলে"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,1685 @@
+{
+    "exam": "WB Primary TET 2015",
+    "sections": [
+        {
+            "section": "I",
+            "subject": "Language-I — Bengali",
+            "questions": [
+                {
+                    "q_no": 1,
+                    "question": "নীচের কোন বাক্যটিতে ঘটনাগত ভুল আছে?",
+                    "options": {
+                        "A": "বাবা ঘরে ফিরেছেন।",
+                        "B": "আকাশ পর্যন্ত খেয়ে হাঁসফাঁস অবস্থা।",
+                        "C": "আমরা জন্মাৎসের বিশ্বাসী।",
+                        "D": "কলকাতে ঠান্ডার হাটুতে বেড়াচ্ছে।"
+                    },
+                    "answer": "B"
+                },
+                {
+                    "q_no": 2,
+                    "question": "নীচের কোনটি অর্থসংবৃত ব্যঞ্জনির উদাহরণ?",
+                    "options": {
+                        "A": "এ",
+                        "B": "উ",
+                        "C": "ই",
+                        "D": "অ"
+                    },
+                    "answer": "A"
+                },
+                {
+                    "q_no": 3,
+                    "question": "লেখ চিহ্নগুলির মধ্যে কছল ব্যবহৃত '/' — এই চিহ্নটিকে আমরা বাংলায় বলি:",
+                    "options": {
+                        "A": "বিরাম চিহ্ন",
+                        "B": "বিভক্ত চিহ্ন",
+                        "C": "বিবৃতি চিহ্ন",
+                        "D": "কোনোটিই নয়"
+                    },
+                    "answer": "B"
+                },
+                {
+                    "q_no": 4,
+                    "question": "'প্রাচ্য' শব্দটিকে বিশেষ্য করলে হয়:",
+                    "options": {
+                        "A": "প্রচেত",
+                        "B": "প্রচী",
+                        "C": "প্রাচীন",
+                        "D": "প্রাচ্যা"
+                    },
+                    "answer": "D"
+                },
+                {
+                    "q_no": 5,
+                    "question": "'বসন বৃতি নামল তিমিরনিবিড় রাতে' — এই বাক্যটির উদ্দেশ্য হলো:",
+                    "options": {
+                        "A": "বৃতি",
+                        "B": "রাতে",
+                        "C": "তিমিরনিবিড়",
+                        "D": "নামল রাতে"
+                    },
+                    "answer": "A"
+                },
+                {
+                    "q_no": 6,
+                    "question": "ব্যঞ্জনবর্ণের উচ্চারণ মান অনুযায়ী উ-বর্ণের বর্ণগুলিকে বলা হয়:",
+                    "options": {
+                        "A": "তালব্য বর্ণ",
+                        "B": "দন্ত বর্ণ",
+                        "C": "কণ্ঠ বর্ণ",
+                        "D": "মূর্ধন্য বর্ণ"
+                    },
+                    "answer": "D"
+                },
+                {
+                    "q_no": 7,
+                    "question": "নিম্নলিখিত সমার্থক শব্দগুচ্ছের মধ্যে কোনটি অশুদ্ধ?",
+                    "options": {
+                        "A": "অর্ণব, তরঙ্গমাল, উদধি, পুষণ",
+                        "B": "বিভাবরী, বিভাবসু, বিভাবসু, তরণী",
+                        "C": "প্রভঞ্জন, মরুত, অনিল, সমীর",
+                        "D": "হয়, বাজী, তুরণ, তুরগম"
+                    },
+                    "answer": "B"
+                },
+                {
+                    "q_no": 8,
+                    "question": "সেনা, সপ্তর, সবলম্ব, সকহা — এই শব্দগুলি অভিধানে অর্থ খোঁজার সময় ক্রমবিন্যাসটি কেমন হবে?",
+                    "options": {
+                        "A": "সংগ্রহ, সবলা, সেনা, সবলম্ব",
+                        "B": "সবলম্ব, সেনা, সওয়া, সংগ্রহ",
+                        "C": "সওয়া, সংগ্রহ, সবলম্ব, সেনা",
+                        "D": "সওয়া, সংগ্রহ, সেনা, সবলম্ব"
+                    },
+                    "answer": "C"
+                },
+                {
+                    "q_no": 9,
+                    "question": "'যদি মরতে পারতাম তাহলে অন্তর ঘরে বেড়াতাম।' নিম্নরেখাঙ্কিত অংশটি:",
+                    "options": {
+                        "A": "নামযোগাত্মক ক্রিয়া",
+                        "B": "নির্দেশকাত্মক ক্রিয়া",
+                        "C": "সংযোজকাত্মক ক্রিয়া",
+                        "D": "অনুজ্ঞাত্মক ক্রিয়া"
+                    },
+                    "answer": "C"
+                },
+                {
+                    "q_no": 10,
+                    "question": "তান ও কবিতার মধ্যে কোন সম্পর্কটি ঠিক?",
+                    "options": {
+                        "A": "এই দুয়ের মধ্যে কোনো সম্পর্ক নেই",
+                        "B": "কবে, ভাষায় প্রতিষ্ঠিত হয়",
+                        "C": "তান, কবিতায় প্রতিষ্ঠিত হয়",
+                        "D": "এই দুয়ে মধ্যে সম্পর্ক রয়েছে"
+                    },
+                    "answer": "D"
+                },
+                {
+                    "q_no": 11,
+                    "question": "তোমার মনে বক্তার্থী কথা বলা কথায় নিরঙ্কুশ মনটি হক —",
+                    "options": {
+                        "A": "উদ্দেশ্যবাচন",
+                        "B": "ক্রিয়া",
+                        "C": "বিধেয়",
+                        "D": "বিধেয়ের প্রসার"
+                    },
+                    "answer": "D"
+                },
+                {
+                    "q_no": 12,
+                    "question": "বাংলা ভাষার ব্যঞ্জনিন সংখ্যা কতগুলি চিহ্নের?",
+                    "options": {
+                        "A": "কম",
+                        "B": "বেশি",
+                        "C": "সমান",
+                        "D": "অনেক"
+                    },
+                    "answer": "C"
+                },
+                {
+                    "q_no": 13,
+                    "question": "(Passage-based Q. 13-15) বাংলা বর্ণমালার ও সংস্কৃত বর্ণমালার অক্ষরের একটি নেই। ইংরাজি Star শব্দের অ সংস্কৃত জা, ইংরাজী Star শব্দে সংস্কৃত অ। সংস্কৃত অ ও ইংরাজি বাংলা অ এর মধ্যে পার্থক্য আছে। বাংলা ও সংস্কৃত অ আছে, বাংলা অ নেই। এই নিচে বিস্তৃতি প্রতুলের বাজানি শব্দজ্ঞান তিব অবশ্যই বাংলা ভাষায় কম্পিউটার বলে মানে। ইংরাজিতে বলা যায়: বচনের সর্বাত্মক স্বরধ্বনি তা সে একটি ধ্বনি পার না পাবে। এ বছর প্রথমবার তুলু ঐ একটি মনোযোগ দিই যে ব্যঞ্জনবর্ণ শেষ সেই পার্থক্য মনে রাখে। বাংলায় তথাকথিত উচ্চারণের বাস্তব নয়, কিন্তু পার পার্থক্য স্থাপন করে না, মার তখনই পার হয়ে যায়: 'অবশ্য' যেই হয় অর্থ: অনি এমন কথা যে শব্দ বানে পার হয়ে এমন বিভাষের কল ও। বচনে বাস্তবিক অর্থের একটি তাকে কারো বসানো বলে যেমন: কল কল কল তুই তুই তুই মনো। এই মনে এই হয়। তথা তুমি ও প্রিয়তম চেতে তারা বলো তুই ও ঐ স্থান চুতি বলে গেল অ।\n\nপ্রদত্ত অনুচ্ছেদ অনুযায়ী বাংলা অ বর্ণ —",
+                    "options": {
+                        "A": "সংস্কৃত অ-এর মতো",
+                        "B": "ইংরাজি Star-এর মতো",
+                        "C": "এর কোনোটিই না",
+                        "D": "অ-এর কোনোটিই না"
+                    },
+                    "answer": "C"
+                },
+                {
+                    "q_no": 14,
+                    "question": "নীচের কোনটি সঠিক নয়?",
+                    "options": {
+                        "A": "ইংরাজি সংস্কৃত অ মতো",
+                        "B": "সংস্কৃত ও ইংরাজি একই",
+                        "C": "সংস্কৃত ও বাংলা সমান নয়",
+                        "D": "সংস্কৃত ও ইংরাজি Star শব্দের মতো"
+                    },
+                    "answer": "B"
+                },
+                {
+                    "q_no": 15,
+                    "question": "নীচের কোন বিষয়টি তথ্য ও সংখ্যা উভয়ের ক্ষেত্রে সঠিক নয়?",
+                    "options": {
+                        "A": "একটি একটি তথ্য ঠিক আছে",
+                        "B": "আলো তে তথ্য ঠিক আছে",
+                        "C": "একটিও তে তথ্য ও সংখ্যা আছে",
+                        "D": "আলো তে কোনো সংখ্যা ও সত্য নয়"
+                    },
+                    "answer": "C"
+                },
+                {
+                    "q_no": 16,
+                    "question": "নীচের কোন বিকল্পটি অ-এর সঙ্গ নয়?",
+                    "options": {
+                        "A": "ই, অ",
+                        "B": "ও, উ",
+                        "C": "ঐ, আ",
+                        "D": "ই, উ"
+                    },
+                    "answer": "C"
+                },
+                {
+                    "q_no": 17,
+                    "question": "নীচের কোন বাক্যটি প্রখম পর্যায়েশ্বর সাপেক্ষে ঠিক?",
+                    "options": {
+                        "A": "সংস্কৃত স্বরবর্ণে অ নেই।",
+                        "B": "হিন্দিতে অ থাকলেও সংস্কৃত স্বরবর্ণে অ নেই।",
+                        "C": "সংস্কৃত স্বরবর্ণে অ আছে।",
+                        "D": "ইংরেজি a এবং i-এর মতো অ সংস্কৃত স্বরবর্ণে নেই।"
+                    },
+                    "answer": "C"
+                },
+                {
+                    "q_no": 18,
+                    "question": "নীচের কোনটি শুদ্ধ?",
+                    "options": {
+                        "A": "বৃ + তি = বৃষ্টি",
+                        "B": "নভস্ + তল = নভস্তল",
+                        "C": "বৃন + হিত = বৃংহিত",
+                        "D": "হিংস + আ = হিংসা"
+                    },
+                    "answer": "C"
+                },
+                {
+                    "q_no": 19,
+                    "question": "মিলিয়ে নাও মেলাও: (1) ঘোষ ধ্বনি (i) প, (2) অল্পপ্রাণ ধ্বনি (ii) দ, (3) উষ্মধ্বনি (iii) ঢ়, (4) তাড়িত ধ্বনি (iv) হ",
+                    "options": {
+                        "A": "1-i, 2-ii, 3-iii, 4-iv",
+                        "B": "1-iii, 2-iv, 3-ii, 4-i",
+                        "C": "1-iv, 2-iii, 3-i, 4-ii",
+                        "D": "1-ii, 2-i, 3-iv, 4-iii"
+                    },
+                    "answer": "D"
+                },
+                {
+                    "q_no": 20,
+                    "question": "নীচের মন্তব্যগুলির মধ্যে কোনটি/কোনগুলি অশুদ্ধ? (I) ই-প্রসারিত ও সংবৃত স্বরধ্বনি (II) উ-কুঞ্চিত ও পাশ্চাৎ স্বরধ্বনি (III) আ-নিম্ন ও বিবৃত স্বরধ্বনি (IV) অ-প্রসারিত, সম্মুখ ও সংবৃত স্বরধ্বনি",
+                    "options": {
+                        "A": "I, IV",
+                        "B": "শুধু II",
+                        "C": "শুধু III",
+                        "D": "শুধু IV"
+                    },
+                    "answer": "D"
+                },
+                {
+                    "q_no": 21,
+                    "question": "'দুঃসাহসিক' শব্দটিকে বর্ণবিশ্লেষণ করলে পাওয়া যায়:",
+                    "options": {
+                        "A": "দ + উ + : + স + আ + হ + অ + স + ই + ক্",
+                        "B": "দ + : + উ + স + আ + হ + অ + স + ই + ক্",
+                        "C": "দ + উঃ + স + আ + হ + অ + স + ই + ক্",
+                        "D": "দঃ + উ + স + আ + হ + অ + স + ই + ক্"
+                    },
+                    "answer": "C"
+                },
+                {
+                    "q_no": 22,
+                    "question": "নিম্নলিখিত শব্দগুচ্ছের মধ্যে কোনটি শুদ্ধ?",
+                    "options": {
+                        "A": "পূর্বাহ্ন, অপরাহ্ন, সায়াহ্ন, মধ্যাহ্ন",
+                        "B": "রসায়ন, রামায়ণ, উত্তরায়ণ, মৃণালয়ন",
+                        "C": "সূচরিতাস্বু, শ্রীচরণেষু, স্নেহাস্পদেষু",
+                        "D": "উজ্জ্বল, উচ্ছ্বাস, পশ্চাৎচর, জ্ঞাতাভিমান"
+                    },
+                    "answer": "B"
+                },
+                {
+                    "q_no": 23,
+                    "question": "নীচের মন্তব্যগুলির মধ্যে কোনটি মিথ্যা?",
+                    "options": {
+                        "A": "ই ধ্বনি প্রসারিত ও বিবৃতধ্বনি",
+                        "B": "অ ধ্বনি কুঞ্চিত ও হ্রস্বধ্বনি",
+                        "C": "ও ধ্বনি কুঞ্চিত ও পাশ্চাৎ ধ্বনি",
+                        "D": "আ ধ্বনি নিম্ন স্বরধ্বনি"
+                    },
+                    "answer": "A"
+                },
+                {
+                    "q_no": 24,
+                    "question": "আপনি যদি বলেন তবে কাজটা করব। নিম্নরেখাঙ্কিত পদ দুটি:",
+                    "options": {
+                        "A": "সংযোজক অব্যয়",
+                        "B": "সংযোগক অব্যয়",
+                        "C": "সিদ্ধান্তবাচক অব্যয়",
+                        "D": "হেতুবাচক অব্যয়"
+                    },
+                    "answer": "D"
+                },
+                {
+                    "q_no": 25,
+                    "question": "'সূধা' — এই শব্দটির সংযুক্ত বর্ণটিকে ভাঙলে পাই:",
+                    "options": {
+                        "A": "ধ + ষ + ম",
+                        "B": "ক + ষ + ম",
+                        "C": "ক + ষ + ম",
+                        "D": "ক + ব + ম"
+                    },
+                    "answer": "D"
+                },
+                {
+                    "q_no": 26,
+                    "question": "(Passage Q. 26-30) পদ্যাংশ পাঠ করে উত্তর দাও। 'পাটনির' প্রতিশব্দ হিসেবে নীচের কোন বিকল্পটি ঠিক?",
+                    "options": {
+                        "A": "নেয়ে",
+                        "B": "খেয়া",
+                        "C": "পানসি",
+                        "D": "তরণি"
+                    },
+                    "answer": "A"
+                },
+                {
+                    "q_no": 27,
+                    "question": "'দিন চলে যায় ঝনঝনিয়ে ঘুমপাড়ানির ছড়া' — উদ্ধৃতাংশের নিম্নরেখ অংশটি হলো:",
+                    "options": {
+                        "A": "বিশেষ্য",
+                        "B": "বিশেষণ",
+                        "C": "ক্রিয়াবিশেষণ",
+                        "D": "ক্রিয়া"
+                    },
+                    "answer": "C"
+                },
+                {
+                    "q_no": 28,
+                    "question": "'খোকা গেলে ঘোষ থান, চরাতে' — 'চরাতে' হলো:",
+                    "options": {
+                        "A": "সমাপিকা ক্রিয়া",
+                        "B": "অসমাপিকা ক্রিয়া",
+                        "C": "সর্বনাম",
+                        "D": "অব্যয়"
+                    },
+                    "answer": "B"
+                },
+                {
+                    "q_no": 29,
+                    "question": "'কলম আমার বেরিয়ে এল বহরূপীর বেশে' — এখানে 'বহরূপীর বেশে' শব্দবদ্ধটি ইঙ্গিত করে:",
+                    "options": {
+                        "A": "কলমের নানা রঙের কালিকে",
+                        "B": "বৈচিত্র্যপূর্ণ অভিজ্ঞতার প্রকাশকে",
+                        "C": "কবির হৃদয়বেদনাকে",
+                        "D": "এর কোনোটিই নয়"
+                    },
+                    "answer": "B"
+                },
+                {
+                    "q_no": 30,
+                    "question": "'আতাগাছের তোতাপাখি, ডালিমগাছে মৌ/হীরেদাবার মড়ুমড়ে থান, ঠাকুরদাবার বউ'। উদ্ধৃত এই ছড়ার অংশ —",
+                    "options": {
+                        "A": "উপেন্দ্রকিশোরের রায়চৌধুরীর লেখা ছড়ার অংশ",
+                        "B": "বুদ্ধদেব বসুর লেখা ছড়ার অংশ",
+                        "C": "সুকুমার রায়ের লেখা ছড়ার অংশ",
+                        "D": "প্রচলিত একটি ছড়ার অংশ"
+                    },
+                    "answer": "D"
+                }
+            ]
+        },
+        {
+            "section": "II",
+            "subject": "Language-II — English",
+            "questions": [
+                {
+                    "q_no": 31,
+                    "question": "Mark the part with an error: 'Do not leave your seat before finishing the task.'",
+                    "options": {
+                        "A": "Do not leave",
+                        "B": "your seat before",
+                        "C": "finishing the task",
+                        "D": "No error"
+                    },
+                    "answer": "D"
+                },
+                {
+                    "q_no": 32,
+                    "question": "Mark the part with an error: 'Much have been made of her new book.'",
+                    "options": {
+                        "A": "Much have been",
+                        "B": "made of her",
+                        "C": "new book",
+                        "D": "No error"
+                    },
+                    "answer": "A"
+                },
+                {
+                    "q_no": 33,
+                    "question": "Mark the part with an error: 'The deep depression of the Bay of Bengal intensified into a cyclone.'",
+                    "options": {
+                        "A": "The deep depression",
+                        "B": "of the Bay of Bengal intensified",
+                        "C": "into a cyclone",
+                        "D": "No error"
+                    },
+                    "answer": "B"
+                },
+                {
+                    "q_no": 34,
+                    "question": "Synonym of 'brag':",
+                    "options": {
+                        "A": "request",
+                        "B": "order",
+                        "C": "boast",
+                        "D": "question"
+                    },
+                    "answer": "C"
+                },
+                {
+                    "q_no": 35,
+                    "question": "Synonym of 'pester':",
+                    "options": {
+                        "A": "annoy",
+                        "B": "fight",
+                        "C": "silent",
+                        "D": "sad"
+                    },
+                    "answer": "A"
+                },
+                {
+                    "q_no": 36,
+                    "question": "Synonym of 'imminent':",
+                    "options": {
+                        "A": "immoral",
+                        "B": "comical",
+                        "C": "impending",
+                        "D": "cynic"
+                    },
+                    "answer": "C"
+                },
+                {
+                    "q_no": 37,
+                    "question": "Antonym of 'aggravate':",
+                    "options": {
+                        "A": "appropriate",
+                        "B": "appreciate",
+                        "C": "alleviate",
+                        "D": "admire"
+                    },
+                    "answer": "C"
+                },
+                {
+                    "q_no": 38,
+                    "question": "Antonym of 'onerous':",
+                    "options": {
+                        "A": "wanted",
+                        "B": "light",
+                        "C": "burdensome",
+                        "D": "many"
+                    },
+                    "answer": "B"
+                },
+                {
+                    "q_no": 39,
+                    "question": "Antonym of 'obstinate':",
+                    "options": {
+                        "A": "pliable",
+                        "B": "adamant",
+                        "C": "passionate",
+                        "D": "ominous"
+                    },
+                    "answer": "A"
+                },
+                {
+                    "q_no": 40,
+                    "question": "(Passage Q. 40-43) The author feels that the greatest threat to human civilization is:",
+                    "options": {
+                        "A": "population",
+                        "B": "science",
+                        "C": "war",
+                        "D": "pollution"
+                    },
+                    "answer": "C"
+                },
+                {
+                    "q_no": 41,
+                    "question": "Constructive use of science would lead mankind towards:",
+                    "options": {
+                        "A": "misery",
+                        "B": "happiness",
+                        "C": "pain",
+                        "D": "doubt"
+                    },
+                    "answer": "B"
+                },
+                {
+                    "q_no": 42,
+                    "question": "The main problem of man is to:",
+                    "options": {
+                        "A": "control science",
+                        "B": "control scientists",
+                        "C": "put an end to the activities of science",
+                        "D": "put an end to war"
+                    },
+                    "answer": "D"
+                },
+                {
+                    "q_no": 43,
+                    "question": "To stop war, according to the author, we need the participation of:",
+                    "options": {
+                        "A": "everybody except the scientists",
+                        "B": "scientists only",
+                        "C": "everybody",
+                        "D": "everybody except the warmongers"
+                    },
+                    "answer": "C"
+                },
+                {
+                    "q_no": 44,
+                    "question": "Plural form of 'coat-of-mail':",
+                    "options": {
+                        "A": "coat-of-mails",
+                        "B": "coats-of-mail",
+                        "C": "coat's-of-mail",
+                        "D": "coat-of-mail's"
+                    },
+                    "answer": "B"
+                },
+                {
+                    "q_no": 45,
+                    "question": "Plural form of 'oasis':",
+                    "options": {
+                        "A": "oasiss",
+                        "B": "oases",
+                        "C": "oasises",
+                        "D": "oassies"
+                    },
+                    "answer": "B"
+                },
+                {
+                    "q_no": 46,
+                    "question": "Fill in the blank with appropriate verb form: 'Let us wait till he _____ his work.'",
+                    "options": {
+                        "A": "finish",
+                        "B": "finishes",
+                        "C": "will finish",
+                        "D": "had finished"
+                    },
+                    "answer": "B"
+                },
+                {
+                    "q_no": 47,
+                    "question": "Fill in the blank: 'When I reached the station the train _____.'",
+                    "options": {
+                        "A": "had left",
+                        "B": "has left",
+                        "C": "have left",
+                        "D": "left"
+                    },
+                    "answer": "A"
+                },
+                {
+                    "q_no": 48,
+                    "question": "Correct dictionary order (first to last): (i) graph, (ii) grapery, (iii) graphite, (iv) graphic",
+                    "options": {
+                        "A": "(i), (ii), (iii), (iv)",
+                        "B": "(i), (iii), (ii), (iv)",
+                        "C": "(ii), (i), (iv), (iii)",
+                        "D": "(ii), (iii), (iv), (i)"
+                    },
+                    "answer": "C"
+                },
+                {
+                    "q_no": 49,
+                    "question": "Correct dictionary order: (i) centuple, (ii) centuplicate, (iii) century, (iv) centurion",
+                    "options": {
+                        "A": "(i), (ii), (iv), (iii)",
+                        "B": "(i), (iii), (iv), (ii)",
+                        "C": "(i), (iv), (iii), (ii)",
+                        "D": "(i), (ii), (iii), (iv)"
+                    },
+                    "answer": "A"
+                },
+                {
+                    "q_no": 50,
+                    "question": "Feminine gender of 'abbot':",
+                    "options": {
+                        "A": "abbotess",
+                        "B": "abbess",
+                        "C": "abbotress",
+                        "D": "abboess"
+                    },
+                    "answer": "B"
+                },
+                {
+                    "q_no": 51,
+                    "question": "Feminine gender of 'prosecutor':",
+                    "options": {
+                        "A": "prosecutores",
+                        "B": "prosecutes",
+                        "C": "prosecutrix",
+                        "D": "prosecutin"
+                    },
+                    "answer": "C"
+                },
+                {
+                    "q_no": 52,
+                    "question": "Correct spelling:",
+                    "options": {
+                        "A": "repetitive",
+                        "B": "repeatitive",
+                        "C": "repititive",
+                        "D": "repietitive"
+                    },
+                    "answer": "A"
+                },
+                {
+                    "q_no": 53,
+                    "question": "Correct spelling:",
+                    "options": {
+                        "A": "seperate",
+                        "B": "saperate",
+                        "C": "saperete",
+                        "D": "separate"
+                    },
+                    "answer": "D"
+                },
+                {
+                    "q_no": 54,
+                    "question": "Correct spelling:",
+                    "options": {
+                        "A": "consollidate",
+                        "B": "consollidieate",
+                        "C": "consolidate",
+                        "D": "consoledate"
+                    },
+                    "answer": "C"
+                },
+                {
+                    "q_no": 55,
+                    "question": "Correct spelling:",
+                    "options": {
+                        "A": "vigilance",
+                        "B": "vigilence",
+                        "C": "vigelance",
+                        "D": "vigillence"
+                    },
+                    "answer": "A"
+                },
+                {
+                    "q_no": 56,
+                    "question": "Appropriate preposition: 'The hotel is adjacent _____ the station.'",
+                    "options": {
+                        "A": "on",
+                        "B": "to",
+                        "C": "beside",
+                        "D": "upon"
+                    },
+                    "answer": "B"
+                },
+                {
+                    "q_no": 57,
+                    "question": "(Passage Q. 57-60) Number of Receptive skills in ESL as mentioned in the passage:",
+                    "options": {
+                        "A": "six",
+                        "B": "four",
+                        "C": "two",
+                        "D": "nine"
+                    },
+                    "answer": "C"
+                },
+                {
+                    "q_no": 58,
+                    "question": "The ESL teacher finds difficulty in evaluating the:",
+                    "options": {
+                        "A": "Productive skills",
+                        "B": "HOTS Zone",
+                        "C": "Application Zone",
+                        "D": "Receptive skills"
+                    },
+                    "answer": "D"
+                },
+                {
+                    "q_no": 59,
+                    "question": "The skills that are difficult for the learner to overtly reflect in behaviour are:",
+                    "options": {
+                        "A": "listening and writing",
+                        "B": "reading and speaking",
+                        "C": "listening and reading",
+                        "D": "reading and writing"
+                    },
+                    "answer": "C"
+                },
+                {
+                    "q_no": 60,
+                    "question": "According to the passage, the challenge of designing an item to measure Receptive skills is:",
+                    "options": {
+                        "A": "the skills are overtly reflected in behaviour of learners",
+                        "B": "the difficulty of knowing whether an item has been able to measure the desired skill",
+                        "C": "the unwillingness of students",
+                        "D": "none of the above"
+                    },
+                    "answer": "B"
+                }
+            ]
+        },
+        {
+            "section": "III",
+            "subject": "Child Development & Pedagogy",
+            "questions": [
+                {
+                    "q_no": 61,
+                    "question": "Which of the following statements does not suit a teacher? The teacher is:",
+                    "options": {
+                        "A": "Really interested in students",
+                        "B": "Able to direct and discipline students",
+                        "C": "Reluctant to adapt himself to new situation",
+                        "D": "Enthusiastic about his/her work"
+                    },
+                    "answer": "C"
+                },
+                {
+                    "q_no": 62,
+                    "question": "The student who keeps on asking questions in the class:",
+                    "options": {
+                        "A": "should be advised to meet the teacher after the class",
+                        "B": "should be encouraged to participate in classroom discussions",
+                        "C": "should be encouraged to find answers independently",
+                        "D": "should be encouraged to continue questioning"
+                    },
+                    "answer": "D"
+                },
+                {
+                    "q_no": 63,
+                    "question": "Which of the following is not a cause of forgetting?",
+                    "options": {
+                        "A": "A change in an individual's attitude",
+                        "B": "Interference caused by later learning",
+                        "C": "Lapse or passage of time",
+                        "D": "Repressed memories or experiences"
+                    },
+                    "answer": "A"
+                },
+                {
+                    "q_no": 64,
+                    "question": "In which book did Rousseau plead nature centric education?",
+                    "options": {
+                        "A": "Nature and Education",
+                        "B": "Emile",
+                        "C": "Educational science",
+                        "D": "Philosophy of education"
+                    },
+                    "answer": "B"
+                },
+                {
+                    "q_no": 65,
+                    "question": "A learner in your class tells lies frequently. As a teacher, which of the following steps will you adopt to correct her/him?",
+                    "options": {
+                        "A": "Advise her/him not to tell a lie",
+                        "B": "Try to find out the cause behind her/his telling lies",
+                        "C": "Punish her/him for telling lies",
+                        "D": "Call her/his parents/guardians and scold them in the parent-teacher meeting"
+                    },
+                    "answer": "B"
+                },
+                {
+                    "q_no": 66,
+                    "question": "Which of the following is not the law of Thorndike's Trial and Error Theory of Learning?",
+                    "options": {
+                        "A": "Law of Exercise",
+                        "B": "Law of Effect",
+                        "C": "Law of Readiness",
+                        "D": "Law of Application"
+                    },
+                    "answer": "D"
+                },
+                {
+                    "q_no": 67,
+                    "question": "In a class of mixed ability learners what will be your strategy for group division?",
+                    "options": {
+                        "A": "Dividing the class into different groups according to their roll-numbers",
+                        "B": "Dividing the class into different groups on the basis of their regularity in class attendance",
+                        "C": "Forming different groups with learners of mixed abilities",
+                        "D": "Forming different groups exclusively with advanced learners and exclusively with slow learners"
+                    },
+                    "answer": "C"
+                },
+                {
+                    "q_no": 68,
+                    "question": "Good teaching implies:",
+                    "options": {
+                        "A": "Possession of higher academic qualifications",
+                        "B": "Holding research work",
+                        "C": "Having good knowledge of his subject and ability to deliver it",
+                        "D": "Strong personality"
+                    },
+                    "answer": "C"
+                },
+                {
+                    "q_no": 69,
+                    "question": "Heightened emotionality during late childhood may come from:",
+                    "options": {
+                        "A": "Environmental causes",
+                        "B": "Physical causes",
+                        "C": "Both (A) and (B)",
+                        "D": "None of these"
+                    },
+                    "answer": "C"
+                },
+                {
+                    "q_no": 70,
+                    "question": "CCE stands for:",
+                    "options": {
+                        "A": "Continuous and Comparative Evaluation",
+                        "B": "Continuous and Co-operative Evaluation",
+                        "C": "Continuous and Competent Evaluation",
+                        "D": "Continuous and Comprehensive Evaluation"
+                    },
+                    "answer": "D"
+                },
+                {
+                    "q_no": 71,
+                    "question": "According to which psychologist, between the ages of five and twelve years, children's rigid and inflexible notions of right and wrong become modified?",
+                    "options": {
+                        "A": "Dalton",
+                        "B": "Piaget",
+                        "C": "Maslow",
+                        "D": "Kohlberg"
+                    },
+                    "answer": "D"
+                },
+                {
+                    "q_no": 72,
+                    "question": "Good T.L.M. should be of:",
+                    "options": {
+                        "A": "High cost and interesting",
+                        "B": "High cost and relevant",
+                        "C": "Low cost and relevant",
+                        "D": "None of the above"
+                    },
+                    "answer": "C"
+                },
+                {
+                    "q_no": 73,
+                    "question": "Which one is the first agency of education?",
+                    "options": {
+                        "A": "The primary school where they learn how to read and write",
+                        "B": "Home, the nucleus of society",
+                        "C": "The authority which controls the process of education",
+                        "D": "The play way method of education"
+                    },
+                    "answer": "B"
+                },
+                {
+                    "q_no": 74,
+                    "question": "Who first of all, revolted against the purely verbal and formal system of traditional education?",
+                    "options": {
+                        "A": "Rousseau",
+                        "B": "Froebel",
+                        "C": "Herbart",
+                        "D": "Plato"
+                    },
+                    "answer": "A"
+                },
+                {
+                    "q_no": 75,
+                    "question": "A child can be called a creative, if he/she has the ability of:",
+                    "options": {
+                        "A": "Fluency",
+                        "B": "Flexibility",
+                        "C": "Originality",
+                        "D": "All of the above"
+                    },
+                    "answer": "D"
+                },
+                {
+                    "q_no": 76,
+                    "question": "Which of the following concepts is not associated with Piaget's theory of cognitive development?",
+                    "options": {
+                        "A": "Assimilation",
+                        "B": "Accommodation",
+                        "C": "Association",
+                        "D": "Schema"
+                    },
+                    "answer": "C"
+                },
+                {
+                    "q_no": 77,
+                    "question": "The modern approach of educating children with special educational needs is to accommodate them in one of the following:",
+                    "options": {
+                        "A": "Special schools",
+                        "B": "Integrated schools",
+                        "C": "Inclusive schools",
+                        "D": "None of the above"
+                    },
+                    "answer": "C"
+                },
+                {
+                    "q_no": 78,
+                    "question": "Which of the following elements is least important in the learning process?",
+                    "options": {
+                        "A": "Syllabus",
+                        "B": "Teacher",
+                        "C": "Environment",
+                        "D": "Cooperation"
+                    },
+                    "answer": "B"
+                },
+                {
+                    "q_no": 79,
+                    "question": "What will you do as a teacher, if a student does not attend your class?",
+                    "options": {
+                        "A": "Blame that student for his absence",
+                        "B": "Keep quite considering the present attitude of that student",
+                        "C": "Think of using some interesting methods of teaching",
+                        "D": "Know the reasons and try to remove them"
+                    },
+                    "answer": "D"
+                },
+                {
+                    "q_no": 80,
+                    "question": "A teacher is efficient in evaluation of his/her students, if he/she is:",
+                    "options": {
+                        "A": "Strict",
+                        "B": "Lenient",
+                        "C": "Objective",
+                        "D": "Prompt"
+                    },
+                    "answer": "C"
+                },
+                {
+                    "q_no": 81,
+                    "question": "Which of the following is not any characteristic of drive?",
+                    "options": {
+                        "A": "It is the energy which moves the body",
+                        "B": "It is specific goal directed behaviour of the organism",
+                        "C": "It generates aggression in human nature",
+                        "D": "It is internal tissue condition which releases energy and finally leads to activity"
+                    },
+                    "answer": "C"
+                },
+                {
+                    "q_no": 82,
+                    "question": "What we forget and what we remember depend on our motives? This is called:",
+                    "options": {
+                        "A": "Retroactive Inhibition",
+                        "B": "Emotional Amnetia",
+                        "C": "Neurogenic Amnetia",
+                        "D": "Proactive Inhibition"
+                    },
+                    "answer": "B"
+                },
+                {
+                    "q_no": 83,
+                    "question": "A slow learner attends your class and sits in a non-responsive manner. What will you do?",
+                    "options": {
+                        "A": "Make your lesson very simple and spare some extra time for him/her",
+                        "B": "You do not like to spoil majority for the individual",
+                        "C": "You pressurize the student to leave the class",
+                        "D": "You will not help him/her at all"
+                    },
+                    "answer": "A"
+                },
+                {
+                    "q_no": 84,
+                    "question": "Development of an individual depends upon any two of the following four factors. Which of the pairs is the most appropriate?",
+                    "options": {
+                        "A": "(i) and (ii) — Heredity and Environment",
+                        "B": "(i) and (iii) — Heredity and Language ability",
+                        "C": "(ii) and (iii) — Environment and Language ability",
+                        "D": "(i) and (iv) — Heredity and Imagination"
+                    },
+                    "answer": "A"
+                },
+                {
+                    "q_no": 85,
+                    "question": "Which of the following is a general characteristic of attention?",
+                    "options": {
+                        "A": "It is a faculty or power of mind",
+                        "B": "It cannot be centered around any object for a long time",
+                        "C": "It does not shift one to another",
+                        "D": "None of the above"
+                    },
+                    "answer": "B"
+                },
+                {
+                    "q_no": 86,
+                    "question": "The nature of child's complete development is:",
+                    "options": {
+                        "A": "Psychological",
+                        "B": "Physiological",
+                        "C": "Psycho-physiological",
+                        "D": "Biological"
+                    },
+                    "answer": "C"
+                },
+                {
+                    "q_no": 87,
+                    "question": "Writing on the board and drawing pictures are necessary for a teacher which goes with his:",
+                    "options": {
+                        "A": "Affective skills",
+                        "B": "Psychomotor skills",
+                        "C": "Cognitive skills",
+                        "D": "All of them"
+                    },
+                    "answer": "B"
+                },
+                {
+                    "q_no": 88,
+                    "question": "Which of the following aspects of a teacher influence a child's development most?",
+                    "options": {
+                        "A": "Age of teacher",
+                        "B": "Gender of teacher",
+                        "C": "Academic qualification of teacher",
+                        "D": "Relationship with the child of a teacher"
+                    },
+                    "answer": "D"
+                },
+                {
+                    "q_no": 89,
+                    "question": "Which of the following characteristics is not found in a mal-adjusted child?",
+                    "options": {
+                        "A": "Destructive tendency towards man and nature",
+                        "B": "Introvert tendency",
+                        "C": "Timidity",
+                        "D": "Appreciation of others properly"
+                    },
+                    "answer": "D"
+                },
+                {
+                    "q_no": 90,
+                    "question": "'RTE Act-2009' guarantees quality education for all children up to the age of 14 years. Here quality implies:",
+                    "options": {
+                        "A": "Use of high cost TLM",
+                        "B": "Cramming",
+                        "C": "Relating classroom to the real world",
+                        "D": "Imposed discipline"
+                    },
+                    "answer": "C"
+                }
+            ]
+        },
+        {
+            "section": "IV",
+            "subject": "Mathematics",
+            "questions": [
+                {
+                    "q_no": 91,
+                    "question": "Highest common factor of 361, 521, 811 is:",
+                    "options": {
+                        "A": "7",
+                        "B": "1",
+                        "C": "19",
+                        "D": "17"
+                    },
+                    "answer": "B"
+                },
+                {
+                    "q_no": 92,
+                    "question": "Arrange in decreasing order: 27/87, 118/341, 145/428",
+                    "options": {
+                        "A": "145/428, 118/341, 27/87",
+                        "B": "118/341, 145/428, 27/87",
+                        "C": "27/87, 118/341, 145/428",
+                        "D": "None of these"
+                    },
+                    "answer": "B"
+                },
+                {
+                    "q_no": 93,
+                    "question": "3 men and 5 boys can do 19/20 of a piece of work in 3 days; 4 men and 8 boys can do 14/15 of it in 2 days; in what time can a boy do the whole work?",
+                    "options": {
+                        "A": "20 days",
+                        "B": "30 days",
+                        "C": "35 days",
+                        "D": "40 days"
+                    },
+                    "answer": "B"
+                },
+                {
+                    "q_no": 94,
+                    "question": "A and B can do a piece of work in 5 hours; A and C in 4 hours; B and C in 3½ hours. In what time can A alone do it?",
+                    "options": {
+                        "A": "12 4/23 hrs",
+                        "B": "12 5/23 hrs",
+                        "C": "12 6/23 hrs",
+                        "D": "12 7/23 hrs"
+                    },
+                    "answer": "A"
+                },
+                {
+                    "q_no": 95,
+                    "question": "Find the greatest and the least numbers of six digits which are divisible by 27, 45, 60, 72 and 96.",
+                    "options": {
+                        "A": "997920, 203680",
+                        "B": "998920, 203680",
+                        "C": "997920, 103680",
+                        "D": "998720, 103680"
+                    },
+                    "answer": "C"
+                },
+                {
+                    "q_no": 96,
+                    "question": "7 men and 8 boys can do a piece of work in 2 days; 4 men and 12 boys can do 29/56 of the work in 1 day. In what time can a man do the work?",
+                    "options": {
+                        "A": "27 days",
+                        "B": "28 days",
+                        "C": "27 1/56 days",
+                        "D": "28 1/56 days"
+                    },
+                    "answer": "B"
+                },
+                {
+                    "q_no": 97,
+                    "question": "Simplify: (3.2×3.2 + 2.8×2.8 – 6.4×2.8) / (1.6×1.6 + 2.4×2.4 + 3.2×2.4)",
+                    "options": {
+                        "A": "0.001",
+                        "B": "0.01",
+                        "C": "0.1",
+                        "D": "1"
+                    },
+                    "answer": "B"
+                },
+                {
+                    "q_no": 98,
+                    "question": "Simplify: (0.1×0.1×0.1 + 0.01×0.01×0.01) / (0.2×0.2×0.2 + 0.02×0.02×0.02)",
+                    "options": {
+                        "A": "0.512",
+                        "B": "0.215",
+                        "C": "0.125",
+                        "D": "1"
+                    },
+                    "answer": "C"
+                },
+                {
+                    "q_no": 99,
+                    "question": "Simplify: [0.07×{0.07×0.07+1}/(0.07)×(0.07)×(0.07)×(0.07)−1] × [{(0.07)×(0.07)−0.07}×(0.07+1)/(0.07)×(0.07)]",
+                    "options": {
+                        "A": "7",
+                        "B": "0.7",
+                        "C": "0.1",
+                        "D": "1"
+                    },
+                    "answer": "D"
+                },
+                {
+                    "q_no": 100,
+                    "question": "Simplify: [(1/2−1/3)(1/3+1/4)] / [(1/2+1/4)(1/2+1/4)−(1/3+1/4)(1/3+1/4)] × [1/(1/2+1/4) + 1/(1/3+1/4)]",
+                    "options": {
+                        "A": "1",
+                        "B": "1 1/2",
+                        "C": "1 1/3",
+                        "D": "1 1/4"
+                    },
+                    "answer": "C"
+                },
+                {
+                    "q_no": 101,
+                    "question": "Simplify the complex fraction expression involving 1/3, 1/5, 1/7 products and sums.",
+                    "options": {
+                        "A": "11/35",
+                        "B": "12/35",
+                        "C": "13/35",
+                        "D": "14/35"
+                    },
+                    "answer": "B"
+                },
+                {
+                    "q_no": 102,
+                    "question": "A zoo has 599 bananas to distribute; if a monkey needs atleast a dozen bananas, how many monkeys at most can be fed?",
+                    "options": {
+                        "A": "599",
+                        "B": "12",
+                        "C": "49",
+                        "D": "50"
+                    },
+                    "answer": "C"
+                },
+                {
+                    "q_no": 103,
+                    "question": "7/1000 + 9/100 + 8×100 + 7×1000 =",
+                    "options": {
+                        "A": "7900.078",
+                        "B": "8700.097",
+                        "C": "780.97",
+                        "D": "7800.097"
+                    },
+                    "answer": "D"
+                },
+                {
+                    "q_no": 104,
+                    "question": "4×10×10×10×10 + 2/(10×10) + 1/(10×10×10) + 3×10×10×10 =",
+                    "options": {
+                        "A": "4300.0021",
+                        "B": "4300.021",
+                        "C": "430000.21",
+                        "D": "43000.021"
+                    },
+                    "answer": "D"
+                },
+                {
+                    "q_no": 105,
+                    "question": "7×1000000 + 9/100000 =",
+                    "options": {
+                        "A": "7000000.009",
+                        "B": "700000.000009",
+                        "C": "700000.00009",
+                        "D": "7000000.00009"
+                    },
+                    "answer": "D"
+                },
+                {
+                    "q_no": 106,
+                    "question": "In △ABC, the straight line parallel to side BC meets AB and AC at points P and Q. AP=QC; AB=12 units, AQ=2 units. How many units is CQ?",
+                    "options": {
+                        "A": "6 unit",
+                        "B": "4 unit",
+                        "C": "5 unit",
+                        "D": "3 unit"
+                    },
+                    "answer": "B"
+                },
+                {
+                    "q_no": 107,
+                    "question": "Side AB of cyclic quadrilateral ABCD is produced to X. ∠XBC=82°, ∠ADB=47°. Find ∠BAC.",
+                    "options": {
+                        "A": "25°",
+                        "B": "30°",
+                        "C": "35°",
+                        "D": "40°"
+                    },
+                    "answer": "C"
+                },
+                {
+                    "q_no": 108,
+                    "question": "Simplify: (0.835×0.835×0.835 + 0.165×0.165×0.165) / (0.835×0.835 – 0.835×0.165 + 0.165×0.165)",
+                    "options": {
+                        "A": "0.67",
+                        "B": "0.138",
+                        "C": "5.06",
+                        "D": "None of the previous"
+                    },
+                    "answer": "D"
+                },
+                {
+                    "q_no": 109,
+                    "question": "Simplify: 5½ – [2⅓ + {¾ – ½(⅔ – 1/6 – 1/8)}]",
+                    "options": {
+                        "A": "1/6",
+                        "B": "1/7",
+                        "C": "1/8",
+                        "D": "1/9"
+                    },
+                    "answer": "A"
+                },
+                {
+                    "q_no": 110,
+                    "question": "According to the given diagram, how many different paths can be taken to reach from Kolkata to Agra? (Kolkata → ⋈⋈⋈ → Agra)",
+                    "options": {
+                        "A": "7",
+                        "B": "12",
+                        "C": "8",
+                        "D": "1"
+                    },
+                    "answer": "B"
+                },
+                {
+                    "q_no": 111,
+                    "question": "(0.0036)(2.8) / [(0.04)(0.1)(0.003)] =",
+                    "options": {
+                        "A": "840.0",
+                        "B": "84.0",
+                        "C": "8.4",
+                        "D": "0.84"
+                    },
+                    "answer": "A"
+                },
+                {
+                    "q_no": 112,
+                    "question": "Supply the missing digit to make each a multiple of 9: 30*4, 573*1, *6708, 836*57.",
+                    "options": {
+                        "A": "9, 2, 6, 7",
+                        "B": "2, 2, 6, 7",
+                        "C": "2, 9, 6, 7",
+                        "D": "2, 2, 6, 9"
+                    },
+                    "answer": "B"
+                },
+                {
+                    "q_no": 113,
+                    "question": "Simplify: (1/2+1/3+1/4)(1/2×1/3+1/3×1/4+1/4×1/2) – 1/2×1/3×1/4",
+                    "options": {
+                        "A": "(1/3−1/4)(1/4+1/2)(1/2−1/3)",
+                        "B": "(1/3+1/4)(1/4+1/2)(1/2+1/3)",
+                        "C": "(1/3−1/4)(1/4+1/2)(1/2+1/3)",
+                        "D": "(1/3+1/4)(1/4+1/2)(1/2−1/3)"
+                    },
+                    "answer": "B"
+                },
+                {
+                    "q_no": 114,
+                    "question": "In division process we have:",
+                    "options": {
+                        "A": "Dividend = Quotient + Divisor – Remainder",
+                        "B": "Dividend = Divisor × Quotient – Remainder",
+                        "C": "Dividend – Remainder = Divisor × Quotient",
+                        "D": "Dividend – Quotient = Divisor × Remainder"
+                    },
+                    "answer": "C"
+                },
+                {
+                    "q_no": 115,
+                    "question": "In division process we have:",
+                    "options": {
+                        "A": "0 ≤ Divisor < Remainder",
+                        "B": "0 ≤ Remainder < Quotient",
+                        "C": "0 ≤ Remainder < Divisor",
+                        "D": "0 ≤ Quotient < Divisor"
+                    },
+                    "answer": "C"
+                },
+                {
+                    "q_no": 116,
+                    "question": "Least common multiple of 541, 1109, 2087 is:",
+                    "options": {
+                        "A": "1109 × 2087",
+                        "B": "599969",
+                        "C": "1129067",
+                        "D": "541 × 1109 × 2087"
+                    },
+                    "answer": "D"
+                },
+                {
+                    "q_no": 117,
+                    "question": "Simplify: 1 + 1/(1 + 1/(1 + 1/7))",
+                    "options": {
+                        "A": "13/23",
+                        "B": "15/23",
+                        "C": "17/23",
+                        "D": "19/23"
+                    },
+                    "answer": "B"
+                },
+                {
+                    "q_no": 118,
+                    "question": "1.1×1.1 + 2.2×2.2 + 3.3×3.3 + 4.4×4.4 + 2×1.1×2.2 + 2×1.1×3.3 + 2×1.1×4.4 + 2×2.2×3.3 + 2×2.2×4.4 + 2×3.3×4.4 =",
+                    "options": {
+                        "A": "81",
+                        "B": "91",
+                        "C": "100",
+                        "D": "121"
+                    },
+                    "answer": "D"
+                },
+                {
+                    "q_no": 119,
+                    "question": "Complex expression involving 1.1, 2.2, 7.7 products and sums =",
+                    "options": {
+                        "A": "1133",
+                        "B": "1313",
+                        "C": "1331",
+                        "D": "3311"
+                    },
+                    "answer": "C"
+                },
+                {
+                    "q_no": 120,
+                    "question": "2017 and 2027 are two numbers:",
+                    "options": {
+                        "A": "First number is prime and the second is composite",
+                        "B": "First number is composite and the second is prime",
+                        "C": "Both the numbers are composite",
+                        "D": "Both the numbers are prime and they are mutually prime"
+                    },
+                    "answer": "D"
+                }
+            ]
+        },
+        {
+            "section": "V",
+            "subject": "Environmental Science",
+            "questions": [
+                {
+                    "q_no": 121,
+                    "question": "The river connected with the wetland of East Kolkata is:",
+                    "options": {
+                        "A": "Damodor",
+                        "B": "Mayurakshi",
+                        "C": "Teesta",
+                        "D": "Bidyadhari"
+                    },
+                    "answer": "D"
+                },
+                {
+                    "q_no": 122,
+                    "question": "Which of the following are wild animals?",
+                    "options": {
+                        "A": "Sheep, Horse",
+                        "B": "Horse, Goat",
+                        "C": "Tiger, Snake",
+                        "D": "Goat, Cow"
+                    },
+                    "answer": "C"
+                },
+                {
+                    "q_no": 123,
+                    "question": "Which of the following trees are mangrove in nature?",
+                    "options": {
+                        "A": "Banyan, Jarul, Sal",
+                        "B": "Sal, Teak, Oak",
+                        "C": "Byne, Garan, Ganwea",
+                        "D": "Mango, Papaya, Sal"
+                    },
+                    "answer": "C"
+                },
+                {
+                    "q_no": 124,
+                    "question": "The first Education Minister of Independent India was:",
+                    "options": {
+                        "A": "Bhim Rao Ramji Ambedkar",
+                        "B": "Maulana Abul Kalam Azad",
+                        "C": "Jawaharlal Nehru",
+                        "D": "Mohandas Karamchand Gandhi"
+                    },
+                    "answer": "B"
+                },
+                {
+                    "q_no": 125,
+                    "question": "DOT is applied for treatment of which of the following diseases?",
+                    "options": {
+                        "A": "Cholera",
+                        "B": "Typhoid",
+                        "C": "Tuberculosis",
+                        "D": "Hepatitis"
+                    },
+                    "answer": "C"
+                },
+                {
+                    "q_no": 126,
+                    "question": "Which of the following parts are connected with digestive system of human body?",
+                    "options": {
+                        "A": "Lung, Trachea",
+                        "B": "Heart, Artery",
+                        "C": "Stomach, Intestine",
+                        "D": "Kidney, Urinary bladder"
+                    },
+                    "answer": "C"
+                },
+                {
+                    "q_no": 127,
+                    "question": "Match Column I with Column II: 1-Purulia, 2-Howrah, 3-Coochbehar; A-Santragachi Jheel, B-Sahebbandh, C-Rasik Beel",
+                    "options": {
+                        "A": "1-C, 2-B, 3-A",
+                        "B": "1-A, 2-C, 3-B",
+                        "C": "1-B, 2-A, 3-C",
+                        "D": "1-A, 2-B, 3-C"
+                    },
+                    "answer": "C"
+                },
+                {
+                    "q_no": 128,
+                    "question": "Which of the following statements is correct?",
+                    "options": {
+                        "A": "Tibia and Fibula are extended from Hip to Knee.",
+                        "B": "Humerus is extended from Shoulder to Elbow and Femur from Hip to Knee.",
+                        "C": "Ulna and Radius are extended from the lower portion of Knee to Ankle.",
+                        "D": "Femur is extended from the lower part of Knee to Ankle."
+                    },
+                    "answer": "B"
+                },
+                {
+                    "q_no": 129,
+                    "question": "Which of the following pair is correctly matched? (Towns — Districts)",
+                    "options": {
+                        "A": "Jhargram, Bishnupur — Burdwan, Birbhum",
+                        "B": "Dankuni, Kalimpong — North 24 Parganas, Howrah",
+                        "C": "Baruipur, Raiganj — South 24 Parganas, Uttar Dinajpur",
+                        "D": "Balurghat, Tamluk — Darjeeling, Jalpaiguri"
+                    },
+                    "answer": "C"
+                },
+                {
+                    "q_no": 130,
+                    "question": "Gaseous oxides of which non metallic elements are present in smoke?",
+                    "options": {
+                        "A": "Sodium, Potassium, Iron",
+                        "B": "Sulphur, Nitrogen, Carbon",
+                        "C": "Aluminium, Copper, Iron",
+                        "D": "Nickel, Cobalt, Mercury"
+                    },
+                    "answer": "B"
+                },
+                {
+                    "q_no": 131,
+                    "question": "Which of the following trees grow in high altitude mountain area?",
+                    "options": {
+                        "A": "Palash, Banyan, Teak",
+                        "B": "Mango, Jamun, Garan",
+                        "C": "Oak, Birch, Rhododendron",
+                        "D": "Garan, Banyan, Hetal"
+                    },
+                    "answer": "C"
+                },
+                {
+                    "q_no": 132,
+                    "question": "Which one of the following would be formed if water vapour accumulates on the surface of dust particles?",
+                    "options": {
+                        "A": "Star",
+                        "B": "Planet",
+                        "C": "Galaxy",
+                        "D": "Cloud"
+                    },
+                    "answer": "D"
+                },
+                {
+                    "q_no": 133,
+                    "question": "Which of the following animal is found in the forests of Darjeeling?",
+                    "options": {
+                        "A": "Red Panda",
+                        "B": "Wild Ass",
+                        "C": "Zebra",
+                        "D": "Olive Ridley Turtle"
+                    },
+                    "answer": "A"
+                },
+                {
+                    "q_no": 134,
+                    "question": "Which of the following 'season' can be identified by the song 'Darun Agnibane re'?",
+                    "options": {
+                        "A": "Winter",
+                        "B": "Autumn",
+                        "C": "Summer",
+                        "D": "Spring"
+                    },
+                    "answer": "C"
+                },
+                {
+                    "q_no": 135,
+                    "question": "Which of the following diseases can be cured by using the extract of 'Vasaka' leaf?",
+                    "options": {
+                        "A": "Cholera",
+                        "B": "Tetanus",
+                        "C": "Cold and cough",
+                        "D": "Malaria"
+                    },
+                    "answer": "C"
+                },
+                {
+                    "q_no": 136,
+                    "question": "Which of the following animals are critically endangered?",
+                    "options": {
+                        "A": "Cow, Goat",
+                        "B": "Goat, Sheep",
+                        "C": "Pig, Horse",
+                        "D": "Tiger, One-horned Rhinoceros"
+                    },
+                    "answer": "D"
+                },
+                {
+                    "q_no": 137,
+                    "question": "Being a teacher of Environmental Studies which of the following foods would you suggest to eat or drink as source of energy in human body to your students?",
+                    "options": {
+                        "A": "Vegetables, Carrot, Tea, Water",
+                        "B": "Milk, Potato, Egg, Butter, Rice",
+                        "C": "Tea, Jamun, Vegetables, Water",
+                        "D": "Beet, Turmeric, Tea, Water"
+                    },
+                    "answer": "B"
+                },
+                {
+                    "q_no": 138,
+                    "question": "Which one of the following is responsible for causing skin cancer?",
+                    "options": {
+                        "A": "Melanin",
+                        "B": "Vitamin",
+                        "C": "Ultra-Violet Ray",
+                        "D": "Carbon dioxide"
+                    },
+                    "answer": "C"
+                },
+                {
+                    "q_no": 139,
+                    "question": "Which of the following plants contains drug at its bark for curing heart disease?",
+                    "options": {
+                        "A": "Mango",
+                        "B": "Cinchona",
+                        "C": "Arjuna",
+                        "D": "Tobacco"
+                    },
+                    "answer": "C"
+                },
+                {
+                    "q_no": 140,
+                    "question": "Which of the following animals can guess the possibilities of ensuing rain?",
+                    "options": {
+                        "A": "Dog",
+                        "B": "Ant",
+                        "C": "Cow",
+                        "D": "Hen"
+                    },
+                    "answer": "D"
+                },
+                {
+                    "q_no": 141,
+                    "question": "As a teacher of Environmental Studies which of the following would you suggest for the treatment of Cholera?",
+                    "options": {
+                        "A": "GPS",
+                        "B": "BRS",
+                        "C": "NRS",
+                        "D": "ORS"
+                    },
+                    "answer": "D"
+                },
+                {
+                    "q_no": 142,
+                    "question": "Which of the following pollutants causes soil erosion?",
+                    "options": {
+                        "A": "Cowdung",
+                        "B": "Skeleton of Fish",
+                        "C": "Plastic",
+                        "D": "Old Paper"
+                    },
+                    "answer": "C"
+                },
+                {
+                    "q_no": 143,
+                    "question": "Caterpillar is:",
+                    "options": {
+                        "A": "An adult insect",
+                        "B": "Larval stage of insect",
+                        "C": "An adult mammal",
+                        "D": "An adult bird"
+                    },
+                    "answer": "B"
+                },
+                {
+                    "q_no": 144,
+                    "question": "Which of the following diseases are associated with air pollution?",
+                    "options": {
+                        "A": "Malaria, Cholera, Typhoid",
+                        "B": "Tetanus, Arthritis, Diabetes",
+                        "C": "Diabetes, Hepatitis, Leprosy",
+                        "D": "Bronchitis, Emphysema, Asthma"
+                    },
+                    "answer": "D"
+                },
+                {
+                    "q_no": 145,
+                    "question": "Arabari is famous for:",
+                    "options": {
+                        "A": "Conservation of mansion",
+                        "B": "Joint conservation system of forest",
+                        "C": "Conservation of one-horned Rhinoceros",
+                        "D": "Conservation of tiger"
+                    },
+                    "answer": "B"
+                },
+                {
+                    "q_no": 146,
+                    "question": "Which of the following plants are source of materials for making clothes?",
+                    "options": {
+                        "A": "Chatim, Banyan",
+                        "B": "Bael, Mango",
+                        "C": "Hemp, Jute",
+                        "D": "Chatim, Mango"
+                    },
+                    "answer": "C"
+                },
+                {
+                    "q_no": 147,
+                    "question": "As a teacher of Environmental Studies you have shown pictures of animals. Which of them possess feather and scale?",
+                    "options": {
+                        "A": "Tiger and Toad",
+                        "B": "Toad and Earthworm",
+                        "C": "Snail and Starfish",
+                        "D": "Pigeon and Shark"
+                    },
+                    "answer": "D"
+                },
+                {
+                    "q_no": 148,
+                    "question": "Which of the following animal has become extinct from earth?",
+                    "options": {
+                        "A": "Blackbuck",
+                        "B": "Olive Ridley Turtle",
+                        "C": "Dodo",
+                        "D": "Lion tailed Macaque"
+                    },
+                    "answer": "C"
+                },
+                {
+                    "q_no": 149,
+                    "question": "How can a metal be identified?",
+                    "options": {
+                        "A": "Repeated loud ringing sound is not produced if beaten by something",
+                        "B": "Does not glisten",
+                        "C": "Not heated very quickly",
+                        "D": "Sound is produced, glistens and heated very quickly"
+                    },
+                    "answer": "D"
+                },
+                {
+                    "q_no": 150,
+                    "question": "Which of the following is not originated from skin?",
+                    "options": {
+                        "A": "Fur",
+                        "B": "Hair",
+                        "C": "Blood",
+                        "D": "Feather"
+                    },
+                    "answer": "C"
+                }
+            ]
+        }
+    ]
+}

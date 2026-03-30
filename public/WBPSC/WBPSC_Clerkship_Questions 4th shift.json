@@ -1,0 +1,1014 @@
+{
+    "exam": "WBPSC Clerkship Examination (Part-I), 2023 - Session II",
+    "subject": "English, General Studies and Arithmetics",
+    "total_marks": 100,
+    "time_allowed": "1.5 hours",
+    "negative_marking": "0.25 per wrong answer",
+    "sets": {
+        "SET_A": {
+            "serial_no": "2189973",
+            "questions": [
+                {
+                    "q_no": "Q1",
+                    "question": "Choose the correct option to complete the sentence: I have been ______ at the painting.",
+                    "options": {
+                        "A": "looking",
+                        "B": "looked",
+                        "C": "look",
+                        "D": "looks"
+                    }
+                },
+                {
+                    "q_no": "Q2",
+                    "question": "Choose the correct pair of antonyms from the pairs given below:",
+                    "options": {
+                        "A": "defriend-unfriend",
+                        "B": "borrow-lend",
+                        "C": "help-aid",
+                        "D": "cajole-coax"
+                    }
+                },
+                {
+                    "q_no": "Q3",
+                    "question": "Fill in the blank with the appropriate word: People get ______ and don't listen any more.",
+                    "options": {
+                        "A": "bore",
+                        "B": "board",
+                        "C": "bored",
+                        "D": "boring"
+                    }
+                },
+                {
+                    "q_no": "Q4",
+                    "question": "Change the voice: The gate was opened by the peon.",
+                    "options": {
+                        "A": "The open gate let the peon in.",
+                        "B": "The gate opened to let the peon in.",
+                        "C": "The peon opened the gate.",
+                        "D": "The peon opened the closed gate."
+                    }
+                },
+                {
+                    "q_no": "Q5",
+                    "question": "Fill in the blank with the appropriate preposition from those given below: He left his phone ______ the bed.",
+                    "options": {
+                        "A": "at",
+                        "B": "in",
+                        "C": "on",
+                        "D": "to"
+                    }
+                },
+                {
+                    "q_no": "Q6",
+                    "question": "The umbrella which has a broken handle is mine. What clause is this?",
+                    "options": {
+                        "A": "Adverb Clause",
+                        "B": "Adjective Clause",
+                        "C": "Noun Clause",
+                        "D": "None of the above"
+                    }
+                },
+                {
+                    "q_no": "Q7",
+                    "question": "Change the following sentence into a Negative one: He is as good as I am.",
+                    "options": {
+                        "A": "I am not better than he is.",
+                        "B": "He is better than me.",
+                        "C": "I am better than him.",
+                        "D": "He is not as good as I am."
+                    }
+                },
+                {
+                    "q_no": "Q8",
+                    "question": "It was expected by the Romans that they would conquer Carthage. The Active Voice of the above sentence will be:",
+                    "options": {
+                        "A": "The Romans expected to conquer Carthage.",
+                        "B": "It was expected that Carthage would be conquered by the Romans.",
+                        "C": "Carthage, the Romans expected, was to be conquered.",
+                        "D": "Carthage was expecting to be conquered by the Romans."
+                    }
+                },
+                {
+                    "q_no": "Q9",
+                    "question": "The plural form of 'Deer' is",
+                    "options": {
+                        "A": "Doe",
+                        "B": "Deer",
+                        "C": "Deers",
+                        "D": "Drakes"
+                    }
+                },
+                {
+                    "q_no": "Q10",
+                    "question": "Identify the figure of speech in the following sentence: United we stand - divided we fall.",
+                    "options": {
+                        "A": "alliteration",
+                        "B": "antithesis",
+                        "C": "assonance",
+                        "D": "pathetic fallacy"
+                    }
+                },
+                {
+                    "q_no": "Q11",
+                    "question": "Replace the underlined word with the appropriate idiom from those given below: He has incurred debt.",
+                    "options": {
+                        "A": "run up to",
+                        "B": "run out of",
+                        "C": "run through",
+                        "D": "run into"
+                    }
+                },
+                {
+                    "q_no": "Q12",
+                    "question": "When he gets his degree, he will have been studying at Oxford for four years. Which tense is this?",
+                    "options": {
+                        "A": "Future Continuous Tense",
+                        "B": "Future Perfect Tense",
+                        "C": "Future Perfect Continuous Tense",
+                        "D": "Present Perfect Continuous Tense"
+                    }
+                },
+                {
+                    "q_no": "Q13",
+                    "question": "Replace the underlined verb with the appropriate phrasal verb from those given below: He must increase the production.",
+                    "options": {
+                        "A": "step into",
+                        "B": "steep into",
+                        "C": "step up",
+                        "D": "steep up"
+                    }
+                },
+                {
+                    "q_no": "Q14",
+                    "question": "Identify the participle in the following sentence: Hearing the noise, the boy woke up.",
+                    "options": {
+                        "A": "Noise",
+                        "B": "Boy",
+                        "C": "Hearing",
+                        "D": "Woke"
+                    }
+                },
+                {
+                    "q_no": "Q15",
+                    "question": "Which of the following is not an Abstract Noun?",
+                    "options": {
+                        "A": "Goodness",
+                        "B": "Youth",
+                        "C": "Poverty",
+                        "D": "Parliament"
+                    }
+                },
+                {
+                    "q_no": "Q16",
+                    "question": "Rewrite the following sentence in the positive degree: He is the heaviest of all the boys.",
+                    "options": {
+                        "A": "He is one of the heaviest boys.",
+                        "B": "No other boy is as heavy as him.",
+                        "C": "He is one of the heavy boys.",
+                        "D": "He is heavier among the heavy boys."
+                    }
+                },
+                {
+                    "q_no": "Q17",
+                    "question": "Have you read Gulliver's Travels? The sentence is an example of",
+                    "options": {
+                        "A": "Present Perfect Tense",
+                        "B": "Present Continuous Tense",
+                        "C": "Simple Present Tense",
+                        "D": "Present Perfect Continuous Tense"
+                    }
+                },
+                {
+                    "q_no": "Q18",
+                    "question": "Fill in the blank with the correct conjunction: We carved not a line, ______ we raised not a stone.",
+                    "options": {
+                        "A": "and",
+                        "B": "but",
+                        "C": "neither",
+                        "D": "or"
+                    }
+                },
+                {
+                    "q_no": "Q19",
+                    "question": "Replace the underlined portion with an idiom from the list below: He will never be able to do anything remarkable.",
+                    "options": {
+                        "A": "Heap coals of fire upon his head",
+                        "B": "Set the Thames on fire",
+                        "C": "Let the grass grow under his feet",
+                        "D": "Put the screw on"
+                    }
+                },
+                {
+                    "q_no": "Q20",
+                    "question": "Identify the incorrect spelling.",
+                    "options": {
+                        "A": "Dissent",
+                        "B": "Decent",
+                        "C": "Descent",
+                        "D": "Discent"
+                    }
+                },
+                {
+                    "q_no": "Q21",
+                    "question": "Turn the following sentence into a question: He was a villain to do such a deed.",
+                    "options": {
+                        "A": "How was he a villian to do such a deed?",
+                        "B": "Why did he do such a villainous deed?",
+                        "C": "Was he not a villain to do such a deed?",
+                        "D": "What made him do such a villainous deed?"
+                    }
+                },
+                {
+                    "q_no": "Q22",
+                    "question": "Fill in the blank with the correct option: ______ grain they had was damaged by sea-water.",
+                    "options": {
+                        "A": "A little",
+                        "B": "Little",
+                        "C": "The little",
+                        "D": "So little"
+                    }
+                },
+                {
+                    "q_no": "Q23",
+                    "question": "Change the following sentence into an affirmative one: He is so weak that he cannot walk.",
+                    "options": {
+                        "A": "He is too weak to walk.",
+                        "B": "He cannot walk because he is weak.",
+                        "C": "Walking is impossible for him for he is weak.",
+                        "D": "Weakness disables him from walking."
+                    }
+                },
+                {
+                    "q_no": "Q24",
+                    "question": "Insert the correct word(s) in the blank: He stayed at home because he ______ a cold.",
+                    "options": {
+                        "A": "is having",
+                        "B": "was had",
+                        "C": "having",
+                        "D": "had"
+                    }
+                },
+                {
+                    "q_no": "Q25",
+                    "question": "Rewrite the following sentence in the comparative degree: This book is the most interesting book I have read.",
+                    "options": {
+                        "A": "This book is more interesting than any other book I have read.",
+                        "B": "This book is very interesting.",
+                        "C": "This book is superb.",
+                        "D": "This book is very much interesting than other books I have read."
+                    }
+                },
+                {
+                    "q_no": "Q26",
+                    "question": "Give one word substitution for a person who compiles dictionaries.",
+                    "options": {
+                        "A": "Psephologist",
+                        "B": "Lexicographer",
+                        "C": "Curator",
+                        "D": "Cartographer"
+                    }
+                },
+                {
+                    "q_no": "Q27",
+                    "question": "Choose the correct option to complete the sentence: I rushed to the door when the doorbell ______.",
+                    "options": {
+                        "A": "ring",
+                        "B": "ranged",
+                        "C": "ringed",
+                        "D": "rang"
+                    }
+                },
+                {
+                    "q_no": "Q28",
+                    "question": "Choose the correct sentence from the options given below:",
+                    "options": {
+                        "A": "Nothing by chance happening ever",
+                        "B": "Nothing ever happens by chance",
+                        "C": "By chance nothing happening ever",
+                        "D": "By chance ever nothing happens"
+                    }
+                },
+                {
+                    "q_no": "Q29",
+                    "question": "Identify the figure of speech in the following sentence: To err is human, to forgive divine",
+                    "options": {
+                        "A": "Hyperbole",
+                        "B": "Epigram",
+                        "C": "Irony",
+                        "D": "Antithesis"
+                    }
+                },
+                {
+                    "q_no": "Q30",
+                    "question": "The noun form of 'Break' is",
+                    "options": {
+                        "A": "Breaking",
+                        "B": "Broken",
+                        "C": "Broke",
+                        "D": "Breach"
+                    }
+                },
+                {
+                    "q_no": "Q31",
+                    "question": "দুটি পাইপের সাহায্যে একটি ট্যাঙ্ক যথাক্রমে 20 মিনিট ও 24 মিনিটে ভর্তি করা যায় এবং নিকাশন পাইপের সাহায্যে 1 মিনিটে 3 গ্যালন জল খালি করা যায়। একসাথে যদি তিনটি পাইপ কাজ করে তবে ট্যাঙ্কটি ভর্তি হতে 15 মিনিট সময় লাগে। ট্যাঙ্কটিতে কত গ্যালন জল ধরে? (Two pipes can fill a tank in 20 and 24 minutes respectively and a waste pipe can empty 3 gallons per minute. All three pipes working together can fill the tank in 15 minutes. The capacity of the tank is)",
+                    "options": {
+                        "A": "60 gallons / 60 গ্যালন",
+                        "B": "100 gallons / 100 গ্যালন",
+                        "C": "120 gallons / 120 গ্যালন",
+                        "D": "180 gallons / 180 গ্যালন"
+                    }
+                },
+                {
+                    "q_no": "Q32",
+                    "question": "নীচের কোন সমুদ্রসৈকতটি এশিয়ার প্রথম 'ব্লু-ফ্ল্যাগ' শিরোপা পেয়েছে? (Which of the following is the first beach in Asia to get Blue-Flag Certification?)",
+                    "options": {
+                        "A": "আরামবোল সৈকত, গোয়া / Arambol Beach, Goa",
+                        "B": "চন্দ্রভাগা সৈকত, ওড়িশা / Chandrabhaga Beach, Odisha",
+                        "C": "মেরিনা সৈকত, তামিলনাড়ু / Marina Beach, Tamil Nadu",
+                        "D": "উপরের কোনোটিই নয় / None of the above"
+                    }
+                },
+                {
+                    "q_no": "Q33",
+                    "question": "এক ব্যক্তি 45 মিনিটে 6 কিলোমিটার দূরত্ব অতিক্রম করতে পারে। যদি সে মোট সময়ের দুই-তৃতীয়াংশের মধ্যে অর্ধেক দূরত্ব অতিক্রম করে তাহলে অবশিষ্ট সময়ে বাকি অর্ধেক দূরত্ব অতিক্রম করতে তার গতিবেগ কত হবে? (A person has to cover a distance of 6 km in 45 minutes. If he covers one-half of the distance in two-thirds of the total time; to cover the remaining distance in the remaining time, his speed must be)",
+                    "options": {
+                        "A": "6 km/hr / 6 কিমি/ঘণ্টা",
+                        "B": "8 km/hr / 8 কিমি/ঘণ্টা",
+                        "C": "12 km/hr / 12 কিমি/ঘণ্টা",
+                        "D": "15 km/hr / 15 কিমি/ঘণ্টা"
+                    }
+                },
+                {
+                    "q_no": "Q34",
+                    "question": "A একটি কাজের 1/2 অংশ 5 দিনে করে এবং B ওই কাজের 2/5 অংশ 6 দিনে করে। A ও B একসঙ্গে কাজটি সম্পূর্ণ করে (A can do 1/2 part of a work in 5 days and B can do 2/5 part of that work in 6 days. A and B together complete the work in)",
+                    "options": {
+                        "A": "3 days / 3 দিনে",
+                        "B": "6 days / 6 দিনে",
+                        "C": "5 days / 5 দিনে",
+                        "D": "4 days / 4 দিনে"
+                    }
+                },
+                {
+                    "q_no": "Q35",
+                    "question": "অনুপস্থিত সংখ্যাটি লেখো: 4, 9, 17, 35, ?, 139 (Write the missing number: 4, 9, 17, 35, ?, 139)",
+                    "options": {
+                        "A": "63",
+                        "B": "65",
+                        "C": "67",
+                        "D": "69"
+                    }
+                },
+                {
+                    "q_no": "Q36",
+                    "question": "কোন সালে অলিম্পিক সিম্বল ডিজাইন করা হয়েছিল? (In which year was the Olympic Symbol designed?)",
+                    "options": {
+                        "A": "1915",
+                        "B": "1913",
+                        "C": "1920",
+                        "D": "1924"
+                    }
+                },
+                {
+                    "q_no": "Q37",
+                    "question": "240 মিটার লম্বা একটি ট্রেন 24 সেকেন্ডে একটি পোলকে অতিক্রম করে। ট্রেনটি 650 মিটার লম্বা একটি প্ল্যাটফর্মকে অতিক্রম করতে কত সময় নেবে? (A train 240 m long passed a pole in 24 seconds. How long will it take to pass a platform 650 m long?)",
+                    "options": {
+                        "A": "65 sec. / 65 সেকেন্ড",
+                        "B": "89 sec. / 89 সেকেন্ড",
+                        "C": "100 sec. / 100 সেকেন্ড",
+                        "D": "150 sec. / 150 সেকেন্ড"
+                    }
+                },
+                {
+                    "q_no": "Q38",
+                    "question": "এক ব্যক্তি ও তার পুত্রের বয়সের অনুপাত 7:3 এবং তাদের বয়সের গুণফল 756। 6 বছর পরে তাদের বয়সের অনুপাত হবে (The ratio of a man's age and his son's age is 7:3 and the product of their ages is 756. The ratio of their ages after 6 years will be)",
+                    "options": {
+                        "A": "5:2",
+                        "B": "2:1",
+                        "C": "11:7",
+                        "D": "13:9"
+                    }
+                },
+                {
+                    "q_no": "Q39",
+                    "question": "একটি দেয়ালে সরাসরি আঁকা একটি শিল্পকর্মকে কী বলা হয়? (What is the term for an artwork painted directly onto a wall?)",
+                    "options": {
+                        "A": "ফ্রেস্কো / Fresco",
+                        "B": "মুরাল / Mural",
+                        "C": "গ্রাফিতি / Graffiti",
+                        "D": "ট্যাপেস্ট্রি / Tapestry"
+                    }
+                },
+                {
+                    "q_no": "Q40",
+                    "question": "স্থির জলে একটি নৌকার গতিবেগ 15 কিমি/ঘণ্টা এবং স্রোতের গতিবেগ 3 কিমি/ঘণ্টা। নৌকাটি 12 মিনিটে স্রোতের অনুকূলে কত দূরত্ব অতিক্রম করবে? (The speed of a boat in still water is 15 km/hr and the rate of the current is 3 km/hr. The distance travelled downstream in 12 minutes is)",
+                    "options": {
+                        "A": "1.2 km / 1.2 কিলোমিটার",
+                        "B": "1.8 km / 1.8 কিলোমিটার",
+                        "C": "2.4 km / 2.4 কিলোমিটার",
+                        "D": "3.6 km / 3.6 কিলোমিটার"
+                    }
+                },
+                {
+                    "q_no": "Q41",
+                    "question": "যদি 500 টাকার 4 বছরের সরল সুদ হয় 100 টাকা তাহলে বাৎসরিক শতকরা সুদের হার কত? (If the simple interest on Rs. 500 for 4 years is Rs. 100, then what is the interest per annum?)",
+                    "options": {
+                        "A": "10%",
+                        "B": "5%",
+                        "C": "8%",
+                        "D": "6%"
+                    }
+                },
+                {
+                    "q_no": "Q42",
+                    "question": "পাঁচ অঙ্কের কোন ক্ষুদ্রতম সংখ্যা 12, 15 এবং 18 দ্বারা বিভাজ্য হবে? (The least number of five digits which is exactly divisible by 12, 15 and 18 is)",
+                    "options": {
+                        "A": "10010",
+                        "B": "10015",
+                        "C": "10020",
+                        "D": "10080"
+                    }
+                },
+                {
+                    "q_no": "Q43",
+                    "question": "'পাম্পাস', বিস্তৃত তৃণভূমি যেখানে পাওয়া যায়— ('Pampas' are extensive grasslands found in)",
+                    "options": {
+                        "A": "উত্তর আমেরিকা / North America",
+                        "B": "দক্ষিণ আমেরিকা / South America",
+                        "C": "আফ্রিকা / Africa",
+                        "D": "এশিয়া / Asia"
+                    }
+                },
+                {
+                    "q_no": "Q44",
+                    "question": "A, B-এর 3 গুণ কর্মক্ষম এবং সেই কারণে A, B-এর থেকে 80 দিন আগে একটি কাজ শেষ করে। তারা একসঙ্গে কাজটি কতদিনে শেষ করবে তা নির্ণয় করো। (A is thrice as good as B and therefore is able to finish a work in 80 days less than B. Find the number of days required to complete the work if they are working together.)",
+                    "options": {
+                        "A": "20 days / 20 দিন",
+                        "B": "32 days / 32 দিন",
+                        "C": "30 days / 30 দিন",
+                        "D": "40 days / 40 দিন"
+                    }
+                },
+                {
+                    "q_no": "Q45",
+                    "question": "প্রতিবছর কোন দিনটিকে 'বিশ্ব রক্তদানকারী দিবস' হিসেবে পালন (উদযাপন) করা হয়? (Which day is celebrated as a 'World Blood Donor Day' every year?)",
+                    "options": {
+                        "A": "5ই জুন / 5th June",
+                        "B": "14ই জুন / 14th June",
+                        "C": "14ই জুলাই / 14th July",
+                        "D": "10ই সেপ্টেম্বর / 10th September"
+                    }
+                },
+                {
+                    "q_no": "Q46",
+                    "question": "নীচের কোন নদীর উপর উকাই বাঁধটি অবস্থিত? (Which of the following rivers is the Ukai dam situated across?)",
+                    "options": {
+                        "A": "নর্মদা / Narmada",
+                        "B": "তাপ্তি / Tapti",
+                        "C": "মহানদী / Mahanadi",
+                        "D": "কৃষ্ণা / Krishna"
+                    }
+                },
+                {
+                    "q_no": "Q47",
+                    "question": "ইন্টারন্যাশনাল ইউনিয়ন ফর কনজার্ভেশন অফ নেচার (IUCN)-এর সদর দপ্তর রয়েছে— (The International Union for Conservation of Nature (IUCN) has the headquarters at)",
+                    "options": {
+                        "A": "কেনিয়া / Kenya",
+                        "B": "বুদাপেস্ট / Budapest",
+                        "C": "সুইজারল্যান্ড / Switzerland",
+                        "D": "রিও-ডি জেনিরো / Rio-de Janeiro"
+                    }
+                },
+                {
+                    "q_no": "Q48",
+                    "question": "A, 30,000 টাকা মূলধন নিয়ে একটি ব্যবসা শুরু করেন এবং তার 4 মাস পরে B, A-এর সাথে ওই ব্যবসায় যুক্ত হন। একবছর পরে 2:3 অনুপাতে তাদের লভ্যাংশ ভাগ করা হয়। ওই ব্যবসায় B-এর মূলধন নির্ণয় করো। (A started business with Rs. 30,000 and after 4 months, B joins with A as his partner. After a year, the profit is divided in the ratio 2:3. What is B's contribution in the capital?)",
+                    "options": {
+                        "A": "Rs. 65,700 / 65,700 টাকা",
+                        "B": "Rs. 65,000 / 65,000 টাকা",
+                        "C": "Rs. 67,000 / 67,000 টাকা",
+                        "D": "Rs. 67,500 / 67,500 টাকা"
+                    }
+                },
+                {
+                    "q_no": "Q49",
+                    "question": "নিম্নলিখিত কোনটির একক হল বার? (Bar is a unit of)",
+                    "options": {
+                        "A": "বল / Force",
+                        "B": "ক্ষমতা / Power",
+                        "C": "কার্য / Work",
+                        "D": "চাপ / Pressure"
+                    }
+                },
+                {
+                    "q_no": "Q50",
+                    "question": "এক বিক্রেতা 36টি কমলালেবু বিক্রি করে যে পরিমাণ লোকসান করেন তা 4টি কমলালেবুর বিক্রয়মূল্য। তার লোকসানের হার (A vendor loses the selling price of 4 oranges on selling 36 oranges. His loss percent is)",
+                    "options": {
+                        "A": "10%",
+                        "B": "11%",
+                        "C": "12 1/2%",
+                        "D": "উপরের কোনোটিই নয় / None of the above"
+                    }
+                },
+                {
+                    "q_no": "Q51",
+                    "question": "ফ্রি মুভমেন্ট রেজিম (FMR)-এর অধীনে, সীমান্তে বসবাসকারী উপজাতিরা ভিসা ছাড়াই অন্য দেশের ভিতরে কত দূরত্ব পর্যন্ত ভ্রমণ করতে পারে? (Under the Free Movement Regime (FMR), tribes living along the border can travel up to what distance inside the other country without a visa?)",
+                    "options": {
+                        "A": "5 kilometres / 5 কিলোমিটার",
+                        "B": "8 kilometres / 8 কিলোমিটার",
+                        "C": "16 kilometres / 16 কিলোমিটার",
+                        "D": "20 kilometres / 20 কিলোমিটার"
+                    }
+                },
+                {
+                    "q_no": "Q52",
+                    "question": "কোন দিনটিকে 'বিশ্ব এইডস দিবস' হিসেবে পালন করা হয়? (Which day is observed as 'World AIDS Day'?)",
+                    "options": {
+                        "A": "4 ডিসেম্বর / December 4",
+                        "B": "10 ডিসেম্বর / December 10",
+                        "C": "14 ডিসেম্বর / December 14",
+                        "D": "1 ডিসেম্বর / December 1"
+                    }
+                },
+                {
+                    "q_no": "Q53",
+                    "question": "বায়ুমণ্ডলের কোন স্তর অতিবেগুনি রশ্মিকে পৃথিবীপৃষ্ঠে আসতে বাধা দেয়? (Which layer of the atmosphere prevents ultraviolet rays from coming on the surface of the earth?)",
+                    "options": {
+                        "A": "স্ট্যাটোস্ফিয়ার / Stratosphere",
+                        "B": "ট্রপোস্ফিয়ার / Troposphere",
+                        "C": "আয়নোস্ফিয়ার / Ionosphere",
+                        "D": "মেসোস্ফিয়ার / Mesosphere"
+                    }
+                },
+                {
+                    "q_no": "Q54",
+                    "question": "একটি ট্রেন সকাল 8 টায় হাওড়া থেকে যাত্রা শুরু করে দুপুর 12 টায় বর্ধমানে পৌঁছায়। অপর একটি ট্রেন সকাল 7 টায় বর্ধমান থেকে যাত্রা শুরু করে দুপুর 12 টায় হাওড়ায় পৌঁছায়। কখন তারা মিলিত হবে? (A train starts from Howrah at 8 a.m. and reaches Burdwan at 12 noon. Another train leaves Burdwan at 9 a.m. and reaches Howrah at 12 noon. When do they meet?)",
+                    "options": {
+                        "A": "সকাল 9 টা 17 1/7 মিনিট / 17 1/7 mins past 9 a.m.",
+                        "B": "সকাল 11 টা 17 1/7 মিনিট / 17 1/7 mins past 11 a.m.",
+                        "C": "সকাল 10 টা 17 1/7 মিনিট / 17 1/7 mins past 10 a.m.",
+                        "D": "সকাল 10 টা / 10 a.m."
+                    }
+                },
+                {
+                    "q_no": "Q55",
+                    "question": "কোন ভারতীয় অ্যাথলিট (জাভলিন নিক্ষেপকারী ক্রীড়াবিদ) 2024 সালের পাভো নুরমি গেমসে সোনার পদক জয় করেছেন? (Name the Indian athlete (Javelin thrower) who has won the gold medal in Paavo Nurmi Games, 2024.)",
+                    "options": {
+                        "A": "অভিনব বিন্দ্রা / Abhinav Bindra",
+                        "B": "পি.ভি. সিন্ধু / P. V. Sindhu",
+                        "C": "নীরজ চোপড়া / Neeraj Chopra",
+                        "D": "তাজিন্দর পাল সিং টুর / Tajinder Pal Singh Toor"
+                    }
+                },
+                {
+                    "q_no": "Q56",
+                    "question": "'আসাল আপ' কোথাকার একটি জনপ্রিয় ক্যানো রেস? ('Asol Aap' is a popular canoe race from)",
+                    "options": {
+                        "A": "আন্দামান ও নিকোবর দ্বীপপুঞ্জ / Andaman & Nicobar Islands",
+                        "B": "ছত্তিশগড় / Chhattisgarh",
+                        "C": "মণিপুর / Manipur",
+                        "D": "হিমাচল প্রদেশ / Himachal Pradesh"
+                    }
+                },
+                {
+                    "q_no": "Q57",
+                    "question": "নীচের কোন তরঙ্গের কম্পাঙ্ক সবচেয়ে বেশি? (Which of the following waves has the highest frequency?)",
+                    "options": {
+                        "A": "রেডিও / Radio",
+                        "B": "ইনফ্রারেড / Infrared",
+                        "C": "মাইক্রোওয়েভ / Microwaves",
+                        "D": "গামা-রশ্মি / Gamma-rays"
+                    }
+                },
+                {
+                    "q_no": "Q58",
+                    "question": "বছরের শেষে একটি বালকের উচ্চতা 133 সেমি হয়। যদি বছরে তার উচ্চতা 6.4% করে বৃদ্ধি পায় তবে বছরের শুরুতে তার উচ্চতা কত ছিল? (A boy's height is 133 cm at the end of a year. His height increased by 6.4% during the year. Find his height at the beginning of the year.)",
+                    "options": {
+                        "A": "125 cm / 125 সেমি",
+                        "B": "120 cm / 120 সেমি",
+                        "C": "110 cm / 110 সেমি",
+                        "D": "118 cm / 118 সেমি"
+                    }
+                },
+                {
+                    "q_no": "Q59",
+                    "question": "গত সপ্তাহে একটি ম্যাগাজিনের 8000 কপি বিক্রি হয়। এই সপ্তাহে 7% বেশি কপি বিক্রি হলে এই সপ্তাহে কত কপি ম্যাগাজিন বিক্রি হয়? (Last week, 8,000 copies of a certain magazine were sold. This week, 7% more copies were sold. How many copies of the magazine were sold this week?)",
+                    "options": {
+                        "A": "8,650",
+                        "B": "8,560",
+                        "C": "7,600",
+                        "D": "8,500"
+                    }
+                },
+                {
+                    "q_no": "Q60",
+                    "question": "একজন দোকানদার একটি বাই-সাইকেল 2,050 টাকায় বিক্রি করে 25% লাভ করেন। কত টাকায় বাই-সাইকেলটি বিক্রি করলে তার লাভের পরিমাণ কমে 10% হবে? (By selling a bicycle for Rs. 2,050, a shopkeeper gains 25%. If the profit is reduced to 10% then the selling price will be)",
+                    "options": {
+                        "A": "Rs. 1,600 / 1,600 টাকা",
+                        "B": "Rs. 1,804 / 1,804 টাকা",
+                        "C": "Rs. 1,805 / 1,805 টাকা",
+                        "D": "Rs. 1,800 / 1,800 টাকা"
+                    }
+                },
+                {
+                    "q_no": "Q61",
+                    "question": "যোগফল নির্ণয় করো: 1/2 + 1/6 + 1/12 + 1/20 + 1/30 + 1/42 + 1/56 + 1/72 + 1/90 + 1/110 + 1/132 (Find the sum: 1/2 + 1/6 + 1/12 + 1/20 + 1/30 + 1/42 + 1/56 + 1/72 + 1/90 + 1/110 + 1/132)",
+                    "options": {
+                        "A": "7/8",
+                        "B": "11/12",
+                        "C": "15/16",
+                        "D": "17/18"
+                    }
+                },
+                {
+                    "q_no": "Q62",
+                    "question": "ফেসবুকের প্রতিষ্ঠাতা কে? (Who is the founder of Facebook?)",
+                    "options": {
+                        "A": "স্টিভ জবস / Steve Jobs",
+                        "B": "মার্ক জাকারবার্গ / Mark Zuckerberg",
+                        "C": "ল্যারি পেইজ / Larry Page",
+                        "D": "বিল গেটস / Bill Gates"
+                    }
+                },
+                {
+                    "q_no": "Q63",
+                    "question": "কোন সালে 'Times of India' প্রথম প্রকাশিত হয়? (In which year the newspaper 'Times of India' was first published?)",
+                    "options": {
+                        "A": "1875 সালে / 1875",
+                        "B": "1858 সালে / 1858",
+                        "C": "1867 সালে / 1867",
+                        "D": "1862 সালে / 1862"
+                    }
+                },
+                {
+                    "q_no": "Q64",
+                    "question": "দক্ষিণ আফ্রিকার বর্ণবাদ বিরোধী আন্দোলনে তাদের ভূমিকার জন্য বিখ্যাত ব্যক্তিত্ব কে? (Who is the famous personality known for their role in the anti-apartheid movement in South Africa?)",
+                    "options": {
+                        "A": "নেলসন ম্যান্ডেলা / Nelson Mandela",
+                        "B": "মরগান ফ্রিম্যান / Morgan Freeman",
+                        "C": "ড্রেক / Drake",
+                        "D": "জন এফ কেনেডি / John F Kennedy"
+                    }
+                },
+                {
+                    "q_no": "Q65",
+                    "question": "একজন ব্যাটসম্যান 21 তম ইনিংসে 84 রান করায় যদি তার গড় রান 2 বাড়ে তবে 21 তম ইনিংসের পরে তার গড় রান হবে (A batsman makes a score of 84 runs in the 21st innings and thus increases his average by 2 runs. His average runs after 21st innings is)",
+                    "options": {
+                        "A": "24",
+                        "B": "34",
+                        "C": "44",
+                        "D": "54"
+                    }
+                },
+                {
+                    "q_no": "Q66",
+                    "question": "কোন শহরটি 2024 সালে বিশ্বের সবচেয়ে টেকসই (sustainable) শহর হিসেবে স্বীকৃত হয়েছিল? (Which city was recognized as the world's most sustainable city in 2024?)",
+                    "options": {
+                        "A": "কোপেনহেগেন / Copenhagen",
+                        "B": "সিঙ্গাপুর / Singapore",
+                        "C": "হেলসিঙ্কি / Helsinki",
+                        "D": "রেইক্যাভিক / Reykjavik"
+                    }
+                },
+                {
+                    "q_no": "Q67",
+                    "question": "কিছু পরিমাণ টাকা 160 জন পুরুষ ও কয়েকজন মহিলার মধ্যে 16:21 অনুপাতে ভাগ করা হল। এর ফলে প্রতিটি পুরুষ 4 টাকা করে এবং প্রতিটি মহিলা 3 টাকা করে পান। মহিলার সংখ্যা কত হবে? (A sum of money is divided among 160 males and some females in the ratio 16:21. Individually each male gets Rs. 4 and a female Rs. 3. The number of females is)",
+                    "options": {
+                        "A": "198",
+                        "B": "270",
+                        "C": "280",
+                        "D": "284"
+                    }
+                },
+                {
+                    "q_no": "Q68",
+                    "question": "একটি সংখ্যার 60% অপর একটি সংখ্যার 3/5 অংশের সাথে সমান। প্রথম ও দ্বিতীয় সংখ্যার অনুপাত কত? (60% of a number is equal to the 3/5th of the other number. What is the ratio between the first number and the second number?)",
+                    "options": {
+                        "A": "1:1",
+                        "B": "2:3",
+                        "C": "3:5",
+                        "D": "2:5"
+                    }
+                },
+                {
+                    "q_no": "Q69",
+                    "question": "World Beneath His Feet কোন ব্যক্তিত্বের জীবনী? (World Beneath His Feet is a biography of whose personality?)",
+                    "options": {
+                        "A": "পুল্লেলা গোপীচাঁদ / Pullela Gopichand",
+                        "B": "নবাব পতৌদি / Nawab Pataudi",
+                        "C": "অজিত ওয়াদেকর / Ajit Wadekar",
+                        "D": "শচীন টেন্ডুলকার / Sachin Tendulkar"
+                    }
+                },
+                {
+                    "q_no": "Q70",
+                    "question": "একটি দ্রব্য 1864 টাকায় বিক্রি করে যে পরিমাণ লাভ হয় সেই একই পরিমাণ লোকসান হয় যদি দ্রব্যটি 1,490 টাকায় বিক্রি করে। দ্রব্যটির ক্রয়মূল্য কত? (The profit earned after selling an article for Rs.1,864 is the same as loss incurred after selling the article for Rs. 1,490. What is the cost price of the article?)",
+                    "options": {
+                        "A": "Rs. 1,677 / 1,677 টাকা",
+                        "B": "Rs. 1,667 / 1,667 টাকা",
+                        "C": "Rs. 1,623 / 1,623 টাকা",
+                        "D": "Rs. 1,689 / 1,689 টাকা"
+                    }
+                },
+                {
+                    "q_no": "Q71",
+                    "question": "ভারতে জাতীয় ক্রীড়া দিবস কবে পালিত হয়? (When is the National Sports Day celebrated in India?)",
+                    "options": {
+                        "A": "21শে আগস্ট / August 21",
+                        "B": "23শে আগস্ট / August 23",
+                        "C": "25শে আগস্ট / August 25",
+                        "D": "29শে আগস্ট / August 29"
+                    }
+                },
+                {
+                    "q_no": "Q72",
+                    "question": "হিন্দন নদী কোন নদীর উপনদী? (The Hindon River is a tributary of which river?)",
+                    "options": {
+                        "A": "গঙ্গা / Ganges",
+                        "B": "যমুনা / Yamuna",
+                        "C": "নর্মদা / Narmada",
+                        "D": "তাপ্তি / Tapti"
+                    }
+                },
+                {
+                    "q_no": "Q73",
+                    "question": "যদি দুটি ডাইস একসাথে চালা হয় তাহলে কতগুলি বিভিন্ন উপায়ে তাদের ফলাফল-এর যোগফল 8 হবে? (If two dice are thrown, how many different possibilities are there that the addition of their outcomes is 8?)",
+                    "options": {
+                        "A": "5",
+                        "B": "6",
+                        "C": "10",
+                        "D": "4"
+                    }
+                },
+                {
+                    "q_no": "Q74",
+                    "question": "নাথুলা পাস নিম্নলিখিত কোন পর্বতশ্রেণীতে অবস্থিত? (Nathu La Pass is situated in which of the following ranges?)",
+                    "options": {
+                        "A": "বিন্ধ্য পর্বতমালা / Vindhyas",
+                        "B": "কারাকোরাম / Karakoram",
+                        "C": "পশ্চিমঘাট / Western Ghats",
+                        "D": "হিমালয় / Himalayas"
+                    }
+                },
+                {
+                    "q_no": "Q75",
+                    "question": "একক শক্তির সংজ্ঞা পাওয়া যায় (The definition of unit force is obtained from)",
+                    "options": {
+                        "A": "প্রথম গতিসূত্র থেকে / 1st Law of Motion",
+                        "B": "দ্বিতীয় গতিসূত্র থেকে / 2nd Law of Motion",
+                        "C": "তৃতীয় গতিসূত্র থেকে / 3rd Law of Motion",
+                        "D": "উপরের কোনোটিই নয় / None of the above"
+                    }
+                },
+                {
+                    "q_no": "Q76",
+                    "question": "ইন্ডিয়ান পেনাল কোড (IPC)-এর পরিবর্তে ভারতের আইনি কোডের প্রস্তাবিত নতুন নাম কী? (What is the proposed new name for the legal code for India, replacing the Indian Penal Code (IPC)?)",
+                    "options": {
+                        "A": "ভারতীয় ন্যায় সংহিতা / Bharatiya Nyaya Sanhita",
+                        "B": "ইন্ডিয়ান ন্যায় সংহিতা / Indian Nyaya Sanhita",
+                        "C": "নবভারত সংহিতা / Nava Bharat Sanhita",
+                        "D": "ভারত পেনাল কোড / Bharat Penal Code"
+                    }
+                },
+                {
+                    "q_no": "Q77",
+                    "question": "'ব্লু ইকোনমি' ধারণাটি প্রাথমিকভাবে যার সাথে সম্পর্কিত— (The 'Blue Economy' concept is primarily related to)",
+                    "options": {
+                        "A": "কৃষি / Agriculture",
+                        "B": "মহাসাগরীয় সম্পদ / Ocean resources",
+                        "C": "আকাশভিত্তিক শিল্প / Sky-based industries",
+                        "D": "ডিজিট্যাল প্রযুক্তি / Digital technology"
+                    }
+                },
+                {
+                    "q_no": "Q78",
+                    "question": "'বতুকাম্মা' কোন রাজ্যের রাষ্ট্রীয় উৎসব? ('Batukamma' is the State festival of which state?)",
+                    "options": {
+                        "A": "তামিলনাড়ু / Tamil Nadu",
+                        "B": "তেলেঙ্গানা / Telangana",
+                        "C": "আসাম / Assam",
+                        "D": "গুজরাট / Gujarat"
+                    }
+                },
+                {
+                    "q_no": "Q79",
+                    "question": "নিম্নলিখিত মুদ্রাগুলির মধ্যে কোনটি বুলগেরিয়ার মুদ্রা? (Which one of the following is the currency of Bulgaria?)",
+                    "options": {
+                        "A": "লিউ / Leu",
+                        "B": "রুবেল / Ruble",
+                        "C": "লেভ / Leva",
+                        "D": "ডলার / Dollar"
+                    }
+                },
+                {
+                    "q_no": "Q80",
+                    "question": "দুটি সংখ্যার গ.সা.গু. 13 এবং তাদের অনুপাত 5:7। সংখ্যাদুটি নির্ণয় করো। (The HCF of two numbers is 13. If they are in the ratio of 5:7, then find the numbers.)",
+                    "options": {
+                        "A": "65, 91",
+                        "B": "25, 35",
+                        "C": "35, 49",
+                        "D": "15, 21"
+                    }
+                },
+                {
+                    "q_no": "Q81",
+                    "question": "ভারতের সংবিধানের 73তম সংশোধনী নীচের কোনটির সাথে সম্পর্কিত? (The 73rd Amendment of the Constitution of India is related to which among the following?)",
+                    "options": {
+                        "A": "জনপদ / Townships",
+                        "B": "পঞ্চায়েত / Panchayats",
+                        "C": "পৌরসভা / Municipalities",
+                        "D": "জেলা বোর্ড / District Boards"
+                    }
+                },
+                {
+                    "q_no": "Q82",
+                    "question": "ভারতের প্রাক্তন রাষ্ট্রপতি প্রণব মুখার্জী 'ভারতরত্ন' পুরস্কার লাভ করেছিলেন কত সালে? (In which year India's former President Pranab Mukherjee received 'Bharat Ratna'?)",
+                    "options": {
+                        "A": "2018 সালে / 2018",
+                        "B": "2019 সালে / 2019",
+                        "C": "2021 সালে / 2021",
+                        "D": "2023 সালে / 2023"
+                    }
+                },
+                {
+                    "q_no": "Q83",
+                    "question": "খিলাফত আন্দোলন কখন সংঘটিত হয়? (When did the Khilafat Movement take place?)",
+                    "options": {
+                        "A": "1942-1945",
+                        "B": "1919-1922",
+                        "C": "1911-1913",
+                        "D": "1906-1908"
+                    }
+                },
+                {
+                    "q_no": "Q84",
+                    "question": "একটি ট্রেনের গতিবেগ 80 কিমি/ঘণ্টা। যদি একটি গাছকে অতিক্রম করতে 4.5 সেকেন্ড সময় লাগে তাহলে একটি 200 মিটার লম্বা স্টেশন অতিক্রম করতে ট্রেনটির কত সময় লাগবে? (The speed of a train is 80 km/hr. If it takes 4.5 seconds to cross a tree, how much time it takes to cross a 200 meter length station?)",
+                    "options": {
+                        "A": "13.5 sec. / 13.5 সেকেন্ড",
+                        "B": "13 sec. / 13 সেকেন্ড",
+                        "C": "12 sec. / 12 সেকেন্ড",
+                        "D": "12.5 sec. / 12.5 সেকেন্ড"
+                    }
+                },
+                {
+                    "q_no": "Q85",
+                    "question": "0, 2 এবং 4 দিয়ে তৈরি 3 অঙ্কবিশিষ্ট বৃহত্তম ও ক্ষুদ্রতম সংখ্যার গড় হবে (The average of the largest and the smallest 3 digit number formed by 0, 2 and 4 would be)",
+                    "options": {
+                        "A": "213",
+                        "B": "303",
+                        "C": "312",
+                        "D": "222"
+                    }
+                },
+                {
+                    "q_no": "Q86",
+                    "question": "ভারতবর্ষের সবচেয়ে বড়ো মিষ্টি জলের হ্রদ লোকটাক দেশের কোন অঞ্চলে অবস্থিত? (Loktak Lake is the largest fresh water lake in which of the following region of the country?)",
+                    "options": {
+                        "A": "উত্তর-পূর্ব / North-Eastern",
+                        "B": "দক্ষিণ-পশ্চিম / South-Western",
+                        "C": "উত্তর-পশ্চিম / North-Western",
+                        "D": "দক্ষিণ-পূর্ব / South-Eastern"
+                    }
+                },
+                {
+                    "q_no": "Q87",
+                    "question": "'অপারেশন ফ্লাড'-এর অপর নাম হল ('Operation Flood' is also popularly known as)",
+                    "options": {
+                        "A": "গ্রিন রেভিলউশান (সবুজ বিপ্লব) / The Green Revolution",
+                        "B": "হোয়াইট রেভিলউশান (শেত বিপ্লব) / The White Revolution",
+                        "C": "ব্লু রেভিলউশান (নীল বিপ্লব) / The Blue Revolution",
+                        "D": "ইয়েলো রেভিলউশান (হলুদ বিপ্লব) / The Yellow Revolution"
+                    }
+                },
+                {
+                    "q_no": "Q88",
+                    "question": "কবে বাংলায় প্রজাস্বত্ব আইন পাশ হয়? (When was the Tenancy Act passed in Bengal?)",
+                    "options": {
+                        "A": "1885",
+                        "B": "1878",
+                        "C": "1928",
+                        "D": "1868"
+                    }
+                },
+                {
+                    "q_no": "Q89",
+                    "question": "মার্কিন যুক্তরাষ্ট্রের রাজধানী কী? (What is the capital of the United States?)",
+                    "options": {
+                        "A": "নিউ ইয়র্ক / New York",
+                        "B": "বোস্টন / Boston",
+                        "C": "লন্ডন / London",
+                        "D": "ওয়াশিংটন, ডি.সি. / Washington, D.C."
+                    }
+                },
+                {
+                    "q_no": "Q90",
+                    "question": "নীচের কোন সংখ্যাকে 1 1/2 দিয়ে গুণ করলে এবং সংখ্যাটির সাথে 1 1/2 যোগ করলে একই সংখ্যা পাওয়া যাবে? (Which number gives the same result when added to 1 1/2 and when multiplied by 1 1/2?)",
+                    "options": {
+                        "A": "1",
+                        "B": "3",
+                        "C": "5",
+                        "D": "7"
+                    }
+                },
+                {
+                    "q_no": "Q91",
+                    "question": "একটি ক্লাসে 40 জন ছাত্রছাত্রী আছে। মোট ছাত্রছাত্রীর 1/5 অংশ ভাত খেতে, 2/5 অংশ রুটি খেতে এবং বাকি অংশ ভাত ও রুটি উভয়ই খেতে পছন্দ করে। মোট ছাত্রছাত্রীর কত অংশ ভাত ও রুটি দুটোই খেতে পছন্দ করে? (In a class of 40 students, 1/5 of the total number of students like to eat rice only, 2/5 of the total number of students like to eat chapatti only and remaining students like to eat both. What fraction of total students like to eat both?)",
+                    "options": {
+                        "A": "1/5",
+                        "B": "3/5",
+                        "C": "2/5",
+                        "D": "উপরের কোনোটিই নয় / None of the above"
+                    }
+                },
+                {
+                    "q_no": "Q92",
+                    "question": "INC-এর প্রথম মুসলিম রাষ্ট্রপতি ছিলেন (The first Muslim President of the INC was)",
+                    "options": {
+                        "A": "আবুল কালাম আজাদ / Abul Kalam Azad",
+                        "B": "রাফি আহমেদ কিদওয়াই / Rafi Ahmad Kidwai",
+                        "C": "হাকিম আজমল খান / Hakim Ajmal Khan",
+                        "D": "বদরুদ্দিন তৈয়বজি / Badruddin Tyabji"
+                    }
+                },
+                {
+                    "q_no": "Q93",
+                    "question": "যদি 175616-এর ঘনমূল 56 হয়, তবে ∛175.616 + ∛0.175616 + ∛0.000175616 -এর মান— (If cube root of 175616 is 56, then the value of ∛175.616 + ∛0.175616 + ∛0.000175616 is equal to)",
+                    "options": {
+                        "A": "0.168",
+                        "B": "6.216",
+                        "C": "62.16",
+                        "D": "6.116"
+                    }
+                },
+                {
+                    "q_no": "Q94",
+                    "question": "কীসের অধ্যয়নকে 'Ornithology' বলা হয়? ('Ornithology' is the study of)",
+                    "options": {
+                        "A": "মাছ / Fish",
+                        "B": "পাখি / Birds",
+                        "C": "মুদ্রা / Coins",
+                        "D": "মহাসাগর / Ocean"
+                    }
+                },
+                {
+                    "q_no": "Q95",
+                    "question": "রুমা 1 ঘণ্টায় 30টি পৃষ্ঠা এবং নীরা 1 ঘণ্টায় 40টি পৃষ্ঠা পড়তে পারে। যদি রুমা 2:30-এ একটি উপন্যাস পড়া শুরু করে এবং নীরা ওই একই উপন্যাস 3:20-তে পড়া শুরু করে তবে কটার সময় তারা দুজনে একই পৃষ্ঠা পড়বে? (Ruma reads at an average rate of 30 pages per hour while Neera reads at an average rate of 40 pages per hour. If Ruma starts reading a novel at 2:30 and Neera begins reading an identical copy of the same book at 3:20, at what time will they be reading the same page?)",
+                    "options": {
+                        "A": "5:00",
+                        "B": "5:50",
+                        "C": "6:40",
+                        "D": "7:00"
+                    }
+                },
+                {
+                    "q_no": "Q96",
+                    "question": "2024 সালে সেরা ফিফা (ফুটবল) পুরুষ খেলোয়াড়-এর পুরস্কার কে জিতেছেন? (Who won the Best FIFA Men's Player Award 2024 (Football)?)",
+                    "options": {
+                        "A": "লিওনেল মেসি / Lionel Messi",
+                        "B": "ক্রিস্টিয়ানো রোনালদো / Cristiano Ronaldo",
+                        "C": "পেপ গার্ডিওলা / Pep Guardiola",
+                        "D": "কিলিয়ান এমবাপে / Kylian Mbappe"
+                    }
+                },
+                {
+                    "q_no": "Q97",
+                    "question": "1857 সালে মহাবিদ্রোহের সময় ভারতের গভর্নর জেনারেল কে ছিলেন? (Who was the Governor General of India during the revolt of 1857?)",
+                    "options": {
+                        "A": "লর্ড ডালহৌসি / Lord Dalhousie",
+                        "B": "লর্ড ক্যানিং / Lord Canning",
+                        "C": "লর্ড লিটন / Lord Lytton",
+                        "D": "লর্ড রিপন / Lord Ripon"
+                    }
+                },
+                {
+                    "q_no": "Q98",
+                    "question": "ভাস্কো দা গামা ভারতে একটি নতুন পথ খুঁজে বের করেন এবং 1498 সালে পৌঁছেছিলেন— (Vasco Da Gama found out a new route to India and in 1498 reached)",
+                    "options": {
+                        "A": "পুলিকাট / Pulicat",
+                        "B": "করাইকাল / Karaikal",
+                        "C": "গোয়া / Goa",
+                        "D": "কালিকট / Calicut"
+                    }
+                },
+                {
+                    "q_no": "Q99",
+                    "question": "অস্কার 2024-এ কোন চলচ্চিত্র সেরা চলচ্চিত্রের পুরস্কার পেয়েছে? (Which film won the Best Film Award at Oscars 2024?)",
+                    "options": {
+                        "A": "কিং রিচার্ড / King Richard",
+                        "B": "ওপেনহাইমার / Oppenheimer",
+                        "C": "কোডা / CODA",
+                        "D": "ওয়েস্ট সাইড স্টোরি / West Side Story"
+                    }
+                },
+                {
+                    "q_no": "Q100",
+                    "question": "অরুণ তার আয়ের 10% সঞ্চয় করেন। এক বছর পরে তার আয় 20% বাড়ে কিন্তু তিনি পূর্বের ন্যায় একই পরিমাণ টাকা সঞ্চয় করেন। তার খরচের বৃদ্ধির হার নির্ণয় করো। (Arun could save 10% of his income. But 1 year later, when his income increased by 20%, he could save the same amount only as before. By how much percentage has his expenditure increased?)",
+                    "options": {
+                        "A": "22 2/9%",
+                        "B": "23 1/3%",
+                        "C": "24 2/9%",
+                        "D": "25 2/9%"
+                    }
+                }
+            ]
+        }
+    }
+}

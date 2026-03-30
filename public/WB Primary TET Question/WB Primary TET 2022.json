@@ -1,0 +1,1536 @@
+{
+    "exam": "WB Primary TET 2022",
+    "total_questions": 150,
+    "parts": [
+        {
+            "part": "A",
+            "subject": "Child Development & Pedagogy",
+            "questions": [
+                {
+                    "q_no": "Q1",
+                    "question": "To address the needs of differently abled learners in inclusive class, which one of the following step should teachers adopt?",
+                    "options": {
+                        "a": "Approach focussing on learners' deficit",
+                        "b": "Approach focussing only on the specific learning disability",
+                        "c": "Approach of neutrality to treat all the children in similar manner",
+                        "d": "Approach focussing on learners' strength"
+                    }
+                },
+                {
+                    "q_no": "Q2",
+                    "question": "Which of the following is NOT a relevant reason for assessing learners before presenting a lesson?",
+                    "options": {
+                        "a": "To assess the readiness of learners for a lesson",
+                        "b": "To make the learners aware before presenting a lesson",
+                        "c": "To facilitate teachers to practice core teaching skills",
+                        "d": "To form different learning groups among the learners while adopting collaborative teaching-learning"
+                    }
+                },
+                {
+                    "q_no": "Q3",
+                    "question": "The level of teaching in which the learner can identify the problem, define it and try to solve it by using critical and creative abilities, is",
+                    "options": {
+                        "a": "memory level of teaching",
+                        "b": "understanding level of teaching",
+                        "c": "reflective level of teaching",
+                        "d": "pre-active level of teaching"
+                    }
+                },
+                {
+                    "q_no": "Q4",
+                    "question": "Which of the following is NOT an essential principle of teaching at primary level?",
+                    "options": {
+                        "a": "Principle of providing attention for individual difference",
+                        "b": "Principle of proceeding from simple to complex",
+                        "c": "Principle of proceeding from general to specific",
+                        "d": "Principle of providing enough information to the learner"
+                    }
+                },
+                {
+                    "q_no": "Q5",
+                    "question": "There are two tasks in education: (I) Personality development (II) Habit formation. There are two stages of education: (a) Primary (b) Secondary. The best combination of the task in education and stage of education might be",
+                    "options": {
+                        "a": "(I, a); (II, a)",
+                        "b": "(I, b); (II, b)",
+                        "c": "(I, a); (II, b)",
+                        "d": "(I, b); (II, a)"
+                    }
+                },
+                {
+                    "q_no": "Q6",
+                    "question": "A teacher tells the students \"Try to do the task, you will learn\". Here the teacher tries to",
+                    "options": {
+                        "a": "motivate extrinsically",
+                        "b": "motivate intrinsically",
+                        "c": "encourage for achievement motivation",
+                        "d": "demotivate"
+                    }
+                },
+                {
+                    "q_no": "Q7",
+                    "question": "Falling down on a floor, a child started to hit the floor out of anger. What type of thinking is reflected here according to the theory of Piaget?",
+                    "options": {
+                        "a": "Reflective thinking",
+                        "b": "Logical thinking",
+                        "c": "Analytical thinking",
+                        "d": "Animistic thinking"
+                    }
+                },
+                {
+                    "q_no": "Q8",
+                    "question": "The first step of memory is",
+                    "options": {
+                        "a": "Retention",
+                        "b": "Recall",
+                        "c": "Recognition",
+                        "d": "Learning"
+                    }
+                },
+                {
+                    "q_no": "Q9",
+                    "question": "According to Kohlberg, in which stage of moral development does an individual work to please his/her family members and neighbours?",
+                    "options": {
+                        "a": "Punishment obedience stage",
+                        "b": "Personal reward stage",
+                        "c": "Good boy/Nice girl stage",
+                        "d": "Law and order stage"
+                    }
+                },
+                {
+                    "q_no": "Q10",
+                    "question": "Which of the following strategy is NOT pedagogically appropriate for learning in the Constructivist approach?",
+                    "options": {
+                        "a": "Encouraging learners towards multiple perspectives of objective reality",
+                        "b": "Group collaboration",
+                        "c": "Drill and recall",
+                        "d": "Exploration through experimentation"
+                    }
+                },
+                {
+                    "q_no": "Q11",
+                    "question": "The cephalocaudal principle of child development refers to the development which proceeds from",
+                    "options": {
+                        "a": "head to toe",
+                        "b": "general to specific",
+                        "c": "centre of an organism to the periphery of its body",
+                        "d": "concrete to abstract"
+                    }
+                },
+                {
+                    "q_no": "Q12",
+                    "question": "A social science teacher may make linkage geographical concept while teaching history. This kind of pedagogical strategy",
+                    "options": {
+                        "a": "would promote misconception among the learners",
+                        "b": "would negatively impact learning as it would impose additional burden",
+                        "c": "would facilitate learning by promoting interdisciplinary approach",
+                        "d": "would neither impact to promote nor to create a hindrance in learning"
+                    }
+                },
+                {
+                    "q_no": "Q13",
+                    "question": "According to Piaget's view, the child learns that 'water can be frozen and then thawed to become liquid again' is an example of",
+                    "options": {
+                        "a": "Seriation ability",
+                        "b": "Classification ability",
+                        "c": "Reversible thinking",
+                        "d": "Hypothetico-deductive thinking"
+                    }
+                },
+                {
+                    "q_no": "Q14",
+                    "question": "The memory responsible for remembering 'how to do things', is called",
+                    "options": {
+                        "a": "Procedural memory",
+                        "b": "Semantic memory",
+                        "c": "Episodic memory",
+                        "d": "Autobiographical memory"
+                    }
+                },
+                {
+                    "q_no": "Q15",
+                    "question": "A teacher asks a student to mention different non-conventional uses of tea-cups. This teaching tends to develop among the students",
+                    "options": {
+                        "a": "Convergent thinking",
+                        "b": "Creativity",
+                        "c": "Language ability",
+                        "d": "Concrete thinking"
+                    }
+                },
+                {
+                    "q_no": "Q16",
+                    "question": "There are some concepts in Pedagogy: (I) Objectives (II) Aims (III) Goals. There are some factors: a. Student b. Teacher c. Nation. Find out the best matching pair from the following pairs:",
+                    "options": {
+                        "a": "(III, a) and (II, c)",
+                        "b": "(II, a) and (I, c)",
+                        "c": "(I, a) and (II, b)",
+                        "d": "(I, c) and (III, b)"
+                    }
+                },
+                {
+                    "q_no": "Q17",
+                    "question": "Which one of the following principles is NOT relevant to Child Development?",
+                    "options": {
+                        "a": "Sequentiality",
+                        "b": "Continuity",
+                        "c": "Reversibility",
+                        "d": "Generality to specificity"
+                    }
+                },
+                {
+                    "q_no": "Q18",
+                    "question": "A test is administered twice in a definite interval on a group of school students under identical environmental conditions. The mean scores of the students remain very close. It is therefore, said, the test has",
+                    "options": {
+                        "a": "validity",
+                        "b": "reliability",
+                        "c": "objectivity",
+                        "d": "moderate difficulty value"
+                    }
+                },
+                {
+                    "q_no": "Q19",
+                    "question": "According to Kohlberg, a teacher can inculcate moral values in the classroom by",
+                    "options": {
+                        "a": "giving importance to religious teaching",
+                        "b": "asking students to read psychology books",
+                        "c": "introducing clear and strict rules for behaviour modification",
+                        "d": "discussing moral issues"
+                    }
+                },
+                {
+                    "q_no": "Q20",
+                    "question": "When old memories inhibit new learning, then this phenomenon is called",
+                    "options": {
+                        "a": "Proactive inhibition",
+                        "b": "Retroactive inhibition",
+                        "c": "Interactive inhibition",
+                        "d": "Postactive inhibition"
+                    }
+                },
+                {
+                    "q_no": "Q21",
+                    "question": "In which step of 5'E' model, students conduct activities, predict and form hypothesis?",
+                    "options": {
+                        "a": "Engagement",
+                        "b": "Elaboration",
+                        "c": "Explanation",
+                        "d": "Exploration"
+                    }
+                },
+                {
+                    "q_no": "Q22",
+                    "question": "Child's 'inability to understand a situation from another person's point of view' is called",
+                    "options": {
+                        "a": "Object permanence",
+                        "b": "Centration",
+                        "c": "Egocentric thinking",
+                        "d": "Transductive thinking"
+                    }
+                },
+                {
+                    "q_no": "Q23",
+                    "question": "In the classroom of a primary school, students usually come from different social backgrounds in terms of culture, religion, economic status and caste system. What should be the best combination of teacher's task to make the classroom inclusive from these given options? (i) To reflect on his/her own stereotypes and beliefs (ii) To include and emphasize diversity of children's experience (iii) To create institutional ethos towards equality (iv) To instruct children to accommodate the existing standard curriculum",
+                    "options": {
+                        "a": "(i), (ii), (iii)",
+                        "b": "(i), (ii), (iv)",
+                        "c": "(i), (iii), (iv)",
+                        "d": "(ii), (iii)"
+                    }
+                },
+                {
+                    "q_no": "Q24",
+                    "question": "Which one of the following statements is NOT true about the concept of the term 'Pedagogy'?",
+                    "options": {
+                        "a": "Pedagogy is the ways and means of transaction of curriculum",
+                        "b": "Pedagogy is usually influenced by the dominant culture",
+                        "c": "Pedagogy is not related to the needs of the children",
+                        "d": "Pedagogy is being exercised across the curriculum"
+                    }
+                },
+                {
+                    "q_no": "Q25",
+                    "question": "While teacher explores learners' indirect and general experience in concept formation in learning-teaching process, then which one of the followings will be most acceptable?",
+                    "options": {
+                        "a": "Exposure → Perception → Abstraction → Generalization",
+                        "b": "Exposure → Generalization → Abstraction → Perception",
+                        "c": "Exposure → Abstraction → Generalization → Perception",
+                        "d": "Exposure → Abstraction → Perception → Generalization"
+                    }
+                },
+                {
+                    "q_no": "Q26",
+                    "question": "Learning-Teaching becomes more effective, when",
+                    "options": {
+                        "a": "Teacher asks questions and students answer",
+                        "b": "Teacher writes on the blackboard and students make a copy",
+                        "c": "Teacher encourages students to ask questions and helps them to answer",
+                        "d": "Teacher assigns a lot of homework"
+                    }
+                },
+                {
+                    "q_no": "Q27",
+                    "question": "If a child has a mental age of 5 years and chronological age of 4 years, then IQ of the child will be",
+                    "options": {
+                        "a": "100",
+                        "b": "75",
+                        "c": "80",
+                        "d": "125"
+                    }
+                },
+                {
+                    "q_no": "Q28",
+                    "question": "The personality variable through which people generally feel about themselves is",
+                    "options": {
+                        "a": "Self-confidence",
+                        "b": "Self-dependence",
+                        "c": "Self-esteem",
+                        "d": "Introvertedness"
+                    }
+                },
+                {
+                    "q_no": "Q29",
+                    "question": "According to Gardner's theory of Multiple Intelligence, 'the capacity to detect and respond appropriately to the moods, motivations and desires of others' refers to",
+                    "options": {
+                        "a": "linguistic intelligence",
+                        "b": "logical-mathematical intelligence",
+                        "c": "interpersonal intelligence",
+                        "d": "intrapersonal intelligence"
+                    }
+                },
+                {
+                    "q_no": "Q30",
+                    "question": "Which one of the followings is the correct sequence of steps for insightful learning?",
+                    "options": {
+                        "a": "preparation, incubation, insight, verification",
+                        "b": "preparation, incubation, verification, insight",
+                        "c": "preparation, insight, incubation, verification",
+                        "d": "preparation, verification, incubation, insight"
+                    }
+                }
+            ]
+        },
+        {
+            "part": "B",
+            "subject": "Language-I (Bengali)",
+            "questions": [
+                {
+                    "q_no": "Q31",
+                    "question": "গদ্যাংশ অনুসারে সর্বানন্দের সময়ে 'কড়কচ' (এখনকার 'করকচ' নুন) কীভাবে তৈরি করা হত?",
+                    "options": {
+                        "a": "নদীর জল শুখিয়ে",
+                        "b": "গঙ্গার জল শুখিয়ে",
+                        "c": "সমুদ্রের জল শুখিয়ে",
+                        "d": "পুকুরের জল শুখিয়ে"
+                    }
+                },
+                {
+                    "q_no": "Q32",
+                    "question": "গদ্যাংশ অনুসারে সাতরকম শ্রীহির মধ্যে কোনওটি অন্তর্ভুক্ত?",
+                    "options": {
+                        "a": "যব, দেশজ, কন্দু, জাউ",
+                        "b": "দেখান, শালিধান, যব, কন্দু",
+                        "c": "কন্দু, মাঘ, শাম্যধান, দেখান",
+                        "d": "শামা-ধান, যুব, কন্দু, দেখান"
+                    }
+                },
+                {
+                    "q_no": "Q33",
+                    "question": "'অধিরূঢ়' শব্দটির সমার্থক হল—",
+                    "options": {
+                        "a": "লাউ, পেটোল",
+                        "b": "চালকুমড়ো, করলা",
+                        "c": "ভিতরের শাঁস, তালশাঁস",
+                        "d": "করবেল, কাঁকুড়"
+                    }
+                },
+                {
+                    "q_no": "Q34",
+                    "question": "'ওড্র'র লোকে সর্বে শাক খুব পছন্দ করতেন— এ কথা কে উল্লেখ করেছেন?",
+                    "options": {
+                        "a": "ই. সিনহা",
+                        "b": "নৃ. সিং",
+                        "c": "ই. সিং",
+                        "d": "বি. পট্টনায়েক"
+                    }
+                },
+                {
+                    "q_no": "Q35",
+                    "question": "এদেশে গমের প্রচলন তেমন না থাকলেও গম পাওয়া গেছে—",
+                    "options": {
+                        "a": "কর্ণসুবর্ণের কাছে রক্তমৃত্তিকা বিহারের ধ্বংসস্তুপের মধ্যে মাটি খুঁড়ে",
+                        "b": "হরপ্পার ধ্বংসস্তুপের মাটি খুঁড়ে",
+                        "c": "মেহজোদাড়োর ভূমিগর্ভ থেকে",
+                        "d": "বিহারের কাছে মাটি খুঁড়ে"
+                    }
+                },
+                {
+                    "q_no": "Q36",
+                    "question": "'যবাগু', বাংলায় 'জাউ'— এই কথাটির অর্থ কী?",
+                    "options": {
+                        "a": "গম খাওয়া হত ভেজে ছাতু করে",
+                        "b": "যব খাওয়া হত মণ করে",
+                        "c": "ধান খাওয়া হত ভেজে ছাতু করে",
+                        "d": "ধান খাওয়া হত মণ করে"
+                    }
+                },
+                {
+                    "q_no": "Q37",
+                    "question": "নিচের প্রদত্ত বিকল্পগুলির মধ্যে কোনটি সঠিক নয়?",
+                    "options": {
+                        "a": "হরিতা = রিঠা",
+                        "b": "কর্করী = কাঁকুড়",
+                        "c": "এচ্ছড় = এঁচড়",
+                        "d": "বাতিঙ্গন = বেগুন"
+                    }
+                },
+                {
+                    "q_no": "Q38",
+                    "question": "গদ্যাংশ অনুসারে সর্বানন্দ যে শ্লোকের ব্যাখ্যা করেছিলেন সেই শ্লোকটি—",
+                    "options": {
+                        "a": "শাকং দশবিধ স্মৃতম্",
+                        "b": "শাকং দশবিধং স্মৃতম্",
+                        "c": "শাকম দশবিবং স্মৃতং",
+                        "d": "শাকং দসবিধং স্মৃতং"
+                    }
+                },
+                {
+                    "q_no": "Q39",
+                    "question": "গদ্যাংশ অনুসারে কলাইয়ের মধ্যে কোনওগুলির উল্লেখ আছে?",
+                    "options": {
+                        "a": "মূর্গ, সোনামুগ, বনমুগ, মর্ষ",
+                        "b": "মুগ-ঘোরেমুগ, মাষ ও মর্ষর",
+                        "c": "মুদগবনী, কাঠইড়া, মাঘ, সোনামুগ",
+                        "d": "মর্ষ, মণ্টর, অডুহর, মুগ"
+                    }
+                },
+                {
+                    "q_no": "Q40",
+                    "question": "কবিতা পাঠের পর শিক্ষক/শিক্ষিকা শ্রেণির সকল ছাত্র-ছাত্রীকে কয়েকটি দলে ভাগ করে নিম্নলিখিত নির্দেশগুলি দেবেন— প্রথম দল বিষয় সম্পর্কে ছবি দেখাবে, দ্বিতীয় দলের কাজ কবিতার মূল ভাবটিকে মুখে বলা, তৃতীয় দল কবিতাটি সম্পর্কে মতামত গদ্যে লিখে প্রকাশ করবে। এই সক্রিয়তার উদ্দেশ্য কী?",
+                    "options": {
+                        "a": "শিক্ষার্থীদের বিভিন্ন কাজে দেওয়া",
+                        "b": "নিছক সময় অতিবাহিত করা",
+                        "c": "আসন্ন পরীক্ষার জন্য প্রস্তুত করা",
+                        "d": "শিক্ষার্থীদের মধ্যে থাকা বিভিন্ন ক্ষমতা ও প্রবণতাকে গুরুত্ব দেওয়া"
+                    }
+                },
+                {
+                    "q_no": "Q41",
+                    "question": "যদি কোনো শিক্ষক/শিক্ষিকা লক্ষ্য করেন কোনো শিক্ষার্থী পঠনজনিত সমস্যার (Reading disorder) শিকার তখন তাকে নিম্নলিখিত কোন সমস্যার সঙ্গে শনাক্ত বলে মনে করবেন?",
+                    "options": {
+                        "a": "অ্যাফেসিয়া",
+                        "b": "ডিসক্যালকুলা",
+                        "c": "ডিসলেক্সিয়া",
+                        "d": "অটিজম"
+                    }
+                },
+                {
+                    "q_no": "Q42",
+                    "question": "শিক্ষার ক্ষেত্রে 'ভাষার কেন্দ্রিকতা'র (Centrality of Language) অর্থ কী?",
+                    "options": {
+                        "a": "ভাষা অন্যান্য সকল বিষয় (Subject) শেখার ক্ষেত্রেই কেন্দ্রীয় ভূমিকা পালন করে",
+                        "b": "ভাষার সঙ্গে অন্যান্য বিষয় (Subject) শিক্ষার কোনো যোগ নেই",
+                        "c": "বিষয় চর্চা (Content Studies) ভাষাশিক্ষার কেন্দ্র",
+                        "d": "কোনো বিশেষ বিষয় সম্পর্কিত অর্জনের জন্য ভাষার দিকে গুরুত্ব দেওয়ার প্রয়োজন নেই"
+                    }
+                },
+                {
+                    "q_no": "Q43",
+                    "question": "নিম্নলিখিত কোন বৈশিষ্ট্যটি আদর্শ পাঠের বৈশিষ্ট্য নয়?",
+                    "options": {
+                        "a": "উপলব্ধি",
+                        "b": "নির্ভুল",
+                        "c": "অসঙ্গতি",
+                        "d": "গতি"
+                    }
+                },
+                {
+                    "q_no": "Q44",
+                    "question": "নীরব পাঠের নিম্নলিখিত উদ্দেশ্যগুলির মধ্যে কোন উদ্দেশ্যটি সর্বথেকে বেশি যুক্তিযুক্ত?",
+                    "options": {
+                        "a": "শব্দভাণ্ডার বৃদ্ধি",
+                        "b": "যথাযথ উচ্চারণের অভ্যাস নির্মাণ",
+                        "c": "শিক্ষার্থীকে নিজের মতো কাজে ব্যস্ত রাখা",
+                        "d": "পাঠ (Text)-এর মূল ধারণাটিকে মনোযোগ সহকারে বুঝে নিতে সাহায্য করা"
+                    }
+                },
+                {
+                    "q_no": "Q45",
+                    "question": "একটি বিতর্ক প্রতিযোগিতার আয়োজন করে শিক্ষক/শিক্ষিকা যদি শিক্ষার্থীদের বলেন সহপাঠীদের পারস্পরিক মানাঙ্কন (Assessment) করতে তাহলে সেটি হবে—",
+                    "options": {
+                        "a": "দলগত মানাঙ্কন",
+                        "b": "ব্যক্তিগত মানাঙ্কন",
+                        "c": "সহপাঠীদের মানাঙ্কন",
+                        "d": "আত্মগত মানাঙ্কন"
+                    }
+                },
+                {
+                    "q_no": "Q46",
+                    "question": "প্রাথমিক শিক্ষার ক্ষেত্রে মাতৃভাষায় শিক্ষা দেওয়ার কারণ কী?",
+                    "options": {
+                        "a": "মাতৃভাষা শিশুর পক্ষে সহজে বোধগম্য",
+                        "b": "আঞ্চলিক ভাষাগুলিকে প্রাধান্য দেওয়ার জন্য",
+                        "c": "মাতৃভাষায় শিক্ষাদানে কম খরচ লাগে",
+                        "d": "অভিভাবকেরা বেশিরভাগই ভাষাটা জানে"
+                    }
+                },
+                {
+                    "q_no": "Q47",
+                    "question": "সংশোধনী শিক্ষণের মূল উদ্দেশ্যের মধ্যে কোনটি অন্তর্ভুক্ত নয়?",
+                    "options": {
+                        "a": "পিছিয়ে পড়া শিক্ষার্থীদের দুর্বলতাকে চিহ্নিত করা",
+                        "b": "প্রয়োজনীয় সংশোধনে সহায়তা করা",
+                        "c": "নতুন বিষয় পড়ানোর আগে সকলের মধ্যে পূর্বপাঠের জ্ঞানের সমতা আনা",
+                        "d": "দুর্বলতাগ্রস্ত শিক্ষার্থীদের মানসিক পীড়ন করা"
+                    }
+                },
+                {
+                    "q_no": "Q48",
+                    "question": "বিনা ব্যয়ে বাধ্যতামূলক শিশু শিক্ষার অধিকার আইন, ২০০৯ অনুযায়ী কোন বিবৃতিটি সঠিক?",
+                    "options": {
+                        "a": "বন্ধুত্বপূর্ণ ও শিশুকেন্দ্রিক পদ্ধতি অনুসরণ করতে হবে",
+                        "b": "অতিরিক্ত কোচিং-এর ব্যবস্থা রাখতে হবে",
+                        "c": "লেখাপড়া করতে না চাইলে শাস্তির ব্যবস্থা রাখতে হবে",
+                        "d": "মাতৃভাষার মাধ্যমে শিক্ষায় কম গুরুত্ব দিতে হবে"
+                    }
+                },
+                {
+                    "q_no": "Q49",
+                    "question": "কবিতাপাঠের পর শিক্ষক/শিক্ষিকা শ্রেণির সকল ছাত্র-ছাত্রীকে কয়েকটি দলে ভাগ করে নির্দেশগুলি দেবেন—প্রথম দল বিষয় সম্পর্কে ছবি দেখাবে, দ্বিতীয় দলের কাজ কবিতার মূল ভাবটিকে মুখে বলা, তৃতীয় দল কবিতাটি সম্পর্কে মতামত গদ্যে লিখে প্রকাশ করবে। এই সক্রিয়তার উদ্দেশ্য কী?",
+                    "options": {
+                        "a": "শিক্ষার্থীদের বিভিন্ন কাজে দেওয়া",
+                        "b": "নিছক সময় অতিবাহিত করা",
+                        "c": "আসন্ন পরীক্ষার জন্য প্রস্তুত করা",
+                        "d": "শিক্ষার্থীদের মধ্যে থাকা বিভিন্ন ক্ষমতা ও প্রবণতাকে গুরুত্ব দেওয়া"
+                    }
+                },
+                {
+                    "q_no": "Q50",
+                    "question": "কবিতাপাঠের আলোচনায় প্রাসঙ্গিকভাবে একজন শিক্ষক/শিক্ষিকা ইতিহাস বা ভূগোল বিষয়ের সম্পর্ক দেখাচ্ছেন— এক্ষেত্রে তিনি কোন শিক্ষণ কৌশল অবলম্বন করেছেন?",
+                    "options": {
+                        "a": "অনুগামী",
+                        "b": "অনুসন্ধান",
+                        "c": "অনুবদ্ধ",
+                        "d": "অনুসারী"
+                    }
+                },
+                {
+                    "q_no": "Q51",
+                    "question": "নিম্নলিখিত কোন ক্ষেত্রে প্রবণদক্ষতার প্রয়োগ সরাসরি হয় না?",
+                    "options": {
+                        "a": "রেলস্টেশনে গাড়ি সময় সম্পর্কিত ঘোষণা",
+                        "b": "ক্লাসরুমে শিক্ষকের/শিক্ষিকার পরীক্ষার দিন ঘোষণা",
+                        "c": "স্কুলে বসে একজনে গল্পের বই পড়া",
+                        "d": "সাংস্কৃতিক অনুষ্ঠানে কবিতা পাঠ"
+                    }
+                },
+                {
+                    "q_no": "Q52",
+                    "question": "নিম্নলিখিত কোনটি 'জরুরি সাক্ষরতা স্তর' (Emergent Literacy Stage)-এ লক্ষ করা যায় না?",
+                    "options": {
+                        "a": "বই-এর প্রতি আগ্রহ",
+                        "b": "গল্পবলা বা বলার ক্ষমতা",
+                        "c": "বিভিন্ন জিনিসের নাম জানা",
+                        "d": "শব্দ লেখার ক্ষমতা"
+                    }
+                },
+                {
+                    "q_no": "Q53",
+                    "question": "শিক্ষণ-শিখন উপকরণ (Teaching-Learning Material) ব্যবহারে কোন বিষয়টি বেশি জরুরি?",
+                    "options": {
+                        "a": "সহজলভ্য",
+                        "b": "স্বল্পমূল্য",
+                        "c": "শিক্ষার্থীর তৈরি",
+                        "d": "বিষয়ের সঙ্গে সম্পৃক্ত (Contextualised) এবং যথাযথভাবে প্রযুক্ত"
+                    }
+                },
+                {
+                    "q_no": "Q54",
+                    "question": "ব্যাকরণ শিক্ষার ক্ষেত্রে— শিক্ষক/শিক্ষিকা বক্তা, পাঠদান শুষ্ক ও নীরস এবং শিক্ষার্থীদের প্রতিক্রিয়া অপ্রয়োজনীয়, মুখস্থ নির্ভর— উপরিউক্ত মন্তব্যগুলি কোন বিশেষ শিক্ষাপদ্ধতিকে নির্দেশ করছে?",
+                    "options": {
+                        "a": "সূত্র পদ্ধতি",
+                        "b": "আরোহী পদ্ধতি",
+                        "c": "বিশ্লেষণ পদ্ধতি",
+                        "d": "অবরোহী পদ্ধতি"
+                    }
+                },
+                {
+                    "q_no": "Q55",
+                    "question": "বাংলা ক্লাসে যদি কোনো শিক্ষক/শিক্ষিকা শিক্ষার্থীর মৌলিকতা ও সৃজনশীলতার সন্ধান পেতে চান তাহলে তিনি কোন ধরনের প্রশ্নের সাহায্য নেবেন?",
+                    "options": {
+                        "a": "সত্য/মিথ্যাবাচক প্রশ্ন",
+                        "b": "একটি শব্দের উত্তরভিত্তিক প্রশ্ন",
+                        "c": "বহুনির্বাচনধর্মী (MCQ) প্রশ্ন",
+                        "d": "মুক্তপ্রান্তিক প্রশ্ন"
+                    }
+                },
+                {
+                    "q_no": "Q56",
+                    "question": "'ঘোড়সওয়ারি সেনা সেথায় চলে পথে পথে'— ঘোড়সওয়ারি সেনার ঋজুর রঙ কী ও সঙী ঘোড়ার সংখ্যা কত?",
+                    "options": {
+                        "a": "পীতবরন ও দশ",
+                        "b": "নীলবরন ও পঞ্চশ",
+                        "c": "রক্তবরন ও তিরিশ",
+                        "d": "হরিৎবরন ও চল্লিশ"
+                    }
+                },
+                {
+                    "q_no": "Q57",
+                    "question": "'আমি থাকি মালঞ্চেতে রাজবাগানের মালী'— এখানে 'আমি' কে?",
+                    "options": {
+                        "a": "রাজকুমারী",
+                        "b": "নাগকুমারী",
+                        "c": "সেনা",
+                        "d": "কথক"
+                    }
+                },
+                {
+                    "q_no": "Q58",
+                    "question": "'রাজপ্রাসাদের দেউড়ি সেথায় শেত পাথরে গাঁথা'— নিম্নরেখ শব্দটির অর্থ কী?",
+                    "options": {
+                        "a": "খিড়কি দ্বার",
+                        "b": "মন্দির কক্ষের দ্বার",
+                        "c": "গুপ্তকক্ষের দ্বার",
+                        "d": "সদর দ্বার"
+                    }
+                },
+                {
+                    "q_no": "Q59",
+                    "question": "'জবাব পেলে, দয়া করে আমার বাড়ি যেয়ো'— নিম্নরেখ ক্রিয়াপদটি কী জাতীয় ভাব নির্দেশ করে?",
+                    "options": {
+                        "a": "নির্দেশক ভাব",
+                        "b": "অনুজ্ঞা ভাব",
+                        "c": "সংযোজক ভাব",
+                        "d": "উপদেশাত্মক ভাব"
+                    }
+                },
+                {
+                    "q_no": "Q60",
+                    "question": "'বাড়িটা তার ছিল বুঝি শতী নদীর মোড়ে'— নিম্নরেখ পদটি কী জাতীয় অব্যয়?",
+                    "options": {
+                        "a": "সিদ্ধান্তবাচক সমুচ্চয়ী অব্যয়",
+                        "b": "ভাবপ্রকাশক অনন্বয়ী অব্যয়",
+                        "c": "সংশয়সূচক সমুচ্চয়ী অব্যয়",
+                        "d": "বিতিরেকাত্মক সমুচ্চয়ী অব্যয়"
+                    }
+                },
+                {
+                    "q_no": "Q61",
+                    "question": "'ছায়া হয়ে গেল কখন চাঁপাগাছের ছায়ে'— নিম্নরেখ পদটি কী জাতীয় পদ?",
+                    "options": {
+                        "a": "ক্রিয়ার বিশেষণ",
+                        "b": "কৃদন্ত বিশেষণ",
+                        "c": "অব্যয়জাত বিশেষণ",
+                        "d": "তদ্ধিতান্ত বিশেষণ"
+                    }
+                }
+            ]
+        },
+        {
+            "part": "C",
+            "subject": "Language-II (English)",
+            "questions": [
+                {
+                    "q_no": "Q62",
+                    "question": "Darius took drastic steps to __________ the rebellious part of the empire.",
+                    "options": {
+                        "a": "weaken",
+                        "b": "conquer",
+                        "c": "destroy",
+                        "d": "calm"
+                    }
+                },
+                {
+                    "q_no": "Q63",
+                    "question": "The people of Delos did not want to __________ the conquest of Greece.",
+                    "options": {
+                        "a": "end",
+                        "b": "think about",
+                        "c": "support",
+                        "d": "day dream about"
+                    }
+                },
+                {
+                    "q_no": "Q64",
+                    "question": "Statement (i) — Persia was autocratic. Statement (ii) — Athens was democratic. Choose the right option:",
+                    "options": {
+                        "a": "Statement (i) is false, and Statement (ii) is true",
+                        "b": "Statements (i) and (ii) both are true",
+                        "c": "Statement (i) is true and Statement (ii) is false",
+                        "d": "Both Statements (i) and (ii) are false"
+                    }
+                },
+                {
+                    "q_no": "Q65",
+                    "question": "The people of Delos ran away because they were",
+                    "options": {
+                        "a": "bold",
+                        "b": "wise",
+                        "c": "impatient",
+                        "d": "annoyed"
+                    }
+                },
+                {
+                    "q_no": "Q66",
+                    "question": "'Persia was ruled by one man.' The underlined word in the sentence is an example of",
+                    "options": {
+                        "a": "Noun",
+                        "b": "Adjective",
+                        "c": "Pronoun",
+                        "d": "Adverb"
+                    }
+                },
+                {
+                    "q_no": "Q67",
+                    "question": "Athens had __________ the other Greek city states against the Persians.",
+                    "options": {
+                        "a": "refused to help",
+                        "b": "wanted to fight",
+                        "c": "intervened on behalf of",
+                        "d": "given orders to fight"
+                    }
+                },
+                {
+                    "q_no": "Q68",
+                    "question": "The word 'abet' as used in the passage means—",
+                    "options": {
+                        "a": "fight",
+                        "b": "follow",
+                        "c": "assist",
+                        "d": "share"
+                    }
+                },
+                {
+                    "q_no": "Q69",
+                    "question": "Which of the following options come closest to the meaning of the word 'Ennobled' as used in the passage is—",
+                    "options": {
+                        "a": "worried",
+                        "b": "frightened",
+                        "c": "panicked",
+                        "d": "encouraged"
+                    }
+                },
+                {
+                    "q_no": "Q70",
+                    "question": "'Finally, I got a glimpse of him.' This is an example of an",
+                    "options": {
+                        "a": "assertive sentence",
+                        "b": "interrogative sentence",
+                        "c": "imperative sentence",
+                        "d": "exclamatory sentence"
+                    }
+                },
+                {
+                    "q_no": "Q71",
+                    "question": "'Et al' means:",
+                    "options": {
+                        "a": "also",
+                        "b": "either",
+                        "c": "but",
+                        "d": "and others"
+                    }
+                },
+                {
+                    "q_no": "Q72",
+                    "question": "In his excursion little Rakesh was accompanied by",
+                    "options": {
+                        "a": "the narrator",
+                        "b": "Prem",
+                        "c": "his brother",
+                        "d": "his friends"
+                    }
+                },
+                {
+                    "q_no": "Q73",
+                    "question": "Little Rakesh was __________ when he saw the narrator for the first time in his life.",
+                    "options": {
+                        "a": "two years old",
+                        "b": "four months old",
+                        "c": "four years old",
+                        "d": "a baby of one year"
+                    }
+                },
+                {
+                    "q_no": "Q74",
+                    "question": "The synonym of 'denizen' is",
+                    "options": {
+                        "a": "army",
+                        "b": "students",
+                        "c": "occupants",
+                        "d": "animals"
+                    }
+                },
+                {
+                    "q_no": "Q75",
+                    "question": "\"I would carry him into the garden, and later, up the steep gravel path to the main road.\" This sentence is an example of",
+                    "options": {
+                        "a": "Simple past tense",
+                        "b": "Past perfect tense",
+                        "c": "Past continuous tense",
+                        "d": "Past perfect continuous tense"
+                    }
+                },
+                {
+                    "q_no": "Q76",
+                    "question": "The animal which is rare in the place mentioned in the passage is",
+                    "options": {
+                        "a": "tiger",
+                        "b": "bat",
+                        "c": "squirrel",
+                        "d": "tag-beetle"
+                    }
+                },
+                {
+                    "q_no": "Q77",
+                    "question": "According to NCF (National Curriculum Framework) 2005, multilingualism in a language classroom should be seen as",
+                    "options": {
+                        "a": "a challenge to second language teaching.",
+                        "b": "a hindrance to second language acquisition.",
+                        "c": "a shortcoming in second language teaching.",
+                        "d": "a resource in teaching second language."
+                    }
+                },
+                {
+                    "q_no": "Q78",
+                    "question": "For teaching a grammar item a teacher begins with examples, and then with the help of examples, she/he clarifies the rules. After that she/he asks the students to provide more examples and provide clarifications. The teacher here is thus using the",
+                    "options": {
+                        "a": "Deductive method",
+                        "b": "Inductive method",
+                        "c": "Inductive-Deductive method",
+                        "d": "Direct method"
+                    }
+                },
+                {
+                    "q_no": "Q79",
+                    "question": "Which of the following TLM is most essential for an English teacher to carry to the classroom?",
+                    "options": {
+                        "a": "Dictionary",
+                        "b": "Chart",
+                        "c": "Textbook",
+                        "d": "Model"
+                    }
+                },
+                {
+                    "q_no": "Q80",
+                    "question": "Which of the following is not a principle for second language teaching?",
+                    "options": {
+                        "a": "Prompt feedback",
+                        "b": "Continuous assessment",
+                        "c": "Memorisation of the rules of grammar",
+                        "d": "Use of different contexts"
+                    }
+                },
+                {
+                    "q_no": "Q81",
+                    "question": "Which of the following is the principle of teaching grammar in a second language classroom?",
+                    "options": {
+                        "a": "Learners should be taught only the aspects relevant for communication.",
+                        "b": "Learners should be taught every grammatical aspect thoroughly.",
+                        "c": "Learners should be taught the art of scaffolding.",
+                        "d": "Learners should be taught only translation."
+                    }
+                },
+                {
+                    "q_no": "Q82",
+                    "question": "Which of the following is not true for second language learning and acquisition in direct method?",
+                    "options": {
+                        "a": "Socio-cultural differences constitute the principle factor in both.",
+                        "b": "We do not use translation method for both.",
+                        "c": "We use mother tongue for both.",
+                        "d": "Socio-linguistic factor is essential for both."
+                    }
+                },
+                {
+                    "q_no": "Q83",
+                    "question": "Sitting arrangement in a diverse second language classroom should be",
+                    "options": {
+                        "a": "fixed",
+                        "b": "flexible but planned",
+                        "c": "fixed but planned",
+                        "d": "flexible but unplanned"
+                    }
+                },
+                {
+                    "q_no": "Q84",
+                    "question": "Immediate correction of errors is encouraged in",
+                    "options": {
+                        "a": "communicative approach",
+                        "b": "translation method",
+                        "c": "community based language learning",
+                        "d": "project based method"
+                    }
+                },
+                {
+                    "q_no": "Q85",
+                    "question": "The meaning of a word in a passage depends only on",
+                    "options": {
+                        "a": "its dictionary explanation",
+                        "b": "its context",
+                        "c": "its origin",
+                        "d": "its spelling"
+                    }
+                },
+                {
+                    "q_no": "Q86",
+                    "question": "Basic skills for language learning comprises of",
+                    "options": {
+                        "a": "speaking, remembering, listening, spelling",
+                        "b": "listening, speaking, reading, writing",
+                        "c": "speaking, framing, writing, analysing",
+                        "d": "speaking, thinking, reading, writing"
+                    }
+                },
+                {
+                    "q_no": "Q87",
+                    "question": "Which one of the given alternatives is not true about language acquisition?",
+                    "options": {
+                        "a": "A child uses the language correctly without being conscious about the grammar rules.",
+                        "b": "Language development takes place in a natural setting.",
+                        "c": "Affective factors like anxiety, self-confidence, etc. are not involved in the process.",
+                        "d": "Instruction from experts is required."
+                    }
+                },
+                {
+                    "q_no": "Q88",
+                    "question": "The purpose of remedial teaching is to",
+                    "options": {
+                        "a": "introduce new language items",
+                        "b": "test recently taught language items",
+                        "c": "teach again the language items not properly learnt",
+                        "d": "teach again the language items already learnt"
+                    }
+                },
+                {
+                    "q_no": "Q89",
+                    "question": "Listening comprehension is a/an",
+                    "options": {
+                        "a": "passive skill",
+                        "b": "active skill",
+                        "c": "productive skill",
+                        "d": "reasoning skill"
+                    }
+                },
+                {
+                    "q_no": "Q90",
+                    "question": "Which of the following activity is most appropriate in developing language skills?",
+                    "options": {
+                        "a": "Watching films",
+                        "b": "Reading storybooks",
+                        "c": "Participating in cultural functions",
+                        "d": "Preparing school magazines"
+                    }
+                }
+            ]
+        },
+        {
+            "part": "D",
+            "subject": "Mathematics",
+            "questions": [
+                {
+                    "q_no": "Q91",
+                    "question": "Sum of all the factors of 100 is",
+                    "options": {
+                        "a": "216",
+                        "b": "117",
+                        "c": "223",
+                        "d": "217"
+                    }
+                },
+                {
+                    "q_no": "Q92",
+                    "question": "Which one of the following is not a characteristic of mathematics?",
+                    "options": {
+                        "a": "Uncertainty in result",
+                        "b": "Correctness",
+                        "c": "Originality",
+                        "d": "Truthfulness"
+                    }
+                },
+                {
+                    "q_no": "Q93",
+                    "question": "In order to teach the concept of 'addition of fractions', which one of the following questions a teacher should prefer first as an example?",
+                    "options": {
+                        "a": "3½ + ½ = ?",
+                        "b": "4/5 + 3/5 = ?",
+                        "c": "2/3 + 3/2 = ?",
+                        "d": "1/5 + 2/5 = ?"
+                    }
+                },
+                {
+                    "q_no": "Q94",
+                    "question": "The digit, whose place value in a number, does not depend on the place is",
+                    "options": {
+                        "a": "7",
+                        "b": "9",
+                        "c": "0",
+                        "d": "1"
+                    }
+                },
+                {
+                    "q_no": "Q95",
+                    "question": "Let A = (666 × 123 + 1) × (66 × 456 + 2) + 1 and B = (33 × 578 + 2) × (333 × 734 + 1) + 1 then",
+                    "options": {
+                        "a": "only A is prime",
+                        "b": "only B is prime",
+                        "c": "both A and B are prime",
+                        "d": "none is prime"
+                    }
+                },
+                {
+                    "q_no": "Q96",
+                    "question": "Which of the following conceptual statements should come first at the time of teaching Mathematics?",
+                    "options": {
+                        "a": "'Zero' is to be taught with the first set of numbers.",
+                        "b": "'Zero' is to be taught after making learners acquainted with digits from 1 to 9.",
+                        "c": "'Zero' is to be taught after making learners to acquire the sense of natural numbers and binary operation 'subtraction'.",
+                        "d": "'Zero' is to be taught while teaching the place values of digits in a number."
+                    }
+                },
+                {
+                    "q_no": "Q97",
+                    "question": "\"Mathematics is the mirror of civilization.\"— Who said this?",
+                    "options": {
+                        "a": "Heghen",
+                        "b": "Bacon",
+                        "c": "Whitehead",
+                        "d": "Berthelot"
+                    }
+                },
+                {
+                    "q_no": "Q98",
+                    "question": "The sixty second decimal place in the decimal representation of 22/7 will have the digit",
+                    "options": {
+                        "a": "7",
+                        "b": "4",
+                        "c": "2",
+                        "d": "5"
+                    }
+                },
+                {
+                    "q_no": "Q99",
+                    "question": "121212 × (1/100 + 1/10000) =",
+                    "options": {
+                        "a": "4214·1222",
+                        "b": "1224·2412",
+                        "c": "1212·1212",
+                        "d": "2121·2121"
+                    }
+                },
+                {
+                    "q_no": "Q100",
+                    "question": "Which of the following does not represent the lengths of the sides of a triangle?",
+                    "options": {
+                        "a": "5 cm, 6 cm, 7 cm",
+                        "b": "2 cm, 5 cm, 6 cm",
+                        "c": "2 cm, 3 cm, 7 cm",
+                        "d": "3 cm, 4 cm, 5 cm"
+                    }
+                },
+                {
+                    "q_no": "Q101",
+                    "question": "1, 3, 6, 10, ... are triangular numbers. The tenth triangular number is",
+                    "options": {
+                        "a": "42",
+                        "b": "50",
+                        "c": "55",
+                        "d": "100"
+                    }
+                },
+                {
+                    "q_no": "Q102",
+                    "question": "Let p be a prime number. Given statements are (i) p has exactly two distinct factors. (ii) p ≠ 1 (iii) p must be odd. (iv) p − 2 ≥ 0. Which one of the following is the set of true statements?",
+                    "options": {
+                        "a": "(i), (ii), (iv)",
+                        "b": "(i), (ii)",
+                        "c": "(iv), (iii)",
+                        "d": "(iii), (i)"
+                    }
+                },
+                {
+                    "q_no": "Q103",
+                    "question": "(0·1 − 0·01) × 0·11 × (0·01 + 0·0001) =",
+                    "options": {
+                        "a": "0·00009999",
+                        "b": "0·909099",
+                        "c": "0·10101111",
+                        "d": "0·00000099"
+                    }
+                },
+                {
+                    "q_no": "Q104",
+                    "question": "Ram can finish a piece of work in 6 days doing 10 hours of work in each day. Actually, after working 3 days (10 hours a day) he starts working 6 hours a day to finish the rest portion of the job. Then the total time Ram would require to finish the job is",
+                    "options": {
+                        "a": "10 days",
+                        "b": "8 days",
+                        "c": "12 days",
+                        "d": "15 days"
+                    }
+                },
+                {
+                    "q_no": "Q105",
+                    "question": "To evaluate the length of the path described by a circular wheel by a complete rotation, we need to evaluate",
+                    "options": {
+                        "a": "the area of the wheel",
+                        "b": "the circumference of the wheel",
+                        "c": "the measure of the circumference of the wheel",
+                        "d": "The length of any chord"
+                    }
+                },
+                {
+                    "q_no": "Q106",
+                    "question": "Which of the following statements is incorrect for a circle?",
+                    "options": {
+                        "a": "'The chords, equidistant from the centre, are of equal lengths.'",
+                        "b": "'The equal chords of a circle are equidistant from the centre.'",
+                        "c": "'The straight line segment joining the mid-points of two parallel chords of a circle always pass through the centre.'",
+                        "d": "'The straight line joining the mid-points of two parallel chords of a circle must pass through its centre.'"
+                    }
+                },
+                {
+                    "q_no": "Q107",
+                    "question": "If a teacher wants to share the concept of the formula '(a + b)² = a² + 2ab + b²', which question among the following should be raised to evaluate the previous knowledge required for the content?",
+                    "options": {
+                        "a": "13² = 169 (T/F)",
+                        "b": "(5/3)² = 25/9 (T/F)",
+                        "c": "67² = 649 (T/F)",
+                        "d": "5 × 5 = 5² (T/F)"
+                    }
+                },
+                {
+                    "q_no": "Q108",
+                    "question": "In order to motivate a learner to learn geometry, which one of the following is not required?",
+                    "options": {
+                        "a": "Problems arising from life",
+                        "b": "Folding of papers",
+                        "c": "Mathematical game",
+                        "d": "Complex problems on geometry"
+                    }
+                },
+                {
+                    "q_no": "Q109",
+                    "question": "Which of the following symbols is unique for mathematical language?",
+                    "options": {
+                        "a": "?",
+                        "b": "@",
+                        "c": "%",
+                        "d": "&"
+                    }
+                },
+                {
+                    "q_no": "Q110",
+                    "question": "NCF 2005, recommends that teaching of mathematics at Primary Level should focus on",
+                    "options": {
+                        "a": "Preparation for higher mathematics",
+                        "b": "Helping students in correlating the classroom and in learning with daily life",
+                        "c": "Helping students to achieve international standard of learning in mathematics",
+                        "d": "Abstract concepts of mathematics"
+                    }
+                },
+                {
+                    "q_no": "Q111",
+                    "question": "Given statements are— (i) two angles are complement of one another if their sum is 90°. (ii) Complement of an angle of measure 70° is an angle of measure 20°. (iii) Complement of an angle of measure 20° is an angle of measure 70°. (iv) Complement of an angle of measure 90° is an angle of measure 0°. In order to share the concept of complementary angles, a teacher should prefer the order",
+                    "options": {
+                        "a": "(i), (ii), (iii), (iv)",
+                        "b": "(ii), (iii), (iv), (i)",
+                        "c": "(iii), (iv), (i), (ii)",
+                        "d": "(iv), (i), (ii), (iii)"
+                    }
+                },
+                {
+                    "q_no": "Q112",
+                    "question": "What is the difference between the place values of two 7's in 1715271?",
+                    "options": {
+                        "a": "699930",
+                        "b": "996930",
+                        "c": "0",
+                        "d": "30699"
+                    }
+                },
+                {
+                    "q_no": "Q113",
+                    "question": "35574 is divided by n to get a perfect square number. The least value of n is",
+                    "options": {
+                        "a": "2",
+                        "b": "3",
+                        "c": "6",
+                        "d": "12"
+                    }
+                },
+                {
+                    "q_no": "Q114",
+                    "question": "If the sum of all the proper divisors of a natural number be equal to the number itself, then the number is said to be perfect. For 42 and 28, we can say",
+                    "options": {
+                        "a": "Both are perfect",
+                        "b": "None is perfect",
+                        "c": "42 is perfect but 28 is not",
+                        "d": "28 is perfect but 42 is not"
+                    }
+                },
+                {
+                    "q_no": "Q115",
+                    "question": "The proper sequence of the names of the three angles 220°, 180°, 75° is",
+                    "options": {
+                        "a": "acute angle, right angle, obtuse angle",
+                        "b": "right angle, acute angle, straight angle",
+                        "c": "reflex angle, obtuse angle, acute angle",
+                        "d": "reflex angle, straight angle, acute angle"
+                    }
+                },
+                {
+                    "q_no": "Q116",
+                    "question": "The digit in the unit's place in the product of first 100 prime numbers is",
+                    "options": {
+                        "a": "1",
+                        "b": "3",
+                        "c": "5",
+                        "d": "0"
+                    }
+                },
+                {
+                    "q_no": "Q117",
+                    "question": "Ram loses a 100 m race to Faruk by 10 m. Distance that can be covered by Faruk when Ram covers a distance of 9·9 m is",
+                    "options": {
+                        "a": "10 m",
+                        "b": "9·1 m",
+                        "c": "11 m",
+                        "d": "12 m"
+                    }
+                },
+                {
+                    "q_no": "Q118",
+                    "question": "'Draw a geometrical figure.'— the level of the question is",
+                    "options": {
+                        "a": "Knowledge based",
+                        "b": "Understanding based",
+                        "c": "Application based",
+                        "d": "Skill based"
+                    }
+                },
+                {
+                    "q_no": "Q119",
+                    "question": "Which one of the following is not an essential characteristic of formative evaluation of mathematics?",
+                    "options": {
+                        "a": "Judgement on content knowledge of mathematics",
+                        "b": "Elemination of fear of mathematics",
+                        "c": "Self-evaluation of learners",
+                        "d": "Time consuming"
+                    }
+                },
+                {
+                    "q_no": "Q120",
+                    "question": "To share the knowledge of corresponding angles we need to consider",
+                    "options": {
+                        "a": "a pair of parallel straight lines only",
+                        "b": "a pair of parallel straight lines and a common transversal",
+                        "c": "a pair of coplanar straight lines (may not be parallel) and a common transversal",
+                        "d": "a pair of intersecting straight lines"
+                    }
+                }
+            ]
+        },
+        {
+            "part": "E",
+            "subject": "Environmental Studies",
+            "questions": [
+                {
+                    "q_no": "Q121",
+                    "question": "Which of the following are horticultural resources?",
+                    "options": {
+                        "a": "Paddy and Jute",
+                        "b": "Mango and Litchi",
+                        "c": "Tea and Coffee",
+                        "d": "Wheat and Maize"
+                    }
+                },
+                {
+                    "q_no": "Q122",
+                    "question": "Which one of the followings is an ecofriendly practice?",
+                    "options": {
+                        "a": "Not using a cloth bag",
+                        "b": "Using sound crackers",
+                        "c": "Unnecessarily switching on lights and fans",
+                        "d": "Going to school on foot or bicycling instead of using a private motor car"
+                    }
+                },
+                {
+                    "q_no": "Q123",
+                    "question": "Which one of the followings is associated with 'Blackfoot disease'?",
+                    "options": {
+                        "a": "Mercury",
+                        "b": "Arsenic",
+                        "c": "Cadmium",
+                        "d": "Selenium and Iron"
+                    }
+                },
+                {
+                    "q_no": "Q124",
+                    "question": "The characteristics of environmental education were enlisted for the first time in—",
+                    "options": {
+                        "a": "1976, Tbilisi conference",
+                        "b": "1977, Tbilisi conference",
+                        "c": "1977, Belgrade international workshop",
+                        "d": "1972, United Nations Conference on the Human Environment, Stockholm"
+                    }
+                },
+                {
+                    "q_no": "Q125",
+                    "question": "In which stage of environmental study based active research, is hypothesis formulated?",
+                    "options": {
+                        "a": "In problem identification stage",
+                        "b": "After the analysis of the probable causes",
+                        "c": "In research methodology stage",
+                        "d": "In assessment stage"
+                    }
+                },
+                {
+                    "q_no": "Q126",
+                    "question": "River Damodar flows through which of the following districts of West Bengal?",
+                    "options": {
+                        "a": "Hooghly, Jhargram, Birbhum, Howrah, Purulia",
+                        "b": "Purba Medinipur, Murshidabad, Purba Bardhaman, Coochbehar, Hooghly",
+                        "c": "Coochbehar, Howrah, Kalimpong, Paschim Bardhaman, Purulia",
+                        "d": "Purulia, Paschim Bardhaman, Purba Bardhaman, Hooghly, Howrah"
+                    }
+                },
+                {
+                    "q_no": "Q127",
+                    "question": "Which one of the following gases is a natural greenhouse gas?",
+                    "options": {
+                        "a": "Oxygen",
+                        "b": "Carbon monoxide",
+                        "c": "Nitrous oxide",
+                        "d": "Nitrogen"
+                    }
+                },
+                {
+                    "q_no": "Q128",
+                    "question": "The Chipko movement is associated with—",
+                    "options": {
+                        "a": "labour movement in India",
+                        "b": "trees and forest protecting movement in India",
+                        "c": "mineral resource conservation movement in India",
+                        "d": "peasant movement in India"
+                    }
+                },
+                {
+                    "q_no": "Q129",
+                    "question": "Which one of the followings is the correct sequence of energy flow?",
+                    "options": {
+                        "a": "Solar energy → Primary producer → Carnivores → Decomposer",
+                        "b": "Solar energy → Primary producer → Carnivores → Herbivores",
+                        "c": "Solar energy → Herbivores → Primary producer → Decomposer",
+                        "d": "Solar energy → Primary producer → Herbivores → Carnivores"
+                    }
+                },
+                {
+                    "q_no": "Q130",
+                    "question": "Which one of the following fertilizers contain nitrogen fixing cyanobacteria (Anabaena)?",
+                    "options": {
+                        "a": "Azolla biofertilizer",
+                        "b": "Dung manure",
+                        "c": "DAP (Di-ammonium Phosphate) fertilizer",
+                        "d": "NPK (Nitrogen-Phosphorus-Potassium) fertilizer"
+                    }
+                },
+                {
+                    "q_no": "Q131",
+                    "question": "Which one of the following objects are non-biodegradable wastes?",
+                    "options": {
+                        "a": "Vegetable peels, Leaves, Petals",
+                        "b": "Animal debris, Branches of trees, Rotten fruits",
+                        "c": "Plastic bottles, Computer parts, Batteries",
+                        "d": "Paper waste, Food waste, Compost"
+                    }
+                },
+                {
+                    "q_no": "Q132",
+                    "question": "Which of the following pair is not correct?",
+                    "options": {
+                        "a": "Architect — Sun Temple of Konark",
+                        "b": "Architect — Rashmancha of Bishnupur",
+                        "c": "Architect — Temples of Khajuraho",
+                        "d": "Architect — Ajanta Cave"
+                    }
+                },
+                {
+                    "q_no": "Q133",
+                    "question": "Which one of the following International Treaties had been designed in 1987 to protect the Ozone layer?",
+                    "options": {
+                        "a": "Kyoto Protocol",
+                        "b": "Copenhagen Accord",
+                        "c": "Paris Accord",
+                        "d": "Montreal Protocol"
+                    }
+                },
+                {
+                    "q_no": "Q134",
+                    "question": "Which of the following animal is the state animal of West Bengal?",
+                    "options": {
+                        "a": "Fishing Cat",
+                        "b": "Squirrel",
+                        "c": "Royal Bengal Tiger",
+                        "d": "Ganges River Dolphin"
+                    }
+                },
+                {
+                    "q_no": "Q135",
+                    "question": "Which one of the following animal species is not an example of endemic species?",
+                    "options": {
+                        "a": "Asiatic Lion, Gujrat",
+                        "b": "Lion-tailed Macaque, Western Ghats",
+                        "c": "Muga Silkworm, Assam",
+                        "d": "Leopard, Maharashtra"
+                    }
+                },
+                {
+                    "q_no": "Q136",
+                    "question": "The main disadvantage of observation based study in Environmental Studies is—",
+                    "options": {
+                        "a": "It creates a bonding between the teacher and the learner",
+                        "b": "It helps to increase the observational ability of the students",
+                        "c": "It is not possible to teach all the chapters of the subject",
+                        "d": "Students get the scope for thinking independently"
+                    }
+                },
+                {
+                    "q_no": "Q137",
+                    "question": "Which of the following tropical cyclone was a Super Cyclone?",
+                    "options": {
+                        "a": "Yaas, May 26, 2021",
+                        "b": "Tauktae, May 16-18, 2021",
+                        "c": "Amphan, May 18-19, 2020",
+                        "d": "Nisarga, June 3, 2020"
+                    }
+                },
+                {
+                    "q_no": "Q138",
+                    "question": "Which of the following is a bioindicator of air pollution?",
+                    "options": {
+                        "a": "Water hyacinth",
+                        "b": "Parthenium weed",
+                        "c": "Karabi flower Plant (Oleander or Nerium Plant)",
+                        "d": "Lichen"
+                    }
+                },
+                {
+                    "q_no": "Q139",
+                    "question": "There are 38 different groups of students in a class. Each group consists of an equal number of students. Six groups are asked to carry out projects on biomass energy, nine groups are asked to carry out projects on geothermal energy and four groups are asked to carry out projects on wind energy. Rest of the students are asked to carry out projects on fossil fuel. While asked to express the distribution of groups of students working on renewable energy through a pie-chart, the correct way of their representation will be —",
+                    "options": {
+                        "a": "Option A (R larger section)",
+                        "b": "Option B (R and O equal)",
+                        "c": "Option C (O slightly larger)",
+                        "d": "Option D (O larger section)"
+                    }
+                },
+                {
+                    "q_no": "Q140",
+                    "question": "Which one of the following is not a part of photochemical smog?",
+                    "options": {
+                        "a": "Ca",
+                        "b": "PAN",
+                        "c": "O₃",
+                        "d": "NO₂"
+                    }
+                },
+                {
+                    "q_no": "Q141",
+                    "question": "International Environmental Education Programme (IEEP) has been launched by—",
+                    "options": {
+                        "a": "UNO",
+                        "b": "UNESCO",
+                        "c": "UNICEF",
+                        "d": "ULO"
+                    }
+                },
+                {
+                    "q_no": "Q142",
+                    "question": "Which of the following is not a source of lead?",
+                    "options": {
+                        "a": "Paint",
+                        "b": "Distilled water",
+                        "c": "Cosmetics",
+                        "d": "Children's toys"
+                    }
+                },
+                {
+                    "q_no": "Q143",
+                    "question": "In EVS class, a teacher takes the learners to the zoo to introduce them to caged wild animals. This activity comes under the purview of—",
+                    "options": {
+                        "a": "Assignment",
+                        "b": "Experiment",
+                        "c": "Project work",
+                        "d": "Field visit"
+                    }
+                },
+                {
+                    "q_no": "Q144",
+                    "question": "The vector that acts as the carrier as well as host of causative organisms of diseases belongs to which of the following animal category?",
+                    "options": {
+                        "a": "Birds",
+                        "b": "Reptiles",
+                        "c": "Arthropods",
+                        "d": "Molluscs"
+                    }
+                },
+                {
+                    "q_no": "Q145",
+                    "question": "Which of the following statement is correct regarding the curriculum of EVS at primary level?",
+                    "options": {
+                        "a": "In the primary classes, topics of physical and social environment should not be included.",
+                        "b": "Experiment based teaching in class should not be included.",
+                        "c": "Children should not be involved in such activities which increase their creative and cognitive capacities.",
+                        "d": "At the primary level, EVS should include the topics of gender and gender-sensitivity."
+                    }
+                },
+                {
+                    "q_no": "Q146",
+                    "question": "Which rivers among them play an important role in the formation of soil of the Terai region of West Bengal? (Damodar, Matla, Teesta, Ichamati, Mahananda, Subarnarekha, Ajay, Raimangal)",
+                    "options": {
+                        "a": "Matla, Subarnarekha",
+                        "b": "Damodar, Ichamati",
+                        "c": "Teesta, Mahananda",
+                        "d": "Ajay, Raimangal"
+                    }
+                },
+                {
+                    "q_no": "Q147",
+                    "question": "The three R's to save the environment are—",
+                    "options": {
+                        "a": "Reserve, Reduce, Recycle",
+                        "b": "Reuse, Reserve, Reduce",
+                        "c": "Reduce, Recycle, Reuse",
+                        "d": "Reserve, Reuse, Reduce"
+                    }
+                },
+                {
+                    "q_no": "Q148",
+                    "question": "'Kuno National Park' has become famous recently because of—",
+                    "options": {
+                        "a": "reintroduction of the 'Dodo bird' from Europe",
+                        "b": "reintroduction of the 'Cheeta' from Central Asia",
+                        "c": "reintroduction of the 'Cheeta' from Africa",
+                        "d": "reintroduction of the 'Lion' from Africa"
+                    }
+                },
+                {
+                    "q_no": "Q149",
+                    "question": "What should be the minimum thickness of plastic carry-bags since 1st January, 2023 as per Plastic Waste Management (Amendment) Rules, 2021?",
+                    "options": {
+                        "a": "75 microns (micrometers, μm)",
+                        "b": "120 microns (micrometers, μm)",
+                        "c": "50 microns (micrometers, μm)",
+                        "d": "20 microns (micrometers, μm)"
+                    }
+                },
+                {
+                    "q_no": "Q150",
+                    "question": "The process by which earthworm decomposes biodegradable solid waste is called—",
+                    "options": {
+                        "a": "Composting",
+                        "b": "Landfilling",
+                        "c": "Shredding",
+                        "d": "Vermi-composting"
+                    }
+                }
+            ]
+        }
+    ]
+}

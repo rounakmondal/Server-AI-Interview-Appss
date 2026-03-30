@@ -1,0 +1,672 @@
+{
+  "exam_title": "WBP Constable Preliminary Question Paper 2015",
+  "exam_code": "SQ/15",
+  "total_questions": 60,
+  "total_marks": 90,
+  "marks_per_question": 1.5,
+  "time_allotted": "1 hour",
+  "negative_marking": "0.25 per wrong answer",
+  "languages": ["Bengali", "English"],
+  "questions": [
+    {
+      "q_no": "Q1",
+      "question": "If 2t + 3t = 4t + 6t - 10, then what is the value of t?",
+      "question_bn": "যদি 2t + 3t = 4t + 6t - 10 হয়, তবে t-এর মান কত?",
+      "options": {
+        "a": "-1",
+        "b": "0",
+        "c": "1/2",
+        "d": "2"
+      }
+    },
+    {
+      "q_no": "Q2",
+      "question": "Rakesh is on 9th position from upwards and 38th position from downwards in a class. How many students are there in the class?",
+      "question_bn": "রাকেশের শ্রেণিতে তার অবস্থান উপর দিক থেকে নবম স্থানে এবং নীচের দিক থেকে আটত্রিশতম স্থানে। রাকেশের শ্রেণিতে ছাত্রসংখ্যা কত?",
+      "options": {
+        "a": "47",
+        "b": "45",
+        "c": "46",
+        "d": "48"
+      }
+    },
+    {
+      "q_no": "Q3",
+      "question": "Change the voice (Active/Passive): People once believed that the sun was a God.",
+      "question_bn": "Change the voice (Active/Passive): People once believed that the sun was a God.",
+      "options": {
+        "a": "The sun is once being believed to be a God.",
+        "b": "The sun has once been believed to be a God.",
+        "c": "It was once believed that the sun was a God.",
+        "d": "It is once believed that the sun is a God."
+      }
+    },
+    {
+      "q_no": "Q4",
+      "question": "Which one of the following best describes the 'community policing'?",
+      "question_bn": "নীচে লেখা কোন্ বিবৃতিটি কমিউনিটি পুলিশিং সম্পর্কে সেরা ব্যাখ্যা?",
+      "options": {
+        "a": "Developing community partnership and engage them in problem solving.",
+        "b": "Developing the community in self-sustenance and economic development.",
+        "c": "Engaging the community to create awareness about Human Rights.",
+        "d": "Delegation of police duties to the public."
+      }
+    },
+    {
+      "q_no": "Q5",
+      "question": "If 1/2 is 3/4 of 4/5 of a certain number, what is the number?",
+      "question_bn": "যদি কোনো সংখ্যার 4/5 অংশের 3/4 অংশ 1/2-এর সমান হয়, তবে সংখ্যাটি কত?",
+      "options": {
+        "a": "3/10",
+        "b": "5/6",
+        "c": "6/5",
+        "d": "11/10"
+      }
+    },
+    {
+      "q_no": "Q6",
+      "question": "The synonym of 'Indifferent' is",
+      "question_bn": "The synonym of 'Indifferent' is",
+      "options": {
+        "a": "Neutral",
+        "b": "Unkind",
+        "c": "Precious",
+        "d": "Interested"
+      }
+    },
+    {
+      "q_no": "Q7",
+      "question": "Which one of the following is the India's first private Greenfield Airport?",
+      "question_bn": "নিম্নবর্ণিত কোন্টি ভারতবর্ষের প্রথম ব্যক্তি মালিকানাধীন গ্রিনফিল্ড এয়ারপোর্ট?",
+      "options": {
+        "a": "Mopa Airport, Goa",
+        "b": "Navi Mumbai Airport",
+        "c": "Kazi Nuzrul Islam Airport, Durgapur",
+        "d": "Netaji Subhash Chandra Bose Airport, Kolkata"
+      }
+    },
+    {
+      "q_no": "Q8",
+      "question": "A class is sponsoring a drama production to raise funds and plans to charge the same price for all admission tickets. The class has Rs. 700 in expenses for the production. If 300 tickets are sold, the class will make a profit of Rs. 1,100. What will be profit for the class if 500 tickets are sold?",
+      "question_bn": "তহবিল সংগ্রেহের উদ্দেশ্যে একটি শ্রেণির ছাত্ররা একটি নাটক মঞ্চস্থ করবার পরিকল্পনা করল এবং একই মূল্যের প্রবেশপত্রের ব্যবস্থা করবে স্থির করল। ঐ নাটক মঞ্চস্থ করবার ব্যয়ভার ছিল 700 টাকা। যদি 300 প্রবেশপত্র বিক্রিত হয়, তবে ঐ শ্রেণির লাভ হবে 1,100 টাকা। যদি 500 প্রবেশপত্র বিক্রিত হয়, তবে ঐ শ্রেণির লাভ কত হবে?",
+      "options": {
+        "a": "Rs. 1,133",
+        "b": "Rs. 3,700",
+        "c": "Rs. 2,300",
+        "d": "Rs. 1,833"
+      }
+    },
+    {
+      "q_no": "Q9",
+      "question": "Which of the following diagram denotes the group of mother-nurse-teacher? (Venn diagram question)",
+      "question_bn": "নীচের কোন্ চিত্রটি মাতা-সেবিকা-শিক্ষক নির্দেশ করে? (Venn diagram question)",
+      "options": {
+        "a": "Two separate circles",
+        "b": "Two overlapping circles",
+        "c": "One circle inside another",
+        "d": "Three overlapping circles"
+      }
+    },
+    {
+      "q_no": "Q10",
+      "question": "Find out the error from the underlined. Choose (D) if the sentence is correct. Excessive sugar intake can lead to addiction, obesity and to diabetes. No error.",
+      "question_bn": "Find out the error from the underlined. Choose (D) if the sentence is correct. Excessive sugar intake can lead to addiction, obesity and to diabetes. No error.",
+      "options": {
+        "a": "a (Excessive)",
+        "b": "b (can)",
+        "c": "c (to diabetes)",
+        "d": "d (No error)"
+      }
+    },
+    {
+      "q_no": "Q11",
+      "question": "Who established the Hindu College in Kolkata (Calcutta)?",
+      "question_bn": "কলকাতার হিন্দু কলেজ কে প্রতিষ্ঠা করেন?",
+      "options": {
+        "a": "Henry Louis Vivian Derozio",
+        "b": "Iswar Chandra Vidyasagar",
+        "c": "Keshab Chandra Sen",
+        "d": "Raja Rammuhan Roy"
+      }
+    },
+    {
+      "q_no": "Q12",
+      "question": "A total of 9 students took a test and their average score was 86. If the average score of 4 students was 81, what was the average score for the remaining 5 students?",
+      "question_bn": "একটি পরীক্ষায় 9 জন ছাত্রের প্রাপ্ত গড় নম্বর 86। যদি তাদের মধ্যে 4 জন ছাত্রের প্রাপ্ত গড় নম্বর 81 হয়, তবে বাকি 5 জন ছাত্রের প্রাপ্ত গড় নম্বর কত?",
+      "options": {
+        "a": "87",
+        "b": "86",
+        "c": "90",
+        "d": "91"
+      }
+    },
+    {
+      "q_no": "Q13",
+      "question": "Today is Monday. After 61 days, it will be",
+      "question_bn": "আজ সোমবার। 61 দিন পরের বারটি",
+      "options": {
+        "a": "Wednesday",
+        "b": "Saturday",
+        "c": "Tuesday",
+        "d": "Thursday"
+      }
+    },
+    {
+      "q_no": "Q14",
+      "question": "Change the speech (Direct/Indirect): 'Call the first witness', said the Judge.",
+      "question_bn": "Change the speech (Direct/Indirect): 'Call the first witness', said the Judge.",
+      "options": {
+        "a": "The judge commanded to call the first witness.",
+        "b": "The judge commanded them to call the first witness.",
+        "c": "The judge commanded that the first witness be called.",
+        "d": "The judge commanded the first witness to be called."
+      }
+    },
+    {
+      "q_no": "Q15",
+      "question": "The first Metro Railway Service in Kolkata began in the year",
+      "question_bn": "কলকাতায় মেট্রোরেল পরিসেবা চালু হয়",
+      "options": {
+        "a": "1984",
+        "b": "1981",
+        "c": "1975",
+        "d": "1979"
+      }
+    },
+    {
+      "q_no": "Q16",
+      "question": "The sun is predominantly made up of",
+      "question_bn": "সূর্য প্রধানত যে উপাদানগুলি দ্বারা সৃষ্ট:",
+      "options": {
+        "a": "Hydrogen and Helium",
+        "b": "Hydrogen and Neon",
+        "c": "Hydrogen and Xenon",
+        "d": "Hydrogen and Carbon dioxide"
+      }
+    },
+    {
+      "q_no": "Q17",
+      "question": "If xy + 7y = 84 and x + 7 = 3, then what is the value of y?",
+      "question_bn": "যদি xy + 7y = 84 এবং x + 7 = 3 হয়, তবে y-এর মান কত?",
+      "options": {
+        "a": "-4",
+        "b": "4.9",
+        "c": "8.4",
+        "d": "28"
+      }
+    },
+    {
+      "q_no": "Q18",
+      "question": "Choose an alternative from below which is different.",
+      "question_bn": "নিম্নবর্ণিত জায়গাগুলির মধ্য থেকে এমন জায়গার নাম পছন্দ করুন যেটি অন্যগুলির থেকে আলাদা।",
+      "options": {
+        "a": "Kolkata",
+        "b": "Haldia",
+        "c": "Paradeep",
+        "d": "Ranchi"
+      }
+    },
+    {
+      "q_no": "Q19",
+      "question": "Select the best alternative of the underlined portion from among the choices given: Sanjay baked his first cake and he was thirteen years old then.",
+      "question_bn": "Select the best alternative of the underlined portion from among the choices given: Sanjay baked his first cake and he was thirteen years old then.",
+      "options": {
+        "a": "and he was thirteen years old then",
+        "b": "at age thirteen years old",
+        "c": "when he was thirteen",
+        "d": "upon the reaching of thirteen years"
+      }
+    },
+    {
+      "q_no": "Q20",
+      "question": "Which one of the following diseases is not caused by bacteria?",
+      "question_bn": "নিম্নবর্ণিত কোন্ রোগটি ব্যাকটেরিয়া দ্বারা সৃষ্টি হয় না?",
+      "options": {
+        "a": "Typhoid",
+        "b": "Influenza",
+        "c": "Diphtheria",
+        "d": "Cholera"
+      }
+    },
+    {
+      "q_no": "Q21",
+      "question": "She has three children _______ her husband. (Fill in the blanks with the right option from below.)",
+      "question_bn": "She has three children _______ her husband. (Fill in the blanks with the right option from below.)",
+      "options": {
+        "a": "of",
+        "b": "in",
+        "c": "by",
+        "d": "from"
+      }
+    },
+    {
+      "q_no": "Q22",
+      "question": "National Police Academy is located at:",
+      "question_bn": "ন্যাশনাল পুলিশ অ্যাকাডেমি কোথায় অবস্থিত?",
+      "options": {
+        "a": "Bangaluru",
+        "b": "Hyderabad",
+        "c": "Nagpur",
+        "d": "Dehradun"
+      }
+    },
+    {
+      "q_no": "Q23",
+      "question": "When four given numbers are multiplied together, the product is negative. Which one of the following could be true about the four numbers?",
+      "question_bn": "যদি চারটি প্রদত্ত সংখ্যার গুণফল একটি ঋণাত্মক সংখ্যা হয়, তবে সংখ্যা চারটি সম্বন্ধে নীচের কোন বিবৃতিটি সত্য?",
+      "options": {
+        "a": "One is negative, two are positive and one is zero.",
+        "b": "Four are negative.",
+        "c": "Two are negative and two are positive.",
+        "d": "Three are negative and one is positive."
+      }
+    },
+    {
+      "q_no": "Q24",
+      "question": "Select the alternative that will come in place of question mark (?). computer : fqprxvht : : language : ?",
+      "question_bn": "প্রশ্নবোধক (?) চিহ্নিত স্থানের জন্য উপযুক্ত শব্দটি পছন্দ করুন। computer : fqprxvht : : language : ?",
+      "options": {
+        "a": "oxpixdig",
+        "b": "ocqicyig",
+        "c": "ocqixcjg",
+        "d": "ocqixcig"
+      }
+    },
+    {
+      "q_no": "Q25",
+      "question": "He _______ living in Delhi for ten years when I went there. (Fill in the blanks with the right option from below.)",
+      "question_bn": "He _______ living in Delhi for ten years when I went there. (Fill in the blanks with the right option from below.)",
+      "options": {
+        "a": "was been",
+        "b": "were",
+        "c": "had been",
+        "d": "is"
+      }
+    },
+    {
+      "q_no": "Q26",
+      "question": "Rita travelled 35 km from a point towards south and then turned left and travelled 20 km and finally turned left again and travelled 35 km. In which direction is she from the starting point?",
+      "question_bn": "একটি নির্দিষ্ট জায়গা থেকে যাত্রা শুরু করে রীতা দক্ষিণ দিকে 35 কিমি ভ্রমণ করল এবং তারপর সে বামদিকে ঘুরে গেল এবং আরও 20 কিমি ভ্রমণ করল। সবশেষে সে পুনরায় বামদিকে ঘুরে গেল এবং 35 কিমি ভ্রমণ করল। যাত্রা শুরুর জায়গা থেকে এখন সে কোন দিকে অবস্থান করছে?",
+      "options": {
+        "a": "East",
+        "b": "West",
+        "c": "North",
+        "d": "South"
+      }
+    },
+    {
+      "q_no": "Q27",
+      "question": "The antonym of 'Absurd' is",
+      "question_bn": "The antonym of 'Absurd' is",
+      "options": {
+        "a": "Scarcity",
+        "b": "Adorn",
+        "c": "Rational",
+        "d": "Insane"
+      }
+    },
+    {
+      "q_no": "Q28",
+      "question": "In computer language 'TB' stands for",
+      "question_bn": "কম্পিউটার পরিভাষা অনুযায়ী 'TB'-এর অর্থ",
+      "options": {
+        "a": "Tetrabyte",
+        "b": "Terabyte",
+        "c": "Terabit",
+        "d": "Tetrabit"
+      }
+    },
+    {
+      "q_no": "Q29",
+      "question": "On a blue print, 0.4 inch represents 6 feet. If the actual distance between two buildings is 76 feet, what would be the distance between the corresponding buildings on the blue print?",
+      "question_bn": "যদি কোনো নকশাতে 0.4 ইঞ্চি দূরত্বের অর্থ 6 ফুট দূরত্বের সমান হয়, তবে 76 ফুট দূরত্বে অবস্থিত দুটি অট্টালিকার দূরত্ব ঐ নকশাতে কত হবে?",
+      "options": {
+        "a": "3.2 inch",
+        "b": "5.1 inch",
+        "c": "12.7 inch",
+        "d": "30.4 inch"
+      }
+    },
+    {
+      "q_no": "Q30",
+      "question": "Five girls are sitting on a bench to be photographed. Seema is to the left of Rani and to the right of Bindu. Mary is to the right of Rani. Reeta is between Rani and Mary. Who is sitting immediate right to Reeta?",
+      "question_bn": "ছবি তোলার জন্য পাঁচজন বালিকা একটি বেঞ্চে এমনভাবে বসল যাতে সীমা রাণীর বামদিকে এবং বিন্দুর ডানদিকে থাকে। মেরি যেন রাণীর ডানদিকে থাকে। রীতা থাকবে রাণী ও মেরির মধ্যখানে। রীতার অব্যবহিত ডানদিকে কে বসবে?",
+      "options": {
+        "a": "Bindu",
+        "b": "Rani",
+        "c": "Mary",
+        "d": "Seema"
+      }
+    },
+    {
+      "q_no": "Q31",
+      "question": "'National Youth Day' is celebrated on the birthday of",
+      "question_bn": "নিম্নবর্ণিত কোন্ মহাপুরুষের জন্মদিনে 'ন্যাশনাল ইয়ুথ ডে' উদ্যাপিত হয়?",
+      "options": {
+        "a": "Khudiram Bose",
+        "b": "Bhagat Singh",
+        "c": "Subhash Chandra Bose",
+        "d": "Swami Vivekananda"
+      }
+    },
+    {
+      "q_no": "Q32",
+      "question": "As per the Census 2011, what is the sex ratio of India?",
+      "question_bn": "2011 জনগণনা/আদমসুমারির অনুযায়ী ভারতবর্ষের লিঙ্গ অনুপাত কত?",
+      "options": {
+        "a": "880",
+        "b": "970",
+        "c": "910",
+        "d": "940"
+      }
+    },
+    {
+      "q_no": "Q33",
+      "question": "Match the following: (1) Current — Ohm, (2) Resistance — Ampere, (3) Power — Kelvin, (4) Temperature — Watt",
+      "question_bn": "সঠিক শব্দ মেলান: (1) কারেন্ট — ওহম, (2) রেজিস্ট্যান্স — অ্যাম্পিয়ার, (3) পাওয়ার — কেলভিন, (4) টেম্পারেচার — ওয়াট",
+      "options": {
+        "a": "1-1, 2-2, 3-3, 4-4",
+        "b": "1-4, 2-3, 3-2, 4-1",
+        "c": "1-4, 2-1, 3-2, 4-3",
+        "d": "1-2, 2-1, 3-4, 4-3"
+      }
+    },
+    {
+      "q_no": "Q34",
+      "question": "Who among the following is appointed by the President of India?",
+      "question_bn": "নিম্নবর্ণিত কোন্ পদাধিকারী ভারতের রাষ্ট্রপতির দ্বারা নিযুক্ত হন?",
+      "options": {
+        "a": "Attorney General of India",
+        "b": "Comptroller and Auditor General of India",
+        "c": "Governor of State",
+        "d": "All of the above"
+      }
+    },
+    {
+      "q_no": "Q35",
+      "question": "Calculate the average of the square of first five natural numbers.",
+      "question_bn": "প্রথম পাঁচটি স্বাভাবিক সংখ্যার বর্গের গড় নির্ণয় করুন।",
+      "options": {
+        "a": "11",
+        "b": "25.5",
+        "c": "28",
+        "d": "45"
+      }
+    },
+    {
+      "q_no": "Q36",
+      "question": "A can lay a railway track between two given stations in 16 days and B can do the same job in 12 days. With the help of C, they can do the job in 4 days. Then, C alone can do the job in",
+      "question_bn": "A দুটি স্টেশনের মধ্যে রেললাইন পাতার কাজ 16 দিনে সম্পূর্ণ করে এবং B ঐ একই কাজ 12 দিনে সম্পূর্ণ করে। C-এর সাহায্য নিয়ে তারা ঐ কাজটি 4 দিনে সম্পূর্ণ করে। C একা ঐ কাজটি করে",
+      "options": {
+        "a": "9 1/5 Days",
+        "b": "9 2/5 Days",
+        "c": "9 3/5 Days",
+        "d": "10 Days"
+      }
+    },
+    {
+      "q_no": "Q37",
+      "question": "Find out the error from the underlined. Choose D if the sentence is correct. With the development of vaccine, there are hardly no cases of small pox or yellow fever, anywhere in the world. No error.",
+      "question_bn": "Find out the error from the underlined. Choose D if the sentence is correct. With the development of vaccine, there are hardly no cases of small pox or yellow fever, anywhere in the world. No error.",
+      "options": {
+        "a": "a (With the development)",
+        "b": "b (no)",
+        "c": "c (anywhere)",
+        "d": "d (No error)"
+      }
+    },
+    {
+      "q_no": "Q38",
+      "question": "The 'Project Sabujayan-2015' was launched in West Bengal for the following reasons:",
+      "question_bn": "নিম্নলিখিত কারণে পশ্চিমবঙ্গে 'Project Sabujayan-2015' চালু হয়েছিল:",
+      "options": {
+        "a": "To control Agricultural pest",
+        "b": "To prevent Soil erosion",
+        "c": "To reduce Arsenic poison",
+        "d": "Urban Development"
+      }
+    },
+    {
+      "q_no": "Q39",
+      "question": "If one worker can pack 15 boxes every two minutes, and another can pack 15 boxes every three minutes, how many minutes will it take these two workers, working together, to pack 300 boxes?",
+      "question_bn": "যদি একজন শ্রমিক প্রতি দু মিনিটে 15 টি বাক্স প্যাক করতে পারেন এবং অপর একজন শ্রমিক প্রতি তিন মিনিটে 15 টি বাক্স প্যাক করতে পারেন, তবে দুজনের একসঙ্গে কাজ শুরু করে 300 বাক্স প্যাক করতে মোট কত মিনিট সময় লাগবে?",
+      "options": {
+        "a": "10",
+        "b": "12",
+        "c": "24",
+        "d": "30"
+      }
+    },
+    {
+      "q_no": "Q40",
+      "question": "Find out the error from the underlined. Choose D if the sentence is correct. A number of the athletes which were participating in Olympics were found to have used steroids and other muscle building substances to enhance their performance. No error.",
+      "question_bn": "Find out the error from the underlined. Choose D if the sentence is correct. A number of the athletes which were participating in Olympics were found to have used steroids and other muscle building substances to enhance their performance. No error.",
+      "options": {
+        "a": "a (which)",
+        "b": "b (were found)",
+        "c": "c (enhance)",
+        "d": "d (No error)"
+      }
+    },
+    {
+      "q_no": "Q41",
+      "question": "Select the best alternative of the underlined portion from among the choices given: Jogging a kilometre uses the same number of calories as if you walk two kilometres.",
+      "question_bn": "Select the best alternative of the underlined portion from among the choices given: Jogging a kilometre uses the same number of calories as if you walk two kilometres.",
+      "options": {
+        "a": "as walking",
+        "b": "than to walk",
+        "c": "than by walking",
+        "d": "as though you walk"
+      }
+    },
+    {
+      "q_no": "Q42",
+      "question": "Who led the 'Salt Satyagraha Movement' with Mahatma Gandhi?",
+      "question_bn": "'লবণ সত্যাগ্রহ আন্দোলন'-এ মহাত্মা গান্ধীর সাথে কে নেতৃত্ব দিয়েছিলেন?",
+      "options": {
+        "a": "Annie Besant",
+        "b": "Mriddula Sarabhai",
+        "c": "Muthu Lakshmi",
+        "d": "Sarojini Naidu"
+      }
+    },
+    {
+      "q_no": "Q43",
+      "question": "In what ratio must the grocer mix two varieties of pulses costing Rs. 15 and Rs. 20 per kg respectively, so as to get a mixture worth Rs. 16.50 per kg?",
+      "question_bn": "15 টাকা ও 20 টাকা প্রতি কিগ্রা মূল্যের দুই রকম ডাল কোনো মুদি কী অনুপাতে মিশ্রিত করলে প্রতি কিগ্রা 16.50 টাকা মূল্যের মিশ্রণ পাবে?",
+      "options": {
+        "a": "3 : 7",
+        "b": "5 : 7",
+        "c": "7 : 3",
+        "d": "7 : 5"
+      }
+    },
+    {
+      "q_no": "Q44",
+      "question": "Select the best alternative of the underlined portion from among the choices given: If we agree to purchase the house today, we would have saved Rs. 50,000.",
+      "question_bn": "Select the best alternative of the underlined portion from among the choices given: If we agree to purchase the house today, we would have saved Rs. 50,000.",
+      "options": {
+        "a": "If today we agree to purchase the house",
+        "b": "Had we agreed to purchase the house today",
+        "c": "If today we will agree to purchase the house",
+        "d": "If we would of agreed to purchase the house today"
+      }
+    },
+    {
+      "q_no": "Q45",
+      "question": "Tropic of Cancer passes through the district of",
+      "question_bn": "কর্কটক্রান্তি রেখা যে জেলার উপর দিয়ে গেছে:",
+      "options": {
+        "a": "Coochbehar",
+        "b": "Malda",
+        "c": "Nadia",
+        "d": "South 24 Parganas"
+      }
+    },
+    {
+      "q_no": "Q46",
+      "question": "What is the value of x² if x = √(15² - 12²)?",
+      "question_bn": "যদি x = √(15² - 12²), তবে x²-এর মান",
+      "options": {
+        "a": "√3",
+        "b": "(81)²",
+        "c": "9",
+        "d": "81"
+      }
+    },
+    {
+      "q_no": "Q47",
+      "question": "Sunita writes _______ her left hand. (Fill in the blank)",
+      "question_bn": "Sunita writes _______ her left hand. (Fill in the blank)",
+      "options": {
+        "a": "on",
+        "b": "with",
+        "c": "in",
+        "d": "by"
+      }
+    },
+    {
+      "q_no": "Q48",
+      "question": "Ramanujan is a world famous",
+      "question_bn": "রামানুজন ছিলেন একজন বিশ্ববিখ্যাত",
+      "options": {
+        "a": "Mathematician",
+        "b": "Scientist",
+        "c": "Economist",
+        "d": "Physicist"
+      }
+    },
+    {
+      "q_no": "Q49",
+      "question": "The length of a rectangle is four times its width. If the perimeter of the rectangle is 40 centimetres, what is the area?",
+      "question_bn": "একটি আয়তক্ষেত্রের দৈর্ঘ্য, প্রস্থের চারগুণ। যদি ঐ আয়তক্ষেত্রের পরিসীমা 40 সেমি হয় তবে তার ক্ষেত্রফল কত?",
+      "options": {
+        "a": "4 cm²",
+        "b": "16 cm²",
+        "c": "40 cm²",
+        "d": "64 cm²"
+      }
+    },
+    {
+      "q_no": "Q50",
+      "question": "Arrange the following words according to dictionary arrangement: (1) Wound (2) Writer (3) Whither (4) Worst (5) Worked",
+      "question_bn": "নীচের শব্দগুলিকে ডিকশনারির ব্যবহারনা অনুযায়ী সাজিয়ে দিন: (1) Wound (2) Writer (3) Whither (4) Worst (5) Worked",
+      "options": {
+        "a": "5, 3, 2, 1, 4",
+        "b": "1, 4, 3, 5, 2",
+        "c": "3, 5, 4, 1, 2",
+        "d": "2, 1, 3, 4, 5"
+      }
+    },
+    {
+      "q_no": "Q51",
+      "question": "Who is the father of the 'White Revolution' in India?",
+      "question_bn": "ভারতবর্ষে 'হোয়াইট রেভিলিউশন'-এর জনক কে?",
+      "options": {
+        "a": "Dr. Hiralal Choudhary",
+        "b": "Dr. Verghese Kurien",
+        "c": "Norman Borlaug",
+        "d": "None of the above"
+      }
+    },
+    {
+      "q_no": "Q52",
+      "question": "For a given year, a Mayor has Rs. 45,000 allotted to spend on the sanitation department, the police department and fire department. If 1/5 of his money goes to the sanitation department and 2/3 of the remaining money goes to the police department, how much does the Mayor have left for the fire department?",
+      "question_bn": "স্বাস্থ্যব্যবস্থা, পুলিশ দপ্তর এবং অগ্নিনির্বাপণ দপ্তরের জন্য ব্যয়-বাবদ কোনো বছর মহানাগরিক 45,000 টাকা বরাদ্দ করলেন। যদি এই অর্থের 1/5 অংশ স্বাস্থ্যব্যবস্থায় এবং অবশিষ্ট 2/3 অংশ পুলিশ দপ্তরের জন্য ব্যয় হয় তবে অগ্নিনির্বাপণ দপ্তরের জন্য মহানাগরিক কত পরিমাণ অর্থ বরাদ্দ করেছিলেন?",
+      "options": {
+        "a": "Rs. 21,000",
+        "b": "Rs. 6,000",
+        "c": "Rs. 24,000",
+        "d": "Rs. 12,000"
+      }
+    },
+    {
+      "q_no": "Q53",
+      "question": "Select the best alternative of the underlined portion from among the choices given: Because Ritha, expected not to go to college, she is taking little interest in school.",
+      "question_bn": "Select the best alternative of the underlined portion from among the choices given: Because Ritha, expected not to go to college, she is taking little interest in school.",
+      "options": {
+        "a": "she took little interest in school",
+        "b": "she will take little interest in school",
+        "c": "she would take little interest in school",
+        "d": "she takes little interest in school"
+      }
+    },
+    {
+      "q_no": "Q54",
+      "question": "NSSO stands for:",
+      "question_bn": "NSSO পুরো কথাটি হল:",
+      "options": {
+        "a": "National Scientific Survey Organization",
+        "b": "National Sample Survey Organization",
+        "c": "Nuclear Science Study Organization",
+        "d": "National Scientific Standard Organization"
+      }
+    },
+    {
+      "q_no": "Q55",
+      "question": "A bag contains 25 paisa, 10 paisa and 5 paisa coins in the ratio of 1:2:3. If the total value is Rs. 30, then what is the number of 5 paisa coins?",
+      "question_bn": "একটি থলেতে 25 পয়সা, 10 পয়সা এবং 5 পয়সার মুদ্রা 1:2:3 অনুপাতে রয়েছে। যদি থলের সমগ্র মুদ্রার মূল্য 30 টাকা হয়, তবে ঐ থলেতে 5 পয়সার মুদ্রার সংখ্যা কত?",
+      "options": {
+        "a": "50",
+        "b": "100",
+        "c": "150",
+        "d": "200"
+      }
+    },
+    {
+      "q_no": "Q56",
+      "question": "Select the best answer from among the choices given: As a person who would never _______ animals, Kavita takes extra care to avoid hitting squirrels while driving.",
+      "question_bn": "Select the best answer from among the choices given: As a person who would never _______ animals, Kavita takes extra care to avoid hitting squirrels while driving.",
+      "options": {
+        "a": "love",
+        "b": "maltreat",
+        "c": "accept",
+        "d": "keep"
+      }
+    },
+    {
+      "q_no": "Q57",
+      "question": "The Nobel Peace Prize for 2016 has been awarded to the President of which of the following countries?",
+      "question_bn": "নীচের কোন্ দেশটির রাষ্ট্রপতিকে 2016 সালের নোবেল শান্তি পুরস্কারে ভূষিত করা হয়েছে?",
+      "options": {
+        "a": "Colombia",
+        "b": "Mozambique",
+        "c": "Morocco",
+        "d": "Norway"
+      }
+    },
+    {
+      "q_no": "Q58",
+      "question": "If the sum of two numbers is 10, and one of those numbers is equal to the sum of 6 and twice the other number, what is the value of the larger number minus the smaller number?",
+      "question_bn": "যদি দুটি সংখ্যার যোগফল 10 হয় এবং প্রথম সংখ্যাটি দ্বিতীয় সংখ্যার দ্বিগুণ এবং 6-এর যোগফলের সমান হয়, তবে বড় সংখ্যাটি থেকে ছোট সংখ্যাটি বিয়োগ করলে বিয়োগফল কত হবে?",
+      "options": {
+        "a": "2",
+        "b": "7 1/3",
+        "c": "6",
+        "d": "8 1/2"
+      }
+    },
+    {
+      "q_no": "Q59",
+      "question": "Select the best pair of words to fill in the gaps from among the choices given: The fireworks display created so much _______ that the night sky was completely _______, almost as if it was the middle of the day.",
+      "question_bn": "Select the best pair of words to fill in the gaps from among the choices given: The fireworks display created so much _______ that the night sky was completely _______, almost as if it was the middle of the day.",
+      "options": {
+        "a": "refuse, detonated",
+        "b": "colour, decorated",
+        "c": "light, illuminated",
+        "d": "noise, joyful"
+      }
+    },
+    {
+      "q_no": "Q60",
+      "question": "The fastest train in India is",
+      "question_bn": "ভারতবর্ষে দ্রুততম রেলগাড়ির নাম",
+      "options": {
+        "a": "Rajdhani Express",
+        "b": "Shatabdi Express",
+        "c": "Duronto Express",
+        "d": "Gatimaan Express"
+      }
+    }
+  ]
+}

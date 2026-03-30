@@ -22,6 +22,8 @@ import examProgressRoutes  from './routes/examProgress.js';
 import examTestRoutes      from './routes/examTest.js';
 import examStudyPlanRoutes from './routes/examStudyPlan.js';
 import examAiRoutes        from './routes/examAi.js';
+import syllabusApiRoutes   from './routes/syllabusApi.js';
+import questionsRoutes    from './routes/questions.js';
 
 // Load environment variables
 dotenv.config();
@@ -35,10 +37,21 @@ app.use(helmet({
     crossOriginResourcePolicy: { policy: "cross-origin" }
 }));
 
-// CORS configuration  9220446597
+// CORS configuration
+const ALLOWED_ORIGINS = [
+    'http://localhost:5000',
+    'http://localhost:8080',
+    'https://interviewsathi.online',
+];
 app.use(cors({
-    // Allow all origins (permissive). Reflects request origin so `credentials: true` works.
-    origin: true,
+    origin: (origin, callback) => {
+        // Allow requests with no origin (curl, server-to-server, mobile apps)
+        if (!origin || ALLOWED_ORIGINS.includes(origin)) {
+            callback(null, true);
+        } else {
+            callback(null, true); // still permissive fallback — change to callback(new Error('CORS')) to hard-block
+        }
+    },
     credentials: true,
     methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept', 'Authorization']
@@ -50,6 +63,9 @@ app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
 // Apply rate limiting to all routes
 app.use(apiLimiter);
+
+// Serve public/ as static files (for direct access to manifest.json, PDFs, etc.)
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {
@@ -83,6 +99,11 @@ app.use('/api', examProgressRoutes);   // GET /api/progress/:userId/:examId
 app.use('/api', examTestRoutes);       // GET /api/test/:chapterId/questions, POST /api/test/submit
 app.use('/api', examStudyPlanRoutes);  // GET|POST /api/studyplan/...
 app.use('/api', examAiRoutes);         // POST /api/ai/chapter-guide
+app.use('/api', syllabusApiRoutes);    // NEW: GET /api/syllabus/:examId, POST /api/studyplan/ai, etc.
+
+// Question Hub routes (file listing + file serving)
+app.use('/api/questions', questionsRoutes);
+
 // Error handling middleware
 app.use((err, req, res, next) => {
     console.error('Server error:', err);

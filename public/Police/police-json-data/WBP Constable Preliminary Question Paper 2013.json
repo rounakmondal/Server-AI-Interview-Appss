@@ -1,0 +1,912 @@
+{
+  "exam_title": "WBP Constable Preliminary Question Paper 2013",
+  "exam_code": "RB/EC/2013",
+  "test_booklet_series": "C",
+  "total_questions": 90,
+  "total_marks": 90,
+  "time_allotted": "1.5 hours",
+  "negative_marking": "0.25 per wrong answer",
+  "languages": ["Bengali", "English"],
+  "questions": [
+    {
+      "q_no": "Q1",
+      "question": "একটি পাত্রে ব্যাকটেরিয়ার সংখ্যা প্রত্যেকদিন দ্বিগুণ হয়। যদি 30 শে নভেম্বর 2013 তারিখে পাত্রটি সম্পূর্ণ ভর্তি হয়, তবে পাত্রটি অর্ধেক পূর্ণ হয়েছিল",
+      "options": {
+        "a": "25 নভেম্বর",
+        "b": "15 নভেম্বর",
+        "c": "29 নভেম্বর",
+        "d": "বলা সম্ভব নয়"
+      }
+    },
+    {
+      "q_no": "Q2",
+      "question": "নীচের ছক থেকে 'x' এর মান কত হবে? (ছকে সংখ্যা: 2,4,3 / 4,5,4 / 3,6,2 / 18,54,x)",
+      "options": {
+        "a": "18",
+        "b": "16",
+        "c": "27",
+        "d": "14"
+      }
+    },
+    {
+      "q_no": "Q3",
+      "question": "একটি নির্দিষ্ট কোড ব্যবহার করে DARJEELING কে লেখা হল FCTLGGNKPI। একই হিসেবে GOVERNMENT লেখা হবে",
+      "options": {
+        "a": "IQXGPTOGPV",
+        "b": "IQXGTPGOPV",
+        "c": "IQXGTPOGPV",
+        "d": "TQXGPTOGPV"
+      }
+    },
+    {
+      "q_no": "Q4",
+      "question": "G এর কাছে F এর থেকে কম কিন্তু S এর থেকে বেশী টাকা আছে। E এর কাছে G এর থেকে বেশী কিন্তু F এর থেকে কম টাকা আছে। কে সবচেয়ে গরিব?",
+      "options": {
+        "a": "S",
+        "b": "G",
+        "c": "F",
+        "d": "E"
+      }
+    },
+    {
+      "q_no": "Q5",
+      "question": "নীচের কোনটি বেমানান?",
+      "options": {
+        "a": "909/1000",
+        "b": "9.09",
+        "c": "909/100",
+        "d": "9090/1000"
+      }
+    },
+    {
+      "q_no": "Q6",
+      "question": "গর্ভাবস্থায় ভূণের লিঙ্গ নির্ধারণ কি সম্পূর্ণভাবে নিষিদ্ধ করা উচিত? যুক্তি 1: হ্যাঁ, নতুবা কন্যা ভূণ বাড়বে না। যুক্তি 2: না, প্রত্যেকের অনাগত শিশু সম্পর্কে জানার অধিকার আছে।",
+      "options": {
+        "a": "উভয় যুক্তি সঠিক",
+        "b": "যুক্তি 1 সঠিক",
+        "c": "যুক্তি 2 সঠিক",
+        "d": "উভয় যুক্তি ভুল"
+      }
+    },
+    {
+      "q_no": "Q7",
+      "question": "নীচের দেওয়া জ্যামিতিক চিত্র থেকে ছকের শূন্যস্থানে উপযুক্ত চিহ্নটি বসান (symbol matrix pattern question)",
+      "options": {
+        "a": "1",
+        "b": "4",
+        "c": "3",
+        "d": "2"
+      }
+    },
+    {
+      "q_no": "Q8",
+      "question": "1/6 + 1/12 + 1/20 + 1/30 - 1/3 এর মান",
+      "options": {
+        "a": "1/3",
+        "b": "2/3",
+        "c": "1",
+        "d": "0"
+      }
+    },
+    {
+      "q_no": "Q9",
+      "question": "নীচের অংকগুলি একটি নির্দিষ্ট ক্রমে সাজানো আছে। পরের অংকটি: 1, 4, 9, 16, 25, 36, 49, ...",
+      "options": {
+        "a": "55",
+        "b": "60",
+        "c": "64",
+        "d": "98"
+      }
+    },
+    {
+      "q_no": "Q10",
+      "question": "He had to repent _______ what he had done. Fill in the blank with the most appropriate preposition given below.",
+      "options": {
+        "a": "at",
+        "b": "of",
+        "c": "over",
+        "d": "for"
+      }
+    },
+    {
+      "q_no": "Q11",
+      "question": "She is so _______ that she easily catches cold. Use the correct word from the following to fill in the blank.",
+      "options": {
+        "a": "sensible",
+        "b": "sincere",
+        "c": "sensitive",
+        "d": "sober"
+      }
+    },
+    {
+      "q_no": "Q12",
+      "question": "Pick out the word opposite in meaning to the given word — 'Accepted'",
+      "options": {
+        "a": "Rejected",
+        "b": "Considered",
+        "c": "Noted",
+        "d": "Followed"
+      }
+    },
+    {
+      "q_no": "Q13",
+      "question": "Choose the word nearest in meaning to the given word — 'Inedible'",
+      "options": {
+        "a": "Polluted",
+        "b": "Unfit for human consumption",
+        "c": "Vitiated",
+        "d": "Eatable"
+      }
+    },
+    {
+      "q_no": "Q14",
+      "question": "Choose the exact meaning of the idiom/phrase in the sentence — 'The prices are going up by leaps and bounds.'",
+      "options": {
+        "a": "Irregularly",
+        "b": "Gradually",
+        "c": "Rapidly",
+        "d": "Systematically"
+      }
+    },
+    {
+      "q_no": "Q15",
+      "question": "He chose the path of religion of his own accord. Choose the exact meaning of the underlined words in the above sentence from the following.",
+      "options": {
+        "a": "Forcibly",
+        "b": "Helplessly",
+        "c": "Half-heartedly",
+        "d": "Willingly"
+      }
+    },
+    {
+      "q_no": "Q16",
+      "question": "Out of the given alternatives, choose the one which can be substituted for the given sentence — 'One who hates mankind.'",
+      "options": {
+        "a": "Philanthropist",
+        "b": "Misanthrope",
+        "c": "Cannibal",
+        "d": "Terrorist"
+      }
+    },
+    {
+      "q_no": "Q17",
+      "question": "The car _______ suddenly. Fill in the blank with an appropriate choice from the following.",
+      "options": {
+        "a": "broke off",
+        "b": "broke down",
+        "c": "broke out",
+        "d": "broke up"
+      }
+    },
+    {
+      "q_no": "Q18",
+      "question": "নীচের বিশেষ ক্রমে সাজানো পদগুলির পরের পদ কি হবে? AC, FH, KM, PR, ____",
+      "options": {
+        "a": "UW",
+        "b": "VW",
+        "c": "UX",
+        "d": "TV"
+      }
+    },
+    {
+      "q_no": "Q19",
+      "question": "Why did you not spoken to me earlier? Correct the sentence by using the following one.",
+      "options": {
+        "a": "did not spoke",
+        "b": "did you not spoke",
+        "c": "did you not speak",
+        "d": "were you not spoken"
+      }
+    },
+    {
+      "q_no": "Q20",
+      "question": "Since we are living in Bombay, we are unwilling to move to another city. Replace the underlined words in the above sentence by the appropriate words given below.",
+      "options": {
+        "a": "Since we have been living",
+        "b": "Being that we are living",
+        "c": "Since we were living",
+        "d": "None of the above"
+      }
+    },
+    {
+      "q_no": "Q21",
+      "question": "HIV সংক্রমণ নীচের কোনটির দ্বারা শুধুমাত্র ছড়াতে পারে?",
+      "options": {
+        "a": "পরস্পর আলিঙ্গন করলে",
+        "b": "সাধারণ শৌচাগার ব্যবহার করলে",
+        "c": "খাদ্য ভাগ করে খেলে",
+        "d": "অন্যের রেজর ব্যবহার করলে"
+      }
+    },
+    {
+      "q_no": "Q22",
+      "question": "1. শুষ্ক বরফ CO2 এর কঠিন রূপ। 2. শুষ্ক বরফ মূলত শীতলীকরণের জন্য ব্যবহার করা হয়। 3. জল থেকে তৈরী বরফ শুষ্ক বরফের থেকে ঠান্ডা। উপরের তথ্যগুলির কোনটি/কোনগুলি সঠিক?",
+      "options": {
+        "a": "কেবল 1",
+        "b": "কেবল 2",
+        "c": "1 এবং 2",
+        "d": "1, 2 এবং 3"
+      }
+    },
+    {
+      "q_no": "Q23",
+      "question": "'অন্ত্যোদয় পরিকল্পনা' এর প্রধান উদ্দেশ্য",
+      "options": {
+        "a": "শহরের গরিব মানুষের উন্নয়ন",
+        "b": "কৃষকদের উন্নয়ন",
+        "c": "ভূমিহীন শ্রমিকদের উন্নয়ন",
+        "d": "গরিব মানুষের উন্নয়ন"
+      }
+    },
+    {
+      "q_no": "Q24",
+      "question": "ভারতের সবুজ বিপ্লব নীচের কোন ক্ষেত্রে সবচেয়ে সফল?",
+      "options": {
+        "a": "গম এবং আলু উৎপাদনে",
+        "b": "জোয়ার এবং তৈলবীজ উৎপাদনে",
+        "c": "গম এবং চাল উৎপাদনে",
+        "d": "চা এবং কফি উৎপাদনে"
+      }
+    },
+    {
+      "q_no": "Q25",
+      "question": "সাংসদ নির্বাচনে ভোট দেওয়ার অধিকার",
+      "options": {
+        "a": "মৌলিক অধিকার",
+        "b": "রাজনৈতিক অধিকার",
+        "c": "আইনি অধিকার",
+        "d": "স্বাভাবিক অধিকার"
+      }
+    },
+    {
+      "q_no": "Q26",
+      "question": "নীচের দুটি তালিকা থেকে সঠিক উত্তর নির্বাচন করুন। বিশেষ পদাধিকারী: (a) ভারতের সুপ্রিমকোর্টের বিচারপতি, (b) রাজ্যের হাইকোর্টের বিচারপতি, (c) ভারতের কম্পট্রোলার অ্যান্ড অডিটর জেনারেল, (d) রাজ্যপাল। কার্য কাল: 1. 65 বছর বয়স পর্যন্ত, 2. 62 বছর বয়স পর্যন্ত, 3. 6 বছর বা 65 বছর বয়স পর্যন্ত এর মধ্যে যেটি কম হবে, 4. 5 বছর",
+      "options": {
+        "a": "(a)1 (b)2 (c)3 (d)4",
+        "b": "(a)1 (b)3 (c)2 (d)4",
+        "c": "(a)2 (b)1 (c)3 (d)4",
+        "d": "(a)3 (b)2 (c)4 (d)1"
+      }
+    },
+    {
+      "q_no": "Q27",
+      "question": "নীচের কোনটি বিশ্ব উষ্ণায়ন এবং জলবায়ু পরিবর্তনের জন্য দায়ী নয়?",
+      "options": {
+        "a": "CFC নির্গমন",
+        "b": "কার্বন-ডাই-অক্সাইড নির্গমন",
+        "c": "বৃক্ষচ্ছেদন",
+        "d": "মিথেন নির্গমন"
+      }
+    },
+    {
+      "q_no": "Q28",
+      "question": "He was advised to abstain _______ all alcoholic drinks. Fill in the blank with most appropriate preposition from the following.",
+      "options": {
+        "a": "in",
+        "b": "at",
+        "c": "from",
+        "d": "by"
+      }
+    },
+    {
+      "q_no": "Q29",
+      "question": "Questions will be answered by a _______ of experts. Fill in the blank in the above sentence by an appropriate word given below.",
+      "options": {
+        "a": "staff",
+        "b": "panel",
+        "c": "bunch",
+        "d": "band"
+      }
+    },
+    {
+      "q_no": "Q30",
+      "question": "1930 সালে মহাত্মা গান্ধী আইন অমান্য আন্দোলন শুরু করেন",
+      "options": {
+        "a": "সেবাগ্রামে",
+        "b": "ডাণ্ডিতে",
+        "c": "সবরমতিতে",
+        "d": "ওয়ার্ধাতে"
+      }
+    },
+    {
+      "q_no": "Q31",
+      "question": "বারদলী সত্যাগ্রহ (1928) র নেতা",
+      "options": {
+        "a": "সর্দার বল্লভভাই প্যাটেল",
+        "b": "মহাত্মা গান্ধী",
+        "c": "বল্লভভাই জে প্যাটেল",
+        "d": "মহাদেব দেশাই"
+      }
+    },
+    {
+      "q_no": "Q32",
+      "question": "নীচের তালিকা দুটি থেকে (তালিকা-I এবং তালিকা-II) সঠিক উত্তর নির্বাচন করুন। তালিকা-I (ভারতের কয়লাখনি এলাকা): (a) ঝরিয়া, (b) রাণীগঞ্জ, (c) তালচের, (d) কোরবা। তালিকা-II (রাজ্য): 1. তামিলনাড়ু, 2. উড়িয়া, 3. ঝাড়খণ্ড, 4. পশ্চিমবঙ্গ, 5. ছত্তিশগড়",
+      "options": {
+        "a": "(a)3 (b)4 (c)2 (d)5",
+        "b": "(a)2 (b)5 (c)1 (d)4",
+        "c": "(a)3 (b)5 (c)2 (d)4",
+        "d": "(a)2 (b)4 (c)1 (d)5"
+      }
+    },
+    {
+      "q_no": "Q33",
+      "question": "কোন ভিটামিন ভাইরাল ইন্ফেকশন চিকিৎসার জন্য কার্যকরী?",
+      "options": {
+        "a": "ভিটামিন C",
+        "b": "ভিটামিন A",
+        "c": "ভিটামিন B",
+        "d": "ভিটামিন K"
+      }
+    },
+    {
+      "q_no": "Q34",
+      "question": "সূর্য ওঠার একটু আগে এবং সূর্য ডোবার একটু পরেও দ্রাঘিমারেখার নীচে সূর্যকে দেখতে পাওয়ার কারণ",
+      "options": {
+        "a": "প্রতিসরণ",
+        "b": "নিম্নচাপ",
+        "c": "আভ্যন্তরীণ পূর্ণ প্রতিফলন",
+        "d": "বিচ্ছুরণ"
+      }
+    },
+    {
+      "q_no": "Q35",
+      "question": "নীচের তালিকা দুটি থেকে সঠিক উত্তর নির্বাচন করুন। তালিকা-I (অ্যাসিড): (a) ল্যাকটিক অ্যাসিড, (b) টারটারিক অ্যাসিড, (c) অক্সালিক অ্যাসিড, (d) সাইট্রিক অ্যাসিড। তালিকা-II (উৎস): 1. তেঁতুল, 2. লেবু, 3. টম্যাটো, 4. টক দই",
+      "options": {
+        "a": "(a)2 (b)4 (c)3 (d)1",
+        "b": "(a)2 (b)3 (c)4 (d)1",
+        "c": "(a)4 (b)3 (c)1 (d)2",
+        "d": "(a)4 (b)1 (c)3 (d)2"
+      }
+    },
+    {
+      "q_no": "Q36",
+      "question": "নীচের দেওয়া দুটি তালিকা থেকে সঠিক উত্তরগুলি সাজান। তালিকা-I (বিশেষ বর্ণনা): (a) সৌর জগতের ক্ষুদ্রতম গ্রহ, (b) সৌর জগতের বৃহত্তম গ্রহ, (c) সৌর জগতে সূর্য থেকে দ্বিতীয় গ্রহ, (d) সূর্যের নিকটতম গ্রহ। তালিকা-II (গ্রহের নাম): 1. মঙ্গল, 2. বুধ, 3. বৃহস্পতি, 4. প্লুটো, 5. শনি",
+      "options": {
+        "a": "(a)2 (b)3 (c)5 (d)1",
+        "b": "(a)3 (b)5 (c)1 (d)2",
+        "c": "(a)4 (b)1 (c)2 (d)3",
+        "d": "(a)4 (b)3 (c)2 (d)1"
+      }
+    },
+    {
+      "q_no": "Q37",
+      "question": "1943 সালে ইন্ডিয়ান ন্যাশানাল আর্মি (INA) আত্মপ্রকাশ করে",
+      "options": {
+        "a": "জাপানে",
+        "b": "বার্মায়",
+        "c": "সিঙ্গাপুরে",
+        "d": "মালয়ে"
+      }
+    },
+    {
+      "q_no": "Q38",
+      "question": "10% ক্ষতিতে A একটি ঘড়ি B কে বিক্রি করে। B ঐ ঘড়ি C কে 10% লাভে বিক্রি করে। যে দামে C ঘড়িটি কিনল সেই দামে যদি A বিক্রি করত তবে তার শতকরা ক্ষতি হত",
+      "options": {
+        "a": "10%",
+        "b": "20%",
+        "c": "5%",
+        "d": "1%"
+      }
+    },
+    {
+      "q_no": "Q39",
+      "question": "নীচের কোনটি মৌলিক সংখ্যা নয়?",
+      "options": {
+        "a": "43",
+        "b": "53",
+        "c": "85",
+        "d": "71"
+      }
+    },
+    {
+      "q_no": "Q40",
+      "question": "প্রথম 15 টি বিজোড় সংখ্যার গড়",
+      "options": {
+        "a": "18",
+        "b": "15",
+        "c": "20",
+        "d": "উপরের কোনটিই নয়"
+      }
+    },
+    {
+      "q_no": "Q41",
+      "question": "30 জন বালিকার বয়সের গড় 13 বছর। তাদের প্রথম 18 জনের বয়সের গড় 15 বছর। বাকি 12 জনের বয়সের গড়",
+      "options": {
+        "a": "12 বছর",
+        "b": "10 বছর",
+        "c": "16 বছর",
+        "d": "10.5 বছর"
+      }
+    },
+    {
+      "q_no": "Q42",
+      "question": "যদি a/3 = b/5 = c/7 হয় তবে (a+b+c)/b এর মান",
+      "options": {
+        "a": "1/5",
+        "b": "1/3",
+        "c": "3",
+        "d": "উপরের কোনটিই নয়"
+      }
+    },
+    {
+      "q_no": "Q43",
+      "question": "₹ 2.04 দামের প্রতি কিলোগ্রাম গমের সঙ্গে প্রতি কিগ্রা ₹ 2.88 দামের গম কি অনুপাতে মেশালে প্রতি কিলোগ্রাম মিশ্রিত গমের দাম হবে ₹ 2.52?",
+      "options": {
+        "a": "2:3",
+        "b": "3:2",
+        "c": "5:3",
+        "d": "3:4"
+      }
+    },
+    {
+      "q_no": "Q44",
+      "question": "A এবং B একটি ব্যবসায় 3:2 অনুপাতে বিনিয়োগ করে। ওরা মোট লাভের 5% দান করে এবং A এর মূলধনের পরিমাণ ₹ 4,275 হলে মোট লাভের পরিমাণ",
+      "options": {
+        "a": "₹ 8,000",
+        "b": "₹ 7,700",
+        "c": "₹ 7,500",
+        "d": "₹ 6,500"
+      }
+    },
+    {
+      "q_no": "Q45",
+      "question": "যদি দিনে 16 ঘণ্টা করে কাজ করে 12 জন লোক সপ্তাহে ₹ 33,600 রোজগার করে, তবে দৈনিক 12 ঘণ্টা করে কাজ করে 18 জন লোক সপ্তাহে রোজগার করবে",
+      "options": {
+        "a": "₹ 40,000",
+        "b": "₹ 35,000",
+        "c": "₹ 28,800",
+        "d": "₹ 37,800"
+      }
+    },
+    {
+      "q_no": "Q46",
+      "question": "X এর 8%, Y এর 4% এর সমান হলে X এর 20% হবে",
+      "options": {
+        "a": "Y এর 10%",
+        "b": "Y এর 15%",
+        "c": "Y এর 20%",
+        "d": "Y এর 25%"
+      }
+    },
+    {
+      "q_no": "Q47",
+      "question": "নীচের কোন পদার্থটি জলে দিলে তাপ উৎপাদন করে?",
+      "options": {
+        "a": "গ্লুকোজ",
+        "b": "ফ্রুকটোজ",
+        "c": "কলিচুন",
+        "d": "লবণ"
+      }
+    },
+    {
+      "q_no": "Q48",
+      "question": "খবরের কাগজ দিয়ে খাবার মুড়লে দূষিত হতে পারে",
+      "options": {
+        "a": "অ্যালুমিনিয়াম দ্বারা",
+        "b": "লোহা দ্বারা",
+        "c": "সীসা দ্বারা",
+        "d": "ম্যাগনেসিয়াম দ্বারা"
+      }
+    },
+    {
+      "q_no": "Q49",
+      "question": "একটি নৌকা স্রোতের অনুকূলে 2½ ঘণ্টায় 60 কিমি যায় এবং ফেরার সময় ঐ একই দূরত্ব 3¾ ঘণ্টায় আসে। স্থির জলে নৌকাটির গতিবেগ",
+      "options": {
+        "a": "25 কিমি/ঘণ্টা",
+        "b": "15 কিমি/ঘণ্টা",
+        "c": "20 কিমি/ঘণ্টা",
+        "d": "10 কিমি/ঘণ্টা"
+      }
+    },
+    {
+      "q_no": "Q50",
+      "question": "টাকায় 10 টি করে আপেল বিক্রি করে এক বিক্রেতা 40% লাভ করেন। তিনি টাকায় কতগুলি আপেল কিনেছিলেন?",
+      "options": {
+        "a": "14 টি",
+        "b": "24 টি",
+        "c": "30 টি",
+        "d": "10 টি"
+      }
+    },
+    {
+      "q_no": "Q51",
+      "question": "সরল সুদের হারে কোন মূলধন 20 বছরে 3 গুণ হয়। একই সুদের হারে ঐ মূলধন কত বছরে দ্বিগুণ হবে?",
+      "options": {
+        "a": "8 বছর",
+        "b": "10 বছর",
+        "c": "12 বছর",
+        "d": "14 বছর"
+      }
+    },
+    {
+      "q_no": "Q52",
+      "question": "দুটি সংখ্যার অনুপাত 3:4 এবং গ.সা.গু. 4। সংখ্যা দুটির ল.সা.গু.",
+      "options": {
+        "a": "12",
+        "b": "16",
+        "c": "48",
+        "d": "24"
+      }
+    },
+    {
+      "q_no": "Q53",
+      "question": "No one can bear an unprovoked insult. The appropriate interrogative form of the above sentence",
+      "options": {
+        "a": "Everyone can bear an unprovoked insult.",
+        "b": "Can you bear an unprovoked insult?",
+        "c": "Who can bear an unprovoked insult?",
+        "d": "Would you bear an unprovoked insult?"
+      }
+    },
+    {
+      "q_no": "Q54",
+      "question": "He runs as fast as a deer. The comparative degree of fast is used correctly in the sentence",
+      "options": {
+        "a": "He runs faster than a deer.",
+        "b": "A deer cannot run faster than he can.",
+        "c": "A deer can run faster than he can.",
+        "d": "None of the above."
+      }
+    },
+    {
+      "q_no": "Q55",
+      "question": "The sun rose. The fog dispersed. Which of the following sentences is correct, if the above sentences are joined in the form of a simple sentence?",
+      "options": {
+        "a": "When the sun rose, the fog dispersed.",
+        "b": "The sun having risen the fog dispersed.",
+        "c": "The fog dispersed when the sun rose.",
+        "d": "As the sun rose, the fog dispersed."
+      }
+    },
+    {
+      "q_no": "Q56",
+      "question": "The boy said to his mother, 'Where are you going?' Select the correct form of the sentence if changed into indirect narration.",
+      "options": {
+        "a": "The boy said to his mother that where she was going.",
+        "b": "The boy asked to his mother where are you going.",
+        "c": "The boy asked his mother where she was going.",
+        "d": "The boy asked where she was going."
+      }
+    },
+    {
+      "q_no": "Q57",
+      "question": "A boy was _______ by a motor-car. Use the appropriate words in the blank.",
+      "options": {
+        "a": "run into",
+        "b": "run over",
+        "c": "run at",
+        "d": "none of the above"
+      }
+    },
+    {
+      "q_no": "Q58",
+      "question": "Do the work at once. The correct form of the sentence in passive voice is —",
+      "options": {
+        "a": "You are directed to do the work at once.",
+        "b": "Let the work be done at once.",
+        "c": "The work should be done at once.",
+        "d": "At once the work be done by you."
+      }
+    },
+    {
+      "q_no": "Q59",
+      "question": "এক ব্যক্তি P থেকে Q পর্যন্ত হেঁটে যায় এবং Q থেকে P তে ট্যাক্সি করে ফিরে আসে। যাতায়াতে মোট সময় নেয় 16 ঘণ্টা। কিন্তু সমগ্রপথ যদি ট্যাক্সিতে যাওয়া আসা করে তবে 4 ঘণ্টা সময় কম লাগে। যদি যাওয়া আসা কেবলমাত্র হেঁটে করে তবে সময় লাগবে",
+      "options": {
+        "a": "15 ঘণ্টা",
+        "b": "20 ঘণ্টা",
+        "c": "18 ঘণ্টা",
+        "d": "12 ঘণ্টা"
+      }
+    },
+    {
+      "q_no": "Q60",
+      "question": "দুটি ট্রেনের দৈর্ঘ্য যথাক্রমে 80 মিটার এবং 90 মিটার। ওরা যথাক্রমে 10 মিটার/সেকেন্ড এবং 7 মিটার/সেকেন্ড গতিবেগে পরস্পরের দিকে ধাবিত হলে কত সময়ে পরস্পরকে অতিক্রম করবে?",
+      "options": {
+        "a": "20 সেকেন্ড",
+        "b": "15 সেকেন্ড",
+        "c": "17 সেকেন্ড",
+        "d": "10 সেকেন্ড"
+      }
+    },
+    {
+      "q_no": "Q61",
+      "question": "রাজ্যসভার সদস্যগণকে নির্বাচিত করেন",
+      "options": {
+        "a": "জনগণ",
+        "b": "লোকসভা",
+        "c": "বিধানসভার নির্বাচিত সদস্যগণ",
+        "d": "বিধানপরিষদের নির্বাচিত সদস্যগণ"
+      }
+    },
+    {
+      "q_no": "Q62",
+      "question": "রাজ্যপালকে শপথ গ্রহণ করান",
+      "options": {
+        "a": "ভারতের প্রধান বিচারপতি",
+        "b": "ভারতের রাষ্ট্রপতি",
+        "c": "হাইকোর্টের প্রধান বিচারপতি",
+        "d": "বিধানসভার অধ্যক্ষ"
+      }
+    },
+    {
+      "q_no": "Q63",
+      "question": "একটি শ্রেণীতে মোট ছাত্র-ছাত্রীর মধ্যে 10% ছাত্র, ¼ অংশ ছাত্রীর সমান। ঐ শ্রেণীতে ছাত্র-ছাত্রীর অনুপাত কত?",
+      "options": {
+        "a": "3:2",
+        "b": "5:2",
+        "c": "2:1",
+        "d": "4:3"
+      }
+    },
+    {
+      "q_no": "Q64",
+      "question": "ভারত এবং শ্রীলংকার মধ্যে কোন প্রণালী অবস্থিত?",
+      "options": {
+        "a": "বেরিং প্রণালী",
+        "b": "হরমুজ প্রণালী",
+        "c": "পক্ প্রণালী",
+        "d": "মালাক্কা প্রণালী"
+      }
+    },
+    {
+      "q_no": "Q65",
+      "question": "কোন শিল্পকে উদীয়মানশিল্প বলা হয়?",
+      "options": {
+        "a": "পাট শিল্প",
+        "b": "বয়ন শিল্প",
+        "c": "পেট্রোরসায়ন শিল্প",
+        "d": "চা শিল্প"
+      }
+    },
+    {
+      "q_no": "Q66",
+      "question": "কোনো বস্তুর 20% কর বৃদ্ধি পাওয়ায় বস্তুটার ব্যবহার 20% কমে যায়। এখন কর আদায় হবে",
+      "options": {
+        "a": "একই",
+        "b": "4% কম",
+        "c": "4% বেশী",
+        "d": "8% বেশী"
+      }
+    },
+    {
+      "q_no": "Q67",
+      "question": "কোন ভারতীয় মহিলা প্রথম এভারেস্ট জয় করেন?",
+      "options": {
+        "a": "জুনকো তাবেই",
+        "b": "বাচেন্দ্রী পাল",
+        "c": "আরতি সেন",
+        "d": "এম. সি. মেরি কম"
+      }
+    },
+    {
+      "q_no": "Q68",
+      "question": "88 দ্বারা বিভাজ্য চার অঙ্কের বৃহত্তম সংখ্যাটি হল",
+      "options": {
+        "a": "9944",
+        "b": "9678",
+        "c": "9988",
+        "d": "8888"
+      }
+    },
+    {
+      "q_no": "Q69",
+      "question": "1 - 2 + 3 - 4 + 5 - 6 + 7 - 8 + ........ এই ক্রমানুসারে 1000 পর্যন্ত সংখ্যার মান হবে",
+      "options": {
+        "a": "-450",
+        "b": "-500",
+        "c": "-550",
+        "d": "নির্ণয় করা সম্ভব নয়"
+      }
+    },
+    {
+      "q_no": "Q70",
+      "question": "নিম্নলিখিত সম্ভাব্যগুলির মধ্য থেকে সঠিক পর্যায়টি পূর্ণ করুন: D/5, G/9, J/14, M/20, .........",
+      "options": {
+        "a": "Q/26",
+        "b": "O/26",
+        "c": "Q/27",
+        "d": "P/27"
+      }
+    },
+    {
+      "q_no": "Q71",
+      "question": "2013 সালের নভেম্বরে মঙ্গলাভিযানের সময় ISRO-র চেয়ারম্যান ছিলেন",
+      "options": {
+        "a": "ডঃ বেদ প্রকাশ",
+        "b": "ডঃ ইউ. আর. রাও",
+        "c": "ডঃ কে. রাধাকৃষ্ণন",
+        "d": "ডঃ জি. মাধবন নায়ার"
+      }
+    },
+    {
+      "q_no": "Q72",
+      "question": "কোনটি বেমানান? (মাসের নামের মধ্যে)",
+      "options": {
+        "a": "জুলাই",
+        "b": "সেপ্টেম্বর",
+        "c": "এপ্রিল",
+        "d": "নভেম্বর"
+      }
+    },
+    {
+      "q_no": "Q73",
+      "question": "ম্যানোমিটার যন্ত্রের দ্বারা চাপ মাপা হয়",
+      "options": {
+        "a": "জলের",
+        "b": "তেলের",
+        "c": "গ্যাসের",
+        "d": "বায়ুমণ্ডলের"
+      }
+    },
+    {
+      "q_no": "Q74",
+      "question": "কাজিরাঙা জাতীয় পার্ক অবস্থিত",
+      "options": {
+        "a": "হিমাচল প্রদেশে",
+        "b": "উত্তরপ্রদেশে",
+        "c": "কর্নাটকে",
+        "d": "অসমে"
+      }
+    },
+    {
+      "q_no": "Q75",
+      "question": "কোনো বিক্রেতা 36টি লেবু বিক্রি করলে 4টি লেবুর বিক্রি দাম ক্ষতি হয়। তার শতকরা ক্ষতির পরিমাণ",
+      "options": {
+        "a": "10%",
+        "b": "11 1/9 %",
+        "c": "12 1/2 %",
+        "d": "উপরের কোনটিই নয়"
+      }
+    },
+    {
+      "q_no": "Q76",
+      "question": "নিম্নপ্রদত্ত ছকে অনুপস্থিত সংখ্যাটি নির্ধারণ করুন (intersecting circles number pattern: 22,11→110; 33,44→?; 16,40→112; 24,32→?; ?,12→114; 23,34→?)",
+      "options": {
+        "a": "35",
+        "b": "37",
+        "c": "45",
+        "d": "46"
+      }
+    },
+    {
+      "q_no": "Q77",
+      "question": "The word opposite in meaning to 'Kind' is",
+      "options": {
+        "a": "Honest",
+        "b": "Famous",
+        "c": "Similar",
+        "d": "Cruel"
+      }
+    },
+    {
+      "q_no": "Q78",
+      "question": "কোনো সংখ্যাকে ক্রমান্বয়ে 4, 5, 6 দ্বারা ভাগ করলে যথাক্রমে 2, 3 ও 4 ভাগশেষ থাকে। সংখ্যাটি হল",
+      "options": {
+        "a": "214",
+        "b": "476",
+        "c": "954",
+        "d": "1908"
+      }
+    },
+    {
+      "q_no": "Q79",
+      "question": "Which of the following sentences is correct?",
+      "options": {
+        "a": "There is a university in Kolkata",
+        "b": "He is a university student",
+        "c": "A university will be established at Asansol",
+        "d": "None of the above"
+      }
+    },
+    {
+      "q_no": "Q80",
+      "question": "My brother is younger _______ me. Which of the following words will be appropriate to the above sentence?",
+      "options": {
+        "a": "than",
+        "b": "by",
+        "c": "with",
+        "d": "to"
+      }
+    },
+    {
+      "q_no": "Q81",
+      "question": "ঘণ্টায় 72 কিমি বেগে 110 মিটার দৈর্ঘ্যের একটি ট্রেন 132 মিটার দীর্ঘ ব্রিজকে অতিক্রম করতে সময় নেবে",
+      "options": {
+        "a": "9.8 সেঃ",
+        "b": "12.1 সেঃ",
+        "c": "12.42 সেঃ",
+        "d": "14.3 সেঃ"
+      }
+    },
+    {
+      "q_no": "Q82",
+      "question": "I, who _______ your superior, should be respected. Fill in the blank with the appropriate words given below:",
+      "options": {
+        "a": "am",
+        "b": "is",
+        "c": "are",
+        "d": "was"
+      }
+    },
+    {
+      "q_no": "Q83",
+      "question": "কোনো বিদ্যালয়ে বালক বালিকার অনুপাত 7:5। যদি ঐ বিদ্যালয়ের মোট ছাত্রসংখ্যা 2400 হয় তবে বালিকার সংখ্যা কত?",
+      "options": {
+        "a": "500",
+        "b": "200",
+        "c": "1000",
+        "d": "700"
+      }
+    },
+    {
+      "q_no": "Q84",
+      "question": "কোনো লাইনে ইন্দ্র বাঁদিক থেকে 7 ম স্থানে এবং জয়া ডান দিক থেকে 5 ম স্থানে আছে। তারা পরস্পর অবস্থান পরিবর্তন করলে জয়া ডানদিক থেকে 19 তম স্থানে থাকে। বাঁদিক থেকে ইন্দ্রর অবস্থান",
+      "options": {
+        "a": "21 তম",
+        "b": "19 তম",
+        "c": "23 তম",
+        "d": "20 তম"
+      }
+    },
+    {
+      "q_no": "Q85",
+      "question": "Murderer of one's father is",
+      "options": {
+        "a": "Fratricide",
+        "b": "Patricide",
+        "c": "Homicide",
+        "d": "Matricide"
+      }
+    },
+    {
+      "q_no": "Q86",
+      "question": "নিম্নপ্রদত্ত সংখ্যাগুলি একটি বিশেষ নিয়মে সাজানো আছে। শূন্য স্থানে সঠিক সংখ্যাটি বসান। (Tree pattern: 18,15→549; 17,19→650; 15,14→?)",
+      "options": {
+        "a": "421",
+        "b": "561",
+        "c": "322",
+        "d": "221"
+      }
+    },
+    {
+      "q_no": "Q87",
+      "question": "কোনো ক্যাম্পে 95 জনের 200 দিনের রসদ ছিল। 5 দিন পরে 30 জন ক্যাম্প থেকে চলে গেল। কতদিন ঐ রসদ চলবে?",
+      "options": {
+        "a": "180",
+        "b": "285 16/19",
+        "c": "139",
+        "d": "28.5"
+      }
+    },
+    {
+      "q_no": "Q88",
+      "question": "নীচের দেওয়া শব্দবন্ধগুলিতে পরস্পর ভিন্ন সম্পর্কযুক্ত শব্দবন্ধ কোনটি?",
+      "options": {
+        "a": "গাড়ি : রাস্তা",
+        "b": "রকেট : মহাকাশ",
+        "c": "জাহাজ : সমুদ্র",
+        "d": "এরোপ্লেন : চালক"
+      }
+    },
+    {
+      "q_no": "Q89",
+      "question": "Raman is the better _______ the two boys. Fill in the blank with appropriate words given below:",
+      "options": {
+        "a": "than",
+        "b": "in",
+        "c": "to",
+        "d": "of"
+      }
+    },
+    {
+      "q_no": "Q90",
+      "question": "He lost his mother as soon as he was _______. Fill in the blank with the appropriate words given below:",
+      "options": {
+        "a": "borne",
+        "b": "bear",
+        "c": "born",
+        "d": "bore"
+      }
+    }
+  ]
+}

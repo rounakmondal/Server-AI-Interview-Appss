@@ -1,0 +1,1599 @@
+{
+  "exam": "WBPSC Clerkship",
+  "date": "25 Jan, 2020",
+  "shift": "Shift 2",
+  "total_questions": 100,
+  "sections": ["General Studies", "Arithmetic", "English"],
+  "questions": [
+    {
+      "q_no": "Q1",
+      "section": "General Studies",
+      "question": "The Governor of an Indian State is appointed by",
+      "question_bn": "ভারতের একটি অঙ্গ রাজ্যের রাজ্যপালকে নিয়োগ করেন",
+      "options": {
+        "a": "Prime Minister of India",
+        "b": "Home Minister",
+        "c": "President of India",
+        "d": "The Chief Justice of the Supreme Court"
+      },
+      "options_bn": {
+        "a": "ভারতের প্রধানমন্ত্রী",
+        "b": "স্বরাষ্ট্রমন্ত্রী",
+        "c": "রাষ্ট্রপতি",
+        "d": "শীর্ষ আদালতের প্রধান বিচারপতি"
+      }
+    },
+    {
+      "q_no": "Q2",
+      "section": "General Studies",
+      "question": "Which one of the following ports is not in Pakistan?",
+      "question_bn": "নীচে উল্লিখিত বন্দরগুলির মধ্যে কোনটির অবস্থান পাকিস্তানে নয়?",
+      "options": {
+        "a": "Karachi",
+        "b": "Gwader",
+        "c": "Pasni",
+        "d": "Bandar Abbas"
+      },
+      "options_bn": {
+        "a": "করাচি",
+        "b": "গোয়াদার",
+        "c": "পাস্নী",
+        "d": "বন্দর আব্বাস"
+      }
+    },
+    {
+      "q_no": "Q3",
+      "section": "General Studies",
+      "question": "The capital of Australia is",
+      "question_bn": "অস্ট্রেলিয়ার রাজধানী হল",
+      "options": {
+        "a": "Melbourne",
+        "b": "Sydney",
+        "c": "Canberra",
+        "d": "Perth"
+      },
+      "options_bn": {
+        "a": "মেলবোর্ন",
+        "b": "সিডনী",
+        "c": "ক্যানবেরা",
+        "d": "পার্থ"
+      }
+    },
+    {
+      "q_no": "Q4",
+      "section": "General Studies",
+      "question": "Which one of the following states criticised India for abrogation of Article 370 of Indian Constitution?",
+      "question_bn": "ভারতীয় সংবিধানের 370 ধারা বাতিল করার জন্য নিম্নে উল্লিখিত রাষ্ট্রগুলির মধ্যে কোনটি ভারত সরকারের সমালোচনা করেছে?",
+      "options": {
+        "a": "Bangladesh",
+        "b": "UAE",
+        "c": "Turkey",
+        "d": "Saudi Arabia"
+      },
+      "options_bn": {
+        "a": "বাংলাদেশ",
+        "b": "সংযুক্ত আমীরশাহী",
+        "c": "তুরস্ক",
+        "d": "সৌদী আরব রাষ্ট্র"
+      }
+    },
+    {
+      "q_no": "Q5",
+      "section": "General Studies",
+      "question": "In which year did India host the Commonwealth Games?",
+      "question_bn": "'কমনওয়েলথ গেমস' কোন বৎসরে ভারতে অনুষ্ঠিত হয়?",
+      "options": {
+        "a": "1990",
+        "b": "2010",
+        "c": "2014",
+        "d": "2018"
+      },
+      "options_bn": {
+        "a": "1990",
+        "b": "2010",
+        "c": "2014",
+        "d": "2018"
+      }
+    },
+    {
+      "q_no": "Q6",
+      "section": "General Studies",
+      "question": "The 2020 summer olympic games will be held in",
+      "question_bn": "2020 সালের গ্রীষ্মকালীন অলিম্পিক প্রতিযোগিতা অনুষ্ঠিত হবে যে শহরে সেটি",
+      "options": {
+        "a": "Tokyo",
+        "b": "Beijing",
+        "c": "Paris",
+        "d": "Moscow"
+      },
+      "options_bn": {
+        "a": "টোকিও",
+        "b": "বেজিং",
+        "c": "প্যারিস",
+        "d": "মস্কো"
+      }
+    },
+    {
+      "q_no": "Q7",
+      "section": "General Studies",
+      "question": "Who among the following Nobel Laureates did not have any significant connection with Kolkata?",
+      "question_bn": "নিম্নে উল্লিখিত নোবেল পুরস্কার বিজয়ীদের মধ্যে কোন ব্যক্তির কলকাতার সঙ্গে বিশেষ কোনো যোগাযোগ ছিল না?",
+      "options": {
+        "a": "Mother Teresa",
+        "b": "H. G. Khorana",
+        "c": "C. V. Raman",
+        "d": "Avijit Binayak Bandyopadhyay"
+      },
+      "options_bn": {
+        "a": "মাদার টেরেজা",
+        "b": "হরগোবিন্দ খোরানা",
+        "c": "সি. ভি. রমণ",
+        "d": "অভিজিৎ বিনায়ক বন্দ্যোপাধ্যায়"
+      }
+    },
+    {
+      "q_no": "Q8",
+      "section": "General Studies",
+      "question": "Which one of the following states is not a member of BIMSTEC?",
+      "question_bn": "নিম্নলিখিত রাষ্ট্রগুলির মধ্যে কোনটি BIMSTEC গোষ্ঠীর সদস্য নয়?",
+      "options": {
+        "a": "Pakistan",
+        "b": "Myanmar",
+        "c": "Sri Lanka",
+        "d": "India"
+      },
+      "options_bn": {
+        "a": "পাকিস্তান",
+        "b": "মায়ানমার",
+        "c": "শ্রীলঙ্কা",
+        "d": "ভারত"
+      }
+    },
+    {
+      "q_no": "Q9",
+      "section": "General Studies",
+      "question": "Keshav Maharaj is a cricketer who plays for",
+      "question_bn": "কেশব মহারাজ যে দেশের হয়ে ক্রিকেট খেলেন তা হল",
+      "options": {
+        "a": "West Indies",
+        "b": "England",
+        "c": "South Africa",
+        "d": "India"
+      },
+      "options_bn": {
+        "a": "ওয়েস্ট ইন্ডিজ",
+        "b": "ইংল্যান্ড",
+        "c": "দক্ষিণ আফ্রিকা",
+        "d": "ভারত"
+      }
+    },
+    {
+      "q_no": "Q10",
+      "section": "General Studies",
+      "question": "Who among the following was the first President of Indian National Congress?",
+      "question_bn": "নিম্নে উল্লিখিত ব্যক্তিগণের মধ্যে কে ভারতীয় জাতীয় কংগ্রেসের প্রথম সভাপতি ছিলেন?",
+      "options": {
+        "a": "Dadabhai Naoroji",
+        "b": "Allan Octavian Hume",
+        "c": "W. C. Bonnerjee",
+        "d": "Surendra Nath Banerjee"
+      },
+      "options_bn": {
+        "a": "দাদাভাই নওরোজী",
+        "b": "অ্যালান অক্টেভিয়ান হিউম",
+        "c": "উমেশ চন্দ্র ব্যানার্জী",
+        "d": "সুরেন্দ্রনাথ ব্যানার্জী"
+      }
+    },
+    {
+      "q_no": "Q11",
+      "section": "General Studies",
+      "question": "Who is currently the Governor of Jammu and Kashmir?",
+      "question_bn": "বর্তমানে জম্মু ও কাশ্মীরের রাজ্যপাল হলেন",
+      "options": {
+        "a": "N. N. Vohra",
+        "b": "Jagmohan",
+        "c": "Satya Pal Malik",
+        "d": "Girish Chandra Saxena"
+      },
+      "options_bn": {
+        "a": "এন. এন. ভোরা",
+        "b": "জগমোহন",
+        "c": "সত্যপাল মালিক",
+        "d": "গিরিশ চন্দ্র সাক্সেনা"
+      }
+    },
+    {
+      "q_no": "Q12",
+      "section": "General Studies",
+      "question": "Given below are the names of some sports persons and the games in which they excelled. Which one of the following is correctly matched?",
+      "question_bn": "নীচে কিছু খেলোয়াড়ের নাম এবং যে সব খেলায় তারা পারদর্শী তা দেওয়া হয়েছে। খেলোয়াড়ের নাম এবং খেলা ঠিকমত চিহ্নিত করতে হবে।",
+      "options": {
+        "a": "Christiano Ronaldo – Cricket",
+        "b": "Simona Halep – Tennis",
+        "c": "Tiger Woods – Billiards",
+        "d": "Joe Root – Football"
+      },
+      "options_bn": {
+        "a": "ক্রিশ্চিয়ানো রোনাল্ডো – ক্রিকেট",
+        "b": "সীমোনা হালেপ – টেনিস",
+        "c": "টাইগার উডস – বিলিয়ার্ডস",
+        "d": "জো রুট – ফুটবল"
+      }
+    },
+    {
+      "q_no": "Q13",
+      "section": "General Studies",
+      "question": "India's 'Look East' policy was launched by",
+      "question_bn": "ভারতের 'পূর্বমুখী কর্ম' (Look East) নীতির সূচনা করেন",
+      "options": {
+        "a": "Narasimha Rao",
+        "b": "Atal Behari Vajpayee",
+        "c": "Manmohan Singh",
+        "d": "Narendra Modi"
+      },
+      "options_bn": {
+        "a": "নরসিমা রাও",
+        "b": "অটল বিহারী বাজপেয়ী",
+        "c": "মনমোহন সিং",
+        "d": "নরেন্দ্র মোদী"
+      }
+    },
+    {
+      "q_no": "Q14",
+      "section": "General Studies",
+      "question": "Who was the first Chairman of India's Atomic Energy Commission?",
+      "question_bn": "ভারতের পরমাণুশক্তি কমিশনের প্রথম সভাপতি ছিলেন",
+      "options": {
+        "a": "Homi Bhaba",
+        "b": "Vikram Sarabhai",
+        "c": "R. Chidambaram",
+        "d": "H. N. Sethna"
+      },
+      "options_bn": {
+        "a": "হোমি ভাবা",
+        "b": "বিক্রম সারাভাই",
+        "c": "আর. চিদাম্বরম",
+        "d": "এইচ. এন. শেঠনা"
+      }
+    },
+    {
+      "q_no": "Q15",
+      "section": "General Studies",
+      "question": "The 2019 Nobel Prize for Peace was awarded to",
+      "question_bn": "2019 সালে বিশ্ব শান্তির জন্য 'নোবেল পুরস্কার' পেলেন",
+      "options": {
+        "a": "Xi Jinping",
+        "b": "Abiy Ahmed",
+        "c": "Greta Thunberg",
+        "d": "Malala Yousufzai"
+      },
+      "options_bn": {
+        "a": "শি জিনপিং",
+        "b": "আবী আহমেদ",
+        "c": "গ্রেটা থুনবার্গ",
+        "d": "মালালা ইউসুফজাই"
+      }
+    },
+    {
+      "q_no": "Q16",
+      "section": "General Studies",
+      "question": "The first Indian Governor General of independent India was",
+      "question_bn": "স্বাধীন ভারতে প্রথম ভারতীয় গভর্নর জেনারেল ছিলেন",
+      "options": {
+        "a": "Dr. Rajendra Prasad",
+        "b": "C. Rajagopalachari",
+        "c": "Dr. B.R. Ambedkar",
+        "d": "Dr. S. Radhakrishnan"
+      },
+      "options_bn": {
+        "a": "ডঃ রাজেন্দ্র প্রসাদ",
+        "b": "সি. রাজাগোপালাচারী",
+        "c": "ডঃ বি. আর. আম্বেদকর",
+        "d": "ডঃ সর্বপল্লী রাধাকৃষ্ণন"
+      }
+    },
+    {
+      "q_no": "Q17",
+      "section": "General Studies",
+      "question": "When did Alexander invade India?",
+      "question_bn": "আলেকজান্ডার কখন ভারতবর্ষ আক্রমণ করেন?",
+      "options": {
+        "a": "323 B.C.",
+        "b": "325 B.C.",
+        "c": "326 B.C.",
+        "d": "327 B.C."
+      },
+      "options_bn": {
+        "a": "খ্রিস্টপূর্ব 323-এ",
+        "b": "খ্রিস্টপূর্ব 325-এ",
+        "c": "খ্রিস্টপূর্ব 326-এ",
+        "d": "খ্রিস্টপূর্ব 327-এ"
+      }
+    },
+    {
+      "q_no": "Q18",
+      "section": "General Studies",
+      "question": "Turkey recently launched an attack on the Kurds residing in",
+      "question_bn": "নিম্নে উল্লিখিত দেশগুলির মধ্যে কোন দেশে বসবাসকারী কুর্দিশদের ওপর হাল আমলে তুরস্ক আক্রমণ করেছে?",
+      "options": {
+        "a": "Iran",
+        "b": "Iraq",
+        "c": "Syria",
+        "d": "Saudi Arabia"
+      },
+      "options_bn": {
+        "a": "ইরান",
+        "b": "ইরাক",
+        "c": "সিরিয়া",
+        "d": "সৌদি আরব"
+      }
+    },
+    {
+      "q_no": "Q19",
+      "section": "General Studies",
+      "question": "Who among the following is not a recipient of the Nobel Prize in literature?",
+      "question_bn": "নিম্নলিখিত ব্যক্তিদের মধ্যে কে সাহিত্যে নোবেল পুরস্কার পাননি?",
+      "options": {
+        "a": "Toni Morrison",
+        "b": "Gabriela Mistral",
+        "c": "Arundhati Roy",
+        "d": "Olga Tokarczuk"
+      },
+      "options_bn": {
+        "a": "টনি মরিসন",
+        "b": "গ্যাব্রিয়েলা মিস্ট্রেল",
+        "c": "অরুন্ধতী রায়",
+        "d": "ওল্ডা টোকারজুক"
+      }
+    },
+    {
+      "q_no": "Q20",
+      "section": "General Studies",
+      "question": "Rabindra Nath Tagore gave up his Knighthood in",
+      "question_bn": "রবীন্দ্রনাথ ঠাকুর তাঁর 'নাইট' উপাধি পরিত্যাগ করেন",
+      "options": {
+        "a": "1905",
+        "b": "1911",
+        "c": "1914",
+        "d": "1919"
+      },
+      "options_bn": {
+        "a": "1905 সালে",
+        "b": "1911 সালে",
+        "c": "1914 সালে",
+        "d": "1919 সালে"
+      }
+    },
+    {
+      "q_no": "Q21",
+      "section": "General Studies",
+      "question": "Which of the following states in India is not a tea-growing state?",
+      "question_bn": "নিম্নলিখিত রাজ্যগুলির মধ্যে কোনটিতে চা-এর উৎপাদন হয় না?",
+      "options": {
+        "a": "Assam",
+        "b": "Tripura",
+        "c": "Madhya Pradesh",
+        "d": "West Bengal"
+      },
+      "options_bn": {
+        "a": "অসম",
+        "b": "ত্রিপুরা",
+        "c": "মধ্যপ্রদেশ",
+        "d": "পশ্চিমবঙ্গ"
+      }
+    },
+    {
+      "q_no": "Q22",
+      "section": "General Studies",
+      "question": "In which of the following states the head of India's diplomatic mission is designated 'High Commissioner'?",
+      "question_bn": "নিম্নে উল্লিখিত রাষ্ট্রগুলির মধ্যে কোথায় ভারতীয় দূতাবাসের প্রধানকে 'হাই কমিশনার' বলা হয়?",
+      "options": {
+        "a": "USA",
+        "b": "UK",
+        "c": "Germany",
+        "d": "Russia"
+      },
+      "options_bn": {
+        "a": "যুক্তরাষ্ট্র",
+        "b": "যুক্তরাজ্য",
+        "c": "জার্মানি",
+        "d": "রাশিয়া"
+      }
+    },
+    {
+      "q_no": "Q23",
+      "section": "General Studies",
+      "question": "Usain Bolt is a",
+      "question_bn": "Usain Bolt একজন",
+      "options": {
+        "a": "Long distance runner",
+        "b": "Swimmer",
+        "c": "Basket ball player",
+        "d": "Archer"
+      },
+      "options_bn": {
+        "a": "দূরপাল্লার দৌড়বিদ",
+        "b": "সাঁতারু",
+        "c": "বাস্কেটবল খেলোয়াড়",
+        "d": "তীরন্দাজ"
+      }
+    },
+    {
+      "q_no": "Q24",
+      "section": "General Studies",
+      "question": "Which among the following rivers originate from the Himalayas?",
+      "question_bn": "নিম্নে উল্লিখিত নদীগুলির মধ্যে কোনটির উৎস হিমালয়ে?",
+      "options": {
+        "a": "Damodar",
+        "b": "Cauvery",
+        "c": "The Bramhaputra",
+        "d": "Narmada"
+      },
+      "options_bn": {
+        "a": "দামোদর",
+        "b": "কাবেরী",
+        "c": "ব্রহ্মপুত্র",
+        "d": "নর্মদা"
+      }
+    },
+    {
+      "q_no": "Q25",
+      "section": "General Studies",
+      "question": "Who among the following was not a hockey player?",
+      "question_bn": "নিম্নে উল্লিখিত ব্যক্তিদের মধ্যে কে হকি খেলোয়াড় নন?",
+      "options": {
+        "a": "Dhan Chand",
+        "b": "Milkha Singh",
+        "c": "Sardar Singh",
+        "d": "Sandeep Singh"
+      },
+      "options_bn": {
+        "a": "ধ্যানচাঁদ",
+        "b": "মিলখা সিং",
+        "c": "সর্দার সিং",
+        "d": "সন্দীপ সিং"
+      }
+    },
+    {
+      "q_no": "Q26",
+      "section": "General Studies",
+      "question": "Which one of the following is not an independent state?",
+      "question_bn": "নিম্নে উল্লিখিত স্থানগুলির মধ্যে কোনটি একটি স্বাধীন রাষ্ট্র নয়?",
+      "options": {
+        "a": "Vanuatu",
+        "b": "Netherlands",
+        "c": "Alaska",
+        "d": "Canada"
+      },
+      "options_bn": {
+        "a": "ভানুয়াটু",
+        "b": "নেদারল্যান্ডস",
+        "c": "আলাস্কা",
+        "d": "কানাডা"
+      }
+    },
+    {
+      "q_no": "Q27",
+      "section": "General Studies",
+      "question": "Amarkantak is in",
+      "question_bn": "অমরকন্টক শহরটি",
+      "options": {
+        "a": "Maharasthra",
+        "b": "Madhya Pradesh",
+        "c": "Rajasthan",
+        "d": "Uttarakhand"
+      },
+      "options_bn": {
+        "a": "মহারাষ্ট্রে",
+        "b": "মধ্যপ্রদেশে",
+        "c": "রাজস্থানে",
+        "d": "উত্তরাখণ্ডে"
+      }
+    },
+    {
+      "q_no": "Q28",
+      "section": "General Studies",
+      "question": "The ISRO has its Headquarters in",
+      "question_bn": "ISRO-এর সদর দপ্তর হল",
+      "options": {
+        "a": "Hyderabad",
+        "b": "Bengaluru",
+        "c": "Ahmedabad",
+        "d": "Thiruvananthapuram"
+      },
+      "options_bn": {
+        "a": "হায়দারাবাদে",
+        "b": "বেঙ্গালুরুতে",
+        "c": "আমেদাবাদে",
+        "d": "তিরুবানন্তপুরমে"
+      }
+    },
+    {
+      "q_no": "Q29",
+      "section": "General Studies",
+      "question": "Who is currently the Foreign Minister of India?",
+      "question_bn": "নিম্নে উল্লিখিত ব্যক্তিদের মধ্যে বর্তমানে কে ভারতের বিদেশ মন্ত্রী?",
+      "options": {
+        "a": "Ajit Doval",
+        "b": "Rajnath Singh",
+        "c": "Vijay Gokhale",
+        "d": "S. Jaishankar"
+      },
+      "options_bn": {
+        "a": "অজিত দোভাল",
+        "b": "রাজনাথ সিং",
+        "c": "বিজয় গোখলে",
+        "d": "এস. জয়শঙ্কর"
+      }
+    },
+    {
+      "q_no": "Q30",
+      "section": "General Studies",
+      "question": "Which one of the following countries was recently in the news for burning of the World's largest rain forest?",
+      "question_bn": "বিশ্বের বৃহত্তম rain forest-এ অগ্নিকাণ্ডের জন্য সাম্প্রতিক কালে কোন দেশের নাম সংবাদ শিরোনামে ছিল?",
+      "options": {
+        "a": "Mexico",
+        "b": "Brazil",
+        "c": "Venezuela",
+        "d": "Ecuader"
+      },
+      "options_bn": {
+        "a": "মেক্সিকো",
+        "b": "ব্রাজিল",
+        "c": "ভেনিজুয়েলা",
+        "d": "ইকুয়েডর"
+      }
+    },
+    {
+      "q_no": "Q31",
+      "section": "General Studies",
+      "question": "Which one of the following does not cause global warming?",
+      "question_bn": "বিশ্বের উষ্ণায়নের জন্য নিম্নলিখিত কারণগুলির মধ্যে কোনটি দায়ী নয়?",
+      "options": {
+        "a": "Burning of fossil fuels",
+        "b": "Petrol cars",
+        "c": "Solar energy",
+        "d": "Deforestation"
+      },
+      "options_bn": {
+        "a": "জীবাশ্ম জ্বালানির ব্যবহার",
+        "b": "পেট্রল গাড়ি",
+        "c": "সৌরশক্তির ব্যবহার",
+        "d": "অরণ্যচ্ছেদন"
+      }
+    },
+    {
+      "q_no": "Q32",
+      "section": "General Studies",
+      "question": "Identify the statement that wrongly depicts Mamallapuram as",
+      "question_bn": "মামল্লপুরম সম্পর্কে নিম্নে উল্লিখিত বিবৃতিগুলির মধ্যে কোনটি অসত্য?",
+      "options": {
+        "a": "a UNESCO cultural heritage site",
+        "b": "the ancient capital of the Pallva Kingdom",
+        "c": "home to the development of Kathakali dance form",
+        "d": "a tourist spot"
+      },
+      "options_bn": {
+        "a": "এটি একটি UNESCO অনুমোদিত সংস্কৃতির পীঠস্থান।",
+        "b": "এটি ছিল পল্লব রাজাদের রাজধানী।",
+        "c": "এখানে কথকলি নৃত্যের জন্ম।",
+        "d": "এটি একটি পর্যটন কেন্দ্র।"
+      }
+    },
+    {
+      "q_no": "Q33",
+      "section": "General Studies",
+      "question": "Where did the INA unfurl the Indian flag after defeating the British on 14th April 1944?",
+      "question_bn": "1944 সালের 14ই এপ্রিল ব্রিটিশ সেনাবাহিনীকে পরাস্ত করে INA যেখানে ভারতীয় পতাকা উত্তোলন করেছিল সে জায়গার নাম",
+      "options": {
+        "a": "Imphal",
+        "b": "Moirang",
+        "c": "Kohima",
+        "d": "Moreh"
+      },
+      "options_bn": {
+        "a": "ইম্ফল",
+        "b": "মইরাং",
+        "c": "কোহিমা",
+        "d": "মোরে"
+      }
+    },
+    {
+      "q_no": "Q34",
+      "section": "General Studies",
+      "question": "The book 'Asani Sanket' was written by",
+      "question_bn": "'অশনিসংকেত' গ্রন্থের রচয়িতা হলেন",
+      "options": {
+        "a": "Bibhuti Bhusan Bandyopadhyaya",
+        "b": "Manik Bandyopadhyaya",
+        "c": "Samaresh Bose",
+        "d": "Sirshendu Mukhopadhyaya"
+      },
+      "options_bn": {
+        "a": "বিভূতিভূষণ বন্দ্যোপাধ্যায়",
+        "b": "মানিক বন্দ্যোপাধ্যায়",
+        "c": "সমরেশ বসু",
+        "d": "শীর্ষেন্দু মুখোপাধ্যায়"
+      }
+    },
+    {
+      "q_no": "Q35",
+      "section": "General Studies",
+      "question": "In the 2019 Parliamentary elections, Rahul Gandhi was elected from",
+      "question_bn": "2019-এর সংসদীয় নির্বাচনে রাহুল গান্ধী যে নির্বাচনকেন্দ্র থেকে জয়লাভ করেন সেটি",
+      "options": {
+        "a": "Amethi",
+        "b": "Wayanad",
+        "c": "Thiruvananthapuram",
+        "d": "Medak"
+      },
+      "options_bn": {
+        "a": "আমেথি",
+        "b": "ওয়ানাড",
+        "c": "তিরুবনন্তপুরম",
+        "d": "মেডাক"
+      }
+    },
+    {
+      "q_no": "Q36",
+      "section": "General Studies",
+      "question": "Which Indian cricketer has scored the highest number of double centuries in Tests?",
+      "question_bn": "টেস্ট খেলায় কোন ভারতীয় ক্রিকেটার সর্বাধিক দ্বি-শত রান করেছেন?",
+      "options": {
+        "a": "Sunil Gavaskar",
+        "b": "Virat Kohli",
+        "c": "Sachin Tendulkar",
+        "d": "Virendra Shewag"
+      },
+      "options_bn": {
+        "a": "সুনীল গাভাসকার",
+        "b": "বিরাট কোহলি",
+        "c": "সচীন তেন্ডুলকার",
+        "d": "বীরেন্দ্র সেহবাগ"
+      }
+    },
+    {
+      "q_no": "Q37",
+      "section": "General Studies",
+      "question": "Which was not a Portuguese colony in India?",
+      "question_bn": "কোনটি অতীতে পর্তুগীজদের কলোনি ছিল না?",
+      "options": {
+        "a": "Pondicherry",
+        "b": "Chandannagar",
+        "c": "Goa",
+        "d": "Andaman and Nicobar Islands"
+      },
+      "options_bn": {
+        "a": "পন্ডিচেরী",
+        "b": "চন্দননগর",
+        "c": "গোয়া",
+        "d": "আন্দামান ও নিকোবর দ্বীপপুঞ্জ"
+      }
+    },
+    {
+      "q_no": "Q38",
+      "section": "General Studies",
+      "question": "Kamarpukur, the birth place of Sri Sri Ramkrishna, is in",
+      "question_bn": "শ্রী শ্রী রামকৃষ্ণদেবের জন্মস্থান কামারপুকুর হল",
+      "options": {
+        "a": "Howrah",
+        "b": "Hooghly",
+        "c": "East Bardhaman",
+        "d": "Nadia"
+      },
+      "options_bn": {
+        "a": "হাওড়া জেলায়",
+        "b": "হগলী জেলায়",
+        "c": "পূর্ব বর্ধমান জেলায়",
+        "d": "নদীয়া জেলায়"
+      }
+    },
+    {
+      "q_no": "Q39",
+      "section": "General Studies",
+      "question": "Swami Vivekananda delivered his Chicago Addresses in",
+      "question_bn": "স্বামী বিবেকানন্দ শিকাগো ধর্ম সম্মেলনে বক্তৃতা দিয়েছিলেন",
+      "options": {
+        "a": "1890",
+        "b": "1892",
+        "c": "1893",
+        "d": "1894"
+      },
+      "options_bn": {
+        "a": "1890 সালে",
+        "b": "1892 সালে",
+        "c": "1893 সালে",
+        "d": "1894 সালে"
+      }
+    },
+    {
+      "q_no": "Q40",
+      "section": "General Studies",
+      "question": "From which parliamentary constituency did Prime Minister come in 2019 elections?",
+      "question_bn": "2019 সালের সংসদীয় নির্বাচনে প্রধানমন্ত্রী কোন নির্বাচনী কেন্দ্র থেকে এসেছেন?",
+      "options": {
+        "a": "Lucknow",
+        "b": "Varanasi",
+        "c": "Raebareli",
+        "d": "Ahmedabad"
+      },
+      "options_bn": {
+        "a": "লখনউ",
+        "b": "বারাণসী",
+        "c": "রায়বেরেলি",
+        "d": "আমেদাবাদ"
+      }
+    },
+    {
+      "q_no": "Q41",
+      "section": "Arithmetic",
+      "question": "A sum of money becomes 4 times of itself in 2 years at compound interest. The rate of interest per annum is",
+      "question_bn": "যদি কোনো আসল চক্রবৃদ্ধি হার সুদে 2 বছরে সুদে-আসলে 4 গুণ হয়, তবে বার্ষিক সুদের হার কত?",
+      "options": {
+        "a": "150%",
+        "b": "100%",
+        "c": "200%",
+        "d": "75%"
+      },
+      "options_bn": {
+        "a": "150%",
+        "b": "100%",
+        "c": "200%",
+        "d": "75%"
+      }
+    },
+    {
+      "q_no": "Q42",
+      "section": "Arithmetic",
+      "question": "A alone can do 1/2 of a work in 5 days and B alone can do 1/3 of the same work in 4 days. How many days working together will they finish the work?",
+      "question_bn": "A একটি কাজের 1/2 অংশ 5 দিনে এবং B ওই কাজটির 1/3 অংশ 4 দিনে করতে পারে। A ও B একসঙ্গে সম্পূর্ণ কাজটি করে",
+      "options": {
+        "a": "2 2/9 days",
+        "b": "3 days",
+        "c": "9 days",
+        "d": "5 5/11 days"
+      },
+      "options_bn": {
+        "a": "2 2/9 দিনে",
+        "b": "3 দিনে",
+        "c": "9 দিনে",
+        "d": "5 5/11 দিনে"
+      }
+    },
+    {
+      "q_no": "Q43",
+      "section": "Arithmetic",
+      "question": "What rate per cent is 1 minute 48 seconds to an hour?",
+      "question_bn": "1 ঘণ্টার কত শতাংশ 1 মিনিট 48 সেকেন্ড?",
+      "options": {
+        "a": "1%",
+        "b": "2%",
+        "c": "3%",
+        "d": "4%"
+      },
+      "options_bn": {
+        "a": "1%",
+        "b": "2%",
+        "c": "3%",
+        "d": "4%"
+      }
+    },
+    {
+      "q_no": "Q44",
+      "section": "Arithmetic",
+      "question": "A 60 metre long train is running at a speed of 40 km per hour. It will cross a railway platform 90 metre long in",
+      "question_bn": "60 মিটার লম্বা একটি ট্রেন ঘণ্টায় 40 কিমি বেগে ধাবিত হলে কত সময়ে 90 মিটার লম্বা একটি প্ল্যাটফর্মকে অতিক্রম করবে?",
+      "options": {
+        "a": "14 seconds",
+        "b": "13.5 seconds",
+        "c": "14.5 seconds",
+        "d": "13 seconds"
+      },
+      "options_bn": {
+        "a": "14 সেকেন্ডে",
+        "b": "13.5 সেকেন্ডে",
+        "c": "14.5 সেকেন্ডে",
+        "d": "13 সেকেন্ডে"
+      }
+    },
+    {
+      "q_no": "Q45",
+      "section": "Arithmetic",
+      "question": "A fruit seller bought 15 apples for Rs. 12 and sold 12 apples for Rs. 15. How much profit or loss did he make?",
+      "question_bn": "এক ফল বিক্রেতা 12 টাকা দিয়ে 15টি আপেল কিনে 15 টাকায় 12টি আপেল বিক্রয় করল। তার কত লাভ বা ক্ষতি হল?",
+      "options": {
+        "a": "56.25% profit",
+        "b": "56.35% profit",
+        "c": "56.25% loss",
+        "d": "56.35% loss"
+      },
+      "options_bn": {
+        "a": "56.25% লাভ",
+        "b": "56.35% লাভ",
+        "c": "56.25% ক্ষতি",
+        "d": "56.35% ক্ষতি"
+      }
+    },
+    {
+      "q_no": "Q46",
+      "section": "Arithmetic",
+      "question": "On simplification, 3034 – (1002 ÷ 20.04) is equal to",
+      "question_bn": "3034 – (1002 ÷ 20.04) -এর সরলতম মান হল",
+      "options": {
+        "a": "2543",
+        "b": "2984",
+        "c": "2993",
+        "d": "3029"
+      },
+      "options_bn": {
+        "a": "2543",
+        "b": "2984",
+        "c": "2993",
+        "d": "3029"
+      }
+    },
+    {
+      "q_no": "Q47",
+      "section": "Arithmetic",
+      "question": "Successive discount of 20% and 25% are equivalent to a single discount of",
+      "question_bn": "20% এবং 25% ক্রমিক ছাড়-এর সমতুল্য ছাড় কত শতাংশ হবে?",
+      "options": {
+        "a": "33%",
+        "b": "40%",
+        "c": "35%",
+        "d": "45%"
+      },
+      "options_bn": {
+        "a": "33%",
+        "b": "40%",
+        "c": "35%",
+        "d": "45%"
+      }
+    },
+    {
+      "q_no": "Q48",
+      "section": "Arithmetic",
+      "question": "15% loss on selling price is what per cent loss on the cost price?",
+      "question_bn": "বিক্রয়মূল্যের ওপর 15% ক্ষতি হলে, ক্রয়মূল্যের ওপর কত শতাংশ ক্ষতি হবে?",
+      "options": {
+        "a": "13 1/23%",
+        "b": "23 1/3%",
+        "c": "13 2/23%",
+        "d": "23 2/23%"
+      },
+      "options_bn": {
+        "a": "13 1/23%",
+        "b": "23 1/3%",
+        "c": "13 2/23%",
+        "d": "23 2/23%"
+      }
+    },
+    {
+      "q_no": "Q49",
+      "section": "Arithmetic",
+      "question": "The ratio of the ages of three persons is 7:5:4. The sum of the ages of the first and third exceeds the double of the age of the second person by 5 years. Determine the age of the second person.",
+      "question_bn": "তিনজনের বয়সের অনুপাত 7:5:4। প্রথম ও তৃতীয় জনের বয়সের সমষ্টি দ্বিতীয় জনের বয়সের দ্বিগুণ অপেক্ষা 5 বছর বেশি। দ্বিতীয় ব্যক্তির বয়স কত?",
+      "options": {
+        "a": "20 years",
+        "b": "25 years",
+        "c": "27 years",
+        "d": "30 years"
+      },
+      "options_bn": {
+        "a": "20 বছর",
+        "b": "25 বছর",
+        "c": "27 বছর",
+        "d": "30 বছর"
+      }
+    },
+    {
+      "q_no": "Q50",
+      "section": "Arithmetic",
+      "question": "Find smallest number which when divided by 20, 42 and 63, leaves the remainder 1 in each case.",
+      "question_bn": "ক্ষুদ্রতম কোন সংখ্যাকে 20, 42 এবং 63 দ্বারা ভাগ করলে প্রতিক্ষেত্রে 1 অবশিষ্ট থাকে?",
+      "options": {
+        "a": "1241",
+        "b": "1261",
+        "c": "1259",
+        "d": "1239"
+      },
+      "options_bn": {
+        "a": "1241",
+        "b": "1261",
+        "c": "1259",
+        "d": "1239"
+      }
+    },
+    {
+      "q_no": "Q51",
+      "section": "Arithmetic",
+      "question": "If 20 1/2 + 30 1/3 – * = 35 2/3, then the * mark place is",
+      "question_bn": "যদি 20 1/2 + 30 1/3 – * = 35 2/3 হয়, তবে * চিহ্ন স্থানিটিতে বসাতে হবে",
+      "options": {
+        "a": "15 1/2",
+        "b": "15 1/4",
+        "c": "15 1/6",
+        "d": "15 1/7"
+      },
+      "options_bn": {
+        "a": "15 1/2",
+        "b": "15 1/4",
+        "c": "15 1/6",
+        "d": "15 1/7"
+      }
+    },
+    {
+      "q_no": "Q52",
+      "section": "Arithmetic",
+      "question": "The price of coal is increased by 20%. By what per cent a family should decrease its consumption so that expenditure remains same?",
+      "question_bn": "কয়লার বাজার দাম 20% বৃদ্ধি পাওয়ায় একটি পরিবারের খরচ একই রাখতে কয়লার বরাদ্দ হ্রাস পায়",
+      "options": {
+        "a": "40%",
+        "b": "23 1/3%",
+        "c": "20%",
+        "d": "16 2/3%"
+      },
+      "options_bn": {
+        "a": "40%",
+        "b": "23 1/3%",
+        "c": "20%",
+        "d": "16 2/3%"
+      }
+    },
+    {
+      "q_no": "Q53",
+      "section": "Arithmetic",
+      "question": "A tap can empty a tank in 30 minutes while second tap empty it in 20 minutes. If both the taps are kept open, how much time is required to empty the cistern?",
+      "question_bn": "একটি চৌবাচ্চার দুটি নল দিয়ে যথাক্রমে 30 মিনিট এবং 20 মিনিটে চৌবাচ্চাটি খালি হয়। দুটি নল একসঙ্গে খুলে দিলে ভর্তি চৌবাচ্চাটি খালি হয়",
+      "options": {
+        "a": "12 minutes",
+        "b": "25 minutes",
+        "c": "50 minutes",
+        "d": "55 minutes"
+      },
+      "options_bn": {
+        "a": "12 মিনিট",
+        "b": "25 মিনিট",
+        "c": "50 মিনিট",
+        "d": "55 মিনিট"
+      }
+    },
+    {
+      "q_no": "Q54",
+      "section": "Arithmetic",
+      "question": "A certain principal amounts to Rs. 500 in 3 years and Rs. 540 in 5 years. Find the rate of interest per annum.",
+      "question_bn": "কোনো মূলধন 3 বছরের সুদে-মুলে 500 টাকা এবং 5 বছরের সুদে-মুলে 540 টাকা হয়। বার্ষিক সুদের হার কত?",
+      "options": {
+        "a": "52/11%",
+        "b": "50/11%",
+        "c": "56/11%",
+        "d": "54/11%"
+      },
+      "options_bn": {
+        "a": "52/11%",
+        "b": "50/11%",
+        "c": "56/11%",
+        "d": "54/11%"
+      }
+    },
+    {
+      "q_no": "Q55",
+      "section": "Arithmetic",
+      "question": "300 gm of sugar solution has 40% sugar in it. How much sugar should be added to make it 50% in the solution?",
+      "question_bn": "300 গ্রাম চিনির দ্রবণে 40% চিনি আছে। ওই দ্রবণে আরও কত গ্রাম চিনি মিশ্রিত করলে চিনির পরিমাণ মোট মিশ্রণের 50% হবে?",
+      "options": {
+        "a": "10 gms",
+        "b": "40 gms",
+        "c": "60 gms",
+        "d": "8 gms"
+      },
+      "options_bn": {
+        "a": "10 গ্রাম",
+        "b": "40 গ্রাম",
+        "c": "60 গ্রাম",
+        "d": "8 গ্রাম"
+      }
+    },
+    {
+      "q_no": "Q56",
+      "section": "Arithmetic",
+      "question": "If 45337 * 2 be divisible by 11, the * mark digit is",
+      "question_bn": "যদি 45337 * 2 সংখ্যাটি 11 দ্বারা বিভাজ্য হয়, তবে * চিহ্নিত স্থানে যে সংখ্যাটি বসাতে হবে তা হল",
+      "options": {
+        "a": "8",
+        "b": "6",
+        "c": "4",
+        "d": "2"
+      },
+      "options_bn": {
+        "a": "8",
+        "b": "6",
+        "c": "4",
+        "d": "2"
+      }
+    },
+    {
+      "q_no": "Q57",
+      "section": "Arithmetic",
+      "question": "Find the amount on Rs. 625 for 2 years at 4% compound interest, interest being payable annually.",
+      "question_bn": "বার্ষিক 4% চক্রবৃদ্ধি হার সুদে 625 টাকার 2 বছরের সুদ-আসল কত হবে? (সুদ পর্ব 1 বৎসর)",
+      "options": {
+        "a": "Rs. 756",
+        "b": "Rs. 676",
+        "c": "Rs. 767",
+        "d": "Rs. 675"
+      },
+      "options_bn": {
+        "a": "756 টাকা",
+        "b": "676 টাকা",
+        "c": "767 টাকা",
+        "d": "675 টাকা"
+      }
+    },
+    {
+      "q_no": "Q58",
+      "section": "Arithmetic",
+      "question": "If A:B = 4:3, B:C = 3:5 and C:D = 10:9 then the ratio A:B:C:D is",
+      "question_bn": "যদি A:B = 4:3, B:C = 3:5 এবং C:D = 10:9 হয় তবে A:B:C:D অনুপাত কত?",
+      "options": {
+        "a": "8:6:9:10",
+        "b": "8:9:6:10",
+        "c": "8:6:10:9",
+        "d": "6:8:10:9"
+      },
+      "options_bn": {
+        "a": "8:6:9:10",
+        "b": "8:9:6:10",
+        "c": "8:6:10:9",
+        "d": "6:8:10:9"
+      }
+    },
+    {
+      "q_no": "Q59",
+      "section": "Arithmetic",
+      "question": "A alone can do a piece of work in 21 days. B, who is 40% more efficient than A, will finish the work in",
+      "question_bn": "A একটি কাজ 21 দিনে করতে পারে। B, A-এর চেয়ে 40% বেশি দক্ষ। তাহলে ওই একই কাজ করতে B-এর সময় লাগবে",
+      "options": {
+        "a": "10 days",
+        "b": "12 days",
+        "c": "15 days",
+        "d": "18 days"
+      },
+      "options_bn": {
+        "a": "10 দিন",
+        "b": "12 দিন",
+        "c": "15 দিন",
+        "d": "18 দিন"
+      }
+    },
+    {
+      "q_no": "Q60",
+      "section": "Arithmetic",
+      "question": "The value of √0.01 + √0.0064 + √0.16 is",
+      "question_bn": "√0.01 + √0.0064 + √0.16 -এর সরলতম মান হবে",
+      "options": {
+        "a": "0.4",
+        "b": "0.3",
+        "c": "0.7",
+        "d": "0.8"
+      },
+      "options_bn": {
+        "a": "0.4",
+        "b": "0.3",
+        "c": "0.7",
+        "d": "0.8"
+      }
+    },
+    {
+      "q_no": "Q61",
+      "section": "Arithmetic",
+      "question": "Two numbers are in the ratio 3:5 and their HCF 12, their product is",
+      "question_bn": "দুটি সংখ্যার গ.সা.গু. 12 এবং তাদের অনুপাত 3:5, তাদের গুণফল",
+      "options": {
+        "a": "1620",
+        "b": "1800",
+        "c": "1980",
+        "d": "2160"
+      },
+      "options_bn": {
+        "a": "1620",
+        "b": "1800",
+        "c": "1980",
+        "d": "2160"
+      }
+    },
+    {
+      "q_no": "Q62",
+      "section": "Arithmetic",
+      "question": "The simplified value of: (8.73×8.73×8.73 + 4.27×4.27×4.27) / (8.73×8.73 + 4.27×4.27 – 8.73×4.27)",
+      "question_bn": "(8.73×8.73×8.73 + 4.27×4.27×4.27) / (8.73×8.73 + 4.27×4.27 – 8.73×4.27) কে সরল করলে যে মান পাওয়া যায় তা হল",
+      "options": {
+        "a": "11",
+        "b": "14",
+        "c": "13",
+        "d": "15"
+      },
+      "options_bn": {
+        "a": "11",
+        "b": "14",
+        "c": "13",
+        "d": "15"
+      }
+    },
+    {
+      "q_no": "Q63",
+      "section": "Arithmetic",
+      "question": "If 60% of P = 30% of Q, then P = x% of Q. Find x = ?",
+      "question_bn": "যদি P-এর 60% = Q-এর 30% হয়, তবে P = Q-এর x% হলে x = কত?",
+      "options": {
+        "a": "0.5",
+        "b": "2",
+        "c": "50",
+        "d": "0.005"
+      },
+      "options_bn": {
+        "a": "0.5",
+        "b": "2",
+        "c": "50",
+        "d": "0.005"
+      }
+    },
+    {
+      "q_no": "Q64",
+      "section": "Arithmetic",
+      "question": "The simple interest on Rs. 400 for 5 years at 6% per annum is",
+      "question_bn": "বার্ষিক 6% সরল সুদে 400 টাকার 5 বছরের সুদ কত?",
+      "options": {
+        "a": "Rs. 140",
+        "b": "Rs. 120",
+        "c": "Rs. 110",
+        "d": "Rs. 124"
+      },
+      "options_bn": {
+        "a": "Rs. 140",
+        "b": "Rs. 120",
+        "c": "Rs. 110",
+        "d": "Rs. 124"
+      }
+    },
+    {
+      "q_no": "Q65",
+      "section": "Arithmetic",
+      "question": "The average of 7 consecutive numbers is 20. The largest of these numbers is",
+      "question_bn": "পরপর 7টি সংখ্যার গড় 20 হলে, এদের মধ্যে বৃহত্তম সংখ্যাটি কত?",
+      "options": {
+        "a": "24",
+        "b": "23",
+        "c": "22",
+        "d": "25"
+      },
+      "options_bn": {
+        "a": "24",
+        "b": "23",
+        "c": "22",
+        "d": "25"
+      }
+    },
+    {
+      "q_no": "Q66",
+      "section": "Arithmetic",
+      "question": "A boat running downstream covers a distance of 24 kms in 4 hours, while for covering the distance upstream it takes 6 hours. What is the speed of the boat in still water?",
+      "question_bn": "একটি নৌকা স্রোতের অনুকূলে 4 ঘণ্টায় 24 কিমি দূরত্ব অতিক্রম করতে পারে। ওই দূরত্ব 6 ঘণ্টায় স্রোতের প্রতিকূলে অতিক্রম করে। স্থির জলে নৌকার বেগ কত?",
+      "options": {
+        "a": "5.5 km/hr",
+        "b": "6 km/hr",
+        "c": "3.5 km/hr",
+        "d": "5 km/hr"
+      },
+      "options_bn": {
+        "a": "5.5 কিমি/ঘণ্টা",
+        "b": "6 কিমি/ঘণ্টা",
+        "c": "3.5 কিমি/ঘণ্টা",
+        "d": "5 কিমি/ঘণ্টা"
+      }
+    },
+    {
+      "q_no": "Q67",
+      "section": "Arithmetic",
+      "question": "2/3 rd of a number is 36. Find out 25% of that number.",
+      "question_bn": "কোনো সংখ্যার 2/3 অংশের মান 36 হলে, সংখ্যাটির 25%-এর মান কত?",
+      "options": {
+        "a": "13.25",
+        "b": "13.5",
+        "c": "13.51",
+        "d": "13.65"
+      },
+      "options_bn": {
+        "a": "13.25",
+        "b": "13.5",
+        "c": "13.51",
+        "d": "13.65"
+      }
+    },
+    {
+      "q_no": "Q68",
+      "section": "Arithmetic",
+      "question": "A number when divided by 119 leaves remainder 19. The same number when divided by 17, will leave remainder",
+      "question_bn": "একটি সংখ্যাকে 119 দ্বারা ভাগ করলে 19 ভাগশেষ থাকে। সংখ্যাটিকে 17 দ্বারা ভাগ করলে ভাগশেষ থাকে",
+      "options": {
+        "a": "2",
+        "b": "7",
+        "c": "10",
+        "d": "5"
+      },
+      "options_bn": {
+        "a": "2",
+        "b": "7",
+        "c": "10",
+        "d": "5"
+      }
+    },
+    {
+      "q_no": "Q69",
+      "section": "Arithmetic",
+      "question": "A person travels from A to B at a speed of 40 kmph and returns by decreasing his speed by 50%. What is his average speed for both the trips?",
+      "question_bn": "এক ব্যক্তি 40 কিলোমিটার/ঘণ্টা গতিতে A থেকে B পর্যন্ত গিয়ে তার গতিবেগ 50% হ্রাস করে ফিরে আসে। সমগ্র যাত্রাপথে ব্যক্তির গড় গতিবেগ কত?",
+      "options": {
+        "a": "16 2/3 kmph",
+        "b": "26 kmph",
+        "c": "36 2/3 kmph",
+        "d": "26 2/3 kmph"
+      },
+      "options_bn": {
+        "a": "16 2/3 কিলোমিটার/ঘণ্টা",
+        "b": "26 কিলোমিটার/ঘণ্টা",
+        "c": "36 2/3 কিলোমিটার/ঘণ্টা",
+        "d": "26 2/3 কিলোমিটার/ঘণ্টা"
+      }
+    },
+    {
+      "q_no": "Q70",
+      "section": "Arithmetic",
+      "question": "In a 100m race, A runs at 8 km per hour. If A gives B a start of 4m and still beats him by 15 seconds, find the speed of B in m/sec.",
+      "question_bn": "100 মিটারের একটি প্রতিযোগিতায় A ঘণ্টায় 8 কিমি বেগে দৌড়ায়। B যখন 4 মিটার যায় তখন A দৌড় শুরু করে তবুও B কে 15 সেকেন্ডে পরাজিত করে। B-এর গতিবেগ মি./সে.-এ নির্ণয় করো।",
+      "options": {
+        "a": "3 7/15 m/sec",
+        "b": "3 1/15 m/sec",
+        "c": "3 2/15 m/sec",
+        "d": "8/5 m/sec"
+      },
+      "options_bn": {
+        "a": "3 7/15 মি./সে.",
+        "b": "3 1/15 মি./সে.",
+        "c": "3 2/15 মি./সে.",
+        "d": "8/5 মি./সে."
+      }
+    },
+    {
+      "q_no": "Q71",
+      "section": "English",
+      "question": "Fill in the blank with an appropriate preposition from the list below: The cat sneaked in and sat ________ the little girl.",
+      "options": {
+        "a": "under",
+        "b": "besides",
+        "c": "into",
+        "d": "beside"
+      }
+    },
+    {
+      "q_no": "Q72",
+      "section": "English",
+      "question": "Complete the idiom by choosing the right word from the options given below: He moved heaven and ________ to get bail for his friend.",
+      "options": {
+        "a": "hell",
+        "b": "sky",
+        "c": "cosmos",
+        "d": "earth"
+      }
+    },
+    {
+      "q_no": "Q73",
+      "section": "English",
+      "question": "Find out the correct sentence from the list below:",
+      "options": {
+        "a": "The behaviour of the children were not up to the mark.",
+        "b": "The behaviour of the children was not up to the mark.",
+        "c": "The behaviours of the children was not up to the mark.",
+        "d": "The behaviours of the children were not up to the mark."
+      }
+    },
+    {
+      "q_no": "Q74",
+      "section": "English",
+      "question": "Change from Active to Passive voice, choosing from the options below: The tutor taught Ronny Mathematics for two years.",
+      "options": {
+        "a": "Ronny was taught by the tutor Mathematics for two years.",
+        "b": "Mathematics was taught for Ronny by the tutor for two years.",
+        "c": "Ronny was taught Mathematics by the tutor for two years.",
+        "d": "Ronny was taught by the tutor for two years, Mathematics."
+      }
+    },
+    {
+      "q_no": "Q75",
+      "section": "English",
+      "question": "Change from Active to Passive voice, choosing from the options below: The society will help the poor children with money.",
+      "options": {
+        "a": "The poor children will be helped by the society with money.",
+        "b": "The society will be helped by the poor children with money.",
+        "c": "The poor children will receive help from the society with money.",
+        "d": "The poor children will help the society with money."
+      }
+    },
+    {
+      "q_no": "Q76",
+      "section": "English",
+      "question": "Choose the correct form of the verb from the options given below: Have you heard that Mr. Basu ________ the Chairman of the Executive Committee?",
+      "options": {
+        "a": "had being appointed",
+        "b": "were appointed",
+        "c": "was been appointed",
+        "d": "has been appointed"
+      }
+    },
+    {
+      "q_no": "Q77",
+      "section": "English",
+      "question": "Complete the idiom by choosing the right word from the options given below: The women in the country fought tooth and ________ for liberation.",
+      "options": {
+        "a": "tongue",
+        "b": "mouth",
+        "c": "nail",
+        "d": "hand"
+      }
+    },
+    {
+      "q_no": "Q78",
+      "section": "English",
+      "question": "Fill in the blank with an appropriate word from the list below: Neither of the two brothers Ramesh and Suresh ________ found suitable for the job at the interview held yesterday.",
+      "options": {
+        "a": "were",
+        "b": "are",
+        "c": "was",
+        "d": "have been"
+      }
+    },
+    {
+      "q_no": "Q79",
+      "section": "English",
+      "question": "Find out from the given words the opposite of 'Dangerous'.",
+      "options": {
+        "a": "Terrible",
+        "b": "Quiet",
+        "c": "Safe",
+        "d": "Gentle"
+      }
+    },
+    {
+      "q_no": "Q80",
+      "section": "English",
+      "question": "Choose the correct form of the verb from the options given below: By the time we reached home the rain ________.",
+      "options": {
+        "a": "has stopped",
+        "b": "had stopped",
+        "c": "had been stopped",
+        "d": "was stopping"
+      }
+    },
+    {
+      "q_no": "Q81",
+      "section": "English",
+      "question": "Complete the idiom by choosing the right word from the options given below: She could not make up her ________ about what to buy.",
+      "options": {
+        "a": "decision",
+        "b": "logic",
+        "c": "mind",
+        "d": "heart"
+      }
+    },
+    {
+      "q_no": "Q82",
+      "section": "English",
+      "question": "Choose the correct spelling from the options below:",
+      "options": {
+        "a": "Ambitious",
+        "b": "Ambitous",
+        "c": "Ambicious",
+        "d": "Ambiteous"
+      }
+    },
+    {
+      "q_no": "Q83",
+      "section": "English",
+      "question": "Replace the missing word with the right word from the options below: A list of ________ candidates for the admission test has been put up on the notice-board.",
+      "options": {
+        "a": "illegible",
+        "b": "honourable",
+        "c": "eligible",
+        "d": "ideal"
+      }
+    },
+    {
+      "q_no": "Q84",
+      "section": "English",
+      "question": "Find from below, the word that means 'a boy who frightens weaker boys'.",
+      "options": {
+        "a": "Tramp",
+        "b": "Bully",
+        "c": "Hypocrite",
+        "d": "Tresspasser"
+      }
+    },
+    {
+      "q_no": "Q85",
+      "section": "English",
+      "question": "Choose the correct spelling from the options below:",
+      "options": {
+        "a": "Satellite",
+        "b": "Satalite",
+        "c": "Satallite",
+        "d": "Satelite"
+      }
+    },
+    {
+      "q_no": "Q86",
+      "section": "English",
+      "question": "Find out the right word to complete the following sentence: The government punished him because of his ________ activities.",
+      "options": {
+        "a": "illegal",
+        "b": "antisocial",
+        "c": "charitable",
+        "d": "shameful"
+      }
+    },
+    {
+      "q_no": "Q87",
+      "section": "English",
+      "question": "Change from Passive to Active voice, choosing from the options below: Many things may be accomplished by a little effort.",
+      "options": {
+        "a": "They may accomplish many things by little effort.",
+        "b": "They can accomplish many things by little effort.",
+        "c": "One may accomplish by little effort many things.",
+        "d": "One may accomplish many things by a little effort."
+      }
+    },
+    {
+      "q_no": "Q88",
+      "section": "English",
+      "question": "Fill in the blank with an appropriate preposition from the list below: The deer is afraid ________ the tiger.",
+      "options": {
+        "a": "from",
+        "b": "by",
+        "c": "for",
+        "d": "of"
+      }
+    },
+    {
+      "q_no": "Q89",
+      "section": "English",
+      "question": "Change the following statement into an interrogative sentence: She had time to finish all the questions.",
+      "options": {
+        "a": "Do you think that she did have time to finish all the questions?",
+        "b": "Had she no time to finish all the questions?",
+        "c": "Did she manage to finish all the questions?",
+        "d": "Had she time to finish all the questions?"
+      }
+    },
+    {
+      "q_no": "Q90",
+      "section": "English",
+      "question": "Find the word which has the same meaning as 'Cautious'.",
+      "options": {
+        "a": "Peaceful",
+        "b": "Wise",
+        "c": "Careful",
+        "d": "Courageous"
+      }
+    },
+    {
+      "q_no": "Q91",
+      "section": "English",
+      "question": "Find from below the word that means 'esteem'.",
+      "options": {
+        "a": "Respect",
+        "b": "Enmity",
+        "c": "Elegance",
+        "d": "Famous"
+      }
+    },
+    {
+      "q_no": "Q92",
+      "section": "English",
+      "question": "Fill in the blank with an appropriate word from the list below: Early to bed and early to rise ________ a man healthy, wealthy and wise.",
+      "options": {
+        "a": "make",
+        "b": "made",
+        "c": "have made",
+        "d": "makes"
+      }
+    },
+    {
+      "q_no": "Q93",
+      "section": "English",
+      "question": "Choose from the list below the most appropriate word to fill in the blank: An action which is most difficult and almost impossible to explain is ________.",
+      "options": {
+        "a": "unavoidable",
+        "b": "inexplicable",
+        "c": "indescribable",
+        "d": "incoherent"
+      }
+    },
+    {
+      "q_no": "Q94",
+      "section": "English",
+      "question": "Fill in the blank with an appropriate preposition from the list below: The Emperor Akbar ruled ________ a vast kingdom.",
+      "options": {
+        "a": "with",
+        "b": "over",
+        "c": "on",
+        "d": "by"
+      }
+    },
+    {
+      "q_no": "Q95",
+      "section": "English",
+      "question": "Choose the most appropriate word to fill in the blank: Ratna's mother is ________, she can't even sign her name.",
+      "options": {
+        "a": "literate",
+        "b": "strange",
+        "c": "illiterate",
+        "d": "deaf"
+      }
+    },
+    {
+      "q_no": "Q96",
+      "section": "English",
+      "question": "Choose the appropriate word to fill in the blank: The man seems ________ because he frequently laughs loudly for no reason.",
+      "options": {
+        "a": "happy",
+        "b": "cheerful",
+        "c": "abnormal",
+        "d": "admirable"
+      }
+    },
+    {
+      "q_no": "Q97",
+      "section": "English",
+      "question": "Fill in the blank with an appropriate preposition given below: Ratan entered the room and looked ________ the painting on the wall.",
+      "options": {
+        "a": "at",
+        "b": "down",
+        "c": "up",
+        "d": "in"
+      }
+    },
+    {
+      "q_no": "Q98",
+      "section": "English",
+      "question": "Find out the right word to complete the following sentence: We buy meat from a ________.",
+      "options": {
+        "a": "Green grocer",
+        "b": "Butcher",
+        "c": "Broker",
+        "d": "Baker"
+      }
+    },
+    {
+      "q_no": "Q99",
+      "section": "English",
+      "question": "Choose the most appropriate word to fill in the blank: Amit's story about ghosts and witches is not ________.",
+      "options": {
+        "a": "believable",
+        "b": "strange",
+        "c": "wild",
+        "d": "relevant"
+      }
+    },
+    {
+      "q_no": "Q100",
+      "section": "English",
+      "question": "Find out the appropriate word or words that befits the underlined part of the sentence: When buying a gift one should keep in mind the person's likes and dislikes.",
+      "options": {
+        "a": "Invent",
+        "b": "Ignore",
+        "c": "Think about",
+        "d": "Admire"
+      }
+    }
+  ]
+}

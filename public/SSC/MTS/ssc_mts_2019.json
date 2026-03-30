@@ -1,0 +1,1134 @@
+{
+  "exam": "Multi Tasking (Non-Technical) Staff Examination 2019",
+  "date": "02/08/2019",
+  "test_time": "12:30 PM - 2:00 PM",
+  "sections": [
+    {
+      "section": "General English",
+      "questions": [
+        {
+          "q_no": "Q1",
+          "question": "Choose the word that can substitute the given sentence: A building where an audience sits",
+          "options": {
+            "a": "Aisle",
+            "b": "Hanger",
+            "c": "Gymnasium",
+            "d": "Auditorium"
+          },
+          "correct": "d"
+        },
+        {
+          "q_no": "Q2",
+          "question": "Select the most appropriate option to fill in the blank: He ______ his portrait in the main hall.",
+          "options": {
+            "a": "had hanged",
+            "b": "hung",
+            "c": "hang",
+            "d": "hanged"
+          },
+          "correct": "b"
+        },
+        {
+          "q_no": "Q3",
+          "question": "Choose the correctly spelt word.",
+          "options": {
+            "a": "Anthusiasm",
+            "b": "Enthusiesm",
+            "c": "Enthusiasm",
+            "d": "Entheusiasm"
+          },
+          "correct": "c"
+        },
+        {
+          "q_no": "Q4",
+          "question": "Choose the word that can substitute the given sentence: A book of names and addresses",
+          "options": {
+            "a": "Diary",
+            "b": "Directory",
+            "c": "Dictionary",
+            "d": "Journal"
+          },
+          "correct": "b"
+        },
+        {
+          "q_no": "Q5",
+          "question": "Select the most appropriate synonym of the given word: Misfortune",
+          "options": {
+            "a": "Benefit",
+            "b": "Calamity",
+            "c": "Support",
+            "d": "Miracle"
+          },
+          "correct": "b"
+        },
+        {
+          "q_no": "Q6",
+          "question": "Select the most appropriate synonym of the given word: Capable",
+          "options": {
+            "a": "Competent",
+            "b": "Conceited",
+            "c": "Complacent",
+            "d": "Consistent"
+          },
+          "correct": "a"
+        },
+        {
+          "q_no": "Q7",
+          "question": "Select the most appropriate option to substitute the underlined segment: Mohan is pleased at the news yesterday.",
+          "options": {
+            "a": "No Improvement",
+            "b": "was pleased",
+            "c": "had being pleased",
+            "d": "has been pleased"
+          },
+          "correct": "b"
+        },
+        {
+          "q_no": "Q8",
+          "question": "Select the most appropriate antonym of the given word: Comic",
+          "options": {
+            "a": "Tickle",
+            "b": "Happy",
+            "c": "Tragic",
+            "d": "Jubilant"
+          },
+          "correct": "c"
+        },
+        {
+          "q_no": "Q9",
+          "question": "Select the most appropriate option to substitute the underlined segment: The doctor has reassure me that the operation was a routine one.",
+          "options": {
+            "a": "No Improvement",
+            "b": "had reassured me",
+            "c": "is reassured me",
+            "d": "reassure me"
+          },
+          "correct": "b"
+        },
+        {
+          "q_no": "Q10",
+          "question": "Select the alternative which best expresses the meaning of the Idiom/Phrase: Over my dead body",
+          "options": {
+            "a": "Opposing something fiercely",
+            "b": "Inheriting to fortune",
+            "c": "Erecting a grave stone",
+            "d": "Threatening to kill oneself"
+          },
+          "correct": "a"
+        },
+        {
+          "q_no": "Q11",
+          "question": "Choose the correct alternative to fill in the blank: The bullet struck a wall and was ______ from its course.",
+          "options": {
+            "a": "reflected",
+            "b": "twisted",
+            "c": "deflected",
+            "d": "crashed"
+          },
+          "correct": "c"
+        },
+        {
+          "q_no": "Q12",
+          "question": "Find the part of the given sentence that has an error: My aunt/sold her boutique/to a billionaire.",
+          "options": {
+            "a": "to a billionaire",
+            "b": "sold her boutique",
+            "c": "My aunt",
+            "d": "No error"
+          },
+          "correct": "d"
+        },
+        {
+          "q_no": "Q13",
+          "question": "Select the alternative which best expresses the meaning of the Idiom/Phrase: To end in smoke",
+          "options": {
+            "a": "To do one's duty well",
+            "b": "To not agree to something",
+            "c": "To be the cause of a quarrel",
+            "d": "To come to nothing"
+          },
+          "correct": "d"
+        },
+        {
+          "q_no": "Q14",
+          "question": "Find the part of the given sentence that has an error: All the students/is done/better this year.",
+          "options": {
+            "a": "All the students",
+            "b": "is done",
+            "c": "No error",
+            "d": "better this year"
+          },
+          "correct": "b"
+        },
+        {
+          "q_no": "Q15",
+          "question": "Find the part of the given sentence that has an error: Rakesh is foolish/to said/such things.",
+          "options": {
+            "a": "to said",
+            "b": "No error",
+            "c": "such things",
+            "d": "Rakesh is foolish"
+          },
+          "correct": "a"
+        },
+        {
+          "q_no": "Q16",
+          "question": "Choose the correctly spelt word.",
+          "options": {
+            "a": "Financialy",
+            "b": "Financially",
+            "c": "Finantially",
+            "d": "Finencially"
+          },
+          "correct": "b"
+        },
+        {
+          "q_no": "Q17",
+          "question": "Select the most appropriate antonym of the given word: Inexpensive",
+          "options": {
+            "a": "Dear",
+            "b": "Reasonable",
+            "c": "Popular",
+            "d": "Liberal"
+          },
+          "correct": "a"
+        },
+        {
+          "q_no": "Q18",
+          "question": "Select the most appropriate option to fill in the blank: My teacher is the ______ of all.",
+          "options": {
+            "a": "kindest",
+            "b": "kind",
+            "c": "kinder",
+            "d": "kindly"
+          },
+          "correct": "a"
+        },
+        {
+          "q_no": "Q19",
+          "question": "Comprehension - Select the most appropriate option for blank No. 1: Sanitation refers to public health conditions (1)______ to clean drinking water...",
+          "options": {
+            "a": "relate",
+            "b": "relation",
+            "c": "related",
+            "d": "relates"
+          },
+          "correct": "c"
+        },
+        {
+          "q_no": "Q20",
+          "question": "Comprehension - Select the most appropriate option for blank No. 2: ...adequate treatment and disposal (2)______ human waste and sewage.",
+          "options": {
+            "a": "of",
+            "b": "for",
+            "c": "with",
+            "d": "in"
+          },
+          "correct": "a"
+        },
+        {
+          "q_no": "Q21",
+          "question": "Comprehension - Select the most appropriate option for blank No. 3: (3)______ human contact with faeces is part of sanitation.",
+          "options": {
+            "a": "Preventing",
+            "b": "Hampering",
+            "c": "Prohibiting",
+            "d": "Facilitating"
+          },
+          "correct": "a"
+        },
+        {
+          "q_no": "Q22",
+          "question": "Comprehension - Select the most appropriate option for blank No. 4: Sanitation system (4)______ to protect human health...",
+          "options": {
+            "a": "ignores",
+            "b": "paves",
+            "c": "aims",
+            "d": "directs"
+          },
+          "correct": "c"
+        },
+        {
+          "q_no": "Q23",
+          "question": "Comprehension - Select the most appropriate option for blank No. 5: ...providing a clean environment (5)_____ will stop the transmission of disease.",
+          "options": {
+            "a": "that",
+            "b": "who",
+            "c": "whom",
+            "d": "these"
+          },
+          "correct": "a"
+        },
+        {
+          "q_no": "Q24",
+          "question": "Choose the correct alternative to fill in the blank: I am ______ of winning the competition.",
+          "options": {
+            "a": "resistent",
+            "b": "confident",
+            "c": "pertinent",
+            "d": "reliant"
+          },
+          "correct": "b"
+        },
+        {
+          "q_no": "Q25",
+          "question": "Select the most appropriate option to substitute the underlined segment: Who can prevent you from getting married now that you are within age?",
+          "options": {
+            "a": "in",
+            "b": "of",
+            "c": "No Improvement",
+            "d": "on"
+          },
+          "correct": "b"
+        }
+      ]
+    },
+    {
+      "section": "General Intelligence & Reasoning",
+      "questions": [
+        {
+          "q_no": "Q1",
+          "question": "एक कागज को नीचे दी गयी प्रश्न आकृतियों में दिखाए अनुसार मोड़कर काटा गया है। खोलने के बाद वह किस उत्तर आकृति जैसा दिखाई देगा?",
+          "options": {
+            "a": "Option 1",
+            "b": "Option 2",
+            "c": "Option 3",
+            "d": "Option 4"
+          },
+          "correct": "c"
+        },
+        {
+          "q_no": "Q2",
+          "question": "एक कूट भाषा में, 'PRINT' को '96512' लिखा जाता है और 'FROM' को '8603' लिखा जाता है। उसी कूट भाषा में 'PROMPT' का कोड क्या होगा?",
+          "options": {
+            "a": "960398",
+            "b": "960392",
+            "c": "980392",
+            "d": "960395"
+          },
+          "correct": "b"
+        },
+        {
+          "q_no": "Q3",
+          "question": "उस शब्द को चुनिए जो निम्नलिखित श्रृंखला में तीसरे शब्द से उसी तरह से संबंधित है जिस तरह से दूसरा शब्द पहले शब्द से संबंधित है। गुफा : शेर :: अस्तबल : ?",
+          "options": {
+            "a": "घोड़ा",
+            "b": "कार",
+            "c": "बाघ",
+            "d": "पक्षी"
+          },
+          "correct": "a"
+        },
+        {
+          "q_no": "Q4",
+          "question": "दिए गए पैटर्न का ध्यानपूर्वक अध्ययन करें और उस आकृति को चुनें जो प्रश्न चिह्न (?) के स्थान पर आएगी?",
+          "options": {
+            "a": "Option 1",
+            "b": "Option 2",
+            "c": "Option 3",
+            "d": "Option 4"
+          },
+          "correct": "a"
+        },
+        {
+          "q_no": "Q5",
+          "question": "उस अक्षर युग्म को चुनिए जो निम्नलिखित श्रृंखला में तीसरे अक्षर युग्म से उसी तरह से संबंधित है, जिस तरह से दूसरा अक्षर युग्म पहले अक्षर युग्म से संबंधित है। PB : UW :: JT : ?",
+          "options": {
+            "a": "NO",
+            "b": "OO",
+            "c": "MO",
+            "d": "PP"
+          },
+          "correct": "b"
+        },
+        {
+          "q_no": "Q6",
+          "question": "उस आरेख को चुनिए जो नीचे दिए गए वर्गों के बीच के संबंध को सही प्रकार से दर्शाता है। कार, लकड़ी, चूहा",
+          "options": {
+            "a": "Option 1",
+            "b": "Option 2",
+            "c": "Option 3",
+            "d": "Option 4"
+          },
+          "correct": "b"
+        },
+        {
+          "q_no": "Q7",
+          "question": "जब एक दर्पण को AB रेखा पर रखा जाता है, तो नीचे दी गई आकृति की सही दर्पण छवि को चुनिए।",
+          "options": {
+            "a": "Option 1",
+            "b": "Option 2",
+            "c": "Option 3",
+            "d": "Option 4"
+          },
+          "correct": "b"
+        },
+        {
+          "q_no": "Q8",
+          "question": "एक कूट भाषा में, 'TAN' को '33' लिखा जाता है और 'PAM' को '28' लिखा जाता है। उसी कूट भाषा में 'BUG' का कोड क्या होगा?",
+          "options": {
+            "a": "32",
+            "b": "29",
+            "c": "28",
+            "d": "30"
+          },
+          "correct": "c"
+        },
+        {
+          "q_no": "Q9",
+          "question": "नीचे दिए विकल्पों में से उस संख्या को चुनिए जो निम्नलिखित श्रृंखला में चिह्न (?) के स्थान पर आएगी। 43, 31, 74, 105, 179, ?",
+          "options": {
+            "a": "279",
+            "b": "284",
+            "c": "294",
+            "d": "263"
+          },
+          "correct": "b"
+        },
+        {
+          "q_no": "Q10",
+          "question": "यदि दो चिह्नों, '× तथा ÷' को आपस में बदल दिया जाता है तो निम्नलिखित में से कौन सा समीकरण सही होगा?",
+          "options": {
+            "a": "14 + 62 × 13 ÷ 31 = 38",
+            "b": "14 + 9 ÷ 23 × 3 = 83",
+            "c": "11 × 12 ÷ 48 + 6 = 40",
+            "d": "63 + 59 ÷ 4 × 8 = 171"
+          },
+          "correct": "b"
+        },
+        {
+          "q_no": "Q11",
+          "question": "दिए गए पैटर्न का ध्यानपूर्वक अध्ययन करें और उस संख्या को चुनें जो प्रश्न चिह्न (?) के स्थान पर आएगी। 4 11 19 / 5 6 0 / 9 13 3 / 18 30 ?",
+          "options": {
+            "a": "20",
+            "b": "24",
+            "c": "18",
+            "d": "22"
+          },
+          "correct": "d"
+        },
+        {
+          "q_no": "Q12",
+          "question": "नीचे दिए विकल्पों में से उस अक्षर युग्म को चुनिए जो निम्नलिखित श्रृंखला में प्रश्न चिह्न (?) के स्थान पर आएगा। KP, HM, EJ, BG, ?",
+          "options": {
+            "a": "XC",
+            "b": "YD",
+            "c": "ZE",
+            "d": "YC"
+          },
+          "correct": "b"
+        },
+        {
+          "q_no": "Q13",
+          "question": "दिए गए विकल्पों में से उस उत्तर आकृति को चुनिए जिसमें नीचे दी गई आकृति अन्तर्निहित है। (आकृति को घुमाने की अनुमति नहीं है)",
+          "options": {
+            "a": "Option 1",
+            "b": "Option 2",
+            "c": "Option 3",
+            "d": "Option 4"
+          },
+          "correct": "d"
+        },
+        {
+          "q_no": "Q14",
+          "question": "दिए गए विकल्पों में से उस आकृति को चुनिए जो निम्नलिखित श्रृंखला में अगले स्थान पर आएगी।",
+          "options": {
+            "a": "Option 1",
+            "b": "Option 2",
+            "c": "Option 3",
+            "d": "Option 4"
+          },
+          "correct": "d"
+        },
+        {
+          "q_no": "Q15",
+          "question": "एक कूट भाषा में, 'GREAT' को 'ALYUN' लिखा जाता है। उसी कूट भाषा में 'RAPID' का कोड क्या होगा?",
+          "options": {
+            "a": "LUJCX",
+            "b": "SWLEZ",
+            "c": "LVJCX",
+            "d": "RVKDY"
+          },
+          "correct": "a"
+        },
+        {
+          "q_no": "Q16",
+          "question": "पाँच किताबें - B, G, N, P तथा T एक के ऊपर एक रखी गई है। N तथा G के मध्य केवल एक किताब रखी गयी है। B, P के ठीक ऊपर है। B, N के ऊपर है। G, N के ऊपर नहीं है। सबसे ऊपर कौन सी किताब है?",
+          "options": {
+            "a": "B",
+            "b": "G",
+            "c": "T",
+            "d": "P"
+          },
+          "correct": "a"
+        },
+        {
+          "q_no": "Q17",
+          "question": "कथन: I. कुछ K, M हैं। II. कोई T, M नहीं है। निष्कर्ष: I. कुछ T, K हैं। II. कुछ M, K हैं।",
+          "options": {
+            "a": "दोनों निष्कर्ष I तथा II अनुसरण करते हैं।",
+            "b": "केवल निष्कर्ष I अनुसरण करता है।",
+            "c": "कोई भी निष्कर्ष अनुसरण नहीं करता है।",
+            "d": "केवल निष्कर्ष II अनुसरण करता है।"
+          },
+          "correct": "d"
+        },
+        {
+          "q_no": "Q18",
+          "question": "उस शब्द युग्म का चयन कीजिए जिसके दोनों शब्द आपस में उसी प्रकार संबंधित हैं जिस प्रकार नीचे दिए गए शब्द युग्म के दोनों शब्द आपस में संबंधित है। वृत्त : आकृति",
+          "options": {
+            "a": "खिलौना : खेलना",
+            "b": "कार : चालक",
+            "c": "शार्पनर : लेखन-सामग्री",
+            "d": "कृंतक : सरीसृप"
+          },
+          "correct": "c"
+        },
+        {
+          "q_no": "Q19",
+          "question": "पाँच व्यक्ति - F, J, N, R तथा V केंद्र की ओर मुख करके एक वृत्ताकार मेज के इर्द-गिर्द बैठे हुए हैं। J, F के तुरंत बायें ओर बैठा है। N, F के बायें ओर दूसरे स्थान पर है। V, J के बायें ओर दूसरे स्थान पर है। J के दायें ओर दूसरे स्थान पर कौन बैठा हुआ है?",
+          "options": {
+            "a": "R",
+            "b": "N",
+            "c": "F",
+            "d": "V"
+          },
+          "correct": "a"
+        },
+        {
+          "q_no": "Q20",
+          "question": "कथन: कुछ बर्तन दिये हैं। सभी दिये पेड़ हैं। कोई पेड़ शाखा नहीं है। निष्कर्ष: I. कुछ बर्तन शाखाएँ हैं। II. कुछ पेड़ दिये हैं। III. कुछ शाखाएँ दिये हैं।",
+          "options": {
+            "a": "निष्कर्ष I और III अनुसरण करते हैं।",
+            "b": "केवल निष्कर्ष III अनुसरण करता है।",
+            "c": "केवल निष्कर्ष II अनुसरण करता है।",
+            "d": "निष्कर्ष I और II अनुसरण करते हैं।"
+          },
+          "correct": "c"
+        },
+        {
+          "q_no": "Q21",
+          "question": "एक कूट भाषा में, 'STEALH' को 'UXGENL' लिखा जाता है। उसी कूट भाषा में 'ROBNRT' का कोड क्या होगा?",
+          "options": {
+            "a": "TSERTX",
+            "b": "UTESUY",
+            "c": "TSDRTX",
+            "d": "UTFSUY"
+          },
+          "correct": "c"
+        },
+        {
+          "q_no": "Q22",
+          "question": "उस संख्या को चुनिए जो निम्नलिखित श्रृंखला में तीसरी संख्या से उसी तरह से संबंधित है जिस तरह से दूसरी संख्या पहली संख्या से संबंधित है। 36 : 109 :: 25 : ?",
+          "options": {
+            "a": "72",
+            "b": "76",
+            "c": "74",
+            "d": "78"
+          },
+          "correct": "b"
+        },
+        {
+          "q_no": "Q23",
+          "question": "नीचे दिए विकल्पों में से उस संख्या को चुनिए जो निम्नलिखित श्रृंखला में प्रश्न चिह्न (?) के स्थान पर आएगी। 69, 109, 159, 219, 289, ?",
+          "options": {
+            "a": "349",
+            "b": "359",
+            "c": "369",
+            "d": "379"
+          },
+          "correct": "c"
+        },
+        {
+          "q_no": "Q24",
+          "question": "छह मित्र - C, E, G, I, K तथा M केंद्र की ओर मुख करके एक वृत्ताकार मेज के इर्द-गिर्द बैठे हुए हैं। E, C के दायें ओर पर दूसरे स्थान पर है। K, G के तुरंत दायें ओर पर है। G तथा I एक दूसरे की तरफ आमने-सामने मुंह किये हुए है। I के बायें ओर से चलते हुए, I तथा M के मध्य कितने मित्र बैठे हुए हैं?",
+          "options": {
+            "a": "3",
+            "b": "1",
+            "c": "0",
+            "d": "2"
+          },
+          "correct": "a"
+        },
+        {
+          "q_no": "Q25",
+          "question": "यदि अंक 2 और अंक 1 को परस्पर बदल दिया जाता है तो निम्नलिखित समीकरण का मान क्या होगा? 9 + 6 ÷ 4 × 21 – 5 = ?",
+          "options": {
+            "a": "22",
+            "b": "23",
+            "c": "29",
+            "d": "24"
+          },
+          "correct": "a"
+        }
+      ]
+    },
+    {
+      "section": "Numerical Aptitude",
+      "note": "Some questions (Q6 onwards) have answer options not visible in the source PDF. Those are marked with available data only.",
+      "questions": [
+        {
+          "q_no": "Q1",
+          "question": "यदि U + V = 80 तथा U : V = 5 : 3 हैं, तो U - V का मान कितना है?",
+          "options": {
+            "a": "20",
+            "b": "15",
+            "c": "30",
+            "d": "25"
+          },
+          "correct": "a"
+        },
+        {
+          "q_no": "Q2",
+          "question": "A = 3/4 तथा 9/16 का महत्तम समापवर्तक (HCF); B = 16/5 तथा 4/25 का लघुत्तम समापवर्तक (LCM)। A + B का मान कितना है?",
+          "options": {
+            "a": "250/81",
+            "b": "70/23",
+            "c": "271/80",
+            "d": "260/71"
+          },
+          "correct": "c"
+        },
+        {
+          "q_no": "Q3",
+          "question": "किसी वस्तु को 25% लाभ तथा 37.5% हानि पर बेचने से विक्रय मूल्य का अंतर ₹1250 है। जब इसे 12.5% लाभ पर बेचा जाता है तो इसका विक्रय मूल्य कितना होगा?",
+          "options": {
+            "a": "₹1800",
+            "b": "₹2500",
+            "c": "₹2400",
+            "d": "₹2250"
+          },
+          "correct": "d"
+        },
+        {
+          "q_no": "Q4",
+          "question": "49, 62, 37, 55 तथा x का औसत 53 है। x का मान कितना है?",
+          "options": {
+            "a": "56",
+            "b": "68",
+            "c": "76",
+            "d": "62"
+          },
+          "correct": "d"
+        },
+        {
+          "q_no": "Q5",
+          "question": "नीचे दिया गया वृत्त-आरेख, छह अलग-अलग कम्पनियों द्वारा किसी कार्यालय में प्रदत्त लैपटॉप की संख्या को, लैपटॉप की कुल संख्या के प्रतिशत के रूप में दर्शाता है (C1=12%, C2=22%, C3=18%, C4=24%, C5=13%, C6=11%)। कंपनी C6 द्वारा प्रदत्त लैपटॉपों का संगत केंद्रीय कोण (दशमलव के एक स्थान तक) कितनी डिग्री का है?",
+          "options": {
+            "a": "51.7°",
+            "b": "45.1°",
+            "c": "39.6°",
+            "d": "52.8°"
+          },
+          "correct": "c"
+        },
+        {
+          "q_no": "Q6",
+          "question": "किसी वस्तु का अंकित मूल्य ₹2500 है। उसे क्रमशः 12% तथा 10% की दो क्रमिक छूटों पर बेचा जाता है। विक्रय मूल्य कितना है?",
+          "options": {
+            "a": "₹1870",
+            "b": "₹2090",
+            "c": "₹1760",
+            "d": "₹1980"
+          },
+          "correct": "d"
+        },
+        {
+          "q_no": "Q7",
+          "question": "महेश का वेतन सुमित के वेतन से ₹12000 अधिक है। यदि महेश तथा सुमित के वेतन का अनुपात 7 : 4 है, तो सुमित का वेतन कितना है?",
+          "options": {
+            "a": "₹16000",
+            "b": "₹12000",
+            "c": "₹18000",
+            "d": "₹20000"
+          },
+          "correct": "a"
+        },
+        {
+          "q_no": "Q8",
+          "question": "7 ÷ 2 – [3 of 7 ÷ 4 ÷ {(2 ÷ 5) × (25 ÷ 8) ÷ (5 ÷ 2)}] का मान कितना है?",
+          "options": {
+            "a": "-8",
+            "b": "-7",
+            "c": "-1",
+            "d": "-9"
+          },
+          "correct": "b"
+        },
+        {
+          "q_no": "Q9",
+          "question": "DD.MM के रूप में लिखित, वर्ष 2019 की माध्यिका-तिथि (मीडियन डेट) है:",
+          "options": {
+            "a": "01.07",
+            "b": "30.06",
+            "c": "02.07",
+            "d": "03.07"
+          },
+          "correct": "c"
+        },
+        {
+          "q_no": "Q10",
+          "question": "एक कार 6 मिनट में 300 मीटर की दूरी तय कर सकती है। उसकी औसत गति km/h में कितनी है?",
+          "options": {
+            "a": "50",
+            "b": "3",
+            "c": "12",
+            "d": "6"
+          },
+          "correct": "b"
+        },
+        {
+          "q_no": "Q11",
+          "question": "एक व्यक्ति अपने वेतन का 10% भोजन पर खर्च करता है। वह शेष भाग का 20% ईंधन पर खर्च करता है। यदि उसके पास ₹4680 शेष हैं, तो उसका वेतन कितना है?",
+          "options": {
+            "a": "₹6000",
+            "b": "₹5000",
+            "c": "₹6500",
+            "d": "₹5500"
+          },
+          "correct": "c"
+        },
+        {
+          "q_no": "Q12",
+          "question": "शांत जल में एक नाव की गति 8 km/h है। यदि धारा की गति 2 km/h है, तो धारा के प्रतिकूल जाते हुए 2 घंटे में नाव कितनी दूरी तय करेगी?",
+          "options": {
+            "a": "16 km",
+            "b": "14 km",
+            "c": "20 km",
+            "d": "12 km"
+          },
+          "correct": "d"
+        },
+        {
+          "q_no": "Q13",
+          "question": "किसी समचतुर्भुज की परिमाप 20 cm है। इसके एक विकर्ण की लम्बाई 6 cm है। दूसरे विकर्ण की लम्बाई कितनी है?",
+          "options": {
+            "a": "10 cm",
+            "b": "8 cm",
+            "c": "9 cm",
+            "d": "6 cm"
+          },
+          "correct": "b"
+        },
+        {
+          "q_no": "Q14",
+          "question": "वृत्त-आरेख (C1=12%, C2=22%, C3=18%, C4=24%, C5=13%, C6=11%) - कंपनी C1 तथा कंपनी C3 के लैपटॉपों की संख्या का अनुपात कितना है?",
+          "options": {
+            "a": "2 : 1",
+            "b": "12 : 11",
+            "c": "2 : 3",
+            "d": "6 : 11"
+          },
+          "correct": "c"
+        },
+        {
+          "q_no": "Q15",
+          "question": "कोई व्यक्ति 2 वर्षों के लिए ₹500, 5 वर्षों के लिए ₹600 तथा 6 वर्षों के लिए ₹1000 सभी को साधारण ब्याज की समान दर पर जमा करता है। यदि वह कुल ₹1000 का साधारण ब्याज प्राप्त करता है, तो प्रति वर्ष ब्याज की दर कितनी है?",
+          "options": {
+            "a": "15%",
+            "b": "5%",
+            "c": "10%",
+            "d": "20%"
+          },
+          "correct": "c"
+        },
+        {
+          "q_no": "Q16",
+          "question": "8 सोने के सिक्कों का औसत भार 20 g प्रति सिक्का है। चाँदी के 12 सिक्कों का औसत भार 35 g प्रति सिक्का है। 20 सिक्कों के लिए प्रति सिक्का औसत भार कितना है?",
+          "options": {
+            "a": "25 g",
+            "b": "29 g",
+            "c": "21 g",
+            "d": "31 g"
+          },
+          "correct": "b"
+        },
+        {
+          "q_no": "Q17",
+          "question": "किसी वस्तु को 15% लाभ पर ₹1725 में बेचा जाता है। यदि इसे 15% की हानि पर बेचा जाता है तो विक्रय मूल्य कितना होगा?",
+          "options": {
+            "a": "₹1275",
+            "b": "₹1475",
+            "c": "₹1025",
+            "d": "₹1325"
+          },
+          "correct": "a"
+        },
+        {
+          "q_no": "Q18",
+          "question": "एक वर्ग की भुजा 6 cm है। वर्ग के अंदर बनने वाले सबसे बड़े वृत्त का क्षेत्रफल कितना है? (π = 22/7 लें)",
+          "options": {
+            "a": "198/7 cm²",
+            "b": "318/7 cm²",
+            "c": "252/7 cm²",
+            "d": "156/7 cm²"
+          },
+          "correct": "a"
+        },
+        {
+          "q_no": "Q19",
+          "question": "A अकेला किसी कार्य को 30 दिन में कर सकता है। B अकेला उसी कार्य को 40 दिन में कर सकता है। यदि A से शुरुआत करके वे एकांतर दिनों (अल्टरनेट डेज) में काम करते हैं, तो कार्य कितने दिनों में (दशमलव के दो स्थानों तक) पूरा हो जाएगा?",
+          "options": {
+            "a": "34.25",
+            "b": "32.33",
+            "c": "16.33",
+            "d": "17.25"
+          },
+          "correct": "a"
+        },
+        {
+          "q_no": "Q20",
+          "question": "यदि कोई राशि चक्रवृद्धि ब्याज (वार्षिक संयोजित) की समान दर से दो वर्ष पश्चात ₹4000 तथा चार वर्ष पश्चात ₹6000 हो जाती है, तो राशि कितनी है?",
+          "options": {
+            "a": "₹2888.88",
+            "b": "₹2666.66",
+            "c": "₹2777.77",
+            "d": "₹2866.66"
+          },
+          "correct": "b",
+          "note": "Status: Not Answered in original exam"
+        },
+        {
+          "q_no": "Q21",
+          "question": "3/4 of (1/3 ÷ 1/2) + (2 - 2/5) × 3/2 + 2/3 का मान कितना है?",
+          "options": {
+            "a": "107/30",
+            "b": "101/6",
+            "c": "109/17",
+            "d": "103/25"
+          },
+          "correct": "a"
+        },
+        {
+          "q_no": "Q22",
+          "question": "A तथा B मिलकर किसी कार्य को 20 दिन में कर सकते हैं। B तथा C मिलकर उसी कार्य को 25 दिन में कर सकते हैं। C तथा A मिलकर उसी कार्य को 15 दिन में कर सकते हैं। A अकेला उस कार्य को कितने दिनों में कर सकता है?",
+          "options": {
+            "a": "600/17",
+            "b": "600/23",
+            "c": "1200/23",
+            "d": "1200/17"
+          },
+          "correct": "b"
+        },
+        {
+          "q_no": "Q23",
+          "question": "वृत्त-आरेख (C1=12%, C2=22%, C3=18%, C4=24%, C5=13%, C6=11%) - कार्यालय में यदि लैपटॉपों की कुल संख्या 3800 है तो कंपनी C2 तथा C5 के लैपटॉपों की संख्या में अंतर कितना है?",
+          "options": {
+            "a": "382",
+            "b": "362",
+            "c": "342",
+            "d": "322"
+          },
+          "correct": "c"
+        },
+        {
+          "q_no": "Q24",
+          "question": "किसी घनाभ की लम्बाई, चौड़ाई और ऊंचाई क्रमशः 15 cm, 12 cm तथा 11 cm है। लम्बाई को 6⅔% घटा दिया जाता है और चौड़ाई को 8⅓% बढ़ा दिया जाता है जबकि ऊंचाई को अपरिवर्तित रखा जाता है। घनाभ के (लम्बाई और चौड़ाई से बने आयत को आधार मानते हुए) चार पार्श्व-फलकों के कुल क्षेत्रफल में कितना परिवर्तन है?",
+          "options": {
+            "a": "22 cm² की कमी",
+            "b": "22 cm² की वृद्धि",
+            "c": "कोई परिवर्तन नहीं",
+            "d": "33 cm² की वृद्धि"
+          },
+          "correct": "c"
+        },
+        {
+          "q_no": "Q25",
+          "question": "यदि x + y + z = 400 तथा x : y : z = 1 : 1 : 2 है, तो z का मान कितना है?",
+          "options": {
+            "a": "100",
+            "b": "150",
+            "c": "120",
+            "d": "200"
+          },
+          "correct": "d"
+        }
+      ]
+    },
+    {
+      "section": "General Awareness",
+      "questions": [
+        {
+          "q_no": "Q1",
+          "question": "उपभोक्ता संरक्षण विधेयक, 2018 ने उपभोक्ता संरक्षण अधिनियम का स्थान लिया है जिसे ______ में लागू किया गया था।",
+          "options": {
+            "a": "1988",
+            "b": "1984",
+            "c": "1986",
+            "d": "1989"
+          },
+          "correct": "c",
+          "note": "Status: Not Answered in original exam"
+        },
+        {
+          "q_no": "Q2",
+          "question": "गनमेटल (Gunmetal) किस मिश्र धातु से निर्मित है?",
+          "options": {
+            "a": "कॉपर, टिन, जिंक",
+            "b": "कॉपर, लेड, सिल्वर",
+            "c": "कॉपर, जिंक, लेड",
+            "d": "कॉपर, आयरन, निकेल"
+          },
+          "correct": "a"
+        },
+        {
+          "q_no": "Q3",
+          "question": "भारतीय संविधान में निम्नलिखित में से कौन-सी विशेषता को सोवियत सोशलिस्ट रिपब्लिक (USSR) से लिया गया था?",
+          "options": {
+            "a": "मौलिक अधिकार",
+            "b": "पंचवर्षीय योजना",
+            "c": "प्रस्तावना",
+            "d": "समवर्ती सूची"
+          },
+          "correct": "b"
+        },
+        {
+          "q_no": "Q4",
+          "question": "डुगॉन्ग किस जैवमंडल संरक्षण क्षेत्र का प्रमुख जीव है?",
+          "options": {
+            "a": "सिमलीपाल",
+            "b": "मन्नार की खाड़ी",
+            "c": "मानस",
+            "d": "ग्रेट रण ऑफ कच्छ"
+          },
+          "correct": "b"
+        },
+        {
+          "q_no": "Q5",
+          "question": "निम्नलिखित में से कौन-सी नोबल गैस अचेतन-शून्य करने के लिये उपयोग की जाती है?",
+          "options": {
+            "a": "ज़ीनन",
+            "b": "आर्गन",
+            "c": "नियॉन",
+            "d": "हीलियम"
+          },
+          "correct": "a"
+        },
+        {
+          "q_no": "Q6",
+          "question": "गुरजीत कौर का निम्नलिखित में से किस खेल से संबंध है?",
+          "options": {
+            "a": "हॉकी",
+            "b": "कुश्ती",
+            "c": "भारोत्तोलन",
+            "d": "तैराकी"
+          },
+          "correct": "a"
+        },
+        {
+          "q_no": "Q7",
+          "question": "निम्नलिखित में से कौन-सा त्योहार ओडिशा में मनाया जाता है?",
+          "options": {
+            "a": "बोनालु",
+            "b": "छपड़ मेला",
+            "c": "बाली तृतीय",
+            "d": "हॉर्नबिल"
+          },
+          "correct": "c",
+          "note": "Status: Not Answered in original exam"
+        },
+        {
+          "q_no": "Q8",
+          "question": "बेरीबेरी ______ की कमी के कारण होता है।",
+          "options": {
+            "a": "विटामिन B3",
+            "b": "विटामिन B6",
+            "c": "विटामिन B1",
+            "d": "विटामिन B12"
+          },
+          "correct": "c"
+        },
+        {
+          "q_no": "Q9",
+          "question": "आईन-ए-अकबरी' के लेखक कौन थे?",
+          "options": {
+            "a": "खाफी खां",
+            "b": "अबुल फजल",
+            "c": "अकबर",
+            "d": "भीमसेन"
+          },
+          "correct": "b"
+        },
+        {
+          "q_no": "Q10",
+          "question": "गोल गुम्बज भारत के किस राज्य में स्थित है?",
+          "options": {
+            "a": "आंध्रप्रदेश",
+            "b": "कर्नाटक",
+            "c": "महाराष्ट्र",
+            "d": "केरल"
+          },
+          "correct": "b"
+        },
+        {
+          "q_no": "Q11",
+          "question": "निम्नलिखित में से कौन-सा नृत्य गोवा का लोक नृत्य है?",
+          "options": {
+            "a": "फगुआ",
+            "b": "फुगड़ी",
+            "c": "बिहू",
+            "d": "मांच"
+          },
+          "correct": "b"
+        },
+        {
+          "q_no": "Q12",
+          "question": "निम्नलिखित में से कौन-सा स्टेडियम विश्व का सबसे बड़ा क्रिकेट स्टेडियम है?",
+          "options": {
+            "a": "पर्थ स्टेडियम",
+            "b": "लॉर्ड्स क्रिकेट स्टेडियम",
+            "c": "ईडन गार्डन",
+            "d": "मेलबर्न क्रिकेट ग्राउंड"
+          },
+          "correct": "d"
+        },
+        {
+          "q_no": "Q13",
+          "question": "निम्नलिखित में से कौन-सा कोशिका अंगक (Cell Organelles) आत्महत्या की थैली (Suicide Bag) के रूप में जाना जाता है?",
+          "options": {
+            "a": "गॉल्जी तंत्र",
+            "b": "सूत्रकणिका",
+            "c": "लयनकाय",
+            "d": "अन्तः प्रद्रव्यी जालिका"
+          },
+          "correct": "c"
+        },
+        {
+          "q_no": "Q14",
+          "question": "सूरजकुंड झील निम्नलिखित राज्यों में से किस राज्य में स्थित है?",
+          "options": {
+            "a": "हरियाणा",
+            "b": "गुजरात",
+            "c": "पंजाब",
+            "d": "राजस्थान"
+          },
+          "correct": "a"
+        },
+        {
+          "q_no": "Q15",
+          "question": "भारत के मुख्य न्यायाधीश की नियुक्ति कौन करता है?",
+          "options": {
+            "a": "प्रधान मंत्री",
+            "b": "लोकसभा अध्यक्ष",
+            "c": "उपराष्ट्रपति",
+            "d": "राष्ट्रपति"
+          },
+          "correct": "d"
+        },
+        {
+          "q_no": "Q16",
+          "question": "'अमुक्त मल्यादा' का लेखन किसने किया था?",
+          "options": {
+            "a": "कृष्णदेव राय",
+            "b": "ब्रह्मदेव राय",
+            "c": "बुक्का राय",
+            "d": "हरिहर राय"
+          },
+          "correct": "a",
+          "note": "Status: Not Answered in original exam"
+        },
+        {
+          "q_no": "Q17",
+          "question": "'ए प्राइम मिनिस्टर टू रिमेम्बर- मेमोरीज ऑफ़ ए मिलिट्री चीफ़' नामक पुस्तक का लेखन किस पूर्व मुख्य नौसेना एडमिरल ने किया है?",
+          "options": {
+            "a": "सुशील कुमार",
+            "b": "अरुण प्रकाश",
+            "c": "देवेंद्र कुमार",
+            "d": "निर्मल कुमार"
+          },
+          "correct": "a"
+        },
+        {
+          "q_no": "Q18",
+          "question": "मोहम्मद गौरी और पृथ्वीराज चौहान के बीच कौन-सी लड़ाई हुई थी?",
+          "options": {
+            "a": "तराइन की लड़ाई",
+            "b": "खानवा का युद्ध",
+            "c": "प्लासी की लड़ाई",
+            "d": "बक्सर का युद्ध"
+          },
+          "correct": "a"
+        },
+        {
+          "q_no": "Q19",
+          "question": "नाइट्रोजन निर्धारण के लिए कौन-सा सहजीवी जीवाणु जिम्मेदार है?",
+          "options": {
+            "a": "राइजोबियम",
+            "b": "स्यूडोमोनस",
+            "c": "लैक्टोबैसिलस",
+            "d": "एजोटोबैक्टर"
+          },
+          "correct": "a",
+          "note": "Status: Not Answered in original exam"
+        },
+        {
+          "q_no": "Q20",
+          "question": "जीएसटी (GST) परिषद में कितने सदस्य हैं?",
+          "options": {
+            "a": "33",
+            "b": "35",
+            "c": "25",
+            "d": "23"
+          },
+          "correct": "a"
+        },
+        {
+          "q_no": "Q21",
+          "question": "जून 2019 तक की स्थिति के अनुसार, भारत का कौन-सा नाभिकीय ऊर्जा संयंत्र अधिकतम ऊर्जा का उत्पादन करता है?",
+          "options": {
+            "a": "रावतभाटा",
+            "b": "कुडनकुलम",
+            "c": "कैगा",
+            "d": "काकरापार"
+          },
+          "correct": "b"
+        },
+        {
+          "q_no": "Q22",
+          "question": "भारत में कम्युनिस्ट पार्टी का गठन किस वर्ष हुआ था?",
+          "options": {
+            "a": "1925",
+            "b": "1922",
+            "c": "1927",
+            "d": "1930"
+          },
+          "correct": "a"
+        },
+        {
+          "q_no": "Q23",
+          "question": "'द साइलेंट क्राई' के लेखक/लेखिका कौन हैं?",
+          "options": {
+            "a": "हारुकी मुराकामी",
+            "b": "केन्ज़ाबुरो ओए",
+            "c": "जॉन मिल्टन",
+            "d": "माइकल मधुसूदन दत्त"
+          },
+          "correct": "b",
+          "note": "Status: Not Answered in original exam"
+        },
+        {
+          "q_no": "Q24",
+          "question": "भारतीय राष्ट्रीय कांग्रेस के 19वें सत्र के अध्यक्ष कौन थे?",
+          "options": {
+            "a": "गोपाल कृष्ण गोखले",
+            "b": "सर हेनरी कॉटन",
+            "c": "लाल मोहन घोष",
+            "d": "सुरेंद्रनाथ बनर्जी"
+          },
+          "correct": "c"
+        },
+        {
+          "q_no": "Q25",
+          "question": "राजकोषीय घाटा का अर्थ क्या है?",
+          "options": {
+            "a": "सरकार द्वारा एकत्रित कुल राजस्व",
+            "b": "सरकार के कुल राजस्व और कुल व्यय के बीच अंतर",
+            "c": "सरकार का कुल व्यय",
+            "d": "सरकार द्वारा ली गयी कुल उधार राशि"
+          },
+          "correct": "b"
+        }
+      ]
+    }
+  ]
+}

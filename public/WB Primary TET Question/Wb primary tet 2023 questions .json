@@ -1,0 +1,2094 @@
+{
+    "exam": "WB Primary TET 2023",
+    "questions": [
+        {
+            "q_no": "Q1",
+            "part": "A",
+            "subject": "Child Development & Pedagogy",
+            "question": "The relevant question corresponding to reflective level of teaching will be—",
+            "question_bn": "সক্রিয় চিন্তন স্তরের শিক্ষণের প্রাসঙ্গিক প্রশ্নটি হবে—",
+            "options": {
+                "a": "Explain the essential differences between a cat and a rat.",
+                "b": "What is the past tense of the verb 'come'?",
+                "c": "Describe the geographical location of Assam.",
+                "d": "Had Hilsa fish lived long out of water, what would be your explanation?"
+            },
+            "options_bn": {
+                "a": "বিড়াল ও ইঁদুরের মধ্যে অত্যাবশ্যক পার্থক্যগুলি ব্যাখ্যা করো।",
+                "b": "ইংরেজিতে 'come'-ক্রিয়ার অতীত কাল কী?",
+                "c": "আসামের ভৌগোলিক অবস্থান বর্ণনা করো।",
+                "d": "যদি ইলিশ মাছ জলের বাইরে অনেকক্ষণ বেঁচে থাকত তাহলে তোমার ব্যাখ্যা কী হত?"
+            }
+        },
+        {
+            "q_no": "Q2",
+            "part": "A",
+            "subject": "Child Development & Pedagogy",
+            "question": "A teacher identifies the difficulty in pronunciation of a child while reading English prose loudly. This may be called—",
+            "question_bn": "ইংরেজি গদ্য উচ্চস্বরে পড়বার সময় শিক্ষিকা/শিক্ষক শিশুর উচ্চারণের অসুবিধা শনাক্ত করেন। এটিকে বলা যেতে পারে—",
+            "options": {
+                "a": "Assessment of learning",
+                "b": "Assessment for learning",
+                "c": "Summative evaluation",
+                "d": "Diagnostic testing"
+            },
+            "options_bn": {
+                "a": "শিখনের অ্যাসেসমেন্ট",
+                "b": "শিখনের জন্য অ্যাসেসমেন্ট",
+                "c": "চূড়ান্ত মূল্যায়ন",
+                "d": "নির্ণায়ক অভীক্ষা"
+            }
+        },
+        {
+            "q_no": "Q3",
+            "part": "A",
+            "subject": "Child Development & Pedagogy",
+            "question": "Assertion (A): Continuous and Comprehensive Evaluation (CCE) solely focuses on academic achievements and examination results. Reason (R): CCE incorporates both formative and summative assessments to provide a comprehensive view of students' overall development.",
+            "question_bn": "বিবৃতি (A): ধারাবাহিক এবং সার্বিক মূল্যায়ন সম্পূর্ণরূপে শিক্ষাগত কৃতিত্ব এবং পরীক্ষার ফলাফলের ওপর দৃষ্টি নিবদ্ধ রাখে। যুক্তি (R): ধারাবাহিক এবং সার্বিক মূল্যায়ন শিক্ষার্থীদের বিকাশের একটি ব্যাপক দৃষ্টিভঙ্গি প্রদানের জন্য গঠনমূলক এবং সামগ্রিক মূল্যায়ন উভয়কেই অন্তর্ভুক্ত করে।",
+            "options": {
+                "a": "Both (A) and (R) are true, and (R) is the correct explanation of (A)",
+                "b": "Both (A) and (R) are true, but (R) is not the correct explanation of (A)",
+                "c": "(A) is true, but (R) is false",
+                "d": "(A) is false, but (R) is true"
+            },
+            "options_bn": {
+                "a": "(A) এবং (R) উভয়েই সত্য, এবং (R) হল (A)-এর পরিপ্রেক্ষিতে সঠিক ব্যাখ্যা",
+                "b": "(A) এবং (R) উভয়েই সত্য, কিন্তু (R), (A)-এর পরিপ্রেক্ষিতে সঠিক ব্যাখ্যা নয়",
+                "c": "(A) হল সত্য, কিন্তু (R) হল মিথ্যা",
+                "d": "(A) হল মিথ্যা, কিন্তু (R) হল সত্য"
+            }
+        },
+        {
+            "q_no": "Q4",
+            "part": "A",
+            "subject": "Child Development & Pedagogy",
+            "question": "The rules for when and how to use language in a particular culture is called—",
+            "question_bn": "কোনো একটি বিশেষ সংস্কৃতিতে কখন এবং কীভাবে ভাষা ব্যবহার করা হবে, তার নিয়মাবলীকে বলা হয়—",
+            "options": {
+                "a": "Syntax",
+                "b": "Pragmatics",
+                "c": "Phonetics",
+                "d": "Semantics"
+            },
+            "options_bn": {
+                "a": "সিনট্যাক্স",
+                "b": "প্রাগম্যাটিক্স",
+                "c": "ফোনেটিক্স",
+                "d": "সিমান্টিক্স"
+            }
+        },
+        {
+            "q_no": "Q5",
+            "part": "A",
+            "subject": "Child Development & Pedagogy",
+            "question": "In Maslow's hierarchy of needs, self-actualization is analogous to—",
+            "question_bn": "ম্যাসলোর চাহিদার উচ্চক্রমিক পর্যায় তত্ত্বে আত্মপ্রতিষ্ঠার চাহিদার প্রতিতুল্য হল—",
+            "options": {
+                "a": "extrinsic motivation",
+                "b": "need for achievement",
+                "c": "reward and punishment",
+                "d": "intelligence"
+            },
+            "options_bn": {
+                "a": "বাহ্যিক প্রেষণা",
+                "b": "সাফল্যের চাহিদা",
+                "c": "পুরস্কার ও শাস্তি",
+                "d": "বুদ্ধি"
+            }
+        },
+        {
+            "q_no": "Q6",
+            "part": "A",
+            "subject": "Child Development & Pedagogy",
+            "question": "One of two learners of same class obtained 45 and the second one 90 in the same test of same subject. So we may say—",
+            "question_bn": "একই শ্রেণির একই বিষয়ের একই পরীক্ষায় দুজন শিক্ষার্থীর মধ্যে একজন পেয়েছে 45 ও দ্বিতীয় জন পেয়েছে 90। তাহলে বলা যায়—",
+            "options": {
+                "a": "Second possesses twice the skill of the first",
+                "b": "Second's knowledge is twice that of the first",
+                "c": "Second got half the marks of the first",
+                "d": "First got 45 marks less than that of the second"
+            },
+            "options_bn": {
+                "a": "প্রথম জনের তুলনায় দ্বিতীয় জনের দক্ষতা দ্বিগুণ",
+                "b": "প্রথম জনের তুলনায় দ্বিতীয় জনের জ্ঞান দ্বিগুণ",
+                "c": "দ্বিতীয় জন প্রথম জনের অর্ধেক নম্বর পেয়েছে",
+                "d": "প্রথম জন দ্বিতীয় জনের থেকে 45 নম্বর কম পেয়েছে"
+            }
+        },
+        {
+            "q_no": "Q7",
+            "part": "A",
+            "subject": "Child Development & Pedagogy",
+            "question": "If List-I is matched logically with List-II, what will be the correct option among (A), (B), (C) and (D)? List-I (Levels of Teaching): (a) Memory Level, (b) Understanding Level, (c) Reflective Level. List-II (Learning Outcomes): (i) Assessing own learning, (ii) Recalling and reproducing information, (iii) Establishing the cause-effect relationship.",
+            "question_bn": "যদি তালিকা I-এর সঙ্গে তালিকা II-এর যুক্তিসঙ্গত সম্পর্ক স্থাপন করা যায়, তাহলে পছন্দ (A), (B), (C) ও (D)-এর মধ্যে কোনটি সঠিক পছন্দ হবে? তালিকা I: (a) স্মৃতির স্তর, (b) বোধগম্যতার স্তর, (c) প্রতিফলন স্তর। তালিকা II: (i) আত্মশিখনের মূল্যায়ন, (ii) তথ্যের পুনরুদ্রেক এবং পুনরুৎপাদন, (iii) কার্য-কারণ সম্পর্কের প্রতিষ্ঠা করা।",
+            "options": {
+                "a": "(a)-(ii), (b)-(iii), (c)-(i)",
+                "b": "(a)-(ii), (b)-(i), (c)-(iii)",
+                "c": "(a)-(i), (b)-(ii), (c)-(iii)",
+                "d": "(a)-(iii), (b)-(ii), (c)-(i)"
+            },
+            "options_bn": {
+                "a": "(a)-(ii), (b)-(iii), (c)-(i)",
+                "b": "(a)-(ii), (b)-(i), (c)-(iii)",
+                "c": "(a)-(i), (b)-(ii), (c)-(iii)",
+                "d": "(a)-(iii), (b)-(ii), (c)-(i)"
+            }
+        },
+        {
+            "q_no": "Q8",
+            "part": "A",
+            "subject": "Child Development & Pedagogy",
+            "question": "According to the Cone of Experiences of Edgar Dale, the topmost four experiences in ascending order are— (I) Dramatized Experiences, (II) Demonstration, (III) Contrived Experiences, (IV) Direct Purposeful Experiences",
+            "question_bn": "এডগার ডেলের অভিজ্ঞতা শঙ্কুর সর্বোচ্চ চারটি অভিজ্ঞতা উর্ধক্রমে—",
+            "options": {
+                "a": "(I), (II), (III), (IV)",
+                "b": "(III), (II), (I), (IV)",
+                "c": "(II), (I), (III), (IV)",
+                "d": "(IV), (III), (I), (II)"
+            },
+            "options_bn": {
+                "a": "(I), (II), (III), (IV)",
+                "b": "(III), (II), (I), (IV)",
+                "c": "(II), (I), (III), (IV)",
+                "d": "(IV), (III), (I), (II)"
+            }
+        },
+        {
+            "q_no": "Q9",
+            "part": "A",
+            "subject": "Child Development & Pedagogy",
+            "question": "For an individual learning, the unnecessary item is—",
+            "question_bn": "ব্যক্তিগত শিখনের ক্ষেত্রে অনাবশ্যক বিষয়টি হল—",
+            "options": {
+                "a": "Immediate feedback",
+                "b": "Criterion Referenced Test",
+                "c": "Norm Referenced Test",
+                "d": "Cueing"
+            },
+            "options_bn": {
+                "a": "তাৎক্ষণিক প্রতিবার্তা",
+                "b": "মানদণ্ড (Criterion) উল্লিখিত অভীক্ষা",
+                "c": "নর্ম ভিত্তিক অভীক্ষা",
+                "d": "সংকেত প্রদান"
+            }
+        },
+        {
+            "q_no": "Q10",
+            "part": "A",
+            "subject": "Child Development & Pedagogy",
+            "question": "In the revision of Bloom's taxonomy of instructional objectives in cognitive domain, the included and replaced items are respectively—",
+            "question_bn": "ব্লুমের নির্দেশমূলক উদ্দেশ্যের সংশোধনে জ্ঞানমূলক ক্ষেত্রে সংযুক্ত ও বিযুক্ত বিষয়গুলি হল—",
+            "options": {
+                "a": "Attitude, Understanding",
+                "b": "Synthesis, Valuing",
+                "c": "Synthesis, Creating",
+                "d": "Creating, Synthesis"
+            },
+            "options_bn": {
+                "a": "দৃষ্টিভঙ্গি, বোধ",
+                "b": "সংশ্লেষণ, মূল্যায়ন",
+                "c": "সংশ্লেষণ, উদ্ভাবন",
+                "d": "উদ্ভাবন, সংশ্লেষণ"
+            }
+        },
+        {
+            "q_no": "Q11",
+            "part": "A",
+            "subject": "Child Development & Pedagogy",
+            "question": "According to Bruner, the stages of learning in increasing order are—",
+            "question_bn": "ব্রুনারের তত্ত্ব অনুযায়ী উর্ধক্রমে শিখনের স্তরগুলি হল—",
+            "options": {
+                "a": "enactive, iconic, symbolic",
+                "b": "symbolic, enactive, iconic",
+                "c": "iconic, symbolic, enactive",
+                "d": "preoperation, enactive, iconic"
+            },
+            "options_bn": {
+                "a": "সক্রিয়তামূলক, মূর্তধর্মী, সাংকেতিক",
+                "b": "সাংকেতিক, সক্রিয়তামূলক, মূর্তধর্মী",
+                "c": "মূর্তধর্মী, সাংকেতিক, সক্রিয়তামূলক",
+                "d": "প্রাক্মানসিক সক্রিয়তাধর্মী, সক্রিয়তামূলক, মূর্তধর্মী"
+            }
+        },
+        {
+            "q_no": "Q12",
+            "part": "A",
+            "subject": "Child Development & Pedagogy",
+            "question": "Which of the following is assumed to remain same up to a certain period of human life?",
+            "question_bn": "নীচের কোনটি মানবজীবনের একটি সময় পর্যন্ত একই থাকে বলে মনে করা হয়?",
+            "options": {
+                "a": "Mental Age",
+                "b": "Chronological Age",
+                "c": "Intelligence Quotient",
+                "d": "Body height"
+            },
+            "options_bn": {
+                "a": "মানসিক বয়স",
+                "b": "সময়গত বয়স",
+                "c": "বুদ্ধ্যঙ্ক",
+                "d": "দৈহিক উচ্চতা"
+            }
+        },
+        {
+            "q_no": "Q13",
+            "part": "A",
+            "subject": "Child Development & Pedagogy",
+            "question": "Match List-I with List-II and select which of (A), (B), (C) and (D) is the correct matching. List-I (Learning phases as per 5E model): (a) Engagement, (b) Exploration, (c) Explanation, (d) Elaboration. List-II (Features): (i) Learners delve deeper, make connections, apply to real-world, (ii) Hands-on activities, participation in enquiry, strengthen understanding, (iii) Attention-grabbing activities to encourage learners' interest, (iv) Judging learning outcomes, (v) In-depth discussion of concepts and theories.",
+            "question_bn": "তালিকা I-এর সঙ্গে তালিকা II-কে ঠিকভাবে মেলান এবং নির্বাচন করুন (A), (B), (C) ও (D)-এর মধ্যে কোনটি সঠিক।",
+            "options": {
+                "a": "(a)-(i), (b)-(ii), (c)-(iii), (d)-(iv)",
+                "b": "(a)-(iv), (b)-(iii), (c)-(ii), (d)-(v)",
+                "c": "(a)-(iii), (b)-(ii), (c)-(v), (d)-(i)",
+                "d": "(a)-(iii), (b)-(ii), (c)-(i), (d)-(v)"
+            },
+            "options_bn": {
+                "a": "(a)-(i), (b)-(ii), (c)-(iii), (d)-(iv)",
+                "b": "(a)-(iv), (b)-(iii), (c)-(ii), (d)-(v)",
+                "c": "(a)-(iii), (b)-(ii), (c)-(v), (d)-(i)",
+                "d": "(a)-(iii), (b)-(ii), (c)-(i), (d)-(v)"
+            }
+        },
+        {
+            "q_no": "Q14",
+            "part": "A",
+            "subject": "Child Development & Pedagogy",
+            "question": "The students of a class could not complete their answers during class hours. So a part of recess was curtailed to provide more time. This is an example of—",
+            "question_bn": "ক্লাসের নির্ধারিত সময়ের মধ্যে শিক্ষার্থীরা কাজ শেষ না করতে পারায় বিরতির কিছু সময় কেটে কাজের সময় বাড়ানো হল। এটি যার উদাহরণ—",
+            "options": {
+                "a": "positive punishment",
+                "b": "negative punishment",
+                "c": "retroactive inhibition",
+                "d": "negative reinforcement"
+            },
+            "options_bn": {
+                "a": "ইতিবাচক শাস্তি",
+                "b": "নেতিবাচক শাস্তি",
+                "c": "পশ্চাৎবর্তী বাধা",
+                "d": "নেতিবাচক প্রবলক"
+            }
+        },
+        {
+            "q_no": "Q15",
+            "part": "A",
+            "subject": "Child Development & Pedagogy",
+            "question": "Which one of the following is the most suitable for storytelling to the learners of class I?",
+            "question_bn": "প্রথম শ্রেণির শিক্ষার্থীদের গল্প বলার ক্ষেত্রে নিম্নোক্ত চারটির কোনটি সবপেক্ষা উপযুক্ত হবে?",
+            "options": {
+                "a": "Drawing pictures on the board",
+                "b": "Asking questions to individual learners",
+                "c": "Using voice modulation and gesturing",
+                "d": "Asking learners to listen attentively"
+            },
+            "options_bn": {
+                "a": "বোর্ডে ছবি আঁকা",
+                "b": "প্রত্যেক শিক্ষার্থীকে পৃথকভাবে প্রশ্ন করা",
+                "c": "গলার স্বরের সংহারণ-নিয়ন্ত্রণ ও অঙ্গভঙ্গি করা",
+                "d": "শিক্ষার্থীদের মনোযোগ সহকারে শুনতে বলা"
+            }
+        },
+        {
+            "q_no": "Q16",
+            "part": "A",
+            "subject": "Child Development & Pedagogy",
+            "question": "The learning associated with computer literacy training is—",
+            "question_bn": "কম্পিউটার সাক্ষরতার প্রশিক্ষণের সঙ্গে যুক্ত শিখনটি হল—",
+            "options": {
+                "a": "Associative learning",
+                "b": "Concept learning",
+                "c": "Procedural learning",
+                "d": "Factual learning"
+            },
+            "options_bn": {
+                "a": "সংযোগ শিখন",
+                "b": "ধারণা শিখন",
+                "c": "পদ্ধতিগত শিখন",
+                "d": "তথ্যগত শিখন"
+            }
+        },
+        {
+            "q_no": "Q17",
+            "part": "A",
+            "subject": "Child Development & Pedagogy",
+            "question": "A child is repeatedly dismantling her toy gun and repeatedly assembling the parts for learning to make a complete toy gun. Which two of the given four learning theories are mainly involved in the process?",
+            "question_bn": "একটি সম্পূর্ণ খেলনা বন্দুক তৈরি করতে শেখার জন্য একটি শিশু একটি খেলনা বন্দুকের অংশগুলি পুনঃপুনঃ খুলছে এবং পুনঃপুনঃ জোড়া লাগাচ্ছে। নিম্নের চারটি শিখনের তত্ত্বের মধ্যে কোন দুটি প্রধানত এই শিক্ষণ প্রক্রিয়ার সঙ্গে যুক্ত?",
+            "options": {
+                "a": "(I) Thorndike and (II) Pavlov",
+                "b": "(II) Pavlov and (III) Skinner",
+                "c": "(III) Skinner and (IV) Koffka & Köhler",
+                "d": "(I) Thorndike and (IV) Koffka & Köhler"
+            },
+            "options_bn": {
+                "a": "(I) থর্নডাইক ও (II) প্যাভলভ",
+                "b": "(II) প্যাভলভ ও (III) স্কিনার",
+                "c": "(III) স্কিনার ও (IV) কফকা ও কোহলার",
+                "d": "(I) থর্নডাইক ও (IV) কফকা ও কোহলার"
+            }
+        },
+        {
+            "q_no": "Q18",
+            "part": "A",
+            "subject": "Child Development & Pedagogy",
+            "question": "Which one of the following statements is inappropriate in reference to Evaluation & Assessment?",
+            "question_bn": "মূল্যায়ন ও অ্যাসেসমেন্ট-এর পরিপ্রেক্ষিতে নীচের কোন বিবৃতিটি অনুপযুক্ত?",
+            "options": {
+                "a": "Continuous and Comprehensive Evaluation covers both Scholastic and Co-scholastic aspects of students",
+                "b": "Diagnostic test is related to remediation",
+                "c": "Formative evaluation does not measure instructional progress in classroom situation",
+                "d": "Summative assessment is a tool of evaluation used by the teacher at the end of the whole instructional process"
+            },
+            "options_bn": {
+                "a": "নিরবচ্ছিন্ন সার্বিক মূল্যায়ন শিক্ষার্থীর শিক্ষা ও সহ-শিক্ষা সংক্রান্ত উভয় দিকগুলি যাচাই করে",
+                "b": "নির্ণায়ক অভীক্ষা সংশোধনী ব্যবস্থার সঙ্গে সম্পর্কযুক্ত",
+                "c": "প্রস্তুতিকালীন মূল্যায়ন শ্রেণিকক্ষে পাঠের অগ্রগতি পরিমাপ করে না",
+                "d": "সমগ্র নির্দেশনামূলক প্রক্রিয়ার পর শিক্ষিকা/শিক্ষক সামেটিভ অ্যাসেসমেন্ট কৌশলটি ব্যবহার করেন"
+            }
+        },
+        {
+            "q_no": "Q19",
+            "part": "A",
+            "subject": "Child Development & Pedagogy",
+            "question": "When learners try to think within the given information, it is called—",
+            "question_bn": "যখন শিক্ষার্থীরা প্রদত্ত তথ্যের মধ্য থেকে চিন্তনের চেষ্টা করে, তখন তাকে বলা হয়—",
+            "options": {
+                "a": "Concrete thinking",
+                "b": "Abstract thinking",
+                "c": "Convergent thinking",
+                "d": "Divergent thinking"
+            },
+            "options_bn": {
+                "a": "মূর্ত চিন্তন",
+                "b": "বিমূর্ত চিন্তন",
+                "c": "অভিসারী চিন্তন",
+                "d": "অপসারী চিন্তন"
+            }
+        },
+        {
+            "q_no": "Q20",
+            "part": "A",
+            "subject": "Child Development & Pedagogy",
+            "question": "Child's inability to understand a situation from another person's point of view is called—",
+            "question_bn": "অন্যের দৃষ্টিভঙ্গি দিয়ে শিশুর কোনো অবস্থা বোঝার অক্ষমতাকে বলে—",
+            "options": {
+                "a": "Object permanence",
+                "b": "Centration",
+                "c": "Ego-centric thinking",
+                "d": "Transductive thinking"
+            },
+            "options_bn": {
+                "a": "বস্তুর স্থায়িত্বের ধারণা",
+                "b": "এককেন্দ্রিক চিন্তন",
+                "c": "আত্মকেন্দ্রিক চিন্তন",
+                "d": "অবয়ুক্তিমূলক চিন্তন"
+            }
+        },
+        {
+            "q_no": "Q21",
+            "part": "A",
+            "subject": "Child Development & Pedagogy",
+            "question": "Deficit based approach in inclusive education is discourageable, because—",
+            "question_bn": "অন্তর্ভুক্তিমূলক শিক্ষায় ঘাটতিভিত্তিক ধারা (Deficit based approach)-র প্রয়োগ অনুৎসাহিত করা হয়, কারণ—",
+            "options": {
+                "a": "it allows teacher to discard the weakness of the learner",
+                "b": "it allows teacher to eliminate learning-teaching materials as per necessity",
+                "c": "it does not empower the teacher to give due importance to the learning ability of the learner",
+                "d": "it empowers the teacher to emphasise the learning abilities of the learner"
+            },
+            "options_bn": {
+                "a": "এটি শিক্ষিকা/শিক্ষককে শিক্ষার্থীর দুর্বলতাকে বাদ দিয়ে রাখার সুযোগ দেয়",
+                "b": "এটি শিক্ষিকা/শিক্ষককে শিখন-শিক্ষণ সামগ্রীকে প্রয়োজন অনুসারে বাতিল করতে সুযোগ দেয়",
+                "c": "এটি শিক্ষিকা/শিক্ষককে শিক্ষার্থীর শিখন-সক্ষমতাকে যথাযথ গুরুত্বদানে সক্ষম করে তোলে না",
+                "d": "এটি শিক্ষিকা/শিক্ষককে শিক্ষার্থীর শিখন-সক্ষমতাকে গুরুত্বদানে সক্ষম করে তোলে"
+            }
+        },
+        {
+            "q_no": "Q22",
+            "part": "A",
+            "subject": "Child Development & Pedagogy",
+            "question": "Teacher is not following the maxims of teaching when she/he—",
+            "question_bn": "শিক্ষিকা/শিক্ষক শিক্ষণের নীতি অনুসরণ করেন না যখন তিনি—",
+            "options": {
+                "a": "teaches humanity first, then about human beings",
+                "b": "shows the picture of dogs first, then that of bears",
+                "c": "shows garden first, then its plants",
+                "d": "helps to form concept on the basis of common characteristics"
+            },
+            "options_bn": {
+                "a": "প্রথমে মনুষ্যত্ব, পরে মানুষের ধারণা দেন",
+                "b": "প্রথমে কুকুরের ছবি দেখান এবং পরে ভালুকের ছবি দেখান",
+                "c": "প্রথমে বাগান দেখান, পরে গাছপালা",
+                "d": "সাধারণ বৈশিষ্ট্যসমূহের ভিত্তিতে ধারণা গঠনে সাহায্য করেন"
+            }
+        },
+        {
+            "q_no": "Q23",
+            "part": "A",
+            "subject": "Child Development & Pedagogy",
+            "question": "Which of the following statements does not match with the concept of pedagogy?",
+            "question_bn": "নীচের উক্তিগুলির কোনটি 'পেডাগজি'র ধারণার সঙ্গে সম্পর্কিত নয়?",
+            "options": {
+                "a": "Pedagogy is related to the needs of the learners",
+                "b": "Pedagogy is indifferent to the context of cultural influence",
+                "c": "Pedagogy changes with the change in the curriculum",
+                "d": "Pedagogy is evolving in nature"
+            },
+            "options_bn": {
+                "a": "পেডাগজি শিক্ষার্থীর চাহিদার সঙ্গে সম্পর্কযুক্ত",
+                "b": "পেডাগজি সাংস্কৃতিক প্রভাবের প্রেক্ষিতের প্রতি উদাসীন",
+                "c": "পাঠক্রম পরিবর্তনের সঙ্গে সঙ্গে পেডাগজি পরিবর্তিত হয়",
+                "d": "পেডাগজি হল প্রকৃতিগতভাবে বিবর্তনশীল"
+            }
+        },
+        {
+            "q_no": "Q24",
+            "part": "A",
+            "subject": "Child Development & Pedagogy",
+            "question": "Which approach is inappropriate to Constructivist views?",
+            "question_bn": "নির্মিতিবাদের দৃষ্টিকোণ থেকে কোনটি অনুপযুক্ত?",
+            "options": {
+                "a": "Discovering something from empirical engagement",
+                "b": "Cooperation in group learning",
+                "c": "Provoking to acknowledge multiple perspectives of an objective phenomenon",
+                "d": "Memorising a singular interpretation"
+            },
+            "options_bn": {
+                "a": "পরীক্ষামূলক কাজের দ্বারা কিছু আবিষ্কার",
+                "b": "দলগত শিখনে সহযোগিতা",
+                "c": "কোনো নৈর্ব্যক্তিক ঘটনাকে বিভিন্ন দৃষ্টিকোণ থেকে দেখতে উৎসাহিত করা",
+                "d": "কোনো একটি বিশেষ ব্যাখ্যা মুখস্থ করা"
+            }
+        },
+        {
+            "q_no": "Q25",
+            "part": "A",
+            "subject": "Child Development & Pedagogy",
+            "question": "Consider the following statements: (i) Developmental milestones are fixed and identical for all individuals. (ii) Growth is influenced by heredity and environment. (iii) Maturation involves the unfolding of inherited biological potential. (iv) Development is solely influenced by heredity. Which of the following options is correct?",
+            "question_bn": "নিম্নোক্ত বিবৃতিগুলি বিবেচনা করুন: (i) ধারাবাহিক উন্নয়ন ক্রম নির্দিষ্ট এবং সমস্ত ব্যক্তির ক্ষেত্রে একই রকম। (ii) বৃদ্ধি বংশগতি এবং পরিবেশের দ্বারা প্রভাবিত হয়। (iii) জন্মগত জৈবিক প্রবণতার প্রকাশ হল পরিণমন। (iv) বিকাশ একমাত্র বংশগতির দ্বারা প্রভাবিত হয়। নীচের কোন বিকল্পটি সঠিক?",
+            "options": {
+                "a": "Only (i)",
+                "b": "(ii) and (iii)",
+                "c": "(ii), (iii) and (iv)",
+                "d": "Only (ii)"
+            },
+            "options_bn": {
+                "a": "একমাত্র (i)",
+                "b": "(ii) এবং (iii)",
+                "c": "(ii), (iii) এবং (iv)",
+                "d": "একমাত্র (ii)"
+            }
+        },
+        {
+            "q_no": "Q26",
+            "part": "A",
+            "subject": "Child Development & Pedagogy",
+            "question": "According to Kohlberg, the level of moral development, in which an individual judges morality in terms of abstract principle is—",
+            "question_bn": "কোহলবার্গের মতে, যে নৈতিক বিকাশের স্তরে কোনো ব্যক্তি বিমূর্ত নীতির ভিত্তিতে নৈতিকতার বিচার করেন, তা হল—",
+            "options": {
+                "a": "Pre-conventional",
+                "b": "Conventional",
+                "c": "Post-conventional",
+                "d": "Both conventional and Post-conventional"
+            },
+            "options_bn": {
+                "a": "প্রাক্-প্রথাগত",
+                "b": "প্রথাগত",
+                "c": "উত্তর-প্রথাগত",
+                "d": "প্রথাগত ও উত্তর-প্রথাগত উভয়ই"
+            }
+        },
+        {
+            "q_no": "Q27",
+            "part": "A",
+            "subject": "Child Development & Pedagogy",
+            "question": "Match List-I with List-II: List-I: (a) Self-esteem needs, (b) Self-actualization needs, (c) Safety needs, (d) Belongingness needs. List-II: (i) Shelter, (ii) Meaningful relationship, (iii) Realizing one's potential, (iv) Refrain from anxiety, (v) Recognition from others.",
+            "question_bn": "তালিকা I-এর সঙ্গে তালিকা II মেলান: তালিকা I: (a) আত্ম-শ্রদ্ধার চাহিদা, (b) আত্মপ্রতিষ্ঠার চাহিদা, (c) নিরাপত্তার চাহিদা, (d) একাত্মতার চাহিদা। তালিকা II: (i) আশ্রয়, (ii) অর্থপূর্ণ সম্পর্ক, (iii) আত্মসম্ভাবনার উপলব্ধি, (iv) উদ্বেগ থেকে মুক্তি, (v) অন্যের কাছ থেকে স্বীকৃতিলাভ।",
+            "options": {
+                "a": "(a)-(i), (b)-(ii), (c)-(iii), (d)-(iv)",
+                "b": "(a)-(ii), (b)-(iii), (c)-(iv), (d)-(i)",
+                "c": "(a)-(v), (b)-(iii), (c)-(iv), (d)-(ii)",
+                "d": "(a)-(v), (b)-(iv), (c)-(ii), (d)-(iii)"
+            },
+            "options_bn": {
+                "a": "(a)-(i), (b)-(ii), (c)-(iii), (d)-(iv)",
+                "b": "(a)-(ii), (b)-(iii), (c)-(iv), (d)-(i)",
+                "c": "(a)-(v), (b)-(iii), (c)-(iv), (d)-(ii)",
+                "d": "(a)-(v), (b)-(iv), (c)-(ii), (d)-(iii)"
+            }
+        },
+        {
+            "q_no": "Q28",
+            "part": "A",
+            "subject": "Child Development & Pedagogy",
+            "question": "Consider the following statements about Bloom's Taxonomy of Instructional Objectives and Learning Outcomes: (i) It categorizes learning objectives ranging from lower-order thinking to higher-order thinking skills. (ii) The lowest level of Bloom's Taxonomy is 'Creating', which involves generating new ideas and original concepts. (iii) 'Analyzing' is a higher-order thinking skill in Bloom's Taxonomy that involves breaking down information into parts and understanding relationships. (iv) It assesses students' memorization skills and factual knowledge. Which of the four options is correct?",
+            "question_bn": "ব্লুমের নির্দেশমূলক উদ্দেশ্যসমূহ এবং শিখন ফলাফলসমূহের শ্রেণিবিন্যাস সম্পর্কে নিম্নলিখিত বিবৃতিগুলি বিবেচনা করুন।",
+            "options": {
+                "a": "Only (i)",
+                "b": "(i) and (iii)",
+                "c": "(ii) and (iii)",
+                "d": "(ii), (iii) and (iv)"
+            },
+            "options_bn": {
+                "a": "একমাত্র (i)",
+                "b": "(i) এবং (iii)",
+                "c": "(ii) এবং (iii)",
+                "d": "(ii), (iii) এবং (iv)"
+            }
+        },
+        {
+            "q_no": "Q29",
+            "part": "A",
+            "subject": "Child Development & Pedagogy",
+            "question": "Match List-I with List-II: List-I (Cognitive Development Concepts): (a) Schema, (b) Assimilation, (c) Accommodation, (d) Equilibration. List-II (Descriptions): (i) Modifying existing mental structures to incorporate new information, (ii) An organized pattern of thought, (iii) Achieving cognitive balance through adaptation and adjustment, (iv) Fitting new information into existing mental structures.",
+            "question_bn": "নীচের তালিকা I-কে তালিকা II-এর সঙ্গে মেলান: তালিকা I: (a) স্কিমা, (b) আত্তীকরণ, (c) সহযোজন, (d) সাম্যাবস্থা।",
+            "options": {
+                "a": "(a)-(i), (b)-(ii), (c)-(iii), (d)-(iv)",
+                "b": "(a)-(iv), (b)-(ii), (c)-(i), (d)-(iii)",
+                "c": "(a)-(ii), (b)-(iv), (c)-(i), (d)-(iii)",
+                "d": "(a)-(ii), (b)-(iv), (c)-(iii), (d)-(i)"
+            },
+            "options_bn": {
+                "a": "(a)-(i), (b)-(ii), (c)-(iii), (d)-(iv)",
+                "b": "(a)-(iv), (b)-(ii), (c)-(i), (d)-(iii)",
+                "c": "(a)-(ii), (b)-(iv), (c)-(i), (d)-(iii)",
+                "d": "(a)-(ii), (b)-(iv), (c)-(iii), (d)-(i)"
+            }
+        },
+        {
+            "q_no": "Q30",
+            "part": "A",
+            "subject": "Child Development & Pedagogy",
+            "question": "One of the major objectives of microteaching in Teacher Training Institutes is—",
+            "question_bn": "শিক্ষক প্রশিক্ষণ প্রতিষ্ঠানে অনুশিক্ষণের মুখ্য উদ্দেশ্যগুলির মধ্যে অন্যতম একটি হল—",
+            "options": {
+                "a": "to give an idea of teaching skills",
+                "b": "to give the concept of repeated teaching",
+                "c": "to master the subject of teaching",
+                "d": "to integrate the skills of teaching"
+            },
+            "options_bn": {
+                "a": "শিক্ষণ দক্ষতা সম্পর্কে ধারণা প্রদান",
+                "b": "পুনঃশিক্ষণের ধারণা প্রদান",
+                "c": "শিক্ষণের বিষয়ে পাণ্ডিত্য অর্জন করা",
+                "d": "শিক্ষণদক্ষতা সমূহের সংযুক্তিকরণ করা"
+            }
+        },
+        {
+            "q_no": "Q31",
+            "part": "B",
+            "subject": "Language-I (Bengali)",
+            "question": "'সকাল থেকে অবিরাম বৃষ্টি ঝরছে। একই তালে, ঝরঝর, ঝমঝম।' উদ্ধৃত অংশে 'ঝরঝর, ঝমঝম' ব্যবহৃত হয়েছে বৃষ্টির—",
+            "options": {
+                "a": "ঈষদনতা বোঝাতে",
+                "b": "আশঙ্কা বোঝাতে",
+                "c": "তীব্রতা বোঝাতে",
+                "d": "স্থায়িত্ব বোঝাতে"
+            }
+        },
+        {
+            "q_no": "Q32",
+            "part": "B",
+            "subject": "Language-I (Bengali)",
+            "question": "'পশ্চিম-ভিটের রান্নাঘরের পিছনের পৈঠা কেমন শেওলা-ধরা, এবারকার ধাক্কা সয় কি না সয় সন্দেহ।' উদ্ধৃতাংশে 'পৈঠা' শব্দের অর্থ—",
+            "options": {
+                "a": "পাষাণ",
+                "b": "সোপান",
+                "c": "পসরা",
+                "d": "সিঁড়ি"
+            }
+        },
+        {
+            "q_no": "Q33",
+            "part": "B",
+            "subject": "Language-I (Bengali)",
+            "question": "'বস্তুতার সীমা নেই কারো।' 'বস্তুতা'র বিপরীতার্থক শব্দটি হল—",
+            "options": {
+                "a": "অস্তিত্বতা",
+                "b": "ব্যগ্রতা",
+                "c": "ব্যাকুলতা",
+                "d": "শ্রমিকমুখতা"
+            }
+        },
+        {
+            "q_no": "Q34",
+            "part": "B",
+            "subject": "Language-I (Bengali)",
+            "question": "'দিদিমাকে খবরটা দিয়ে আসতে-না-আসতে আবার একটা ভোবে, আবার ছুটি।' বাক্যটিতে গৌণকর্মটি হল—",
+            "options": {
+                "a": "খবরটা",
+                "b": "দিদিমাকে",
+                "c": "ছুটি",
+                "d": "একটা"
+            }
+        },
+        {
+            "q_no": "Q35",
+            "part": "B",
+            "subject": "Language-I (Bengali)",
+            "question": "'তিন মাসের মতো জীবনধারণের সব-কিছু উপকরণ মজুত রাখতে হবে ঘরে।' উদ্ধৃতাংশে 'রাখতে হবে' নীচের যেটির উদাহরণ হবে—",
+            "options": {
+                "a": "যুক্ত ক্রিয়া",
+                "b": "মিশ্র ক্রিয়া",
+                "c": "যৌগিক ক্রিয়া",
+                "d": "পদু ক্রিয়া"
+            }
+        },
+        {
+            "q_no": "Q36",
+            "part": "B",
+            "subject": "Language-I (Bengali)",
+            "question": "'দেখতে দেখতে সব ছাপিয়ে সবশেষে জল উঠে এল গৃহলক্ষ্মীর নিপুণ হাতে নিত্য-লেপা সাদামাটির আঙিনায়।' নিম্নরেখাঙ্কিত পদটির অর্থ—",
+            "options": {
+                "a": "মঞ্চে",
+                "b": "'কার'-এ",
+                "c": "প্রাঙ্গণে",
+                "d": "প্রান্তরে"
+            }
+        },
+        {
+            "q_no": "Q37",
+            "part": "B",
+            "subject": "Language-I (Bengali)",
+            "question": "'ভিটেয় _____ ঘর।' শূন্যস্থানে বসবে—",
+            "options": {
+                "a": "মাচায়",
+                "b": "দাওয়ায়",
+                "c": "ভিটেয়",
+                "d": "দালানে"
+            }
+        },
+        {
+            "q_no": "Q38",
+            "part": "B",
+            "subject": "Language-I (Bengali)",
+            "question": "শুদ্ধ বানানটি হল—",
+            "options": {
+                "a": "মুহুর্ত",
+                "b": "মুহূর্ত",
+                "c": "মূহুর্ত",
+                "d": "মূহূর্ত"
+            }
+        },
+        {
+            "q_no": "Q39",
+            "part": "B",
+            "subject": "Language-I (Bengali)",
+            "question": "কর্তার মা যে কলাগাছগুলিকে চিহ্নিত করেছেন, সেগুলি যে কাজে লাগবে—",
+            "options": {
+                "a": "সাঁকো তৈরি করতে",
+                "b": "বেড়া বাঁধতে",
+                "c": "ভেলা বানাতে",
+                "d": "নৌকা তৈরি করতে"
+            }
+        },
+        {
+            "q_no": "Q40",
+            "part": "B",
+            "subject": "Language-I (Bengali)",
+            "question": "'গিরিতটে, ভূমিগর্ভ ছায়াচ্ছন,—উচ্ছ্বাসউচ্ছল।' 'উচ্ছ্বাসউচ্ছল'-এর বর্ণবিশ্লেষণ করলে পাই—",
+            "options": {
+                "a": "উ+ছ+ছ+ব+আ+স+অ+উ+ছ+ছ+অ+ল+ম",
+                "b": "উ+ছ+ছ+আ+স+উ+ছ+ছ+ল",
+                "c": "উ+ছ+ছ+আ+স+উ+ছ+ছ+ল",
+                "d": "উ+ছ+ছ+ব+আ+স+উ+ছ+ছ+ল"
+            }
+        },
+        {
+            "q_no": "Q41",
+            "part": "B",
+            "subject": "Language-I (Bengali)",
+            "question": "'উতাল উর্মির তালে,—বক্ষে তব লক্ষ কোটি পন্থগ-উৎসব' 'পন্থগ'-এর একটি অর্থ—",
+            "options": {
+                "a": "ভুজঙ্গ",
+                "b": "তরঙ্গ",
+                "c": "মুদগ",
+                "d": "সুড়ঙ্গ"
+            }
+        },
+        {
+            "q_no": "Q42",
+            "part": "B",
+            "subject": "Language-I (Bengali)",
+            "question": "'ভেড়েছিলে ধূলিধূসরিত শক্তিতের শৃঙ্খলের ডোর,' 'শৃঙ্খল' যার সন্ধিবদ্ধ রূপ—",
+            "options": {
+                "a": "শৃঙ্গ + শৃল",
+                "b": "শৃঙ্গ + খল",
+                "c": "শৃম + খল",
+                "d": "শৃ + শৃল"
+            }
+        },
+        {
+            "q_no": "Q43",
+            "part": "B",
+            "subject": "Language-I (Bengali)",
+            "question": "'শান্তিপ্রিয় মুমূর্ষুর শাশানেতে এনেছিলে আহব-সংবাদ,' 'আহব'-এর বিপরীতার্থক শব্দটি হল—",
+            "options": {
+                "a": "যুদ্ধ",
+                "b": "বিরাম",
+                "c": "স্বাধীনতা",
+                "d": "শান্তি"
+            }
+        },
+        {
+            "q_no": "Q44",
+            "part": "B",
+            "subject": "Language-I (Bengali)",
+            "question": "'ছিলে তুমি ভারতের অমাময় স্পন্দহীন বিহুল শাশানে'— 'তুমি' যে ধরনের সর্বনাম—",
+            "options": {
+                "a": "নির্দেশক সর্বনাম",
+                "b": "ব্যক্তিবাচক সর্বনাম",
+                "c": "সংযোগাত্মক সর্বনাম",
+                "d": "অন্যাদিবাচক সর্বনাম"
+            }
+        },
+        {
+            "q_no": "Q45",
+            "part": "B",
+            "subject": "Language-I (Bengali)",
+            "question": "পদাতিক, অশ্ব, হস্তী, রথ সমন্বিত সেনাবাহিনী হল—",
+            "options": {
+                "a": "অক্ষৌহিণী",
+                "b": "চতুরঙ্গ",
+                "c": "ব্যূহ",
+                "d": "চক্র"
+            }
+        },
+        {
+            "q_no": "Q46",
+            "part": "B",
+            "subject": "Language-I (Bengali)",
+            "question": "চতুর্থ শ্রেণিতে বাংলা বানান শেখানোর সর্বোত্তম পদ্ধতিটি হল শিক্ষার্থীদের—",
+            "options": {
+                "a": "বানান মুখস্থ করানো",
+                "b": "শুদ্ধ বানান লিখতে শেখানো",
+                "c": "শুদ্ধ বাংলা ভাষা পড়ার অভ্যাস গড়ে তোলা",
+                "d": "শুদ্ধ বাংলা ভাষা পড়া এবং লেখার অভ্যাস গড়ে তোলা"
+            }
+        },
+        {
+            "q_no": "Q47",
+            "part": "B",
+            "subject": "Language-I (Bengali)",
+            "question": "চতুর্থ শ্রেণিতে শিক্ষার্থীদের সাহিত্যমূল্য উপলব্ধির ক্ষেত্রে নির্দেশক যে পদ্ধতিটি আপনি গ্রহণ করবেন—",
+            "options": {
+                "a": "সরব পাঠ",
+                "b": "নীরব পাঠ",
+                "c": "কবি পরিচিতি",
+                "d": "কবিতার বিষয়বস্তুর উভমুখী আলোচনা"
+            }
+        },
+        {
+            "q_no": "Q48",
+            "part": "B",
+            "subject": "Language-I (Bengali)",
+            "question": "দলগত শিখনের জন্য দল গঠনের ক্ষেত্রে আপনার দৃষ্টিভঙ্গি হবে—",
+            "options": {
+                "a": "সব ভালো ছাত্রছাত্রীকে একই দলে রাখা",
+                "b": "সব পিছিয়ে পড়া ছাত্রছাত্রীকে এক দলে রাখা",
+                "c": "এগিয়ে থাকা এবং পিছিয়ে পড়া ছাত্রছাত্রীর মিশ্রণে দল গঠন করা",
+                "d": "এগিয়ে থাকা এবং পিছিয়ে পড়া ছাত্রছাত্রীর সামাজ্যপূর্ণ মিত্রণে দল গঠন করা"
+            }
+        },
+        {
+            "q_no": "Q49",
+            "part": "B",
+            "subject": "Language-I (Bengali)",
+            "question": "চতুর্থ শ্রেণিতে বাংলা ব্যাকরণ পাঠ বিনিময়ের সময়ে একজন শিক্ষিকা/শিক্ষক প্রথমে উদাহরণ দিলেন, এবং তার উপর আলোচনা করলেন। সবশেষে তিনি ছাত্রদের সহযোগিতায় সংজ্ঞার্থ গঠন করলেন। এক্ষেত্রে তিনি যে পদ্ধতি ব্যবহার করলেন, সেটি হল—",
+            "options": {
+                "a": "অবরোহী পদ্ধতি",
+                "b": "আরোহী পদ্ধতি",
+                "c": "প্রদর্শন পদ্ধতি",
+                "d": "অনুবন্ধন পদ্ধতি"
+            }
+        },
+        {
+            "q_no": "Q50",
+            "part": "B",
+            "subject": "Language-I (Bengali)",
+            "question": "LAD-এর পূর্ণ রূপটি হল—",
+            "options": {
+                "a": "Learning Associative Device",
+                "b": "Learner Acquisition Device",
+                "c": "Language Acquisition Device",
+                "d": "Language Accommodative Device"
+            }
+        },
+        {
+            "q_no": "Q51",
+            "part": "B",
+            "subject": "Language-I (Bengali)",
+            "question": "একজন বাঙালি চেন্নাইয়ে ছ'মাস থাকলেন, এবং সর্বত্র তামিল ভাষা শুনলেন। এরপর তামিল বর্ণমালার সঙ্গে পরিচয় না ঘটলেও তিনি তামিল বলতে ও বলতে পারলেন। তাঁর এই তামিল ভাষা শিক্ষাকে আমরা বলব—",
+            "options": {
+                "a": "Adaptation",
+                "b": "Association",
+                "c": "Acquisition",
+                "d": "Learning"
+            }
+        },
+        {
+            "q_no": "Q52",
+            "part": "B",
+            "subject": "Language-I (Bengali)",
+            "question": "'যা বলা হবে'— এটিকে একক‌ শব্দায় প্রকাশ করলে হবে—",
+            "options": {
+                "a": "বকমান",
+                "b": "বক্তমাণ",
+                "c": "বক্যমাণ",
+                "d": "বক্তমান"
+            }
+        },
+        {
+            "q_no": "Q53",
+            "part": "B",
+            "subject": "Language-I (Bengali)",
+            "question": "মকর > মগর হল—",
+            "options": {
+                "a": "বর্ণবিপর্যয়ের উদাহরণ",
+                "b": "ঘোষীভবনের উদাহরণ",
+                "c": "উষ্মীভবনের উদাহরণ",
+                "d": "তালব্যীভবনের উদাহরণ"
+            }
+        },
+        {
+            "q_no": "Q54",
+            "part": "B",
+            "subject": "Language-I (Bengali)",
+            "question": "নীচের কোনটি 'সকাল' শব্দের সমার্থক শব্দ নয়?",
+            "options": {
+                "a": "প্রভাত",
+                "b": "বিহান",
+                "c": "ফজর",
+                "d": "ত্রিযামা"
+            }
+        },
+        {
+            "q_no": "Q55",
+            "part": "B",
+            "subject": "Language-I (Bengali)",
+            "question": "'পৃথিবী' শব্দটির বর্ণবিশ্লেষণ করলে শূন্যস্থানে যে বর্ণটি বসবে— প+□+থ+ই+ব+ঈ",
+            "options": {
+                "a": "ই",
+                "b": "ঐ",
+                "c": "র",
+                "d": "ঋ"
+            }
+        },
+        {
+            "q_no": "Q56",
+            "part": "B",
+            "subject": "Language-I (Bengali)",
+            "question": "কোনো একটি পাঠ-আলোচনায় শিক্ষিকা/শিক্ষক 'তৃষ্ণা' শব্দের সমার্থক শব্দ হিসেবে নীচের যে শব্দটি লিখবেন না—",
+            "options": {
+                "a": "পিয়াসা",
+                "b": "উদন্যা",
+                "c": "অনুতর্ব",
+                "d": "গ্রসন"
+            }
+        },
+        {
+            "q_no": "Q57",
+            "part": "B",
+            "subject": "Language-I (Bengali)",
+            "question": "'ধানসমেত খড়ের গাদা'কে একক‌কথায় বলা হয়—",
+            "options": {
+                "a": "পাথেয়",
+                "b": "পাথালি",
+                "c": "পারানি",
+                "d": "পালুই"
+            }
+        },
+        {
+            "q_no": "Q58",
+            "part": "B",
+            "subject": "Language-I (Bengali)",
+            "question": "নীচের সঠিক জোড়টি পছন্দ করুন—",
+            "options": {
+                "a": "আপন—নিজ / আপণ—দোকান",
+                "b": "অর্ঘ—পূজার উপকরণ / অর্ঘ্য—মূল্য",
+                "c": "বান—শর / বণ্য—বন্যা",
+                "d": "কাঁচা—জলে ধুয়ে নেওয়া / কাচা—অপক্ক"
+            }
+        },
+        {
+            "q_no": "Q59",
+            "part": "B",
+            "subject": "Language-I (Bengali)",
+            "question": "নীচের যেটি মৌলিক স্বরধ্বনি নয়, সেটি চিহ্নিত করুন—",
+            "options": {
+                "a": "ই",
+                "b": "এ",
+                "c": "আ",
+                "d": "উ"
+            }
+        },
+        {
+            "q_no": "Q60",
+            "part": "B",
+            "subject": "Language-I (Bengali)",
+            "question": "নীচের গুচ্ছগুলির মধ্যে যেটির সব ধ্বনিই অল্পপ্রাণ, সেটি চিহ্নিত করুন—",
+            "options": {
+                "a": "র, ল, শ, স",
+                "b": "ক, ঘ, জ",
+                "c": "গ, ছ, ট, ড",
+                "d": "ঝ, ত, র, ল"
+            }
+        },
+        {
+            "q_no": "Q61",
+            "part": "C",
+            "subject": "Language-II (English)",
+            "passage_ref": "Anne L' Huillier Nobel Prize Interview",
+            "question": "The phrase 'behind the scenes' refers to work done—",
+            "options": {
+                "a": "publicly",
+                "b": "overtly",
+                "c": "surreptitiously",
+                "d": "unreservedly"
+            }
+        },
+        {
+            "q_no": "Q62",
+            "part": "C",
+            "subject": "Language-II (English)",
+            "passage_ref": "Anne L' Huillier Nobel Prize Interview",
+            "question": "In the brief telephonic conversation, Adam Smith stated that Anne L' Huillier must have felt that—",
+            "options": {
+                "a": "it is a regular humdrum affair to receive the prize",
+                "b": "she was overwhelmed on receiving the prize",
+                "c": "receiving the prize was a very mundane affair",
+                "d": "receiving the prize made her feel disturbed"
+            }
+        },
+        {
+            "q_no": "Q63",
+            "part": "C",
+            "subject": "Language-II (English)",
+            "passage_ref": "Anne L' Huillier Nobel Prize Interview",
+            "question": "'... explore new things with it.' Exploration-based learning helps children learn through—",
+            "options": {
+                "a": "excursion",
+                "b": "reflection",
+                "c": "rote memorisation",
+                "d": "curiosity and inquiry"
+            }
+        },
+        {
+            "q_no": "Q64",
+            "part": "C",
+            "subject": "Language-II (English)",
+            "passage_ref": "Anne L' Huillier Nobel Prize Interview",
+            "question": "'Overtone' as used in the passage refers to—",
+            "options": {
+                "a": "any frequency lower than the fundamental frequency",
+                "b": "any frequency higher than the fundamental frequency",
+                "c": "any frequency equivalent in range to the fundamental frequency",
+                "d": "any frequency that is not at all related to the fundamental frequency"
+            }
+        },
+        {
+            "q_no": "Q65",
+            "part": "C",
+            "subject": "Language-II (English)",
+            "passage_ref": "Anne L' Huillier Nobel Prize Interview",
+            "question": "'I recall that you were on the Nobel Committee,' the correct alternative of voice change of the given line should read as—",
+            "options": {
+                "a": "It is being recalled by me that you are on the Nobel Committee",
+                "b": "It was being recalled by me that you were on the Nobel Committee",
+                "c": "It is recalled by me that you were on the Nobel Committee",
+                "d": "It was recalled by me that you are on the Nobel Committee"
+            }
+        },
+        {
+            "q_no": "Q66",
+            "part": "C",
+            "subject": "Language-II (English)",
+            "passage_ref": "Anne L' Huillier Nobel Prize Interview",
+            "question": "Statement I: I understand that you were taking a class when you heard that you have received the Nobel Prize. Statement II: I comprehend that you were teaching your students when you learnt of having received the Nobel Prize.",
+            "options": {
+                "a": "Statements I and II are false",
+                "b": "Statement I is false and Statement II is true",
+                "c": "Statements I and II are true",
+                "d": "Statement I is true and Statement II is false"
+            }
+        },
+        {
+            "q_no": "Q67",
+            "part": "C",
+            "subject": "Language-II (English)",
+            "passage_ref": "Anne L' Huillier Nobel Prize Interview",
+            "question": "'Deluged' as given in the passage is a/an—",
+            "options": {
+                "a": "verb",
+                "b": "adverb",
+                "c": "preposition",
+                "d": "interjection"
+            }
+        },
+        {
+            "q_no": "Q68",
+            "part": "C",
+            "subject": "Language-II (English)",
+            "passage_ref": "Anne L' Huillier Nobel Prize Interview",
+            "question": "'It seems such a wonderful combination of the head and the hands.' Use of head and hands pedagogically refers to—",
+            "options": {
+                "a": "rote learning",
+                "b": "learning by thinking",
+                "c": "learning by thinking and doing",
+                "d": "learning by doing"
+            }
+        },
+        {
+            "q_no": "Q69",
+            "part": "C",
+            "subject": "Language-II (English)",
+            "passage_ref": "Anne L' Huillier Nobel Prize Interview",
+            "question": "'... it was not expected and not predicted.' Choose the correct alternative for the above expression—",
+            "options": {
+                "a": "It was neither expected nor predicted",
+                "b": "It was unexpected and predicted",
+                "c": "It wasn't expected but predicted",
+                "d": "It was either expected or predicted"
+            }
+        },
+        {
+            "q_no": "Q70",
+            "part": "C",
+            "subject": "Language-II (English)",
+            "passage_ref": "Boy Who Cried Wolf",
+            "question": "'Antic', as referred to in the passage, means—",
+            "options": {
+                "a": "kind behaviour",
+                "b": "optimistic behaviour",
+                "c": "foolish, outrageous or amusing behaviour",
+                "d": "pessimistic behaviour"
+            }
+        },
+        {
+            "q_no": "Q71",
+            "part": "C",
+            "subject": "Language-II (English)",
+            "passage_ref": "Boy Who Cried Wolf",
+            "question": "The herdsman tried to fool the villagers because—",
+            "options": {
+                "a": "he wanted to disturb them",
+                "b": "he wanted to derive some fun",
+                "c": "he wanted company",
+                "d": "he wanted to show them how careful he was"
+            }
+        },
+        {
+            "q_no": "Q72",
+            "part": "C",
+            "subject": "Language-II (English)",
+            "passage_ref": "Boy Who Cried Wolf",
+            "question": "'in an open and unashamed manner'— This phrase as used in the passage, means—",
+            "options": {
+                "a": "dejectedly",
+                "b": "actually",
+                "c": "blatantly",
+                "d": "really"
+            }
+        },
+        {
+            "q_no": "Q73",
+            "part": "C",
+            "subject": "Language-II (English)",
+            "passage_ref": "Boy Who Cried Wolf",
+            "question": "Statement I: No one rushed to the lad's aid as they felt he was fooling them. Statement II: No one turned up to help the lad as they were tired of his antics.",
+            "options": {
+                "a": "Statements I and II are true",
+                "b": "Statements I and II are false",
+                "c": "Statement I is false and Statement II is true",
+                "d": "Statement I is true and Statement II is false"
+            }
+        },
+        {
+            "q_no": "Q74",
+            "part": "C",
+            "subject": "Language-II (English)",
+            "passage_ref": "Boy Who Cried Wolf",
+            "question": "'finding something or someone'— The phrasal verb for the quoted expression is—",
+            "options": {
+                "a": "calling out",
+                "b": "looking forward",
+                "c": "yelling out",
+                "d": "looking for"
+            }
+        },
+        {
+            "q_no": "Q75",
+            "part": "C",
+            "subject": "Language-II (English)",
+            "passage_ref": "Boy Who Cried Wolf",
+            "question": "The villagers hoped that their warning would dissuade the lad. If the above sentence is rewritten, without altering the meaning what will be the correct option?",
+            "options": {
+                "a": "That their warning would dissuade the lad is what the villagers hoped",
+                "b": "That their warning will dissuade the lad is what the villagers hoped",
+                "c": "That their warning would dissuade the lad was what the villagers hoped",
+                "d": "That their warning might dissuade the lad is what the villagers hoped"
+            }
+        },
+        {
+            "q_no": "Q76",
+            "part": "C",
+            "subject": "Language-II (English)",
+            "passage_ref": "Boy Who Cried Wolf",
+            "question": "'An old man came forward to comfort him.' 'Comfort', as used in this line, can be replaced with—",
+            "options": {
+                "a": "console",
+                "b": "combat",
+                "c": "congratulate",
+                "d": "compliment"
+            }
+        },
+        {
+            "q_no": "Q77",
+            "part": "C",
+            "subject": "Language-II (English)",
+            "passage_ref": "Boy Who Cried Wolf",
+            "question": "'None turned up because they felt that he was still joking;' is an example of a—",
+            "options": {
+                "a": "Simple sentence",
+                "b": "Complex sentence",
+                "c": "Compound sentence",
+                "d": "Double sentence"
+            }
+        },
+        {
+            "q_no": "Q78",
+            "part": "C",
+            "subject": "Language-II (English)",
+            "passage_ref": "Boy Who Cried Wolf",
+            "question": "'... a wolf sneaking amongst the flock.' 'Flock' is a/an—",
+            "options": {
+                "a": "Common Noun",
+                "b": "Collective Noun",
+                "c": "Proper Noun",
+                "d": "Abstract Noun"
+            }
+        },
+        {
+            "q_no": "Q79",
+            "part": "C",
+            "subject": "Language-II (English)",
+            "passage_ref": "Boy Who Cried Wolf",
+            "question": "The moral of the story is—",
+            "options": {
+                "a": "Do not believe cowboys",
+                "b": "None disbelieves a liar",
+                "c": "Liars are always successful",
+                "d": "Liars are always exposed"
+            }
+        },
+        {
+            "q_no": "Q80",
+            "part": "C",
+            "subject": "Language-II (English)",
+            "question": "A good piece of writing in English involves—",
+            "options": {
+                "a": "incorrect punctuation",
+                "b": "ideas, presentation and coherence",
+                "c": "flowery language",
+                "d": "illegible handwriting"
+            }
+        },
+        {
+            "q_no": "Q81",
+            "part": "C",
+            "subject": "Language-II (English)",
+            "question": "'Pedagogical grammar' means—",
+            "options": {
+                "a": "teaching of grammar from form to use",
+                "b": "teaching grammar out of context",
+                "c": "teaching only the rules of grammar",
+                "d": "teaching grammar in context"
+            }
+        },
+        {
+            "q_no": "Q82",
+            "part": "C",
+            "subject": "Language-II (English)",
+            "question": "A scoring guide, used to evaluate the quality of students is called—",
+            "options": {
+                "a": "Rating scales",
+                "b": "Checklist",
+                "c": "Inventories",
+                "d": "Rubrics"
+            }
+        },
+        {
+            "q_no": "Q83",
+            "part": "C",
+            "subject": "Language-II (English)",
+            "question": "English language has ______ consonant sounds.",
+            "options": {
+                "a": "24",
+                "b": "25",
+                "c": "26",
+                "d": "27"
+            }
+        },
+        {
+            "q_no": "Q84",
+            "part": "C",
+            "subject": "Language-II (English)",
+            "question": "'Study of meaning' in a language is known as—",
+            "options": {
+                "a": "semantics",
+                "b": "syntax",
+                "c": "linguistics",
+                "d": "morphology"
+            }
+        },
+        {
+            "q_no": "Q85",
+            "part": "C",
+            "subject": "Language-II (English)",
+            "question": "Effective learning in a classroom situation takes place when the learners are—",
+            "options": {
+                "a": "passive",
+                "b": "able to score high marks",
+                "c": "interactive",
+                "d": "fluent in the language"
+            }
+        },
+        {
+            "q_no": "Q86",
+            "part": "C",
+            "subject": "Language-II (English)",
+            "question": "When young learners are taught to improve their spelling and punctuation, they will—",
+            "options": {
+                "a": "improve their accuracy",
+                "b": "nurture their creativity",
+                "c": "sharpen their listening skills",
+                "d": "enhance their fluency"
+            }
+        },
+        {
+            "q_no": "Q87",
+            "part": "C",
+            "subject": "Language-II (English)",
+            "question": "Writing the title of a story on the blackboard, the teacher asks the class to guess what the story is about. She/He does this to—",
+            "options": {
+                "a": "improve students' vocabulary",
+                "b": "make the story less interesting",
+                "c": "let the class guess the content",
+                "d": "let the class guess the word meanings"
+            }
+        },
+        {
+            "q_no": "Q88",
+            "part": "C",
+            "subject": "Language-II (English)",
+            "question": "Dyslexia is a learning disability that negatively affects the understanding abilities in terms of—",
+            "options": {
+                "a": "Reading",
+                "b": "Oral language",
+                "c": "Sign language",
+                "d": "Dialect"
+            }
+        },
+        {
+            "q_no": "Q89",
+            "part": "C",
+            "subject": "Language-II (English)",
+            "question": "Which evaluation is done by the teacher during the process of learning?",
+            "options": {
+                "a": "Summative evaluation",
+                "b": "Term-end evaluation",
+                "c": "Product evaluation",
+                "d": "Formative evaluation"
+            }
+        },
+        {
+            "q_no": "Q90",
+            "part": "C",
+            "subject": "Language-II (English)",
+            "question": "The purpose of CCE in learning English as a second language is—",
+            "options": {
+                "a": "to administer weekly tests",
+                "b": "to assess the learners' understanding of the textbook",
+                "c": "to assess their learning gaps and help learners achieve the expected learning outcomes in both scholastic and co-scholastic areas of knowledge",
+                "d": "to assess their learning gaps and help learners achieve the expected learning outcomes in only the scholastic areas of knowledge"
+            }
+        },
+        {
+            "q_no": "Q91",
+            "part": "D",
+            "subject": "Mathematics",
+            "question": "The sum of the numbers of prime factors of 1540, 21450, 1111 is—",
+            "question_bn": "1540, 21450, 1111-এর মৌলিক উৎপাদকগুলির সংখ্যার সমষ্টি হল—",
+            "options": {
+                "a": "12",
+                "b": "7",
+                "c": "11",
+                "d": "13"
+            }
+        },
+        {
+            "q_no": "Q92",
+            "part": "D",
+            "subject": "Mathematics",
+            "question": "The number of days in the 18th century was—",
+            "question_bn": "18 শতকে দিনের সংখ্যা ছিল—",
+            "options": {
+                "a": "36525",
+                "b": "36524",
+                "c": "36625",
+                "d": "36624"
+            }
+        },
+        {
+            "q_no": "Q93",
+            "part": "D",
+            "subject": "Mathematics",
+            "question": "Which one of the following is the closest estimation interval of (3/7)?",
+            "question_bn": "নিম্নলিখিতগুলির মধ্যে কোনটি (3/7)-এর নিকটতম মানের অনুমান-অন্তর?",
+            "options": {
+                "a": "0.428574126 < 3/7 < 0.482571429",
+                "b": "0.498751426 < 3/7 < 0.528571429",
+                "c": "0.428571426 < 3/7 < 0.428571429",
+                "d": "0.425874126 < 3/7 < 0.438251429"
+            }
+        },
+        {
+            "q_no": "Q94",
+            "part": "D",
+            "subject": "Mathematics",
+            "question": "Bakul has started reading a book of 4818 pages. In three consecutive days she reads 24/73 part, 34/219 part and 23/146 part of the book respectively. The number of pages of the book, left for reading, is—",
+            "question_bn": "বকুল 4818 পাতার একটি বই পড়তে শুরু করে। পর পর তিনদিনে সে বইটির যথাক্রমে 24/73 অংশ, 34/219 অংশ ও 23/146 অংশ পড়ে ফেলে। বইটির যতগুলি পাতা পড়া বাকি থাকে তার সংখ্যা হল—",
+            "options": {
+                "a": "1727",
+                "b": "1738",
+                "c": "1832",
+                "d": "1742"
+            }
+        },
+        {
+            "q_no": "Q95",
+            "part": "D",
+            "subject": "Mathematics",
+            "question": "If a number (natural) be divided by 893, the remainder is 198. The remainder, when that very number is divided by 47, is—",
+            "question_bn": "একটি সংখ্যাকে (স্বাভাবিক) 893 দ্বারা ভাগ করলে ভাগশেষ হয় 198। সংখ্যাটিকে 47 দ্বারা ভাগ করলে ভাগশেষ হয়—",
+            "options": {
+                "a": "38",
+                "b": "10",
+                "c": "17",
+                "d": "05"
+            }
+        },
+        {
+            "q_no": "Q96",
+            "part": "D",
+            "subject": "Mathematics",
+            "question": "'p'(>2) is a prime number. Then H.C.F. of (p + 1) and (p − 1) is—",
+            "question_bn": "'p'(>2) হল একটি মৌলিক সংখ্যা। তাহলে (p + 1) ও (p − 1)-এর গ.সা.গু. হয়—",
+            "options": {
+                "a": "≥ 1",
+                "b": "= 1",
+                "c": "≥ 2",
+                "d": "= 2"
+            }
+        },
+        {
+            "q_no": "Q97",
+            "part": "D",
+            "subject": "Mathematics",
+            "question": "The length of a rectangle is greater than its breadth by 4 cm. and its area is X cm². If the length be decreased by 2 cm. and the breadth be increased by 2 cm., then the new rectangle formed is of area Y cm². Then—",
+            "question_bn": "একটি আয়তাকার ক্ষেত্রের দৈর্ঘ্য তার প্রস্থের চেয়ে 4 সে.মি. বড়ো এবং এর ক্ষেত্রফল X সে.মি.²। এখন এর দৈর্ঘ্য 2 সে.মি. কমানো হলে এবং প্রস্থ 2 সে.মি. বাড়ানো হলে যে নতুন আয়তাকার ক্ষেত্রটি উৎপন্ন হয় তার ক্ষেত্রফল হয় Y সে.মি.², তবে—",
+            "options": {
+                "a": "X < Y",
+                "b": "X ≤ Y",
+                "c": "X > Y",
+                "d": "X ≥ Y"
+            }
+        },
+        {
+            "q_no": "Q98",
+            "part": "D",
+            "subject": "Mathematics",
+            "question": "x and y are two whole numbers with x < y. Then H.C.F. of x and y will be—",
+            "question_bn": "x ও y হল দুটি অখণ্ড সংখ্যা এবং x < y। তাহলে x ও y-এর গ.সা.গু. হবে—",
+            "options": {
+                "a": "> x always",
+                "b": "> x for some special cases",
+                "c": "< x always",
+                "d": "≤ x always"
+            }
+        },
+        {
+            "q_no": "Q99",
+            "part": "D",
+            "subject": "Mathematics",
+            "question": "p₁, p₂, p₃, ..., pₙ are 'n' natural numbers which are not composite and none of them is 2. Given: 1 + p₁·p₂·p₃·...·pₙ = prime, then p₁ + p₂ + p₃ + ... + pₙ =",
+            "question_bn": "p₁, p₂, p₃, ..., pₙ হল 'n' টি স্বাভাবিক সংখ্যা যারা কেউই যৌগিক সংখ্যা অথবা 2 নয়। প্রদত্ত: 1 + p₁·p₂·p₃·...·pₙ = একটি মৌলিক সংখ্যা, তাহলে p₁ + p₂ + p₃ + ... + pₙ =",
+            "options": {
+                "a": "n × n",
+                "b": "2n",
+                "c": "n",
+                "d": "n − 1"
+            }
+        },
+        {
+            "q_no": "Q100",
+            "part": "D",
+            "subject": "Mathematics",
+            "question": "In the figure, △ABC, △DEF and all the 6 small identical triangles are equilateral. The ratio of the area of the quadrilateral PDES to that of hexagon PQRSTU will be—",
+            "question_bn": "প্রদত্ত চিত্রে △ABC, △DEF ও সকল 6 টি ছোটো অভিন্ন ত্রিভুজগুলি সমবাহু ত্রিভুজ। PDES চতুর্ভুজের ক্ষেত্রফল ও PQRSTU ষড়ভুজের ক্ষেত্রফলের অনুপাত হবে—",
+            "options": {
+                "a": "1 : 1",
+                "b": "15 : 16",
+                "c": "6 : 5",
+                "d": "5 : 6"
+            }
+        },
+        {
+            "q_no": "Q101",
+            "part": "D",
+            "subject": "Mathematics",
+            "question": "In the following pattern: 1, 1, 2, 6, 42, ? — Entry in the sixth box is—",
+            "question_bn": "নিম্নলিখিত প্যাটার্নে: 1, 1, 2, 6, 42, ? — ষষ্ঠ বাক্সের সংখ্যাটি হল—",
+            "options": {
+                "a": "1806",
+                "b": "1764",
+                "c": "462",
+                "d": "378"
+            }
+        },
+        {
+            "q_no": "Q102",
+            "part": "D",
+            "subject": "Mathematics",
+            "question": "The perimeter of a triangle is 12 cm. in length, where the measure of all the three sides (in cm.) are natural numbers. How many such different triangles can be formed?",
+            "question_bn": "একটি ত্রিভুজের পরিসীমার দৈর্ঘ্য 12 সে.মি., যেখানে সবকটি বাহুর দৈর্ঘ্যের পরিমাপ স্বাভাবিক সংখ্যা (সে.মি. একক)। এরূপ কতগুলি ভিন্ন ত্রিভুজ গঠন করা সম্ভব?",
+            "options": {
+                "a": "2",
+                "b": "5",
+                "c": "4",
+                "d": "3"
+            }
+        },
+        {
+            "q_no": "Q103",
+            "part": "D",
+            "subject": "Mathematics",
+            "question": "A fraction is equivalent to 5/8. Twice its numerator and the denominator add up to 414. Then the difference of the denominator and the numerator of the fraction will be—",
+            "question_bn": "একটি ভগ্নাংশ 5/8-এর সমতুল্য; এর লবের দ্বিগুণ ও হরের সমষ্টি 414 হলে, এর হর ও লবের অন্তর হবে—",
+            "options": {
+                "a": "14",
+                "b": "69",
+                "c": "23",
+                "d": "46"
+            }
+        },
+        {
+            "q_no": "Q104",
+            "part": "D",
+            "subject": "Mathematics",
+            "question": "x is a natural number and for every digit of it, place value and the face value are the same. Then for any whole number y, the value of xy will be—",
+            "question_bn": "x একটি স্বাভাবিক সংখ্যা যার প্রত্যেকটি অঙ্কের স্থানীয় মান ও প্রকৃত মান সমান। তাহলে যে কোনো অখণ্ড সংখ্যা y-এর জন্য xy-এর মান হবে—",
+            "options": {
+                "a": "≥ y",
+                "b": "≤ y",
+                "c": "= 0 or y",
+                "d": "= y"
+            }
+        },
+        {
+            "q_no": "Q105",
+            "part": "D",
+            "subject": "Mathematics",
+            "question": "The product of two whole numbers is 552. The smallest possible sum of these numbers is—",
+            "question_bn": "দুটি অখণ্ড সংখ্যার গুণফল 552 হলে, সংখ্যাদুটির সমষ্টির ক্ষুদ্রতম মান হল—",
+            "options": {
+                "a": "38",
+                "b": "98",
+                "c": "553",
+                "d": "47"
+            }
+        },
+        {
+            "q_no": "Q106",
+            "part": "D",
+            "subject": "Mathematics",
+            "question": "Subitizing plays an important role in developing the number sense. Which of the following is an example of a learner demonstrating the skill of subitizing?",
+            "question_bn": "সংখ্যার বোধের বিকাশে সাবিটাইজিং একটি গুরুত্বপূর্ণ ভূমিকা পালন করে। নীচের কোনটি একজন শিক্ষার্থীর সাবিটাইজিং দক্ষতা প্রদর্শনের উদাহরণ?",
+            "options": {
+                "a": "Learner recognizes the number 6 as 1 added to 5",
+                "b": "Learner recognizes the number 4 as the number with 1 taken from 5",
+                "c": "Learner rolls an unbiased die and is able to say it is four without actually counting the dots",
+                "d": "Learner recognizes the number 5 as the successor of 4"
+            }
+        },
+        {
+            "q_no": "Q107",
+            "part": "D",
+            "subject": "Mathematics",
+            "question": "There are some statements given below: (I) Multiplying a number by another always increases its value. (II) Dividing a number by another nonzero number always decreases its value. (III) A number multiplied by 10 always has a zero at the unit place. (IV) Multiplication is the inverse process of division. Identify the correct option—",
+            "question_bn": "নিম্নে কিছু বিবৃতি প্রদত্ত হল: (I) একটি সংখ্যাকে অপর একটি সংখ্যা দ্বারা গুণ করলে তার মান সর্বদা বৃদ্ধি পায়। (II) একটি সংখ্যাকে অপর একটি অশূন্য সংখ্যা দ্বারা ভাগ করলে তার মান সর্বদা হ্রাস পায়। (III) 10 দ্বারা গুণিত একটি সংখ্যার একক স্থানে সর্বদা একটি শূন্য থাকে। (IV) গুণ হল ভাগের বিপরীত প্রক্রিয়া।",
+            "options": {
+                "a": "(I) and (II)",
+                "b": "(III) and (IV)",
+                "c": "Only (III)",
+                "d": "Only (IV)"
+            }
+        },
+        {
+            "q_no": "Q108",
+            "part": "D",
+            "subject": "Mathematics",
+            "question": "Which of the following is not a mathematical process?",
+            "question_bn": "নীচের কোনটি গাণিতিক প্রক্রিয়া নয়?",
+            "options": {
+                "a": "Visualising",
+                "b": "Memorising",
+                "c": "Estimating",
+                "d": "Transposing"
+            }
+        },
+        {
+            "q_no": "Q109",
+            "part": "D",
+            "subject": "Mathematics",
+            "question": "'The sum of any two whole numbers is a whole number'— This property of whole numbers is referred to as—",
+            "question_bn": "'যে কোনো দুটি অখণ্ড সংখ্যার সমষ্টি একটি অখণ্ড সংখ্যা'— অখণ্ড সংখ্যার এই ধর্মকে বলা হয়—",
+            "options": {
+                "a": "Commutative property",
+                "b": "Associative property",
+                "c": "Distributive property",
+                "d": "Closure property"
+            }
+        },
+        {
+            "q_no": "Q110",
+            "part": "D",
+            "subject": "Mathematics",
+            "question": "In dividing a number by 1001, a boy employed the method of short division. He divided the number by 7, 11 and 13 in succession and obtained the corresponding remainders 5, 6 and 7 respectively. The complete remainder when the number is divided by 7 × 11 × 13 is—",
+            "question_bn": "একটি সংখ্যাকে 1001 দ্বারা ভাগ করার জন্য, একটি বালক সংক্ষিপ্ত ভাগ পদ্ধতি ব্যবহার করেছিল। সে সংখ্যাটিকে 7, 11 এবং 13 দ্বারা পর্যায়ক্রমে ভাগ করল এবং অনুরূপ ভাগশেষগুলি যথাক্রমে 5, 6 এবং 7 পেল। সংখ্যাটিকে 7 × 11 × 13 দ্বারা ভাগ করা হয়, সম্পূর্ণ ভাগশেষটি হয়—",
+            "options": {
+                "a": "539",
+                "b": "586",
+                "c": "581",
+                "d": "544"
+            }
+        },
+        {
+            "q_no": "Q111",
+            "part": "D",
+            "subject": "Mathematics",
+            "question": "The maximum number of trees which can be planted 20 metres apart on the two sides of a straight road 1760 metres in length are—",
+            "question_bn": "1760 মিটার দীর্ঘ একটি সোজা রাস্তার দুপাশে 20 মিটার অন্তর গাছ বসালে তার সর্বাধিক সংখ্যা হয়—",
+            "options": {
+                "a": "178",
+                "b": "176",
+                "c": "180",
+                "d": "174"
+            }
+        },
+        {
+            "q_no": "Q112",
+            "part": "D",
+            "subject": "Mathematics",
+            "question": "3/10 of one centimetre indicates—",
+            "question_bn": "এক সেন্টিমিটারের 3/10 অংশ নির্দেশ করে—",
+            "options": {
+                "a": "30 millimetres",
+                "b": "3 decimetres",
+                "c": "3 millimetres",
+                "d": "0.3 millimetre"
+            }
+        },
+        {
+            "q_no": "Q113",
+            "part": "D",
+            "subject": "Mathematics",
+            "question": "If 93P25Q is divisible by 88 then the value of P and Q respectively is—",
+            "question_bn": "যদি 93P25Q, 88 দ্বারা বিভাজ্য হয় তবে P এবং Q-এর মান হয় যথাক্রমে—",
+            "options": {
+                "a": "2 and 8",
+                "b": "8 and 2",
+                "c": "6 and 8",
+                "d": "8 and 6"
+            }
+        },
+        {
+            "q_no": "Q114",
+            "part": "D",
+            "subject": "Mathematics",
+            "question": "The two numbers, both of which are greater than 29 having 29 for their H.C.F. and 4147 for their L.C.M. are—",
+            "question_bn": "29 অপেক্ষা বৃহত্তর দুটি সংখ্যার গ.সা.গু. 29 এবং ল.সা.গু. 4147। সংখ্যা দুটি হয়—",
+            "options": {
+                "a": "377 and 406",
+                "b": "319 and 377",
+                "c": "203 and 261",
+                "d": "261 and 319"
+            }
+        },
+        {
+            "q_no": "Q115",
+            "part": "D",
+            "subject": "Mathematics",
+            "question": "At what level of Van Heile's spatial/geometrical understanding, a child is likely to accept that a square is also a rectangle?",
+            "question_bn": "ভ্যান হেইলের স্থানিক/জ্যামিতিক বোধের কোন স্তরে একজন শিশু স্বীকার করতে পারে যে, একটি বর্গক্ষেত্রও একটি আয়তক্ষেত্র?",
+            "options": {
+                "a": "Level 0 (Visualization)",
+                "b": "Level 1 (Analysis)",
+                "c": "Level 2 (Relationship)",
+                "d": "Level 3 (Deduction)"
+            }
+        },
+        {
+            "q_no": "Q116",
+            "part": "D",
+            "subject": "Mathematics",
+            "question": "Match the following in List I with those in List II: List-I: (a) Galileo, (b) Bacon, (c) Aristotle, (d) Locke. List-II: (i) Mathematics is the gateway and key to all sciences, (ii) Mathematics is the language in which God has written the universe, (iii) Mathematics is a way to settle in the mind of children a habit of reasoning, (iv) Mathematics is the science of quantity.",
+            "question_bn": "I নং তালিকায় প্রদত্ত বিষয়গুলির সঙ্গে II নং তালিকায় উল্লিখিত বিষয়গুলির মিল খুঁজে সঠিক কোডটিকে বেছে নিন।",
+            "options": {
+                "a": "(a)-(ii), (b)-(i), (c)-(iv), (d)-(iii)",
+                "b": "(a)-(i), (b)-(iii), (c)-(iv), (d)-(ii)",
+                "c": "(a)-(ii), (b)-(i), (c)-(iii), (d)-(iv)",
+                "d": "(a)-(iii), (b)-(i), (c)-(ii), (d)-(iv)"
+            }
+        },
+        {
+            "q_no": "Q117",
+            "part": "D",
+            "subject": "Mathematics",
+            "question": "What is the correct sequence a teacher needs to follow to explain the concept of a 'Quarter' (¼) in class III?",
+            "question_bn": "তৃতীয় শ্রেণিতে 'এক-চতুর্থাংশের' (¼) ধারণা ব্যাখ্যার জন্য একজন শিক্ষক কোন্ ক্রমটি অনুসরণ করবেন?",
+            "options": {
+                "a": "(iii) → (ii) → (i)",
+                "b": "(ii) → (i) → (iii)",
+                "c": "(i) → (iii) → (ii)",
+                "d": "(ii) → (iii) → (i)"
+            }
+        },
+        {
+            "q_no": "Q118",
+            "part": "D",
+            "subject": "Mathematics",
+            "question": "Following are some questions asked by the teacher in the mathematics classroom: (I) What is the area of the rectangle whose one side is 5 cm. and perimeter is 30 cm.? (II) Find a set of numbers whose mean is 5. (III) List all prime numbers between 0 and 20. (IV) Tell me the mathematical information you know about rectangles. Which of the following is correct?",
+            "question_bn": "গণিত শ্রেণিকক্ষে শিক্ষিকা/শিক্ষক দ্বারা জিজ্ঞাসিত কিছু প্রশ্ন নীচে প্রদত্ত হল।",
+            "options": {
+                "a": "(I), (II) and (III) are close ended and (IV) is open ended question",
+                "b": "(I) is close ended and (II), (III) and (IV) are open ended questions",
+                "c": "(I) and (III) are close ended and (II) and (IV) are open ended questions",
+                "d": "(I) and (II) are close ended and (III) and (IV) are open ended questions"
+            }
+        },
+        {
+            "q_no": "Q119",
+            "part": "D",
+            "subject": "Mathematics",
+            "question": "In the following pattern: 11, 9, 15, 7, 25, 21 / 40, 176, ? — the missing term is—",
+            "question_bn": "নিম্নলিখিত প্যাটার্নে অনুপস্থিত পদটি হয়—",
+            "options": {
+                "a": "210",
+                "b": "184",
+                "c": "425",
+                "d": "241"
+            }
+        },
+        {
+            "q_no": "Q120",
+            "part": "D",
+            "subject": "Mathematics",
+            "question": "A wire is to be sold in multiple of 1 metre. A person needs some pieces of 85 cm. The minimum length of wire when loss is minimum is—",
+            "question_bn": "একটি তার 1 মিটারের গুণিতকে বিক্রি করা হয়। একজন ব্যক্তি 85 সেমি. দৈর্ঘ্যের কিছুটুকরো প্রয়োজন। যখন ক্ষতি সর্বনিম্ন, তারের ক্ষুদ্রতম দৈর্ঘ্য হয়—",
+            "options": {
+                "a": "17 m",
+                "b": "1 m",
+                "c": "8.5 m",
+                "d": "85 m"
+            }
+        },
+        {
+            "q_no": "Q121",
+            "part": "E",
+            "subject": "Environmental Studies",
+            "question": "Air pollution resulting from volcanic eruption can be detected by measuring which one of the following compounds?",
+            "question_bn": "নিম্নলিখিত কোন যৌগিক পদার্থটির পরিমাপের মাধ্যমে আগ্নেয়গিরির কারণে হওয়া বায়ুদূষণ শনাক্ত করা যায়?",
+            "options": {
+                "a": "Sulphur dioxide",
+                "b": "Strontium oxide",
+                "c": "Scandium oxide",
+                "d": "Stannic oxide"
+            }
+        },
+        {
+            "q_no": "Q122",
+            "part": "E",
+            "subject": "Environmental Studies",
+            "question": "Identify the incorrect statement regarding microplastic—",
+            "question_bn": "মাইক্রোপ্লাস্টিক সম্পর্কিত যে বক্তব্যটি সঠিক নয় সেটি চিহ্নিত করুন—",
+            "options": {
+                "a": "Microplastics have been detected in human blood",
+                "b": "Polyethylene (PE) present in toothpaste and polyethylene terephthalate (PET) present in lipgloss are examples of microplastics",
+                "c": "Microplastics can be bio-accumulated along the food chain",
+                "d": "Microplastics are easily bio-degradable substances"
+            }
+        },
+        {
+            "q_no": "Q123",
+            "part": "E",
+            "subject": "Environmental Studies",
+            "question": "Which one of the following environmental issues does the book 'Silent Spring' written by Rachel Carson describe?",
+            "question_bn": "র্যাচেল কারসন লিখিত 'সাইলেন্ট স্প্রিং' নামক বইতে নিম্নোক্ত কোন পরিবেশগত সমস্যাটি বর্ণিত হয়েছে?",
+            "options": {
+                "a": "Global warming",
+                "b": "Harmful effects of pesticides",
+                "c": "Noise pollution",
+                "d": "Air pollution"
+            }
+        },
+        {
+            "q_no": "Q124",
+            "part": "E",
+            "subject": "Environmental Studies",
+            "question": "In which of the following years 21st CoP (Conference of Parties) Climate Change Conference was held in Paris (France)?",
+            "question_bn": "নিম্নলিখিত কোন বছরে 21তম 'কপ' (কনফারেন্স অফ পার্টিস) জলবায়ু পরিবর্তন সম্মেলন প্যারিসে (ফ্রান্স) অনুষ্ঠিত হয়েছিল?",
+            "options": {
+                "a": "2015",
+                "b": "2014",
+                "c": "2021",
+                "d": "2009"
+            }
+        },
+        {
+            "q_no": "Q125",
+            "part": "E",
+            "subject": "Environmental Studies",
+            "question": "Hydroponics is the technique of growing plants in which one of the following conditions?",
+            "question_bn": "নিম্নোক্ত অবস্থাগুলির মধ্যে কোনটি হাইড্রোপনিকস পদ্ধতিতে উদ্ভিদ বৃদ্ধির জন্য ব্যবহৃত হয়?",
+            "options": {
+                "a": "Nutrient-less condition",
+                "b": "Air-less condition",
+                "c": "Soil-less condition",
+                "d": "Water-less condition"
+            }
+        },
+        {
+            "q_no": "Q126",
+            "part": "E",
+            "subject": "Environmental Studies",
+            "question": "Identify the least harmful direct threat for marine ecosystem—",
+            "question_bn": "সামুদ্রিক বাস্তুতন্ত্রের জন্য সবচেয়ে কম ক্ষতিকারক প্রত্যক্ষ বিপর্যয়টিকে চিহ্নিত করুন—",
+            "options": {
+                "a": "Changes in air quality index",
+                "b": "Oil spill (sea surface)",
+                "c": "Microplastic pollution",
+                "d": "Rise in ocean temperature"
+            }
+        },
+        {
+            "q_no": "Q127",
+            "part": "E",
+            "subject": "Environmental Studies",
+            "question": "Which one of the following toxins produces red tides mediated Paralytic Shellfish Poisoning (PSP) in humans?",
+            "question_bn": "নিম্নলিখিত টক্সিনগুলির মধ্যে কোনটি মানুষের শরীরে রেড টাইডস-এর মাধ্যমে 'প্যারালাইটিক শেলফিশ বিষক্রিয়া' (পি.এস.পি.) সৃষ্টি করে?",
+            "options": {
+                "a": "Saxitoxin",
+                "b": "Aflatoxin",
+                "c": "Bungarotoxin",
+                "d": "Botulinum toxin"
+            }
+        },
+        {
+            "q_no": "Q128",
+            "part": "E",
+            "subject": "Environmental Studies",
+            "question": "What was India's per capita electricity consumption in 2021-2022 financial year?",
+            "question_bn": "2021-2022 আর্থিক বছরে ভারতের জনপ্রতি (পার ক্যাপিটা) ব্যবহৃত বিদ্যুতের পরিমাণ কত ছিল?",
+            "options": {
+                "a": "800 kWh",
+                "b": "555 kWh",
+                "c": "950 kWh",
+                "d": "1255 kWh"
+            }
+        },
+        {
+            "q_no": "Q129",
+            "part": "E",
+            "subject": "Environmental Studies",
+            "question": "Identify the scenario not directly causing ongoing anthropogenic loss of species diversity denoted as the 'sixth mass extinction'—",
+            "question_bn": "মানবজাতির কার্যকলাপের ফলে সৃষ্ট জীব প্রজাতির বৈচিত্র্যের হ্রাসপ্রাপ্তির অবিরত ঘটনা যা 'ষষ্ঠ গণজৈব বিলুপ্তি' বলে পরিচিত, তা যে ঘটনার প্রত্যক্ষ প্রভাবের ফলে ঘটে না, সেটি চিহ্নিত করুন—",
+            "options": {
+                "a": "Pollution caused by harmful chemicals",
+                "b": "Global warming",
+                "c": "Reduced natality rate of species",
+                "d": "Loss of natural habitat"
+            }
+        },
+        {
+            "q_no": "Q130",
+            "part": "E",
+            "subject": "Environmental Studies",
+            "question": "Which of the following animals is a benthic invertebrate?",
+            "question_bn": "নিম্নোক্ত প্রাণীগুলির মধ্যে কোনটি বেনথিক অমেরুদণ্ডী প্রাণী?",
+            "options": {
+                "a": "Small shark",
+                "b": "Sea anemone",
+                "c": "Flatfish",
+                "d": "Sea horse"
+            }
+        },
+        {
+            "q_no": "Q131",
+            "part": "E",
+            "subject": "Environmental Studies",
+            "question": "How much carbon dioxide gas is released into the atmosphere to produce 1 (one) unit electricity from coal?",
+            "question_bn": "কয়লা থেকে 1 (এক) ইউনিট বিদ্যুৎ উৎপাদন করতে কত পরিমাণ কার্বন ডাইঅক্সাইড গ্যাস বায়ুমণ্ডলে নিঃসৃত হয়?",
+            "options": {
+                "a": "0.91 – 0.95 pound",
+                "b": "2 – 3 pound",
+                "c": "0.01 – 0.02 pound",
+                "d": "8 – 10 pound"
+            }
+        },
+        {
+            "q_no": "Q132",
+            "part": "E",
+            "subject": "Environmental Studies",
+            "question": "Carbon monoxide (CO) is— (i) a greenhouse gas, (ii) a polycyclic aromatic hydrocarbon, (iii) a component in determining Air Quality Index (AQI), (iv) a Volatile Organic Compound (VOC). Choose the correct answer—",
+            "question_bn": "কার্বন মনোক্সাইড (CO) হল— (i) একটি গ্রিনহাউস গ্যাস, (ii) একটি পলিসাইক্লিক অ্যারোমেটিক হাইড্রোকার্বন, (iii) এয়ার কোয়ালিটি ইনডেক্স (AQI) স্থির করার একটি উপাদান, (iv) একটি উদ্বায়ী জৈব যৌগ (VOC)।",
+            "options": {
+                "a": "(i), (ii) and (iii)",
+                "b": "(i), (iii) and (iv)",
+                "c": "(iii) only",
+                "d": "(ii), (iii) and (iv)"
+            }
+        },
+        {
+            "q_no": "Q133",
+            "part": "E",
+            "subject": "Environmental Studies",
+            "question": "Which of the following chemicals can be considered as 'green solvent'?",
+            "question_bn": "নিম্নোক্ত রাসায়নিকগুলির মধ্যে কোন রাসায়নিকটিকে 'সবুজ দ্রাবক' হিসাবে বিবেচনা করা যেতে পারে?",
+            "options": {
+                "a": "Chlorofluorocarbons",
+                "b": "Benzene",
+                "c": "Anthracene",
+                "d": "Supercritical carbon dioxide"
+            }
+        },
+        {
+            "q_no": "Q134",
+            "part": "E",
+            "subject": "Environmental Studies",
+            "question": "In which of the following phases, surface water temperature phenomenon of ENSO (El-Niño Southern Oscillation) of equatorial Pacific Ocean is called El-Niño phase?",
+            "question_bn": "নিরক্ষীয় (বিষুবীয়) প্রশান্ত মহাসাগরে সংঘটিত 'এনসো' (এল-নিনো সাদার্ন অসিলেশান) ঘটনার পৃষ্ঠীয় জলের তাপমাত্রার নিম্নলিখিত কোন পর্যায়কে 'এল-নিনো' পর্যায় বলা হয়?",
+            "options": {
+                "a": "Cold phase",
+                "b": "Normal phase",
+                "c": "Warm phase",
+                "d": "Freezing phase"
+            }
+        },
+        {
+            "q_no": "Q135",
+            "part": "E",
+            "subject": "Environmental Studies",
+            "question": "Which one of the following arrangements removes organic matter from wastewater?",
+            "question_bn": "নিম্নোক্ত ব্যবস্থাপনাগুলির কোনটি বর্জ্যজল থেকে জৈবপদার্থ অপসারণ করে?",
+            "options": {
+                "a": "Trickling filters",
+                "b": "Settling tanks",
+                "c": "Carbon filters",
+                "d": "Reverse osmosis"
+            }
+        },
+        {
+            "q_no": "Q136",
+            "part": "E",
+            "subject": "Environmental Studies",
+            "question": "Which of the following chemical compounds is responsible for ozone hole formation in polar regions (Stratosphere)?",
+            "question_bn": "নিম্নোক্ত রাসায়নিক যৌগগুলির মধ্যে কোনটি মেরু অঞ্চলে (স্ট্র্যাটোস্ফিয়ারে) 'ওজোন হোল' সৃষ্টির জন্য দায়ী?",
+            "options": {
+                "a": "Ethane",
+                "b": "Chlorpyrifos",
+                "c": "Propane",
+                "d": "Chlorine nitrate"
+            }
+        },
+        {
+            "q_no": "Q137",
+            "part": "E",
+            "subject": "Environmental Studies",
+            "question": "Being an EVS teacher your intention is to familiarise rocks and minerals to your learners. Now one inquisitive learner asks you what element is present in most of the rocks and minerals? The teacher's probable response will be—",
+            "question_bn": "একজন পরিবেশবিদ্যার শিক্ষিকা/শিক্ষক হিসেবে আপনি শিলা ও খনিজ-এর সঙ্গে শিক্ষার্থীদের পরিচয় ঘটাতে চান। এখন একজন অনুসন্ধিৎসু শিক্ষার্থী আপনাকে প্রশ্ন করল যে অধিকাংশ শিলা ও শিলাতে কোন্ মৌলটি পাওয়া যায়?",
+            "options": {
+                "a": "Aluminium",
+                "b": "Hydrogen",
+                "c": "Carbon",
+                "d": "Silicon"
+            }
+        },
+        {
+            "q_no": "Q138",
+            "part": "E",
+            "subject": "Environmental Studies",
+            "question": "The loose material produced during weathering of rocks may become consolidated, this process is known as—",
+            "question_bn": "শিলার আবহবিকারে সৃষ্ট আলগা উপাদানগুলি যে প্রণালীতে একীভূত হয় সেই প্রণালীটিকে বলা হয়—",
+            "options": {
+                "a": "lithification",
+                "b": "nitrification",
+                "c": "sedimentation",
+                "d": "humus formation"
+            }
+        },
+        {
+            "q_no": "Q139",
+            "part": "E",
+            "subject": "Environmental Studies",
+            "question": "Which one of the following is an anadromous fish?",
+            "question_bn": "নিচে উল্লিখিত মাছগুলির মধ্যে কোনটি আ্যানাড্রোমাস মাছ?",
+            "options": {
+                "a": "Cyprinus",
+                "b": "Hilsa",
+                "c": "Rohu",
+                "d": "Eels"
+            }
+        },
+        {
+            "q_no": "Q140",
+            "part": "E",
+            "subject": "Environmental Studies",
+            "question": "Which of the following animals is a detritus feeder?",
+            "question_bn": "নিম্নোক্ত প্রাণীগুলির মধ্যে কোন্ প্রাণীটি ডেট্রিটাস ফিডার (বা ডেট্রিটাস ভোজী)?",
+            "options": {
+                "a": "Rabbit",
+                "b": "Lion",
+                "c": "Pigeon",
+                "d": "Vulture"
+            }
+        },
+        {
+            "q_no": "Q141",
+            "part": "E",
+            "subject": "Environmental Studies",
+            "question": "During online classes, how will an EVS teacher be able to appropriately teach visually challenged students? (i) By sharing voice messages, (ii) Using lots of oral explanation, (iii) By peer explanation, (iv) Using concrete experience",
+            "question_bn": "দৃষ্টিগতভাবে সমস্যাগ্রস্ত কোনো শিক্ষার্থীদের অনলাইন ক্লাস নেওয়ার সময় একজন পরিবেশবিদ্যার শিক্ষিকা/শিক্ষক কোন্ কোন্ যথাযথ পদ্ধতি ব্যবহার করবেন?",
+            "options": {
+                "a": "(i), (ii) and (iii)",
+                "b": "(ii), (iii) and (iv)",
+                "c": "(i), (iii) and (iv)",
+                "d": "(i), (ii), (iii) and (iv)"
+            }
+        },
+        {
+            "q_no": "Q142",
+            "part": "E",
+            "subject": "Environmental Studies",
+            "question": "Identify the scenario not associated with algal bloom—",
+            "question_bn": "শৈবাল রুম (শৈবালের সংখ্যার অতিবৃদ্ধি)-এর সঙ্গে সম্পর্কিত নয় যে ঘটনাটি, সেটি চিহ্নিত করুন—",
+            "options": {
+                "a": "Death of fish",
+                "b": "Release of algal toxin",
+                "c": "Change of ocean current",
+                "d": "Depletion of oxygen"
+            }
+        },
+        {
+            "q_no": "Q143",
+            "part": "E",
+            "subject": "Environmental Studies",
+            "question": "Which of the following statements is correct?",
+            "question_bn": "নীচের বিবৃতিগুলির মধ্যে কোনটি সঠিক?",
+            "options": {
+                "a": "Migration of animals is not related to environmental temperature",
+                "b": "Migration of animals is related to aggregation for reproductive purpose",
+                "c": "Migration of animals is related with abundance of oxygen",
+                "d": "Migration of animals is related to proving which animal runs at what speed"
+            }
+        },
+        {
+            "q_no": "Q144",
+            "part": "E",
+            "subject": "Environmental Studies",
+            "question": "A teacher is demonstrating different types of bone joints to her/his learners with the help of a skeleton. Now she/he points out the ball and socket joints at different anatomical regions of the body. Identify the anatomical regions—",
+            "question_bn": "একজন পরিবেশবিদ্যার শিক্ষিকা/শিক্ষক একটি কঙ্কালের সাহায্যে তাঁর শিক্ষার্থীদের বিভিন্ন ধরনের অস্থিসন্ধির ধারণা দিচ্ছেন। এখন তিনি দেহের বিভিন্ন শারীরস্থানিক অংশে বল ও সকেট অস্থিসন্ধি নির্দেশ করলেন। শারীরস্থানিক অংশসমূহ শনাক্ত করুন—",
+            "options": {
+                "a": "Knee and Elbow",
+                "b": "Ankle and Wrist",
+                "c": "Skull and Vertebral Column",
+                "d": "Hip and Shoulder"
+            }
+        },
+        {
+            "q_no": "Q145",
+            "part": "E",
+            "subject": "Environmental Studies",
+            "question": "Animals and plants that contain genes introduced from other species are known as—",
+            "question_bn": "ভিন্ন প্রজাতি থেকে প্রবর্তিত 'জিন' ধারণকারী প্রাণী এবং উদ্ভিদকে বলা হয়—",
+            "options": {
+                "a": "hybrid",
+                "b": "transgenic",
+                "c": "plasmid",
+                "d": "semi-hybrid"
+            }
+        },
+        {
+            "q_no": "Q146",
+            "part": "E",
+            "subject": "Environmental Studies",
+            "question": "Assertion (A): At the primary level, EVS has themes instead of topics. Reason (R): Theme-based EVS learning diffuses subject barrier and promotes integrated approach which is easy for teachers and learners as compared to topics.",
+            "question_bn": "বিবৃতি (A): প্রাথমিক স্তরে পরিবেশবিদ্যায় বিষয়-এর পরিবর্তে ভাবমূল সন্নিবেশিত হয়েছে। যুক্তি (R): ভাবমূলনির্ভর পরিবেশবিদ্যা শিখন বিষয়ভিত্তিক বাধাধনকে অতিক্রম করতে এবং সমন্বয়ী ধারণাকে এগিয়ে নিয়ে যেতে সাহায্য করে এবং সমন্বয়ী ধারণাকে এগিয়ে নিয়ে যেতে সাহায্য করে যা বিষয়ের সাপেক্ষে শিক্ষিকা/শিক্ষক এবং শিক্ষার্থীদের কাছে সহজতর হয়।",
+            "options": {
+                "a": "(A) is false, but (R) is true",
+                "b": "Both (A) and (R) are true and (R) is the correct explanation of (A)",
+                "c": "Both (A) and (R) are true, but (R) is not the correct explanation of (A)",
+                "d": "(A) is true, but (R) is false"
+            }
+        },
+        {
+            "q_no": "Q147",
+            "part": "E",
+            "subject": "Environmental Studies",
+            "question": "Being an EVS teacher you have organised a field trip in some regions of Sundaland Biodiversity Hotspot and discussed about endangered flora and fauna. Now students interacted among themselves and reduced their learning gaps. Which of the following is true regarding Sundaland Hotspot? (Table with Geographical Area, Flora, Fauna options)",
+            "question_bn": "পরিবেশবিদ্যার শিক্ষিকা/শিক্ষক হিসেবে আপনি সুন্দাল্যান্ড জীববৈচিত্র্য হটস্পটের কোনো একটি অঞ্চলে একটি ক্ষেত্র-ভ্রমণ সংগঠিত করলেন।",
+            "options": {
+                "a": "Mizoram / Orchid / Irrawaddy Dolphin",
+                "b": "Sikkim / Rhododendron / Red Panda",
+                "c": "Tamil Nadu / Cardamom / Lion-Tailed Macaque",
+                "d": "Nicobar Islands / Rafflesia / Orangutan"
+            }
+        },
+        {
+            "q_no": "Q148",
+            "part": "E",
+            "subject": "Environmental Studies",
+            "question": "Which of the two following brain centres act as Global Positioning System (GPS) in humans?",
+            "question_bn": "নিম্নোক্ত কোন দুটি মস্তিষ্ককেন্দ্র মানুষের গ্লোবাল পজিশনিং সিস্টেম (জিপিএস) হিসাবে কাজ করে?",
+            "options": {
+                "a": "Hippocampus and Entorhinal Cortex",
+                "b": "Pons and Medulla",
+                "c": "Occipital lobe and Parietal lobe",
+                "d": "Frontal lobe and Cerebellum"
+            }
+        },
+        {
+            "q_no": "Q149",
+            "part": "E",
+            "subject": "Environmental Studies",
+            "question": "Being an EVS teacher you have organised a debate regarding causes for endangeredness of different animal species. The most appropriate sequence for causes behind depletion of Royal Bengal Tiger, One-horned Rhinoceros, Gangetic Dolphin, Sarpagandha and Polar Bear is—",
+            "question_bn": "একজন পরিবেশবিদ্যার শিক্ষিকা/শিক্ষকরূপে আপনি বিভিন্ন প্রাণী প্রজাতির বিপন্নতার কারণ নিয়ে একটি বিতর্কসভার আয়োজন করলেন। রয়্যাল বেঙ্গল টাইগার, একশৃঙ্গ গণ্ডার, গাঙ্গেটিক ডলফিন, সর্পগন্ধা ও মেরুভল্লুকের পপুলেশনের সংখ্যাহ্রাসের নির্দিষ্ট কারণ জানা গেল। নীচের কোন্ অনুক্রমটি সর্বাধিক প্রয্যোজ্য?",
+            "options": {
+                "a": "Climate change and global warming, Poaching, Habitat destruction, Over-exploitation, Pollution",
+                "b": "Pollution, Over-exploitation, Climate change and global warming, Habitat destruction, Poaching",
+                "c": "Over-exploitation, Habitat destruction, Poaching, Pollution, Climate change and global warming",
+                "d": "Habitat destruction, Poaching, Pollution, Over-exploitation, Climate change and global warming"
+            }
+        },
+        {
+            "q_no": "Q150",
+            "part": "E",
+            "subject": "Environmental Studies",
+            "question": "Which of the following is the first Biosphere Reserve in India?",
+            "question_bn": "নিম্নোক্ত কোনটি ভারতের প্রথম বায়োস্ফিয়ার রিজার্ভ?",
+            "options": {
+                "a": "Sundarban Biosphere Reserve",
+                "b": "Great Nicobar Biosphere Reserve",
+                "c": "Nilgiri Biosphere Reserve",
+                "d": "Panna Biosphere Reserve"
+            }
+        }
+    ]
+}
