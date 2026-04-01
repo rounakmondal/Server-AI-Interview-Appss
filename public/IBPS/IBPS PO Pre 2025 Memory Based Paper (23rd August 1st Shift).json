@@ -1,0 +1,95 @@
+{
+    "subject": "IBPS PO Pre 2025 Memory Based Paper (23rd August 1st Shift)",
+    "total_questions": 100,
+    "message": "Generated questions based on the uploaded IBPS PO Pre 2025 PDF using the requested JSON format.",
+    "questions": [
+        {
+            "q_no": "Q1",
+            "question": "How many persons sit between E and G?",
+            "options": {
+                "a": "One",
+                "b": "Two",
+                "c": "Three",
+                "d": "Four",
+                "e": "More than four"
+            }
+        },
+        {
+            "q_no": "Q2",
+            "question": "Who among the following sits third to the left of G?",
+            "options": {
+                "a": "B",
+                "b": "E",
+                "c": "A",
+                "d": "C",
+                "e": "D"
+            }
+        },
+        {
+            "q_no": "Q3",
+            "question": "How many persons sit in the row?",
+            "options": {
+                "a": "9",
+                "b": "13",
+                "c": "12",
+                "d": "None of the given options",
+                "e": "10"
+            }
+        },
+        {
+            "q_no": "Q4",
+            "question": "How many meaningful words can be formed from the 3rd, 5th, 8th and 12th letter from the left end of the word FERMENTATION?",
+            "options": {
+                "a": "One",
+                "b": "Two",
+                "c": "Three",
+                "d": "@ (None)",
+                "e": "More than three"
+            }
+        },
+        {
+            "q_no": "Q31",
+            "question": "Which of the following is correct according to the passage regarding small enterprises like local kirana stores?",
+            "options": {
+                "a": "They have gained significantly from the rise in smartphone use.",
+                "b": "They remain in a digital vacuum for 'near and now' inventory.",
+                "c": "They are the primary beneficiaries of the online revolution.",
+                "d": "They have easily adapted to numerous online platforms.",
+                "e": "None of these"
+            }
+        },
+        {
+            "q_no": "Q66",
+            "question": "What will come in place of the question mark (?) in the following number series? 12, 13, 28, 87, 352, ?",
+            "options": {
+                "a": "1765",
+                "b": "1760",
+                "c": "1755",
+                "d": "1770",
+                "e": "1785"
+            }
+        },
+        {
+            "q_no": "Q81",
+            "question": "Statements: Only a few Home are Office. All Office are Building. Some Building are House. Conclusions: I. Some Home are Building. II. No Office is House.",
+            "options": {
+                "a": "If only conclusion I follows.",
+                "b": "If only conclusion II follows.",
+                "c": "If either conclusion I or II follows.",
+                "d": "If neither conclusion I nor II follows.",
+                "e": "If both conclusions I and II follow."
+            }
+        },
+        {
+            "q_no": "Q91",
+            "question": "The perimeter of a square is equal to the perimeter of a rectangle. If the side of the square is 16 cm and the length of the rectangle is 20 cm, find the area of the rectangle.",
+            "options": {
+                "a": "240 sq. cm",
+                "b": "220 sq. cm",
+                "c": "256 sq. cm",
+                "d": "280 sq. cm",
+                "e": "None of these"
+            }
+        }
+    ]
+}

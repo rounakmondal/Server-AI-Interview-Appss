@@ -1,0 +1,118 @@
+{
+    "subject": "IBPS PO Prelims Memory Based 2024",
+    "total_available": 100,
+    "total_recommended": 85,
+    "message": "Extracted questions from IBPS PO Prelims Memory Based 2024 PDF content.",
+    "questions": [
+        {
+            "q_no": "Q1",
+            "question": "Who among the following sits second to the right of E?",
+            "options": {
+                "a": "A",
+                "b": "D",
+                "c": "C",
+                "d": "F",
+                "e": "G"
+            }
+        },
+        {
+            "q_no": "Q2",
+            "question": "Which among the following pair of persons faces the same direction?",
+            "options": {
+                "a": "G and C",
+                "b": "A and E",
+                "c": "E and D",
+                "d": "C and F",
+                "e": "None of these"
+            }
+        },
+        {
+            "q_no": "Q3",
+            "question": "How many persons sit between B and F (counting clockwise from F)?",
+            "options": {
+                "a": "One",
+                "b": "Three",
+                "c": "Four",
+                "d": "Two",
+                "e": "None"
+            }
+        },
+        {
+            "q_no": "Q4",
+            "question": "Four of the following five persons are alike in a certain way based on their seating arrangement. Find the odd one.",
+            "options": {
+                "a": "F",
+                "b": "C",
+                "c": "B",
+                "d": "D",
+                "e": "A"
+            }
+        },
+        {
+            "q_no": "Q10",
+            "question": "Who among the following was born in 1967?",
+            "options": {
+                "a": "N",
+                "b": "P",
+                "c": "M",
+                "d": "O",
+                "e": "K"
+            }
+        },
+        {
+            "q_no": "Q11",
+            "question": "What is age difference between M and Q?",
+            "options": {
+                "a": "25 years",
+                "b": "24 years",
+                "c": "23 years",
+                "d": "30 years",
+                "e": "20 years"
+            }
+        },
+        {
+            "q_no": "Q15",
+            "question": "What is the code for 'same'?",
+            "options": {
+                "a": "uh",
+                "b": "ut",
+                "c": "um",
+                "d": "ub",
+                "e": "ud"
+            }
+        },
+        {
+            "q_no": "Q20",
+            "question": "Who among the following likes Guava?",
+            "options": {
+                "a": "A",
+                "b": "D",
+                "c": "C",
+                "d": "F",
+                "e": "None of these"
+            }
+        },
+        {
+            "q_no": "Q31",
+            "question": "In the word 'ORGANIZE', how many pairs of the letters have the same number of letters between them (both forward and backward direction) in the word as in the alphabet?",
+            "options": {
+                "a": "Four",
+                "b": "Two",
+                "c": "One",
+                "d": "Three",
+                "e": "More than four"
+            }
+        },
+        {
+            "q_no": "Q39",
+            "question": "Which of the following words has the similar meaning as 'lay' (as used in the passage)?",
+            "options": {
+                "a": "Establish",
+                "b": "Cover",
+                "c": "Remove",
+                "d": "Complicate",
+                "e": "Dismiss"
+            }
+        }
+    ]
+}

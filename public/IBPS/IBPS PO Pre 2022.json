@@ -1,0 +1,85 @@
+{
+    "subject": "IBPS PO Pre 2022",
+    "total_available": 100,
+    "total_recommended": 80,
+    "message": "Generated structured questions based on the provided mock paper for IBPS PO Pre 2022[cite: 1].",
+    "questions": [
+        {
+            "q_no": "Q1",
+            "question": "Why do experts believe that India is doing away with its culture of temperance? [cite: 20]",
+            "options": {
+                "a": "Due to infringement of law which prohibits juveniles from selling and consuming alcohol",
+                "b": "Because women are also becoming habituate of intoxication nowadays",
+                "c": "Because almost every second drunkard in India is indulged in excessive drinking",
+                "d": "As it is evident that mortality rate has been increasing due to alcohol usage",
+                "e": "None of these [cite: 21]"
+            }
+        },
+        {
+            "q_no": "Q2",
+            "question": "What is/are the consequence(s) of the burgeoning numbers of city bars and nightclubs? [cite: 22]",
+            "options": {
+                "a": "Dwellers are deliberately embracing alcohol consumption in their lifestyle",
+                "b": "There is constant fear that teetotalers will also start using alcohol",
+                "c": "There is an increase in ill-health caused by excessive consumption of alcohol",
+                "d": "Both (a) & (c)",
+                "e": "Both (b) & (a) [cite: 23]"
+            }
+        },
+        {
+            "q_no": "Q3",
+            "question": "Why do experts affirm that regulation of sales and the pricing of drinks isn't enough to deter harmful effects? [cite: 24]",
+            "options": {
+                "a": "Even after the formation of alcohol pricing policy, black marketing of alcohol has a strong foothold",
+                "b": "Because the usage of other illegal substances which infuse consumption of alcohol is also increasing",
+                "c": "Curbing excess usage of alcohol is difficult until people themselves want to renounce its use",
+                "d": "The root cause of health issues is proliferation in manufacturing, supplying and promotion of alcohol",
+                "e": "None of these [cite: 25]"
+            }
+        },
+        {
+            "q_no": "Q31",
+            "question": "What is the respective ratio of number of shoes sold of Nike in April and August together to number of Adidas shoes sold in July? [cite: 104]",
+            "options": {
+                "a": "11: 6",
+                "b": "5: 12",
+                "c": "9: 5",
+                "d": "10: 7",
+                "e": "13: 8 [cite: 105]"
+            }
+        },
+        {
+            "q_no": "Q38",
+            "question": "What will come in the place of the question mark (?) in the following number series? 2, 6, 12, 20, 30, 42, ? [cite: 115, 118]",
+            "options": {
+                "a": "56",
+                "b": "60",
+                "c": "52",
+                "d": "44",
+                "e": "63 [cite: 118]"
+            }
+        },
+        {
+            "q_no": "Q50",
+            "question": "A boat takes 9 hours to cover 432 km in downstream and 16 hours to cover 288 km in upstream. Find the time taken by boat to cover 132 km in still water. [cite: 137, 138]",
+            "options": {
+                "a": "4 hours",
+                "b": "3.5 hours",
+                "c": "3 hours",
+                "d": "5 hours",
+                "e": "6 hours [cite: 139]"
+            }
+        },
+        {
+            "q_no": "Q71",
+            "question": "In a certain code language: “Grand village party here” is coded as “three two seven five”. What may be the code for “Village Party” in the given code language? [cite: 193, 194]",
+            "options": {
+                "a": "three five",
+                "b": "seven three",
+                "c": "four three",
+                "d": "five one",
+                "e": "None of these [cite: 195]"
+            }
+        }
+    ]
+}

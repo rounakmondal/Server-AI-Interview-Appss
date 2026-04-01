@@ -1,0 +1,84 @@
+{
+    "subject": "IBPS PO Mains Memory Based 2021",
+    "total_questions": 115,
+    "message": "Generated questions based on the uploaded IBPS PO Mains Memory Based 2021 PDF.",
+    "questions": [
+        {
+            "q_no": "Q1",
+            "question": "What is the experience of V?",
+            "options": {
+                "a": "23yr",
+                "b": "19yr",
+                "c": "15yr",
+                "d": "7yr",
+                "e": "Either 19yr or 7yr"
+            }
+        },
+        {
+            "q_no": "Q2",
+            "question": "Who among the following sits fourth to the left of the one having 7yr experience?",
+            "options": {
+                "a": "V",
+                "b": "A",
+                "c": "E",
+                "d": "D",
+                "e": "None of these"
+            }
+        },
+        {
+            "q_no": "Q6",
+            "question": "How many such pairs of letters are there in the word 'PHYSICAL' each of which has as many letters between them in the word as in the English alphabet?",
+            "options": {
+                "a": "None",
+                "b": "One",
+                "c": "Two",
+                "d": "Three",
+                "e": "More than three"
+            }
+        },
+        {
+            "q_no": "Q21",
+            "question": "What is the direction of point D with respect to point E?",
+            "options": {
+                "a": "North",
+                "b": "South-west",
+                "c": "North-east",
+                "d": "West",
+                "e": "North-west"
+            }
+        },
+        {
+            "q_no": "Q36",
+            "question": "In the following question, a part of the sentence is given in bold. Select the option that can replace the bold part to make the sentence grammatically correct.",
+            "options": {
+                "a": "has been working",
+                "b": "have been worked",
+                "c": "is working",
+                "d": "had worked",
+                "e": "No replacement required"
+            }
+        },
+        {
+            "q_no": "Q71",
+            "question": "A shopkeeper marked an article 40% above its cost price and gave two successive discounts of 10% and 15%. Find the profit or loss percentage.",
+            "options": {
+                "a": "7.1% profit",
+                "b": "7.1% loss",
+                "c": "8.2% profit",
+                "d": "8.2% loss",
+                "e": "None of these"
+            }
+        },
+        {
+            "q_no": "Q111",
+            "question": "Choose the statement that conveys the same meaning as the given sentence regarding global climate policy.",
+            "options": {
+                "a": "Global policies have no impact on local climate.",
+                "b": "India may consider committing to plausible pathways to achieving net zero emissions.",
+                "c": "Climate change is a natural phenomenon that cannot be controlled.",
+                "d": "Net zero emissions are impossible for developing nations.",
+                "e": "None of the above"
+            }
+        }
+    ]
+}

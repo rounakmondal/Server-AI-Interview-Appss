@@ -1,0 +1,84 @@
+{
+    "subject": "IBPS PO Prelims Previous Year Paper 2023",
+    "total_questions": 100,
+    "message": "Generated questions based on the uploaded IBPS PO Prelims 2023 PDF.",
+    "questions": [
+        {
+            "q_no": "Q1",
+            "question": "According to the passage, why did emissions of carbon dioxide and other greenhouse gases plunge in 2020?",
+            "options": {
+                "a": "Due to a permanent shift in industrial policies.",
+                "b": "Because of lockdowns that restricted mobility and economic activity.",
+                "c": "Due to a sudden decrease in the world population.",
+                "d": "Because of a global ban on fossil fuels.",
+                "e": "None of these"
+            }
+        },
+        {
+            "q_no": "Q9",
+            "question": "In the following question, a sentence is given with a phrase highlighted in bold. Which of the phrases should replace it to make the sentence grammatically correct?",
+            "options": {
+                "a": "has been increased",
+                "b": "have climbed significantly",
+                "c": "is climbing significant",
+                "d": "were climb significantly",
+                "e": "No replacement required"
+            }
+        },
+        {
+            "q_no": "Q31",
+            "question": "A certain amount was invested in a scheme at 10% per annum compound interest for 2 years. If the interest earned was Rs. 420, find the principal amount.",
+            "options": {
+                "a": "Rs. 2000",
+                "b": "Rs. 2500",
+                "c": "Rs. 1800",
+                "d": "Rs. 2200",
+                "e": "Rs. 3000"
+            }
+        },
+        {
+            "q_no": "Q36",
+            "question": "What should come in place of the question mark (?) in the following number series? 5, 6, 14, 45, ?, 925",
+            "options": {
+                "a": "184",
+                "b": "180",
+                "c": "190",
+                "d": "175",
+                "e": "160"
+            }
+        },
+        {
+            "q_no": "Q66",
+            "question": "If 'A' sits third to the right of 'B' and 'B' sits at one of the extreme ends, how many people are sitting in the row if the total length is 8 people?",
+            "options": {
+                "a": "5",
+                "b": "6",
+                "c": "7",
+                "d": "8",
+                "e": "Cannot be determined"
+            }
+        },
+        {
+            "q_no": "Q81",
+            "question": "What is the shortest distance between Point G and Point F according to the given directions?",
+            "options": {
+                "a": "15m",
+                "b": "18m",
+                "c": "20m",
+                "d": "25m",
+                "e": "12m"
+            }
+        },
+        {
+            "q_no": "Q84",
+            "question": "The person who travels to Assam travels in which of the following months?",
+            "options": {
+                "a": "May",
+                "b": "June",
+                "c": "July",
+                "d": "August",
+                "e": "September"
+            }
+        }
+    ]
+}

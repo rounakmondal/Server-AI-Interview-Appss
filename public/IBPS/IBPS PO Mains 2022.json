@@ -1,0 +1,85 @@
+{
+    "subject": "IBPS PO Mains 2022",
+    "total_available": 115,
+    "total_recommended": 42,
+    "message": "Generated questions based on IBPS PO Mains Previous Year Paper 2022 reference sample.",
+    "questions": [
+        {
+            "q_no": "Q1",
+            "question": "How many persons are senior to V?",
+            "options": {
+                "a": "Three",
+                "b": "Five",
+                "c": "Four",
+                "d": "Six",
+                "e": "None of these"
+            }
+        },
+        {
+            "q_no": "Q2",
+            "question": "How many persons are transfer to Legal department?",
+            "options": {
+                "a": "Eight",
+                "b": "Seven",
+                "c": "Five",
+                "d": "Three",
+                "e": "None of these"
+            }
+        },
+        {
+            "q_no": "Q4",
+            "question": "Who among the following person/s is/are designated as Manager?",
+            "options": {
+                "a": "Q, P, W",
+                "b": "M, E, H",
+                "c": "G, O, Y",
+                "d": "E, H, B",
+                "e": "L, M, Z"
+            }
+        },
+        {
+            "q_no": "Q6",
+            "question": "What is the code for 'Press'?",
+            "options": {
+                "a": "&#?",
+                "b": "&@?",
+                "c": "$#+",
+                "d": "&@+",
+                "e": "None of these"
+            }
+        },
+        {
+            "q_no": "Q7",
+            "question": "What is the code for 'Blue'?",
+            "options": {
+                "a": "$@?",
+                "b": "&@+",
+                "c": "^#+",
+                "d": "^@+",
+                "e": "None of these"
+            }
+        },
+        {
+            "q_no": "Q13",
+            "question": "What is the shortest distance between point 1 and point 6?",
+            "options": {
+                "a": "28km",
+                "b": "20km",
+                "c": "24km",
+                "d": "32km",
+                "e": "None of these"
+            }
+        },
+        {
+            "q_no": "Q41",
+            "question": "Who among the following speaks Punjabi?",
+            "options": {
+                "a": "A",
+                "b": "E",
+                "c": "B",
+                "d": "H",
+                "e": "None of these"
+            }
+        }
+    ]
+}
