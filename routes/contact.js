@@ -51,14 +51,14 @@ export const handleContact = async (req, res) => {
 
     // Email to site owner
     await transporter.sendMail({
-      from: `"InterviewAI Contact Form" <${process.env.SMTP_USER}>`,
+      from: `"MedhaHub Contact Form" <${process.env.SMTP_USER}>`,
       to: toAddress,
       replyTo: email,
       subject: `[${categoryLabel}] ${subject}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background: #f9fafb; border-radius: 12px;">
           <div style="background: #2F50B7; padding: 20px; border-radius: 8px 8px 0 0; text-align: center;">
-            <h1 style="color: white; margin: 0; font-size: 24px;">InterviewAI</h1>
+            <h1 style="color: white; margin: 0; font-size: 24px;">MedhaHub</h1>
             <p style="color: rgba(255,255,255,0.8); margin: 4px 0 0; font-size: 14px;">New Contact Form Submission</p>
           </div>
           <div style="background: white; padding: 24px; border-radius: 0 0 8px 8px; border: 1px solid #e5e7eb; border-top: none;">
@@ -94,13 +94,13 @@ export const handleContact = async (req, res) => {
 
     // Auto-reply to the sender
     await transporter.sendMail({
-      from: `"InterviewAI" <${process.env.SMTP_USER}>`,
+      from: `"MedhaHub" <${process.env.SMTP_USER}>`,
       to: email,
       subject: `We received your message — ${subject}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background: #f9fafb; border-radius: 12px;">
           <div style="background: #2F50B7; padding: 20px; border-radius: 8px 8px 0 0; text-align: center;">
-            <h1 style="color: white; margin: 0; font-size: 24px;">InterviewAI</h1>
+            <h1 style="color: white; margin: 0; font-size: 24px;">MedhaHub</h1>
             <p style="color: rgba(255,255,255,0.8); margin: 4px 0 0; font-size: 14px;">We got your message!</p>
           </div>
           <div style="background: white; padding: 24px; border-radius: 0 0 8px 8px; border: 1px solid #e5e7eb; border-top: none;">
@@ -123,7 +123,7 @@ export const handleContact = async (req, res) => {
               </a>
             </div>
             <p style="color: #9ca3af; font-size: 13px; text-align: center; margin-top: 24px; border-top: 1px solid #e5e7eb; padding-top: 16px;">
-              © 2026 InterviewAI · <a href="mailto:aiinterview0@gmail.com" style="color: #2F50B7;">aiinterview0@gmail.com</a>
+              © 2026 MedhaHub · <a href="mailto:aiinterview0@gmail.com" style="color: #2F50B7;">aiinterview0@gmail.com</a>
             </p>
           </div>
         </div>

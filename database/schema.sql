@@ -46,7 +46,7 @@ CREATE INDEX IF NOT EXISTS idx_conversations_session ON conversations(session_id
 CREATE INDEX IF NOT EXISTS idx_sessions_status ON sessions(status);
 
 -- ══════════════════════════════════════════════════════════════
--- InterviewSathi Exam Prep Schema
+-- MedhaHub Exam Prep Schema
 -- ══════════════════════════════════════════════════════════════
 
 CREATE TABLE IF NOT EXISTS exams (

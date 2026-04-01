@@ -24,6 +24,7 @@ import examStudyPlanRoutes from './routes/examStudyPlan.js';
 import examAiRoutes        from './routes/examAi.js';
 import syllabusApiRoutes   from './routes/syllabusApi.js';
 import questionsRoutes    from './routes/questions.js';
+import { handleTriggerDailyPost } from './routes/handleTriggerDailyPost.js';
 
 // Load environment variables
 dotenv.config();
@@ -42,6 +43,7 @@ const ALLOWED_ORIGINS = [
     'http://localhost:5000',
     'http://localhost:8080',
     'https://interviewsathi.online',
+    'https://medhahub.in'
 ];
 app.use(cors({
     origin: (origin, callback) => {
@@ -88,6 +90,8 @@ app.use('/api/study', studyRoutes);
 
 // Auth routes
 app.use('/api/auth', authRoutes);
+ app.get("/api/trigger-daily-post", handleTriggerDailyPost);
+
 
 // Contact route
     app.post('/api/contact', handleContact);
@@ -106,7 +110,12 @@ app.use('/api/questions', questionsRoutes);
 
 // Error handling middleware
 app.use((err, req, res, next) => {
+    // Client disconnected before body was fully received — nothing to respond to
+    if (err.code === 'ECONNABORTED' || err.type === 'request.aborted') {
+        return;
+    }
     console.error('Server error:', err);
+    if (res.headersSent) return;
     res.status(err.status || 500).json({
         success: false,
         error: process.env.NODE_ENV === 'production'

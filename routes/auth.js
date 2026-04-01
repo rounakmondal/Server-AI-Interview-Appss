@@ -92,12 +92,12 @@ router.post('/send-otp', async (req, res) => {
 
     const transporter = createTransporter();
     await transporter.sendMail({
-      from: `"InterviewSathi" <${process.env.SMTP_USER}>`,
+      from: `"MedhaHub" <${process.env.SMTP_USER}>`,
       to: email,
-      subject: 'Your OTP for InterviewSathi',
+      subject: 'Your OTP for MedhaHub',
       html: `
         <div style="font-family:Arial,sans-serif;max-width:480px;margin:0 auto;padding:24px;background:#f9fafb;border-radius:12px">
-          <h2 style="color:#2F50B7;text-align:center">InterviewSathi</h2>
+          <h2 style="color:#2F50B7;text-align:center">MedhaHub</h2>
           <p>Your one-time password is:</p>
           <div style="text-align:center;font-size:32px;letter-spacing:8px;font-weight:bold;color:#2F50B7;padding:16px 0">${otp}</div>
           <p style="color:#666;font-size:13px">This code expires in 5 minutes. Do not share it with anyone.</p>
