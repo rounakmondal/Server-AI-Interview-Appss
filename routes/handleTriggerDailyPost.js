@@ -1,5 +1,5 @@
-const fetch = require("node-fetch");
-const cron = require("node-cron");
+import fetch from 'node-fetch';
+import cron from 'node-cron';
 
 const SUBJECTS = ["police", "wbcs", "wbpsc"];
 const POST_URL = "https://recomendengine-1.onrender.com/daily-post";
@@ -121,7 +121,4 @@ const handleTriggerDailyPost = async (req, res) => {
   });
 };
 
-module.exports = {
-  scheduleDailyPosts,
-  handleTriggerDailyPost,
-};
+export { scheduleDailyPosts, handleTriggerDailyPost };
