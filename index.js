@@ -24,6 +24,7 @@ import examStudyPlanRoutes from './routes/examStudyPlan.js';
 import examAiRoutes        from './routes/examAi.js';
 import syllabusApiRoutes   from './routes/syllabusApi.js';
 import questionsRoutes    from './routes/questions.js';
+import amarPlanRoutes     from './routes/amarPlan.js';
 import { handleTriggerDailyPost } from './routes/handleTriggerDailyPost.js';
 
 // Load environment variables
@@ -110,6 +111,9 @@ app.use('/api', syllabusApiRoutes);    // NEW: GET /api/syllabus/:examId, POST /
 
 // Question Hub routes (file listing + file serving)
 app.use('/api/questions', questionsRoutes);
+
+// Amar Plan routes
+app.use('/api', amarPlanRoutes);              // POST /api/plan/create, GET /api/plan/:user_id, etc.
 
 // Error handling middleware
 app.use((err, req, res, next) => {

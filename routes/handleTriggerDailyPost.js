@@ -1,8 +1,60 @@
 import fetch from 'node-fetch';
 import cron from 'node-cron';
+import { getDb } from '../database/db.js';
 
-const SUBJECTS = ["police", "wbcs", "wbpsc"];
+const FALLBACK_SUBJECTS = ["police", "wbcs", "wbpsc"];
 const POST_URL = "https://recomendengine-1.onrender.com/daily-post";
+
+// Map internal exam identifiers → recommendation engine subject names
+const EXAM_TO_SUBJECT = {
+  // amar_plan.exam_type values
+  wbcs:       'wbcs',
+  police_si:  'police',
+  tet:        'tet',
+  group_d:    'group_d',
+  // exams.slug values
+  'wb-police-si':    'police',
+  wbpsc:             'wbpsc',
+  'ssc-cgl':         'ssc',
+  'banking-ibps-sbi':'banking',
+};
+
+/**
+ * Reads the SQLite DB and returns distinct subject names
+ * that students have actually chosen (via amar_plan or user_exam_preferences).
+ * Falls back to FALLBACK_SUBJECTS if the DB is unavailable or empty.
+ */
+function getActiveSubjects() {
+  try {
+    const db = getDb();
+    if (!db) return FALLBACK_SUBJECTS;
+
+    // Collect distinct exam_types from amar_plan
+    const planStmt = db.prepare('SELECT DISTINCT exam_type FROM amar_plan');
+    const examTypes = [];
+    while (planStmt.step()) examTypes.push(planStmt.getAsObject().exam_type);
+    planStmt.free();
+
+    // Collect distinct slugs from user_exam_preferences → exams
+    const prefStmt = db.prepare(
+      'SELECT DISTINCT e.slug FROM user_exam_preferences uep JOIN exams e ON e.id = uep.exam_id'
+    );
+    const slugs = [];
+    while (prefStmt.step()) slugs.push(prefStmt.getAsObject().slug);
+    prefStmt.free();
+
+    const subjects = new Set();
+    for (const key of [...examTypes, ...slugs]) {
+      const mapped = EXAM_TO_SUBJECT[key];
+      if (mapped) subjects.add(mapped);
+    }
+
+    return subjects.size > 0 ? [...subjects] : FALLBACK_SUBJECTS;
+  } catch (err) {
+    console.warn('[DailyPost] Could not read active subjects from DB, using fallback:', err.message);
+    return FALLBACK_SUBJECTS;
+  }
+}
 
 // Set your deployed server URL here (used for self-ping keep-alive)
 const SELF_URL = process.env.RENDER_EXTERNAL_URL || process.env.SELF_URL || "";
@@ -37,18 +89,20 @@ async function postDaily(subject) {
   }
 }
 
-// Post all subjects
+// Post all active subjects
 async function postAllSubjects(label) {
+  const subjects = getActiveSubjects();
+
   console.log(
-    `[DailyPost] ${label} batch starting at ${new Date().toISOString()}`
+    `[DailyPost] ${label} batch starting at ${new Date().toISOString()} — subjects: ${subjects.join(', ')}`
   );
 
   const results = await Promise.allSettled(
-    SUBJECTS.map((s) => postDaily(s))
+    subjects.map((s) => postDaily(s))
   );
 
   return results.map((r, i) => ({
-    subject: SUBJECTS[i],
+    subject: subjects[i],
     ...(r.status === "fulfilled"
       ? r.value
       : { ok: false, error: r.reason.toString() }),

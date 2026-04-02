@@ -170,3 +170,54 @@ CREATE INDEX IF NOT EXISTS idx_ep_ucp_user_chap      ON user_chapter_progress(us
 CREATE INDEX IF NOT EXISTS idx_ep_uta_user_chap      ON user_test_attempts(user_id, chapter_id);
 CREATE INDEX IF NOT EXISTS idx_ep_spa_user_exam      ON study_plans_ai(user_id, exam_id);
 CREATE INDEX IF NOT EXISTS idx_ep_spt_exam           ON study_plan_templates(exam_id);
+
+-- ══════════════════════════════════════════════════════════════
+-- Amar Plan Schema
+-- ══════════════════════════════════════════════════════════════
+
+CREATE TABLE IF NOT EXISTS amar_plan (
+    id            TEXT PRIMARY KEY,
+    user_id       TEXT NOT NULL,
+    exam_type     TEXT NOT NULL,
+    exam_date     TEXT NOT NULL,
+    daily_hours   INTEGER NOT NULL,
+    weak_subjects TEXT DEFAULT '[]',
+    created_at    TEXT DEFAULT (datetime('now')),
+    updated_at    TEXT DEFAULT (datetime('now'))
+);
+
+CREATE TABLE IF NOT EXISTS plan_tasks (
+    id               TEXT PRIMARY KEY,
+    plan_id          TEXT NOT NULL,
+    task_date        TEXT NOT NULL,
+    task_type        TEXT NOT NULL DEFAULT 'topic',
+    subject          TEXT,
+    topic            TEXT,
+    duration_minutes INTEGER,
+    is_completed     INTEGER NOT NULL DEFAULT 0,
+    completed_at     TEXT,
+    is_rescheduled   INTEGER NOT NULL DEFAULT 0,
+    FOREIGN KEY (plan_id) REFERENCES amar_plan(id) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS plan_mock_scores (
+    id          TEXT PRIMARY KEY,
+    plan_id     TEXT NOT NULL,
+    task_id     TEXT,
+    score       INTEGER,
+    total_marks INTEGER,
+    taken_at    TEXT DEFAULT (datetime('now')),
+    FOREIGN KEY (plan_id) REFERENCES amar_plan(id) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS plan_streaks (
+    id               TEXT PRIMARY KEY,
+    plan_id          TEXT NOT NULL UNIQUE,
+    current_streak   INTEGER DEFAULT 0,
+    longest_streak   INTEGER DEFAULT 0,
+    last_active_date TEXT
+);
+
+CREATE INDEX IF NOT EXISTS idx_amar_plan_user       ON amar_plan(user_id);
+CREATE INDEX IF NOT EXISTS idx_plan_tasks_plan_date ON plan_tasks(plan_id, task_date);
+CREATE INDEX IF NOT EXISTS idx_plan_mock_plan       ON plan_mock_scores(plan_id);
