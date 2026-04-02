@@ -36,6 +36,11 @@ const FOLDER_MAP = {
     scanPath: 'WB Primary TET Question',
     pathPrefix: '/WB Primary TET Question',
   },
+  ibps: {
+    displayName: 'IBPS',
+    scanPath: 'IBPS',
+    pathPrefix: '/IBPS',
+  },
 };
 
 const ALLOWED_EXTENSIONS = new Set(['.json', '.pdf']);

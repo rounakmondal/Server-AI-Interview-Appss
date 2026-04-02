@@ -33,6 +33,9 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
 const PORT =8000;
 
+// Trust proxy (nginx/load balancer in production)
+app.set('trust proxy', 1);
+
 // Security middleware
 app.use(helmet({
     crossOriginResourcePolicy: { policy: "cross-origin" }
@@ -42,7 +45,7 @@ app.use(helmet({
 const ALLOWED_ORIGINS = [
     'http://localhost:5000',
     'http://localhost:8080',
-    'https://interviewsathi.online',
+    'https://medhahub.in',
     'https://medhahub.in'
 ];
 app.use(cors({
