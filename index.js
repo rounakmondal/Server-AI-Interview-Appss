@@ -29,6 +29,7 @@ import companyInterviewRoutes from './routes/companyInterview.js';
 import skillMatrixRoutes from './routes/skillMatrix.js';
 import storyRoutes from './routes/story.js';
 import examSyllabusSearchRoutes from './routes/examSyllabusSearch.js';
+import examCalendarRoutes from './routes/examCalendar.js';
 import { handleTriggerDailyPost } from './routes/handleTriggerDailyPost.js';
 
 // Load environment variables
@@ -130,6 +131,9 @@ app.use('/api/story', storyRoutes);  // POST /api/story
 
 // Exam Syllabus Search (AI-powered)
 app.use('/api', examSyllabusSearchRoutes);  // GET /api/exam-syllabus?q=...
+
+// Exam Calendar (static 2026 dates)
+app.use('/api', examCalendarRoutes);  // GET /api/exam-calendar
 
 // Error handling middleware
 app.use((err, req, res, next) => {
