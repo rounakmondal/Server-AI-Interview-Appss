@@ -41,6 +41,11 @@ const FOLDER_MAP = {
     scanPath: 'IBPS',
     pathPrefix: '/IBPS',
   },
+  jtet: {
+    displayName: 'JTET',
+    scanPath: 'JTET',
+    pathPrefix: '/JTET',
+  },
 };
 
 const ALLOWED_EXTENSIONS = new Set(['.json', '.pdf']);
