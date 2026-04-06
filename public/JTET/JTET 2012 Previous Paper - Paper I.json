@@ -1,0 +1,2174 @@
+{
+  "exam": "JTET 2012 Previous Paper - Paper I",
+  "booklet_code": "JBC-12",
+  "total_questions": 150,
+  "parts": [
+    {
+      "part": "I",
+      "subject_en": "Child Development and Pedagogy",
+      "subject_hi": "बाल विकास व शिक्षाशास्त्र",
+      "questions": [
+        {
+          "q_no": 1,
+          "question_en": "When a child 'fails', it means",
+          "question_hi": "जब बच्चा 'फेल' होता है, तो इसका तात्पर्य है कि",
+          "options_en": {
+            "1": "the child has not memorized the answers properly",
+            "2": "the child should have taken private tuition",
+            "3": "the system has failed",
+            "4": "the child is not fit for studies"
+          },
+          "options_hi": {
+            "1": "बच्चे ने उत्तरों को सही तरीके से याद नहीं किया है",
+            "2": "बच्चे को प्राइवेट ट्यूशन लेनी चाहिए थी",
+            "3": "व्यवस्था फेल हुई है",
+            "4": "बच्चा पढ़ाई के लिए योग्य नहीं है"
+          }
+        },
+        {
+          "q_no": 2,
+          "question_en": "The emphasis from teaching to learning can be shifted by",
+          "question_hi": "शिक्षण से अधिगम पर बल देने वाला परिवर्तन हो सकता है",
+          "options_en": {
+            "1": "adopting child-centred pedagogy",
+            "2": "encouraging rote learning",
+            "3": "adopting frontal teaching",
+            "4": "focusing on examination results"
+          },
+          "options_hi": {
+            "1": "बाल-केन्द्रित शिक्षा-पद्धति अपनाकर",
+            "2": "रटने को प्रोत्साहित करके",
+            "3": "अग्र शिक्षण की तकनीक अपनाकर",
+            "4": "परीक्षा परिणामों पर केन्द्रित होकर"
+          }
+        },
+        {
+          "q_no": 3,
+          "question_en": "The most effective method to teach the concept of germination of seeds is",
+          "question_hi": "बीजों का अंकुरण संकल्पना के शिक्षण की सबसे प्रभावी पद्धि है",
+          "options_en": {
+            "1": "to make the students plant seeds and observe stages of germination",
+            "2": "to draw pictures on the black-board and give descriptions",
+            "3": "to show pictures of seed growth",
+            "4": "to give detailed explanations"
+          },
+          "options_hi": {
+            "1": "विद्यार्थियों द्वारा पौधे के बीज बोना और उसके अंकुरण के चरणों का अवलोकन करना",
+            "2": "श्यामपट्ट पर चित्र बनाना और वर्णन करना",
+            "3": "बीज की वृद्धि के चित्र दिखाना",
+            "4": "विस्तृत व्याख्या करना"
+          }
+        },
+        {
+          "q_no": 4,
+          "question_en": "Inclusive Education",
+          "question_hi": "समावेशी शिक्षा",
+          "options_en": {
+            "1": "celebrates diversity in the classroom",
+            "2": "encourages strict admission procedures",
+            "3": "includes indoctrination of facts",
+            "4": "includes teachers from marginalized groups"
+          },
+          "options_hi": {
+            "1": "कक्षा में विविधता का उत्सव मनाती है",
+            "2": "दाखिले सम्बन्धी कठोर प्रक्रियाओं को बढ़ावा देती है",
+            "3": "तथ्यों की शिक्षा (मतारोपण) से सम्बन्धित है",
+            "4": "हाशिऐ पर स्थित वर्गों से शिक्षकों को सम्मिलित करने से सम्बन्धित है"
+          }
+        },
+        {
+          "q_no": 5,
+          "question_en": "Which of the following is an objective question?",
+          "question_hi": "निम्नलिखित में से कौन-सा वस्तुनिष्ठ प्रश्न है?",
+          "options_en": {
+            "1": "Short answer question",
+            "2": "Open ended question",
+            "3": "True or False",
+            "4": "Essay type question"
+          },
+          "options_hi": {
+            "1": "लघुत्तरात्मक प्रश्न",
+            "2": "मुक्त उत्तर वाला प्रश्न",
+            "3": "सत्य या असत्य",
+            "4": "निबंधात्मक प्रश्न"
+          }
+        },
+        {
+          "q_no": 6,
+          "question_en": "Which of the following is a feature of progressive education?",
+          "question_hi": "निम्नलिखित में से कौन-सी प्रगतिशील शिक्षा की विशेषता है?",
+          "options_en": {
+            "1": "Instruction based solely on prescribed text-books",
+            "2": "Emphasis on scoring good marks in examinations",
+            "3": "Frequent tests and examinations",
+            "4": "Flexible time-table and seating arrangement"
+          },
+          "options_hi": {
+            "1": "केवल प्रस्तावित पाठ्य-पुस्तकों पर आधारित अनुदेश",
+            "2": "परीक्षाओं में अच्छे अंक प्राप्त करने पर बल",
+            "3": "बार-बार ली जाने वाली परीक्षाएँ",
+            "4": "समय-सारणी और बैठने की व्यवस्था में लचीलापन"
+          }
+        },
+        {
+          "q_no": 7,
+          "question_en": "A teacher, after preparing a question paper, checks whether the questions test specific testing objectives. He is concerned primarily about the question paper's",
+          "question_hi": "एक शिक्षक प्रश्न-पत्र बनाने के बाद, यह जाँच करता है कि क्या प्रश्न परीक्षण के विशिष्ट उद्देश्यों की परीक्षा ले रहे हैं। वह मुख्य रूप से प्रश्न-पत्र की/के _______ के बारे में चिंतित है।",
+          "options_en": {
+            "1": "content coverage",
+            "2": "typology of questions",
+            "3": "reliability",
+            "4": "validity"
+          },
+          "options_hi": {
+            "1": "संपूर्ण विषय-वस्तु को शामिल करने",
+            "2": "प्रश्नों के प्रकार",
+            "3": "विश्वसनीयता",
+            "4": "वैधता"
+          }
+        },
+        {
+          "q_no": 8,
+          "question_en": "Critical pedagogy firmly believes that",
+          "question_hi": "विवेचनात्मक शिक्षाशास्त्र का यह दृढ़ विश्वास है कि",
+          "options_en": {
+            "1": "the learners need not reason independently",
+            "2": "what children learn out of school is irrelevant",
+            "3": "the experiences and perceptions of learners are important",
+            "4": "the teacher should always lead the classroom instruction"
+          },
+          "options_hi": {
+            "1": "शिक्षार्थियों को स्वतंत्र रूप से तर्कणा नहीं करनी चाहिए",
+            "2": "बच्चे स्कूल से बाहर क्या सीखते हैं, यह अप्रासंगिक है",
+            "3": "शिक्षार्थियों के अनुभव और प्रत्यक्षण महत्वपूर्ण होते हैं",
+            "4": "एक शिक्षक को हमेशा कक्षा-कक्ष के अनुदेशन का नेतृत्व करना चाहिए"
+          }
+        },
+        {
+          "q_no": 9,
+          "question_en": "School-based assessment is primarily based on the principle that",
+          "question_hi": "विद्यालय-आधारित आकलन मुख्य रूप से किस सिद्धांत पर आधारित होता है?",
+          "options_en": {
+            "1": "teachers know their learners' capabilities better than external examiners",
+            "2": "students should at all costs get high grades",
+            "3": "schools are more efficient than external bodies of examination",
+            "4": "assessment should be very economical"
+          },
+          "options_hi": {
+            "1": "बाह्य परीक्षकों की अपेक्षा शिक्षक अपने शिक्षार्थियों की क्षमताओं को बेहतर जानते हैं",
+            "2": "किसी भी कीमत पर विद्यार्थियों को अच्छे ग्रेड मिलने चाहिए",
+            "3": "विद्यालय, बाह्य परीक्षा निकायों की अपेक्षा ज्यादा सक्षम हैं",
+            "4": "आकलन बहुत किफायती (मितव्ययी) होना चाहिए"
+          }
+        },
+        {
+          "q_no": 10,
+          "question_en": "Learners display individual differences. So a teacher should",
+          "question_hi": "शिक्षार्थी वैयक्तिक भिन्नता प्रदर्शित करते हैं। अतः शिक्षक को",
+          "options_en": {
+            "1": "provide a variety of learning experiences",
+            "2": "enforce strict discipline",
+            "3": "increase number of tests",
+            "4": "insist on uniform pace of learning"
+          },
+          "options_hi": {
+            "1": "सीखने के विविध अनुभवों को उपलब्ध कराना चाहिए",
+            "2": "कठोर अनुशासन सुनिश्चित करना चाहिए",
+            "3": "परीक्षाओं की संख्या बढ़ा देनी चाहिए",
+            "4": "अधिगम की एकसमान गति पर बल देना चाहिए"
+          }
+        },
+        {
+          "q_no": 11,
+          "question_en": "Which of the following is a principle of development?",
+          "question_hi": "निम्नलिखित में से कौन-सा विकास का सिद्धांत है?",
+          "options_en": {
+            "1": "It does not proceed at the same pace for all",
+            "2": "Development is always linear",
+            "3": "It is a discontinuous process",
+            "4": "All processes of development are not inter-connected"
+          },
+          "options_hi": {
+            "1": "सभी की विकास-दर समान नहीं होती है",
+            "2": "विकास हमेशा रेखीय होता है",
+            "3": "यह निरंतर चलने वाली प्रक्रिया नहीं है",
+            "4": "विकास की सभी प्रक्रियाएँ अंतःसम्बन्धित नहीं हैं"
+          }
+        },
+        {
+          "q_no": 12,
+          "question_en": "Human development is divided into domains such as",
+          "question_hi": "मानव विकास को क्षेत्रों में विभाजित किया जाता है जो हैं",
+          "options_en": {
+            "1": "physical, cognitive, emotional and social",
+            "2": "emotional, cognitive, spiritual and social-psychological",
+            "3": "psychological, cognitive, emotional and physical",
+            "4": "physical, spiritual, cognitive and social"
+          },
+          "options_hi": {
+            "1": "शारीरिक, संज्ञानात्मक, संवेगात्मक और सामाजिक",
+            "2": "संवेगात्मक, संज्ञानात्मक, आध्यात्मिक और सामाजिक-मनोवैज्ञानिक",
+            "3": "मनोवैज्ञानिक, संज्ञानात्मक, संवेगात्मक और शारीरिक",
+            "4": "शारीरिक, आध्यात्मिक, संज्ञानात्मक और सामाजिक"
+          }
+        },
+        {
+          "q_no": 13,
+          "question_en": "A teacher uses a text and some pictures of fruits and vegetables and holds a discussion with her students. The students link the details with their previous knowledge and learn the concept of nutrition. This approach is based on",
+          "question_hi": "एक शिक्षिका पाठ्य-वस्तु और फल-सब्जियों के कुछ चित्रों का प्रयोग करती है और अपने विद्यार्थियों से चर्चा करती है। विद्यार्थी इस जानकारी को अपने पूर्व ज्ञान से जोड़ते हैं और पोषण की संकल्पना को सीखते हैं। यह उपागम __________ पर आधारित है।",
+          "options_en": {
+            "1": "Classical conditioning of learning",
+            "2": "Theory of reinforcement",
+            "3": "Operant conditioning of learning",
+            "4": "Construction of knowledge"
+          },
+          "options_hi": {
+            "1": "अधिगम के शास्त्रीय अनुबंधन",
+            "2": "पुनर्बलन के सिद्धांत",
+            "3": "अधिगम के सक्रिय अनुबंधन",
+            "4": "ज्ञान के निर्माण"
+          }
+        },
+        {
+          "q_no": 14,
+          "question_en": "A child starts to cry when his grandmother takes him from his mother's lap. The child cries due to",
+          "question_hi": "जब बच्चे की दादी उसे उसकी माँ की गोद से लेती है, तो बच्चा रोने लगता है। बच्चा __________ के कारण रोता है।",
+          "options_en": {
+            "1": "Social anxiety",
+            "2": "Emotional anxiety",
+            "3": "Stranger anxiety",
+            "4": "Separation anxiety"
+          },
+          "options_hi": {
+            "1": "सामाजिक दुश्चिंता",
+            "2": "संवेगात्मक दुश्चिंता",
+            "3": "अजनबी दुश्चिंता",
+            "4": "वियोग दुश्चिंता"
+          }
+        },
+        {
+          "q_no": 15,
+          "question_en": "In the context of education, socialization means",
+          "question_hi": "शिक्षा के संदर्भ में, समाजीकरण से तात्पर्य है",
+          "options_en": {
+            "1": "creating one's own social norms",
+            "2": "respecting elders in society",
+            "3": "adapting and adjusting to social environment",
+            "4": "always following social norms"
+          },
+          "options_hi": {
+            "1": "अपने सामाजिक मानदंड बनाना",
+            "2": "समाज में बड़ों का सम्मान करना",
+            "3": "सामाजिक वातावरण में अनुकूलन और समायोजन",
+            "4": "सामाजिक मानदंडों का सदैव अनुपालन करना"
+          }
+        },
+        {
+          "q_no": 16,
+          "question_en": "A school gives preference to girls while preparing students for a State level solo-song competition. This reflects",
+          "question_hi": "राज्य स्तर की एक एकल-गायन प्रतियोगिता के लिए विद्यार्थियों को तैयार करते समय एक विद्यालय लड़कियों को वरीयता देता है। यह दर्शाता है",
+          "options_en": {
+            "1": "Global trends",
+            "2": "Pragmatic approach",
+            "3": "Progressive thinking",
+            "4": "Gender bias"
+          },
+          "options_hi": {
+            "1": "वैश्विक प्रवृत्तियाँ",
+            "2": "प्रयोजनात्मक उपागम",
+            "3": "प्रगतिशील चिंतन",
+            "4": "लैंगिक पूर्वाग्रह"
+          }
+        },
+        {
+          "q_no": 17,
+          "question_en": "Vygotsky emphasized the significance of the role played by which of the following factors in the learning of children?",
+          "question_hi": "वाइगोत्स्की बच्चों के सीखने में निम्नलिखित में से किस कारक की महत्वपूर्ण भूमिका पर बल देते हैं?",
+          "options_en": {
+            "1": "Hereditary",
+            "2": "Moral",
+            "3": "Physical",
+            "4": "Social"
+          },
+          "options_hi": {
+            "1": "आनुवंशिक",
+            "2": "नैतिक",
+            "3": "शारीरिक",
+            "4": "सामाजिक"
+          }
+        },
+        {
+          "q_no": 18,
+          "question_en": "A teacher makes use of a variety of tasks to cater to the different learning styles of her learners. She is influenced by",
+          "question_hi": "एक शिक्षिका अपने शिक्षार्थियों की विभिन्न अधिगम-शैलियों को संतुष्ट करने के लिए वैविध्यपूर्ण कार्यों का उपयोग करती है। वह __________ से प्रभावित है।",
+          "options_en": {
+            "1": "Kohlberg's moral development theory",
+            "2": "Gardner's multiple intelligence theory",
+            "3": "Vygotsky's socio-cultural theory",
+            "4": "Piaget's cognitive development theory"
+          },
+          "options_hi": {
+            "1": "कोहलबर्ग के नैतिक विकास के सिद्धांत",
+            "2": "गार्डनर के बहुबुद्धि सिद्धांत",
+            "3": "वाइगोत्स्की के सामाजिक-सांस्कृतिक सिद्धांत",
+            "4": "पियाजे के संज्ञानात्मक विकास के सिद्धांत"
+          }
+        },
+        {
+          "q_no": 19,
+          "question_en": "A teacher never gives answers to questions herself. She encourages her students to suggest answers, have group discussions and adopt collaborative learning. This approach is based on the principle of",
+          "question_hi": "एक शिक्षिका अपने-आप से कभी भी प्रश्नों के उत्तर नहीं देती। वह अपने विद्यार्थियों को उत्तर देने के लिए, समूह चर्चाएँ और सहयोगात्मक अधिगम अपनाने के लिए प्रोत्साहित करती है। यह उपागम __________ के सिद्धांत पर आधारित है।",
+          "options_en": {
+            "1": "proper organization of instructional material",
+            "2": "setting a good example and being a role-model",
+            "3": "readiness to learn",
+            "4": "active participation"
+          },
+          "options_hi": {
+            "1": "अनुदेशात्मक सामग्री के उचित संगठन",
+            "2": "अच्छा उदाहरण प्रस्तुत करना और भूमिका-प्रतिरूप बनना",
+            "3": "सीखने की तत्परता",
+            "4": "सक्रिय भागीदारिता"
+          }
+        },
+        {
+          "q_no": 20,
+          "question_en": "Which of the following is a teacher-related factor affecting learning?",
+          "question_hi": "निम्नलिखित में से कौन-सा शिक्षक से सम्बन्धित अधिगम को प्रभावित करने वाला कारक है?",
+          "options_en": {
+            "1": "Proper seating arrangement",
+            "2": "Availability of teaching-learning resources",
+            "3": "Nature of the content or learning experiences",
+            "4": "Mastery over the subject-matter"
+          },
+          "options_hi": {
+            "1": "बैठने की उचित व्यवस्था",
+            "2": "शिक्षण-अधिगम संसाधनों की उपलब्धता",
+            "3": "विषय-वस्तु या अधिगम-अनुभवों की प्रकृति",
+            "4": "विषय-वस्तु में प्रवीणता"
+          }
+        },
+        {
+          "q_no": 21,
+          "question_en": "According to Kohlberg, a teacher can instill moral values in children by",
+          "question_hi": "कोहलबर्ग के अनुसार, शिक्षक बच्चों में नैतिक मूल्यों का विकास कर सकता है",
+          "options_en": {
+            "1": "giving importance to religious teachings",
+            "2": "laying clear rules of behaviour",
+            "3": "involving them in discussions on moral issues",
+            "4": "giving strict instructions on 'how to behave'"
+          },
+          "options_hi": {
+            "1": "धार्मिक शिक्षा को महत्त्व देकर",
+            "2": "व्यवहार के स्पष्ट नियम बनाकर",
+            "3": "नैतिक मुद्दों पर आधारित चर्चाओं में उन्हें शामिल करके",
+            "4": "'कैसे व्यवहार किया जाना चाहिए' इस पर कठोर निर्देश देकर"
+          }
+        },
+        {
+          "q_no": 22,
+          "question_en": "Young learners should be encouraged to interact with peers in the classroom so that",
+          "question_hi": "छोटे शिक्षार्थियों को कक्षा-कक्ष में समवयस्कों के साथ अंतःक्रिया करने के लिए प्रोत्साहित करना चाहिए जिससे",
+          "options_en": {
+            "1": "they can learn answers to questions from each other",
+            "2": "the syllabus can be covered quickly",
+            "3": "they learn social skills in the course of study",
+            "4": "the teacher can control the classroom better"
+          },
+          "options_hi": {
+            "1": "वे एक-दूसरे से प्रश्नों के उत्तर सीख सकें",
+            "2": "पाठ्यक्रम को बहुत जल्दी पूरा किया जा सके",
+            "3": "वे पढ़ने के दौरान सामाजिक कौशल सीख सकें",
+            "4": "शिक्षक कक्षा-कक्ष को बेहतर तरीके से नियंत्रित कर सके"
+          }
+        },
+        {
+          "q_no": 23,
+          "question_en": "When a child with a disability first comes to school, the teacher should",
+          "question_hi": "जब एक नियोग्य बच्चा पहली बार विद्यालय आता है, तो शिक्षक को क्या करना चाहिए?",
+          "options_en": {
+            "1": "refer the child to a special school according to the disability",
+            "2": "seclude him from other students",
+            "3": "discuss with the child's parents to evolve collaborative plans",
+            "4": "conduct an admission test"
+          },
+          "options_hi": {
+            "1": "बच्चे की नियोग्यता के अनुसार उसे विशेष विद्यालय में भेजने का प्रस्ताव देना चाहिए",
+            "2": "उसे अन्य विद्यार्थियों से अलग रखना चाहिए",
+            "3": "सहकारी योजना विकसित करने के लिए बच्चे के माता-पिता के साथ चर्चा करनी चाहिए",
+            "4": "प्रवेश-परीक्षा लेनी चाहिए"
+          }
+        },
+        {
+          "q_no": 24,
+          "question_en": "According to Piaget's stages of Cognitive Development, the sensori-motor stage is associated with",
+          "question_hi": "पियाजे के संज्ञानात्मक विकास के चरणों के अनुसार, इंद्रिय-गामक (संवेदी-प्रेरक) अवस्था किसके साथ सम्बन्धित है?",
+          "options_en": {
+            "1": "imitation, memory and mental representation",
+            "2": "ability to solve problems in logical fashion",
+            "3": "ability to interpret and analyse options",
+            "4": "concerns about social issues"
+          },
+          "options_hi": {
+            "1": "अनुकरण, स्मृति और मानसिक निरूपण",
+            "2": "तार्किक रूप से समस्या-समाधान की योग्यता",
+            "3": "विकल्पों के निर्वचन और विश्लेषण करने की योग्यता",
+            "4": "सामाजिक मुद्दों से सरोकार"
+          }
+        },
+        {
+          "q_no": 25,
+          "question_en": "Human personality is the result of",
+          "question_hi": "मानव-व्यक्तित्व परिणाम है",
+          "options_en": {
+            "1": "upbringing and education",
+            "2": "interaction between heredity and environment",
+            "3": "only environment",
+            "4": "only heredity"
+          },
+          "options_hi": {
+            "1": "पालन-पोषण और शिक्षा का",
+            "2": "आनुवंशिकता और वातावरण की अंतःक्रिया का",
+            "3": "केवल वातावरण का",
+            "4": "केवल आनुवंशिकता का"
+          }
+        },
+        {
+          "q_no": 26,
+          "question_en": "Individual attention is important in the teaching-learning process because",
+          "question_hi": "शिक्षण-अधिगम प्रक्रिया में व्यक्तिगत रूप से ध्यान देना महत्वपूर्ण है, क्योंकि",
+          "options_en": {
+            "1": "learners always learn better in groups",
+            "2": "teacher training programmes prescribe it",
+            "3": "it offers better opportunities to teachers to discipline each learner",
+            "4": "children develop at different rates and learn differently"
+          },
+          "options_hi": {
+            "1": "शिक्षार्थी हमेशा समूहों में ही बेहतर सीखते हैं",
+            "2": "शिक्षक प्रशिक्षण कार्यक्रमों में ऐसा ही बताया गया है",
+            "3": "इससे प्रत्येक शिक्षार्थी को अनुशासित करने के लिए शिक्षकों को बेहतर अवसर मिलते हैं",
+            "4": "बच्चों की विकास दर भिन्न होती है और वे भिन्न तरीकों से सीख सकते हैं"
+          }
+        },
+        {
+          "q_no": 27,
+          "question_en": "Which of the following is the first step in the scientific method of problem-solving?",
+          "question_hi": "निम्नलिखित में से कौन-सी समस्या-समाधान की वैज्ञानिक पद्धति का पहला चरण है?",
+          "options_en": {
+            "1": "Verification of hypothesis",
+            "2": "Problem awareness",
+            "3": "Collection of relevant information",
+            "4": "Formation of hypothesis"
+          },
+          "options_hi": {
+            "1": "प्राक्कल्पना का परीक्षण करना",
+            "2": "समस्या के प्रति जागरूकता",
+            "3": "प्रासंगिक जानकारी को एकत्र करना",
+            "4": "प्राक्कल्पना का निर्माण करना"
+          }
+        },
+        {
+          "q_no": 28,
+          "question_en": "Which of the following is a domain of learning?",
+          "question_hi": "निम्नलिखित में से कौन-सा सीखने का क्षेत्र है?",
+          "options_en": {
+            "1": "Experiential",
+            "2": "Affective",
+            "3": "Spiritual",
+            "4": "Professional"
+          },
+          "options_hi": {
+            "1": "आनुभविक",
+            "2": "भावात्मक",
+            "3": "आध्यात्मिक",
+            "4": "व्यावसायिक"
+          }
+        },
+        {
+          "q_no": 29,
+          "question_en": "When a child gets bored while doing a task, it is a sign that",
+          "question_hi": "जब बच्चा कार्य करते हुए ऊबने लगता है, तो यह इस बात का संकेत है कि",
+          "options_en": {
+            "1": "the task may have become mechanically repetitive",
+            "2": "the child is not intelligent",
+            "3": "the child is not capable of learning",
+            "4": "the child needs to be disciplined"
+          },
+          "options_hi": {
+            "1": "संभवतः कार्य यांत्रिक रूप से बार-बार हो रहा है",
+            "2": "बच्चा बुद्धिमान नहीं है",
+            "3": "बच्चे में सीखने की योग्यता नहीं है",
+            "4": "बच्चे को अनुशासित करने की ज़रूरत है"
+          }
+        },
+        {
+          "q_no": 30,
+          "question_en": "Errors of learners often indicate",
+          "question_hi": "प्रायः शिक्षार्थियों की त्रुटियाँ __________ की ओर संकेत करती हैं।",
+          "options_en": {
+            "1": "how they learn",
+            "2": "the need for mechanical drill",
+            "3": "absence of learning",
+            "4": "socio-economic status of the learners"
+          },
+          "options_hi": {
+            "1": "वे कैसे सीखते हैं",
+            "2": "यांत्रिक अभ्यास की आवश्यकता",
+            "3": "सीखने की अनुपस्थिति",
+            "4": "शिक्षार्थियों के सामाजिक-आर्थिक स्तर"
+          }
+        }
+      ]
+    },
+    {
+      "part": "II",
+      "subject_en": "Mathematics",
+      "subject_hi": "गणित",
+      "questions": [
+        {
+          "q_no": 31,
+          "question_en": "The concept of areas of plane figures can be introduced to the students of Class V by",
+          "question_hi": "कक्षा V के विद्यार्थियों को समतल आकृतियों के क्षेत्रफलों की संकल्पना से किसके द्वारा परिचित कराया जा सकता है?",
+          "options_en": {
+            "1": "calculating the area of a rectangle by finding length and breadth of a rectangle and using the formula for area of a rectangle",
+            "2": "stating the formula for area of rectangle and square",
+            "3": "calculating the area of figures with the help of counting unit squares",
+            "4": "measuring the area of any figure with the help of different objects like palm, leaf, pencil, etc."
+          },
+          "options_hi": {
+            "1": "आयत की लंबाई और चौड़ाई का पता लगाते हुए और आयत के क्षेत्रफल के सूत्र का प्रयोग करके आयत के क्षेत्रफल की गणना करना",
+            "2": "आयत और वर्ग के क्षेत्रफल का सूत्र बताना",
+            "3": "इकाई वर्गों के गणन की सहायता से आकृतियों के क्षेत्रफल की गणना करना",
+            "4": "विभिन्न वस्तुओं जैसे हथेली, पत्ती, पेंसिल, आदि की सहायता से किसी भी आकृति के क्षेत्रफल को मापना"
+          }
+        },
+        {
+          "q_no": 32,
+          "question_en": "Computational skills in Mathematics can be enhanced by",
+          "question_hi": "गणित में गणना करने सम्बन्धी कौशलों को किसके द्वारा बढ़ाया जा सकता है?",
+          "options_en": {
+            "1": "conducting hands-on activities in class",
+            "2": "clarifying concepts and procedures followed by lots of practice",
+            "3": "giving conceptual knowledge alone",
+            "4": "describing algorithm only"
+          },
+          "options_hi": {
+            "1": "कक्षा में अभ्यास हेतु क्रियाशील गतिविधियों का आयोजन करके",
+            "2": "संकल्पनाओं और प्रक्रियाओं को स्पष्ट करने के बाद अधिक-से-अधिक अभ्यास कराना",
+            "3": "केवल संकल्पनात्मक ज्ञान देकर",
+            "4": "केवल एल्गोरिथ्म (Algorithm) का वर्णन करके"
+          }
+        },
+        {
+          "q_no": 33,
+          "question_en": "To teach various units of length to the students of Class III, a teacher shall take the following materials to the class:",
+          "question_hi": "कक्षा III के विद्यार्थियों को लंबाई की विभिन्न इकाइयाँ पढ़ाने के लिए शिक्षक निम्नलिखित सामग्री कक्षा में ले जाएगा:",
+          "options_en": {
+            "1": "Rulers of different lengths and different units, measuring rod, measuring strip used by architects",
+            "2": "Measuring tape with centimeter on one side and meter on the other side",
+            "3": "Relation chart of various units",
+            "4": "Centimeter ruler and measuring tape"
+          },
+          "options_hi": {
+            "1": "विभिन्न लंबाइयों और इकाइयों वाले रूलर (फुट्टा), नापने वाली छड़, नापने वाली पट्टी जो वास्तुकार द्वारा प्रयोग में लाई जाती है",
+            "2": "नापने वाली टेप जिसके एक तरफ सेंटीमीटर हो और दूसरी तरफ मीटर हो",
+            "3": "विभिन्न इकाइयों का सम्बन्ध-चार्ट",
+            "4": "सेंटीमीटर वाला रूलर और नापने वाली टेप"
+          }
+        },
+        {
+          "q_no": 34,
+          "question_en": "The objective of teaching number system to Class III students is to enable the students",
+          "question_hi": "कक्षा III के विद्यार्थियों को संख्या-पद्धति पढ़ाने का उद्देश्य है",
+          "options_en": {
+            "1": "to master the skill of addition and subtraction of four-digit numbers",
+            "2": "to master the skill of reading large numbers",
+            "3": "to count up to 6 digits",
+            "4": "to see the numbers as groups of hundreds, tens and ones and to understand the significance of place values"
+          },
+          "options_hi": {
+            "1": "चार अंकों वाली संख्या के योग और व्यवकलन के कौशल में प्रवीणता प्राप्त करना",
+            "2": "बड़ी संख्याओं को पढ़ने के कौशल में प्रवीणता प्राप्त करना",
+            "3": "6 अंकों तक गणना करना",
+            "4": "संख्याओं को सैकड़ा, दहाइयों और इकाइयों के समूह के रूप में देखना और स्थानीय मानों की सार्थकता को समझना"
+          }
+        },
+        {
+          "q_no": 35,
+          "question_en": "Most appropriate strategy that can be used to internalize the skill of addition of money is",
+          "question_hi": "सबसे उपयुक्त व्यूह-रचना, जिसका प्रयोग धनराशि के योग की कुशलता को आत्मसात करने के लिए किया जा सकता है, __________ है।",
+          "options_en": {
+            "1": "Role play",
+            "2": "Solving lots of problems",
+            "3": "Use of ICT",
+            "4": "Use of models"
+          },
+          "options_hi": {
+            "1": "भूमिका-निर्वाह (रोल प्ले)",
+            "2": "बहुत सारे सवाल हल करना",
+            "3": "सूचना और संप्रेषण तकनीक (ICT) का प्रयोग करना",
+            "4": "प्रतिरूपों का प्रयोग करना"
+          }
+        },
+        {
+          "q_no": 36,
+          "question_en": "A teacher uses the following riddle in a class while developing the concept of base 10 and place value: 'I am less than 8 tens and 4 ones.' The objective of this activity is",
+          "question_hi": "एक शिक्षक आधार 10 और स्थानीय मान की संकल्पना का विकास करते समय कक्षा में निम्नलिखित पहेली का प्रयोग करता है: 'मैं 8 दहाइयों और 4 इकाइयों से कम हूँ।' इस गतिविधि का उद्देश्य है",
+          "options_en": {
+            "1": "to reinforce the concept of base 10 and place value",
+            "2": "to do summative assessment",
+            "3": "to introduce the concept of tens and ones to the students",
+            "4": "to have some fun in the class and to break monotony"
+          },
+          "options_hi": {
+            "1": "आधार 10 और स्थानीय मान की संकल्पना को दृढ़ करना",
+            "2": "योगात्मक आकलन करना",
+            "3": "विद्यार्थियों को दहाई और इकाई की संकल्पना से परिचित कराना",
+            "4": "कक्षा में कुछ मज़ा करना और एकरसता को तोड़ना"
+          }
+        },
+        {
+          "q_no": 37,
+          "question_en": "To assess the students' competency on solving of word problems based on addition and subtraction, rubrics of assessment are",
+          "question_hi": "योग और व्यवकलन पर आधारित, शब्दों में दिए गए सवालों को हल करने की विद्यार्थियों की दक्षता का आकलन करने के लिए आकलन के शीर्षक हैं",
+          "options_en": {
+            "1": "understanding of problem and writing of correct solution",
+            "2": "identification of problem, performing correct operation",
+            "3": "incorrect, partially correct, completely correct",
+            "4": "comprehension of problem, identification of operation to be performed, representation of problem mathematically, solution of problem and presentation of problem"
+          },
+          "options_hi": {
+            "1": "सवाल का बोधन और सही जवाब लिखना",
+            "2": "सवाल की पहचान, सही संक्रिया निष्पादित करना",
+            "3": "गलत, आंशिक रूप से सही, पूर्णतः सही",
+            "4": "सवाल का बोधन, निष्पादित की जाने वाली संक्रिया की पहचान, समस्या का गणितीय रूप में निरूपण, सवाल का समाधान और प्रस्तुतीकरण"
+          }
+        },
+        {
+          "q_no": 38,
+          "question_en": "Ms. Reena uses a grid activity to teach the concept of multiplication of decimals. A sample is illustrated below: 0.2 × 0.3 = 0.06. Through this method, Ms. Reena is",
+          "question_hi": "सुश्री रीना दशमलव के गुणन की संकल्पना का शिक्षण करने के लिए ग्रिड गतिविधि का प्रयोग करती हैं। उसका एक नमूना नीचे दिया गया है: 0.2 × 0.3 = 0.06. इस पद्धति के द्वारा सुश्री रीना",
+          "options_en": {
+            "1": "using traditional approach of learning",
+            "2": "focusing on developing problem-solving skill",
+            "3": "focusing more on procedural knowledge and less on conceptual knowledge",
+            "4": "focusing more on conceptual knowledge and problem-solving and less on procedural knowledge"
+          },
+          "options_hi": {
+            "1": "सीखने के परंपरागत उपागम का प्रयोग कर रही है",
+            "2": "समस्या-समाधान कौशल के विकास पर बल दे रही है",
+            "3": "प्रक्रमणशील ज्ञान पर ज़्यादा बल दे रही है और संकल्पनात्मक ज्ञान पर कम",
+            "4": "संकल्पनात्मक ज्ञान और समस्या-समाधान पर ज़्यादा बल दे रही हैं तथा प्रक्रमणशील ज्ञान पर कम"
+          }
+        },
+        {
+          "q_no": 39,
+          "question_en": "While planning a lesson on the concept of fraction addition, a teacher is using the activity of strip folding (1/2, 1/4, 1/8). The above activity is a",
+          "question_hi": "भिन्नों की योग संकल्पना के पाठ पर योजना बनाते समय, शिक्षक पट्टी मोड़ने वाली गतिविधि का प्रयोग कर रहा है (1/2, 1/4, 1/8). उपर्युक्त गतिविधि __________ है।",
+          "options_en": {
+            "1": "post-content activity",
+            "2": "wastage of time",
+            "3": "pre-content activity",
+            "4": "content activity"
+          },
+          "options_hi": {
+            "1": "विषय-वस्तु पश्च गतिविधि",
+            "2": "समय की बर्बादी",
+            "3": "विषय-वस्तु पूर्व की गतिविधि",
+            "4": "विषय-वस्तु सम्बन्धी गतिविधि"
+          }
+        },
+        {
+          "q_no": 40,
+          "question_en": "A suitable approach for explaining that a remainder is always less than the divisor to Class IV students can be",
+          "question_hi": "कक्षा IV के विद्यार्थियों को यह समझाने के लिए कि शेष हमेशा विभाजक से कम होता है, उचित उपागम है",
+          "options_en": {
+            "1": "explain verbally to the students, several times",
+            "2": "represent division sums as mixed fractions and explain that the numerator of the fraction part is the remainder",
+            "3": "grouping of objects in multiples of divisor and showing that the number of objects, not in the group, are less than the divisor",
+            "4": "perform lots of division sums on the black-board and show that every time the remainder is less than the divisor"
+          },
+          "options_hi": {
+            "1": "अनेक बार विद्यार्थियों को मौखिक रूप से स्पष्ट करना",
+            "2": "विभाजन वाले सवालों को मिश्रित भिन्नों के रूप में निरूपित करना और यह स्पष्ट करना कि भिन्न का अंश शेष है",
+            "3": "वस्तुओं को विभाजक के गुणजों में समूहीकृत करना और प्रदर्शित करना कि वस्तुओं की संख्या, जो समूह में नहीं हैं, विभाजक से कम है",
+            "4": "श्यामपट्ट पर विभाजन करने वाले बहुत सारे सवाल करना और दिखाना कि हर बार शेष विभाजक से कम है"
+          }
+        },
+        {
+          "q_no": 41,
+          "question_en": "The figure consists of five squares of the same size. The area of the figure is 180 square centimetres. The perimeter (in cm) of the figure will be",
+          "question_hi": "दी गई आकृति समान आकार के पाँच वर्गों से मिलकर बनी है। आकृति का क्षेत्रफल 180 वर्ग सेंटीमीटर है। आकृति का परिमाप (सेमी में) होगा",
+          "options_en": {
+            "1": "48",
+            "2": "72",
+            "3": "36",
+            "4": "45"
+          },
+          "options_hi": {
+            "1": "48",
+            "2": "72",
+            "3": "36",
+            "4": "45"
+          }
+        },
+        {
+          "q_no": 42,
+          "question_en": "While teaching the addition of fractions, it was observed by Mr. Singh that the following type of error is very common: 2/3 + 2/5 = 4/10. Mr. Singh should take the following remedial action:",
+          "question_hi": "भिन्नों का योग पढ़ाते समय, श्री सिंह द्वारा यह देखा गया कि निम्नलिखित प्रकार की त्रुटि बहुत आम है: 2/3 + 2/5 = 4/10. श्री सिंह को निम्नलिखित उपचारात्मक कार्य करना चाहिए:",
+          "options_en": {
+            "1": "Give pictorial representation to clear the concept of addition of unlike fractions, followed by drill of same type of problems",
+            "2": "Advise the students to work hard and practise the problems of fraction addition",
+            "3": "Explain the concept of LCM of denominator",
+            "4": "Give more practice of same type of problems"
+          },
+          "options_hi": {
+            "1": "असमान भिन्नों के योग की संकल्पना को स्पष्ट करने के लिए चित्रात्मक प्रतिरूप देना तथा बाद में समान प्रकार के सवालों का अभ्यास कराना",
+            "2": "विद्यार्थियों को मेहनत करने की सलाह देना और भिन्नों के योग वाले सवालों का अभ्यास कराना",
+            "3": "हर के लघुतम समापवर्त्य (ल.स.) की संकल्पना को स्पष्ट करना",
+            "4": "समान प्रकार के सवालों का अधिक अभ्यास कराना"
+          }
+        },
+        {
+          "q_no": 43,
+          "question_en": "The solid as shown in the figure is made up of cubical blocks each of side 1 cm. The number of blocks is",
+          "question_hi": "एक ठोस, जैसा कि आकृति में दिखाया गया है, घनीय ब्लॉक (cubical blocks) से बना है जिनकी प्रत्येक भुजा 1 सेमी है। ब्लॉकों की संख्या है",
+          "options_en": {
+            "1": "60",
+            "2": "72",
+            "3": "48",
+            "4": "52"
+          },
+          "options_hi": {
+            "1": "60",
+            "2": "72",
+            "3": "48",
+            "4": "52"
+          }
+        },
+        {
+          "q_no": 44,
+          "question_en": "The NCF (2005) considers that Mathematics involves 'a certain way of thinking and reasoning'. The vision can be realized by",
+          "question_hi": "राष्ट्रीय पाठ्यचर्या की रूपरेखा (2005) मानती है कि गणित में 'चिंतन और तर्कणा का एक तरीका शामिल होता है'। इस दृष्टिकोण को किसके द्वारा प्राप्त किया जा सकता है?",
+          "options_en": {
+            "1": "adopting exploratory approach, use of manipulatives, connecting concepts to real life, involving students in discussions",
+            "2": "rewriting all text-books of Mathematics",
+            "3": "giving lots of problem worksheets to students",
+            "4": "giving special coaching to students"
+          },
+          "options_hi": {
+            "1": "खोजबीन उपागम का प्रयोग करना, हस्तचालकों का प्रयोग करना, संकल्पनाओं को वास्तविक जीवन से जोड़ना, विद्यार्थियों को चर्चाओं में शामिल करना",
+            "2": "गणित की सभी पाठ्य-पुस्तकों का पुनर्लेखन करना",
+            "3": "विद्यार्थियों को बहुत सारे सवाल कार्य-पत्रक (worksheets) देना",
+            "4": "विद्यार्थियों को विशेष कोचिंग देना"
+          }
+        },
+        {
+          "q_no": 45,
+          "question_en": "Rizul is a kinesthetic learner. His teacher Ms. Neha understood his style of learning. Which of the following strategies should she choose to clear his concept of multiplication?",
+          "question_hi": "रिजुल एक गतिसंवेदी (kinesthetic) शिक्षार्थी हैं। उसकी शिक्षिका सुश्री नेहा उसकी अधिगम-शैली को समझती है। उसकी गुणन की संकल्पना को स्पष्ट करने के लिए उन्हें निम्नलिखित में से किस व्यूह-रचना का चयन करना चाहिए?",
+          "options_en": {
+            "1": "Forcing him to memorize all tables",
+            "2": "Use strings and beads of two different colours to get the multiples of 2, 3, etc.",
+            "3": "Skip counting",
+            "4": "Counting the points of intersection on criss-cross lines"
+          },
+          "options_hi": {
+            "1": "सभी पहाड़ों को याद करने के लिए उस पर बल देना",
+            "2": "2, 3, आदि के गुणज प्राप्त करने के लिए दो भिन्न रंग वाली मोती और धागे का प्रयोग करना",
+            "3": "कटवा गिनती",
+            "4": "आड़ी-तिरछी रेखाओं पर प्रतिच्छेदन बिन्दुओं को गिनना"
+          }
+        },
+        {
+          "q_no": 46,
+          "question_en": "Use of Abacus in Class II does not help the students to",
+          "question_hi": "कक्षा II में अबेकस का प्रयोग __________ में विद्यार्थियों की सहायता नहीं करता।",
+          "options_en": {
+            "1": "read the numbers without error",
+            "2": "write the numeral equivalent of numbers given in words",
+            "3": "attain perfection in counting",
+            "4": "understand the significance of place value"
+          },
+          "options_hi": {
+            "1": "बिना किसी त्रुटि के संख्याओं को पढ़ने",
+            "2": "शब्दों में दी गई संख्याओं के समान संख्यांक लिखने",
+            "3": "गणना में परिशुद्धता प्राप्त करने",
+            "4": "स्थानीय मान की महत्ता को समझने"
+          }
+        },
+        {
+          "q_no": 47,
+          "question_en": "In which of the following divisions, will the remainder be more than the remainder you get when you divide 176 by 3?",
+          "question_hi": "निम्नलिखित में से किस विभाजन में, शेष उससे अधिक होगा जब आप 176 को 3 से विभाजित करते हैं?",
+          "options_en": {
+            "1": "175 ÷ 3",
+            "2": "176 ÷ 2",
+            "3": "173 ÷ 5",
+            "4": "174 ÷ 4"
+          },
+          "options_hi": {
+            "1": "175 ÷ 3",
+            "2": "176 ÷ 2",
+            "3": "173 ÷ 5",
+            "4": "174 ÷ 4"
+          }
+        },
+        {
+          "q_no": 48,
+          "question_en": "500 cm + 50 m + 5 km =",
+          "question_hi": "500 सेमी. + 50 मी. + 5 किमी. =",
+          "options_en": {
+            "1": "555 m",
+            "2": "5055 m",
+            "3": "55 m",
+            "4": "500 m"
+          },
+          "options_hi": {
+            "1": "555 मी.",
+            "2": "5055 मी.",
+            "3": "55 मी.",
+            "4": "500 मी."
+          }
+        },
+        {
+          "q_no": 49,
+          "question_en": "'Recognition of patterns and their completion' is an essential part of Mathematics curriculum at primary stage as it",
+          "question_hi": "'पैटर्न की पहचान करना और उन्हें पूरा करना' प्राथमिक स्तर पर गणित की पाठ्यचर्या का एक अनिवार्य हिस्सा है क्योंकि",
+          "options_en": {
+            "1": "prepares students to take up competitive examinations",
+            "2": "helps the students in solving 'Sudoku' puzzles",
+            "3": "promotes creativity amongst students and helps them to understand properties of numbers and operations",
+            "4": "develops creativity and artistic attributes in students"
+          },
+          "options_hi": {
+            "1": "विद्यार्थियों को प्रतियोगी परीक्षाओं के लिए तैयार करता है",
+            "2": "'सुडोकू' पहेली को हल करने में विद्यार्थियों की सहायता करता है",
+            "3": "यह विद्यार्थियों में सृजनात्मकता को बढ़ावा देता है और संख्याओं तथा संक्रियाओं की विशेषताओं को समझने में उनकी सहायता करता है",
+            "4": "विद्यार्थियों में सृजनात्मकता और कलात्मक गुणों को विकसित करता है"
+          }
+        },
+        {
+          "q_no": 50,
+          "question_en": "Sum of place values of 6 in 63606 is",
+          "question_hi": "63606 में 6 के स्थानीय मानों का योगफल है",
+          "options_en": {
+            "1": "6606",
+            "2": "6066",
+            "3": "18",
+            "4": "60606"
+          },
+          "options_hi": {
+            "1": "6606",
+            "2": "6066",
+            "3": "18",
+            "4": "60606"
+          }
+        },
+        {
+          "q_no": 51,
+          "question_en": "The difference of 5671 and the number obtained on reversing its digits is",
+          "question_hi": "5671 और उसके अंकों को पलट देने पर प्राप्त संख्या का अंतर है",
+          "options_en": {
+            "1": "3916",
+            "2": "7436",
+            "3": "3906",
+            "4": "4906"
+          },
+          "options_hi": {
+            "1": "3916",
+            "2": "7436",
+            "3": "3906",
+            "4": "4906"
+          }
+        },
+        {
+          "q_no": 52,
+          "question_en": "Study the following pattern: 1×1=1, 11×11=121, 111×111=12321. What is 11111×11111?",
+          "question_hi": "नीचे दिए गए पैटर्न का अध्ययन कीजिए: 1×1=1, 11×11=121, 111×111=12321. 11111×11111 क्या है?",
+          "options_en": {
+            "1": "12345421",
+            "2": "123453421",
+            "3": "1234321",
+            "4": "123454321"
+          },
+          "options_hi": {
+            "1": "12345421",
+            "2": "123453421",
+            "3": "1234321",
+            "4": "123454321"
+          }
+        },
+        {
+          "q_no": 53,
+          "question_en": "Which of the following is correct?",
+          "question_hi": "निम्नलिखित में से कौन-सा सही है?",
+          "options_en": {
+            "1": "Predecessor of predecessor of 1000 is 999",
+            "2": "Successor of predecessor of 1000 is 1001",
+            "3": "Successor of predecessor of 1000 is 1002",
+            "4": "Predecessor of successor of 1000 is 1000"
+          },
+          "options_hi": {
+            "1": "1000 के पूर्ववर्ती का पूर्ववर्ती 999 है",
+            "2": "1000 के पूर्ववर्ती का परवर्ती 1001 है",
+            "3": "1000 के पूर्ववर्ती का परवर्ती 1002 है",
+            "4": "1000 के परवर्ती का पूर्ववर्ती 1000 है"
+          }
+        },
+        {
+          "q_no": 54,
+          "question_en": "A shop has 239 toys. Seventy more toys were brought in. Then 152 of them were sold. The number of toys left was",
+          "question_hi": "एक दुकान में 239 खिलौने हैं। सत्तर और खिलौने लाए गए। उनमें से 152 बिक गए। बचे हुए खिलौनों की संख्या थी",
+          "options_en": {
+            "1": "239 − 70 + 152",
+            "2": "239 + 70 − 152",
+            "3": "239 − 70 − 152",
+            "4": "239 + 70 + 152"
+          },
+          "options_hi": {
+            "1": "239 − 70 + 152",
+            "2": "239 + 70 − 152",
+            "3": "239 − 70 − 152",
+            "4": "239 + 70 + 152"
+          }
+        },
+        {
+          "q_no": 55,
+          "question_en": "A pencil costs two and a half rupees. Amit buys one and a half dozen pencils and gives a 100-rupee note to the shopkeeper. The money he will get back is",
+          "question_hi": "एक पेंसिल का मूल्य ढाई रुपए है। अमित डेढ़ दर्जन पेंसिलें खरीदता है और दुकानदार को 100 रुपए का एक नोट देता है। उसे कितने रुपए वापस मिलेंगे?",
+          "options_en": {
+            "1": "₹ 65",
+            "2": "₹ 30",
+            "3": "₹ 55",
+            "4": "₹ 45"
+          },
+          "options_hi": {
+            "1": "₹ 65",
+            "2": "₹ 30",
+            "3": "₹ 55",
+            "4": "₹ 45"
+          }
+        },
+        {
+          "q_no": 56,
+          "question_en": "In the product 3759 × 9573, the sum of tens' digit and units' digit is",
+          "question_hi": "3759 × 9573 के गुणनफल में, दहाई अंक और इकाई अंक का योगफल है",
+          "options_en": {
+            "1": "9",
+            "2": "16",
+            "3": "0",
+            "4": "7"
+          },
+          "options_hi": {
+            "1": "9",
+            "2": "16",
+            "3": "0",
+            "4": "7"
+          }
+        },
+        {
+          "q_no": 57,
+          "question_en": "What time is 4 hours 59 minutes before 2:58 P.M.?",
+          "question_hi": "2:58 P.M. से 4 घंटे 59 मिनट पहले क्या समय है?",
+          "options_en": {
+            "1": "10:01 A.M.",
+            "2": "9:59 P.M.",
+            "3": "9:57 A.M.",
+            "4": "9:59 A.M."
+          },
+          "options_hi": {
+            "1": "10:01 A.M.",
+            "2": "9:59 P.M.",
+            "3": "9:57 A.M.",
+            "4": "9:59 A.M."
+          }
+        },
+        {
+          "q_no": 58,
+          "question_en": "19 thousands + 19 hundreds + 19 ones is equal to",
+          "question_hi": "19 हज़ार + 19 सैकड़े + 19 इकाइयाँ __________ के बराबर है।",
+          "options_en": {
+            "1": "20919",
+            "2": "19919",
+            "3": "191919",
+            "4": "21090"
+          },
+          "options_hi": {
+            "1": "20919",
+            "2": "19919",
+            "3": "191919",
+            "4": "21090"
+          }
+        },
+        {
+          "q_no": 59,
+          "question_en": "If 567567567 is divided by 567, the quotient is",
+          "question_hi": "यदि 567567567 को 567 से विभाजित किया जाता है, तो भागफल है",
+          "options_en": {
+            "1": "10101",
+            "2": "1001001",
+            "3": "3",
+            "4": "111"
+          },
+          "options_hi": {
+            "1": "10101",
+            "2": "1001001",
+            "3": "3",
+            "4": "111"
+          }
+        },
+        {
+          "q_no": 60,
+          "question_en": "How many 1/8 are in 1/2?",
+          "question_hi": "1/2 में कितने 1/8 हैं?",
+          "options_en": {
+            "1": "4",
+            "2": "2",
+            "3": "16",
+            "4": "8"
+          },
+          "options_hi": {
+            "1": "4",
+            "2": "2",
+            "3": "16",
+            "4": "8"
+          }
+        }
+      ]
+    },
+    {
+      "part": "III",
+      "subject_en": "Environmental Studies",
+      "subject_hi": "पर्यावरण अध्ययन",
+      "questions": [
+        {
+          "q_no": 61,
+          "question_en": "Weight-lifters are generally required to make more muscles and body mass. For this purpose, they need to take a diet which is rich in",
+          "question_hi": "भारोत्तोलकों को प्रायः ज़्यादा माँसपेशियाँ और बॉडी मास (body mass) बनाने की आवश्यकता होती है। इस उद्देश्य के लिए, उन्हें ऐसा आहार लेने की आवश्यकता है जो __________ से भरपूर हो।",
+          "options_en": {
+            "1": "Carbohydrates",
+            "2": "Fats",
+            "3": "Vitamins",
+            "4": "Proteins"
+          },
+          "options_hi": {
+            "1": "काबोहाइड्रेट्स",
+            "2": "वसा",
+            "3": "विटामिन",
+            "4": "प्रोटीन"
+          }
+        },
+        {
+          "q_no": 62,
+          "question_en": "Rekha's mother adds Phitkari (Alum) to water collected from the pond every day in order to",
+          "question_hi": "रेखा की माँ __________ के लिए रोज़ाना तालाब से लाए पानी में फिटकरी डालती है।",
+          "options_en": {
+            "1": "sediment light suspended impurities",
+            "2": "change hard water into soft water",
+            "3": "kill germs in water",
+            "4": "decolourize water"
+          },
+          "options_hi": {
+            "1": "हल्के निलंबित अपद्रव्यों को अवसादित करने",
+            "2": "कठोर जल को मृदु जल में परिवर्तित करने",
+            "3": "पानी में मौजूद रोगाणुओं को खत्म करने",
+            "4": "पानी को रंगरहित करने"
+          }
+        },
+        {
+          "q_no": 63,
+          "question_en": "Which one of the following teaching strategies will be most effective for maximum involvement of students in teaching the concept of food chain?",
+          "question_hi": "खाद्य शृंखला की संकल्पना को पढ़ाने में विद्यार्थियों की अधिकतम भागीदारिता के लिए निम्नलिखित में से कौन-सी शिक्षण व्यूह-रचना सबसे प्रभावी होगी?",
+          "options_en": {
+            "1": "Ask students to copy all examples of different food chains written on the black-board",
+            "2": "Make play-cards of organisms and ask student groups to arrange them to depict different food chains",
+            "3": "Ask students to explore possible food chains operating in different habitats",
+            "4": "Ask students to collect related information from internet"
+          },
+          "options_hi": {
+            "1": "श्यामपट्ट पर लिखी विभिन्न खाद्य-शृंखलाओं के सभी उदाहरणों को देखकर लिखने के लिए विद्यार्थियों से कहना",
+            "2": "जीवों के प्ले-काईस बनाना और विद्यार्थियों के समूह को विभिन्न खाद्य-शृंखलाओं को सोचते हुए उन्हें व्यवस्थित करने के लिए कहना",
+            "3": "विभिन्न आवासों में चलने वाली संभावित खाद्य-शृंखलाओं की खोज करने के लिए विद्यार्थियों को कहना",
+            "4": "विद्यार्थियों को इंटरनेट से सम्बन्धित जानकारी एकत्रित करने के लिए कहना"
+          }
+        },
+        {
+          "q_no": 64,
+          "question_en": "In order to separate a mixture of sand and salt, which one of the following four sequences of processes has to be used?",
+          "question_hi": "रेत और नमक के मिश्रण को पृथक् करने के लिए, निम्नलिखित चार क्रमों में से किसका उपयोग किया जाना चाहिए?",
+          "options_en": {
+            "1": "Evaporation, sedimentation, decantation, filtration",
+            "2": "Decantation, sedimentation, evaporation, filtration",
+            "3": "Sedimentation, decantation, filtration, evaporation",
+            "4": "Filtration, decantation, evaporation, sedimentation"
+          },
+          "options_hi": {
+            "1": "वाष्पन, अवसादन, निस्तारण, निस्यंदन",
+            "2": "निस्तारण, अवसादन, वाष्पन, निस्यंदन",
+            "3": "अवसादन, निस्तारण, निस्यंदन, वाष्पन",
+            "4": "निस्यंदन, निस्तारण, वाष्पन, अवसादन"
+          }
+        },
+        {
+          "q_no": 65,
+          "question_en": "A Science teacher administered a test after teaching the topic on 'Respiration' and observed that majority of the students did not understand the difference between respiration and breathing. This could be due to the reason that",
+          "question_hi": "एक विज्ञान शिक्षिका 'श्वसन' प्रकरण पढ़ाने के बाद परीक्षा का आयोजन करती है और यह देखती है कि अधिकांश विद्यार्थी श्वसन और सांस लेने के बीच अंतर को नहीं समझते हैं। यह किसके कारण हो सकता है?",
+          "options_en": {
+            "1": "she was not their class teacher",
+            "2": "the students could not understand the question correctly",
+            "3": "there was usually lot of indiscipline in her class",
+            "4": "she could not explain the related concept effectively in the class"
+          },
+          "options_hi": {
+            "1": "वह उनकी कक्षा अध्यापिका नहीं है",
+            "2": "विद्यार्थी प्रश्न को सही तरीके से नहीं समझ सके",
+            "3": "शिक्षिका की कक्षा में प्रायः बहुत अनुशासनहीनता रहती है",
+            "4": "वह कक्षा में प्रभावी तरीके से सम्बन्धित संकल्पना को व्याख्यायित नहीं कर सकी"
+          }
+        },
+        {
+          "q_no": 66,
+          "question_en": "Which one of the following is a good cooking practice?",
+          "question_hi": "निम्नलिखित में से भोजन बनाने का कौन-सा तरीका अच्छा है?",
+          "options_en": {
+            "1": "Cutting the vegetables and then washing these in running water",
+            "2": "Keeping the vegetables in sunshine for some time before cutting and cooking",
+            "3": "Cooking the vegetables by deep frying to kill bacteria",
+            "4": "Washing the vegetables nicely and then cutting"
+          },
+          "options_hi": {
+            "1": "सब्जियों को काटना और तब उन्हें चलते पानी में धोना",
+            "2": "सब्जियों को काटने और पकाने से पहले उन्हें कुछ समय के लिए धूप में रखना",
+            "3": "बैक्टीरिया नष्ट करने के लिए सब्जियों को गहरे तलते हुए पकाना",
+            "4": "सब्जियों को अच्छी तरह से धोना और फिर काटना"
+          }
+        },
+        {
+          "q_no": 67,
+          "question_en": "While teaching the topic on 'Air', an EVS teacher wanted to demonstrate that air has weight and occupies space. Her colleague suggested the following four different activities: a. Place an empty inverted beaker on the surface of the water and start pressing it down; b. Suck the juice through a straw; c. Blow air in a balloon; d. Tie two inflated balloons to a rod and establish equilibrium. Then puncture one of the balloons. Which of the above activities will lead to demonstrating the desired result?",
+          "question_hi": "पर्यावरण अध्ययन (EVS) की शिक्षिका 'वायु' प्रकरण को पढ़ाते समय यह प्रदर्शित करना चाहती है कि वायु में भार होता है और वह जगह घेरती है। उसके सहयोगी इस उद्देश्य के लिए उसे निम्नलिखित चार भिन्न गतिविधियाँ सुझाते हैं: a. खाली उलटा बीकर पानी की सतह के ऊपर रखें और उसे नीचे धकेलें; b. स्ट्रॉ के माध्यम से जूस को खींचना; c. गुब्बारे में हवा भरना; d. दो भरे हुए गुब्बारे एक छड़ से बाँधें तथा साम्यावस्था में ले आएँ। तब किसी एक गुब्बारे को फोड़ दें। उपर्युक्त गतिविधियों में से कौन-सी गतिविधियाँ वाँछनीय परिणामों को प्रदर्शित करेंगी?",
+          "options_en": {
+            "1": "a and d",
+            "2": "b and d",
+            "3": "a and c",
+            "4": "a and b"
+          },
+          "options_hi": {
+            "1": "a और d",
+            "2": "b और d",
+            "3": "a और c",
+            "4": "a और b"
+          }
+        },
+        {
+          "q_no": 68,
+          "question_en": "Which one of the following four teaching methodologies followed by four different Science teachers for teaching the topic 'Air Pollution' is most appropriate?",
+          "question_hi": "'वायु प्रदूषण' प्रकरण पढ़ाने के लिए चार अलग-अलग विज्ञान शिक्षक चार तरह की शिक्षण-पद्धतियों का प्रयोग करते हैं। निम्नलिखित में से कौन-सी पद्धति सबसे ज़्यादा उचित है?",
+          "options_en": {
+            "1": "Showing a documentary film on 'Air Pollution' to the students",
+            "2": "Asking the students to collect air samples before and after Diwali, study their quality and tabulate the findings",
+            "3": "Asking the students to read the topic from the text-book loudly and explaining the meaning of concepts/terms",
+            "4": "Dictating the answers to all the questions in the exercise after completing the topic"
+          },
+          "options_hi": {
+            "1": "विद्यार्थियों को 'वायु प्रदूषण' पर वृत्तचित्र दिखाना",
+            "2": "विद्यार्थियों से कहना कि वे दीपावली से पहले और बाद में वायु के नमूने इकट्ठे करें और उनकी गुणवत्ता का अध्ययन करते हुए निष्कर्षों को सारणीकृत करें",
+            "3": "विद्यार्थियों को पाठ्य-पुस्तक में से प्रकरण का सस्वर पठन करने के लिए कहना और संकल्पना/शब्दावली का अर्थ स्पष्ट करना",
+            "4": "प्रकरण पूरा करने के बाद अभ्यास में दिए गए सभी प्रश्नों के उत्तर लिखवाना"
+          }
+        },
+        {
+          "q_no": 69,
+          "question_en": "A teacher can identify a stressed child when the child shows the following behaviour:",
+          "question_hi": "एक शिक्षिका तनावग्रस्त बच्चे की पहचान कर सकती है जब बच्चा निम्नलिखित व्यवहार प्रदर्शित करता है:",
+          "options_en": {
+            "1": "Full concentration in studies",
+            "2": "Excessive talking",
+            "3": "Hyperactivity",
+            "4": "Aggressive behaviour"
+          },
+          "options_hi": {
+            "1": "पढ़ाई में पूर्ण एकाग्रता",
+            "2": "बहुत बात करना",
+            "3": "हाइपरएक्टिविटी (अतिसक्रियता)",
+            "4": "आक्रामक व्यवहार"
+          }
+        },
+        {
+          "q_no": 70,
+          "question_en": "While performing experiments with water, Jyoti observed that an empty steel bowl floats but a small iron nail sinks in water. This can be explained by the fact that",
+          "question_hi": "पानी के साथ प्रयोग करते हुए, ज्योति यह देखती है कि स्टील की खाली कटोरी पानी पर तैरती है लेकिन लोहे की एक छोटी कील डूब जाती है। इसे __________ तथ्य द्वारा व्याख्यायित किया जा सकता है।",
+          "options_en": {
+            "1": "force on a steel bowl is more than its weight whereas force on an iron nail is lesser than its weight",
+            "2": "force on an iron nail is more than its weight whereas force on a steel bowl is lesser than its weight",
+            "3": "iron is heavier than water and steel is lighter than water",
+            "4": "iron is lighter than water and steel is heavier than water"
+          },
+          "options_hi": {
+            "1": "स्टील की कटोरी पर लगने वाला बल उसके भार की तुलना में ज़्यादा है जबकि लोहे की कील पर लगने वाला बल उसके भार की तुलना में कम है",
+            "2": "लोहे की कील पर लगने वाला बल उसके भार की तुलना में ज़्यादा है जबकि स्टील की कटोरी पर लगने वाला बल उसके भार की तुलना में कम है",
+            "3": "लौह पानी की तुलना में भारी है और स्टील पानी की तुलना में हल्का है",
+            "4": "लौह पानी की तुलना में हल्का है और स्टील पानी की तुलना में भारी है"
+          }
+        },
+        {
+          "q_no": 71,
+          "question_en": "Which one of the following pairs of life processes occurs both in plants and animals?",
+          "question_hi": "निम्नलिखित में से जीवन-प्रक्रियाओं का कौन-सा युग्म पेड़-पौधों और जीव-जंतुओं दोनों में मिलता है?",
+          "options_en": {
+            "1": "Reproduction and food making",
+            "2": "Reproduction and germination",
+            "3": "Growth and reproduction",
+            "4": "Growth and food making"
+          },
+          "options_hi": {
+            "1": "प्रजनन और भोजन बनाना",
+            "2": "प्रजनन और अंकुरण",
+            "3": "वृद्धि और प्रजनन",
+            "4": "वृद्धि और भोजन बनाना"
+          }
+        },
+        {
+          "q_no": 72,
+          "question_en": "Anjali's friend suggested the following four ways to avoid tooth decay: a. Brush your teeth twice a day; b. Wear braces to avoid enamel decay; c. Avoid sweets, chocolates and carbonated drinks; d. Rinse mouth after every meal. Which of the above ways should Anjali follow?",
+          "question_hi": "अंजलि की सहेली दाँतों में क्षय से बचने के निम्नलिखित चार तरीके बताती है: a. दिन में दो बार ब्रश करें; b. इनेमिल कम न हो इसके लिए ब्रेसिज़ पहनें; c. मिठाई, चॉकलेट्स और कार्बन डाइऑक्साइड युक्त पेय-पदार्थ न लें; d. हर खाने के बाद कुल्ला करें। अंजलि को उपर्युक्त तरीकों में से किसका अनुपालन करना चाहिए?",
+          "options_en": {
+            "1": "c, d and a",
+            "2": "d, a and b",
+            "3": "a and c",
+            "4": "b, c and d"
+          },
+          "options_hi": {
+            "1": "c, d और a",
+            "2": "d, a और b",
+            "3": "a और c",
+            "4": "b, c और d"
+          }
+        },
+        {
+          "q_no": 73,
+          "question_en": "Study the Venn diagram given below: Animals that live on land, Animals that live in water, Animals that lay eggs. Which of the following animals can be placed at 'X'?",
+          "question_hi": "नीचे दिए गए वेन आरेख का अध्ययन कीजिए: ज़मीन पर रहने वाले जीव-जन्तु, पानी में रहने वाले जीव-जन्तु, अंडे देने वाले जीव-जन्तु। निम्नलिखित में से कौन-से जीव-जन्तु 'X' में रखे जा सकते हैं?",
+          "options_en": {
+            "1": "Eel",
+            "2": "Shark",
+            "3": "Fish",
+            "4": "Crocodile"
+          },
+          "options_hi": {
+            "1": "ईल (सर्पमीन)",
+            "2": "शार्क",
+            "3": "मछली",
+            "4": "मगरमच्छ"
+          }
+        },
+        {
+          "q_no": 74,
+          "question_en": "An air-pump is kept in an aquarium in order to",
+          "question_hi": "__________ के लिए मछलीघर (अक्वेरियम) में हवा वाला पंप रखा जाता है।",
+          "options_en": {
+            "1": "provide more carbon dioxide to water plants",
+            "2": "allow more oxygen to dissolve in water",
+            "3": "enhance the beauty of the aquarium",
+            "4": "make water cleaner"
+          },
+          "options_hi": {
+            "1": "जलीय पौधों को अधिक कार्बन डाइऑक्साइड उपलब्ध कराने",
+            "2": "अधिक ऑक्सीजन को पानी में घुलने देने",
+            "3": "मछलीघर (अक्वेरियम) की शोभा बढ़ाने",
+            "4": "पानी को साफ़ करने"
+          }
+        },
+        {
+          "q_no": 75,
+          "question_en": "A fish dies when it is put in an aquarium filled with previously boiled water but cooled to room temperature. This happens because the water in the aquarium is",
+          "question_hi": "जब एक मछली को पहले से उबले, लेकिन कमरे के तापमान पर ठंडे किए गए पानी से भरे अक्वेरियम में डाला जाता है, तो वह मर जाती है। ऐसा इसलिए होता है क्योंकि मछलीघर (अक्वेरियम) का पानी",
+          "options_en": {
+            "1": "depleted in oxygen",
+            "2": "unfit for drinking by fish",
+            "3": "depleted in minerals",
+            "4": "unfit for swimming by fish"
+          },
+          "options_hi": {
+            "1": "ऑक्सीजन रहित है",
+            "2": "मछली द्वारा पीने के योग्य नहीं है",
+            "3": "खनिज रहित है",
+            "4": "मछली के तैरने के योग्य नहीं है"
+          }
+        },
+        {
+          "q_no": 76,
+          "question_en": "Which one of the following best describes the features on the surface of the Moon?",
+          "question_hi": "निम्नलिखित में से कौन-सा चाँद की सतह की विशेषताओं के बारे में सबसे अच्छा वर्णन करता है?",
+          "options_en": {
+            "1": "No water, enough air, high mountains",
+            "2": "No water, deep craters, high mountains",
+            "3": "No air, no gravity, no water",
+            "4": "No air, no gravity, smooth surface"
+          },
+          "options_hi": {
+            "1": "पानी नहीं, पर्याप्त हवा, ऊँचे पहाड़",
+            "2": "पानी नहीं, गहरे गह्वर, ऊँचे पहाड़",
+            "3": "हवा नहीं, गुरुत्व नहीं, पानी नहीं",
+            "4": "हवा नहीं, गुरुत्व नहीं, समतल सतह"
+          }
+        },
+        {
+          "q_no": 77,
+          "question_en": "Arti noticed the following precautions related to prevention of spread of a disease on a poster: a. Do not let water collect around you; b. Keep water pots, coolers and tanks clean; c. Spray oil if water has collected at some place; d. Use nets to protect yourself. The poster is aimed at creating awareness about the spread of",
+          "question_hi": "आरती एक पोस्टर पर एक बीमारी की रोकथाम से सम्बन्धित निम्नलिखित सावधानियाँ पढ़ती हैः a. अपने आस-पास पानी को जमा न होने दें; b. पानी के बर्तनों, कूलरों और टंकियों को साफ रखें; c. यदि कुछ जगहों पर पानी इकट्ठा हो जाता है तो तेल का छिड़काव करें; d. स्वयं के बचाव के लिए जाली का प्रयोग करें। पोस्टर का उद्देश्य है __________ के फैलने के बारे में जागरूकता पैदा करना।",
+          "options_en": {
+            "1": "Small pox and Malaria",
+            "2": "Dengue and Eye flu",
+            "3": "Typhoid and Cholera",
+            "4": "Dengue and Japanese Encephalitis"
+          },
+          "options_hi": {
+            "1": "चेचक और मलेरिया",
+            "2": "डेंगू और आई फ्लू",
+            "3": "टाइफॉइड और हैज़ा",
+            "4": "डेंगू और जापानी मस्तिष्क-ज्वर (Encephalitis)"
+          }
+        },
+        {
+          "q_no": 78,
+          "question_en": "In which one of the following groups are the words intimately related?",
+          "question_hi": "निम्नलिखित में से कौन-से शब्द-समूह आपस में निकटीय रूप से सम्बन्धित हैं?",
+          "options_en": {
+            "1": "Iron, Malaria, Anaemia, Blood",
+            "2": "Iron, Haemoglobin, Anaemia, Amla",
+            "3": "Mosquito, Dengue, Iron, Jaggery",
+            "4": "Mosquito, Malaria, Anaemia, Iron"
+          },
+          "options_hi": {
+            "1": "लौह, मलेरिया, अनीमिया, रक्त",
+            "2": "लौह, हीमोग्लोबिन, अनीमिया, आँवला",
+            "3": "मच्छर, डेंगू, लौह, गुड़",
+            "4": "मच्छर, मलेरिया, अनीमिया (रक्त-अल्पता), लौह"
+          }
+        },
+        {
+          "q_no": 79,
+          "question_en": "The major purpose of periodic parent-teacher interactions is to",
+          "question_hi": "अभिभावक-शिक्षक अंतःक्रियाओं को उपलब्ध कराने का मुख्य उद्देश्य है",
+          "options_en": {
+            "1": "discuss the child's strengths and weaknesses for reinforcement and improvement",
+            "2": "develop a social relationship with each other",
+            "3": "highlight each other's shortcomings",
+            "4": "share the information about ongoing events in the school"
+          },
+          "options_hi": {
+            "1": "पुनर्बलन और सुधार के लिए बच्चे की योग्यताओं और कमज़ोरियों के बारे में चर्चा करना",
+            "2": "एक-दूसरे के साथ सामाजिक सम्बन्ध विकसित करना",
+            "3": "एक-दूसरे की कमियों को उजागर करना",
+            "4": "विद्यालय में हो रहे क्रियाकलापों के बारे में जानकारी को साझा करना"
+          }
+        },
+        {
+          "q_no": 80,
+          "question_en": "While teaching how different food items can be kept fresh for some time, Radha enumerated the following techniques to her class: a. Put it in a bowl and keep the bowl in an open container having cold water; b. Wrap it in a damp cloth; c. Spread it open in sunshine; d. Cut it into small pieces and keep it in the dark. Which one of the following food items is she referring to, corresponding to technique 'b' above?",
+          "question_hi": "यह पढ़ाते समय कि कुछ समय के लिए खाद्य पदार्थों को किस तरह ताज़ा रखा जा सकता है, राधा अपनी कक्षा में निम्नलिखित अनेक तकनीकों की परिगणना करती है: a. उसे कटोरी में रखती है तथा कटोरी को एक खुले बर्तन में रख देती है जिसमें ठंडा पानी है; b. उसे एक गीले कपड़े में लपेट देती है; c. उसे धूप में खुला फैला देती है; d. उसे छोटे-छोटे टुकड़ों में काटती है और अँधेरे में रख देती है। उपर्युक्त तकनीक 'b' के लिए वह निम्नलिखित किस खाद्य पदार्थ की ओर संकेत कर रही है?",
+          "options_en": {
+            "1": "Onion, garlic",
+            "2": "Green coriander",
+            "3": "Kaju Burfi",
+            "4": "Cooked rice"
+          },
+          "options_hi": {
+            "1": "प्याज, लहसुन",
+            "2": "हरा धनिया",
+            "3": "काजू बर्फी",
+            "4": "पके हुए चावल"
+          }
+        },
+        {
+          "q_no": 81,
+          "question_en": "While teaching the topic 'Friction' to Class V students, a teacher gave a number of examples to explain that friction is also useful to us in many ways. Which one of the following examples was quoted by her incorrectly?",
+          "question_hi": "कक्षा V के विद्यार्थियों को 'घर्षण' प्रकरण पढ़ाते समय शिक्षिका यह समझाने के लिए अनेक उदाहरण देती है कि घर्षण हमारे लिए कई तरीकों से उपयोगी है। उसके द्वारा दिए गए निम्नलिखित उदाहरणों में से कौन-सा गलत है?",
+          "options_en": {
+            "1": "We are able to walk because of friction between our shoes and the ground",
+            "2": "An object thrown vertically upwards always comes back to us due to friction",
+            "3": "A vehicle stops on application of brakes",
+            "4": "We are able to write due to friction between the tip of the pen and the paper"
+          },
+          "options_hi": {
+            "1": "हमारे जूतों और ज़मीन के बीच होने वाले घर्षण के कारण ही हम चल पाते हैं",
+            "2": "ऊर्ध्वाधर रूप से ऊपर फेंकी गई वस्तु घर्षण के कारण हमेशा हमारे पास ही वापस आती है",
+            "3": "ब्रेक लगाने पर वाहन रुक जाता है",
+            "4": "पेन की नोक (tip) और पेपर के बीच होने वाले घर्षण के कारण ही हम लिख पाते हैं"
+          }
+        },
+        {
+          "q_no": 82,
+          "question_en": "All big cities are facing the problem of environmental pollution as a result of a large number of vehicles on the roads. The best way an individual in the city can contribute towards environmental protection is by",
+          "question_hi": "सभी बड़े शहर सड़कों पर भारी संख्या में वाहनों के कारण पर्यावरण-प्रदूषण की समस्या का सामना कर रहे हैं। पर्यावरण संरक्षण के लिए शहर के लोग व्यक्तिगत रूप से __________ के माध्यम से अपना सहयोग दे सकते हैं।",
+          "options_en": {
+            "1": "using a public transport system for travelling",
+            "2": "avoiding frequent travel outside the home",
+            "3": "not keeping a personal vehicle like scooter, car, etc.",
+            "4": "getting the engine of personal vehicle checked regularly for environmental safe limits"
+          },
+          "options_hi": {
+            "1": "आने-जाने के लिए सार्वजनिक यातायात व्यवस्था का प्रयोग करने",
+            "2": "अक्सर घर से बाहर जाने से बचने",
+            "3": "व्यक्तिगत वाहन, जैसे स्कूटर, कार, आदि नहीं रखने",
+            "4": "पर्यावरण सुरक्षित सीमा के लिए व्यक्तिगत वाहन के इंजन की नियमित रूप से जाँच करवाने"
+          }
+        },
+        {
+          "q_no": 83,
+          "question_en": "Samir of Class V usually does not submit his assignments to the EVS teacher in time. The best corrective measure could be to",
+          "question_hi": "कक्षा V का समीर अक्सर समय पर पर्यावरण अध्ययन की शिक्षिका के पास दत्त-कार्य जमा नहीं कराता। इससे निबटने का सर्वोत्तम सुधारात्मक उपाय हो सकता है",
+          "options_en": {
+            "1": "stop him from going to the games class",
+            "2": "find out the reasons for irregularity and counsel Samir",
+            "3": "write a note to parents about his irregularity",
+            "4": "bring it to the notice of the Principal"
+          },
+          "options_hi": {
+            "1": "उसे खेल-कूद की कक्षा में जाने से रोकना",
+            "2": "अनियमितता के कारण पता करना और समीर को परामर्श देना",
+            "3": "उसकी अनियमितता के बारे में अभिभावकों के लिए एक नोट लिखना",
+            "4": "इस बात के विषय में प्रधानाचार्य को सूचित करना"
+          }
+        },
+        {
+          "q_no": 84,
+          "question_en": "While teaching the topic on 'Air is everywhere', a teacher asks the following questions from the students: a. Is there air in the soil? b. Is there air inside water? c. Is there air inside our body? d. Is there air inside our bones? Which one of the following skills is the teacher trying to develop in the learners?",
+          "question_hi": "'वायु हर जगह है' प्रकरण पर पढ़ाते समय एक शिक्षक विद्यार्थियों से निम्नलिखित प्रश्न पूछता हैः a. क्या मृदा में वायु है? b. क्या पानी के अंदर वायु है? c. क्या हमारे शरीर में वायु है? d. क्या हमारी हड्डियों में वायु है? शिक्षक शिक्षार्थियों में निम्नलिखित में से कौन-सा कौशल विकसित करने का प्रयास कर रहा है?",
+          "options_en": {
+            "1": "Thinking skills",
+            "2": "Emotional skills",
+            "3": "Observation skills",
+            "4": "Classification skills"
+          },
+          "options_hi": {
+            "1": "चिंतन कौशल",
+            "2": "संवेगात्मक कौशल",
+            "3": "अवलोकन कौशल",
+            "4": "वर्गीकरण कौशल"
+          }
+        },
+        {
+          "q_no": 85,
+          "question_en": "There are four below average students in a class. Which one of the following strategies will be most effective to bring them at par with the other students?",
+          "question_hi": "एक कक्षा में औसत से कम वाले चार विद्यार्थी हैं। उन्हें अन्य विद्यार्थियों के समान लाने के लिए निम्नलिखित में से कौन-सी व्यूह-रचना सबसे प्रभावी होगी?",
+          "options_en": {
+            "1": "Identify their weak areas of learning and provide remedial measures accordingly",
+            "2": "Ensure that they attend the school regularly",
+            "3": "Give them additional assignments to do at home",
+            "4": "Make them sit in the front row and supervise their work constantly"
+          },
+          "options_hi": {
+            "1": "उनके अधिगम के कमज़ोर क्षेत्रों की पहचान करना और उसके अनुसार सुधारात्मक उपाय उपलब्ध कराना",
+            "2": "यह सुनिश्चित करना कि वे नियमित रूप से विद्यालय आएँ",
+            "3": "उन्हें घर पर करने के लिए अतिरिक्त दत्त-कार्य देना",
+            "4": "उन्हें अगली पंक्ति में बैठाना और उनके काम का लगातार पर्यवेक्षण करना"
+          }
+        },
+        {
+          "q_no": 86,
+          "question_en": "Which one of the following sequences of steps is the correct way of preparing a balanced question paper?",
+          "question_hi": "एक संतुलित प्रश्न-पत्र बनाने के लिए निम्नलिखित चरणों के क्रम में से कौन-सा सही तरीका है?",
+          "options_en": {
+            "1": "Preparing the design, writing the questions, preparing the marking scheme, matching with the blueprint",
+            "2": "Writing and editing the questions, matching with the design, preparing the blueprint, writing the marking scheme",
+            "3": "Writing the questions, preparing the blueprint, matching with the design, writing the marking scheme",
+            "4": "Preparing a design, preparing a blueprint, writing and editing the questions, writing the marking scheme"
+          },
+          "options_hi": {
+            "1": "डिज़ाइन तैयार करना, प्रश्न लिखना, अंक-योजना तैयार करना, ब्लूप्रिंट से मिलान करना",
+            "2": "प्रश्न लिखना और उनका संपादन करना, डिज़ाइन से मिलान करना, ब्लूप्रिंट तैयार करना, अंक-योजना लिखना",
+            "3": "प्रश्न लिखना, ब्लूप्रिंट (रूपरेखा) तैयार करना, डिज़ाइन से मिलान करना, अंक-योजना लिखना",
+            "4": "डिज़ाइन तैयार करना, ब्लूप्रिंट तैयार करना, प्रश्न लिखना और उनका संपादन करना, अंक-योजना लिखना"
+          }
+        },
+        {
+          "q_no": 87,
+          "question_en": "The topic 'Depletion of Petroleum and Coal' was taught to Section A of a class by using multimedia capsule while the other Section B was taught through diagrams drawn on the Green Board. It was found later that students of Section A understood the topic to a better extent. This could be due to the reason that",
+          "question_hi": "एक कक्षा के अनुभाग 'अ' को 'पेट्रोलियम और कोयले के भंडारों में रिक्तिकरण' प्रकरण पढ़ाने के लिए 'मल्टीमीडिया कैप्सूल' (Multimedia Capsule) का प्रयोग किया गया जबकि अनुभाग 'ब' को ग्रीन बोर्ड पर आरेख बनाते हुए पढ़ाया गया। बाद में यह पाया गया कि अनुभाग 'अ' के विद्यार्थियों ने एक बेहतर सीमा तक प्रकरण को समझ लिया। ऐसा होने का कारण यह हो सकता है कि",
+          "options_en": {
+            "1": "Multiple approach is closer to everyday life situations",
+            "2": "Use of multimedia aids is comparatively more economical",
+            "3": "Audio-visual aids engage all the senses for better retention",
+            "4": "Green Board is not a good visual aid"
+          },
+          "options_hi": {
+            "1": "बहु उपागम दैनिक जीवन-स्थितियों के अधिक नज़दीक है",
+            "2": "मल्टीमीडिया सामग्रियों का प्रयोग अपेक्षाकृत अधिक मितव्ययी (economical) है",
+            "3": "दृश्य-श्रव्य सामग्रियाँ बेहतर संधारण के लिए सभी इंद्रियों को शामिल करती हैं",
+            "4": "ग्रीन बोर्ड एक अच्छी दृश्य सामग्री नहीं है"
+          }
+        },
+        {
+          "q_no": 88,
+          "question_en": "In order to introduce the topic on 'Nutrition' in class more effectively, a teacher should",
+          "question_hi": "कक्षा में 'पोषण' प्रकरण का परिचय अधिक प्रभावी तरीके से देने के लिए एक शिक्षक को",
+          "options_en": {
+            "1": "ask the students to open their tiffin boxes, see the contents, followed by teacher's explanation",
+            "2": "give examples of different foods rich in nutrients",
+            "3": "draw the diagram of digestive system on the black-board",
+            "4": "show the model of human denture"
+          },
+          "options_hi": {
+            "1": "विद्यार्थियों को अपने टिफिन बॉक्स खोलने और उसकी सामग्री (भोजन) को देखने के लिए कहना चाहिए तथा बाद में शिक्षक को व्याख्या करनी चाहिए",
+            "2": "पोषक तत्त्वों से भरपूर विभिन्न भोजन के उदाहरण देने चाहिए",
+            "3": "श्यामपट्ट पर पाचन-तंत्र का आरेख बनाना चाहिए",
+            "4": "मानव-दाँतों का प्रतिरूप दिखाना चाहिए"
+          }
+        },
+        {
+          "q_no": 89,
+          "question_en": "Engage, Explore, Explain, Elaborate and Evaluate are five important 'Es' in relation to effective teaching of Science. To provide practical experiences to the students related to the concept of 'Necessary conditions for germination', a Science teacher asks them to do the following activities: a. Soak seeds overnight and keep these is a wet cotton cloth; b. Observe the seeds after two days and record the changes; c. Read the book and attempt the given worksheet. Which of the five 'Es' given above are not being covered in the above activities given by the teacher?",
+          "question_hi": "शामिल करना (Engage), खोजबीन करना (Explore), व्याख्या करना (Explain), विस्तार देना (Elaborate) और मूल्यांकन करना (Evaluate), विज्ञान के प्रभावी शिक्षण से जुड़े पाँच महत्वपूर्ण 'Es' हैं। 'अंकुरण के लिए आवश्यक स्थितियाँ' की संकल्पना से जुड़े व्यावहारिक अनुभवों को विद्यार्थियों को उपलब्ध कराते समय एक विज्ञान शिक्षक उनसे निम्नलिखित गतिविधियाँ करने के लिए कहती हैः a. बीजों को रातभर पानी में रखें और उन्हें सूती गीले कपड़े में रखें; b. दो दिनों बाद बीजों का अवलोकन करें और आए परिवर्तनों को रिकॉर्ड करें; c. पुस्तक पढ़ें और दिए गए कार्य-पत्रक (Worksheet) का काम करें। शिक्षक द्वारा दी गई उपर्युक्त गतिविधियों में इन पाँच 'Es' में से कौन-से शामिल नहीं होते?",
+          "options_en": {
+            "1": "Explain and Elaborate",
+            "2": "Explore and Evaluate",
+            "3": "Engage and Explore",
+            "4": "Engage and Evaluate"
+          },
+          "options_hi": {
+            "1": "Explain और Elaborate",
+            "2": "Explore और Evaluate",
+            "3": "Engage और Explore",
+            "4": "Engage और Evaluate"
+          }
+        },
+        {
+          "q_no": 90,
+          "question_en": "After having been taught about the rich flora and fauna in India, the students of primary classes were taken to Ranthambhore National Park by the school. This would help the students to",
+          "question_hi": "भारत में समृद्ध वनस्पतिजात और प्राणीजात (flora-fauna) के बारे में पढ़ाने के बाद, विद्यालय द्वारा प्राथमिक कक्षाओं के विद्यार्थियों को रणथंभोर राष्ट्रीय उद्यान ले जाया जाता है। यह __________ में विद्यार्थियों की सहायता करेगा।",
+          "options_en": {
+            "1": "co-relate classroom learning to real-life situations",
+            "2": "develop skills for environmental protection",
+            "3": "have fun and enjoy with friends on an outdoor trip",
+            "4": "develop respect for nature"
+          },
+          "options_hi": {
+            "1": "कक्षीय अधिगम को वास्तविक जीवन-स्थितियों के साथ जोड़ने",
+            "2": "पर्यावरण संरक्षण के लिए कौशलों के विकास",
+            "3": "बाहरी भ्रमण में दोस्तों के साथ मज़ा लेने",
+            "4": "प्रकृति के प्रति सम्मान विकसित करने"
+          }
+        }
+      ]
+    },
+    {
+      "part": "IV",
+      "subject_en": "Language I - English",
+      "subject_hi": "भाषा I - अंग्रेज़ी",
+      "note": "Questions 91-96 are based on the poem 'Night'. Questions 97-105 are based on a passage on weight training.",
+      "questions": [
+        {
+          "q_no": 91,
+          "question_en": "The evening star rises when",
+          "options_en": {
+            "1": "the birds leave their nests",
+            "2": "it is midnight",
+            "3": "it is dawn",
+            "4": "the sun descends in the west"
+          }
+        },
+        {
+          "q_no": 92,
+          "question_en": "Here, 'bower' represents",
+          "options_en": {
+            "1": "a potted plant",
+            "2": "a framework that supports climbing plants",
+            "3": "a bouquet of flowers",
+            "4": "a flower vase"
+          }
+        },
+        {
+          "q_no": 93,
+          "question_en": "The poet compares moon to",
+          "options_en": {
+            "1": "a flower",
+            "2": "a bird in the nest",
+            "3": "an evening star",
+            "4": "an angel"
+          }
+        },
+        {
+          "q_no": 94,
+          "question_en": "The angels come down on earth to",
+          "options_en": {
+            "1": "spread moonlight",
+            "2": "give blessing and joy",
+            "3": "make people dance and have fun",
+            "4": "take blessing and joy"
+          }
+        },
+        {
+          "q_no": 95,
+          "question_en": "Birds' nest is described as 'thoughtless' because",
+          "options_en": {
+            "1": "the angels are blessing the birds to be happy",
+            "2": "the birds are covered in the warmth of their nest",
+            "3": "it is made without any thought",
+            "4": "the occupants are asleep without any care"
+          }
+        },
+        {
+          "q_no": 96,
+          "question_en": "The figure of speech used in the line 'In heaven's high bower' is",
+          "options_en": {
+            "1": "Metaphor",
+            "2": "Personification",
+            "3": "Alliteration",
+            "4": "Simile"
+          }
+        },
+        {
+          "q_no": 97,
+          "question_en": "The principle of weight training is",
+          "options_en": {
+            "1": "disposing extra workload",
+            "2": "thickening of body through extra consumption",
+            "3": "helping the body adapt to increased stress",
+            "4": "training muscles to exert more pressure"
+          }
+        },
+        {
+          "q_no": 98,
+          "question_en": "Weight training makes the muscles",
+          "options_en": {
+            "1": "thicker and stronger",
+            "2": "become stranded",
+            "3": "become intense",
+            "4": "resist workload"
+          }
+        },
+        {
+          "q_no": 99,
+          "question_en": "During weight training, the heart pumps",
+          "options_en": {
+            "1": "required blood",
+            "2": "an extraordinary amount of blood",
+            "3": "less blood",
+            "4": "more blood"
+          }
+        },
+        {
+          "q_no": 100,
+          "question_en": "A stronger and more efficient heart",
+          "options_en": {
+            "1": "can rest longer, reducing its workload",
+            "2": "is assisted by muscles of the body",
+            "3": "beats faster and more often to pump blood",
+            "4": "needs fewer beats to pump the same amount of blood"
+          }
+        },
+        {
+          "q_no": 101,
+          "question_en": "When neural paths become more effective",
+          "options_en": {
+            "1": "the brain employs various muscles easily for physical tasks",
+            "2": "the muscles function effectively and independently",
+            "3": "the brain functions at extraordinary speed",
+            "4": "the brain opens new pathways for communication"
+          }
+        },
+        {
+          "q_no": 102,
+          "question_en": "What does the term 'well-oiled' in the passage denote?",
+          "options_en": {
+            "1": "Massaged",
+            "2": "Greased",
+            "3": "Healthy",
+            "4": "Serviced"
+          }
+        },
+        {
+          "q_no": 103,
+          "question_en": "Which one of the following is the most appropriate title for the passage?",
+          "options_en": {
+            "1": "The Mechanics of Weight Training",
+            "2": "How to retain your health?",
+            "3": "Health is Wealth",
+            "4": "Stressbusting"
+          }
+        },
+        {
+          "q_no": 104,
+          "question_en": "What does the above passage suggest?",
+          "options_en": {
+            "1": "We should ignore physical exercise",
+            "2": "We should subject our body to as much exercise as it can withstand",
+            "3": "We should carry out physical exercise as a routine",
+            "4": "Physical exercise is necessary occasionally"
+          }
+        },
+        {
+          "q_no": 105,
+          "question_en": "The word 'wondrous' (first line) is",
+          "options_en": {
+            "1": "an adverb",
+            "2": "an adjective",
+            "3": "a verb",
+            "4": "a noun"
+          }
+        },
+        {
+          "q_no": 106,
+          "question_en": "The most effective tool to assess values and attitude of learners is",
+          "options_en": {
+            "1": "Portfolio",
+            "2": "Unit Test",
+            "3": "Summative Test",
+            "4": "Anecdotal Record"
+          }
+        },
+        {
+          "q_no": 107,
+          "question_en": "A teacher engages her learners in a fun activity before beginning a new lesson. The purpose of this activity is to",
+          "options_en": {
+            "1": "divert the attention of the learners",
+            "2": "reduce the workload of the teacher",
+            "3": "motivate and energise the learners",
+            "4": "discipline the learners before the lesson"
+          }
+        },
+        {
+          "q_no": 108,
+          "question_en": "The main purpose of using oral drill is",
+          "options_en": {
+            "1": "to improve pronunciation and accuracy",
+            "2": "to enhance the speaking skills of learners",
+            "3": "to improve the retention capacity of learners",
+            "4": "to assess the comprehension skills of learners"
+          }
+        },
+        {
+          "q_no": 109,
+          "question_en": "The best way to sensitise young learners to rhythm and intonation is",
+          "options_en": {
+            "1": "by making the learners listen to nursery rhymes and recite them effectively",
+            "2": "by making the learners copy out simple poems in neat handwriting",
+            "3": "by explaining the rules of phonetics in simple words",
+            "4": "by reading out poems in different metres and explaining them"
+          }
+        },
+        {
+          "q_no": 110,
+          "question_en": "Seating arrangement should be flexible so that",
+          "options_en": {
+            "1": "children do not form permanent friendship groups",
+            "2": "the teacher ensures equality prevails in her classroom",
+            "3": "children have the freedom to move their seats wherever they want",
+            "4": "many group, pair and whole-class activities can be conducted easily"
+          }
+        },
+        {
+          "q_no": 111,
+          "question_en": "An effective language teacher",
+          "options_en": {
+            "1": "will use the text-book as well as other material as resources for teaching",
+            "2": "will prepare question papers using only the questions given in the text-book",
+            "3": "will rely entirely on the prescribed text-book",
+            "4": "will make children learn all the answers to the questions given in the text-book"
+          }
+        },
+        {
+          "q_no": 112,
+          "question_en": "Telling interesting stories to young learners is primarily meant for improving their",
+          "options_en": {
+            "1": "Speaking skills",
+            "2": "Listening skills",
+            "3": "Reading skills",
+            "4": "Writing skills"
+          }
+        },
+        {
+          "q_no": 113,
+          "question_en": "Knowledge of more than one language",
+          "options_en": {
+            "1": "confuses the learners while learning a new language",
+            "2": "is very helpful in teaching and learning a new language",
+            "3": "causes interference in learning a new language",
+            "4": "becomes a burden to the teacher in the language classroom"
+          }
+        },
+        {
+          "q_no": 114,
+          "question_en": "Continuous and Comprehensive Evaluation should be adopted by all schools because",
+          "options_en": {
+            "1": "traditional pen-paper tests do not assess and enhance all the attributes and abilities of learners",
+            "2": "it frees the learners from studies and hard work",
+            "3": "it affords teachers opportunities to test learners frequently",
+            "4": "it is the latest development in the field of education"
+          }
+        },
+        {
+          "q_no": 115,
+          "question_en": "Curriculum is an educational programme which does not state",
+          "options_en": {
+            "1": "the means of evaluating whether the educational objectives have been achieved or not",
+            "2": "the content (material etc.), teaching strategies and learning experiences which will be necessary to achieve this purpose",
+            "3": "the educational purpose of a programme",
+            "4": "the number of lessons to be taught in a term"
+          }
+        },
+        {
+          "q_no": 116,
+          "question_en": "A 'sight word' is a vocabulary item",
+          "options_en": {
+            "1": "that is to be learned by heart",
+            "2": "that helps in judging the effectiveness of the author's style",
+            "3": "that the reader recognises and finds meaningful on sight without a complicated analysis",
+            "4": "that needs proper visual understanding of the context"
+          }
+        },
+        {
+          "q_no": 117,
+          "question_en": "We use real objects to teach young learners new words because",
+          "options_en": {
+            "1": "we can teach vocabulary only through objects",
+            "2": "young learners are not capable of abstract thinking",
+            "3": "it helps learners associate words with objects they see in real life",
+            "4": "it helps in teaching the correct spelling of words"
+          }
+        },
+        {
+          "q_no": 118,
+          "question_en": "Which of the following is an important stage in the writing process?",
+          "options_en": {
+            "1": "Memorisation",
+            "2": "Calligraphy",
+            "3": "Comprehension",
+            "4": "Editing"
+          }
+        },
+        {
+          "q_no": 119,
+          "question_en": "A good introduction to a text should be",
+          "options_en": {
+            "1": "a detailed explanation of the meaning of the text",
+            "2": "blocking the student's active involvement by means of questioning",
+            "3": "short and to the point",
+            "4": "telling the students anything that they can find out for themselves by reading the text"
+          }
+        },
+        {
+          "q_no": 120,
+          "question_en": "Scanning means darting over much of a text to search for",
+          "options_en": {
+            "1": "difficult words",
+            "2": "a specific item or piece of information that we wish to discover",
+            "3": "the central idea",
+            "4": "the opinion of the author"
+          }
+        }
+      ]
+    },
+    {
+      "part": "V",
+      "subject_en": "Language II - English",
+      "subject_hi": "भाषा II - अंग्रेज़ी",
+      "note": "Questions 136-144 are based on passage on Anaesthesia. Questions 145-150 are based on a passage on sheep shearing.",
+      "questions": [
+        {
+          "q_no": 121,
+          "question_en": "The main responsibility of a language teacher as a facilitator is",
+          "options_en": {
+            "1": "to provide a lot of information and make the learners listen to it",
+            "2": "to strictly control the class and cover the syllabus in quick time",
+            "3": "to read the lessons aloud and provide explanation for each line",
+            "4": "to create a number of opportunities for the learners to use the language meaningfully"
+          }
+        },
+        {
+          "q_no": 122,
+          "question_en": "Which of the following will help learners take greater responsibility for their own learning?",
+          "options_en": {
+            "1": "Controlled writing tasks",
+            "2": "Peer Assessment",
+            "3": "Summative Assessment",
+            "4": "Supervised reading sessions"
+          }
+        },
+        {
+          "q_no": 123,
+          "question_en": "The main purpose of assessment is",
+          "options_en": {
+            "1": "to give practice in writing",
+            "2": "to improve the teaching-learning process",
+            "3": "to decide pass and fail",
+            "4": "to measure achievement of learners"
+          }
+        },
+        {
+          "q_no": 124,
+          "question_en": "When young learners are taught to improve their spelling and punctuation, they will",
+          "options_en": {
+            "1": "nurture their creativity",
+            "2": "sharpen their listening skills",
+            "3": "improve their accuracy",
+            "4": "enhance their fluency"
+          }
+        },
+        {
+          "q_no": 125,
+          "question_en": "Instead of asking questions and getting answers from her learners, a teacher gives some short texts and asks her learners to frame questions. Her primary objective is to",
+          "options_en": {
+            "1": "make the learners realize the difficulties faced by teachers in preparing question papers",
+            "2": "enhance the learners' analytical and critical thinking",
+            "3": "train the learners as good question paper setters",
+            "4": "take their help during examinations"
+          }
+        },
+        {
+          "q_no": 126,
+          "question_en": "Reading between the lines as a sub-skill of reading mainly involves",
+          "options_en": {
+            "1": "giving sufficient space between lines",
+            "2": "inferring the unstated using the contextual and verbal clues",
+            "3": "identifying the grammatical item",
+            "4": "understanding the stated facts"
+          }
+        },
+        {
+          "q_no": 127,
+          "question_en": "Correct speech habits can be developed most effectively through",
+          "options_en": {
+            "1": "Vocabulary practice",
+            "2": "Quizzes",
+            "3": "Dictations",
+            "4": "Pronunciation practice"
+          }
+        },
+        {
+          "q_no": 128,
+          "question_en": "After reading a poem, a teacher involves the learners in group work. One group writes the summary of the poem, another draws a picture to depict the main theme and yet another sets the poem to music. This activity",
+          "options_en": {
+            "1": "caters to diverse abilities and interests",
+            "2": "is aimed at preparing the learners for assessment",
+            "3": "will distract the learners from the lesson",
+            "4": "is a sheer waste of time"
+          }
+        },
+        {
+          "q_no": 129,
+          "question_en": "Young learners will enjoy a play included in the text-book when they",
+          "options_en": {
+            "1": "enact the play",
+            "2": "get detailed explanations about the play from the teacher",
+            "3": "read the play silently",
+            "4": "listen to the teacher reading the play"
+          }
+        },
+        {
+          "q_no": 130,
+          "question_en": "Under Constructivist Approach to language learning, learners are encouraged to",
+          "options_en": {
+            "1": "avoid errors completely",
+            "2": "practise language drills mechanically",
+            "3": "learn the grammar rules by rote",
+            "4": "discover the rules of grammar from examples"
+          }
+        },
+        {
+          "q_no": 131,
+          "question_en": "After a story-telling session, the learners are asked to change the ending of the story. This will help the learners",
+          "options_en": {
+            "1": "develop library reference skills",
+            "2": "evaluate the teacher's originality",
+            "3": "become imaginative and creative",
+            "4": "understand grammar better"
+          }
+        },
+        {
+          "q_no": 132,
+          "question_en": "When young learners are asked to read a text silently, they should be instructed",
+          "options_en": {
+            "1": "to infer the meaning of new words from the context and read with comprehension",
+            "2": "to pay special attention to grammar items used in the passage",
+            "3": "to read fast even if they don't comprehend the meaning",
+            "4": "to stop reading whenever they encounter a difficult word or phrase"
+          }
+        },
+        {
+          "q_no": 133,
+          "question_en": "The primary objective of using role play is",
+          "options_en": {
+            "1": "to promote the reading habit",
+            "2": "to improve the communicative competence",
+            "3": "to develop acting talent",
+            "4": "to evaluate dialogue writing skill"
+          }
+        },
+        {
+          "q_no": 134,
+          "question_en": "Language skills are best learnt",
+          "options_en": {
+            "1": "if they are taught in an integrated manner",
+            "2": "with the help of challenging and mechanical language drills",
+            "3": "when they are introduced in isolation, one skill at a time",
+            "4": "only through written tests and assignments"
+          }
+        },
+        {
+          "q_no": 135,
+          "question_en": "Substitution table drill helps teachers in",
+          "options_en": {
+            "1": "improving the fluency of learners",
+            "2": "evaluating the listening skills",
+            "3": "giving controlled language practice",
+            "4": "developing free writing skills"
+          }
+        },
+        {
+          "q_no": 136,
+          "question_en": "When a part of the body is anaesthetised,",
+          "options_en": {
+            "1": "the body loses its consciousness",
+            "2": "the part gets excited",
+            "3": "that part loses the ability to feel any pain",
+            "4": "the nearby organ loses its function permanently"
+          }
+        },
+        {
+          "q_no": 137,
+          "question_en": "The real purpose of using anaesthetics is",
+          "options_en": {
+            "1": "to perform operations without causing pain",
+            "2": "to artificially produce loss of sensation",
+            "3": "to cure patients of diseases",
+            "4": "to make patients unconscious"
+          }
+        },
+        {
+          "q_no": 138,
+          "question_en": "An anaesthetic is inhaled when it is administered",
+          "options_en": {
+            "1": "as a gas",
+            "2": "as a spray",
+            "3": "as a drug",
+            "4": "by injection"
+          }
+        },
+        {
+          "q_no": 139,
+          "question_en": "When a gas is used as an anaesthetic, the anaesthesia is",
+          "options_en": {
+            "1": "local",
+            "2": "regional",
+            "3": "general",
+            "4": "spinal"
+          }
+        },
+        {
+          "q_no": 140,
+          "question_en": "Spinal anaesthesia is resorted to when",
+          "options_en": {
+            "1": "the operation involves a big area of the body",
+            "2": "a drug has to be injected into the vein",
+            "3": "a patient has to be made unconscious",
+            "4": "a small area has to be anaesthetised"
+          }
+        },
+        {
+          "q_no": 141,
+          "question_en": "The expression 'the site of the operative incision' (lines 22-23) means",
+          "options_en": {
+            "1": "the spot at which the anaesthetic has to be injected",
+            "2": "the area of the body supplied by specific nerves",
+            "3": "all the surrounding tissues",
+            "4": "the place at which a cut is to be made"
+          }
+        },
+        {
+          "q_no": 142,
+          "question_en": "An 'abscess' (line 34) is",
+          "options_en": {
+            "1": "a collection of poisonous matter in a hole in the body",
+            "2": "an open wound requiring surgery",
+            "3": "a deep hole",
+            "4": "an operative incision"
+          }
+        },
+        {
+          "q_no": 143,
+          "question_en": "The word opposite in meaning to the word 'formerly' (line 25) is",
+          "options_en": {
+            "1": "later",
+            "2": "significant",
+            "3": "industrially",
+            "4": "fortunately"
+          }
+        },
+        {
+          "q_no": 144,
+          "question_en": "'Anaesthetic' (line 26) is",
+          "options_en": {
+            "1": "an adverb",
+            "2": "a noun",
+            "3": "a verb",
+            "4": "an adjective"
+          }
+        },
+        {
+          "q_no": 145,
+          "question_en": "What expression in the first paragraph suggests that shearing does not take place very often?",
+          "options_en": {
+            "1": "whetstones",
+            "2": "shearing-day",
+            "3": "improvised",
+            "4": "flock"
+          }
+        },
+        {
+          "q_no": 146,
+          "question_en": "The shearer first cuts the wool from the __________ of the sheep.",
+          "options_en": {
+            "1": "tail",
+            "2": "legs",
+            "3": "underside",
+            "4": "ribs"
+          }
+        },
+        {
+          "q_no": 147,
+          "question_en": "Why are loose clippings of wool gathered separately?",
+          "options_en": {
+            "1": "Because they are needed to fill up the top of the bags",
+            "2": "Because they weigh less than a whole fleece",
+            "3": "So that they do not get spoiled",
+            "4": "Because they are not so valuable as whole fleeces"
+          }
+        },
+        {
+          "q_no": 148,
+          "question_en": "Wool which has been sheared from a sheep is",
+          "options_en": {
+            "1": "tied with sacking",
+            "2": "bagged on shearing-day",
+            "3": "cut into two pieces by the shearer with a few snips",
+            "4": "rolled and bundled"
+          }
+        },
+        {
+          "q_no": 149,
+          "question_en": "What word from the passage best tells us that shears are like a very large pair of scissors?",
+          "options_en": {
+            "1": "slice",
+            "2": "sharpened",
+            "3": "snips",
+            "4": "cut"
+          }
+        },
+        {
+          "q_no": 150,
+          "question_en": "'The sheep is carried to the benches.' It is an example of",
+          "options_en": {
+            "1": "passive voice",
+            "2": "degree of comparison",
+            "3": "an interrogative sentence",
+            "4": "a negative sentence"
+          }
+        }
+      ]
+    }
+  ]
+}

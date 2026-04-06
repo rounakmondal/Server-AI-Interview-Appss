@@ -25,6 +25,10 @@ import examAiRoutes        from './routes/examAi.js';
 import syllabusApiRoutes   from './routes/syllabusApi.js';
 import questionsRoutes    from './routes/questions.js';
 import amarPlanRoutes     from './routes/amarPlan.js';
+import companyInterviewRoutes from './routes/companyInterview.js';
+import skillMatrixRoutes from './routes/skillMatrix.js';
+import storyRoutes from './routes/story.js';
+import examSyllabusSearchRoutes from './routes/examSyllabusSearch.js';
 import { handleTriggerDailyPost } from './routes/handleTriggerDailyPost.js';
 
 // Load environment variables
@@ -114,6 +118,18 @@ app.use('/api/questions', questionsRoutes);
 
 // Amar Plan routes
 app.use('/api', amarPlanRoutes);              // POST /api/plan/create, GET /api/plan/:user_id, etc.
+
+// Company Interview Questions (AI-generated)
+app.use('/api/company-interviews', companyInterviewRoutes);  // GET /api/company-interviews/:slug
+
+// Skill Matrix routes
+app.use('/api/skill-matrix', skillMatrixRoutes);  // GET|POST /api/skill-matrix, GET /api/skill-matrix/practice/:skillId
+
+// Story telling (Bengali narratives)
+app.use('/api/story', storyRoutes);  // POST /api/story
+
+// Exam Syllabus Search (AI-powered)
+app.use('/api', examSyllabusSearchRoutes);  // GET /api/exam-syllabus?q=...
 
 // Error handling middleware
 app.use((err, req, res, next) => {
