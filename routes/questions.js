@@ -13,8 +13,8 @@ const router = Router();
 const FOLDER_MAP = {
   police: {
     displayName: 'Police',
-    scanPath: path.join('Police', 'police-json-data'),   // scan inside police-json-data/
-    pathPrefix: '/Police/police-json-data',               // used in response `path` field
+    scanPath: 'Police',                                   // scan entire Police/ (includes SI/)
+    pathPrefix: '/Police',                                // used in response `path` field
   },
   wbcs: {
     displayName: 'WBCS',
