@@ -53,6 +53,55 @@ const ALLOWED_EXTENSIONS = new Set(['.json', '.pdf']);
 // ─── Helpers ────────────────────────────────────────────────────────────────
 
 /**
+ * Map numeric option keys (1,2,3,4) to letter keys (A,B,C,D).
+ */
+const NUM_TO_LETTER = { '1': 'A', '2': 'B', '3': 'C', '4': 'D' };
+
+/**
+ * Detect and normalize non-standard JSON formats (e.g. JTET bilingual)
+ * into the standard format the frontend expects:
+ *   { exam, sections: [{ section, subject, questions: [{ q_no, question, options: {A,B,C,D}, answer }] }] }
+ */
+function normalizeExamJSON(data) {
+  // Already standard format — has flat `questions[]` or `sections[]` with `question` field
+  if (Array.isArray(data.questions) && data.questions[0]?.question) return data;
+  if (Array.isArray(data.sections) && data.sections[0]?.questions?.[0]?.question) return data;
+
+  // JTET-style: has `parts[]` with `question_en`/`options_en`
+  if (Array.isArray(data.parts) && data.parts[0]?.questions?.[0]?.question_en) {
+    return {
+      exam: data.exam || data.exam_title || 'Unknown Exam',
+      total_questions: data.total_questions,
+      sections: data.parts.map((part) => ({
+        section: part.part,
+        subject: part.subject_en || part.subject_hi || '',
+        questions: part.questions.map((q) => {
+          // Build normalized options: { A, B, C, D }
+          const rawOpts = q.options_en || q.options_hi || {};
+          const options = {};
+          for (const [key, val] of Object.entries(rawOpts)) {
+            const letterKey = NUM_TO_LETTER[key] || key;
+            options[letterKey] = val;
+          }
+          return {
+            q_no: q.q_no,
+            question: q.question_en || q.question_hi || '',
+            question_hi: q.question_hi || undefined,
+            options,
+            answer: q.answer
+              ? (NUM_TO_LETTER[String(q.answer)] || q.answer)
+              : undefined,
+          };
+        }),
+      })),
+    };
+  }
+
+  // Unknown format — return as-is
+  return data;
+}
+
+/**
  * Recursively collect files with allowed extensions from a directory.
  * Returns array of { name, absolutePath, relativePath, size }.
  */
@@ -200,8 +249,18 @@ router.get('/:folder/*', async (req, res) => {
 
   // ── Serve the file ────────────────────────────────────────────────────────
   if (ext === '.json') {
-    res.setHeader('Content-Type', 'application/json');
-    return res.sendFile(resolvedFile);
+    try {
+      const raw = await fs.readFile(resolvedFile, 'utf-8');
+      const parsed = JSON.parse(raw);
+      const normalized = normalizeExamJSON(parsed);
+      res.setHeader('Content-Type', 'application/json');
+      return res.json(normalized);
+    } catch (parseErr) {
+      // Fallback: serve raw file if JSON parse/normalize fails
+      console.warn('[questions] JSON normalize failed, serving raw:', parseErr.message);
+      res.setHeader('Content-Type', 'application/json');
+      return res.sendFile(resolvedFile);
+    }
   }
 
   if (ext === '.pdf') {
