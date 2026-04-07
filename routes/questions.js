@@ -46,6 +46,11 @@ const FOLDER_MAP = {
     scanPath: 'JTET',
     pathPrefix: '/JTET',
   },
+  'rrb-ntpc': {
+    displayName: 'RRB NTPC',
+    scanPath: 'RRB-NTPC',
+    pathPrefix: '/RRB-NTPC',
+  },
 };
 
 const ALLOWED_EXTENSIONS = new Set(['.json', '.pdf']);
