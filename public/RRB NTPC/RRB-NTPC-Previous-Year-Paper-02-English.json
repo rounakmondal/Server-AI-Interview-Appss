@@ -1,0 +1,229 @@
+{
+  "exam_title": "IBPS PO Mains 2018 Memory Based Paper of Reasoning Part 1",
+  "test_booklet_series": null,
+  "subject": "Reasoning",
+  "total_marks": null,
+  "time_allowed": null,
+  "questions": [
+    {
+      "q_no": "Q1",
+      "question": "What is the sum of the numbers at both the ends in step III of the given arrangement?",
+      "options": {
+        "a": "36",
+        "b": "63",
+        "c": "60",
+        "d": "123",
+        "e": "None of the above"
+      }
+    },
+    {
+      "q_no": "Q2",
+      "question": "Which element is 2nd to the right of the one which is 4th to the left element in step I?",
+      "options": {
+        "a": "112",
+        "b": "44",
+        "c": "148",
+        "d": "75",
+        "e": "None of these"
+      }
+    },
+    {
+      "q_no": "Q3",
+      "question": "What is the products of the numbers which is 3rd from the right end and 3rd from the left end in final step of the given arrangement?",
+      "options": {
+        "a": "189",
+        "b": "72",
+        "c": "13.5",
+        "d": "180",
+        "e": "No such step"
+      }
+    },
+    {
+      "q_no": "Q4",
+      "question": "Who among the following likes Banana?",
+      "options": {
+        "a": "Anko",
+        "b": "Tarun",
+        "c": "Charu",
+        "d": "Visakha",
+        "e": "none of these"
+      }
+    },
+    {
+      "q_no": "Q5",
+      "question": "Who among the following is the eldest?",
+      "options": {
+        "a": "Anko",
+        "b": "Tarun",
+        "c": "Charu",
+        "d": "Vishakha",
+        "e": "none of these"
+      }
+    },
+    {
+      "q_no": "Q6",
+      "question": "Which of the following combination is true?",
+      "options": {
+        "a": "Anko-1959-mango",
+        "b": "Viraj- 1983-apple",
+        "c": "Charu-1962-cherry",
+        "d": "Monika-1995-grapes",
+        "e": "none of these"
+      }
+    },
+    {
+      "q_no": "Q7",
+      "question": "Which of the following statement is correct?",
+      "options": {
+        "a": "Anko is three years older than the one who likes cherry",
+        "b": "Viraj is the eldest",
+        "c": "Anko born in 1959",
+        "d": "Monika is born before Visakha",
+        "e": "All are correct"
+      }
+    },
+    {
+      "q_no": "Q8",
+      "question": "In which of the following year Monika was born?",
+      "options": {
+        "a": "1995",
+        "b": "2000",
+        "c": "2012",
+        "d": "2007",
+        "e": "None of these"
+      }
+    },
+    {
+      "q_no": "Q9",
+      "question": "Who among the following likes ducks?",
+      "options": {
+        "a": "E",
+        "b": "F",
+        "c": "C",
+        "d": "B",
+        "e": "none of these"
+      }
+    },
+    {
+      "q_no": "Q10",
+      "question": "Who among the following sits 2nd to the right of the one who is 3rd left of A?",
+      "options": {
+        "a": "E",
+        "b": "F",
+        "c": "C",
+        "d": "B",
+        "e": "none of these"
+      }
+    },
+    {
+      "q_no": "Q11",
+      "question": "How many persons sit in the row?",
+      "options": {
+        "a": "Fifteen",
+        "b": "Seventeen",
+        "c": "Thirteen",
+        "d": "Eighteen",
+        "e": "Eleven"
+      }
+    },
+    {
+      "q_no": "Q12",
+      "question": "Who among the following purchase table?",
+      "options": {
+        "a": "L",
+        "b": "K",
+        "c": "G",
+        "d": "S",
+        "e": "A"
+      }
+    },
+    {
+      "q_no": "Q13",
+      "question": "What is the sum of number which is sixth from right end in step I and eight from left end in step III?",
+      "options": {
+        "a": "8",
+        "b": "7",
+        "c": "9",
+        "d": "11",
+        "e": "13"
+      }
+    },
+    {
+      "q_no": "Q14",
+      "question": "How many alphabets are immediately preceded and immediately followed by numbers in step II?",
+      "options": {
+        "a": "one",
+        "b": "two",
+        "c": "three",
+        "d": "four",
+        "e": "five"
+      }
+    },
+    {
+      "q_no": "Q15",
+      "question": "How many symbols are immediately preceded by alphabets in Step III?",
+      "options": {
+        "a": "one",
+        "b": "two",
+        "c": "three",
+        "d": "four",
+        "e": "five"
+      }
+    },
+    {
+      "q_no": "Q16",
+      "question": "What is the area of a room in Flat A on floor 2?",
+      "options": {
+        "a": "94",
+        "b": "92",
+        "c": "96",
+        "d": "either (a) or (c)",
+        "e": "None of these"
+      }
+    },
+    {
+      "q_no": "Q17",
+      "question": "What is the total number of rooms on floor 2nd?",
+      "options": {
+        "a": "12",
+        "b": "14",
+        "c": "13",
+        "d": "15",
+        "e": "None of these"
+      }
+    },
+    {
+      "q_no": "Q18",
+      "question": "Which of the following statement is true?",
+      "options": {
+        "a": "Total number of rooms on floor 2 is 14",
+        "b": "Area of each room is 94 ft of flat A on floor 1",
+        "c": "Total rooms in Flat A of all three floors is 17.",
+        "d": "All are correct",
+        "e": "None is correct"
+      }
+    },
+    {
+      "q_no": "Q19",
+      "question": "What is the area of room of flat B on floor 3rd?",
+      "options": {
+        "a": "144 ft",
+        "b": "140.5",
+        "c": "138.5",
+        "d": "142",
+        "e": "None of these"
+      }
+    },
+    {
+      "q_no": "Q20",
+      "question": "How many rooms are there of the west of the flat whose each room area is 288 ft?",
+      "options": {
+        "a": "6",
+        "b": "4",
+        "c": "3",
+        "d": "8",
+        "e": "None of these"
+      }
+    }
+  ]
+}

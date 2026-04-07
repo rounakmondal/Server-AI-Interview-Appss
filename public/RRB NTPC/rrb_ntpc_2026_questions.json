@@ -1,0 +1,1113 @@
+{
+  "exam_info": {
+    "exam": "RRB NTPC 2026 Graduate CBT 1",
+    "date": "16/03/2026",
+    "time": "9:00 AM - 10:30 AM",
+    "marking": {
+      "correct": "+1",
+      "incorrect": "-1/3"
+    }
+  },
+  "questions": [
+    {
+      "q_no": "Q1",
+      "question": "Find the area of a quadrilateral ABCD whose area is twice the area of a triangle PQR. The sides of triangle PQR are in the ratio 4:5:6 and the perimeter of the triangle is 90 cm (use √7 = 2.6).",
+      "options": {
+        "a": "656 cm²",
+        "b": "702 cm²",
+        "c": "763 cm²",
+        "d": "698 cm²"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "q_no": "Q2",
+      "question": "What should come in place of the question mark (?) in the given series? 89 87 84 79 72 ?",
+      "options": {
+        "a": "57",
+        "b": "59",
+        "c": "63",
+        "d": "61"
+      },
+      "correct_answer": "d"
+    },
+    {
+      "q_no": "Q3",
+      "question": "20% of a number is more than 20% of 620 by 210. The number is:",
+      "options": {
+        "a": "1520",
+        "b": "1720",
+        "c": "1670",
+        "d": "1770"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "q_no": "Q4",
+      "question": "Working of hydraulic lift and hydraulic brakes is based on:",
+      "options": {
+        "a": "Faraday's law",
+        "b": "Gay-Lussac's law",
+        "c": "Pascal's law",
+        "d": "Coulomb's law"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "q_no": "Q5",
+      "question": "P, Q, R, S, T, U and V sit around a circular table facing the centre. Only one person sits between U and P when counted from the right of U. Only one person sits between P and R. Only one person sits between U and Q. Only two people sit between V and R. Only one person sits between T and Q. How many people sit between T and V when counted from the left of T?",
+      "options": {
+        "a": "3",
+        "b": "2",
+        "c": "4",
+        "d": "1"
+      },
+      "correct_answer": "d"
+    },
+    {
+      "q_no": "Q6",
+      "question": "What is the name of the powerful non-nuclear bomb unveiled by Turkey at the 17th International Defence Industry Fair (IDEF) in July 2025?",
+      "options": {
+        "a": "Nebula",
+        "b": "Phantom-X",
+        "c": "Gazap",
+        "d": "Titan"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "q_no": "Q7",
+      "question": "Anand has ₹1407 with him. He divides this amount between his two sons, Anil and Ashok, and asks them to invest their respective shares at a compound interest rate of 10% per annum, compounded annually. It is observed that Anil's investment amounts to the same value after 15 years as Ashok's investment does after 16 years. How much (in ₹) did Anand give to Ashok?",
+      "options": {
+        "a": "737",
+        "b": "837",
+        "c": "520",
+        "d": "670"
+      },
+      "correct_answer": "d"
+    },
+    {
+      "q_no": "Q8",
+      "question": "Which of the following Articles of the Indian Constitution directs the State to ensure equal pay for equal work for both men and women?",
+      "options": {
+        "a": "Article 42(b)",
+        "b": "Article 15",
+        "c": "Article 39(d)",
+        "d": "Article 14"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "q_no": "Q9",
+      "question": "Which of the following letter-number clusters will replace the question mark '?' in the given series to make it logically complete? VPG 7, ZTK 11, DXO 15, HBS 19, ?",
+      "options": {
+        "a": "LEU 23",
+        "b": "MGX 23",
+        "c": "LGY 24",
+        "d": "LFW 23"
+      },
+      "correct_answer": "d"
+    },
+    {
+      "q_no": "Q10",
+      "question": "EGDH is related to FIFI in a certain way based on the English alphabetical order. In the same way, JMHL is related to KOJM. To which of the following is NPRS related, following the same logic?",
+      "options": {
+        "a": "ORTT",
+        "b": "ORST",
+        "c": "OSST",
+        "d": "OOPT"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "q_no": "Q11",
+      "question": "The average of 13 numbers is 8. If each number is multiplied by 7, then what will the new average be:",
+      "options": {
+        "a": "7",
+        "b": "8",
+        "c": "56",
+        "d": "13"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "q_no": "Q12",
+      "question": "Administrators of the Andaman and Nicobar Islands and Puducherry are designated as _________.",
+      "options": {
+        "a": "Governor",
+        "b": "Lieutenant Governor",
+        "c": "Administrator",
+        "d": "Chief Minister"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "q_no": "Q13",
+      "question": "If (y − 12) = 4√5, then find the value of √(y−3) − 1/√(y−3).",
+      "options": {
+        "a": "6",
+        "b": "4",
+        "c": "8",
+        "d": "9"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "q_no": "Q14",
+      "question": "At the 2025 ICC Champions Trophy held in Dubai, which country did India defeat to secure their seventh ICC title in men's senior cricket?",
+      "options": {
+        "a": "South Africa",
+        "b": "England",
+        "c": "New Zealand",
+        "d": "Australia"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "q_no": "Q15",
+      "question": "Which legislation forms the legal basis for the creation and operation of the Central Administrative Tribunal (CAT)?",
+      "options": {
+        "a": "The Service Matters Act, 1990",
+        "b": "The Administrative Tribunals Act, 1985",
+        "c": "The Judiciary Act, 1971",
+        "d": "The Tribunals Reforms Act, 1980"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "q_no": "Q16",
+      "question": "In December 2025, the Finance Minister called on states to manage their debt within the limits prescribed under which fiscal framework?",
+      "options": {
+        "a": "GST",
+        "b": "FRBM",
+        "c": "Monetary Policy",
+        "d": "NITI Aayog"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "q_no": "Q17",
+      "question": "Each of P, Q, R, S, T, U and V has an exam on a different day of a week starting from Monday and ending on Sunday of the same week. Only five people have exams between V and T. Only two people have exams between R and T. Q has the exam immediately after R. S has the exam immediately before P but after T. How many people have exams between P and U?",
+      "options": {
+        "a": "One",
+        "b": "Two",
+        "c": "Three",
+        "d": "Four"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "q_no": "Q18",
+      "question": "Girish scored 572 marks in an examination and was 30 marks short of 28% of maximum marks. In the same examination, his friend scored 473 marks. What is the percentage of marks scored by his friend?",
+      "options": {
+        "a": "22%",
+        "b": "23%",
+        "c": "21%",
+        "d": "24%"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "q_no": "Q19",
+      "question": "Two taps can fill a cistern in 4 hours and 38 hours respectively. A third tap can empty it in 38 hours. How long (in hours) will it take to fill one-fourth of the empty cistern, if all of them are opened together?",
+      "options": {
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "4"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "q_no": "Q20",
+      "question": "If the median of a data is 61.54 less than its mode, then the median of the data exceeds its mean by _____. (Use the empirical formula to find the answer)",
+      "options": {
+        "a": "32.03",
+        "b": "36.77",
+        "c": "30.77",
+        "d": "28.47"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "q_no": "Q21",
+      "question": "What was the main purpose of the India–MERCOSUR Preferential Trade Agreement discussions held in New Delhi on 16 October 2025?",
+      "options": {
+        "a": "To establish a common currency",
+        "b": "To coordinate defense policies",
+        "c": "To standardize education systems",
+        "d": "To promote trade and investment"
+      },
+      "correct_answer": "d"
+    },
+    {
+      "q_no": "Q22",
+      "question": "Under the Union Budget 2025–26, the FDI limit in the insurance sector was increased from:",
+      "options": {
+        "a": "26% to 49%",
+        "b": "51% to 100%",
+        "c": "74% to 100%",
+        "d": "49% to 74%"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "q_no": "Q23",
+      "question": "Refer to the following number and symbol series: (Left) © 3 @ 8 5 1 £ 1 6 1 5 7 2 8 # € £ © € © 1 3 (Right). How many such numbers are there each of which is immediately preceded by a symbol and also immediately followed by a symbol?",
+      "options": {
+        "a": "1",
+        "b": "0",
+        "c": "2",
+        "d": "3"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "q_no": "Q24",
+      "question": "A train travelling at 60 km/hr crosses another train travelling in the opposite direction at 84 km/hr in 30 seconds. What is the combined length (in m) of both the trains?",
+      "options": {
+        "a": "1000",
+        "b": "1300",
+        "c": "1200",
+        "d": "1100"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "q_no": "Q25",
+      "question": "Which of the given letter-number clusters will replace the question mark (?) in the following series to make it logically complete? FZN 4 XRF 6 PJX 9 HBP 13 ?",
+      "options": {
+        "a": "ZKW 21",
+        "b": "LFR 17",
+        "c": "ZTH 18",
+        "d": "XHD 19"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "q_no": "Q26",
+      "question": "A boat can row 36 km downstream in the same time as it takes to row 24 km upstream. If the speed of the stream is 3 km/h, what is the speed of the boat in still water?",
+      "options": {
+        "a": "15 km/h",
+        "b": "12 km/h",
+        "c": "21 km/h",
+        "d": "18 km/h"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "q_no": "Q27",
+      "question": "Manoj starts from Point A and drives 25 km towards South. He then takes a left turn, drives 17 km, turns left and drives 28 km. He then takes a left turn and drives 20 km. He takes a final left turn, drives 3 km and stops at Point P. How far (shortest distance) and towards which direction should he drive in order to reach Point A again? (All turns are 90 degrees turns only unless specified)",
+      "options": {
+        "a": "2 km to the west",
+        "b": "2 km to the east",
+        "c": "3 km to the west",
+        "d": "3 km to the east"
+      },
+      "correct_answer": "d"
+    },
+    {
+      "q_no": "Q28",
+      "question": "In a certain code language, A + B means 'A is the mother of B', A - B means 'A is the wife of B', A × B means 'A is the sister of B', A ÷ B means 'A is the father of B'. Based on the above, how is S related to P if 'S - K ÷ T × V + P'?",
+      "options": {
+        "a": "Mother's sister",
+        "b": "Father's mother",
+        "c": "Father's sister",
+        "d": "Mother's mother"
+      },
+      "correct_answer": "d"
+    },
+    {
+      "q_no": "Q29",
+      "question": "A tower stands vertically on the ground. From a point on the ground which is 28.6 m away from the foot of a tower, the angle of elevation of the top of the tower is found to be 45°. Find the height of the tower.",
+      "options": {
+        "a": "22.6 m",
+        "b": "28.6 m",
+        "c": "24.6 m",
+        "d": "26.6 m"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "q_no": "Q30",
+      "question": "In a certain code language, 'BELI' is coded as '6315' and 'EVIL' is coded as '9653'. What is the code for 'V' in the given code language?",
+      "options": {
+        "a": "6",
+        "b": "3",
+        "c": "9",
+        "d": "7"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "q_no": "Q31",
+      "question": "The mean marks of the following distribution is: Marks Obtained: 81 (15 students), 35 (4 students), 73 (3 students), 56 (16 students).",
+      "options": {
+        "a": "51",
+        "b": "60",
+        "c": "65",
+        "d": "74"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "q_no": "Q32",
+      "question": "Which two neighbors combined have a land border with India longer than China's border?",
+      "options": {
+        "a": "Bangladesh and Pakistan",
+        "b": "Bhutan and Afghanistan",
+        "c": "Nepal and Myanmar",
+        "d": "Pakistan and Nepal"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "q_no": "Q33",
+      "question": "What is the maximum value that must be assigned to A so that the 8-digit number 816A0408 is divisible by 4?",
+      "options": {
+        "a": "5",
+        "b": "7",
+        "c": "9",
+        "d": "4"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "q_no": "Q34",
+      "question": "Which major technological advancement characterizes the fourth generation of computers?",
+      "options": {
+        "a": "Microprocessors",
+        "b": "Transistors",
+        "c": "Vacuum tubes",
+        "d": "Integrated circuits"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "q_no": "Q35",
+      "question": "VASE is related to ZEOA in a certain way based on the English alphabetical order. In the same way, DIKW is related to HMGS. To which of the following is LQCO related, following the same logic?",
+      "options": {
+        "a": "QUXL",
+        "b": "QVZL",
+        "c": "OTXJ",
+        "d": "PUYK"
+      },
+      "correct_answer": "d"
+    },
+    {
+      "q_no": "Q36",
+      "question": "Based on the English alphabetical order, three of the following four are alike in a certain way and thus form a group. Which is the one that does not belong to that group? (Note: The odd one out is not based on the number of consonants/vowels or their position in the letter cluster.)",
+      "options": {
+        "a": "BXS",
+        "b": "DZV",
+        "c": "PLG",
+        "d": "WSN"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "q_no": "Q37",
+      "question": "Read the given statements and conclusions carefully. Statements: Some canals are rivers. Some rivers are oceans. Some oceans are ponds. Conclusions: (I) All ponds are rivers. (II) All oceans are canals. Decide which of the given conclusions logically follow(s) from the statements.",
+      "options": {
+        "a": "Neither conclusion (I) nor (II) follows",
+        "b": "Both conclusions (I) and (II) follow",
+        "c": "Only conclusion (I) follows",
+        "d": "Only conclusion (II) follows"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "q_no": "Q38",
+      "question": "Which institution released the policy report titled 'Internationalisation of Higher Education in India: Prospects, Potential, and Policy Recommendations' in December 2025?",
+      "options": {
+        "a": "All India Council for Technical Education",
+        "b": "University Grants Commission",
+        "c": "Ministry of Education",
+        "d": "NITI Aayog"
+      },
+      "correct_answer": "d"
+    },
+    {
+      "q_no": "Q39",
+      "question": "Evaluate: (-9) - (-56) ÷ (-14) + (-4) × 7",
+      "options": {
+        "a": "-40",
+        "b": "-41",
+        "c": "-43",
+        "d": "-44"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "q_no": "Q40",
+      "question": "In which language was the Sangam literature of South India, composed between 300 BCE and 300 CE, primarily written?",
+      "options": {
+        "a": "Sanskrit",
+        "b": "Pali",
+        "c": "Tamil",
+        "d": "Prakrit"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "q_no": "Q41",
+      "question": "Seven people F, G, H, I, V, W, and X are sitting around a circular table facing the centre of the table. I sits second to the right of W. I sits third to the left of F. V sits third to the left of X. G is an immediate neighbour of both W and F. How many people sit between H and G when counted from the left of H?",
+      "options": {
+        "a": "One",
+        "b": "Zero",
+        "c": "Three",
+        "d": "Two"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "q_no": "Q42",
+      "question": "Consider a hypothetical population of rabbits experiencing logistic growth. If the carrying capacity of their environment is 1000 individuals and the current population is 500, what would you expect to happen to the population?",
+      "options": {
+        "a": "The population will decline rapidly due to resource depletion.",
+        "b": "The population will continue to grow exponentially without any constraints.",
+        "c": "The population will experience a sudden crash followed by a rapid rebound.",
+        "d": "The population growth will slow down and eventually stabilize near the carrying capacity."
+      },
+      "correct_answer": "d"
+    },
+    {
+      "q_no": "Q43",
+      "question": "Which postulate of Dalton's Atomic Theory was proven wrong by the discovery of subatomic particles?",
+      "options": {
+        "a": "Isotopes of the same element have different masses.",
+        "b": "Atoms retain their identity in chemical reactions.",
+        "c": "Atoms of different elements have different masses.",
+        "d": "Matter consists of indivisible atoms."
+      },
+      "correct_answer": "d"
+    },
+    {
+      "q_no": "Q44",
+      "question": "Three friends X, Y and Z started a business by investing a sum of money in the ratio of 4 : 2 : 5. After 6 months, X withdraws half of his capital. If the sum invested by Z is ₹23,000, then out of a total annual profit of ₹37,000, what is the difference between X's and Y's profit?",
+      "options": {
+        "a": "₹3700",
+        "b": "₹5015",
+        "c": "₹3065",
+        "d": "₹4255"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "q_no": "Q45",
+      "question": "At present, Sharad is three times as old as his son, and his daughter is 3 years younger than the son. If the sum of the ages of these three people 3 years ago was 63 years, then Sharad's present age (in years) is:",
+      "options": {
+        "a": "50",
+        "b": "55",
+        "c": "45",
+        "d": "35"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "q_no": "Q46",
+      "question": "Below are given two sets of numbers: 7 - 21 - 31 - 62; 9 - 27 - 37 - 74. Which of the given options follows the same set of operations?",
+      "options": {
+        "a": "11-33-43-86",
+        "b": "12-36-46-82",
+        "c": "8-32-42-84",
+        "d": "6-18-28-76"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "q_no": "Q47",
+      "question": "Find the area of a regular hexagon whose side measures 14√3 cm.",
+      "options": {
+        "a": "509√3 cm²",
+        "b": "294√3 cm²",
+        "c": "882√3 cm²",
+        "d": "441√3 cm²"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "q_no": "Q48",
+      "question": "Which sector uses computers for online transactions, payroll processing, inventory control, and data analysis?",
+      "options": {
+        "a": "Manufacturing Plants",
+        "b": "Research",
+        "c": "Service Industry",
+        "d": "Business and Commerce"
+      },
+      "correct_answer": "d"
+    },
+    {
+      "q_no": "Q49",
+      "question": "By selling an article at 6/15 of its actual selling price, Hitesh incurs a loss of 28%. If he sells it at 89% of its actual selling price, then the profit percentage is:",
+      "options": {
+        "a": "59.2%",
+        "b": "60.5%",
+        "c": "60.2%",
+        "d": "60.7%"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "q_no": "Q50",
+      "question": "If both the roots of the quadratic equation A(8x² + 4) + Bx + 4x² − 8 = 0 and 3A(2x² + 1) + Kx + 3x² − 6 = 0 are common, then what is the value of 9B² − 16K²?",
+      "options": {
+        "a": "-1",
+        "b": "1",
+        "c": "2",
+        "d": "0"
+      },
+      "correct_answer": "d"
+    },
+    {
+      "q_no": "Q51",
+      "question": "If a : b = 2 : 3, then (7a³ − 2b³) : (b³ − a³) =",
+      "options": {
+        "a": "2 : 19",
+        "b": "3 : 11",
+        "c": "13 : 6",
+        "d": "3 : 14"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "q_no": "Q52",
+      "question": "In a triangle PQR, ∠QOR = 130°, where O is the in-centre of triangle PQR. The measure of ∠QPR is:",
+      "options": {
+        "a": "70°",
+        "b": "80°",
+        "c": "60°",
+        "d": "50°"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "q_no": "Q53",
+      "question": "Three printing machines, P, Q and R, when each is working alone, can print one lakh books in, respectively, 8 hours, 16 hours and 24 hours. These machines print books in turns of one hour each, starting with P, followed by Q and then by R. However, after a total of 9 hours, P stops functioning, but Q and R continue working alternately for an hour each, with Q working during the 10th hour, till the printing of all the one lakh books is completed. In how many hours in all did machines Q and R complete printing the remaining books?",
+      "options": {
+        "a": "9",
+        "b": "6",
+        "c": "12",
+        "d": "15"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "q_no": "Q54",
+      "question": "Which sector's share in GDP increased significantly by 1990, reflecting a shift in the Indian economy?",
+      "options": {
+        "a": "Industry",
+        "b": "Services",
+        "c": "Agriculture",
+        "d": "Mining"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "q_no": "Q55",
+      "question": "Consider the following statements about Thawar Chand Gehlot. 1. He is the first person from Madhya Pradesh to serve as the Governor of Karnataka. 2. He is the 19th Governor of Karnataka. Which of the above statements is/are correct?",
+      "options": {
+        "a": "Both 1 and 2",
+        "b": "Neither 1 nor 2",
+        "c": "Only 2",
+        "d": "Only 1"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "q_no": "Q56",
+      "question": "There is a wooden block in the form of a cube whose each side is 8 meters long. The maximum possible number of cylinders with a diameter of 1 meter and a height of 4 meters were cut from this block. The cylinders are to be painted at the rate of ₹14 per square meter. What is the total amount (in ₹) needed to paint all the cylinders if we paint the entire surface of each cylinder? (Take π = 22/7)",
+      "options": {
+        "a": "24,527",
+        "b": "23,455",
+        "c": "25,344",
+        "d": "24,325"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "q_no": "Q57",
+      "question": "This question is based on the five, three-digit numbers given below. (Left) 458 652 748 351 591 (Right). What will be the resultant if third digit of the highest number is multiplied with the third digit of lowest number?",
+      "options": {
+        "a": "8",
+        "b": "7",
+        "c": "6",
+        "d": "5"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "q_no": "Q58",
+      "question": "The sum of two numbers is 56. Their difference is 1/7 of their sum. Their LCM is:",
+      "options": {
+        "a": "96",
+        "b": "63",
+        "c": "72",
+        "d": "84"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "q_no": "Q59",
+      "question": "In a certain code language, 'CARD' is coded as '4628' and 'NEAT' is coded as '3574'. What is the code for 'A' in that language?",
+      "options": {
+        "a": "4",
+        "b": "6",
+        "c": "3",
+        "d": "7"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "q_no": "Q60",
+      "question": "What is the primary function of the water vascular system in echinoderms, such as starfish?",
+      "options": {
+        "a": "Reproduction",
+        "b": "Sensory perception",
+        "c": "Locomotion and feeding",
+        "d": "Gas exchange"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "q_no": "Q61",
+      "question": "Which Harappan city, around 2500 BCE, is noted for its dockyard, indicating advanced architectural planning for trade?",
+      "options": {
+        "a": "Mohenjodaro",
+        "b": "Kalibangan",
+        "c": "Lothal",
+        "d": "Dholavira"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "q_no": "Q62",
+      "question": "In a certain code language, A @ B means 'A is the son of B', A # B means 'A is the sister of B', A + B means 'A is the wife of B' and A % B means 'A is the father of B'. Based on the above, how is E related to B if 'E + R @ D% N # B'?",
+      "options": {
+        "a": "Mother",
+        "b": "Wife",
+        "c": "Sister",
+        "d": "Brother's wife"
+      },
+      "correct_answer": "d"
+    },
+    {
+      "q_no": "Q63",
+      "question": "(∛6859 / ∜256) × (2/57) × 168 = ?",
+      "options": {
+        "a": "28",
+        "b": "37",
+        "c": "30",
+        "d": "38"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "q_no": "Q64",
+      "question": "According to the Banking Laws (Amendment) Act, 2025, the threshold for 'substantial interest' in a bank was revised from ₹5 lakh to which of the following amounts?",
+      "options": {
+        "a": "₹5 crore",
+        "b": "₹50 lakh",
+        "c": "₹2 crore",
+        "d": "₹1 crore"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "q_no": "Q65",
+      "question": "A, B, C, D, E and F live on six different floors of the same building. The lowermost floor in the building is numbered 1, the floor above it is numbered 2, and so on till the topmost floor is numbered 6. Only five people live above D. Only two people live above A. C lives below F but above A. B does not live on an even numbered floor. How many people live below C?",
+      "options": {
+        "a": "Four",
+        "b": "One",
+        "c": "Three",
+        "d": "Two"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "q_no": "Q66",
+      "question": "The splitting of the ancient Indo–Brahma river into the Indus, Ganga, and Brahmaputra drainage systems is believed to have been primarily caused by which geological event?",
+      "options": {
+        "a": "Pleistocene upheaval",
+        "b": "River capture by erosion",
+        "c": "Volcanic eruptions",
+        "d": "Glacial melting"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "q_no": "Q67",
+      "question": "When was the India European Free Trade Association (EFTA) Trade and Economic Partnership Agreement (TEPA) signed, which came into effect on 1 October 2025?",
+      "options": {
+        "a": "March 2024",
+        "b": "August 2024",
+        "c": "January 2025",
+        "d": "September 2025"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "q_no": "Q68",
+      "question": "Which cultural and musical group celebrated its 10th anniversary in December 2025?",
+      "options": {
+        "a": "Satyajit Ray Society",
+        "b": "Kala Mandir",
+        "c": "India Panorama",
+        "d": "Robir Kiran"
+      },
+      "correct_answer": "d"
+    },
+    {
+      "q_no": "Q69",
+      "question": "The summer solstice occurs when the Sun is directly overhead at which of the following latitudes?",
+      "options": {
+        "a": "Tropic of Capricorn",
+        "b": "Arctic Circle",
+        "c": "Equator",
+        "d": "Tropic of Cancer"
+      },
+      "correct_answer": "d"
+    },
+    {
+      "q_no": "Q70",
+      "question": "At what rate (in percentage) per year will a sum of money double itself in 16 years on simple interest?",
+      "options": {
+        "a": "4.25",
+        "b": "12.5",
+        "c": "8.25",
+        "d": "6.25"
+      },
+      "correct_answer": "d"
+    },
+    {
+      "q_no": "Q71",
+      "question": "Select the set in which the numbers are related in the same way as are the numbers of the following sets: (20, 46, 2) and (32, 136, 24).",
+      "options": {
+        "a": "(6, 42, 10)",
+        "b": "(32, 93, 11)",
+        "c": "(13, 25, 1)",
+        "d": "(17, 78, 16)"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "q_no": "Q72",
+      "question": "A file name is highlighted, and you want to copy it to another folder while keeping it in the original folder as well. Which pair of steps matches this task?",
+      "options": {
+        "a": "Press Ctrl + C, then Ctrl + B",
+        "b": "Press Ctrl + C, then Ctrl + V",
+        "c": "Press Ctrl + X, then Ctrl + V",
+        "d": "Press Ctrl + S, then Ctrl + V"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "q_no": "Q73",
+      "question": "There are 78 members in group A, 22 members in group B and 34 members in group C. All the members of these groups went to a restaurant. The average amounts spent on each member of groups A, B and C are ₹136, ₹383 and ₹457, respectively. The overall average amount (in ₹) spent per member is:",
+      "options": {
+        "a": "256",
+        "b": "261",
+        "c": "258",
+        "d": "255"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "q_no": "Q74",
+      "question": "In 2025, which Indian High Court issued the pioneering 'Policy Regarding the Use of AI Tools in District Judiciary', becoming the first in the country to frame comprehensive guidelines for artificial intelligence (AI) use in judicial work?",
+      "options": {
+        "a": "Delhi High Court",
+        "b": "Madras High Court",
+        "c": "Bombay High Court",
+        "d": "Kerala High Court"
+      },
+      "correct_answer": "d"
+    },
+    {
+      "q_no": "Q75",
+      "question": "Which of the following sectors observed a negative growth rate in Real GVA (Gross Value Added) during Q1 of FY 2025-26 as per the report published by NSO and MoSPI?",
+      "options": {
+        "a": "Construction",
+        "b": "Tertiary Sector",
+        "c": "Agriculture and Allied",
+        "d": "Mining & Quarrying"
+      },
+      "correct_answer": "d"
+    },
+    {
+      "q_no": "Q76",
+      "question": "Read the given statements and conclusions carefully. Statements: All bananas are apples. All apples are grapes. Some grapes are oranges. Conclusions: (I) All grapes are bananas. (II) All oranges are apples. Decide which of the given conclusions logically follow(s) from the statements.",
+      "options": {
+        "a": "Only conclusion (I) follows",
+        "b": "Only conclusion (II) follows",
+        "c": "Both conclusions (I) and (II) follow",
+        "d": "Neither conclusion (I) nor (II) follows"
+      },
+      "correct_answer": "d"
+    },
+    {
+      "q_no": "Q77",
+      "question": "P sells an item to Q at 50% profit. Q sells the same item to R at 60% loss. If R paid ₹3234 for the item, then at what price (in ₹) is the item purchased by P?",
+      "options": {
+        "a": "5390",
+        "b": "5387",
+        "c": "5391",
+        "d": "5393"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "q_no": "Q78",
+      "question": "This question is based on the five, three-digit numbers: (Left) 318 745 472 123 672 (Right). If all the numbers are arranged in the ascending order, the position of how many numbers will remain unchanged?",
+      "options": {
+        "a": "0",
+        "b": "3",
+        "c": "1",
+        "d": "2"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "q_no": "Q79",
+      "question": "In which of the following states is the slash and burn agriculture known as 'Kuruwa'?",
+      "options": {
+        "a": "Jharkhand",
+        "b": "Madhya Pradesh",
+        "c": "Arunachal Pradesh",
+        "d": "Rajasthan"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "q_no": "Q80",
+      "question": "If 'A' stands for '÷', 'B' stands for '×', 'C' stands for '+' and 'D' stands for '−', then what will come in place of the question mark (?) in the following equation? 20 D 8 A 2 C 1 B 5 = ?",
+      "options": {
+        "a": "22",
+        "b": "20",
+        "c": "21",
+        "d": "23"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "q_no": "Q81",
+      "question": "A, B, C, D, E and F live on six different floors of the same building. The lowermost floor in the building is numbered 1, the floor above it is numbered 2 and so on till the topmost floor, which is numbered 6. Only two people live below C. Only two people live between B and C. A lives above E but below C. F does not live above D. Who lives immediately below B?",
+      "options": {
+        "a": "C",
+        "b": "D",
+        "c": "F",
+        "d": "A"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "q_no": "Q82",
+      "question": "Select the set in which the numbers are related in the same way as are the numbers of the following sets: (6, 3, 14) and (14, 8, 27).",
+      "options": {
+        "a": "(19, 12, 36)",
+        "b": "(14, 87, 26)",
+        "c": "(6, 15, 21)",
+        "d": "(16, 25, 31)"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "q_no": "Q83",
+      "question": "A dealer buys two articles X and Y for ₹500 each. He marks each of them at the same price. He sells X by giving two successive discounts of 50% and 28% and still earns ₹958 as profit. If he sells Y at a single discount of 77%, then what is the profit percentage on Y?",
+      "options": {
+        "a": "86.3%",
+        "b": "86%",
+        "c": "85%",
+        "d": "85.3%"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "q_no": "Q84",
+      "question": "Which of the following letter-clusters should replace # and % so that the pattern and relationship followed between the letter-cluster pair on the left side of :: is the same as that on the right side of ::? # : IGC :: TRN : %",
+      "options": {
+        "a": "# = LGY; % = QJH",
+        "b": "# = LJF; % = QOK",
+        "c": "# = LJK; % = QNJ",
+        "d": "# = JKF; % = QJH"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "q_no": "Q85",
+      "question": "Which European power was the last to arrive in India and the last to leave during the pre-independence period?",
+      "options": {
+        "a": "Portuguese",
+        "b": "Americans",
+        "c": "French",
+        "d": "Dutch"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "q_no": "Q86",
+      "question": "Based on the alphabetical order, three of the following four are alike in a certain way and thus form a group. Which one does not belong to that group?",
+      "options": {
+        "a": "UWR",
+        "b": "SUP",
+        "c": "KMG",
+        "d": "EGB"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "q_no": "Q87",
+      "question": "Which of the following prominent leaders led the Bardoli Satyagraha (1928)?",
+      "options": {
+        "a": "Gopalakrishna Gokhale",
+        "b": "C. Rajagopalachari",
+        "c": "Bal Gangadhar Tilak",
+        "d": "Sardar Vallabhbhai Patel"
+      },
+      "correct_answer": "d"
+    },
+    {
+      "q_no": "Q88",
+      "question": "Find the third proportional to the numbers 16 and 24.",
+      "options": {
+        "a": "40",
+        "b": "36",
+        "c": "32",
+        "d": "30"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "q_no": "Q89",
+      "question": "What was the route length of Indian Railways in 2019-2020?",
+      "options": {
+        "a": "67,956 km",
+        "b": "66,935 km",
+        "c": "66,918 km",
+        "d": "67,415 km"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "q_no": "Q90",
+      "question": "Which of the following is a Tibeto-Burman language included in the Eighth Schedule of the Indian Constitution?",
+      "options": {
+        "a": "Santhali",
+        "b": "Maithili",
+        "c": "Bodo",
+        "d": "Konkani"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "q_no": "Q91",
+      "question": "Which of the following is a tertiary activity?",
+      "options": {
+        "a": "Shoe shining",
+        "b": "Extracting minerals",
+        "c": "Steel making",
+        "d": "Metal working"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "q_no": "Q92",
+      "question": "The Group of Forty who advised and assisted the Sultan in administering the Delhi Sultanate was established by which of the following rulers?",
+      "options": {
+        "a": "Balban",
+        "b": "Qutbuddin Aibak",
+        "c": "Iltutmish",
+        "d": "Alauddin Khalji"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "q_no": "Q93",
+      "question": "Each of the digits in the number 15762349 is arranged in ascending order from left to right. The position of how many digits will remain unchanged as compared to that in the original number?",
+      "options": {
+        "a": "Two",
+        "b": "One",
+        "c": "None",
+        "d": "Three"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "q_no": "Q94",
+      "question": "Which of the following administrative innovations is attributed to Alauddin Khilji's reign?",
+      "options": {
+        "a": "Regulation of market prices and rationing",
+        "b": "Foundation of Diwan-i-Arz for military reforms",
+        "c": "Establishment of iqta system",
+        "d": "Creation of mansabdari system"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "q_no": "Q95",
+      "question": "Which of the following best represents a customized application software?",
+      "options": {
+        "a": "Spreadsheet software",
+        "b": "Media player",
+        "c": "Payroll management system for a company",
+        "d": "Image viewer"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "q_no": "Q96",
+      "question": "The 86th Amendment added a new Fundamental Duty related to which of the following?",
+      "options": {
+        "a": "Safeguarding public property",
+        "b": "Protecting environment",
+        "c": "Educating children",
+        "d": "Defending the nation"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "q_no": "Q97",
+      "question": "The weekly journal Young India was associated with whom among the following?",
+      "options": {
+        "a": "Bal Gangadhar Tilak",
+        "b": "Mahatma Gandhi",
+        "c": "Jawaharlal Nehru",
+        "d": "Gopal Krishna Gokhale"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "q_no": "Q98",
+      "question": "After a Constitution Amendment Bill relating to the Directive Principles of State Policy is passed by the Parliament, what is the next mandatory constitutional step for it to become a law?",
+      "options": {
+        "a": "Notification in the Gazette",
+        "b": "Ratification by State Legislatures",
+        "c": "President's Assent",
+        "d": "Approval by the Supreme Court"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "q_no": "Q99",
+      "question": "Five students – Isha, Kavita, Meenal, Nisha, and Priti – scored different marks. Who scored the second highest? (I) Meenal scored more than Isha but less than Nisha. (II) Priti scored more than Meenal but less than Nisha.",
+      "options": {
+        "a": "Both statements I and II together are NOT sufficient to answer the question",
+        "b": "Data in Statement II alone is sufficient to answer the question while data in Statement I is not",
+        "c": "Data in Statement I alone is sufficient to answer the question while data in Statement II is not",
+        "d": "Both statements I and II together (and not statement I alone or statement II alone) are sufficient to answer the question"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "q_no": "Q100",
+      "question": "What should come in place of '?' in the given series? 32 52 68 80 88 ?",
+      "options": {
+        "a": "96",
+        "b": "94",
+        "c": "90",
+        "d": "92"
+      },
+      "correct_answer": "d"
+    }
+  ]
+}

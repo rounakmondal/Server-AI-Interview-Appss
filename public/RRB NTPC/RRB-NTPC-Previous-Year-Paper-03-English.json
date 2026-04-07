@@ -1,0 +1,159 @@
+{
+  "exam_title": "RRB NTPC Previous Year Paper 03",
+  "test_booklet_series": null,
+  "subject": "General Studies / Mathematics / Reasoning",
+  "total_marks": 100,
+  "time_allowed": "90 minutes",
+  "questions": [
+    {
+      "q_no": "Q1",
+      "question": "What among the following is FALSE about the Richter scale?",
+      "options": {
+        "A": "It was developed by Charles Richter and Gutenberg in 1935.",
+        "B": "It is a logarithmic scale",
+        "C": "It can be measured using a seismometer",
+        "D": "Magnitude of 8-9 on a Richter scale means it is a micro earthquake."
+      }
+    },
+    {
+      "q_no": "Q3",
+      "question": "Which device converts digital signal into analog signal?",
+      "options": {
+        "A": "WiFi",
+        "B": "Modem",
+        "C": "Port",
+        "D": "USB"
+      }
+    },
+    {
+      "q_no": "Q7",
+      "question": "Which is India's longest river that does not flow into the sea?",
+      "options": {
+        "A": "Ganga",
+        "B": "Jamuna",
+        "C": "Tapti",
+        "D": "Kaveri"
+      }
+    },
+    {
+      "q_no": "Q8",
+      "question": "What is the most cultivated crop in India?",
+      "options": {
+        "A": "Ragi",
+        "B": "Wheat",
+        "C": "Corn",
+        "D": "Rice"
+      }
+    },
+    {
+      "q_no": "Q12",
+      "question": "Which vitamin among the following is crucial for blood clotting?",
+      "options": {
+        "A": "Vitamin K",
+        "B": "Vitamin D",
+        "C": "Vitamin A",
+        "D": "Vitamin E"
+      }
+    },
+    {
+      "q_no": "Q15",
+      "question": "According to the Swachh Bharat 2015 survey, which is the cleanest city in India?",
+      "options": {
+        "A": "Chennai",
+        "B": "Delhi",
+        "C": "Ahmedabad",
+        "D": "Mysore"
+      }
+    },
+    {
+      "q_no": "Q22",
+      "question": "Name the capital of Uganda?",
+      "options": {
+        "A": "Mogadishu",
+        "B": "Kampala",
+        "C": "Lusaka",
+        "D": "Bulenga"
+      }
+    },
+    {
+      "q_no": "Q25",
+      "question": "Which is NOT an Operating System?",
+      "options": {
+        "A": "OS X",
+        "B": "Windows 7",
+        "C": "DOS",
+        "D": "C++"
+      }
+    },
+    {
+      "q_no": "Q28",
+      "question": "What is most common treatment for bacterial infections in humans?",
+      "options": {
+        "A": "Aspirin",
+        "B": "Antibodies",
+        "C": "Antibiotics",
+        "D": "Antigen"
+      }
+    },
+    {
+      "q_no": "Q31",
+      "question": "What is an archipelago?",
+      "options": {
+        "A": "Group, chain, cluster or collection of Islands",
+        "B": "The meeting of Land and Sea",
+        "C": "An Architect's paradise",
+        "D": "A type of Church"
+      }
+    },
+    {
+      "q_no": "Q36",
+      "question": "Which among the following is popularly called Laughing Gas?",
+      "options": {
+        "A": "Nitric oxide",
+        "B": "Nitrogen dioxide",
+        "C": "Nitrous oxide",
+        "D": "Nitrogen peroxide"
+      }
+    },
+    {
+      "q_no": "Q42",
+      "question": "Indian currency notes are printed in which place?",
+      "options": {
+        "A": "New Delhi",
+        "B": "Bombay",
+        "C": "Nashik",
+        "D": "Agra"
+      }
+    },
+    {
+      "q_no": "Q55",
+      "question": "Where is the Masai Mara National Reserve?",
+      "options": {
+        "A": "Mali",
+        "B": "Kenya",
+        "C": "Gabon",
+        "D": "Zambia"
+      }
+    },
+    {
+      "q_no": "Q64",
+      "question": "Which is the capital of Sri Lanka?",
+      "options": {
+        "A": "Colombo",
+        "B": "Kandy",
+        "C": "Jayawardenepura Kotte",
+        "D": "Anuradhapura"
+      }
+    },
+    {
+      "q_no": "Q100",
+      "question": "The Dibru-Saikhowa, Nameri and Orang National Park are all found in which State?",
+      "options": {
+        "A": "Andhra Pradesh",
+        "B": "Assam",
+        "C": "Arunanchal Pradesh",
+        "D": "Uttarakhand"
+      }
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "exam_title": "RRB NTPC Previous Year Paper 17",
+  "test_booklet_series": null,
+  "subject": "General Awareness, Arithmetic, and General Intelligence & Reasoning",
+  "total_marks": 100,
+  "time_allowed": "90 minutes",
+  "questions": [
+    {
+      "q_no": "Q1",
+      "question": "Find the odd one out: Ostrich, Crow, Pigeon, Sparrow.",
+      "options": {
+        "A": "Ostrich",
+        "B": "Pigeon",
+        "C": "Crow",
+        "D": "Sparrow"
+      }
+    },
+    {
+      "q_no": "Q2",
+      "question": "Simplify √(1-sin²θ)÷(1-cos²θ)",
+      "options": {
+        "A": "Cot θ",
+        "B": "Tan θ",
+        "C": "Sec θ",
+        "D": "Cosec θ"
+      }
+    },
+    {
+      "q_no": "Q3",
+      "question": "Pick the odd one out: 28, 44, 68, 80, 92",
+      "options": {
+        "A": "28",
+        "B": "44",
+        "C": "80",
+        "D": "92"
+      }
+    },
+    {
+      "q_no": "Q4",
+      "question": "How much is one decalitre?",
+      "options": {
+        "A": "10 kilolitre",
+        "B": "10 litre",
+        "C": "100 litre",
+        "D": "10 centilitre"
+      }
+    },
+    {
+      "q_no": "Q5",
+      "question": "Which river used to be called the 'Sorrow of Bengal'?",
+      "options": {
+        "A": "Brahamputra",
+        "B": "Hooghly",
+        "C": "Bhagirathi",
+        "D": "Damodar"
+      }
+    },
+    {
+      "q_no": "Q6",
+      "question": "IF TEACHER: BOOKS, DOCTOR:?",
+      "options": {
+        "A": "Chalk",
+        "B": "Cycle",
+        "C": "Stethoscope",
+        "D": "Apron"
+      }
+    },
+    {
+      "q_no": "Q7",
+      "question": "In BRICS, which country is denoted by 'B'?",
+      "options": {
+        "A": "Bangladesh",
+        "B": "Belgium",
+        "C": "Brazil",
+        "D": "Bahrain"
+      }
+    },
+    {
+      "q_no": "Q94",
+      "question": "What is the shape of the Earth?",
+      "options": {
+        "A": "Perfect hemisphere",
+        "B": "Mostly flat",
+        "C": "Perfect Sphere",
+        "D": "Oblate Sphere"
+      }
+    },
+    {
+      "q_no": "Q95",
+      "question": "Which two teams played the first official international cricket match?",
+      "options": {
+        "A": "England and Australia",
+        "B": "England and West Indies",
+        "C": "USA and Canada",
+        "D": "Australia and India"
+      }
+    },
+    {
+      "q_no": "Q96",
+      "question": "Which is the smallest continent?",
+      "options": {
+        "A": "Australia",
+        "B": "Antarctica",
+        "C": "Africa",
+        "D": "South America"
+      }
+    },
+    {
+      "q_no": "Q97",
+      "question": "A man sells a table for Rs. 4200 at 25% loss. At what price must he sell to get a profit of 25%?",
+      "options": {
+        "A": "1,400",
+        "B": "8,400",
+        "C": "7,000",
+        "D": "5,600"
+      }
+    },
+    {
+      "q_no": "Q98",
+      "question": "As the frequency of a wave increases, what happens to its wavelength?",
+      "options": {
+        "A": "It increases",
+        "B": "It remains same",
+        "C": "It decreases",
+        "D": "There is no connection between the two"
+      }
+    }
+  ]
+}
