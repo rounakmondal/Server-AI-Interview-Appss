@@ -267,21 +267,23 @@ async function callGroq(systemPrompt, userPrompt, maxTokens = 8000) {
     const timer = setTimeout(() => controller.abort(), 60000); // 60s for large response
 
     try {
-      const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
-        method: 'POST',
-        headers: { Authorization: `Bearer ${apiKey}`, 'Content-Type': 'application/json' },
-        body: JSON.stringify({
+      const { callLLMWithFallback, convertGeminiToOpenAI } = await import('../utils/llmFallback.js');
+      
+      const res = await callLLMWithFallback(
+        apiKey,
+        [
+          { role: 'system', content: systemPrompt },
+          { role: 'user',   content: userPrompt   },
+        ],
+        {
           model,
           temperature: 0.7,
           max_tokens: effectiveTokens,
-          top_p: 0.9,
-          messages: [
-            { role: 'system', content: systemPrompt },
-            { role: 'user',   content: userPrompt   },
-          ],
-        }),
-        signal: controller.signal,
-      });
+          top_p: 0.9
+        },
+        controller.signal,
+        'company-interview'
+      );
       clearTimeout(timer);
 
       if (!res.ok) {
@@ -291,7 +293,9 @@ async function callGroq(systemPrompt, userPrompt, maxTokens = 8000) {
       }
 
       const data    = await res.json();
-      const content = data.choices?.[0]?.message?.content?.trim();
+      // Handle Gemini response format (different from OpenAI)
+      const finalData = data.candidates ? convertGeminiToOpenAI(data) : data;
+      const content = finalData.choices?.[0]?.message?.content?.trim();
       if (!content) { console.warn(`[company-interview] model ${model} empty content`); continue; }
 
       console.log(`[company-interview] success with ${model}`);

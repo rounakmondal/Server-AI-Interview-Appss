@@ -23,6 +23,8 @@ function delay(ms) {
 async function callGroq(systemPrompt, userPrompt, maxTokens = 8000) {
     const apiKey = process.env.GROQ_API_KEY;
     if (!apiKey) throw new Error('GROQ_API_KEY is not configured');
+    
+    const { callLLMWithFallback, convertGeminiToOpenAI } = await import('../utils/llmFallback.js');
 
     let lastError = null;
 
@@ -32,23 +34,20 @@ async function callGroq(systemPrompt, userPrompt, maxTokens = 8000) {
             const controller = new AbortController();
             const timer = setTimeout(() => controller.abort(), 60_000);
             try {
-                const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
-                    method: 'POST',
-                    headers: {
-                        Authorization: `Bearer ${apiKey}`,
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
+                const res = await callLLMWithFallback(
+                    apiKey,
+                    [
+                        { role: 'system', content: systemPrompt },
+                        { role: 'user', content: userPrompt },
+                    ],
+                    {
                         model,
                         temperature: 0.4,
-                        max_tokens: maxTokens,
-                        messages: [
-                            { role: 'system', content: systemPrompt },
-                            { role: 'user', content: userPrompt },
-                        ],
-                    }),
-                    signal: controller.signal,
-                });
+                        max_tokens: maxTokens
+                    },
+                    controller.signal,
+                    'exam-syllabus'
+                );
                 clearTimeout(timer);
 
                 if (res.status === 429) {
@@ -75,7 +74,9 @@ async function callGroq(systemPrompt, userPrompt, maxTokens = 8000) {
                 }
 
                 const data = await res.json();
-                const content = data.choices?.[0]?.message?.content?.trim();
+                // Handle Gemini response format (different from OpenAI)
+                const finalData = data.candidates ? convertGeminiToOpenAI(data) : data;
+                const content = finalData.choices?.[0]?.message?.content?.trim();
                 if (!content) {
                     console.warn(`[exam-syllabus] ${model} empty content`);
                     lastError = new Error(`${model} empty content`);

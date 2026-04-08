@@ -4,8 +4,9 @@ import {
     INTERVIEW_COACH_SYSTEM_PROMPT,
     BATCH_QUESTION_REVIEWS_INSTRUCTION
 } from '../prompts/interviewer.js';
+import { callLLMWithFallback, convertGeminiToOpenAI } from '../utils/llmFallback.js';
 
-// Initialize Groq API client
+// Initialize LLM API client with Groq → Gemini fallback
 async function getGroqChatCompletion(messages, maxTokens = 500) {
     const apiKey = process.env.GROQ_API_KEY;
     if (!apiKey) {
@@ -23,51 +24,51 @@ async function getGroqChatCompletion(messages, maxTokens = 500) {
     let lastError = null;
     
     for (const model of models) {
-        console.log(`Trying Groq model: ${model}`);
+        console.log(`Trying LLM model: ${model}`);
 
         // Add timeout using AbortController
         const controller = new AbortController();
         const timeoutId = setTimeout(() => controller.abort(), 30000); // 30 second timeout
 
         try {
-            const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
-                method: "POST",
-                headers: {
-                    "Authorization": `Bearer ${apiKey}`,
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    messages: messages,
+            const response = await callLLMWithFallback(
+                apiKey,
+                messages,
+                {
                     model: model,
                     temperature: 0.7,
                     max_tokens: maxTokens,
                     top_p: 0.9
-                }),
-                signal: controller.signal
-            });
+                },
+                controller.signal,
+                'interview'
+            );
 
             clearTimeout(timeoutId);
 
             if (!response.ok) {
                 const error = await response.json();
                 console.warn(`Model ${model} API error:`, error.error?.message || response.statusText);
-                lastError = new Error(`Groq API error: ${error.error?.message || response.statusText}`);
+                lastError = new Error(`API error: ${error.error?.message || response.statusText}`);
                 continue; // Try next model
             }
 
             const data = await response.json();
             
-            // Log token usage (compact)
-            console.log(`Model ${model} - tokens: ${data.usage?.total_tokens || '?'}, finish: ${data.choices?.[0]?.finish_reason || '?'}`);
+            // Handle Gemini response format (different from OpenAI)
+            const finalData = data.candidates ? convertGeminiToOpenAI(data) : data;
             
-            if (!data.choices || !data.choices[0] || !data.choices[0].message) {
+            // Log token usage (compact)
+            console.log(`Model ${model} - tokens: ${finalData.usage?.total_tokens || '?'}, finish: ${finalData.choices?.[0]?.finish_reason || '?'}`);
+            
+            if (!finalData.choices || !finalData.choices[0] || !finalData.choices[0].message) {
                 console.warn(`Model ${model} invalid response structure`);
-                lastError = new Error('Invalid API response structure: ' + JSON.stringify(data));
+                lastError = new Error('Invalid API response structure: ' + JSON.stringify(finalData));
                 continue; // Try next model
             }
             
-            const content = data.choices[0].message.content;
-            const finishReason = data.choices[0].finish_reason;
+            const content = finalData.choices[0].message.content;
+            const finishReason = finalData.choices[0].finish_reason;
             
             // Check if content is null or empty
             if (content === null || content === undefined || content.trim() === '') {

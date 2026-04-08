@@ -1,5 +1,8 @@
 
-// Fallback to Groq for text-only if OpenAI not available
+// Import fallback utility for Groq → Gemini fallback
+import { callLLMWithFallback, convertGeminiToOpenAI } from '../utils/llmFallback.js';
+
+// Fallback to Groq for text-only if OpenAI not available, with Gemini fallback
 async function getGroqChatCompletion(messages, maxTokens = 500) {
     const apiKey = process.env.GROQ_API_KEY;
     if (!apiKey) {
@@ -16,46 +19,45 @@ async function getGroqChatCompletion(messages, maxTokens = 500) {
     let lastError = null;
 
     for (const model of models) {
-        console.log(`Trying Groq model: ${model}`);
+        console.log(`Trying model: ${model}`);
 
         const controller = new AbortController();
         const timeoutId = setTimeout(() => controller.abort(), 30000);
 
         try {
-            const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
-                method: "POST",
-                headers: {
-                    "Authorization": `Bearer ${apiKey}`,
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    messages: messages,
+            const response = await callLLMWithFallback(
+                apiKey,
+                messages,
+                {
                     model: model,
                     temperature: 0.7,
                     max_tokens: maxTokens,
                     top_p: 0.9
-                }),
-                signal: controller.signal
-            });
+                },
+                controller.signal,
+                'study-bot'
+            );
   
             clearTimeout(timeoutId);
 
             if (!response.ok) {
                 const error = await response.json();
                 console.warn(`Model ${model} API error:`, error.error?.message || response.statusText);
-                lastError = new Error(`Groq API error: ${error.error?.message || response.statusText}`);
+                lastError = new Error(`API error: ${error.error?.message || response.statusText}`);
                 continue;
             }
 
             const data = await response.json();
+            // Handle Gemini response format (different from OpenAI)
+            const finalData = data.candidates ? convertGeminiToOpenAI(data) : data;
 
-            if (!data.choices || !data.choices[0] || !data.choices[0].message) {
+            if (!finalData.choices || !finalData.choices[0] || !finalData.choices[0].message) {
                 console.warn(`Model ${model} invalid response structure`);
                 lastError = new Error('Invalid API response structure');
                 continue;
             }
 
-            const content = data.choices[0].message.content;
+            const content = finalData.choices[0].message.content;
 
             if (!content || content.trim() === '') {
                 console.warn(`Model ${model} returned empty content`);
@@ -73,12 +75,12 @@ async function getGroqChatCompletion(messages, maxTokens = 500) {
             } else {
                 lastError = error;
             }
-            console.warn(`Model ${model} failed:`, lastError.message);
+            console.warn(`Model ${model} error:`, lastError.message);
             continue;
         }
     }
 
-    throw lastError || new Error('All models failed');
+    throw lastError || new Error('All models failed including Gemini fallback');
 }
 
 // Generate study bot response

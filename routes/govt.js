@@ -2,6 +2,7 @@ import { Router } from 'express';
 import { ObjectId } from 'mongodb';
 import { getDb } from '../database/mongo.js';
 import { authMiddleware } from '../middleware/auth.js';
+import { callLLMWithFallback } from '../utils/llmFallback.js';
 
 const router = Router();
 
@@ -33,55 +34,23 @@ async function callGroq(systemPrompt, userPrompt, maxTokens = 2000) {
   const apiKey = process.env.GROQ_API_KEY;
   if (!apiKey) throw new Error('GROQ_API_KEY not set');
 
-  for (const model of GROQ_MODELS) {
-    // Cap tokens to what this model can reliably handle
-    const effectiveTokens = Math.min(maxTokens, MODEL_TOKEN_CAPS[model] ?? 2000);
-
-    const controller = new AbortController();
-    const timer = setTimeout(() => controller.abort(), 30000);
-    try {
-      const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
-        method: 'POST',
-        headers: { Authorization: `Bearer ${apiKey}`, 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          model,
-          temperature: 0.7,
-          max_tokens: effectiveTokens,
-          top_p: 0.9,
-          messages: [
-            { role: 'system', content: systemPrompt },
-            { role: 'user',   content: userPrompt   },
-          ],
-        }),
-        signal: controller.signal,
-      });
-      clearTimeout(timer);
-
-      if (!res.ok) {
-        const errText = await res.text().catch(() => '');
-        console.warn(`[govt] model ${model} HTTP ${res.status}: ${errText.slice(0, 120)}`);
-        continue;
-      }
-
-      const data    = await res.json();
-      const content = data.choices?.[0]?.message?.content?.trim();
-      const finishReason = data.choices?.[0]?.finish_reason;
-
-      if (!content) { console.warn(`[govt] model ${model} empty content`); continue; }
-
-      // Warn if the model stopped because it ran out of tokens (likely truncated JSON)
-      if (finishReason === 'length') {
-        console.warn(`[govt] model ${model} hit token limit (finish_reason=length) — response may be truncated`);
-      }
-
-      console.log(`[govt] success with ${model} (finish_reason=${finishReason}, tokens=${effectiveTokens})`);
-      return content;
-    } catch (err) {
-      clearTimeout(timer);
-      console.warn(`[govt] model ${model} error:`, err.message);
-    }
-  }
-  throw new Error('All Groq models failed');
+  // Use fallback utility which tries Groq first, then falls back to Gemini
+  return await callLLMWithFallback(
+    apiKey,
+    [
+      { role: 'system', content: systemPrompt },
+      { role: 'user', content: userPrompt }
+    ],
+    {
+      model: 'llama-3.3-70b-versatile',
+      temperature: 0.7,
+      max_tokens: maxTokens,
+      top_p: 0.9,
+      stream: false
+    },
+    null,
+    'govt-questions'
+  );
 }
 
 // ─── JSON Extraction & Repair ─────────────────────────────────────────────────

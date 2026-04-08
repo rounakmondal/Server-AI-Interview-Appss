@@ -30,6 +30,8 @@ import skillMatrixRoutes from './routes/skillMatrix.js';
 import storyRoutes from './routes/story.js';
 import examSyllabusSearchRoutes from './routes/examSyllabusSearch.js';
 import examCalendarRoutes from './routes/examCalendar.js';
+import virtualExamRoutes, { initVirtualExamDB } from './routes/virtualExam.js';
+import { sendTestResultEmail } from './routes/testResultEmail.js';
 import { handleTriggerDailyPost } from './routes/handleTriggerDailyPost.js';
 
 // Load environment variables
@@ -106,6 +108,9 @@ app.use('/api/auth', authRoutes);
     app.post('/api/contact', handleContact);
   app.post("/api/extract-pdf", handleExtractPdf);
 
+// Test Result Email route
+app.post('/api/test-result-email', sendTestResultEmail);
+
 // ── Exam Prep routes ──────────────────────────────────────────────────────────
 app.use('/api', examSyllabusRoutes);   // GET /api/exams, /api/exams/:id/subjects, etc.
 app.use('/api', examProgressRoutes);   // GET /api/progress/:userId/:examId
@@ -134,6 +139,9 @@ app.use('/api', examSyllabusSearchRoutes);  // GET /api/exam-syllabus?q=...
 
 // Exam Calendar (static 2026 dates)
 app.use('/api', examCalendarRoutes);  // GET /api/exam-calendar
+
+// Virtual Exam Room (Online Testing Platform)
+app.use('/api/virtual-exam', virtualExamRoutes);  // POST /api/virtual-exam/questions, /submit, etc.
 
 // Error handling middleware
 app.use((err, req, res, next) => {
@@ -164,8 +172,14 @@ async function startServer() {
     try {
         // Initialize databases
         await initializeDatabase();
+        
+        let mongoDb = null;
         try {
-            await connectMongo();
+            mongoDb = await connectMongo();
+            // Initialize Virtual Exam Database collections and indexes
+            if (mongoDb) {
+                await initVirtualExamDB(mongoDb);
+            }
         } catch (mongoErr) {
             const msg = mongoErr.message.split('\n')[0];
             if (msg.includes('MONGO_URI not set') || msg.includes('MONGO_URI is invalid')) {

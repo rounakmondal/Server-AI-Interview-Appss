@@ -1,7 +1,8 @@
 import { chapterQueries, subjectQueries, examQueries } from '../database/examDb.js';
+import { callLLMWithFallback, streamLLMWithFallback, convertGeminiToOpenAI } from '../utils/llmFallback.js';
 
 /**
- * AI Agent Service - Handles streaming responses from Groq API
+ * AI Agent Service - Handles streaming responses from Groq API with fallback to Gemini
  * Used for chapter guides, study assistance, and exam prep
  */
 
@@ -257,33 +258,34 @@ export async function getChapterGuideFull(chapterId, userQuery, chapterName) {
         const timer = setTimeout(() => controller.abort(), 60_000);
 
         try {
-            const groqRes = await fetch('https://api.groq.com/openai/v1/chat/completions', {
-                method: 'POST',
-                headers: {
-                    Authorization: `Bearer ${apiKey}`,
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
+            const messages = [
+                { role: 'system', content: systemPrompt },
+                { role: 'user', content: safeQuery },
+            ];
+            
+            const response = await callLLMWithFallback(
+                apiKey,
+                messages,
+                {
                     model: GROQ_MODELS[0],
                     temperature: 0.7,
-                    max_tokens: 1000,
-                    stream: false,
-                    messages: [
-                        { role: 'system', content: systemPrompt },
-                        { role: 'user', content: safeQuery },
-                    ],
-                }),
-                signal: controller.signal,
-            });
+                    max_tokens: 1000
+                },
+                controller.signal,
+                'chapter-guide'
+            );
 
             clearTimeout(timer);
 
-            if (!groqRes.ok) {
-                throw new Error(`AI service error: ${groqRes.status}`);
+            if (!response.ok) {
+                throw new Error(`AI service error: ${response.status}`);
             }
 
-            const data = await groqRes.json();
-            const content = data.choices?.[0]?.message?.content;
+            const data = await response.json();
+            
+            // Handle Gemini response format (different from OpenAI)
+            const finalData = data.candidates ? convertGeminiToOpenAI(data) : data;
+            const content = finalData.choices?.[0]?.message?.content;
 
             if (!content) {
                 throw new Error('No response from AI service');
@@ -300,7 +302,7 @@ export async function getChapterGuideFull(chapterId, userQuery, chapterName) {
 }
 
 /**
- * Custom AI query with flexible system prompt
+ * Custom AI query with flexible system prompt (with Groq → Gemini fallback)
  * @param {string} systemPrompt - Custom system prompt
  * @param {string} userQuery - User query
  * @param {Object} options - Options { stream: boolean, maxTokens: number }
@@ -316,37 +318,38 @@ export async function queryAI(systemPrompt, userQuery, options = {}) {
         const timer = setTimeout(() => controller.abort(), 60_000);
 
         try {
-            const groqRes = await fetch('https://api.groq.com/openai/v1/chat/completions', {
-                method: 'POST',
-                headers: {
-                    Authorization: `Bearer ${apiKey}`,
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
+            const messages = [
+                { role: 'system', content: systemPrompt },
+                { role: 'user', content: safeQuery },
+            ];
+            
+            const response = await callLLMWithFallback(
+                apiKey,
+                messages,
+                {
                     model: GROQ_MODELS[0],
                     temperature: 0.7,
                     max_tokens: maxTokens,
-                    stream,
-                    messages: [
-                        { role: 'system', content: systemPrompt },
-                        { role: 'user', content: safeQuery },
-                    ],
-                }),
-                signal: controller.signal,
-            });
+                    stream
+                },
+                controller.signal,
+                'custom-query'
+            );
 
             clearTimeout(timer);
 
-            if (!groqRes.ok) {
-                throw new Error(`AI service error: ${groqRes.status}`);
+            if (!response.ok) {
+                throw new Error(`AI service error: ${response.status}`);
             }
 
             if (stream) {
-                return groqRes; // Return response for streaming
+                return response; // Return response for streaming
             }
 
-            const data = await groqRes.json();
-            return data.choices?.[0]?.message?.content || 'No response from AI';
+            const data = await response.json();
+            // Handle Gemini response format (different from OpenAI)
+            const finalData = data.candidates ? convertGeminiToOpenAI(data) : data;
+            return finalData.choices?.[0]?.message?.content || 'No response from AI';
         } catch (err) {
             clearTimeout(timer);
             throw err;

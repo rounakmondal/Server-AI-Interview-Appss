@@ -9,6 +9,11 @@ let db;
 
 export async function connectMongo() {
   if (db) return db;
+  
+  if (!MONGO_URI) {
+    throw new Error('MONGO_URI not set in environment variables');
+  }
+  
   client = new MongoClient(MONGO_URI, {
     tls: true,
     serverSelectionTimeoutMS: 30000,
