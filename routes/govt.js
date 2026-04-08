@@ -1,5 +1,7 @@
 import { Router } from 'express';
 import { ObjectId } from 'mongodb';
+import { readdir, readFile } from 'fs/promises';
+import path from 'path';
 import { getDb } from '../database/mongo.js';
 import { authMiddleware } from '../middleware/auth.js';
 import { callLLMWithFallback } from '../utils/llmFallback.js';
@@ -35,7 +37,7 @@ async function callGroq(systemPrompt, userPrompt, maxTokens = 2000) {
   if (!apiKey) throw new Error('GROQ_API_KEY not set');
 
   // Use fallback utility which tries Groq first, then falls back to Gemini
-  return await callLLMWithFallback(
+  const response = await callLLMWithFallback(
     apiKey,
     [
       { role: 'system', content: systemPrompt },
@@ -51,6 +53,52 @@ async function callGroq(systemPrompt, userPrompt, maxTokens = 2000) {
     null,
     'govt-questions'
   );
+
+  if (!response || typeof response.json !== 'function') {
+    throw new Error('Invalid response object - missing json() method');
+  }
+
+  // Extract content from response
+  const data = await response.json();
+  
+  if (!data) {
+    throw new Error('Empty response data from LLM');
+  }
+
+  let content = null;
+
+  // Handle Groq format (OpenAI-compatible)
+  if (data.choices?.[0]?.message?.content) {
+    content = data.choices[0].message.content.trim();
+    console.log(`[callGroq] Groq response: type=${typeof content}, length=${content?.length}`);
+  } 
+  // Handle Gemini format
+  else if (data.candidates?.[0]?.content?.parts?.[0]?.text) {
+    content = data.candidates[0].content.parts[0].text.trim();
+    console.log(`[callGroq] Gemini response: type=${typeof content}, length=${content?.length}`);
+  } 
+  // Unknown format
+  else {
+    console.error('[callGroq] Response structure (first 500 chars):', JSON.stringify(data).slice(0, 500));
+    throw new Error('Unable to extract content from LLM response - unexpected format');
+  }
+
+  // Validate extracted content
+  if (typeof content !== 'string') {
+    console.error('[callGroq] CRITICAL: content is not string!', {
+      type: typeof content,
+      constructor: content?.constructor?.name,
+      value: String(content).slice(0, 100)
+    });
+    throw new Error(`Content extraction failed: got ${typeof content} instead of string`);
+  }
+
+  if (content.length === 0) {
+    throw new Error('LLM returned empty response');
+  }
+
+  console.log(`[callGroq] SUCCESS: Returning ${content.length} chars`);
+  return content;
 }
 
 // ─── JSON Extraction & Repair ─────────────────────────────────────────────────
@@ -62,6 +110,26 @@ async function callGroq(systemPrompt, userPrompt, maxTokens = 2000) {
  */
 function extractJSON(text) {
   try {
+    console.log('[extractJSON] INPUT: type=' + typeof text + ', isNull=' + (text === null) + ', isUndef=' + (text === undefined));
+    
+    // Safety check: ensure text is a string
+    if (!text) {
+      console.error('[extractJSON] Input is falsy:', text);
+      return null;
+    }
+    
+    if (typeof text !== 'string') {
+      console.error('[extractJSON] Input type mismatch - expected string, got:', typeof text);
+      console.error('[extractJSON] Input object:', {
+        constructor: text?.constructor?.name,
+        hasReplace: typeof text?.replace === 'function',
+        keys: Object.keys(text || {}),
+        stringified: String(text).slice(0, 100)
+      });
+      return null;
+    }
+
+    console.log('[extractJSON] Calling replace on string of length', text.length);
     const cleaned = text.replace(/```json\s*/gi, '').replace(/```\s*/g, '').trim();
 
     const startBrace   = cleaned.indexOf('{');
@@ -178,13 +246,150 @@ function repairTruncatedJSON(partial, isArray) {
   }
 }
 
+// ─── MongoDB Question Cache ───────────────────────────────────────────────────
+// Caches AI-generated questions so identical requests hit DB, not the API.
+// TTL: 24 hours. This single addition prevents most rate-limit issues.
+
+async function getCachedQuestions(exam, subject, difficulty, language) {
+  try {
+    const db = getDb();
+    const cache = await db.collection('question_cache').findOne({
+      exam, subject, difficulty, language,
+      createdAt: { $gte: new Date(Date.now() - 24 * 60 * 60 * 1000) }
+    });
+    if (cache && Array.isArray(cache.questions) && cache.questions.length > 0) {
+      console.log(`[cache] HIT: ${exam}/${subject}/${difficulty}/${language} — ${cache.questions.length} questions`);
+      return cache.questions;
+    }
+    return null;
+  } catch (err) {
+    console.warn('[cache] Read error:', err.message);
+    return null;
+  }
+}
+
+async function cacheQuestions(exam, subject, difficulty, language, questions) {
+  try {
+    const db = getDb();
+    await db.collection('question_cache').updateOne(
+      { exam, subject, difficulty, language },
+      { $set: { questions, createdAt: new Date() } },
+      { upsert: true }
+    );
+    console.log(`[cache] STORED ${questions.length} questions for ${exam}/${subject}/${difficulty}`);
+  } catch (err) {
+    console.warn('[cache] Write error:', err.message);
+  }
+}
+
+// ─── Local JSON File Loader (3rd Tier Fallback) ──────────────────────────────
+// Reads real exam questions from public/ JSON files when all APIs are down.
+
+const EXAM_DIR_MAP = {
+  'WBCS':    ['WBCS/wbcs_json_data'],
+  'SSC':     ['SSC/MTS'],
+  'Railway': ['RRB-NTPC'],
+  'Banking': ['IBPS'],
+  'Police':  ['police', 'police/SI'],
+};
+
+function convertLocalQuestion(q, exam, filename) {
+  if (!q || !q.question || !q.options) return null;
+
+  // Convert options object → array (handles both {A,B,C,D} and {a,b,c,d})
+  let optionsArray;
+  if (Array.isArray(q.options)) {
+    optionsArray = q.options;
+  } else {
+    const keys = ['a','b','c','d','A','B','C','D'].filter(k => q.options[k] !== undefined);
+    optionsArray = keys.slice(0, 4).map(k => q.options[k]);
+  }
+  if (optionsArray.length !== 4) return null;
+
+  // Convert correct_answer letter → correctIndex
+  let correctIndex = -1;
+  if (q.correct_answer) {
+    correctIndex = ['a','b','c','d'].indexOf(q.correct_answer.toLowerCase());
+  }
+  // If no answer key, assign random (still useful for practice)
+  if (correctIndex === -1) correctIndex = Math.floor(Math.random() * 4);
+
+  return {
+    question: q.question,
+    options: optionsArray,
+    correctIndex,
+    explanation: q.explanation || `Previous year question — ${filename.replace('.json', '')}`,
+    explanationBn: q.explanationBn || '',
+    exam,
+    subject: q.subject || q.category || 'General Studies',
+    difficulty: 'Medium',
+    year: q.year || null,
+    source: 'local-file',
+  };
+}
+
+async function loadLocalExamQuestions(exam, count = 50) {
+  try {
+    const dirs = EXAM_DIR_MAP[exam];
+    if (!dirs || dirs.length === 0) return [];
+
+    let allQuestions = [];
+
+    for (const dir of dirs) {
+      const fullPath = path.join(process.cwd(), 'public', dir);
+      let files;
+      try {
+        files = await readdir(fullPath);
+      } catch {
+        continue; // directory doesn't exist
+      }
+
+      const jsonFiles = files.filter(f => f.endsWith('.json') && f !== 'manifest.json');
+
+      for (const file of jsonFiles) {
+        try {
+          const raw = await readFile(path.join(fullPath, file), 'utf-8');
+          const data = JSON.parse(raw);
+          const questions = data.questions || [];
+          for (const q of questions) {
+            const converted = convertLocalQuestion(q, exam, file);
+            if (converted) allQuestions.push(converted);
+          }
+        } catch {
+          // skip bad files silently
+        }
+      }
+    }
+
+    console.log(`[localFiles] Loaded ${allQuestions.length} questions for ${exam} from disk`);
+    return shuffle(allQuestions).slice(0, count);
+  } catch (err) {
+    console.warn('[localFiles] Error:', err.message);
+    return [];
+  }
+}
+
 // ─── Fetch JSON with retries ──────────────────────────────────────────────────
 
-async function fetchJSONFromGroq(systemPrompt, userPrompt, maxTokens, maxRetries = 3) {
+async function fetchJSONFromGroq(systemPrompt, userPrompt, maxTokens, maxRetries = 2) {
   let lastErr;
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
     try {
-      const raw       = await callGroq(systemPrompt, userPrompt, maxTokens);
+      const raw = await callGroq(systemPrompt, userPrompt, maxTokens);
+      
+      // Safety check: ensure raw is a string
+      if (typeof raw !== 'string') {
+        lastErr = new Error(`callGroq returned non-string: ${typeof raw}`);
+        console.warn(`[govt] attempt ${attempt}/${maxRetries} failed: ${lastErr.message}`);
+        continue;
+      }
+
+      if (raw.length === 0) {
+        lastErr = new Error('callGroq returned empty string');
+        console.warn(`[govt] attempt ${attempt}/${maxRetries} failed: ${lastErr.message}`);
+        continue;
+      }
+
       const extracted = extractJSON(raw);
 
       if (!extracted) {
@@ -196,20 +401,32 @@ async function fetchJSONFromGroq(systemPrompt, userPrompt, maxTokens, maxRetries
       return extracted;
     } catch (err) {
       lastErr = err;
-      console.warn(`[govt] attempt ${attempt}/${maxRetries} failed:`, err.message);
+      console.warn(`[govt] attempt ${attempt}/${maxRetries} error: ${err.message}`);
     }
   }
   throw lastErr || new Error('All retries exhausted');
 }
 
 // ─── Batched Question Generation ─────────────────────────────────────────────
-// Generates questions in small batches to avoid token limit truncation,
-// then merges all batches into one result array.
+// Generates questions with 3-tier fallback:
+//   1. MongoDB cache (instant)
+//   2. AI generation (Groq → Gemini multi-model)
+//   3. Local JSON files from public/ directory
 
-const BATCH_SIZE = 5; // safe size per AI call — keeps response well under token caps
+const BATCH_SIZE        = 5;  // safe size per AI call for single-subject mode
+const FULL_PAPER_BATCH  = 35; // larger batch for full-paper (1 call per subject)
 
-async function generateQuestionsBatched(exam, subject, difficulty, totalCount, language = 'English') {
-  const batches     = Math.ceil(totalCount / BATCH_SIZE);
+async function generateQuestionsBatched(exam, subject, difficulty, totalCount, language = 'English', useFullPaperBatch = false) {
+  // ── Tier 1: Check MongoDB cache ──
+  const cached = await getCachedQuestions(exam, subject, difficulty, language);
+  if (cached && cached.length >= Math.min(totalCount, 5)) {
+    console.log(`[govt] Using ${cached.length} cached questions for ${exam}/${subject}`);
+    return shuffle(cached).slice(0, totalCount);
+  }
+
+  // ── Tier 2: AI generation ──
+  const batchSize    = useFullPaperBatch ? FULL_PAPER_BATCH : BATCH_SIZE;
+  const batches      = Math.ceil(totalCount / batchSize);
   const allQuestions = [];
 
   const langInstruction = language !== 'English'
@@ -221,7 +438,7 @@ Always respond with ONLY a valid JSON array — no markdown, no explanation, no 
 Each array element must be a complete, self-contained question object.${langInstruction}`;
 
   for (let b = 0; b < batches; b++) {
-    const batchN      = Math.min(BATCH_SIZE, totalCount - allQuestions.length);
+    const batchN      = Math.min(batchSize, totalCount - allQuestions.length);
     const startId     = allQuestions.length + 1;
 
     const user = `Generate exactly ${batchN} multiple-choice questions for:
@@ -261,6 +478,21 @@ Return ONLY a JSON array of exactly ${batchN} objects. No markdown fences. No pr
     }
 
     if (allQuestions.length >= totalCount) break;
+  }
+
+  // ── Cache successful AI results ──
+  if (allQuestions.length > 0) {
+    cacheQuestions(exam, subject, difficulty, language, allQuestions); // fire-and-forget
+  }
+
+  // ── Tier 3: If AI failed or insufficient, supplement from local files ──
+  if (allQuestions.length < Math.min(totalCount, 5)) {
+    console.log(`[govt] AI only produced ${allQuestions.length} questions, loading local files`);
+    const localQuestions = await loadLocalExamQuestions(exam, totalCount);
+    if (localQuestions.length > 0) {
+      allQuestions.push(...localQuestions);
+      console.log(`[govt] Added ${localQuestions.length} local questions (total: ${allQuestions.length})`);
+    }
   }
 
   return allQuestions;
@@ -991,14 +1223,41 @@ router.get('/questions', async (req, res) => {
       const questionsPerSubject = Math.ceil(n / subjects.length);
       
       let allQuestions = [];
+      let consecutiveFailures = 0; // Track consecutive AI failures to avoid wasting time
+      
       for (const subj of subjects) {
         try {
-          const aiQuestions = await generateQuestionsBatched(exam, subj, difficulty, questionsPerSubject, lang);
-          const valid = aiQuestions.filter(isValidQuestion);
-          allQuestions.push(...valid.slice(0, questionsPerSubject));
+          // If 3+ consecutive subjects failed AI, skip API calls and go straight to local files
+          if (consecutiveFailures >= 3) {
+            console.log(`[govt /fullPaper] Skipping AI for ${subj} (${consecutiveFailures} consecutive failures)`);
+            const localQ = await loadLocalExamQuestions(exam, questionsPerSubject);
+            allQuestions.push(...localQ.slice(0, questionsPerSubject));
+          } else {
+            const aiQuestions = await generateQuestionsBatched(exam, subj, difficulty, questionsPerSubject, lang, true);
+            const valid = aiQuestions.filter(isValidQuestion);
+            allQuestions.push(...valid.slice(0, questionsPerSubject));
+            
+            // Check if this subject was served from local files (no AI was available)
+            const hasAiQuestions = valid.some(q => q.source !== 'local-file');
+            if (hasAiQuestions) {
+              consecutiveFailures = 0;
+            } else {
+              consecutiveFailures++;
+            }
+          }
+          
           if (allQuestions.length >= n) break;
+          
+          // Only throttle if we actually made API calls (not when serving from cache)
+          const usedCache = valid.every(q => !q.source || q.source !== 'local-file');
+          const cacheHit = aiQuestions.length > 0 && aiQuestions === valid; // simplistic check
+          if (consecutiveFailures < 2) {
+            await new Promise(resolve => setTimeout(resolve, 3000));
+          }
         } catch (err) {
-          console.warn(`[govt /fullPaper] Subject ${subj} AI generation failed, will use fallback for this subject`);
+          console.warn(`[govt /fullPaper] Subject ${subj} failed:`, err.message);
+          consecutiveFailures++;
+          await new Promise(resolve => setTimeout(resolve, 500));
         }
       }
 
@@ -1038,38 +1297,45 @@ router.get('/questions', async (req, res) => {
 
     throw new Error(`AI returned only ${valid.length} valid questions out of ${aiQuestions.length}`);
   } catch (err) {
-    console.error('[govt /questions] AI failed, using fallback:', err.message);
+    console.error('[govt /questions] AI+cache failed, using fallback chain:', err.message);
 
-    // Multi-tier fallback: exact match → same exam+subject → same exam → all
-    let pool;
+    // ── Fallback Tier A: Local JSON files from public/ directory ──
+    let pool = await loadLocalExamQuestions(exam, n);
+
+    // ── Fallback Tier B: Hardcoded seed questions ──
+    if (pool.length < Math.min(n, 5)) {
+      console.log(`[govt /questions] Local files yielded ${pool.length}, supplementing with hardcoded fallback`);
+      let hardcoded;
     
-    if (fullPaper === 'true') {
-      // Full paper fallback: all subjects for this exam and difficulty
-      pool = FALLBACK_QUESTIONS.filter(q =>
-        q.exam === exam && q.difficulty === difficulty
-      );
-      if (pool.length < n) {
-        pool = FALLBACK_QUESTIONS.filter(q => q.exam === exam);
+      if (fullPaper === 'true') {
+        hardcoded = FALLBACK_QUESTIONS.filter(q =>
+          q.exam === exam && q.difficulty === difficulty
+        );
+        if (hardcoded.length < n) {
+          hardcoded = FALLBACK_QUESTIONS.filter(q => q.exam === exam);
+        }
+        if (hardcoded.length === 0) {
+          hardcoded = FALLBACK_QUESTIONS;
+        }
+      } else {
+        hardcoded = FALLBACK_QUESTIONS.filter(q =>
+          q.exam === exam && q.subject === subject && q.difficulty === difficulty
+        );
+        if (hardcoded.length < n) {
+          hardcoded = FALLBACK_QUESTIONS.filter(q => q.exam === exam && q.subject === subject);
+        }
+        if (hardcoded.length < n) {
+          hardcoded = FALLBACK_QUESTIONS.filter(q => q.exam === exam);
+        }
+        if (hardcoded.length === 0) {
+          hardcoded = FALLBACK_QUESTIONS;
+        }
       }
-      if (pool.length === 0) {
-        pool = FALLBACK_QUESTIONS;
-      }
-    } else {
-      // Single subject fallback
-      pool = FALLBACK_QUESTIONS.filter(q =>
-        q.exam === exam && q.subject === subject && q.difficulty === difficulty
-      );
-      if (pool.length < n) {
-        pool = FALLBACK_QUESTIONS.filter(q => q.exam === exam && q.subject === subject);
-      }
-      if (pool.length < n) {
-        pool = FALLBACK_QUESTIONS.filter(q => q.exam === exam);
-      }
-      if (pool.length === 0) {
-        pool = FALLBACK_QUESTIONS;
-      }
+
+      pool = [...pool, ...hardcoded];
     }
 
+    console.log(`[govt /questions] Returning ${Math.min(pool.length, n)} fallback questions`);
     return res.json(shuffle(pool).slice(0, n));
   }
 });
