@@ -969,19 +969,54 @@ function isValidQuestion(q) {
 // ─── Endpoint 1: GET /questions ───────────────────────────────────────────────
 
 router.get('/questions', async (req, res) => {
-  const { exam, subject, difficulty, count, language } = req.query;
+  const { exam, subject, difficulty, count, language, fullPaper } = req.query;
 
   if (!VALID_EXAMS.includes(exam))
     return res.status(400).json({ error: 'Invalid exam value' });
-  if (!VALID_SUBJECTS.includes(subject))
+
+  // If fullPaper=true, subject is optional (will return from ALL subjects)
+  if (fullPaper !== 'true' && !VALID_SUBJECTS.includes(subject))
     return res.status(400).json({ error: 'Invalid subject value' });
+  
   if (!VALID_DIFFICULTIES.includes(difficulty))
     return res.status(400).json({ error: 'Invalid difficulty value' });
 
-  const n = Math.min(100, Math.max(10, parseInt(count ?? '10', 10) || 10));
+  const n = Math.min(200, Math.max(10, parseInt(count ?? '10', 10) || 10));
 
   try {
-    // Use batched generation — each batch is only 5 questions to stay within token limits
+    // If fullPaper mode, generate questions from ALL subjects
+    if (fullPaper === 'true') {
+      const lang = language || 'English';
+      const subjects = VALID_SUBJECTS;
+      const questionsPerSubject = Math.ceil(n / subjects.length);
+      
+      let allQuestions = [];
+      for (const subj of subjects) {
+        try {
+          const aiQuestions = await generateQuestionsBatched(exam, subj, difficulty, questionsPerSubject, lang);
+          const valid = aiQuestions.filter(isValidQuestion);
+          allQuestions.push(...valid.slice(0, questionsPerSubject));
+          if (allQuestions.length >= n) break;
+        } catch (err) {
+          console.warn(`[govt /fullPaper] Subject ${subj} AI generation failed, will use fallback for this subject`);
+        }
+      }
+
+      if (allQuestions.length >= Math.min(n, 5)) {
+        const tagged = allQuestions.map((q, i) => ({
+          ...q,
+          id: i + 1,
+          exam,
+          difficulty,
+        }));
+        console.log(`[govt /fullPaper] Returning ${tagged.length} AI questions from all subjects`);
+        return res.json(shuffle(tagged).slice(0, n));
+      }
+
+      throw new Error(`Full paper AI generation produced insufficient questions (${allQuestions.length})`);
+    }
+
+    // Regular mode: Single subject
     const lang = language || 'English';
     const aiQuestions = await generateQuestionsBatched(exam, subject, difficulty, n, lang);
 
@@ -1006,17 +1041,33 @@ router.get('/questions', async (req, res) => {
     console.error('[govt /questions] AI failed, using fallback:', err.message);
 
     // Multi-tier fallback: exact match → same exam+subject → same exam → all
-    let pool = FALLBACK_QUESTIONS.filter(q =>
-      q.exam === exam && q.subject === subject && q.difficulty === difficulty
-    );
-    if (pool.length < n) {
-      pool = FALLBACK_QUESTIONS.filter(q => q.exam === exam && q.subject === subject);
-    }
-    if (pool.length < n) {
-      pool = FALLBACK_QUESTIONS.filter(q => q.exam === exam);
-    }
-    if (pool.length === 0) {
-      pool = FALLBACK_QUESTIONS;
+    let pool;
+    
+    if (fullPaper === 'true') {
+      // Full paper fallback: all subjects for this exam and difficulty
+      pool = FALLBACK_QUESTIONS.filter(q =>
+        q.exam === exam && q.difficulty === difficulty
+      );
+      if (pool.length < n) {
+        pool = FALLBACK_QUESTIONS.filter(q => q.exam === exam);
+      }
+      if (pool.length === 0) {
+        pool = FALLBACK_QUESTIONS;
+      }
+    } else {
+      // Single subject fallback
+      pool = FALLBACK_QUESTIONS.filter(q =>
+        q.exam === exam && q.subject === subject && q.difficulty === difficulty
+      );
+      if (pool.length < n) {
+        pool = FALLBACK_QUESTIONS.filter(q => q.exam === exam && q.subject === subject);
+      }
+      if (pool.length < n) {
+        pool = FALLBACK_QUESTIONS.filter(q => q.exam === exam);
+      }
+      if (pool.length === 0) {
+        pool = FALLBACK_QUESTIONS;
+      }
     }
 
     return res.json(shuffle(pool).slice(0, n));
