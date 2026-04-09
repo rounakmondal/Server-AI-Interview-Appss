@@ -370,6 +370,72 @@ async function loadLocalExamQuestions(exam, count = 50) {
   }
 }
 
+// ─── Full Paper Loader (from public/fullpaper/<exam>/) ────────────────────────
+// Picks a random JSON file from the exam's fullpaper folder and returns it.
+
+async function loadFullPaper(exam) {
+  try {
+    const dir = path.join(process.cwd(), 'public', 'fullpaper', exam);
+    let files;
+    try {
+      files = await readdir(dir);
+    } catch {
+      console.warn(`[fullpaper] Directory not found: ${dir}`);
+      return null;
+    }
+
+    const jsonFiles = files.filter(f => f.endsWith('.json'));
+    if (jsonFiles.length === 0) {
+      console.warn(`[fullpaper] No JSON files in ${dir}`);
+      return null;
+    }
+
+    // Pick a random file
+    const picked = jsonFiles[Math.floor(Math.random() * jsonFiles.length)];
+    const raw = await readFile(path.join(dir, picked), 'utf-8');
+    const data = JSON.parse(raw);
+
+    // Extract questions from any structure:
+    // 1. Top-level array: [...]
+    // 2. { questions: [...] }
+    // 3. Sectioned: { বিভাগসমূহ: [{ প্রশ্নসমূহ: [...] }] } or { sections: [{ questions: [...] }] }
+    let questions = [];
+    if (Array.isArray(data)) {
+      questions = data;
+    } else if (Array.isArray(data.questions)) {
+      questions = data.questions;
+    } else {
+      // Look for any array-of-objects field that contains nested arrays of question-like objects
+      for (const key of Object.keys(data)) {
+        if (Array.isArray(data[key])) {
+          for (const section of data[key]) {
+            if (section && typeof section === 'object') {
+              // Find the first array property within each section
+              for (const sKey of Object.keys(section)) {
+                if (Array.isArray(section[sKey]) && section[sKey].length > 0 && typeof section[sKey][0] === 'object') {
+                  questions.push(...section[sKey]);
+                }
+              }
+            }
+          }
+          if (questions.length > 0) break;
+        }
+      }
+    }
+
+    if (questions.length === 0) {
+      console.warn(`[fullpaper] File ${picked} has no questions`);
+      return null;
+    }
+
+    console.log(`[fullpaper] Loaded ${questions.length} questions from ${exam}/${picked}`);
+    return { questions, source: picked };
+  } catch (err) {
+    console.warn('[fullpaper] Error:', err.message);
+    return null;
+  }
+}
+
 // ─── Fetch JSON with retries ──────────────────────────────────────────────────
 
 async function fetchJSONFromGroq(systemPrompt, userPrompt, maxTokens, maxRetries = 2) {
@@ -417,9 +483,7 @@ async function fetchJSONFromGroq(systemPrompt, userPrompt, maxTokens, maxRetries
 const BATCH_SIZE        = 5;  // safe size per AI call for single-subject mode
 const FULL_PAPER_BATCH  = 35; // larger batch for full-paper (1 call per subject)
 
-// Helper function to fetch a batch of questions
-async function fetchBatch(batchSize, startId, exam, subject, difficulty, language, system) {
-  // 🔥 ADD THIS FUNCTION
+// Helper to wrap fetchBatch with a 10s timeout
 async function fetchBatchWithTimeout(...args) {
   return Promise.race([
     fetchBatch(...args),
@@ -428,6 +492,9 @@ async function fetchBatchWithTimeout(...args) {
     )
   ]);
 }
+
+// Helper function to fetch a batch of questions
+async function fetchBatch(batchSize, startId, exam, subject, difficulty, language, system) {
   const user = `Generate exactly ${batchSize} multiple-choice questions for:
 - Exam: ${exam}
 - Subject: ${subject}
@@ -472,7 +539,7 @@ Return ONLY a JSON array of exactly ${batchSize} objects. No markdown fences. No
 async function generateQuestionsBatched(exam, subject, difficulty, totalCount, language = 'English', useFullPaperBatch = false, onBatch = null) {
   // ── Tier 1: Check MongoDB cache ──
   const cached = await getCachedQuestions(exam, subject, difficulty, language);
-  if (cached && cached.length >= Math.min(totalCount, 5)) {
+  if (cached && cached.length >= totalCount) {
     console.log(`[govt] Using ${cached.length} cached questions for ${exam}/${subject}`);
     return shuffle(cached).slice(0, totalCount);
   }
@@ -1354,18 +1421,31 @@ router.get('/questions', async (req, res) => {
   const n = Math.min(200, Math.max(10, parseInt(count ?? '10', 10) || 10));
 
   try {
-    // If fullPaper mode, generate questions from ALL subjects
+    // If fullPaper mode, serve a random pre-made paper from public/fullpaper/<exam>/
     if (fullPaper === 'true') {
+      const paper = await loadFullPaper(exam);
+      if (paper) {
+        const tagged = paper.questions.map((q, i) => ({
+          ...q,
+          id: i + 1,
+          exam,
+          source: paper.source,
+        }));
+        console.log(`[govt /fullPaper] Returning ${tagged.length} questions from ${paper.source}`);
+        return res.json(tagged);
+      }
+
+      // No manual full paper found — fallback to AI generation across all subjects
+      console.warn(`[govt /fullPaper] No full paper JSON for "${exam}", falling back to AI generation`);
       const lang = language || 'English';
       const subjects = VALID_SUBJECTS;
       const questionsPerSubject = Math.ceil(n / subjects.length);
-      
+
       let allQuestions = [];
-      let consecutiveFailures = 0; // Track consecutive AI failures to avoid wasting time
-      
+      let consecutiveFailures = 0;
+
       for (const subj of subjects) {
         try {
-          // If 3+ consecutive subjects failed AI, skip API calls and go straight to local files
           if (consecutiveFailures >= 3) {
             console.log(`[govt /fullPaper] Skipping AI for ${subj} (${consecutiveFailures} consecutive failures)`);
             const localQ = await loadLocalExamQuestions(exam, questionsPerSubject);
@@ -1374,8 +1454,7 @@ router.get('/questions', async (req, res) => {
             const aiQuestions = await generateQuestionsBatched(exam, subj, difficulty, questionsPerSubject, lang, true);
             const valid = aiQuestions.filter(isValidQuestion);
             allQuestions.push(...valid.slice(0, questionsPerSubject));
-            
-            // Check if this subject was served from local files (no AI was available)
+
             const hasAiQuestions = valid.some(q => q.source !== 'local-file');
             if (hasAiQuestions) {
               consecutiveFailures = 0;
@@ -1383,9 +1462,9 @@ router.get('/questions', async (req, res) => {
               consecutiveFailures++;
             }
           }
-          
+
           if (allQuestions.length >= n) break;
-          
+
           if (consecutiveFailures < 2) {
             await new Promise(resolve => setTimeout(resolve, 3000));
           }
@@ -1407,7 +1486,7 @@ router.get('/questions', async (req, res) => {
         return res.json(shuffle(tagged).slice(0, n));
       }
 
-      throw new Error(`Full paper AI generation produced insufficient questions (${allQuestions.length})`);
+      throw new Error(`Full paper generation produced insufficient questions (${allQuestions.length})`);
     }
 
     // Regular mode: Single subject with streaming
