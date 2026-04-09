@@ -1248,9 +1248,6 @@ router.get('/questions', async (req, res) => {
           
           if (allQuestions.length >= n) break;
           
-          // Only throttle if we actually made API calls (not when serving from cache)
-          const usedCache = valid.every(q => !q.source || q.source !== 'local-file');
-          const cacheHit = aiQuestions.length > 0 && aiQuestions === valid; // simplistic check
           if (consecutiveFailures < 2) {
             await new Promise(resolve => setTimeout(resolve, 3000));
           }
