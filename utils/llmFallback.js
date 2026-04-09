@@ -4,8 +4,6 @@
  * If Groq fails, automatically retries with Gemini using the same request body
  */
 
-import fetch from 'node-fetch';
-
 const GROQ_API_BASE = 'https://api.groq.com/openai/v1/chat/completions';
 const GEMINI_API_BASE = 'https://generativelanguage.googleapis.com/v1beta/models';
 

@@ -1,4 +1,5 @@
 import { Router } from 'express';
+import pLimit from 'p-limit';
 
 const router = Router();
 
@@ -365,7 +366,7 @@ function buildChunkPrompt(companyName, companyType, chunkNum, totalChunks) {
 
   const systemPrompt = `You are an expert interview coach. Generate REAL interview questions for ${companyName}. Output ONLY a valid JSON array.`;
 
-  const userPrompt = `Generate exactly 15 interview questions for ${companyName} (${companyType} company).
+  const userPrompt = `Generate exactly 10 interview questions for ${companyName} (${companyType} company).
 
 Categories to cover: ${focusStr}
 
@@ -382,29 +383,46 @@ Rules:
   return { systemPrompt, userPrompt };
 }
 
-// ─── Fetch questions in chunks and merge ─────────────────────────────────────
-async function generateQuestionsInChunks(companyName, companyType) {
-  const TOTAL_CHUNKS = 3;
+// ─── Fetch questions in chunks with concurrency control and progressive sending ─────────────────────────────────────
+async function generateQuestionsInChunks(companyName, companyType, onBatchComplete = null) {
+  const TOTAL_CHUNKS = 5; // More smaller batches for better progressive loading
+  const CONCURRENCY_LIMIT = 3; // Allow 3 concurrent API calls
+  const limit = pLimit(CONCURRENCY_LIMIT);
   const allQuestions = [];
 
-  for (let i = 0; i < TOTAL_CHUNKS; i++) {
-    console.log(`[company-interview] fetching chunk ${i + 1}/${TOTAL_CHUNKS} for "${companyName}"`);
-    const { systemPrompt, userPrompt } = buildChunkPrompt(companyName, companyType, i, TOTAL_CHUNKS);
+  // Create batch promises with concurrency control
+  const batchPromises = Array.from({ length: TOTAL_CHUNKS }, async (_, i) => {
+    return limit(async () => {
+      console.log(`[company-interview] fetching chunk ${i + 1}/${TOTAL_CHUNKS} for "${companyName}"`);
+      const { systemPrompt, userPrompt } = buildChunkPrompt(companyName, companyType, i, TOTAL_CHUNKS);
 
-    try {
-      const raw = await callGroq(systemPrompt, userPrompt, 4000);
-      const parsed = extractJSON(raw);
+      try {
+        const raw = await callGroq(systemPrompt, userPrompt, 4000);
+        const parsed = extractJSON(raw);
 
-      if (parsed && Array.isArray(parsed) && parsed.length > 0) {
-        allQuestions.push(...parsed);
-        console.log(`[company-interview] chunk ${i + 1} got ${parsed.length} questions`);
-      } else {
-        console.warn(`[company-interview] chunk ${i + 1} parse failed, skipping`);
+        if (parsed && Array.isArray(parsed) && parsed.length > 0) {
+          allQuestions.push(...parsed);
+          console.log(`[company-interview] chunk ${i + 1} got ${parsed.length} questions`);
+
+          // Call callback for progressive sending if provided
+          if (onBatchComplete) {
+            await onBatchComplete(parsed, i + 1, TOTAL_CHUNKS);
+          }
+
+          return parsed;
+        } else {
+          console.warn(`[company-interview] chunk ${i + 1} parse failed, skipping`);
+          return [];
+        }
+      } catch (err) {
+        console.warn(`[company-interview] chunk ${i + 1} error: ${err.message}`);
+        return [];
       }
-    } catch (err) {
-      console.warn(`[company-interview] chunk ${i + 1} error: ${err.message}`);
-    }
-  }
+    });
+  });
+
+  // Wait for all batches to complete
+  await Promise.all(batchPromises);
 
   return allQuestions;
 }
@@ -424,49 +442,101 @@ router.get('/:slug', async (req, res) => {
     return res.status(404).json({ success: false, error: 'Company not found' });
   }
 
-  // Check cache
+  // Check cache first
   const cached = cache.get(slug);
   if (cached && Date.now() - cached.timestamp < CACHE_TTL_MS) {
     console.log(`[company-interview] cache hit for "${slug}"`);
     return res.json(cached.data);
   }
 
+  // Set up Server-Sent Events for progressive response
+  res.setHeader('Content-Type', 'text/event-stream');
+  res.setHeader('Cache-Control', 'no-cache');
+  res.setHeader('Connection', 'keep-alive');
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Headers', 'Cache-Control');
+
+  let isFirstBatch = true;
+  let allQuestions = [];
+  let batchCount = 0;
+  const TOTAL_BATCHES = 5;
+
   try {
-    const rawQuestions = await generateQuestionsInChunks(company.name, company.type);
+    // Callback function to send batches progressively
+    const sendBatch = async (batchQuestions, batchIndex, totalBatches) => {
+      if (batchQuestions.length === 0) return;
 
-    if (!rawQuestions || rawQuestions.length === 0) {
-      console.error('[company-interview] All chunks failed for', slug);
-      return res.status(500).json({ success: false, error: 'Failed to generate questions' });
-    }
+      // Normalize questions
+      const normalizedBatch = batchQuestions.map((q, i) => ({
+        id: allQuestions.length + i + 1,
+        question: q.question || '',
+        answer: q.answer || '',
+        category: q.category || 'General',
+        difficulty: ['Easy', 'Medium', 'Hard'].includes(q.difficulty) ? q.difficulty : 'Medium',
+        tags: Array.isArray(q.tags) ? q.tags.map(t => String(t).toLowerCase()) : [],
+      }));
 
-    // Normalize: ensure ids are sequential, fields exist
-    const questions = rawQuestions.map((q, i) => ({
-      id: i + 1,
-      question: q.question || '',
-      answer: q.answer || '',
-      category: q.category || 'General',
-      difficulty: ['Easy', 'Medium', 'Hard'].includes(q.difficulty) ? q.difficulty : 'Medium',
-      tags: Array.isArray(q.tags) ? q.tags.map(t => String(t).toLowerCase()) : [],
-    }));
+      allQuestions.push(...normalizedBatch);
+      batchCount++;
 
-    const categories = [...new Set(questions.map(q => q.category))];
+      const batchData = {
+        success: true,
+        company: slug,
+        batch: batchIndex,
+        totalBatches,
+        batchQuestions: normalizedBatch,
+        totalQuestionsSoFar: allQuestions.length,
+        isComplete: batchCount >= totalBatches
+      };
 
-    const payload = {
-      success: true,
-      company: slug,
-      totalQuestions: questions.length,
-      categories,
-      questions,
+      // Send batch via SSE
+      res.write(`data: ${JSON.stringify(batchData)}\n\n`);
+
+      // If this is the first batch, send it immediately without waiting
+      if (isFirstBatch) {
+        isFirstBatch = false;
+        console.log(`[company-interview] first batch sent for "${slug}" — ${normalizedBatch.length} questions`);
+      } else {
+        console.log(`[company-interview] batch ${batchIndex} sent for "${slug}" — ${normalizedBatch.length} questions`);
+      }
     };
 
-    // Cache it
-    cache.set(slug, { data: payload, timestamp: Date.now() });
+    // Generate questions with progressive sending
+    await generateQuestionsInChunks(company.name, company.type, sendBatch);
 
-    console.log(`[company-interview] done for "${slug}" — ${questions.length} total questions`);
-    return res.json(payload);
+    if (allQuestions.length === 0) {
+      console.error('[company-interview] All batches failed for', slug);
+      res.write(`data: ${JSON.stringify({ success: false, error: 'Failed to generate questions' })}\n\n`);
+      return res.end();
+    }
+
+    // Send completion event
+    const categories = [...new Set(allQuestions.map(q => q.category))];
+    const finalData = {
+      success: true,
+      company: slug,
+      totalQuestions: allQuestions.length,
+      categories,
+      questions: allQuestions,
+      complete: true
+    };
+
+    res.write(`data: ${JSON.stringify(finalData)}\n\n`);
+
+    // Cache the final result
+    cache.set(slug, { data: finalData, timestamp: Date.now() });
+
+    console.log(`[company-interview] completed for "${slug}" — ${allQuestions.length} total questions`);
+    res.end();
+
   } catch (err) {
     console.error(`[company-interview] Error for "${slug}":`, err.message);
-    return res.status(500).json({ success: false, error: 'Failed to generate interview questions' });
+    if (!res.headersSent) {
+      res.status(500).json({ success: false, error: 'Failed to generate interview questions' });
+    } else {
+      res.write(`data: ${JSON.stringify({ success: false, error: err.message })}\n\n`);
+      res.end();
+    }
   }
 });
 

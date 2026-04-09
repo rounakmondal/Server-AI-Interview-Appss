@@ -2,6 +2,7 @@ import { Router } from 'express';
 import { ObjectId } from 'mongodb';
 import { readdir, readFile } from 'fs/promises';
 import path from 'path';
+// import pLimit from 'p-limit';
 import { getDb } from '../database/mongo.js';
 import { authMiddleware } from '../middleware/auth.js';
 import { callLLMWithFallback } from '../utils/llmFallback.js';
@@ -416,32 +417,18 @@ async function fetchJSONFromGroq(systemPrompt, userPrompt, maxTokens, maxRetries
 const BATCH_SIZE        = 5;  // safe size per AI call for single-subject mode
 const FULL_PAPER_BATCH  = 35; // larger batch for full-paper (1 call per subject)
 
-async function generateQuestionsBatched(exam, subject, difficulty, totalCount, language = 'English', useFullPaperBatch = false) {
-  // ── Tier 1: Check MongoDB cache ──
-  const cached = await getCachedQuestions(exam, subject, difficulty, language);
-  if (cached && cached.length >= Math.min(totalCount, 5)) {
-    console.log(`[govt] Using ${cached.length} cached questions for ${exam}/${subject}`);
-    return shuffle(cached).slice(0, totalCount);
-  }
-
-  // ── Tier 2: AI generation ──
-  const batchSize    = useFullPaperBatch ? FULL_PAPER_BATCH : BATCH_SIZE;
-  const batches      = Math.ceil(totalCount / batchSize);
-  const allQuestions = [];
-
-  const langInstruction = language !== 'English'
-    ? `\nIMPORTANT: The "question" and "options" fields MUST be written in ${language} language. The "explanation" field should be in English and "explanationBn" in Bengali.`
-    : '';
-
-  const system = `You are an expert question-setter for Indian government competitive exams.
-Always respond with ONLY a valid JSON array — no markdown, no explanation, no prose.
-Each array element must be a complete, self-contained question object.${langInstruction}`;
-
-  for (let b = 0; b < batches; b++) {
-    const batchN      = Math.min(batchSize, totalCount - allQuestions.length);
-    const startId     = allQuestions.length + 1;
-
-    const user = `Generate exactly ${batchN} multiple-choice questions for:
+// Helper function to fetch a batch of questions
+async function fetchBatch(batchSize, startId, exam, subject, difficulty, language, system) {
+  // 🔥 ADD THIS FUNCTION
+async function fetchBatchWithTimeout(...args) {
+  return Promise.race([
+    fetchBatch(...args),
+    new Promise((_, reject) =>
+      setTimeout(() => reject(new Error("Batch timeout")), 10000)
+    )
+  ]);
+}
+  const user = `Generate exactly ${batchSize} multiple-choice questions for:
 - Exam: ${exam}
 - Subject: ${subject}
 - Difficulty: ${difficulty}
@@ -461,37 +448,188 @@ Each question MUST follow this exact JSON shape (no extra fields):
   "explanationBn": "<Bengali explanation>"
 }
 ${language !== 'English' ? `\nIMPORTANT: Write the "question" and "options" values in ${language} language.` : ''}
-Return ONLY a JSON array of exactly ${batchN} objects. No markdown fences. No preamble.`;
+Return ONLY a JSON array of exactly ${batchSize} objects. No markdown fences. No preamble.`;
 
-    // ~350 tokens per question is a safe estimate for this format
-    const tokenBudget = batchN * 400 + 200;
+  // ~350 tokens per question for optimized token usage
+  const tokenBudget = batchSize * 350 + 200;
 
-    try {
-      const questions = await fetchJSONFromGroq(system, user, tokenBudget, 2);
-      if (Array.isArray(questions)) {
-        allQuestions.push(...questions);
-        console.log(`[govt] batch ${b + 1}/${batches}: got ${questions.length} questions (total: ${allQuestions.length})`);
-      }
-    } catch (err) {
-      console.warn(`[govt] batch ${b + 1}/${batches} failed:`, err.message);
-      // Continue — we'll use what we have + fallback for the rest
+  const questions = await fetchJSONFromGroq(system, user, tokenBudget, 2);
+
+  if (!Array.isArray(questions) || questions.length === 0) {
+    throw new Error('Invalid or empty questions array from AI');
+  }
+
+  // Validate each question has required fields
+  for (const q of questions) {
+    if (!q.id || !q.question || !Array.isArray(q.options) || q.options.length !== 4 || typeof q.correctIndex !== 'number' || q.correctIndex < 0 || q.correctIndex > 3) {
+      throw new Error('Invalid question format in batch');
+    }
+  }
+
+  return questions;
+}
+
+async function generateQuestionsBatched(exam, subject, difficulty, totalCount, language = 'English', useFullPaperBatch = false, onBatch = null) {
+  // ── Tier 1: Check MongoDB cache ──
+  const cached = await getCachedQuestions(exam, subject, difficulty, language);
+  if (cached && cached.length >= Math.min(totalCount, 5)) {
+    console.log(`[govt] Using ${cached.length} cached questions for ${exam}/${subject}`);
+    return shuffle(cached).slice(0, totalCount);
+  }
+
+  // ── Load local fallback pool for batch-level fallbacks ──
+  const localPool = await loadLocalExamQuestions(exam, totalCount);
+  let localIndex = 0;
+
+  // ── Tier 2: AI generation ──
+  const batchSize = useFullPaperBatch ? FULL_PAPER_BATCH : BATCH_SIZE;
+  const allQuestions = [];
+
+  const langInstruction = language !== 'English'
+    ? `\nIMPORTANT: The "question" and "options" fields MUST be written in ${language} language. The "explanation" field should be in English and "explanationBn" in Bengali.`
+    : '';
+
+  const system = `You are an expert question-setter for Indian government competitive exams.
+Always respond with ONLY a valid JSON array — no markdown, no explanation, no prose.
+Each array element must be a complete, self-contained question object.${langInstruction}`;
+
+  // FIRST BATCH: Execute immediately without concurrency limit for fast response
+  const firstBatchSize = Math.min(batchSize, totalCount);
+  try {
+    const firstQuestions = await fetchBatch(firstBatchSize, 1, exam, subject, difficulty, language, system);
+    console.log(`[govt] First batch: got ${firstQuestions.length} questions`);
+    if (firstQuestions.length > 0 && onBatch) {
+      onBatch(firstQuestions);
+    }
+    allQuestions.push(...firstQuestions);
+  } catch (err) {
+    console.warn(`[govt] First batch failed:`, err.message);
+    // Fallback to local questions for this batch
+    const fallbackQuestions = localPool.slice(localIndex, localIndex + firstBatchSize).map((q, i) => ({
+      ...q,
+      id: 1 + i
+    }));
+    localIndex += fallbackQuestions.length;
+    console.log(`[govt] First batch fallback: using ${fallbackQuestions.length} local questions`);
+    if (fallbackQuestions.length > 0 && onBatch) {
+      onBatch(fallbackQuestions);
+    }
+    allQuestions.push(...fallbackQuestions);
+  }
+
+  // REMAINING BATCHES: Background processing with concurrency limit
+  const remainingCount = totalCount - allQuestions.length;
+  // if (remainingCount > 0) {
+  //   const limit = pLimit(2); // Concurrency of 2 for background batches
+  //   const remainingBatches = Math.ceil(remainingCount / batchSize);
+  //   const promises = [];
+
+  //   for (let b = 0; b < remainingBatches; b++) {
+  //     const batchN = Math.min(batchSize, remainingCount - b * batchSize);
+  //     const startId = allQuestions.length + b * batchSize + 1;
+
+  //     promises.push(limit(async () => {
+  //       try {
+  //         const questions = await fetchBatch(batchN, startId, exam, subject, difficulty, language, system);
+  //         console.log(`[govt] Background batch ${b + 1}/${ryemainingBatches}: got ${questions.length} questions`);
+  //         if (questions.length > 0 && onBatch) {
+  //           onBatch(questions);
+  //         }
+  //         return questions;
+  //       } catch (err) {
+  //         console.warn(`[govt] Background batch ${b + 1}/${remainingBatches} failed:`, err.message);
+  //         // Fallback to local questions for this batch
+  //         const fallbackQuestions = localPool.slice(localIndex, localIndex + batchN).map((q, i) => ({
+  //           ...q,
+  //           id: startId + i
+  //         }));
+  //         localIndex += fallbackQuestions.length;
+  //         console.log(`[govt] Background batch ${b + 1}/${remainingBatches} fallback: using ${fallbackQuestions.length} local questions`);
+  //         if (fallbackQuestions.length > 0 && onBatch) {
+  //           onBatch(fallbackQuestions);
+  //         }
+  //         return fallbackQuestions;
+  //       }
+  //     }));
+  //   }
+
+  //   // Collect results from background batches
+  //   const results = await Promise.allSettled(promises);
+  //   for (const result of results) {
+  //     if (result.status === 'fulfilled') {
+  //       allQuestions.push(...result.value);
+  //     }
+  //   }
+  // }
+  const remainingBatches = Math.ceil(remainingCount / batchSize);
+
+for (let b = 0; b < remainingBatches; b++) {
+  const batchN = Math.min(batchSize, remainingCount - b * batchSize);
+  const startId = allQuestions.length + 1;
+
+  try {
+    const questions = await fetchBatchWithTimeout(
+  batchN,
+  startId,
+  exam,
+  subject,
+  difficulty,
+  language,
+  system
+);
+    console.log(`[govt] Batch ${b + 1}: ${questions.length}`);
+
+    if (questions.length > 0 && onBatch) {
+      onBatch(questions);
     }
 
+    allQuestions.push(...questions);
     if (allQuestions.length >= totalCount) break;
+
+  } catch (err) {
+    console.warn(`[govt] Batch ${b + 1} failed:`, err.message);
+
+    const fallbackQuestions = localPool
+      .slice(localIndex, localIndex + batchN)
+      .map((q, i) => ({
+        ...q,
+        id: startId + i
+      }));
+
+    localIndex += fallbackQuestions.length;
+
+    console.log(`[govt] Batch ${b + 1} fallback: ${fallbackQuestions.length}`);
+
+    if (fallbackQuestions.length > 0 && onBatch) {
+      onBatch(fallbackQuestions);
+    }
+
+    allQuestions.push(...fallbackQuestions);
   }
+
+  // 🔥 IMPORTANT: smooth streaming + API stability
+  await new Promise(r => setTimeout(r, 100));
+}
+
+  console.log(`[govt] Total questions generated: ${allQuestions.length}`);
 
   // ── Cache successful AI results ──
   if (allQuestions.length > 0) {
     cacheQuestions(exam, subject, difficulty, language, allQuestions); // fire-and-forget
   }
 
-  // ── Tier 3: If AI failed or insufficient, supplement from local files ──
-  if (allQuestions.length < Math.min(totalCount, 5)) {
-    console.log(`[govt] AI only produced ${allQuestions.length} questions, loading local files`);
-    const localQuestions = await loadLocalExamQuestions(exam, totalCount);
-    if (localQuestions.length > 0) {
-      allQuestions.push(...localQuestions);
-      console.log(`[govt] Added ${localQuestions.length} local questions (total: ${allQuestions.length})`);
+  // ── Tier 3: If still insufficient, supplement from remaining local files ──
+  if (allQuestions.length < totalCount) {
+    console.log(`[govt] Still need ${totalCount - allQuestions.length} more questions, loading additional local files`);
+    const additionalLocal = localPool.slice(localIndex);
+    if (additionalLocal.length > 0) {
+      const needed = totalCount - allQuestions.length;
+      const sliced = additionalLocal.slice(0, needed).map((q, i) => ({
+        ...q,
+        id: allQuestions.length + i + 1
+      }));
+      allQuestions.push(...sliced);
+      console.log(`[govt] Added ${sliced.length} additional local questions (total: ${allQuestions.length})`);
     }
   }
 
@@ -1201,10 +1339,10 @@ function isValidQuestion(q) {
 // ─── Endpoint 1: GET /questions ───────────────────────────────────────────────
 
 router.get('/questions', async (req, res) => {
-  const { exam, subject, difficulty, count, language, fullPaper } = req.query;
+  const { exam: rawExam, subject, difficulty, count, language, fullPaper } = req.query;
+  const exam = String(rawExam || '').trim();
 
-  if (!VALID_EXAMS.includes(exam))
-    return res.status(400).json({ error: 'Invalid exam value' });
+  if (!exam) return res.status(400).json({ error: 'Exam is required' });
 
   // If fullPaper=true, subject is optional (will return from ALL subjects)
   if (fullPaper !== 'true' && !VALID_SUBJECTS.includes(subject))
@@ -1272,27 +1410,97 @@ router.get('/questions', async (req, res) => {
       throw new Error(`Full paper AI generation produced insufficient questions (${allQuestions.length})`);
     }
 
-    // Regular mode: Single subject
+    // Regular mode: Single subject with streaming
     const lang = language || 'English';
-    const aiQuestions = await generateQuestionsBatched(exam, subject, difficulty, n, lang);
+    const wantsSSE = req.query.stream === 'true' || req.headers.accept?.includes('text/event-stream');
 
-    // Filter out any malformed questions the AI might have returned
-    const valid = aiQuestions.filter(isValidQuestion);
-
-    if (valid.length >= Math.min(n, 5)) {
-      // Tag each question with correct metadata (AI sometimes gets these wrong)
-      const tagged = valid.map((q, i) => ({
-        ...q,
-        id: i + 1,
-        exam,
-        subject,
-        difficulty,
-      }));
-      console.log(`[govt /questions] Returning ${tagged.length} AI questions`);
+    if (!wantsSSE) {
+      // Regular JSON response for frontend fetch clients
+      const questions = await generateQuestionsBatched(exam, subject, difficulty, n, lang, false);
+      const tagged = questions
+        .filter(isValidQuestion)
+        .slice(0, n)
+        .map((q, i) => ({
+          ...q,
+          id: i + 1,
+          exam,
+          subject,
+          difficulty,
+        }));
       return res.json(shuffle(tagged).slice(0, n));
     }
 
-    throw new Error(`AI returned only ${valid.length} valid questions out of ${aiQuestions.length}`);
+    // Set up Server-Sent Events for progressive response
+    res.setHeader('Content-Type', 'text/event-stream');
+    res.setHeader('Cache-Control', 'no-cache');
+    res.setHeader('Connection', 'keep-alive');
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Headers', 'Cache-Control');
+    if (typeof res.flushHeaders === 'function') res.flushHeaders();
+
+    let totalSent = 0;
+    const onBatch = (questions) => {
+      if (questions.length > 0) {
+        const valid = questions.filter(isValidQuestion);
+        if (valid.length > 0) {
+          const tagged = valid.map((q, i) => ({
+            ...q,
+            id: totalSent + i + 1,
+            exam,
+            subject,
+            difficulty,
+          }));
+          totalSent += tagged.length;
+          res.write(`data: ${JSON.stringify(tagged)}\n\n`);
+        }
+      }
+    };
+
+    try {
+      const finalQuestions = await generateQuestionsBatched(exam, subject, difficulty, n, lang, false, onBatch);
+
+      // If no questions were sent progressively (e.g., fell back to local files), send them now
+      // if (totalSent === 0 && finalQuestions.length > 0) {
+      //   const valid = finalQuestions.filter(isValidQuestion);
+      //   if (valid.length > 0) {
+      //     const tagged = valid.map((q, i) => ({
+      //       ...q,
+      //       id: i + 1,
+      //       exam,
+      //       subject,
+      //       difficulty,
+      //     }));
+      //     res.write(`data: ${JSON.stringify(tagged)}\n\n`);
+      //   }
+      // }
+      if (finalQuestions.length > totalSent) {
+  const remaining = finalQuestions.slice(totalSent);
+
+  const valid = remaining.filter(isValidQuestion);
+
+  if (valid.length > 0) {
+    const tagged = valid.map((q, i) => ({
+      ...q,
+      id: totalSent + i + 1,
+      exam,
+      subject,
+      difficulty,
+    }));
+
+    console.log(`[SSE] Sending remaining ${tagged.length} questions`);
+
+    res.write(`data: ${JSON.stringify(tagged)}\n\n`);
+  }
+}
+
+      // Send end event
+      res.write('event: end\ndata: \n\n');
+      res.end();
+    } catch (err) {
+      console.error('[govt /questions] Streaming failed:', err.message);
+      res.write(`event: error\ndata: ${JSON.stringify({ error: 'Failed to generate questions' })}\n\n`);
+      res.end();
+    }
   } catch (err) {
     console.error('[govt /questions] AI+cache failed, using fallback chain:', err.message);
 

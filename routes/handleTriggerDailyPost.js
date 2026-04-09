@@ -1,4 +1,3 @@
-import fetch from 'node-fetch';
 import cron from 'node-cron';
 import { getDb } from '../database/db.js';
 
