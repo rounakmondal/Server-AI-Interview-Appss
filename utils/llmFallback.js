@@ -6,6 +6,7 @@
 
 const GROQ_API_BASE = 'https://api.groq.com/openai/v1/chat/completions';
 const GEMINI_API_BASE = 'https://generativelanguage.googleapis.com/v1beta/models';
+const SAMBANOVA_API_BASE = 'https://api.sambanova.ai/v1/chat/completions';
 
 // Groq models to try in order (429 is per-model, so rotating helps)
 const GROQ_FALLBACK_MODELS = [
@@ -19,6 +20,12 @@ const GEMINI_FALLBACK_MODELS = [
   'gemini-2.0-flash-lite',
   'gemini-2.0-flash',
   'gemini-1.5-flash-latest',
+];
+
+// SambaNova models to try in order
+const SAMBANOVA_FALLBACK_MODELS = [
+  'DeepSeek-R1-0528',
+  'Meta-Llama-3.1-8B-Instruct',
 ];
 
 /**
@@ -126,7 +133,47 @@ export async function callLLMWithFallback(apiKey, messages, options = {}, signal
     }
   }
 
-  throw new Error(`All LLM providers exhausted (${source}). Both Groq and Gemini rate-limited.`);
+  // ── Try all SambaNova models ──
+  const sambanovaApiKey = process.env.SAMBANOVA_API_KEY;
+  if (!sambanovaApiKey) {
+    throw new Error(`Groq and Gemini failed and SAMBANOVA_API_KEY is not configured (${source})`);
+  }
+
+  for (const sambanovaModel of SAMBANOVA_FALLBACK_MODELS) {
+    try {
+      console.log(`[LLM-Fallback] Trying SambaNova ${sambanovaModel} (${source})`);
+      const sambanovaResponse = await fetch(SAMBANOVA_API_BASE, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${sambanovaApiKey}`,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          model: sambanovaModel,
+          temperature,
+          max_tokens,
+          top_p,
+          messages,
+          stream: false
+        }),
+        signal
+      });
+
+      if (sambanovaResponse.ok) {
+        console.log(`[LLM-Fallback] SambaNova ${sambanovaModel} succeeded (${source})`);
+        return sambanovaResponse;
+      }
+
+      const errText = await sambanovaResponse.text().catch(() => '');
+      console.warn(`[LLM-Fallback] SambaNova ${sambanovaModel} → ${sambanovaResponse.status}: ${errText.slice(0, 80)}`);
+
+      if (sambanovaResponse.status !== 429) break;
+    } catch (err) {
+      console.warn(`[LLM-Fallback] SambaNova ${sambanovaModel} error:`, err.message);
+    }
+  }
+
+  throw new Error(`All LLM providers exhausted (${source}). Groq, Gemini, and SambaNova all failed.`);
 }
 
 /**
@@ -230,6 +277,52 @@ export async function streamLLMWithFallback(res, groqApiKey, messages, options =
     }
   }
 
+  // ── Try SambaNova models (streaming) ──
+  console.log('[LLM-Fallback-Stream] All Gemini models failed, trying SambaNova');
+  const sambanovaApiKey = process.env.SAMBANOVA_API_KEY;
+  if (!sambanovaApiKey) {
+    if (!res.headersSent) {
+      res.status(500).json({ error: 'All AI providers exhausted (no SambaNova fallback configured)' });
+    } else {
+      res.write(`data: ${JSON.stringify({ error: 'All AI providers exhausted' })}\n\n`);
+      res.end();
+    }
+    return;
+  }
+
+  for (const sambanovaModel of SAMBANOVA_FALLBACK_MODELS) {
+    try {
+      console.log(`[LLM-Fallback-Stream] Trying SambaNova ${sambanovaModel}`);
+      apiResponse = await fetch(SAMBANOVA_API_BASE, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${sambanovaApiKey}`,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          model: sambanovaModel,
+          temperature,
+          max_tokens,
+          top_p,
+          messages,
+          stream: true
+        }),
+        signal: controller.signal
+      });
+
+      if (apiResponse.ok) {
+        console.log(`[LLM-Fallback-Stream] SambaNova ${sambanovaModel} succeeded`);
+        return handleSambanovaStream(res, apiResponse, timer, controller);
+      }
+
+      const errText = await apiResponse.text().catch(() => '');
+      console.warn(`[LLM-Fallback-Stream] SambaNova ${sambanovaModel} → ${apiResponse.status}: ${errText.slice(0, 80)}`);
+      if (apiResponse.status !== 429) break;
+    } catch (err) {
+      console.warn(`[LLM-Fallback-Stream] SambaNova ${sambanovaModel} error:`, err.message);
+    }
+  }
+
   // All providers failed
   clearTimeout(timer);
   if (!res.headersSent) {
@@ -321,6 +414,57 @@ async function handleGeminiStream(res, geminiRes, timer, controller) {
       res.write(`data: ${JSON.stringify({ content: word + ' ', source: 'gemini' })}\n\n`);
     }
     res.write('data: [DONE]\n\n');
+    res.end();
+  } catch (err) {
+    clearTimeout(timer);
+    if (!res.headersSent) {
+      res.status(500).json({ success: false, error: err.message });
+    } else {
+      res.write(`data: ${JSON.stringify({ error: err.message })}\n\n`);
+      res.end();
+    }
+  }
+}
+
+/**
+ * Handles SambaNova streaming response (OpenAI-compatible SSE format)
+ * @param {Object} res - Express response object
+ * @param {Response} sambanovaRes - SambaNova API response
+ * @param {NodeJS.Timeout} timer - Timeout timer
+ * @param {AbortController} controller - Abort controller
+ * @returns {Promise<void>}
+ */
+async function handleSambanovaStream(res, sambanovaRes, timer, controller) {
+  try {
+    const reader = sambanovaRes.body.getReader();
+    const decoder = new TextDecoder();
+
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+
+      const chunk = decoder.decode(value, { stream: true });
+      for (const line of chunk.split('\n')) {
+        if (!line.startsWith('data: ')) continue;
+        const payload = line.slice(6).trim();
+        if (payload === '[DONE]') {
+          res.write('data: [DONE]\n\n');
+          res.end();
+          return;
+        }
+        try {
+          const parsed = JSON.parse(payload);
+          // SambaNova may include <think>...</think> reasoning tokens — strip them
+          let content = parsed.choices?.[0]?.delta?.content;
+          if (content) {
+            content = content.replace(/<think>[\s\S]*?<\/think>/g, '');
+            if (content) res.write(`data: ${JSON.stringify({ content, source: 'sambanova' })}\n\n`);
+          }
+        } catch {
+          // Skip malformed SSE lines
+        }
+      }
+    }
     res.end();
   } catch (err) {
     clearTimeout(timer);

@@ -67,8 +67,13 @@ async function getGroqChatCompletion(messages, maxTokens = 500) {
                 continue; // Try next model
             }
             
-            const content = finalData.choices[0].message.content;
+            let content = finalData.choices[0].message.content;
             const finishReason = finalData.choices[0].finish_reason;
+
+            // Strip <think>...</think> reasoning tokens (e.g. DeepSeek-R1 via SambaNova)
+            if (content) {
+                content = content.replace(/<think>[\s\S]*?<\/think>/g, '').trim();
+            }
             
             // Check if content is null or empty
             if (content === null || content === undefined || content.trim() === '') {
