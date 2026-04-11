@@ -66,7 +66,7 @@ router.post('/create-order', authMiddleware, async (req, res) => {
     const order = await getRazorpay().orders.create({
       amount: planConfig.amount,
       currency: planConfig.currency,
-      receipt: `receipt_${req.userId}_${Date.now()}`,
+      receipt: `r_${req.userId.slice(-8)}_${Date.now().toString().slice(-10)}`,
       notes: {
         userId: req.userId,
         plan,
