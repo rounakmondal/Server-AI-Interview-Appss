@@ -7,11 +7,20 @@ import { authMiddleware } from '../middleware/auth.js';
 
 const router = Router();
 
-// Razorpay instance (credentials from env)
-const razorpay = new Razorpay({
-  key_id: process.env.RAZORPAY_KEY_ID,
-  key_secret: process.env.RAZORPAY_KEY_SECRET,
-});
+// Razorpay instance — created lazily so dotenv.config() runs first
+let _razorpay = null;
+function getRazorpay() {
+  if (!_razorpay) {
+    if (!process.env.RAZORPAY_KEY_ID || !process.env.RAZORPAY_KEY_SECRET) {
+      throw new Error('RAZORPAY_KEY_ID and RAZORPAY_KEY_SECRET must be set in .env');
+    }
+    _razorpay = new Razorpay({
+      key_id: process.env.RAZORPAY_KEY_ID,
+      key_secret: process.env.RAZORPAY_KEY_SECRET,
+    });
+  }
+  return _razorpay;
+}
 
 // Plan config (amounts in paise — INR × 100)
 const PLANS = {
@@ -54,7 +63,7 @@ router.post('/create-order', authMiddleware, async (req, res) => {
 
     const planConfig = PLANS[plan];
 
-    const order = await razorpay.orders.create({
+    const order = await getRazorpay().orders.create({
       amount: planConfig.amount,
       currency: planConfig.currency,
       receipt: `receipt_${req.userId}_${Date.now()}`,
