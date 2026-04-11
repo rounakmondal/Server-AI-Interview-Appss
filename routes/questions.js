@@ -13,8 +13,8 @@ const router = Router();
 const FOLDER_MAP = {
   police: {
     displayName: 'Police',
-    scanPath: 'Police',                                   // scan entire Police/ (includes SI/)
-    pathPrefix: '/Police',                                // used in response `path` field
+    scanPath: 'police',                                   // server's public/police/ directory
+    pathPrefix: '/Police/police-json-data',               // must match Ai_Interview/public/Police/police-json-data/
   },
   wbcs: {
     displayName: 'WBCS',
