@@ -120,6 +120,8 @@ router.post('/verify', authMiddleware, async (req, res) => {
       // Push examType into a set of unlocked exams (permanent)
       premiumUpdate = {
         $set: {
+          'premium.active': true,
+          'premium.plan': 'single_exam',
           'premium.lastPaymentId': razorpay_payment_id,
           'premium.lastOrderId': razorpay_order_id,
         },
