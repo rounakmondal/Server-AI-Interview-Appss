@@ -34,6 +34,7 @@ import virtualExamRoutes, { initVirtualExamDB } from './routes/virtualExam.js';
 import { sendTestResultEmail } from './routes/testResultEmail.js';
 import { handleTriggerDailyPost } from './routes/handleTriggerDailyPost.js';
 import paymentRoutes from './routes/payment.js';
+import couponRoutes from './routes/coupon.js';
 
 // Load environment variables
 dotenv.config();
@@ -151,6 +152,9 @@ app.use('/api/virtual-exam', virtualExamRoutes);  // POST /api/virtual-exam/ques
 
 // Payment / Razorpay routes
 app.use('/api/payment', paymentRoutes);  // POST /api/payment/create-order, /verify, GET /status
+
+// Coupon routes
+app.use('/api/coupon', couponRoutes);  // POST /api/coupon/validate, admin CRUD
 
 // Error handling middleware
 app.use((err, req, res, next) => {

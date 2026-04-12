@@ -51,7 +51,7 @@ const PLANS = {
 // Creates a Razorpay order for the requested plan
 router.post('/create-order', authMiddleware, async (req, res) => {
   try {
-    const { plan, examType } = req.body; // examType required for single_exam plan
+    const { plan, examType, couponCode } = req.body; // examType required for single_exam plan
 
     if (!PLANS[plan]) {
       return res.status(400).json({ success: false, message: 'Invalid plan selected.' });
@@ -62,9 +62,35 @@ router.post('/create-order', authMiddleware, async (req, res) => {
     }
 
     const planConfig = PLANS[plan];
+    let finalAmount = planConfig.amount;
+    let appliedCoupon = null;
+
+    // Apply coupon if provided
+    if (couponCode) {
+      const db = getDb();
+      const coupon = await db.collection('coupons').findOne({
+        code: couponCode.toUpperCase().trim(),
+        active: true,
+      });
+
+      if (coupon) {
+        const expired = coupon.expiresAt && new Date(coupon.expiresAt) < new Date();
+        const limitReached = coupon.maxUses !== null && coupon.usedCount >= coupon.maxUses;
+        const wrongPlan = coupon.minPlan && coupon.minPlan !== plan;
+
+        if (!expired && !limitReached && !wrongPlan) {
+          if (coupon.discountType === 'percent') {
+            finalAmount = Math.round(finalAmount * (1 - coupon.discount / 100));
+          } else {
+            finalAmount = Math.max(100, finalAmount - coupon.discount * 100); // min ₹1
+          }
+          appliedCoupon = coupon;
+        }
+      }
+    }
 
     const order = await getRazorpay().orders.create({
-      amount: planConfig.amount,
+      amount: finalAmount,
       currency: planConfig.currency,
       receipt: `r_${req.userId.slice(-8)}_${Date.now().toString().slice(-10)}`,
       notes: {
@@ -72,6 +98,7 @@ router.post('/create-order', authMiddleware, async (req, res) => {
         plan,
         label: planConfig.label,
         examType: examType || '',
+        couponCode: appliedCoupon?.code || '',
       },
     });
 
@@ -81,6 +108,13 @@ router.post('/create-order', authMiddleware, async (req, res) => {
       amount: order.amount,
       currency: order.currency,
       keyId: process.env.RAZORPAY_KEY_ID,
+      originalAmount: planConfig.amount,
+      couponApplied: appliedCoupon ? {
+        code: appliedCoupon.code,
+        label: appliedCoupon.discountType === 'percent'
+          ? `${appliedCoupon.discount}% off`
+          : `₹${appliedCoupon.discount} off`,
+      } : null,
     });
   } catch (err) {
     console.error('[payment] create-order error:', err);
@@ -92,7 +126,7 @@ router.post('/create-order', authMiddleware, async (req, res) => {
 // Verifies Razorpay signature and activates premium for the user
 router.post('/verify', authMiddleware, async (req, res) => {
   try {
-    const { razorpay_order_id, razorpay_payment_id, razorpay_signature, plan, examType } = req.body;
+    const { razorpay_order_id, razorpay_payment_id, razorpay_signature, plan, examType, couponCode } = req.body;
 
     // 1. Verify signature
     const expectedSignature = crypto
@@ -154,10 +188,19 @@ router.post('/verify', authMiddleware, async (req, res) => {
       razorpay_signature,
       plan,
       examType: examType || null,
+      couponCode: couponCode || null,
       amount: planConfig.amount,
       currency: planConfig.currency,
       paidAt: now,
     });
+
+    // 5. Increment coupon usage count if a coupon was used
+    if (couponCode) {
+      await db.collection('coupons').updateOne(
+        { code: couponCode.toUpperCase().trim() },
+        { $inc: { usedCount: 1 } }
+      );
+    }
 
     // 5. Return updated status
     const updatedUser = await db.collection('users').findOne(
