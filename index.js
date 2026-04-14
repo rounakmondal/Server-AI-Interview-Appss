@@ -7,7 +7,7 @@ import { fileURLToPath } from 'url';
 
 import { initializeDatabase } from './database/db.js';
 import { connectMongo } from './database/mongo.js';
-import { seedExamData } from './database/examDb.js';
+import { seedExamData, seedExamRoomTests, seedNewExams2026 } from './database/examDb.js';
 import interviewRoutes from './routes/interview.js';
 import govtRoutes from './routes/govt.js';
 import studyRoutes from './routes/study.js';
@@ -35,9 +35,12 @@ import { sendTestResultEmail } from './routes/testResultEmail.js';
 import { handleTriggerDailyPost } from './routes/handleTriggerDailyPost.js';
 import paymentRoutes from './routes/payment.js';
 import couponRoutes from './routes/coupon.js';
+import mockTestAnalyticsRoutes from './routes/mockTestAnalytics.js';
+import personalDashboardRoutes from './routes/personalDashboard.js';
+import examRoomRoutes from './routes/examRoom.js';
 
 // Load environment variables
-dotenv.config();
+dotenv.config({ path: path.join(path.dirname(fileURLToPath(import.meta.url)), '.env') });
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
@@ -156,6 +159,15 @@ app.use('/api/payment', paymentRoutes);  // POST /api/payment/create-order, /ver
 // Coupon routes
 app.use('/api/coupon', couponRoutes);  // POST /api/coupon/validate, admin CRUD
 
+// Personalized Dashboard routes
+app.use('/api/personal-dashboard', personalDashboardRoutes);
+
+// Exam Room routes
+app.use('/api/exam-room', examRoomRoutes);
+
+// Mock Test Analytics routes
+app.use('/api/mock-test', mockTestAnalyticsRoutes);
+
 // Error handling middleware
 app.use((err, req, res, next) => {
     // Client disconnected before body was fully received — nothing to respond to
@@ -206,6 +218,8 @@ async function startServer() {
 
         // Seed exam prep data (no-op if already seeded)-->>>  9220446597
         seedExamData();
+        seedNewExams2026();
+        seedExamRoomTests();
 
         app.listen(PORT, '0.0.0.0', () => {
     console.log(`

@@ -60,8 +60,9 @@ function execute(sql, params = []) {
 // ─── Exam & Syllabus ──────────────────────────────────────────────────────────
 
 export const examQueries = {
-    listAll: ()   => queryAll('SELECT * FROM exams ORDER BY id'),
-    getById: (id) => queryOne('SELECT * FROM exams WHERE id = ?', [id]),
+    listAll:    ()     => queryAll('SELECT * FROM exams ORDER BY id'),
+    getById:    (id)   => queryOne('SELECT * FROM exams WHERE id = ?', [id]),
+    getBySlug:  (slug) => queryOne('SELECT * FROM exams WHERE slug = ?', [slug]),
 };
 
 export const subjectQueries = {
@@ -661,4 +662,372 @@ export function seedExamData() {
 
     saveDatabase();
     console.log('✅ Exam prep seed data inserted');
+}
+
+// ─── Exam Room queries ────────────────────────────────────────────────────────
+
+export const examRoomQueries = {
+    /** All tests for a chapter (ordered Easy → Medium → Hard) */
+    byChapter: (chapterId) =>
+        queryAll(
+            `SELECT * FROM exam_room_tests WHERE chapter_id = ? ORDER BY sort_order, id`,
+            [chapterId]
+        ),
+
+    /** Full tree: exam → subjects → chapters → tests, with user stats joined */
+    fullTree: (examId, userId) =>
+        queryAll(
+            `SELECT
+               e.id   AS exam_id,   e.name   AS exam_name,   e.name_bn AS exam_name_bn, e.slug,
+               s.id   AS subject_id, s.name  AS subject_name, s.name_bn AS subject_name_bn, s.sort_order AS subj_order,
+               c.id   AS chapter_id, c.name  AS chapter_name, c.name_bn AS chapter_name_bn, c.sort_order AS chap_order,
+               t.id   AS test_id,    t.difficulty, t.total_questions, t.time_limit,
+               t.marks_per_q, t.negative_marks, t.status, t.sort_order AS test_order,
+               us.score, us.accuracy, us.time_taken, us.completed_at
+             FROM exams e
+             JOIN subjects s ON s.exam_id = e.id
+             JOIN chapters c ON c.subject_id = s.id
+             JOIN exam_room_tests t ON t.chapter_id = c.id
+             LEFT JOIN exam_room_user_stats us
+               ON us.test_id = t.id AND us.user_id = ?
+             WHERE e.id = ?
+             ORDER BY s.sort_order, s.id, c.sort_order, c.id, t.sort_order, t.id`,
+            [userId, examId]
+        ),
+
+    getTest: (testId) =>
+        queryOne('SELECT * FROM exam_room_tests WHERE id = ?', [testId]),
+
+    getUserStat: (userId, testId) =>
+        queryOne('SELECT * FROM exam_room_user_stats WHERE user_id = ? AND test_id = ?', [userId, testId]),
+
+    upsertUserStat: (userId, testId, score, accuracy, timeTaken) => {
+        const db = getDb();
+        db.run(
+            `INSERT INTO exam_room_user_stats (user_id, test_id, score, accuracy, time_taken, completed_at)
+             VALUES (?, ?, ?, ?, ?, datetime('now'))
+             ON CONFLICT(user_id, test_id) DO UPDATE SET
+               score        = excluded.score,
+               accuracy     = excluded.accuracy,
+               time_taken   = excluded.time_taken,
+               completed_at = datetime('now')`,
+            [userId, testId, score, accuracy, timeTaken]
+        );
+        saveDatabase();
+    },
+
+    unlockTest: (testId) => {
+        const db = getDb();
+        db.run("UPDATE exam_room_tests SET status='unlocked' WHERE id=?", [testId]);
+        saveDatabase();
+    },
+
+    /** Best stat per exam for a user */
+    summaryByExam: (userId, examId) =>
+        queryAll(
+            `SELECT t.difficulty,
+               COUNT(t.id)                AS total_tests,
+               COUNT(us.test_id)          AS attempted,
+               AVG(us.accuracy)           AS avg_accuracy
+             FROM exam_room_tests t
+             JOIN chapters c ON c.id = t.chapter_id
+             JOIN subjects s ON s.id = c.subject_id
+             LEFT JOIN exam_room_user_stats us
+               ON us.test_id = t.id AND us.user_id = ?
+             WHERE s.exam_id = ?
+             GROUP BY t.difficulty`,
+            [userId, examId]
+        ),
+};
+
+// ─── Seed Exam Room tests (one Easy/Medium/Hard per chapter) ──────────────────
+// Idempotent: uses INSERT OR IGNORE so it can be called any time to fill gaps
+// for newly-added chapters without disturbing existing test records.
+
+export function seedExamRoomTests() {
+    const db = getDb();
+
+    // Find every chapter that does NOT yet have any exam_room_tests row
+    const missing = queryAll(
+        `SELECT c.id FROM chapters c
+         WHERE NOT EXISTS (
+             SELECT 1 FROM exam_room_tests t WHERE t.chapter_id = c.id
+         )`
+    );
+
+    if (missing.length === 0) return;
+
+    for (const { id: chapterId } of missing) {
+        db.run(
+            `INSERT OR IGNORE INTO exam_room_tests
+               (id, chapter_id, difficulty, total_questions, time_limit, marks_per_q, negative_marks, status, sort_order)
+             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+            [`ch${chapterId}_easy`, chapterId, 'Easy', 10, 12, 1.0, 0.25, 'unlocked', 1]
+        );
+        db.run(
+            `INSERT OR IGNORE INTO exam_room_tests
+               (id, chapter_id, difficulty, total_questions, time_limit, marks_per_q, negative_marks, status, sort_order)
+             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+            [`ch${chapterId}_medium`, chapterId, 'Medium', 15, 18, 1.0, 0.25, 'locked', 2]
+        );
+        db.run(
+            `INSERT OR IGNORE INTO exam_room_tests
+               (id, chapter_id, difficulty, total_questions, time_limit, marks_per_q, negative_marks, status, sort_order)
+             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+            [`ch${chapterId}_hard`, chapterId, 'Hard', 20, 25, 1.0, 0.25, 'locked', 3]
+        );
+    }
+
+    saveDatabase();
+    console.log(`✅ Exam room tests seeded for ${missing.length} chapter(s)`);
+}
+
+// ─── Seed 2026 new exams (WBP Constable + 9 more) — idempotent ───────────────
+
+export function seedNewExams2026() {
+    const db = getDb();
+
+    // ── New exams (INSERT OR IGNORE keeps re-runs safe) ────────────────────────
+    const NEW_EXAMS = [
+        ['WBP Constable',              'পশ্চিমবঙ্গ পুলিশ কনস্টেবল',          'wb-police-constable'],
+        ['SSC CHSL',                   'এসএসসি সিএইচএসএল',                    'ssc-chsl'],
+        ['SSC MTS',                    'এসএসসি এমটিএস',                        'ssc-mts'],
+        ['SSC GD Constable',           'এসএসসি জিডি কনস্টেবল',                'ssc-gd'],
+        ['Railway Group D',            'রেলওয়ে গ্রুপ ডি',                     'railway-group-d'],
+        ['Railway NTPC',               'রেলওয়ে এনটিপিসি',                     'railway-ntpc'],
+        ['WBPSC Food SI',              'ডব্লিউবিপিএসসি ফুড এসআই',             'wbpsc-food-si'],
+        ['WBPSC Misc Services',        'ডব্লিউবিপিএসসি বিবিধ পরিষেবা',        'wbpsc-misc-services'],
+        ['LIC AAO / ADO',              'এলআইসি এএও / এডিও',                   'lic-aao-ado'],
+        ['Post Office GDS',            'পোস্ট অফিস জিডিএস',                   'post-office-gds'],
+        ['NDA / CDS',                  'এনডিএ / সিডিএস',                       'nda-cds'],
+    ];
+
+    for (const [name, nameBn, slug] of NEW_EXAMS) {
+        db.run('INSERT OR IGNORE INTO exams (name, name_bn, slug) VALUES (?, ?, ?)', [name, nameBn, slug]);
+    }
+
+    const examRows = queryAll('SELECT id, slug FROM exams');
+    const eid = {};
+    for (const r of examRows) eid[r.slug] = r.id;
+
+    // Helper: get or insert a subject, return its id
+    function ensureSubject(examSlug, name, nameBn, sortOrder) {
+        const existing = queryOne(
+            'SELECT id FROM subjects WHERE exam_id = ? AND name = ?', [eid[examSlug], name]
+        );
+        if (existing) return existing.id;
+        db.run(
+            'INSERT INTO subjects (exam_id, name, name_bn, sort_order) VALUES (?, ?, ?, ?)',
+            [eid[examSlug], name, nameBn, sortOrder]
+        );
+        return queryOne('SELECT last_insert_rowid() as id').id;
+    }
+
+    // Helper: get or insert a chapter, return its id
+    function ensureChapter(subjectId, name, nameBn, sortOrder) {
+        const existing = queryOne(
+            'SELECT id FROM chapters WHERE subject_id = ? AND name = ?', [subjectId, name]
+        );
+        if (existing) return existing.id;
+        db.run(
+            'INSERT INTO chapters (subject_id, name, name_bn, sort_order, pass_mark) VALUES (?, ?, ?, ?, ?)',
+            [subjectId, name, nameBn, sortOrder, 60]
+        );
+        return queryOne('SELECT last_insert_rowid() as id').id;
+    }
+
+    // ── WBP Constable ──────────────────────────────────────────────────────────
+    {
+        const gk  = ensureSubject('wb-police-constable', 'General Knowledge & Current Affairs', 'সাধারণ জ্ঞান ও সমসাময়িক', 1);
+        const rea = ensureSubject('wb-police-constable', 'Reasoning', 'যুক্তিবিদ্যা', 2);
+        const mat = ensureSubject('wb-police-constable', 'Elementary Mathematics', 'প্রাথমিক গণিত', 3);
+        const eng = ensureSubject('wb-police-constable', 'English', 'ইংরেজি', 4);
+        const ben = ensureSubject('wb-police-constable', 'Bengali', 'বাংলা', 5);
+
+        for (const [sid, chs] of [
+            [gk,  [['History & Geography', 'ইতিহাস ও ভূগোল', 1], ['Polity & Constitution', 'রাজনীতি ও সংবিধান', 2], ['Current Affairs', 'সমসাময়িক ঘটনা', 3], ['WB Geography & Culture', 'পশ্চিমবঙ্গ ভূগোল ও সংস্কৃতি', 4]]],
+            [rea, [['Verbal Reasoning', 'মৌখিক যুক্তি', 1], ['Non-Verbal Reasoning', 'অ-মৌখিক যুক্তি', 2], ['Coding-Decoding', 'কোড-ডিকোড', 3]]],
+            [mat, [['Number System & Arithmetic', 'সংখ্যা ও পাটিগণিত', 1], ['Percentage & Interest', 'শতাংশ ও সুদ', 2], ['Algebra & Geometry', 'বীজগণিত ও জ্যামিতি', 3]]],
+            [eng, [['Grammar & Usage', 'ব্যাকরণ ও ব্যবহার', 1], ['Vocabulary', 'শব্দভাণ্ডার', 2]]],
+            [ben, [['Bengali Grammar', 'বাংলা ব্যাকরণ', 1], ['Comprehension', 'বোধগম্যতা', 2]]],
+        ]) {
+            for (const [cn, cbn, co] of chs) ensureChapter(sid, cn, cbn, co);
+        }
+    }
+
+    // ── SSC CHSL ───────────────────────────────────────────────────────────────
+    {
+        const qa  = ensureSubject('ssc-chsl', 'Quantitative Aptitude', 'পরিমাণগত যোগ্যতা', 1);
+        const rea = ensureSubject('ssc-chsl', 'General Intelligence & Reasoning', 'সাধারণ বুদ্ধিমত্তা ও যুক্তি', 2);
+        const ga  = ensureSubject('ssc-chsl', 'General Awareness', 'সাধারণ সচেতনতা', 3);
+        const eng = ensureSubject('ssc-chsl', 'English Language', 'ইংরেজি ভাষা', 4);
+
+        for (const [sid, chs] of [
+            [qa,  [['Number System & Simplification', 'সংখ্যা ও সরলীকরণ', 1], ['Percentage & Ratio', 'শতাংশ ও অনুপাত', 2], ['Algebra & Mensuration', 'বীজগণিত ও ক্ষেত্রমিতি', 3], ['Time, Work & Speed', 'সময়, কাজ ও গতি', 4]]],
+            [rea, [['Analogies & Classification', 'সাদৃশ্য ও শ্রেণীবিভাগ', 1], ['Coding-Decoding', 'কোড-ডিকোড', 2], ['Series & Puzzles', 'ধারা ও ধাঁধা', 3]]],
+            [ga,  [['History & Geography', 'ইতিহাস ও ভূগোল', 1], ['Science & Technology', 'বিজ্ঞান ও প্রযুক্তি', 2], ['Current Affairs', 'সমসাময়িক ঘটনা', 3]]],
+            [eng, [['Grammar', 'ব্যাকরণ', 1], ['Vocabulary & Comprehension', 'শব্দভাণ্ডার ও বোধগম্যতা', 2]]],
+        ]) {
+            for (const [cn, cbn, co] of chs) ensureChapter(sid, cn, cbn, co);
+        }
+    }
+
+    // ── SSC MTS ────────────────────────────────────────────────────────────────
+    {
+        const qa  = ensureSubject('ssc-mts', 'Basic Mathematics', 'প্রাথমিক গণিত', 1);
+        const rea = ensureSubject('ssc-mts', 'Reasoning Ability', 'যুক্তি দক্ষতা', 2);
+        const ga  = ensureSubject('ssc-mts', 'General Awareness', 'সাধারণ সচেতনতা', 3);
+        const eng = ensureSubject('ssc-mts', 'English Language', 'ইংরেজি ভাষা', 4);
+
+        for (const [sid, chs] of [
+            [qa,  [['Number System', 'সংখ্যা পদ্ধতি', 1], ['Percentage & Profit-Loss', 'শতাংশ ও লাভ-ক্ষতি', 2], ['Simple Interest & Ratio', 'সরল সুদ ও অনুপাত', 3]]],
+            [rea, [['Analogies', 'সাদৃশ্য', 1], ['Classification & Series', 'শ্রেণীবিভাগ ও ধারা', 2], ['Directions & Distances', 'দিক ও দূরত্ব', 3]]],
+            [ga,  [['Indian History', 'ভারতীয় ইতিহাস', 1], ['Indian Polity', 'ভারতীয় রাজনীতি', 2], ['Current Affairs', 'সমসাময়িক ঘটনা', 3]]],
+            [eng, [['Basic Grammar', 'প্রাথমিক ব্যাকরণ', 1], ['Vocabulary', 'শব্দভাণ্ডার', 2]]],
+        ]) {
+            for (const [cn, cbn, co] of chs) ensureChapter(sid, cn, cbn, co);
+        }
+    }
+
+    // ── SSC GD Constable ───────────────────────────────────────────────────────
+    {
+        const mat = ensureSubject('ssc-gd', 'Elementary Mathematics', 'প্রাথমিক গণিত', 1);
+        const rea = ensureSubject('ssc-gd', 'General Intelligence & Reasoning', 'সাধারণ বুদ্ধিমত্তা', 2);
+        const ga  = ensureSubject('ssc-gd', 'General Knowledge & Awareness', 'সাধারণ জ্ঞান', 3);
+        const eng = ensureSubject('ssc-gd', 'English / Hindi', 'ইংরেজি / হিন্দি', 4);
+
+        for (const [sid, chs] of [
+            [mat, [['Number System & HCF/LCM', 'সংখ্যা ও ল.সা.গু/গ.সা.গু', 1], ['Percentage & Interest', 'শতাংশ ও সুদ', 2], ['Geometry & Mensuration', 'জ্যামিতি ও ক্ষেত্রমিতি', 3]]],
+            [rea, [['Analogies & Classification', 'সাদৃশ্য', 1], ['Blood Relations', 'রক্তসম্পর্ক', 2], ['Series Completion', 'সিরিজ পূরণ', 3]]],
+            [ga,  [['History & Geography', 'ইতিহাস ও ভূগোল', 1], ['Science', 'বিজ্ঞান', 2], ['Current Events', 'সমসাময়িক', 3]]],
+            [eng, [['Grammar Basics', 'মূল ব্যাকরণ', 1], ['Vocabulary', 'শব্দভাণ্ডার', 2]]],
+        ]) {
+            for (const [cn, cbn, co] of chs) ensureChapter(sid, cn, cbn, co);
+        }
+    }
+
+    // ── Railway Group D ────────────────────────────────────────────────────────
+    {
+        const mat = ensureSubject('railway-group-d', 'Mathematics', 'গণিত', 1);
+        const rea = ensureSubject('railway-group-d', 'General Intelligence & Reasoning', 'সাধারণ বুদ্ধিমত্তা', 2);
+        const sci = ensureSubject('railway-group-d', 'General Science', 'সাধারণ বিজ্ঞান', 3);
+        const gca = ensureSubject('railway-group-d', 'General Awareness & Current Affairs', 'সাধারণ জ্ঞান ও সমসাময়িক', 4);
+
+        for (const [sid, chs] of [
+            [mat, [['Number System & Decimals', 'সংখ্যা ও দশমিক', 1], ['BODMAS & Algebra', 'বডমাস ও বীজগণিত', 2], ['Geometry & Mensuration', 'জ্যামিতি', 3], ['Time, Work & Distance', 'সময় ও কাজ', 4]]],
+            [rea, [['Analogies & Series', 'সাদৃশ্য ও সিরিজ', 1], ['Coding & Directions', 'কোড ও দিক', 2], ['Puzzles', 'ধাঁধা', 3]]],
+            [sci, [['Physics Basics', 'পদার্থবিজ্ঞান', 1], ['Chemistry Basics', 'রসায়ন', 2], ['Biology Basics', 'জীববিজ্ঞান', 3]]],
+            [gca, [['History & Polity', 'ইতিহাস ও রাজনীতি', 1], ['Geography', 'ভূগোল', 2], ['Current Events', 'সমসাময়িক', 3]]],
+        ]) {
+            for (const [cn, cbn, co] of chs) ensureChapter(sid, cn, cbn, co);
+        }
+    }
+
+    // ── Railway NTPC ───────────────────────────────────────────────────────────
+    {
+        const mat = ensureSubject('railway-ntpc', 'Mathematics', 'গণিত', 1);
+        const rea = ensureSubject('railway-ntpc', 'General Intelligence & Reasoning', 'সাধারণ বুদ্ধিমত্তা', 2);
+        const ga  = ensureSubject('railway-ntpc', 'General Awareness', 'সাধারণ সচেতনতা', 3);
+        const eng = ensureSubject('railway-ntpc', 'English Language', 'ইংরেজি ভাষা', 4);
+
+        for (const [sid, chs] of [
+            [mat, [['Number System', 'সংখ্যা', 1], ['Algebra & Trigonometry', 'বীজগণিত ও ত্রিকোণমিতি', 2], ['Statistics & DI', 'পরিসংখ্যান ও ডেটা', 3], ['Time & Work', 'সময় ও কাজ', 4]]],
+            [rea, [['Analogies', 'সাদৃশ্য', 1], ['Series & Coding', 'সিরিজ ও কোড', 2], ['Blood Relations & Directions', 'রক্তসম্পর্ক ও দিক', 3], ['Puzzles & Seating', 'ধাঁধা ও আসন', 4]]],
+            [ga,  [['Indian History', 'ইতিহাস', 1], ['Geography', 'ভূগোল', 2], ['Indian Polity', 'রাজনীতি', 3], ['Current Affairs', 'সমসাময়িক', 4], ['Science & Technology', 'বিজ্ঞান', 5]]],
+            [eng, [['Grammar', 'ব্যাকরণ', 1], ['Vocabulary', 'শব্দভাণ্ডার', 2], ['Comprehension', 'বোধগম্যতা', 3]]],
+        ]) {
+            for (const [cn, cbn, co] of chs) ensureChapter(sid, cn, cbn, co);
+        }
+    }
+
+    // ── WBPSC Food SI ──────────────────────────────────────────────────────────
+    {
+        const gs  = ensureSubject('wbpsc-food-si', 'General Studies', 'সাধারণ অধ্যয়ন', 1);
+        const mat = ensureSubject('wbpsc-food-si', 'Arithmetic', 'পাটিগণিত', 2);
+        const rea = ensureSubject('wbpsc-food-si', 'Reasoning', 'যুক্তিবিদ্যা', 3);
+        const eng = ensureSubject('wbpsc-food-si', 'English', 'ইংরেজি', 4);
+
+        for (const [sid, chs] of [
+            [gs,  [['History & Geography (WB)', 'ইতিহাস ও ভূগোল (পশ্চিমবঙ্গ)', 1], ['Polity & Economy', 'রাজনীতি ও অর্থনীতি', 2], ['Food & Nutrition Basics', 'খাদ্য ও পুষ্টি', 3]]],
+            [mat, [['Number System & Percentage', 'সংখ্যা ও শতাংশ', 1], ['Profit, Loss & Interest', 'লাভ, ক্ষতি ও সুদ', 2], ['Mensuration', 'ক্ষেত্রমিতি', 3]]],
+            [rea, [['Verbal Reasoning', 'মৌখিক যুক্তি', 1], ['Non-Verbal Reasoning', 'অ-মৌখিক যুক্তি', 2]]],
+            [eng, [['Grammar', 'ব্যাকরণ', 1], ['Vocabulary', 'শব্দভাণ্ডার', 2]]],
+        ]) {
+            for (const [cn, cbn, co] of chs) ensureChapter(sid, cn, cbn, co);
+        }
+    }
+
+    // ── WBPSC Misc Services ────────────────────────────────────────────────────
+    {
+        const gs  = ensureSubject('wbpsc-misc-services', 'General Studies', 'সাধারণ অধ্যয়ন', 1);
+        const mat = ensureSubject('wbpsc-misc-services', 'Arithmetic & Reasoning', 'পাটিগণিত ও যুক্তি', 2);
+        const sci = ensureSubject('wbpsc-misc-services', 'General Science', 'সাধারণ বিজ্ঞান', 3);
+        const eng = ensureSubject('wbpsc-misc-services', 'English', 'ইংরেজি', 4);
+
+        for (const [sid, chs] of [
+            [gs,  [['Indian History', 'ভারতীয় ইতিহাস', 1], ['Indian Geography', 'ভারতীয় ভূগোল', 2], ['Indian Polity', 'ভারতীয় রাজনীতি', 3], ['Current Affairs', 'সমসাময়িক', 4]]],
+            [mat, [['Number System', 'সংখ্যা', 1], ['Percentage & Ratio', 'শতাংশ ও অনুপাত', 2], ['Logical Reasoning', 'যৌক্তিক যুক্তি', 3]]],
+            [sci, [['Physics & Chemistry', 'পদার্থ ও রসায়ন', 1], ['Biology & Environment', 'জীববিজ্ঞান ও পরিবেশ', 2]]],
+            [eng, [['Grammar & Usage', 'ব্যাকরণ', 1], ['Comprehension', 'বোধগম্যতা', 2]]],
+        ]) {
+            for (const [cn, cbn, co] of chs) ensureChapter(sid, cn, cbn, co);
+        }
+    }
+
+    // ── LIC AAO / ADO ──────────────────────────────────────────────────────────
+    {
+        const qa  = ensureSubject('lic-aao-ado', 'Quantitative Aptitude', 'পরিমাণগত যোগ্যতা', 1);
+        const rea = ensureSubject('lic-aao-ado', 'Reasoning Ability', 'যুক্তি দক্ষতা', 2);
+        const eng = ensureSubject('lic-aao-ado', 'English Language', 'ইংরেজি ভাষা', 3);
+        const gk  = ensureSubject('lic-aao-ado', 'General Knowledge & Current Affairs', 'সাধারণ জ্ঞান', 4);
+        const ins = ensureSubject('lic-aao-ado', 'Insurance & Financial Market Awareness', 'বীমা ও আর্থিক সচেতনতা', 5);
+
+        for (const [sid, chs] of [
+            [qa,  [['Data Interpretation', 'তথ্য বিশ্লেষণ', 1], ['Number Series', 'সংখ্যার ধারা', 2], ['Quadratic Equations', 'দ্বিঘাত সমীকরণ', 3], ['Miscellaneous Arithmetic', 'বিবিধ', 4]]],
+            [rea, [['Puzzles & Seating Arrangement', 'ধাঁধা ও আসন', 1], ['Syllogism', 'বৈধতা', 2], ['Inequality', 'অসমতা', 3], ['Coding-Decoding', 'কোড-ডিকোড', 4]]],
+            [eng, [['Reading Comprehension', 'বোধগম্যতা', 1], ['Grammar & Error Spotting', 'ব্যাকরণ', 2], ['Cloze Test', 'ক্লোজ টেস্ট', 3]]],
+            [gk,  [['Current Affairs', 'সমসাময়িক', 1], ['Banking & Economy', 'ব্যাংকিং ও অর্থনীতি', 2]]],
+            [ins, [['LIC Products & Plans', 'এলআইসি পণ্য', 1], ['Insurance Principles', 'বীমার মূলনীতি', 2], ['Financial Markets', 'আর্থিক বাজার', 3]]],
+        ]) {
+            for (const [cn, cbn, co] of chs) ensureChapter(sid, cn, cbn, co);
+        }
+    }
+
+    // ── Post Office GDS ────────────────────────────────────────────────────────
+    {
+        const mat = ensureSubject('post-office-gds', 'Basic Mathematics', 'প্রাথমিক গণিত', 1);
+        const eng = ensureSubject('post-office-gds', 'English', 'ইংরেজি', 2);
+        const rea = ensureSubject('post-office-gds', 'Reasoning & Logical Ability', 'যুক্তি', 3);
+        const gk  = ensureSubject('post-office-gds', 'General Awareness', 'সাধারণ সচেতনতা', 4);
+
+        for (const [sid, chs] of [
+            [mat, [['Number System & Arithmetic', 'সংখ্যা ও পাটিগণিত', 1], ['Percentage & Measurement', 'শতাংশ ও পরিমাপ', 2]]],
+            [eng, [['Grammar & Vocabulary', 'ব্যাকরণ ও শব্দ', 1], ['Letter Writing Basics', 'পত্র লেখা', 2]]],
+            [rea, [['Analogies & Series', 'সাদৃশ্য ও সিরিজ', 1], ['Directions & Arrangements', 'দিক ও বিন্যাস', 2]]],
+            [gk,  [['Current Affairs', 'সমসাময়িক', 1], ['India Post Services', 'ভারতীয় ডাক পরিষেবা', 2]]],
+        ]) {
+            for (const [cn, cbn, co] of chs) ensureChapter(sid, cn, cbn, co);
+        }
+    }
+
+    // ── NDA / CDS ─────────────────────────────────────────────────────────────
+    {
+        const mat = ensureSubject('nda-cds', 'Mathematics', 'গণিত', 1);
+        const eng = ensureSubject('nda-cds', 'English', 'ইংরেজি', 2);
+        const gk  = ensureSubject('nda-cds', 'General Knowledge', 'সাধারণ জ্ঞান', 3);
+
+        for (const [sid, chs] of [
+            [mat, [['Algebra & Quadratic Equations', 'বীজগণিত', 1], ['Trigonometry', 'ত্রিকোণমিতি', 2], ['Geometry & Mensuration', 'জ্যামিতি', 3], ['Statistics & Probability', 'পরিসংখ্যান', 4], ['Calculus Basics', 'ক্যালকুলাস', 5]]],
+            [eng, [['Grammar & Composition', 'ব্যাকরণ', 1], ['Vocabulary & Comprehension', 'শব্দ ও বোধগম্যতা', 2]]],
+            [gk,  [['Physics', 'পদার্থবিজ্ঞান', 1], ['Chemistry', 'রসায়ন', 2], ['Biology', 'জীববিজ্ঞান', 3], ['Indian History & Polity', 'ইতিহাস ও রাজনীতি', 4], ['Geography & Environment', 'ভূগোল ও পরিবেশ', 5], ['Current Events & Defence', 'সমসাময়িক ও প্রতিরক্ষা', 6]]],
+        ]) {
+            for (const [cn, cbn, co] of chs) ensureChapter(sid, cn, cbn, co);
+        }
+    }
+
+    saveDatabase();
+    console.log('✅ 2026 new exams seeded (WBP Constable + 10 exams)');
+
+    // Seed exam room tests for all newly added chapters
+    seedExamRoomTests();
 }

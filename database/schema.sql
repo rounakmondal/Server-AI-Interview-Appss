@@ -221,3 +221,35 @@ CREATE TABLE IF NOT EXISTS plan_streaks (
 CREATE INDEX IF NOT EXISTS idx_amar_plan_user       ON amar_plan(user_id);
 CREATE INDEX IF NOT EXISTS idx_plan_tasks_plan_date ON plan_tasks(plan_id, task_date);
 CREATE INDEX IF NOT EXISTS idx_plan_mock_plan       ON plan_mock_scores(plan_id);
+
+-- ══════════════════════════════════════════════════════════════
+-- Exam Room Schema
+-- ══════════════════════════════════════════════════════════════
+
+CREATE TABLE IF NOT EXISTS exam_room_tests (
+    id              TEXT PRIMARY KEY,
+    chapter_id      INTEGER NOT NULL,
+    difficulty      TEXT NOT NULL CHECK(difficulty IN ('Easy','Medium','Hard')),
+    total_questions INTEGER NOT NULL DEFAULT 15,
+    time_limit      INTEGER NOT NULL DEFAULT 20,
+    marks_per_q     REAL NOT NULL DEFAULT 1.0,
+    negative_marks  REAL NOT NULL DEFAULT 0.25,
+    status          TEXT NOT NULL DEFAULT 'unlocked' CHECK(status IN ('locked','unlocked')),
+    sort_order      INTEGER DEFAULT 0,
+    FOREIGN KEY (chapter_id) REFERENCES chapters(id) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS exam_room_user_stats (
+    id           INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id      TEXT NOT NULL,
+    test_id      TEXT NOT NULL,
+    score        REAL,
+    accuracy     REAL,
+    time_taken   INTEGER,
+    completed_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE(user_id, test_id)
+);
+
+CREATE INDEX IF NOT EXISTS idx_ert_chapter  ON exam_room_tests(chapter_id);
+CREATE INDEX IF NOT EXISTS idx_erus_user    ON exam_room_user_stats(user_id);
+CREATE INDEX IF NOT EXISTS idx_erus_test    ON exam_room_user_stats(test_id);

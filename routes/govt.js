@@ -495,9 +495,19 @@ async function fetchBatchWithTimeout(...args) {
 
 // Helper function to fetch a batch of questions
 async function fetchBatch(batchSize, startId, exam, subject, difficulty, language, system) {
+  const topicHints = {
+    Math: 'Include: Percentage, Profit-Loss, SI/CI, Time-Work, Speed-Distance-Time, Algebra (quadratic/identities), Mensuration (2D+3D), HCF/LCM, Data Interpretation tables.',
+    Reasoning: 'Include: Syllogism, Blood Relations, Coding-Decoding (complex), Direction+Distance, Ranking, Seating Arrangement, Statement-Assumption.',
+    History: 'Include: Indus Valley, Maurya/Gupta empires, Medieval Sultanate, Mughal admin, 1857, Gandhi movements, Congress sessions, post-1947 events.',
+    Polity: 'Include: Constitutional Articles, Amendments (42nd, 44th, 73rd, 74th), DPSP, Fundamental Rights, Union/State/Concurrent lists, Parliamentary terms.',
+    Geography: 'Include: Indian rivers/passes/soils, climate zones, minerals, industries, national parks, biosphere reserves, world geography.',
+    'Current Affairs': 'Include: Government schemes (PM Awas, PM Kisan, Jal Jeevan), recent summits, national awards, major sports events, new laws/bills.',
+  };
+  const hint = topicHints[subject] || '';
+
   const user = `Generate exactly ${batchSize} multiple-choice questions for:
 - Exam: ${exam}
-- Subject: ${subject}
+- Subject: ${subject}${hint ? `\n- Topic guidance: ${hint}` : ''}
 - Difficulty: ${difficulty}
 - Start IDs from: ${startId}
 
@@ -508,10 +518,10 @@ Each question MUST follow this exact JSON shape (no extra fields):
   "subject": "${subject}",
   "difficulty": "${difficulty}",
   "year": <YYYY or null>,
-  "question": "<question text>",
+  "question": "<clear, exam-phrased question — never trivial arithmetic>",
   "options": ["<A>","<B>","<C>","<D>"],
   "correctIndex": <0|1|2|3>,
-  "explanation": "<English explanation>",
+  "explanation": "<step-by-step English explanation>",
   "explanationBn": "<Bengali explanation>"
 }
 ${language !== 'English' ? `\nIMPORTANT: Write the "question" and "options" values in ${language} language.` : ''}
@@ -552,13 +562,27 @@ async function generateQuestionsBatched(exam, subject, difficulty, totalCount, l
   const batchSize = useFullPaperBatch ? FULL_PAPER_BATCH : BATCH_SIZE;
   const allQuestions = [];
 
-  const langInstruction = language !== 'English'
-    ? `\nIMPORTANT: The "question" and "options" fields MUST be written in ${language} language. The "explanation" field should be in English and "explanationBn" in Bengali.`
+  const langDisplayName = language === 'bn' ? 'Bengali' : language === 'hi' ? 'Hindi' : language;
+  const langInstruction = (language !== 'English' && language !== 'en')
+    ? `\nIMPORTANT: The "question" and "options" fields MUST be written in ${langDisplayName} language. The "explanation" field should be in English and "explanationBn" in Bengali.`
     : '';
 
-  const system = `You are an expert question-setter for Indian government competitive exams.
+  const difficultyGuide = difficulty === 'Easy'
+    ? 'EASY: test understanding of real exam concepts — NOT trivial arithmetic like 7×6 or 15-9. Use proper exam phrasing with context.'
+    : difficulty === 'Medium'
+    ? 'MEDIUM: previous-year exam style — multi-step reasoning, formula application, or data-based questions.'
+    : 'HARD: advanced — complex multi-step problems, tricky distractor options designed to catch unprepared students.';
+
+  const system = `You are a senior question-setter for UPSC/SSC/WBCS/Railway/Banking competitive exams in India.
 Always respond with ONLY a valid JSON array — no markdown, no explanation, no prose.
-Each array element must be a complete, self-contained question object.${langInstruction}`;
+Each element must be a complete self-contained MCQ question object.
+STRICT RULES:
+- ${difficultyGuide}
+- NEVER generate trivial one-step arithmetic (e.g. 7×6, 15-9, 60÷10). These are unacceptable for any competitive exam.
+- Every Maths question must require at least 2 steps or a formula/concept (percentage, SI/CI, ratio, allegation, pipes, trains).
+- All 4 options must be plausible — weak students should find at least 2 options tempting.
+- GK questions must test facts that genuinely appear in SSC/WBCS/Railway past papers.
+- Vary question style each batch: formula-based, data-interpretation, application, analogy, error-detection.${langInstruction}`;
 
   // FIRST BATCH: Execute immediately without concurrency limit for fast response
   const firstBatchSize = Math.min(batchSize, totalCount);
