@@ -24,25 +24,46 @@ function getRazorpay() {
 
 // Plan config (amounts in paise — INR × 100)
 const PLANS = {
-  // ₹9 — one-time, unlocks a single specific exam forever
-  single_exam: {
+  // ₹9 — single exam access for 1 day
+  single_test: {
     amount: 900,
     currency: 'INR',
-    label: 'Single Exam Pass',
-    durationDays: 0, // never expires — stored as permanent flag
+    label: 'Single Exam — 1 Day Pass',
+    durationDays: 1,
   },
-  // ₹29/month — unlocks all exams (no PDF)
-  monthly_pass: {
-    amount: 2900,
+  // ₹19/month — single exam, 1 month, 3 analytics per day
+  single_exam: {
+    amount: 1900,
     currency: 'INR',
-    label: 'All Exams Monthly Pass',
+    label: 'Single Exam — Monthly Pass',
     durationDays: 30,
   },
-  // ₹99/month — all exams + PDF downloads
+  // ₹29/month — 2 exams, unlimited analytics, recommendations, mock tests
+  dual_exam: {
+    amount: 2900,
+    currency: 'INR',
+    label: '2 Exams — Monthly Pass',
+    durationDays: 30,
+  },
+  // ₹99/month — all exams, all features, 1 month
   pro_monthly: {
     amount: 9900,
     currency: 'INR',
-    label: 'Pro Monthly (All exams + PDF)',
+    label: 'All Exams Pro — Monthly',
+    durationDays: 30,
+  },
+  // ₹19 — one AI interview for a specific company
+  ai_interview_single: {
+    amount: 1900,
+    currency: 'INR',
+    label: 'AI Interview — Single Company',
+    durationDays: 0, // one-time, credits-based
+  },
+  // ₹11 — unlock AI interviews for ALL 200 companies (1 month)
+  ai_interview_all: {
+    amount: 1100,
+    currency: 'INR',
+    label: 'AI Interview — All Companies',
     durationDays: 30,
   },
 };
@@ -57,8 +78,8 @@ router.post('/create-order', authMiddleware, async (req, res) => {
       return res.status(400).json({ success: false, message: 'Invalid plan selected.' });
     }
 
-    if (plan === 'single_exam' && !examType) {
-      return res.status(400).json({ success: false, message: 'examType is required for single exam pass.' });
+    if ((plan === 'single_exam' || plan === 'single_test' || plan === 'dual_exam') && !examType) {
+      return res.status(400).json({ success: false, message: 'examType is required for this plan.' });
     }
 
     const planConfig = PLANS[plan];
@@ -150,12 +171,15 @@ router.post('/verify', authMiddleware, async (req, res) => {
 
     let premiumUpdate;
 
-    if (plan === 'single_exam') {
-      // Push examType into a set of unlocked exams (permanent)
+    if (plan === 'single_test') {
+      // ₹9 — single exam for 1 day
+      const expiresAt = new Date(now.getTime() + planConfig.durationDays * 24 * 60 * 60 * 1000);
       premiumUpdate = {
         $set: {
           'premium.active': true,
-          'premium.plan': 'single_exam',
+          'premium.plan': 'single_test',
+          'premium.activatedAt': now,
+          'premium.expiresAt': expiresAt,
           'premium.lastPaymentId': razorpay_payment_id,
           'premium.lastOrderId': razorpay_order_id,
         },
@@ -163,8 +187,65 @@ router.post('/verify', authMiddleware, async (req, res) => {
           'premium.unlockedExams': examType,
         },
       };
+    } else if (plan === 'single_exam') {
+      // ₹19/month — one specific exam for 30 days
+      const expiresAt = new Date(now.getTime() + planConfig.durationDays * 24 * 60 * 60 * 1000);
+      premiumUpdate = {
+        $set: {
+          'premium.active': true,
+          'premium.plan': 'single_exam',
+          'premium.activatedAt': now,
+          'premium.expiresAt': expiresAt,
+          'premium.lastPaymentId': razorpay_payment_id,
+          'premium.lastOrderId': razorpay_order_id,
+        },
+        $addToSet: {
+          'premium.unlockedExams': examType,
+        },
+      };
+    } else if (plan === 'dual_exam') {
+      // ₹29/month — 2 exams for 30 days
+      const expiresAt = new Date(now.getTime() + planConfig.durationDays * 24 * 60 * 60 * 1000);
+      premiumUpdate = {
+        $set: {
+          'premium.active': true,
+          'premium.plan': 'dual_exam',
+          'premium.activatedAt': now,
+          'premium.expiresAt': expiresAt,
+          'premium.lastPaymentId': razorpay_payment_id,
+          'premium.lastOrderId': razorpay_order_id,
+        },
+        $addToSet: {
+          'premium.unlockedExams': examType,
+        },
+      };
+    } else if (plan === 'ai_interview_single') {
+      // ₹19 — purchase 1 AI interview credit for a specific company
+      premiumUpdate = {
+        $set: {
+          'premium.lastPaymentId': razorpay_payment_id,
+          'premium.lastOrderId': razorpay_order_id,
+        },
+        $inc: {
+          'premium.interviewCredits': 1,
+        },
+        $addToSet: {
+          'premium.unlockedInterviews': examType, // company name
+        },
+      };
+    } else if (plan === 'ai_interview_all') {
+      // ₹11 — unlock AI interviews for all companies for 30 days
+      const expiresAt = new Date(now.getTime() + planConfig.durationDays * 24 * 60 * 60 * 1000);
+      premiumUpdate = {
+        $set: {
+          'premium.aiInterviewAll': true,
+          'premium.aiInterviewExpiresAt': expiresAt,
+          'premium.lastPaymentId': razorpay_payment_id,
+          'premium.lastOrderId': razorpay_order_id,
+        },
+      };
     } else {
-      // monthly_pass or pro_monthly — timed subscription
+      // pro_monthly (₹99/month) — all exams + PDF + recommendations
       const expiresAt = new Date(now.getTime() + planConfig.durationDays * 24 * 60 * 60 * 1000);
       premiumUpdate = {
         $set: {
@@ -226,11 +307,21 @@ router.get('/status', authMiddleware, async (req, res) => {
     const db = getDb();
     const user = await db.collection('users').findOne(
       { _id: new ObjectId(req.userId) },
-      { projection: { premium: 1 } }
+      { projection: { premium: 1, firstSeenAt: 1, createdAt: 1 } }
     );
 
-    const premium = user?.premium || { active: false, unlockedExams: [] };
+    // ⚠️ PAYMENT DISABLED - Comment out the next 3 lines to re-enable
+    const premiumFree = { active: true, plan: 'pro_monthly', unlockedExams: ['WBCS', 'Police', 'JTET', 'WBPSC', 'RRB-NTPC', 'SSC'], testCredits: 999, interviewCredits: 999, unlockedInterviews: [], aiInterviewAll: true, activatedAt: new Date(), expiresAt: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000) };
+    const premium = premiumFree;
+    /*
+    const premium = user?.premium || { active: false, unlockedExams: [], testCredits: 0, interviewCredits: 0, unlockedInterviews: [], aiInterviewAll: false };
     if (!premium.unlockedExams) premium.unlockedExams = [];
+    if (!premium.testCredits) premium.testCredits = 0;
+    if (!premium.interviewCredits) premium.interviewCredits = 0;
+    if (!premium.unlockedInterviews) premium.unlockedInterviews = [];
+
+    // First-seen date for trial period
+    const firstSeenAt = user?.firstSeenAt || user?.createdAt || null;
 
     // Auto-deactivate timed plans if expired
     if (premium.active && premium.expiresAt && new Date(premium.expiresAt) < new Date()) {
@@ -241,7 +332,16 @@ router.get('/status', authMiddleware, async (req, res) => {
       );
     }
 
-    res.json({ success: true, premium });
+    // Auto-deactivate AI interview all-company pass if expired
+    if (premium.aiInterviewAll && premium.aiInterviewExpiresAt && new Date(premium.aiInterviewExpiresAt) < new Date()) {
+      premium.aiInterviewAll = false;
+      await db.collection('users').updateOne(
+        { _id: new ObjectId(req.userId) },
+        { $set: { 'premium.aiInterviewAll': false } }
+      );
+    }
+
+    res.json({ success: true, premium, firstSeenAt });
   } catch (err) {
     console.error('[payment] status error:', err);
     res.status(500).json({ success: false, message: 'Failed to fetch premium status.' });
