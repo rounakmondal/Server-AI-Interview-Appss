@@ -66,6 +66,30 @@ function sanitiseUser(user) {
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+// Max accounts per IP address (anti-abuse)
+const MAX_ACCOUNTS_PER_IP = 3;
+
+/**
+ * Extract client IP reliably behind proxies.
+ */
+function getClientIp(req) {
+  const forwarded = req.headers['x-forwarded-for'];
+  if (forwarded) {
+    return forwarded.split(',')[0].trim();
+  }
+  return req.connection?.remoteAddress || req.ip || 'unknown';
+}
+
+/**
+ * Check if an IP has created too many accounts.
+ * Returns { allowed, count } — if !allowed, block registration.
+ */
+async function checkIpAbuse(db, ip) {
+  if (!ip || ip === 'unknown') return { allowed: true, count: 0 };
+  const count = await db.collection('users').countDocuments({ signupIp: ip });
+  return { allowed: count < MAX_ACCOUNTS_PER_IP, count };
+}
+
 // ─── 1. POST /send-otp ───
 // //────────────────────────────────────────────────────
 
@@ -151,7 +175,7 @@ router.post('/verify-otp', async (req, res) => {
 
 router.post('/signup', async (req, res) => {
   try {
-    const { tempToken, name, password } = req.body;
+    const { tempToken, name, password, deviceFingerprint } = req.body;
     if (!tempToken || !name || !password)
       return res.status(400).json({ success: false, message: 'tempToken, name and password are required' });
 
@@ -165,6 +189,27 @@ router.post('/signup', async (req, res) => {
     const { email } = payload;
     const db = getDb();
 
+    // Anti-abuse: check IP limit
+    const clientIp = getClientIp(req);
+    const ipCheck = await checkIpAbuse(db, clientIp);
+    if (!ipCheck.allowed) {
+      return res.status(429).json({
+        success: false,
+        message: 'Too many accounts created from this network. Please contact support.',
+      });
+    }
+
+    // Anti-abuse: check device fingerprint limit
+    if (deviceFingerprint) {
+      const fpCount = await db.collection('users').countDocuments({ deviceFingerprint });
+      if (fpCount >= MAX_ACCOUNTS_PER_IP) {
+        return res.status(429).json({
+          success: false,
+          message: 'Too many accounts from this device. Please contact support.',
+        });
+      }
+    }
+
     const existing = await db.collection('users').findOne({ email });
     if (existing)
       return res.status(409).json({ success: false, message: 'Account already exists. Please login' });
@@ -177,6 +222,10 @@ router.post('/signup', async (req, res) => {
       name: name.trim(),
       password: hashedPassword,
       createdAt: now,
+      firstSeenAt: now,
+      signupIp: clientIp,
+      deviceFingerprint: deviceFingerprint || null,
+      loginIps: [clientIp],
     });
 
     const user = { _id: result.insertedId, email, name: name.trim(), createdAt: now };
@@ -208,6 +257,16 @@ router.post('/login', async (req, res) => {
     const match = await bcrypt.compare(password, user.password);
     if (!match)
       return res.status(401).json({ success: false, message: 'Invalid email or password' });
+
+    // Track login IP
+    const clientIp = getClientIp(req);
+    await db.collection('users').updateOne(
+      { _id: user._id },
+      {
+        $addToSet: { loginIps: clientIp },
+        $set: { lastLoginAt: new Date().toISOString(), lastLoginIp: clientIp },
+      }
+    );
 
     const token = signSessionToken(user);
     return res.json({ success: true, message: 'Login successful', token, user: sanitiseUser(user) });

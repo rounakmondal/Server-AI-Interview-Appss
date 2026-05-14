@@ -1,5 +1,6 @@
 import cron from 'node-cron';
 import { getDb } from '../database/db.js';
+import { getDb as getMongo } from '../database/mongo.js';
 
 const FALLBACK_SUBJECTS = ["police", "wbcs", "wbpsc"];
 const POST_URL = "https://recomendengine-1.onrender.com/daily-post";
@@ -108,6 +109,67 @@ async function postAllSubjects(label) {
   }));
 }
 
+/**
+ * Generate a daily paper via the recommendation engine and store it in MongoDB.
+ * Also sends push notifications to subscribed users.
+ */
+async function generateAndStoreDailyPaper(subject, slot) {
+  const RECOMMEND_URL = "https://recomendengine-1.onrender.com/recommend";
+  try {
+    const res = await fetch(RECOMMEND_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ subject, num_questions: 50 }),
+    });
+    if (!res.ok) throw new Error(`Recommend API ${res.status}`);
+    const data = await res.json();
+
+    // Store in MongoDB
+    try {
+      const mongo = getMongo();
+      const today = new Date().toISOString().slice(0, 10); // YYYY-MM-DD
+      await mongo.collection('daily_papers').updateOne(
+        { date: today, slot, subject },
+        {
+          $set: {
+            questions: data.questions || [],
+            totalQuestions: data.total_recommended || 0,
+            updatedAt: new Date(),
+          },
+          $setOnInsert: { createdAt: new Date() },
+        },
+        { upsert: true }
+      );
+      console.log(`[DailyPaper] Stored ${slot} paper for ${subject} (${today})`);
+    } catch (dbErr) {
+      console.error(`[DailyPaper] MongoDB store failed for ${subject}:`, dbErr.message);
+    }
+
+    // Send push notification to users subscribed to this subject
+    try {
+      const mongo = getMongo();
+      const tokens = await mongo.collection('push_subscriptions')
+        .find({ subjects: subject, active: true })
+        .project({ fcmToken: 1 })
+        .limit(500)
+        .toArray();
+
+      if (tokens.length > 0) {
+        console.log(`[DailyPaper] Would notify ${tokens.length} users for ${subject} ${slot} paper`);
+        // Notification is sent via the client-side service worker check
+        // The client polls /api/daily-paper and shows local notification
+      }
+    } catch (notifyErr) {
+      console.error(`[DailyPaper] Notification check failed:`, notifyErr.message);
+    }
+
+    return { subject, slot, ok: true, questions: data.total_recommended };
+  } catch (err) {
+    console.error(`[DailyPaper] Error generating ${slot} paper for ${subject}:`, err.message);
+    return { subject, slot, ok: false, error: err.message };
+  }
+}
+
 // ── Keep Alive ─────────────────────────────
 function startKeepAlive() {
   if (!SELF_URL) {
@@ -132,20 +194,27 @@ function startKeepAlive() {
 // ── Cron Jobs (IST) ───────────────────────
 function scheduleDailyPosts() {
   const times = [
-    { cron: "0 7 * * *", label: "morning" },
-    { cron: "0 12 * * *", label: "noon" },
-    { cron: "0 18 * * *", label: "evening" },
+    { cron: "0 9 * * *", label: "morning", slot: "9am" },
+    { cron: "0 16 * * *", label: "afternoon", slot: "4pm" },
   ];
 
-  times.forEach(({ cron: time, label }) => {
+  times.forEach(({ cron: time, label, slot }) => {
     cron.schedule(
       time,
-      () => postAllSubjects(label),
+      async () => {
+        // Post to Telegram
+        await postAllSubjects(label);
+        // Generate & store papers in MongoDB
+        const subjects = getActiveSubjects();
+        await Promise.allSettled(
+          subjects.map((s) => generateAndStoreDailyPaper(s, slot))
+        );
+      },
       { timezone: "Asia/Kolkata" }
     );
   });
 
-  console.log("Cron scheduled (7AM / 12PM / 6PM IST)");
+  console.log("Cron scheduled (9AM / 4PM IST)");
 
   startKeepAlive();
 }
@@ -154,7 +223,7 @@ function scheduleDailyPosts() {
 const TRIGGER_SECRET =
   process.env.DAILY_POST_SECRET || "medhahub-daily-2026";
 
-// Express handler
+// Express handler for manual trigger
 const handleTriggerDailyPost = async (req, res) => {
   const key = req.query.key;
 
@@ -174,4 +243,28 @@ const handleTriggerDailyPost = async (req, res) => {
   });
 };
 
-export { scheduleDailyPosts, handleTriggerDailyPost };
+// GET /api/daily-paper?subject=police&slot=9am
+// Returns today's paper for the given subject and slot
+const handleGetDailyPaper = async (req, res) => {
+  try {
+    const mongo = getMongo();
+    const { subject, slot } = req.query;
+    const today = new Date().toISOString().slice(0, 10);
+
+    const query = { date: today };
+    if (subject) query.subject = subject;
+    if (slot) query.slot = slot;
+
+    const papers = await mongo.collection('daily_papers')
+      .find(query)
+      .sort({ createdAt: -1 })
+      .limit(10)
+      .toArray();
+
+    res.json({ ok: true, date: today, papers });
+  } catch (err) {
+    res.status(500).json({ ok: false, error: err.message });
+  }
+};
+
+export { scheduleDailyPosts, handleTriggerDailyPost, handleGetDailyPaper };

@@ -5,11 +5,12 @@ import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PUBLIC_DIR = path.resolve(__dirname, '..', 'public');
+const MOCK_TEST_DIR = path.resolve(__dirname, '..', '..', 'Ai_Interview', 'public', 'mock_test');
 
 const router = Router();
 
 // ─── Folder whitelist ───────────────────────────────────────────────────────
-// Maps lowercase route keys → { displayName, scanPath (relative to PUBLIC_DIR) }
+// Maps lowercase route keys → { displayName, scanPath (relative to PUBLIC_DIR), baseDir? (override) }
 const FOLDER_MAP = {
   police: {
     displayName: 'Police',
@@ -50,6 +51,55 @@ const FOLDER_MAP = {
     displayName: 'RRB NTPC',
     scanPath: 'RRB-NTPC',
     pathPrefix: '/RRB-NTPC',
+  },
+  // ── Mock Test folders (from Ai_Interview/public/mock_test/) ──
+  'mock-wbcs': {
+    displayName: 'WBCS Mock Tests',
+    scanPath: 'wbcs',
+    pathPrefix: '/mock_test/wbcs',
+    baseDir: MOCK_TEST_DIR,
+  },
+  'mock-wbpsc': {
+    displayName: 'WBPSC Mock Tests',
+    scanPath: 'wbpsc',
+    pathPrefix: '/mock_test/wbpsc',
+    baseDir: MOCK_TEST_DIR,
+  },
+  'mock-wbp-si': {
+    displayName: 'WBP SI Mock Tests',
+    scanPath: 'wbp_si',
+    pathPrefix: '/mock_test/wbp_si',
+    baseDir: MOCK_TEST_DIR,
+  },
+  'mock-wbp-constable': {
+    displayName: 'WBP Constable Mock Tests',
+    scanPath: 'wbp_constable',
+    pathPrefix: '/mock_test/wbp_constable',
+    baseDir: MOCK_TEST_DIR,
+  },
+  'mock-ssc-mts': {
+    displayName: 'SSC MTS Mock Tests',
+    scanPath: 'ssc_mts',
+    pathPrefix: '/mock_test/ssc_mts',
+    baseDir: MOCK_TEST_DIR,
+  },
+  'mock-ssc-cgl': {
+    displayName: 'SSC CGL Mock Tests',
+    scanPath: 'ssc_cgl',
+    pathPrefix: '/mock_test/ssc_cgl',
+    baseDir: MOCK_TEST_DIR,
+  },
+  'mock-ibps-po': {
+    displayName: 'IBPS PO Mock Tests',
+    scanPath: 'ibps_po',
+    pathPrefix: '/mock_test/ibps_po',
+    baseDir: MOCK_TEST_DIR,
+  },
+  'mock-jtet': {
+    displayName: 'JTET Mock Tests',
+    scanPath: 'jtet',
+    pathPrefix: '/mock_test/jtet',
+    baseDir: MOCK_TEST_DIR,
   },
 };
 
@@ -169,19 +219,24 @@ router.get('/:folder', async (req, res) => {
     });
   }
 
-  const { displayName, scanPath, pathPrefix } = FOLDER_MAP[folderKey];
-  const absoluteScanDir = path.join(PUBLIC_DIR, scanPath);
+  const { displayName, scanPath, pathPrefix, baseDir } = FOLDER_MAP[folderKey];
+  const absoluteScanDir = path.join(baseDir || PUBLIC_DIR, scanPath);
 
   try {
     const files = await scanDir(absoluteScanDir);
 
-    const payload = files.map((f) => ({
+    // Filter out manifest.json from results
+    const filtered = files.filter((f) => f.name.toLowerCase() !== 'manifest.json');
+
+    const payload = filtered.map((f) => ({
       name: f.name,
       // Build URL-encoded path: prefix + "/" + encoded relative path segments
       path: pathPrefix + '/' + f.relativePath
         .split('/')
         .map((seg) => encodeURIComponent(seg))
         .join('/'),
+      // Relative path for API calls (GET /api/questions/:folder/<relativePath>)
+      relativePath: f.relativePath,
       size: f.size,
     }));
 
@@ -210,8 +265,9 @@ router.get('/:folder/*', async (req, res) => {
     });
   }
 
-  const { scanPath } = FOLDER_MAP[folderKey];
-  const baseDir = path.join(PUBLIC_DIR, scanPath);
+  const entry = FOLDER_MAP[folderKey];
+  const resolvedBase = path.join(entry.baseDir || PUBLIC_DIR, entry.scanPath);
+  const baseDir = resolvedBase;
 
   // Capture the wildcard portion (everything after /:folder/)
   // Express 4 puts wildcard in req.params[0]

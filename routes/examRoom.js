@@ -36,19 +36,40 @@ async function generateAndCacheQuestions(chapter, subject, exam, difficulty, cou
         'General Knowledge': 'সাধারণ জ্ঞান', 'Insurance & Financial Market Awareness': 'বীমা সচেতনতা',
     };
 
+    // Exam-specific patterns for prompt context
+    const EXAM_PATTERNS = {
+        'WBCS': 'WBCS Prelims — 200 MCQs, 2.5 hours, negative marking 1/3. Deep knowledge required. Bengal-specific topics important.',
+        'SSC CGL': 'SSC CGL — 100 MCQs, 60 min, negative marking 0.50. Speed-based. Math & Reasoning are 50% of paper.',
+        'SSC CHSL': 'SSC CHSL — 100 MCQs, 60 min, negative marking 0.50. Moderate difficulty, speed matters.',
+        'SSC MTS': 'SSC MTS — 100 MCQs, 90 min. Easier difficulty. Basic concepts + General Awareness.',
+        'WBP SI': 'WB Police SI — 100 MCQs, 90 min. GK + Math + Reasoning. Bengal-focus. Law enforcement basics.',
+        'WBP Constable': 'WB Police Constable — 100 MCQs, 90 min. Basic GK + Math. No negative marking.',
+        'RRB NTPC': 'RRB NTPC — 100 MCQs, 90 min. Moderate difficulty. Train problems signature. Math 30%.',
+        'RRB Group D': 'RRB Group D — 100 MCQs, 90 min. Basic difficulty. Math + Reasoning + GK.',
+        'IBPS PO': 'IBPS PO — 100 MCQs, 60 min sectional timing. Negative marking 0.25. Heavy Quant + Reasoning. Banking awareness required.',
+        'IBPS Clerk': 'IBPS Clerk — 100 MCQs, 60 min. Moderate difficulty. Quant + Reasoning + Banking.',
+        'JTET': 'Jharkhand TET — 150 MCQs, 2.5 hours. Child pedagogy + subject knowledge.',
+    };
+
     const chapterBn = chapter.name_bn || chapter.name;
     const subjectBn = SUBJECT_BN[subject.name] || subject.name_bn || subject.name;
+    const examPattern = EXAM_PATTERNS[exam.name] || `${exam.name} competitive exam`;
 
-    const systemPrompt = `You are an expert Indian competitive exam question setter for ${exam.name}.
+    const systemPrompt = `You are an expert Indian competitive exam question setter specifically for ${exam.name}.
+EXAM PATTERN: ${examPattern}
+
 Generate exactly ${count} original MCQ questions on the topic "${chapter.name}" (${chapterBn}) under ${subject.name} (${subjectBn}).
 
 Rules:
-- Each question must be at ${difficulty} difficulty
+- Each question must be at ${difficulty} difficulty matching real ${exam.name} exam level
+- Questions MUST follow the actual ${exam.name} syllabus pattern and question style
 - Each question has exactly 4 options (A/B/C/D)
 - correctOption must be exactly one of: "A", "B", "C" or "D"
 - Provide short explanations in English
 - Also provide Bengali translation of question text (textBn)
 - Questions must be factually correct and exam-relevant
+- Cover diverse aspects of "${chapter.name}" — don't repeat same subtopic
+- All 4 options must be plausible — weak students should find at least 2 tempting
 - Return ONLY a valid JSON array, no markdown fences, no extra text
 
 Format:
@@ -454,6 +475,107 @@ router.get('/user-stats/:examSlug', authMiddleware, (req, res) => {
         res.json({ success: true, exam: { id: exam.id, name: exam.name, slug: exam.slug }, stats });
     } catch (err) {
         res.status(500).json({ success: false, error: err.message });
+    }
+});
+
+/**
+ * POST /api/exam-room/predict-chance
+ * Uses AI to predict the user's chance of cracking the exam based on test performance.
+ * Body: { examName, accuracy, correct, wrong, skipped, score, maxScore, totalQuestions, difficulty }
+ * Auth required.
+ */
+router.post('/predict-chance', authMiddleware, async (req, res) => {
+    try {
+        const { examName, accuracy, correct, wrong, skipped, score, maxScore, totalQuestions, difficulty } = req.body;
+
+        if (typeof accuracy !== 'number' || !examName) {
+            return res.status(400).json({ success: false, error: 'examName and accuracy are required' });
+        }
+
+        const prompt = `You are an expert Indian competitive exam coach. A student just completed a mock test for the "${examName}" exam.
+
+Here are their results:
+- Difficulty level: ${difficulty || 'Standard'}
+- Score: ${score}/${maxScore}
+- Accuracy: ${accuracy}%
+- Correct answers: ${correct}/${totalQuestions}
+- Wrong answers: ${wrong}
+- Skipped questions: ${skipped}
+- Negative marking impact: ${wrong > 0 ? 'Yes' : 'No'}
+
+Based on this single test performance, provide a realistic prediction and actionable advice. Consider that this is one test and the actual exam has many more variables.
+
+Reply ONLY with a valid JSON object (no markdown, no code fences) in this exact format:
+{
+  "chance": <number 0-100 representing estimated chance to clear the exam>,
+  "verdict": "<one of: Very Strong | Strong | Moderate | Needs Work | Critical>",
+  "analysis": "<2-3 sentence overall analysis>",
+  "strengths": ["<strength 1>", "<strength 2>"],
+  "weakAreas": ["<weak area 1>", "<weak area 2>"],
+  "tips": ["<actionable tip 1>", "<actionable tip 2>", "<actionable tip 3>"]
+}`;
+
+        const apiKey = process.env.GROQ_API_KEY;
+        const messages = [
+            { role: 'system', content: 'You are an expert exam preparation coach. Always respond with valid JSON only.' },
+            { role: 'user', content: prompt },
+        ];
+
+        const llmResponse = await callLLMWithFallback(apiKey, messages, {
+            temperature: 0.6,
+            max_tokens: 600,
+        }, null, 'exam-prediction');
+
+        let prediction;
+        const contentType = llmResponse.headers?.get?.('content-type') || '';
+
+        if (contentType.includes('application/json')) {
+            // Groq / OpenAI-compatible response
+            const json = await llmResponse.json();
+            const text = json.choices?.[0]?.message?.content || '';
+            prediction = JSON.parse(text.replace(/```json\s*/g, '').replace(/```/g, '').trim());
+        } else {
+            // Gemini response
+            const json = await llmResponse.json();
+            const text = json.candidates?.[0]?.content?.parts?.[0]?.text || '';
+            prediction = JSON.parse(text.replace(/```json\s*/g, '').replace(/```/g, '').trim());
+        }
+
+        // Validate shape
+        const result = {
+            chance:    Math.max(0, Math.min(100, Number(prediction.chance) || 0)),
+            verdict:   String(prediction.verdict || 'Moderate'),
+            analysis:  String(prediction.analysis || 'Analysis unavailable.'),
+            strengths: Array.isArray(prediction.strengths) ? prediction.strengths.map(String).slice(0, 5) : [],
+            weakAreas: Array.isArray(prediction.weakAreas) ? prediction.weakAreas.map(String).slice(0, 5) : [],
+            tips:      Array.isArray(prediction.tips) ? prediction.tips.map(String).slice(0, 5) : [],
+        };
+
+        res.json({ success: true, prediction: result });
+    } catch (err) {
+        console.error('[predict-chance] Error:', err.message);
+        // Fallback: algorithmic prediction when AI is unavailable
+        const { accuracy = 0, correct = 0, wrong = 0, skipped = 0, totalQuestions = 1 } = req.body || {};
+        const chance = Math.min(95, Math.max(5, Math.round(accuracy * 0.85 + (correct / Math.max(1, totalQuestions)) * 15)));
+        const verdict = chance >= 75 ? 'Strong' : chance >= 50 ? 'Moderate' : chance >= 30 ? 'Needs Work' : 'Critical';
+        res.json({
+            success: true,
+            prediction: {
+                chance,
+                verdict,
+                analysis: `Based on your accuracy of ${accuracy}%, your estimated chance is ${chance}%. ${wrong > 0 ? 'Reducing wrong answers will significantly improve your score due to negative marking.' : ''} ${skipped > 0 ? 'Try to attempt more questions to maximize your score.' : ''}`.trim(),
+                strengths: accuracy >= 60 ? ['Good accuracy rate'] : [],
+                weakAreas: [
+                    ...(wrong > 0 ? ['Incorrect answers causing negative marks'] : []),
+                    ...(skipped > 0 ? ['Too many questions left unanswered'] : []),
+                ],
+                tips: [
+                    'Practice more mock tests to improve speed and accuracy',
+                    wrong > 0 ? 'Focus on eliminating wrong answers to avoid negative marking' : 'Maintain your low error rate',
+                    skipped > 0 ? 'Work on time management to attempt all questions' : 'Great job attempting all questions',
+                ],
+            },
+        });
     }
 });
 

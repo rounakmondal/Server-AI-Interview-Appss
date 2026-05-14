@@ -2,6 +2,119 @@
 // Import fallback utility for Groq → Gemini fallback
 import { callLLMWithFallback, convertGeminiToOpenAI } from '../utils/llmFallback.js';
 
+// ─── Vision Models Config ────────────────────────────────────────────────────
+const GROQ_VISION_MODELS = [
+    'llama-3.2-90b-vision-preview',
+    'llama-3.2-11b-vision-preview',
+];
+
+const GEMINI_VISION_MODELS = [
+    'gemini-2.0-flash',
+    'gemini-1.5-flash',
+    'gemini-1.5-pro',
+];
+
+const VISION_SYSTEM_PROMPT = 'You are a helpful study assistant for Indian government exam aspirants. Help students with their questions, explain concepts clearly, and provide educational support. When shown images (textbook pages, handwritten notes, diagrams, question papers), analyze them thoroughly and provide relevant educational insights, solutions, or explanations. Always be encouraging and supportive.';
+
+/**
+ * Vision fallback chain: Groq Vision → Gemini Vision
+ * Both are free and support image+text input.
+ */
+async function callVisionWithFallback(userText, imageBase64) {
+    // ── Try Groq Vision models ──
+    const groqKey = process.env.GROQ_API_KEY;
+    if (groqKey) {
+        for (const model of GROQ_VISION_MODELS) {
+            const controller = new AbortController();
+            const timer = setTimeout(() => controller.abort(), 60_000);
+            try {
+                console.log(`[vision] Trying Groq ${model}`);
+                const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+                    method: 'POST',
+                    headers: { Authorization: `Bearer ${groqKey}`, 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        model,
+                        temperature: 0.7,
+                        max_tokens: 1200,
+                        messages: [
+                            { role: 'system', content: VISION_SYSTEM_PROMPT },
+                            {
+                                role: 'user',
+                                content: [
+                                    { type: 'text', text: userText },
+                                    { type: 'image_url', image_url: { url: `data:image/jpeg;base64,${imageBase64}` } },
+                                ],
+                            },
+                        ],
+                    }),
+                    signal: controller.signal,
+                });
+                clearTimeout(timer);
+
+                if (!res.ok) {
+                    const errText = await res.text().catch(() => '');
+                    console.warn(`[vision] Groq ${model} HTTP ${res.status}: ${errText.slice(0, 120)}`);
+                    continue;
+                }
+                const data = await res.json();
+                const content = data.choices?.[0]?.message?.content?.trim();
+                if (!content) { console.warn(`[vision] Groq ${model} empty`); continue; }
+                console.log(`[vision] success with Groq ${model}`);
+                return content;
+            } catch (err) {
+                clearTimeout(timer);
+                console.warn(`[vision] Groq ${model} error:`, err.message);
+            }
+        }
+    }
+
+    // ── Try Gemini Vision models ──
+    const geminiKey = process.env.GEMINI_API_KEY;
+    if (geminiKey) {
+        for (const model of GEMINI_VISION_MODELS) {
+            const controller = new AbortController();
+            const timer = setTimeout(() => controller.abort(), 60_000);
+            try {
+                console.log(`[vision] Trying Gemini ${model}`);
+                const res = await fetch(
+                    `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${geminiKey}`,
+                    {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            contents: [{
+                                parts: [
+                                    { text: `${VISION_SYSTEM_PROMPT}\n\n${userText}` },
+                                    { inline_data: { mime_type: 'image/jpeg', data: imageBase64 } },
+                                ],
+                            }],
+                            generationConfig: { temperature: 0.7, maxOutputTokens: 1200 },
+                        }),
+                        signal: controller.signal,
+                    }
+                );
+                clearTimeout(timer);
+
+                if (!res.ok) {
+                    const errText = await res.text().catch(() => '');
+                    console.warn(`[vision] Gemini ${model} HTTP ${res.status}: ${errText.slice(0, 120)}`);
+                    continue;
+                }
+                const data = await res.json();
+                const content = data.candidates?.[0]?.content?.parts?.[0]?.text?.trim();
+                if (!content) { console.warn(`[vision] Gemini ${model} empty`); continue; }
+                console.log(`[vision] success with Gemini ${model}`);
+                return content;
+            } catch (err) {
+                clearTimeout(timer);
+                console.warn(`[vision] Gemini ${model} error:`, err.message);
+            }
+        }
+    }
+
+    throw new Error('All vision providers failed (Groq Vision + Gemini Vision)');
+}
+
 // Fallback to Groq for text-only if OpenAI not available, with Gemini fallback
 async function getGroqChatCompletion(messages, maxTokens = 500) {
     const apiKey = process.env.GROQ_API_KEY;
@@ -86,48 +199,13 @@ async function getGroqChatCompletion(messages, maxTokens = 500) {
 // Generate study bot response
 export async function generateStudyResponse(messages, imageBase64 = null) {
     try {
-        // If there's an image, use OpenAI Vision
+        // If there's an image, use vision fallback chain: Groq Vision → Gemini Vision
         if (imageBase64) {
-            if (!process.env.OPENAI_API_KEY) {
-                throw new Error('OPENAI_API_KEY required for image processing');
-            }
-
-            const visionMessages = [
-                {
-                    role: 'system',
-                    content: 'You are a helpful study assistant. Help students with their questions, explain concepts clearly, and provide educational support. When shown images, analyze them and provide relevant educational insights.'
-                },
-                ...messages.map(msg => ({
-                    role: msg.role,
-                    content: msg.content
-                })),
-                {
-                    role: 'user',
-                    content: [
-                        {
-                            type: 'text',
-                            text: messages[messages.length - 1]?.content || 'Please analyze this image for study purposes.'
-                        },
-                        {
-                            type: 'image_url',
-                            image_url: {
-                                url: `data:image/jpeg;base64,${imageBase64}`
-                            }
-                        }
-                    ]
-                }
-            ];
-
-            const response = await openai.chat.completions.create({
-                model: 'gpt-4o',
-                messages: visionMessages,
-                max_tokens: 1000,
-                temperature: 0.7
-            });
-
+            const userText = messages[messages.length - 1]?.content || 'Please analyze this image for study purposes.';
+            const content = await callVisionWithFallback(userText, imageBase64);
             return {
                 success: true,
-                response: response.choices[0].message.content.trim()
+                response: content
             };
         } else {
             // Text-only, use Groq

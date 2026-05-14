@@ -495,19 +495,172 @@ async function fetchBatchWithTimeout(...args) {
 
 // Helper function to fetch a batch of questions
 async function fetchBatch(batchSize, startId, exam, subject, difficulty, language, system) {
-  const topicHints = {
-    Math: 'Include: Percentage, Profit-Loss, SI/CI, Time-Work, Speed-Distance-Time, Algebra (quadratic/identities), Mensuration (2D+3D), HCF/LCM, Data Interpretation tables.',
-    Reasoning: 'Include: Syllogism, Blood Relations, Coding-Decoding (complex), Direction+Distance, Ranking, Seating Arrangement, Statement-Assumption.',
-    History: 'Include: Indus Valley, Maurya/Gupta empires, Medieval Sultanate, Mughal admin, 1857, Gandhi movements, Congress sessions, post-1947 events.',
-    Polity: 'Include: Constitutional Articles, Amendments (42nd, 44th, 73rd, 74th), DPSP, Fundamental Rights, Union/State/Concurrent lists, Parliamentary terms.',
-    Geography: 'Include: Indian rivers/passes/soils, climate zones, minerals, industries, national parks, biosphere reserves, world geography.',
-    'Current Affairs': 'Include: Government schemes (PM Awas, PM Kisan, Jal Jeevan), recent summits, national awards, major sports events, new laws/bills.',
+  // ── Exam-specific syllabus with topics, patterns, and question styles ──
+  const EXAM_SYLLABUS = {
+    WBCS: {
+      pattern: 'WBCS Prelims (West Bengal Civil Service). Paper: 200 MCQs in 2.5 hours. Negative marking: 1/3 per wrong answer. Medium-Hard difficulty. Questions test in-depth knowledge of Indian + Bengal-specific topics.',
+      subjects: {
+        History: {
+          weight: '15%', topics: 'Ancient India (Indus Valley, Vedic age, Maurya, Gupta), Medieval India (Delhi Sultanate, Mughal administration, Vijayanagara), Modern India (1857 revolt, Indian National Congress sessions, Gandhian movements, Quit India, INA), History of Bengal (Pala, Sena dynasty, Bengal Renaissance, Permanent Settlement, Partition of Bengal 1905, Swadeshi movement), World History (French Revolution, Industrial Revolution, World Wars)',
+          style: 'Factual recall + analytical. E.g. "Which Act introduced dyarchy?" "Arrange these events chronologically."'
+        },
+        Geography: {
+          weight: '12%', topics: 'Physical geography of India (rivers, mountains, passes, soils, climate zones), West Bengal geography (districts, rivers, crops, industries), Indian economic geography (minerals, industries, agriculture, irrigation), World geography (continents, ocean currents, climate), Map-based questions',
+          style: 'Direct factual + map-based. E.g. "Which river forms the boundary between WB and Jharkhand?" "Laterite soil is found in which region?"'
+        },
+        Polity: {
+          weight: '13%', topics: 'Indian Constitution (Preamble, Fundamental Rights Art 14-32, DPSP Art 36-51, Fundamental Duties), Constitutional bodies (Election Commission, CAG, UPSC, Finance Commission), Parliamentary system (Lok Sabha, Rajya Sabha, Speaker, committees), Amendments (1st, 42nd, 44th, 73rd, 74th, 86th, 101st), State government, Panchayati Raj, Local self-government in WB',
+          style: 'Article-specific + analytical. E.g. "Under which Article can President declare Emergency?" "73rd Amendment relates to?"'
+        },
+        Math: {
+          weight: '10%', topics: 'Number system (HCF/LCM, divisibility), Percentage, Profit-Loss, Simple & Compound Interest, Ratio-Proportion, Time-Work, Time-Speed-Distance, Average, Algebra (linear & quadratic), Mensuration (area, volume of 2D/3D shapes), Data Interpretation (tables, bar/pie charts)',
+          style: 'Multi-step calculation. NEVER trivial arithmetic. E.g. "A train 150m long crosses a bridge in 30s at 54 km/h. Length of bridge?" "CI on Rs.8000 at 10% for 2 years compounded annually?"'
+        },
+        Reasoning: {
+          weight: '7%', topics: 'Syllogism, Blood Relations, Coding-Decoding (letter/number shifting), Direction & Distance, Seating Arrangement (linear/circular), Series completion (number/letter), Analogy, Classification, Statement-Conclusion, Venn Diagram, Calendar & Clock problems',
+          style: 'Logical deduction. E.g. "If APPLE is coded as 50, MANGO is coded as?" "A is south of B, B is east of C..."'
+        },
+        'Current Affairs': {
+          weight: '8%', topics: 'Last 12 months: Government schemes (PM Vishwakarma, PM Surya Ghar, Ayushman Bharat), International summits (G20, BRICS, COP), Awards (Bharat Ratna, Padma, Nobel), Sports (Olympics, Cricket WC, Asian Games), Science discoveries, New laws/bills, West Bengal state schemes, Important appointments',
+          style: 'Direct factual. E.g. "Who won Nobel Peace Prize 2025?" "Which state launched XYZ scheme?"'
+        },
+      }
+    },
+    SSC: {
+      pattern: 'SSC CGL/CHSL/MTS (Staff Selection Commission). Paper: 100 MCQs in 60 minutes. Negative marking: 0.50 marks for wrong answer. Tests speed + accuracy. Questions are straightforward but time-pressured.',
+      subjects: {
+        History: {
+          weight: '15%', topics: 'Ancient India (Harappa, Maurya, Gupta empires, Sangam age), Medieval India (Sultanate, Mughal rulers & battles), Modern India (Governor Generals, Acts 1773-1947, Freedom fighters, Revolts), Cultural history (temples, paintings, dance forms)',
+          style: 'Direct factual one-liners. E.g. "Battle of Plassey was fought in which year?" "Who founded Arya Samaj?"'
+        },
+        Geography: {
+          weight: '12%', topics: 'Indian physical geography (Himalayas, Peninsular plateau, Coastal plains, Islands), Rivers & dams, Soils & crops, Minerals & industries, National parks & wildlife sanctuaries, Census data, World geography basics',
+          style: 'Factual recall. E.g. "Nathula Pass connects India with?" "Longest river of peninsular India?"'
+        },
+        Polity: {
+          weight: '13%', topics: 'Constitution basics (Preamble, Parts, Schedules), Fundamental Rights & Duties, DPSP, President/PM/Governor powers, Parliament, Supreme Court & High Courts, Important Articles & Amendments, Citizenship, Elections',
+          style: 'Article/Amendment-based. E.g. "Right to Education is under which Article?" "Rajya Sabha members are elected for how many years?"'
+        },
+        Math: {
+          weight: '25%', topics: 'Number System, HCF/LCM, Simplification (BODMAS), Percentage, Profit-Loss, SI/CI, Ratio-Proportion-Mixture, Average, Time-Work, Pipes & Cisterns, Time-Speed-Distance (trains, boats), Algebra, Trigonometry (heights & distances), Geometry (circles, triangles, quadrilaterals), Mensuration (2D+3D), Data Interpretation (pie/bar/line charts)',
+          style: 'Speed-based calculation. Multi-step but solvable in 1-2 minutes. E.g. "If a:b=3:4, b:c=5:6, find a:b:c?" "A cistern is filled in 12 min, emptied in 15 min..."'
+        },
+        Reasoning: {
+          weight: '25%', topics: 'Analogy (word/number/letter), Classification, Series (number/letter/alpha-numeric), Coding-Decoding, Blood Relations, Direction, Seating Arrangement, Syllogism, Statement-Conclusion, Paper Folding/Cutting, Mirror/Water Image, Embedded Figures, Dice & Cube, Venn Diagram, Mathematical Operations',
+          style: 'Quick pattern recognition. E.g. "2,6,12,20,30,?" "Find the odd one out: 121, 169, 225, __(mistake)__, 361"'
+        },
+        'Current Affairs': {
+          weight: '10%', topics: 'National & International events (last 6-12 months), Awards & honors, Sports championships, Government schemes, Books & authors, Important days, Science & technology, Defence, Economy (budget, GDP), Appointments',
+          style: 'Direct factual. E.g. "Who is the current Chief Justice of India?" "India ranked ___ in Global Hunger Index 2025?"'
+        },
+      }
+    },
+    Railway: {
+      pattern: 'RRB NTPC / Group D / ALP (Indian Railways). Paper: 100 MCQs in 90 minutes. No negative marking in some, 1/3 in others. Mix of GK + Math + Reasoning. Questions are moderate difficulty.',
+      subjects: {
+        History: {
+          weight: '12%', topics: 'Ancient India (Indus Valley, Vedic, Maurya, Gupta), Medieval India (Delhi Sultanate, Mughal), Modern India (British rule, Freedom movement, Important Acts), Indian National Movement leaders & events, History of Indian Railways',
+          style: 'Factual + chronological. E.g. "First railway line in India was between?" "Who gave the slogan Jai Hind?"'
+        },
+        Geography: {
+          weight: '12%', topics: 'Indian geography (rivers, mountains, states & capitals, dams, soil types), World geography basics, Climate & monsoon, Agriculture & crops, Census, Railway geography (zones, headquarters)',
+          style: 'Direct recall. E.g. "Headquarters of South Eastern Railway?" "Which state is largest producer of rice?"'
+        },
+        Polity: {
+          weight: '10%', topics: 'Indian Constitution basics, Fundamental Rights, DPSP, Parliament, President, PM, Election Commission, Important Articles, Amendments, Panchayati Raj',
+          style: 'Basic conceptual. E.g. "Minimum age to become PM?" "How many Fundamental Rights are there?"'
+        },
+        Math: {
+          weight: '30%', topics: 'Number System, BODMAS, HCF/LCM, Percentage, Profit-Loss, SI/CI, Ratio-Proportion, Average, Time-Work, Time-Speed-Distance (trains problems are key), Algebra, Geometry, Mensuration, Data Interpretation',
+          style: 'Moderate difficulty. Train problems are signature RRB questions. E.g. "Two trains running in opposite directions at 50 & 60 km/h cross each other in 12 seconds..."'
+        },
+        Reasoning: {
+          weight: '25%', topics: 'Analogy, Classification, Series, Coding-Decoding, Blood Relations, Direction, Calendar, Clock, Syllogism, Statement-Conclusion, Non-verbal (mirror image, paper cutting, pattern), Alphabet test, Mathematical operations',
+          style: 'Standard reasoning. E.g. "In a certain code MOBILE is written as KQFOIG, then PHONE is?" "Day after tomorrow is Friday, what was day before yesterday?"'
+        },
+        'Current Affairs': {
+          weight: '11%', topics: 'National events, International affairs, Sports, Awards (Arjuna, Dronacharya, Khel Ratna), Government schemes, Science & Tech, Books & authors, Important days, Indian Railways developments',
+          style: 'Factual. E.g. "Which is the fastest train in India?" "Who won Dronacharya Award 2025 for Cricket?"'
+        },
+      }
+    },
+    Banking: {
+      pattern: 'IBPS PO/Clerk/RRB, SBI PO/Clerk. Paper: 100 MCQs in 60 minutes (sectional timing). Negative marking: 0.25 per wrong answer. Heavy on Quant + Reasoning. Banking awareness is unique.',
+      subjects: {
+        History: {
+          weight: '5%', topics: 'History of banking in India, Nationalization of banks (1969, 1980), RBI history & governors, Important economic events, Modern Indian history relevant to economy',
+          style: 'Banking-specific history. E.g. "In which year were 14 banks nationalized?" "First Governor of RBI?"'
+        },
+        Geography: {
+          weight: '5%', topics: 'Indian states & capitals, Important cities & rivers, Agricultural geography, Economic geography, Census data',
+          style: 'Basic geography linked to economics. E.g. "Which state leads in IT exports?" "Jute is primarily grown in?"'
+        },
+        Polity: {
+          weight: '5%', topics: 'Financial legislation (Finance Bill, Money Bill), RBI Act, Banking Regulation Act, SEBI, IRDAI, Financial inclusion policies, Monetary policy tools (CRR, SLR, Repo Rate)',
+          style: 'Finance-focused governance. E.g. "Who decides Repo Rate?" "Section 7 of RBI Act deals with?"'
+        },
+        Math: {
+          weight: '35%', topics: 'Number Series (complex patterns), Data Interpretation (tables, caselet, mixed charts), Simplification/Approximation, Percentage, Profit-Loss, SI/CI (compounded quarterly/half-yearly), Ratio-Proportion-Partnership, Time-Work (efficiency-based), Mixture-Alligation, Probability, Permutation-Combination, Quadratic Equations (inequality-based)',
+          style: 'Speed + complexity. Heavy DI. E.g. "Study the table showing 5 banks loan disbursement..." "What is approximate value of 34.97% of 6251 + 17.99% of 3499?"'
+        },
+        Reasoning: {
+          weight: '35%', topics: 'Seating Arrangement (linear, circular, square — 7-8 persons), Puzzle (floor/box/scheduling), Syllogism (3-4 statements), Blood Relations, Direction & Distance, Coding-Decoding (new pattern), Inequality (coded), Input-Output, Data Sufficiency, Statement-Assumption, Critical Reasoning',
+          style: 'Complex puzzles. E.g. "8 persons sit around a circular table. A sits 3rd to left of B..." "If A>B, B≥C, C=D..."'
+        },
+        'Current Affairs': {
+          weight: '15%', topics: 'Banking awareness (types of accounts, NPA, Basel norms, NBFC), Financial inclusion (Jan Dhan, MUDRA, Stand Up India), Insurance (PMJJBY, PMSBY), Recent RBI circulars, Mergers of banks, Fintech & UPI, Government budget highlights, International financial bodies (IMF, World Bank, ADB, AIIB)',
+          style: 'Banking + economy focus. E.g. "PMJJBY premium is Rs.___?" "What is the full form of SARFAESI?" "Current CRR rate is?"'
+        },
+      }
+    },
+    Police: {
+      pattern: 'WBP SI/Constable, State Police exams. Paper: 100 MCQs in 90 minutes. No negative marking (varies by state). Tests General Knowledge + Basic Math + Reasoning. Moderate difficulty.',
+      subjects: {
+        History: {
+          weight: '15%', topics: 'Ancient India, Medieval India, Modern India (British rule, Freedom movement), Bengal history (Nawabs, British Bengal, Bengal Renaissance, Partition), Post-independence events, Important dates & leaders',
+          style: 'Factual recall. E.g. "Who was the last Nawab of Bengal?" "Quit India Movement started in which year?" "Battle of Buxar was fought between?"'
+        },
+        Geography: {
+          weight: '12%', topics: 'India physical features, West Bengal geography (rivers, districts, crops), States & capitals, Rivers & dams, Soils, Climate, National parks, Census, Map-based',
+          style: 'Regional focus. E.g. "How many districts in West Bengal?" "Teesta river originates from?" "Sundarbans is in which district?"'
+        },
+        Polity: {
+          weight: '12%', topics: 'Indian Constitution basics, Fundamental Rights, Criminal law basics (IPC sections for police), Indian Penal Code, CrPC basics, Police organization structure, State Police Act, RTI Act, POCSO Act',
+          style: 'Law enforcement + constitution. E.g. "Section 302 of IPC deals with?" "FIR is filed under which section of CrPC?" "Article 21 guarantees?"'
+        },
+        Math: {
+          weight: '20%', topics: 'Number System, Simplification, Percentage, Profit-Loss, SI/CI, Ratio-Proportion, Average, Time-Work, Time-Speed-Distance, Basic Algebra, Geometry basics, Mensuration (area/perimeter)',
+          style: 'Moderate. Practical problems. E.g. "A policeman runs at 10 km/h and catches a thief running at 8 km/h who has 200m head start. Time taken?"'
+        },
+        Reasoning: {
+          weight: '25%', topics: 'Analogy, Classification, Series, Coding-Decoding, Blood Relations, Direction & Distance, Calendar, Clock, Syllogism, Mirror/Water Image, Embedded Figures, Pattern completion, Venn Diagram',
+          style: 'Standard + visual. E.g. "Complete the pattern: Z, X, V, T, ?" "Find mirror image of POLICE"'
+        },
+        'Current Affairs': {
+          weight: '16%', topics: 'National events, State government schemes, Police reforms, Sports, Awards, Important days, Science & tech, Defence, West Bengal current affairs, Law & order events',
+          style: 'Direct factual with state focus. E.g. "Duare Sarkar is a scheme of which state?" "Who is current DGP of West Bengal?"'
+        },
+      }
+    },
   };
-  const hint = topicHints[subject] || '';
+
+  // Get exam-specific data or default
+  const examData = EXAM_SYLLABUS[exam] || EXAM_SYLLABUS['WBCS'];
+  const subjectData = examData.subjects[subject] || {};
+  const topicHint = subjectData.topics
+    ? `\n- SYLLABUS TOPICS (cover these): ${subjectData.topics}`
+    : '';
+  const styleHint = subjectData.style
+    ? `\n- QUESTION STYLE: ${subjectData.style}`
+    : '';
+  const weightHint = subjectData.weight
+    ? `\n- Subject Weight in real exam: ${subjectData.weight}`
+    : '';
 
   const user = `Generate exactly ${batchSize} multiple-choice questions for:
 - Exam: ${exam}
-- Subject: ${subject}${hint ? `\n- Topic guidance: ${hint}` : ''}
+- Exam Pattern: ${examData.pattern}
+- Subject: ${subject}${weightHint}${topicHint}${styleHint}
 - Difficulty: ${difficulty}
 - Start IDs from: ${startId}
 
@@ -518,7 +671,7 @@ Each question MUST follow this exact JSON shape (no extra fields):
   "subject": "${subject}",
   "difficulty": "${difficulty}",
   "year": <YYYY or null>,
-  "question": "<clear, exam-phrased question — never trivial arithmetic>",
+  "question": "<clear, exam-phrased question matching the real ${exam} pattern>",
   "options": ["<A>","<B>","<C>","<D>"],
   "correctIndex": <0|1|2|3>,
   "explanation": "<step-by-step English explanation>",
@@ -573,15 +726,24 @@ async function generateQuestionsBatched(exam, subject, difficulty, totalCount, l
     ? 'MEDIUM: previous-year exam style — multi-step reasoning, formula application, or data-based questions.'
     : 'HARD: advanced — complex multi-step problems, tricky distractor options designed to catch unprepared students.';
 
-  const system = `You are a senior question-setter for UPSC/SSC/WBCS/Railway/Banking competitive exams in India.
+  // Build exam-aware system prompt
+  const examSyllabus = EXAM_SYLLABUS[exam] || EXAM_SYLLABUS['WBCS'];
+  const examPattern = examSyllabus.pattern;
+  const subjectMeta = examSyllabus.subjects[subject] || {};
+
+  const system = `You are a senior question-setter specifically for the ${exam} exam in India.
+EXAM PATTERN: ${examPattern}
+${subjectMeta.style ? `QUESTION STYLE FOR ${subject}: ${subjectMeta.style}` : ''}
 Always respond with ONLY a valid JSON array — no markdown, no explanation, no prose.
 Each element must be a complete self-contained MCQ question object.
 STRICT RULES:
 - ${difficultyGuide}
+- Questions MUST match the real ${exam} exam pattern, difficulty level, and question style.
 - NEVER generate trivial one-step arithmetic (e.g. 7×6, 15-9, 60÷10). These are unacceptable for any competitive exam.
 - Every Maths question must require at least 2 steps or a formula/concept (percentage, SI/CI, ratio, allegation, pipes, trains).
 - All 4 options must be plausible — weak students should find at least 2 options tempting.
-- GK questions must test facts that genuinely appear in SSC/WBCS/Railway past papers.
+- Questions must test facts/concepts that genuinely appear in ${exam} past papers.
+- Cover diverse topics from the ${exam} syllabus — don't repeat the same subtopic.
 - Vary question style each batch: formula-based, data-interpretation, application, analogy, error-detection.${langInstruction}`;
 
   // FIRST BATCH: Execute immediately without concurrency limit for fast response
@@ -1711,27 +1873,38 @@ Return a JSON array of exactly 10 objects. No markdown fences. No preamble.`;
 
 router.get('/current-affairs', async (_req, res) => {
   const today = new Date().toISOString().split('T')[0];
+  const lang = (_req.query.lang || 'english').toString().toLowerCase();
+  const validLangs = ['english', 'bengali', 'hindi'];
+  const selectedLang = validLangs.includes(lang) ? lang : 'english';
+
+  const langInstruction = selectedLang === 'english'
+    ? 'Write ALL content (title, summary, topic names, subtopics, quiz questions, options, explanations) in English.'
+    : selectedLang === 'bengali'
+      ? 'Write ALL content (title, summary, topic names, subtopics, quiz questions, options, explanations) in Bengali (বাংলা). Use Bengali script throughout.'
+      : 'Write ALL content (title, summary, topic names, subtopics, quiz questions, options, explanations) in Hindi (हिन्दी). Use Devanagari script throughout.';
 
   const system = `You are an expert on Indian current affairs, especially West Bengal.
-Always respond with ONLY a valid JSON object — no markdown, no explanation.`;
+Always respond with ONLY a valid JSON object — no markdown, no explanation.
+${langInstruction}`;
 
   const user = `Generate current affairs data as of ${today} in this exact JSON shape:
 {
   "news": [
-    { "id": 1, "title": "<headline>", "summary": "<2-3 sentence summary>", "category": "<category>", "date": "<YYYY-MM-DD>", "source": "<source>", "tags": ["<tag1>","<tag2>"] }
+    { "id": 1, "headline": "<headline>", "summary": "<2-3 sentence summary>", "importance": "<high|medium|low>", "date": "<YYYY-MM-DD>", "tags": ["<tag1>","<tag2>"] }
   ],
   "weeklyQuiz": [
-    { "id": 1, "topic": "<topic>", "questionCount": 10, "duration": "<N min>", "difficulty": "<Easy|Medium|Hard>" }
+    { "id": 1, "question": "<question text>", "options": ["<A>","<B>","<C>","<D>"], "correctIndex": 0, "explanation": "<why this answer>", "week": "${today}" }
   ],
   "monthlyTopics": [
-    { "id": 1, "topic": "<topic>", "subtopics": ["<sub1>","<sub2>","<sub3>"], "targetExams": ["<exam1>","<exam2>"] }
+    { "title": "<topic>", "description": "<brief description>", "keyPoints": ["<point1>","<point2>","<point3>"], "relevantExams": ["WBCS","SSC"] }
   ]
 }
 
 Requirements:
-- Exactly 7 news items relevant to 2025 for WBCS/SSC/Railway/Banking/Police aspirants
-- Exactly 3 weeklyQuiz items
-- Exactly 3 monthlyTopics
+- Exactly 7 news items relevant to 2025-2026 for WBCS/SSC/Railway/Banking/Police aspirants
+- Exactly 5 weeklyQuiz items with 4 options each and correctIndex (0-3)
+- Exactly 3 monthlyTopics with at least 3 keyPoints each
+- ${langInstruction}
 No markdown fences. No preamble.`;
 
   try {
@@ -2050,6 +2223,111 @@ router.get('/dashboard', authMiddleware, async (req, res) => {
   } catch (err) {
     console.error('[govt /dashboard]', err);
     return res.status(500).json({ success: false, message: 'Failed to load dashboard' });
+  }
+});
+
+// ─── Endpoint: POST /chapter-wise-test ─────────────────────────────────────
+// Generates a mock test for a specific subject + chapter/topic with difficulty
+router.post('/chapter-wise-test', async (req, res) => {
+  const { subject, chapter, difficulty, count, language } = req.body;
+
+  if (!subject || typeof subject !== 'string')
+    return res.status(400).json({ error: 'subject is required' });
+  if (!chapter || typeof chapter !== 'string')
+    return res.status(400).json({ error: 'chapter/topic is required' });
+
+  const diff = ['Easy', 'Medium', 'Hard'].includes(difficulty) ? difficulty : 'Medium';
+  const n = Math.min(50, Math.max(5, parseInt(count ?? '10', 10) || 10));
+  const lang = ['English', 'Bengali', 'Hindi'].includes(language) ? language : 'English';
+
+  const languageInstruction = lang === 'English'
+    ? 'Write all questions, options, and explanations in English.'
+    : lang === 'Bengali'
+    ? 'Write all questions, options, and explanations in Bengali (বাংলা). Use Bengali script throughout. Only JSON keys should remain in English.'
+    : 'Write all questions, options, and explanations in Hindi (हिन्दी). Use Devanagari script throughout. Only JSON keys should remain in English.';
+
+  const prompt = `Generate exactly ${n} multiple-choice questions on the topic "${chapter}" under "${subject}" for competitive government exams (SSC, WBCS, Banking, Railway, Police).
+
+Difficulty: ${diff}
+Language: ${lang}
+${languageInstruction}
+${diff === 'Easy' ? 'Questions should test basic concepts and definitions.' : diff === 'Hard' ? 'Questions should be tricky, multi-step, or require deep understanding.' : 'Questions should be moderate — not trivial, not too complex.'}
+
+IMPORTANT:
+- Each question must have exactly 4 options
+- Only ONE option should be correct
+- Include a brief explanation for the correct answer
+- Questions should be exam-quality, not textbook trivia
+- Cover different aspects of "${chapter}"
+
+Return ONLY a valid JSON array (no markdown, no extra text) of exactly ${n} objects:
+[
+  {
+    "id": 1,
+    "question": "...",
+    "options": ["A) ...", "B) ...", "C) ...", "D) ..."],
+    "answer": 0,
+    "explanation": "...",
+    "subject": "${subject}",
+    "topic": "${chapter}",
+    "difficulty": "${diff}"
+  }
+]
+
+"answer" is the 0-based index of the correct option.`;
+
+  try {
+    const raw = await callGroq(
+      'You are an expert question paper setter for Indian government competitive exams. Return ONLY valid JSON.',
+      prompt,
+      4000,
+    );
+
+    // Parse JSON from response
+    let questions;
+    try {
+      const jsonMatch = raw.match(/\[[\s\S]*\]/);
+      if (!jsonMatch) throw new Error('No JSON array in response');
+      questions = JSON.parse(jsonMatch[0]);
+    } catch (parseErr) {
+      console.error('[govt /chapter-wise-test] JSON parse error:', parseErr.message);
+      // Try extractJSON utility as fallback
+      const extracted = extractJSON(raw);
+      if (extracted) {
+        questions = Array.isArray(extracted) ? extracted : null;
+      }
+      if (!questions) {
+        return res.status(500).json({ error: 'AI returned invalid format. Please try again.' });
+      }
+    }
+
+    if (!Array.isArray(questions) || questions.length === 0) {
+      return res.status(500).json({ error: 'No questions generated. Please try again.' });
+    }
+
+    // Normalize questions
+    const normalized = questions.slice(0, n).map((q, i) => ({
+      id: q.id ?? i + 1,
+      question: String(q.question || `Question ${i + 1}`),
+      options: Array.isArray(q.options) ? q.options.slice(0, 4).map(String) : ['Option A', 'Option B', 'Option C', 'Option D'],
+      answer: Number.isInteger(q.answer) ? q.answer : 0,
+      explanation: String(q.explanation || ''),
+      subject: String(q.subject || subject),
+      topic: String(q.topic || chapter),
+      difficulty: diff,
+    }));
+
+    return res.json({
+      success: true,
+      subject,
+      chapter,
+      difficulty: diff,
+      total: normalized.length,
+      questions: normalized,
+    });
+  } catch (err) {
+    console.error('[govt /chapter-wise-test]', err);
+    return res.status(500).json({ error: 'Failed to generate questions. Please try again.' });
   }
 });
 

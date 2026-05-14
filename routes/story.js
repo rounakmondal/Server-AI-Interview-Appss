@@ -2,12 +2,18 @@ import { Router } from 'express';
 
 const router = Router();
 
-// ─── Groq models (same fallback chain as rest of app) ────────────────────────
+// ─── AI models: Groq → SambaNova fallback ────────────────────────────────────
 const GROQ_MODELS = [
   process.env.GROQ_MODEL || 'llama-3.3-70b-versatile',
   'openai/gpt-oss-120b',
   'openai/gpt-oss-20b',
   'llama-3.1-8b-instant',
+];
+
+const SAMBANOVA_MODELS = [
+  'Meta-Llama-3.3-70B-Instruct',
+  'Meta-Llama-3.1-70B-Instruct',
+  'Meta-Llama-3.1-8B-Instruct',
 ];
 
 const SYSTEM_PROMPT = `তুমি একজন অসাধারণ বাংলা গল্পকার এবং ইতিহাসবিদ। তোমার কণ্ঠে ইতিহাস জীবন্ত হয়ে ওঠে।
@@ -40,7 +46,7 @@ router.post('/', async (req, res) => {
     });
   }
 
-  // Try each model
+  // Try each Groq model
   for (const model of GROQ_MODELS) {
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), 45000);
@@ -77,15 +83,63 @@ router.post('/', async (req, res) => {
         continue;
       }
 
-      console.log(`[story] success with ${model}`);
+      console.log(`[story] success with Groq ${model}`);
       return res.json({ story });
     } catch (err) {
       clearTimeout(timer);
-      console.warn(`[story] model ${model} error:`, err.message);
+      console.warn(`[story] Groq ${model} error:`, err.message);
     }
   }
 
-  // All models failed
+  // ── Try SambaNova models ──
+  const sambaKey = process.env.SAMBANOVA_API_KEY;
+  if (sambaKey) {
+    for (const model of SAMBANOVA_MODELS) {
+      const controller = new AbortController();
+      const timer = setTimeout(() => controller.abort(), 45000);
+
+      try {
+        const response = await fetch('https://api.sambanova.ai/v1/chat/completions', {
+          method: 'POST',
+          headers: { Authorization: `Bearer ${sambaKey}`, 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            model,
+            temperature: 0.92,
+            top_p: 0.95,
+            max_tokens: 1200,
+            messages: [
+              { role: 'system', content: SYSTEM_PROMPT },
+              { role: 'user',   content: `এই বিষয়ে বাংলায় একটি গল্প বলো: ${trimmedTopic}` },
+            ],
+          }),
+          signal: controller.signal,
+        });
+        clearTimeout(timer);
+
+        if (!response.ok) {
+          const errText = await response.text().catch(() => '');
+          console.warn(`[story] SambaNova ${model} HTTP ${response.status}: ${errText.slice(0, 120)}`);
+          continue;
+        }
+
+        const data = await response.json();
+        const story = data.choices?.[0]?.message?.content?.trim();
+
+        if (!story) {
+          console.warn(`[story] SambaNova ${model} returned empty content`);
+          continue;
+        }
+
+        console.log(`[story] success with SambaNova ${model}`);
+        return res.json({ story });
+      } catch (err) {
+        clearTimeout(timer);
+        console.warn(`[story] SambaNova ${model} error:`, err.message);
+      }
+    }
+  }
+
+  // All providers failed
   return res.status(500).json({
     error: 'গল্প তৈরিতে সমস্যা হয়েছে',
     story: 'দুঃখিত, এই মুহূর্তে গল্পটি তৈরি করা সম্ভব হচ্ছে না। একটু পরে আবার চেষ্টা করুন।',

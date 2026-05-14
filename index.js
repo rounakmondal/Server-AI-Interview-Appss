@@ -32,7 +32,7 @@ import examSyllabusSearchRoutes from './routes/examSyllabusSearch.js';
 import examCalendarRoutes from './routes/examCalendar.js';
 import virtualExamRoutes, { initVirtualExamDB } from './routes/virtualExam.js';
 import { sendTestResultEmail } from './routes/testResultEmail.js';
-import { handleTriggerDailyPost } from './routes/handleTriggerDailyPost.js';
+import { handleTriggerDailyPost, handleGetDailyPaper } from './routes/handleTriggerDailyPost.js';
 import paymentRoutes from './routes/payment.js';
 import couponRoutes from './routes/coupon.js';
 import mockTestAnalyticsRoutes from './routes/mockTestAnalytics.js';
@@ -51,7 +51,12 @@ app.set('trust proxy', 1);
 
 // Security middleware
 app.use(helmet({
-    crossOriginResourcePolicy: { policy: "cross-origin" }
+    crossOriginResourcePolicy: { policy: "cross-origin" },
+    hsts: {
+        maxAge: 31536000,
+        includeSubDomains: true,
+        preload: true
+    }
 }));
 
 // CORS configuration
@@ -112,6 +117,7 @@ app.use('/api/study', studyRoutes);
 // Auth routes
 app.use('/api/auth', authRoutes);
  app.get("/api/trigger-daily-post", handleTriggerDailyPost);
+ app.get("/api/daily-paper", handleGetDailyPaper);
 
 
 // Contact route

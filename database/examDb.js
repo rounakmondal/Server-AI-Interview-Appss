@@ -1025,6 +1025,50 @@ export function seedNewExams2026() {
         }
     }
 
+    // ── Ensure full Arithmetic syllabus for all WB exams ──────────────────────
+    // All WB exams share the same arithmetic syllabus. ensureChapter is idempotent
+    // so existing chapters are left intact; only missing ones get added.
+
+    const FULL_ARITHMETIC_CHAPTERS = [
+        ['Number System',                     'সংখ্যা তত্ত্ব',                1],
+        ['Percentage',                         'শতকরা',                         2],
+        ['Ratio & Proportion',                 'অনুপাত ও সমানুপাত',            3],
+        ['Profit & Loss',                      'লাভ ও ক্ষতি',                  4],
+        ['Simple & Compound Interest',         'সরল সুদ ও চক্রবৃদ্ধি সুদ',    5],
+        ['Averages',                           'গড়',                           6],
+        ['Time & Work',                        'সময় ও কার্য',                  7],
+        ['Time, Speed & Distance',             'সময়, গতিবেগ ও দূরত্ব',        8],
+        ['Partnership',                        'অংশীদারী কারবার',              9],
+        ['Algebra',                            'বীজগণিত',                      10],
+        ['Mensuration',                        'পরিমিতি',                      11],
+        ['Basic Geometry',                     'প্রাথমিক জ্যামিতি',            12],
+        ['Simplification & BODMAS',            'সরলীকরণ ও বডমাস',             13],
+        ['LCM & HCF',                          'লসাগু ও গসাগু',                14],
+        ['Data Interpretation',                'উপাত্ত বিশ্লেষণ',             15],
+    ];
+
+    // WB exams and their math/arithmetic subject names
+    const WB_MATH_SUBJECTS = [
+        ['wbcs',                'Arithmetic'],
+        ['wbpsc',               'Numerical Aptitude'],
+        ['wb-police-si',        'Mathematics'],
+        ['wb-police-constable', 'Elementary Mathematics'],
+        ['wbpsc-food-si',       'Arithmetic'],
+        ['wbpsc-misc-services', 'Arithmetic & Reasoning'],
+    ];
+
+    for (const [slug, subjectName] of WB_MATH_SUBJECTS) {
+        if (!eid[slug]) continue;
+        const subRow = queryOne(
+            'SELECT id FROM subjects WHERE exam_id = ? AND name = ?',
+            [eid[slug], subjectName]
+        );
+        if (!subRow) continue;
+        for (const [chName, chNameBn, order] of FULL_ARITHMETIC_CHAPTERS) {
+            ensureChapter(subRow.id, chName, chNameBn, order);
+        }
+    }
+
     saveDatabase();
     console.log('✅ 2026 new exams seeded (WBP Constable + 10 exams)');
 

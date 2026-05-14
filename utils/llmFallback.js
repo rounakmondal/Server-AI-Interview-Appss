@@ -11,22 +11,26 @@ const SAMBANOVA_API_BASE = 'https://api.sambanova.ai/v1/chat/completions';
 // Groq models to try in order (429 is per-model, so rotating helps)
 const GROQ_FALLBACK_MODELS = [
   'llama-3.3-70b-versatile',
-  'llama-3.1-8b-instant',
   'meta-llama/llama-4-scout-17b-16e-instruct',
+  'llama-3.1-70b-versatile',
 ];
 
 // Gemini models to try in order (quota may differ per model)
 const GEMINI_FALLBACK_MODELS = [
-  'gemini-2.0-flash-lite',
   'gemini-2.0-flash',
-  'gemini-1.5-flash-latest',
+  'gemini-1.5-flash',
+  'gemini-1.5-pro',
 ];
 
 // SambaNova models to try in order
 const SAMBANOVA_FALLBACK_MODELS = [
-  'DeepSeek-R1-0528',
+  'Meta-Llama-3.3-70B-Instruct',
+  'Meta-Llama-3.1-70B-Instruct',
   'Meta-Llama-3.1-8B-Instruct',
 ];
+
+// Status codes that mean "try next model" vs "stop trying this provider"
+const RETRYABLE_STATUSES = new Set([429, 413, 404, 410, 500, 502, 503]);
 
 /**
  * Converts OpenAI format messages to Gemini format
@@ -90,8 +94,7 @@ export async function callLLMWithFallback(apiKey, messages, options = {}, signal
       const errText = await groqResponse.text().catch(() => '');
       console.warn(`[LLM-Fallback] Groq ${groqModel} → ${groqResponse.status}: ${errText.slice(0, 80)}`);
 
-      // Only try next model if rate-limited; other errors won't be helped by model rotation
-      if (groqResponse.status !== 429) break;
+      if (!RETRYABLE_STATUSES.has(groqResponse.status)) break;
     } catch (err) {
       console.warn(`[LLM-Fallback] Groq ${groqModel} error:`, err.message);
     }
@@ -126,8 +129,7 @@ export async function callLLMWithFallback(apiKey, messages, options = {}, signal
       const errText = await geminiResponse.text().catch(() => '');
       console.warn(`[LLM-Fallback] Gemini ${geminiModel} → ${geminiResponse.status}: ${errText.slice(0, 80)}`);
 
-      // Only try next model if rate-limited
-      if (geminiResponse.status !== 429) break;
+      if (!RETRYABLE_STATUSES.has(geminiResponse.status)) break;
     } catch (err) {
       console.warn(`[LLM-Fallback] Gemini ${geminiModel} error:`, err.message);
     }
@@ -167,7 +169,7 @@ export async function callLLMWithFallback(apiKey, messages, options = {}, signal
       const errText = await sambanovaResponse.text().catch(() => '');
       console.warn(`[LLM-Fallback] SambaNova ${sambanovaModel} → ${sambanovaResponse.status}: ${errText.slice(0, 80)}`);
 
-      if (sambanovaResponse.status !== 429) break;
+      if (!RETRYABLE_STATUSES.has(sambanovaResponse.status)) break;
     } catch (err) {
       console.warn(`[LLM-Fallback] SambaNova ${sambanovaModel} error:`, err.message);
     }
