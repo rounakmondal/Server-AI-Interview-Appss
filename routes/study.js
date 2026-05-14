@@ -29,7 +29,7 @@ router.post('/chat',
         try {
             const { message, conversationHistory } = req.body;
 
-            if (!message && !req.file) {
+            if (!message && !req.file && !req.body.image) {
                 return res.status(400).json({
                     success: false,
                     error: 'Either message text or image is required'
@@ -58,6 +58,15 @@ router.post('/chat',
             let imageBase64 = null;
             if (req.file) {
                 imageBase64 = req.file.buffer.toString('base64');
+            } else if (req.body.image) {
+                // Extract base64 part if it's a data URL (e.g. data:image/jpeg;base64,...)
+                const match = req.body.image.match(/^data:image\/\w+;base64,(.+)$/);
+                if (match && match[1]) {
+                    imageBase64 = match[1];
+                } else {
+                    // Fallback in case it's already a raw base64 string
+                    imageBase64 = req.body.image.includes(',') ? req.body.image.split(',')[1] : req.body.image;
+                }
             }
 
             // Generate response
