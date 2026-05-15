@@ -446,6 +446,7 @@ router.post('/post-test-analytics', async (req, res) => {
       difficulty = 'Medium',
       language   = 'en',
       timeTakenSeconds = 0,
+      studentName = '',
     } = req.body;
 
     // ── compute per-subject stats ──────────────────────────────────
@@ -476,30 +477,34 @@ router.post('/post-test-analytics', async (req, res) => {
     const totalCorr = subjectSummary.reduce((n, x) => n + x.correct, 0);
     const overall   = totalQs > 0 ? Math.round((totalCorr / totalQs) * 100) : 0;
     const avgTime   = totalQs > 0 ? Math.round(timeTakenSeconds / totalQs) : 0;
+    const name      = studentName || 'there';
 
-    // ── AI prompt ─────────────────────────────────────────────────
+    // ── AI prompt — PERSONAL MENTOR VOICE ─────────────────────────
     const isBn = language === 'bn';
     const isHi = language === 'hi';
 
     const systemPrompt = isBn
-      ? `আপনি একজন সরকারি পরীক্ষা প্রস্তুতি বিশেষজ্ঞ। পরীক্ষার ফলাফল বিশ্লেষণ করুন এবং বাংলায় পরামর্শ দিন। শুধুমাত্র valid JSON আউটপুট দিন, কোনো markdown নয়।`
+      ? `তুমি MedhaHub-এর ব্যক্তিগত শিক্ষক "মেধা দিদি"। ছাত্রকে নাম ধরে ডাকো। তুমি তার কাছের মানুষের মতো কথা বলো — উষ্ণ, সৎ, এবং সবসময় তাকে এগিয়ে নিতে চাও। ভুলগুলো নিয়ে বকবে না, বরং কোন chapter-এ দুর্বল এবং কীভাবে ঠিক করবে তা বলবে। শুধু valid JSON দেবে, কোনো markdown নয়।`
       : isHi
-      ? `आप एक सरकारी परीक्षा विशेषज्ञ हैं। परीक्षा परिणाम का विश्लेषण करें और हिंदी में व्यक्तिगत मार्गदर्शन दें। केवल valid JSON आउटपुट करें, कोई markdown नहीं।`
-      : `You are a government exam preparation expert. Analyse the test result and give personalised guidance. Respond ONLY with valid JSON, no markdown fences.`;
+      ? `तुम MedhaHub की पर्सनल टीचर "मेधा दीदी" हो। छात्र को नाम से बुलाओ। तुम उसकी सबसे करीबी टीचर की तरह बात करो — गर्मजोशी, ईमानदारी, और हमेशा आगे बढ़ाने की चाह। गलतियों पर डांटो मत, बल्कि कौन सा chapter कमज़ोर है और कैसे सुधारना है बताओ। सिर्फ valid JSON दो, markdown नहीं।`
+      : `You are "Medha", the student's personal AI mentor on MedhaHub. Address them by name ("Hey ${name}"). You speak like a caring older sister/teacher — warm, honest, and always pushing them forward. NEVER be clinical or cold. When they fail, comfort them and show the exact path to recover. When they do well, celebrate genuinely. Focus on WHICH specific chapters/topics need work and give a concrete 3-day mini-plan to fix weak areas. Respond ONLY with valid JSON, no markdown fences.`;
 
     const userPrompt = [
+      `Student name: ${name}`,
       `Exam: ${exam} | Topic: ${subject || 'Mixed'} | Difficulty: ${difficulty}`,
-      `Overall: ${totalCorr}/${totalQs} (${overall}%) | Avg time/question: ${avgTime}s`,
-      `Subject performance: ${JSON.stringify(subjectSummary)}`,
+      `Score: ${totalCorr}/${totalQs} (${overall}%) | Avg time/question: ${avgTime}s`,
+      `Subject breakdown: ${JSON.stringify(subjectSummary)}`,
       weakSubjects.length
-        ? `Weak areas: ${weakSubjects.map(s => `${s.subject}(${s.accuracy}%)`).join(', ')}`
-        : 'No weak areas.',
+        ? `Struggling in: ${weakSubjects.map(s => `${s.subject}(${s.accuracy}%)`).join(', ')}`
+        : 'All subjects above 70%! 🎉',
+      overall >= 80 ? `This is a GREAT score — celebrate this win!` : '',
+      overall < 40 ? `This is a tough result — be extra gentle and encouraging.` : '',
       isBn
-        ? `বাংলায় JSON দিন:\n{"insight":"২-৩ বাক্যে বিশ্লেষণ","recommendations":["পরামর্শ ১","পরামর্শ ২","পরামর্শ ৩"],"message":"উৎসাহমূলক বার্তা (১ বাক্য)"}`
+        ? `বাংলায় JSON:\n{"insight":"${name}-কে নাম ধরে ডাকো। ২-৩ বাক্যে ব্যক্তিগত বিশ্লেষণ — কোন chapter দুর্বল ও কেন","recommendations":["নির্দিষ্ট chapter-ভিত্তিক পরামর্শ ১","পরামর্শ ২","৩ দিনের mini-plan"],"message":"আবেগপূর্ণ উৎসাহ — ব্যক্তিগত ও উষ্ণ (১-২ বাক্য)","recoveryPlan":"দুর্বল বিষয়গুলোর জন্য ৩ দিনের নির্দিষ্ট plan"}`
         : isHi
-        ? `हिंदी में JSON दें:\n{"insight":"2-3 वाक्यों में विश्लेषण","recommendations":["सुझाव 1","सुझाव 2","सुझाव 3"],"message":"प्रेरणादायक संदेश (1 वाक्य)"}`
-        : `JSON:\n{"insight":"2-3 sentence analysis","recommendations":["actionable tip 1","actionable tip 2","actionable tip 3"],"message":"short motivational message"}`,
-    ].join('\n');
+        ? `हिंदी में JSON:\n{"insight":"${name} को नाम से बुलाओ। 2-3 वाक्यों में व्यक्तिगत विश्लेषण — कौन सा chapter कमज़ोर और क्यों","recommendations":["chapter-विशिष्ट सुझाव 1","सुझाव 2","3 दिन का mini-plan"],"message":"भावनात्मक प्रोत्साहन — व्यक्तिगत और गर्मजोशी (1-2 वाक्य)","recoveryPlan":"कमज़ोर विषयों के लिए 3 दिन का plan"}`
+        : `JSON:\n{"insight":"Address ${name} by name. 2-3 sentence personal analysis — which specific chapters are weak and why","recommendations":["chapter-specific tip 1","tip 2","3-day mini recovery plan"],"message":"emotional encouragement — personal and warm, like a friend who believes in them (1-2 sentences)","recoveryPlan":"concrete 3-day plan to fix the weakest subject: Day 1 do X, Day 2 do Y, Day 3 test again"}`,
+    ].filter(Boolean).join('\n');
 
     let analytics = null;
     try {
@@ -509,7 +514,7 @@ router.post('/post-test-analytics', async (req, res) => {
           { role: 'system', content: systemPrompt },
           { role: 'user',   content: userPrompt },
         ],
-        { model: 'llama-3.3-70b-versatile', temperature: 0.4, max_tokens: 700, stream: false },
+        { model: 'llama-3.3-70b-versatile', temperature: 0.6, max_tokens: 900, stream: false },
         null,
         'post-test-analytics',
       );
@@ -520,18 +525,41 @@ router.post('/post-test-analytics', async (req, res) => {
       const jsonStr = raw.replace(/```json?/gi, '').replace(/```/g, '').trim();
       analytics     = JSON.parse(jsonStr);
     } catch {
-      // Graceful fallback without AI
-      analytics = {
-        insight: isBn
-          ? `আপনি ${totalQs}টি প্রশ্নের মধ্যে ${totalCorr}টি সঠিক করেছেন (${overall}%)। নিয়মিত অনুশীলন করুন।`
-          : isHi
-          ? `आपने ${totalQs} में से ${totalCorr} प्रश्न सही किए (${overall}%)। नियमित अभ्यास जारी रखें।`
-          : `You answered ${totalCorr}/${totalQs} correctly (${overall}%). Consistent practice is key.`,
-        recommendations: weakSubjects.slice(0, 3).map(s =>
-          isBn ? `${s.subject} বিষয়ে আরও অনুশীলন করুন।` : isHi ? `${s.subject} विषय में और अभ्यास करें।` : `Practice more ${s.subject} questions to improve accuracy.`
-        ),
-        message: isBn ? 'অনুশীলন চালিয়ে যান — সাফল্য আসবেই!' : isHi ? 'अभ्यास जारी रखें — सफलता ज़रूर मिलेगी!' : "Keep going — you're getting better every day!",
-      };
+      // Graceful warm fallback without AI
+      const nameGreet = name !== 'there' ? name : 'buddy';
+      analytics = overall >= 60
+        ? {
+            insight: isBn
+              ? `দারুণ কাজ, ${nameGreet}! তুমি ${totalQs}টির মধ্যে ${totalCorr}টি সঠিক করেছ (${overall}%)। তোমার পরিশ্রম ফল দিচ্ছে! ${weakSubjects.length ? `শুধু ${weakSubjects[0]?.subject}-এ একটু বেশি focus দাও।` : ''}`
+              : isHi
+              ? `शानदार, ${nameGreet}! ${totalQs} में से ${totalCorr} सही (${overall}%)। तुम्हारी मेहनत रंग ला रही है! ${weakSubjects.length ? `बस ${weakSubjects[0]?.subject} पर थोड़ा और ध्यान दो।` : ''}`
+              : `Great job, ${nameGreet}! You got ${totalCorr}/${totalQs} right (${overall}%). Your hard work is showing! ${weakSubjects.length ? `Just give a bit more attention to ${weakSubjects[0]?.subject}.` : 'Keep this momentum going!'}`,
+            recommendations: weakSubjects.slice(0, 3).map(s =>
+              isBn ? `${s.subject}-এর chapter গুলো আরেকবার পড়ো ও ১০টি practice question সমাধান করো।`
+              : isHi ? `${s.subject} के chapter दोबारा पढ़ो और 10 practice questions हल करो।`
+              : `Revise ${s.subject} chapters and solve 10 targeted practice questions today.`
+            ),
+            message: isBn ? `তুমি পারবে, ${nameGreet} — এটা আমি জানি! 💪`
+              : isHi ? `तुम कर सकते हो, ${nameGreet} — मुझे पूरा भरोसा है! 💪`
+              : `You've got this, ${nameGreet} — I believe in you! 💪`,
+            recoveryPlan: null,
+          }
+        : {
+            insight: isBn
+              ? `${nameGreet}, এই result দেখে হতাশ হয়ো না। তুমি ${totalCorr}/${totalQs} পেয়েছ (${overall}%) — কিন্তু এটা শেখার একটা ধাপ। ${weakSubjects.length ? `${weakSubjects.map(s => s.subject).join(', ')}-এ তোমাকে focus করতে হবে।` : ''}`
+              : isHi
+              ? `${nameGreet}, इस result से निराश मत हो। ${totalCorr}/${totalQs} (${overall}%) — लेकिन ये सीखने का हिस्सा है। ${weakSubjects.length ? `${weakSubjects.map(s => s.subject).join(', ')} पर focus करो।` : ''}`
+              : `Hey ${nameGreet}, don't be discouraged by this result. ${totalCorr}/${totalQs} (${overall}%) is just a stepping stone. ${weakSubjects.length ? `Let's focus on fixing ${weakSubjects.map(s => s.subject).join(' and ')} — that's where the easy marks are hiding.` : ''}`,
+            recommendations: weakSubjects.slice(0, 3).map(s =>
+              isBn ? `আজই ${s.subject}-এর basic concepts আবার পড়ো। ছোট ছোট notes বানাও।`
+              : isHi ? `आज ही ${s.subject} के basic concepts दोबारा पढ़ो। छोटे notes बनाओ।`
+              : `Today: re-read the basics of ${s.subject}. Make small handwritten notes on key concepts.`
+            ),
+            message: isBn ? `মনে রেখো ${nameGreet}, একটা কঠিন দিন মানে শেষ না — এটা শুরু। কাল আবার চেষ্টা করো! 🌟`
+              : isHi ? `याद रखो ${nameGreet}, एक कठिन दिन अंत नहीं — ये शुरुआत है। कल फिर कोशिश करो! 🌟`
+              : `Remember ${nameGreet}, a tough day isn't the end — it's the beginning. Come back tomorrow stronger! 🌟`,
+            recoveryPlan: null,
+          };
     }
 
     return res.json({ success: true, analytics, weakSubjects });

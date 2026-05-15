@@ -311,35 +311,8 @@ router.get('/status', authMiddleware, async (req, res) => {
     );
 
     // ⚠️ PAYMENT DISABLED - Comment out the next 3 lines to re-enable
-    const premiumFree = { active: true, plan: 'pro_monthly', unlockedExams: ['WBCS', 'Police', 'JTET', 'WBPSC', 'RRB-NTPC', 'SSC'], testCredits: 999, interviewCredits: 999, unlockedInterviews: [], aiInterviewAll: true, activatedAt: new Date(), expiresAt: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000) };
-    const premium = premiumFree;
-    /*
-    const premium = user?.premium || { active: false, unlockedExams: [], testCredits: 0, interviewCredits: 0, unlockedInterviews: [], aiInterviewAll: false };
-    if (!premium.unlockedExams) premium.unlockedExams = [];
-    if (!premium.testCredits) premium.testCredits = 0;
-    if (!premium.interviewCredits) premium.interviewCredits = 0;
-    if (!premium.unlockedInterviews) premium.unlockedInterviews = [];
-
-    // First-seen date for trial period
-    const firstSeenAt = user?.firstSeenAt || user?.createdAt || null;
-
-    // Auto-deactivate timed plans if expired
-    if (premium.active && premium.expiresAt && new Date(premium.expiresAt) < new Date()) {
-      premium.active = false;
-      await db.collection('users').updateOne(
-        { _id: new ObjectId(req.userId) },
-        { $set: { 'premium.active': false } }
-      );
-    }
-
-    // Auto-deactivate AI interview all-company pass if expired
-    if (premium.aiInterviewAll && premium.aiInterviewExpiresAt && new Date(premium.aiInterviewExpiresAt) < new Date()) {
-      premium.aiInterviewAll = false;
-      await db.collection('users').updateOne(
-        { _id: new ObjectId(req.userId) },
-        { $set: { 'premium.aiInterviewAll': false } }
-      );
-    }
+    const premium = { active: true, plan: 'pro_monthly', unlockedExams: ['WBCS', 'Police', 'JTET', 'WBPSC', 'RRB-NTPC', 'SSC'], testCredits: 999, interviewCredits: 999, unlockedInterviews: [], aiInterviewAll: true, activatedAt: new Date(), expiresAt: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000) };
+    const firstSeenAt = user?.firstSeenAt || user?.createdAt || new Date();
 
     res.json({ success: true, premium, firstSeenAt });
   } catch (err) {
