@@ -1,7 +1,98 @@
 import { Router } from 'express';
+import fs from 'fs/promises';
+import path from 'path';
+import { fileURLToPath } from 'url';
 import pLimit from 'p-limit';
 
 const router = Router();
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const DATA_ROOT = path.resolve(__dirname, '..', '..', 'Ai_Interview', 'public', 'data');
+const COMPANIES_MANIFEST_PATH = path.join(DATA_ROOT, 'companies-manifest.json');
+const COMPANIES_INDEX_PATH = path.join(DATA_ROOT, 'companies-index.json');
+const COMPANIES_SLUG_MAP_PATH = path.join(DATA_ROOT, 'companies-slug-map.json');
+const COMPANY_DETAIL_DIR = path.join(DATA_ROOT, 'companies-detail');
+
+const HUB_CATEGORY_FALLBACK = {
+  consulting: 'service',
+  telecom: 'product',
+  manufacturing: 'service',
+  retail: 'startup',
+  healthcare: 'service',
+  education: 'service',
+  government: 'service',
+  media: 'product',
+  energy: 'service',
+  product: 'product',
+  service: 'service',
+  startup: 'startup',
+  finance: 'finance',
+};
+
+let companyManifestCache = null;
+let companyIndexCache = null;
+let companySlugMapCache = null;
+const companyDetailCache = new Map();
+const extendedCompanyCache = new Map();
+
+async function loadJson(filePath) {
+  return JSON.parse(await fs.readFile(filePath, 'utf8'));
+}
+
+async function loadCompanyManifest() {
+  if (!companyManifestCache) companyManifestCache = await loadJson(COMPANIES_MANIFEST_PATH);
+  return companyManifestCache;
+}
+
+async function loadCompanyIndex() {
+  if (!companyIndexCache) companyIndexCache = await loadJson(COMPANIES_INDEX_PATH);
+  return companyIndexCache;
+}
+
+async function loadCompanySlugMap() {
+  if (!companySlugMapCache) companySlugMapCache = await loadJson(COMPANIES_SLUG_MAP_PATH);
+  return companySlugMapCache;
+}
+
+async function loadCompanyDetailChunk(chunkIndex) {
+  if (companyDetailCache.has(chunkIndex)) return companyDetailCache.get(chunkIndex);
+  const data = await loadJson(path.join(COMPANY_DETAIL_DIR, `chunk-${String(chunkIndex).padStart(4, '0')}.json`));
+  const map = new Map(data.map((company) => [company.slug.toLowerCase(), company]));
+  companyDetailCache.set(chunkIndex, map);
+  return map;
+}
+
+function normalizeHubCategory(category) {
+  return String(category || '').toLowerCase();
+}
+
+function getCompanyTypeByCategory(category) {
+  const normalized = normalizeHubCategory(category);
+  if (TYPE_FOCUS[normalized]) return normalized;
+  return HUB_CATEGORY_FALLBACK[normalized] || 'service';
+}
+
+async function getExtendedCompany(slug) {
+  slug = slug.toLowerCase();
+  if (extendedCompanyCache.has(slug)) return extendedCompanyCache.get(slug);
+
+  const slugMap = await loadCompanySlugMap();
+  const chunkIndex = slugMap[slug];
+  if (chunkIndex === undefined) return undefined;
+
+  const chunk = await loadCompanyDetailChunk(chunkIndex);
+  const record = chunk.get(slug);
+  if (!record) return undefined;
+
+  const company = {
+    name: record.name,
+    shortName: record.shortName,
+    type: getCompanyTypeByCategory(record.hubCategory),
+    hubCategory: record.hubCategory,
+  };
+  extendedCompanyCache.set(slug, company);
+  return company;
+}
 
 // ─── Company metadata ────────────────────────────────────────────────────────
 // Maps slug → { name, type } so the prompt can vary per company type.
@@ -428,18 +519,43 @@ async function generateQuestionsInChunks(companyName, companyType, onBatchComple
 }
 
 // ─── Endpoint: GET /api/company-interviews — list all companies ──────────────
-router.get('/', (req, res) => {
-  const companies = Object.entries(COMPANIES).map(([slug, { name, type }]) => ({ slug, name, type }));
-  return res.json({ success: true, total: companies.length, companies });
+router.get('/', async (req, res) => {
+  try {
+    const manifest = await loadCompanyManifest();
+    const extended = await loadCompanyIndex();
+    const companyMap = new Map(
+      Object.entries(COMPANIES).map(([slug, { name, type }]) => [slug, { slug, name, type }]),
+    );
+
+    for (const entry of extended) {
+      const slug = String(entry.s).toLowerCase();
+      if (!companyMap.has(slug)) {
+        companyMap.set(slug, {
+          slug,
+          name: entry.n,
+          type: getCompanyTypeByCategory(entry.cat),
+        });
+      }
+    }
+
+    const companies = [...companyMap.values()];
+    return res.json({ success: true, total: manifest?.total ?? companies.length, companies });
+  } catch (err) {
+    console.error('[company-interview] list load failed', err);
+    return res.status(500).json({ success: false, error: 'Failed to load company list' });
+  }
 });
 
 // ─── Endpoint: GET /api/company-interviews/:slug ─────────────────────────────
 router.get('/:slug', async (req, res) => {
   const slug = req.params.slug.toLowerCase();
 
-  const company = COMPANIES[slug];
+  let company = COMPANIES[slug];
   if (!company) {
-    return res.status(404).json({ success: false, error: 'Company not found' });
+    company = await getExtendedCompany(slug);
+    if (!company) {
+      return res.status(404).json({ success: false, error: 'Company not found' });
+    }
   }
 
   // Check cache first
