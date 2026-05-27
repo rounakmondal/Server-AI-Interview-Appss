@@ -1,0 +1,16 @@
+import path from 'path';
+import { fileURLToPath } from 'url';
+import fs from 'fs/promises';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const DATA_ROOT = 'C:\\WORK\\Ai_Interview\\public\\data';
+const COMPANIES_SLUG_MAP_PATH = path.join(DATA_ROOT, 'companies-slug-map.json');
+const COMPANY_DETAIL_DIR = path.join(DATA_ROOT, 'companies-detail');
+const loadJson = async (filePath) => JSON.parse(await fs.readFile(filePath, 'utf8'));
+const slugMap = await loadJson(COMPANIES_SLUG_MAP_PATH);
+const slug = 'deutsche-telekom';
+console.log('hasSlug', slug in slugMap, 'chunk', slugMap[slug]);
+const chunkIndex = slugMap[slug];
+const chunkData = JSON.parse(await fs.readFile(path.join(COMPANY_DETAIL_DIR, `chunk-${String(chunkIndex).padStart(4, '0')}.json`), 'utf8'));
+const match = chunkData.find((c) => c.slug.toLowerCase() === slug);
+console.log('match', !!match, match ? {slug:match.slug,name:match.name,hubCategory:match.hubCategory} : null);

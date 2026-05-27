@@ -63,7 +63,7 @@ async function loadCompanyDetailChunk(chunkIndex) {
 }
 
 function normalizeHubCategory(category) {
-  return String(category || '').toLowerCase();
+  return String(category || '').toLowerCase().trim();
 }
 
 function getCompanyTypeByCategory(category) {
@@ -72,16 +72,46 @@ function getCompanyTypeByCategory(category) {
   return HUB_CATEGORY_FALLBACK[normalized] || 'service';
 }
 
+function normalizeSlugOrName(value) {
+  return String(value || '').toLowerCase().trim();
+}
+
+async function resolveCompanySlug(slug) {
+  const normalized = normalizeSlugOrName(slug);
+  if (!normalized) return undefined;
+
+  if (COMPANIES[normalized]) return normalized;
+
+  const builtInSlug = Object.entries(COMPANIES).find(([, company]) => {
+    return (
+      normalizeSlugOrName(company.name) === normalized ||
+      normalizeSlugOrName(company.shortName) === normalized
+    );
+  });
+  if (builtInSlug) return builtInSlug[0];
+
+  const index = await loadCompanyIndex();
+  const indexMatch = index.find((entry) => {
+    const entrySlug = String(entry.s).toLowerCase().trim();
+    const entryName = String(entry.n).toLowerCase().trim();
+    return entrySlug === normalized || entryName === normalized;
+  });
+  return indexMatch ? String(indexMatch.s).toLowerCase().trim() : undefined;
+}
+
 async function getExtendedCompany(slug) {
-  slug = slug.toLowerCase();
-  if (extendedCompanyCache.has(slug)) return extendedCompanyCache.get(slug);
+  const normalizedSlug = normalizeSlugOrName(slug);
+  if (extendedCompanyCache.has(normalizedSlug)) return extendedCompanyCache.get(normalizedSlug);
+
+  const targetSlug = await resolveCompanySlug(normalizedSlug);
+  if (!targetSlug) return undefined;
 
   const slugMap = await loadCompanySlugMap();
-  const chunkIndex = slugMap[slug];
+  const chunkIndex = slugMap[targetSlug];
   if (chunkIndex === undefined) return undefined;
 
   const chunk = await loadCompanyDetailChunk(chunkIndex);
-  const record = chunk.get(slug);
+  const record = chunk.get(targetSlug);
   if (!record) return undefined;
 
   const company = {
@@ -90,7 +120,10 @@ async function getExtendedCompany(slug) {
     type: getCompanyTypeByCategory(record.hubCategory),
     hubCategory: record.hubCategory,
   };
-  extendedCompanyCache.set(slug, company);
+  extendedCompanyCache.set(normalizedSlug, company);
+  if (targetSlug !== normalizedSlug) {
+    extendedCompanyCache.set(targetSlug, company);
+  }
   return company;
 }
 
@@ -548,18 +581,22 @@ router.get('/', async (req, res) => {
 
 // ─── Endpoint: GET /api/company-interviews/:slug ─────────────────────────────
 router.get('/:slug', async (req, res) => {
-  const slug = req.params.slug.toLowerCase();
+  const requested = req.params.slug;
+  const resolvedSlug = await resolveCompanySlug(requested);
+  if (!resolvedSlug) {
+    return res.status(404).json({ success: false, error: 'Company not found' });
+  }
 
-  let company = COMPANIES[slug];
+  let company = COMPANIES[resolvedSlug];
   if (!company) {
-    company = await getExtendedCompany(slug);
+    company = await getExtendedCompany(resolvedSlug);
     if (!company) {
       return res.status(404).json({ success: false, error: 'Company not found' });
     }
   }
 
   // Check cache first
-  const cached = cache.get(slug);
+  const cached = cache.get(resolvedSlug);
   if (cached && Date.now() - cached.timestamp < CACHE_TTL_MS) {
     console.log(`[company-interview] cache hit for "${slug}"`);
     return res.json(cached.data);
