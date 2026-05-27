@@ -25,6 +25,7 @@ import {
 } from '../database/examDb.js';
 import { getExamIdBySlug, normalizeChapterId } from '../utils/examIdMapper.js';
 import { getExamDisplayName, getFilenameDisplayName, getSubjectDisplayName } from '../utils/friendlyNames.js';
+import { callLLMWithFallback, convertGeminiToOpenAI } from '../utils/llmFallback.js';
 
 const router = Router();
 
@@ -511,6 +512,169 @@ router.get('/test/:chapterId/questions', (req, res) => {
         });
     } catch (err) {
         console.error('[test-questions] Error:', err);
+        res.status(500).json({ success: false, error: err.message });
+    }
+});
+
+// ─── 5.1 POST /api/test/:chapterId/questions-ai ────────────────────────────
+// Generate AI-powered questions for a chapter (with fallback to database)
+
+router.post('/test/:chapterId/questions-ai', async (req, res) => {
+    try {
+        const chapterId = normalizeChapterId(req.params.chapterId);
+        if (!chapterId) {
+            return res.status(400).json({ success: false, error: 'Invalid chapterId' });
+        }
+
+        const chapter = chapterQueries.getById(chapterId);
+        if (!chapter) {
+            return res.status(404).json({ success: false, error: 'Chapter not found' });
+        }
+
+        const { count = 10, difficulty = 'moderate' } = req.body || {};
+        const numQuestions = Math.min(parseInt(count, 10) || 10, 20);
+
+        // Get subject info
+        const subject = subjectQueries.getById(chapter.subject_id);
+        const exam = examQueries.getById(subject.exam_id);
+
+        // Build AI prompt
+        const EXAM_PATTERNS = {
+            'WBCS': 'WBCS Prelims — 200 MCQs, 2.5 hours, negative marking 1/3. Deep knowledge required. Bengal-specific topics important.',
+            'SSC CGL': 'SSC CGL — 100 MCQs, 60 min, negative marking 0.50. Speed-based. Math & Reasoning are 50% of paper.',
+            'SSC CHSL': 'SSC CHSL — 100 MCQs, 60 min, negative marking 0.50. Moderate difficulty, speed matters.',
+            'SSC MTS': 'SSC MTS — 100 MCQs, 90 min. Easier difficulty. Basic concepts + General Awareness.',
+            'WBP SI': 'WB Police SI — 100 MCQs, 90 min. GK + Math + Reasoning. Bengal-focus. Law enforcement basics.',
+            'WBP Constable': 'WB Police Constable — 100 MCQs, 90 min. Basic GK + Math. No negative marking.',
+            'RRB NTPC': 'RRB NTPC — 100 MCQs, 90 min. Moderate difficulty. Train problems signature. Math 30%.',
+            'RRB Group D': 'RRB Group D — 100 MCQs, 90 min. Basic difficulty. Math + Reasoning + GK.',
+            'IBPS PO': 'IBPS PO — 100 MCQs, 60 min sectional timing. Negative marking 0.25. Heavy Quant + Reasoning. Banking awareness required.',
+            'IBPS Clerk': 'IBPS Clerk — 100 MCQs, 60 min. Moderate difficulty. Quant + Reasoning + Banking.',
+            'JTET': 'Jharkhand TET — 150 MCQs, 2.5 hours. Child pedagogy + subject knowledge.',
+        };
+
+        const examPattern = EXAM_PATTERNS[exam.name] || `${exam.name} competitive exam`;
+
+        const systemPrompt = `You are an expert Indian competitive exam question setter specifically for ${exam.name}.
+EXAM PATTERN: ${examPattern}
+
+Generate exactly ${numQuestions} original MCQ questions on the topic "${chapter.name}" under ${subject.name} for the ${exam.name} exam.
+
+Rules:
+- Each question must be at ${difficulty} difficulty matching real ${exam.name} exam level
+- Questions MUST follow the actual ${exam.name} syllabus pattern and question style
+- Each question has exactly 4 options (A/B/C/D)
+- correctOption must be exactly one of: "A", "B", "C" or "D"
+- Provide short explanations
+- Questions must be factually correct and exam-relevant
+- Cover diverse aspects of "${chapter.name}" — don't repeat same subtopic
+- All 4 options must be plausible
+- Return ONLY a valid JSON array, no markdown fences, no extra text
+
+Format:
+[{
+  "text": "Question text",
+  "optionA": "Option A",
+  "optionB": "Option B",
+  "optionC": "Option C",
+  "optionD": "Option D",
+  "correctOption": "A",
+  "explanation": "Brief explanation"
+}]`;
+
+        const userPrompt = `Generate ${numQuestions} ${difficulty} MCQ questions on "${chapter.name}" for ${exam.name}.`;
+
+        let parsed;
+        try {
+            // Call LLM with fallback
+            const resp = await callLLMWithFallback(
+                process.env.GROQ_API_KEY,
+                [
+                    { role: 'system', content: systemPrompt },
+                    { role: 'user', content: userPrompt }
+                ],
+                { model: 'llama-3.3-70b-versatile', temperature: 0.7, max_tokens: 6000, stream: false },
+                null,
+                'chapter-ai-questions'
+            );
+
+            const data = await resp.json();
+            const raw = data?.choices?.[0]?.message?.content
+                     ?? data?.candidates?.[0]?.content?.parts?.[0]?.text
+                     ?? '[]';
+
+            // Parse JSON response
+            const jsonStr = raw.replace(/```json?/gi, '').replace(/```/g, '').trim();
+            parsed = JSON.parse(jsonStr);
+
+            if (!Array.isArray(parsed) || parsed.length === 0) {
+                throw new Error('Empty response');
+            }
+        } catch (aiErr) {
+            console.warn('[test-questions-ai] AI generation failed, falling back to database:', aiErr.message);
+            
+            // Fallback to database questions
+            const available = questionQueries.countByChapter(chapterId)?.cnt || 0;
+            if (available > 0) {
+                const limit = Math.min(numQuestions, available);
+                const dbQuestions = questionQueries.randomByChapter(chapterId, limit);
+                
+                const formattedQuestions = dbQuestions.map((q) => ({
+                    id: q.id,
+                    question: q.text,
+                    questionBn: q.text_bn || '',
+                    options: [q.option_a, q.option_b, q.option_c, q.option_d],
+                    optionsBn: ['', '', '', ''],
+                    correctIndex: getCorrectIndex(q.correct_option),
+                    explanation: q.explanation || '',
+                    explanationBn: '',
+                }));
+
+                return res.json({
+                    success: true,
+                    data: formattedQuestions,
+                    generated: false,
+                    source: 'database',
+                });
+            }
+
+            // If no database questions either, return error
+            return res.status(503).json({
+                success: false,
+                error: 'AI generation failed and no database questions available',
+            });
+        }
+
+        // Format response to match ChapterQuestion type
+        const formattedQuestions = parsed.slice(0, numQuestions).map((q, idx) => {
+            const correctOpt = String(q.correctOption || 'A').toUpperCase().trim().charAt(0);
+            const correctIndex = { 'A': 0, 'B': 1, 'C': 2, 'D': 3 }[correctOpt] || 0;
+
+            return {
+                id: -(idx + 1), // Use negative IDs to indicate AI-generated
+                question: String(q.text || ''),
+                questionBn: '',
+                options: [
+                    String(q.optionA || ''),
+                    String(q.optionB || ''),
+                    String(q.optionC || ''),
+                    String(q.optionD || ''),
+                ],
+                optionsBn: ['', '', '', ''],
+                correctIndex,
+                explanation: String(q.explanation || ''),
+                explanationBn: '',
+            };
+        });
+
+        res.json({
+            success: true,
+            data: formattedQuestions,
+            generated: true,
+            source: 'ai',
+        });
+    } catch (err) {
+        console.error('[test-questions-ai] Error:', err);
         res.status(500).json({ success: false, error: err.message });
     }
 });
