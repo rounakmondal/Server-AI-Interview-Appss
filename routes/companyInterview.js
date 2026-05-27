@@ -598,7 +598,7 @@ router.get('/:slug', async (req, res) => {
   // Check cache first
   const cached = cache.get(resolvedSlug);
   if (cached && Date.now() - cached.timestamp < CACHE_TTL_MS) {
-    console.log(`[company-interview] cache hit for "${slug}"`);
+    console.log(`[company-interview] cache hit for "${resolvedSlug}"`);
     return res.json(cached.data);
   }
 
@@ -634,7 +634,7 @@ router.get('/:slug', async (req, res) => {
 
       const batchData = {
         success: true,
-        company: slug,
+        company: resolvedSlug,
         batch: batchIndex,
         totalBatches,
         batchQuestions: normalizedBatch,
@@ -648,9 +648,9 @@ router.get('/:slug', async (req, res) => {
       // If this is the first batch, send it immediately without waiting
       if (isFirstBatch) {
         isFirstBatch = false;
-        console.log(`[company-interview] first batch sent for "${slug}" — ${normalizedBatch.length} questions`);
+        console.log(`[company-interview] first batch sent for "${resolvedSlug}" — ${normalizedBatch.length} questions`);
       } else {
-        console.log(`[company-interview] batch ${batchIndex} sent for "${slug}" — ${normalizedBatch.length} questions`);
+        console.log(`[company-interview] batch ${batchIndex} sent for "${resolvedSlug}" — ${normalizedBatch.length} questions`);
       }
     };
 
@@ -658,7 +658,7 @@ router.get('/:slug', async (req, res) => {
     await generateQuestionsInChunks(company.name, company.type, sendBatch);
 
     if (allQuestions.length === 0) {
-      console.error('[company-interview] All batches failed for', slug);
+      console.error('[company-interview] All batches failed for', resolvedSlug);
       res.write(`data: ${JSON.stringify({ success: false, error: 'Failed to generate questions' })}\n\n`);
       return res.end();
     }
@@ -667,7 +667,7 @@ router.get('/:slug', async (req, res) => {
     const categories = [...new Set(allQuestions.map(q => q.category))];
     const finalData = {
       success: true,
-      company: slug,
+      company: resolvedSlug,
       totalQuestions: allQuestions.length,
       categories,
       questions: allQuestions,
@@ -677,13 +677,13 @@ router.get('/:slug', async (req, res) => {
     res.write(`data: ${JSON.stringify(finalData)}\n\n`);
 
     // Cache the final result
-    cache.set(slug, { data: finalData, timestamp: Date.now() });
+    cache.set(resolvedSlug, { data: finalData, timestamp: Date.now() });
 
-    console.log(`[company-interview] completed for "${slug}" — ${allQuestions.length} total questions`);
+    console.log(`[company-interview] completed for "${resolvedSlug}" — ${allQuestions.length} total questions`);
     res.end();
 
   } catch (err) {
-    console.error(`[company-interview] Error for "${slug}":`, err.message);
+    console.error(`[company-interview] Error for "${resolvedSlug}":`, err.message);
     if (!res.headersSent) {
       res.status(500).json({ success: false, error: 'Failed to generate interview questions' });
     } else {
