@@ -579,6 +579,46 @@ router.get('/', async (req, res) => {
   }
 });
 
+  // ─── Endpoint: GET /api/company-interviews/seo/:slug — SEO JSON for crawlers/prerender ─
+  router.get('/seo/:slug', async (req, res) => {
+    try {
+      const requested = req.params.slug;
+      const resolvedSlug = await resolveCompanySlug(requested);
+      if (!resolvedSlug) return res.status(404).json({ success: false, error: 'Company not found' });
+
+      let company = COMPANIES[resolvedSlug];
+      if (!company) {
+        company = await getExtendedCompany(resolvedSlug);
+        if (!company) return res.status(404).json({ success: false, error: 'Company not found' });
+      }
+
+      const SITE = process.env.SITE || 'https://medhahub.in';
+      const title = (company.seo && company.seo.title) || `${company.shortName || company.name} Interview Questions & Answers 2026 | MedhaHub`;
+      const description = (company.seo && company.seo.description) || `${company.name} interview questions, interview process, and expert answers. Prepare for ${company.shortName || company.name} interviews in 2026 with technical, behavioral, and system design practice.`;
+      const keywords = (company.seo && company.seo.keywords) || `${(company.shortName || company.name)} interview questions, ${company.shortName || company.name} interview`;
+      const canonical = `${SITE}/interview-questions/${resolvedSlug}`;
+
+      return res.json({
+        success: true,
+        slug: resolvedSlug,
+        seo: { title, description, keywords, canonical },
+        company: {
+          name: company.name,
+          shortName: company.shortName,
+          hubCategory: company.hubCategory || company.type || null,
+          interviewRounds: company.interviewRounds || [],
+          founded: company.founded || null,
+          headquarters: company.headquarters || null,
+          employees: company.employees || null,
+          avgPackage: company.avgPackage || null,
+        },
+      });
+    } catch (err) {
+      console.error('[company-interview] seo lookup failed', err);
+      return res.status(500).json({ success: false, error: 'Failed to resolve SEO' });
+    }
+  });
+
 // ─── Endpoint: GET /api/company-interviews/:slug ─────────────────────────────
 router.get('/:slug', async (req, res) => {
   const requested = req.params.slug;
