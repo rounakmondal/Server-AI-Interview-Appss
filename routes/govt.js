@@ -11,7 +11,7 @@ const router = Router();
 
 // ─── Valid Enums ──────────────────────────────────────────────────────────────
 
-const VALID_EXAMS        = ['WBCS', 'SSC', 'Railway', 'Banking', 'Police'];
+const VALID_EXAMS        = ['WBCS', 'SSC', 'Railway', 'Banking', 'Police', 'Panchayat'];
 const VALID_SUBJECTS     = ['History', 'Geography', 'Polity', 'Reasoning', 'Math', 'Current Affairs'];
 const VALID_DIFFICULTIES = ['Easy', 'Medium', 'Hard'];
 
@@ -292,6 +292,7 @@ const EXAM_DIR_MAP = {
   'Railway': ['RRB-NTPC'],
   'Banking': ['IBPS'],
   'Police':  ['police', 'police/SI'],
+  'Panchayat': ['panchayat', 'panchayat/WB']
 };
 
 function convertLocalQuestion(q, exam, filename) {
