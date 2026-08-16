@@ -15,6 +15,64 @@ const VALID_EXAMS        = ['WBCS', 'SSC', 'Railway', 'Banking', 'Police', 'Panc
 const VALID_SUBJECTS     = ['History', 'Geography', 'Polity', 'Reasoning', 'Math', 'Current Affairs'];
 const VALID_DIFFICULTIES = ['Easy', 'Medium', 'Hard'];
 
+const EXAM_SYLLABUS = {
+  WBCS: {
+    pattern: 'WBCS Prelims (West Bengal Civil Service). Paper: 200 MCQs in 2.5 hours. Negative marking: 1/3 per wrong answer. Medium-Hard difficulty. Questions test in-depth knowledge of Indian + Bengal-specific topics.',
+    subjects: {
+      History: { weight: '15%', topics: 'Ancient India, medieval India, modern India, and Bengal history.', style: 'Factual recall and analytical questions.' },
+      Geography: { weight: '12%', topics: 'Physical geography, West Bengal geography, Indian economic geography, world geography.', style: 'Direct factual and map-based questions.' },
+      Polity: { weight: '13%', topics: 'Constitution, Parliament, amendments, state government, local self-government.', style: 'Article-based and analytical questions.' },
+      Math: { weight: '10%', topics: 'HCF/LCM, percentage, ratio, SI/CI, algebra, mensuration, data interpretation.', style: 'Multi-step arithmetic and formula-based application.' },
+      Reasoning: { weight: '7%', topics: 'Syllogism, blood relations, coding-decoding, direction, series, analogy.', style: 'Logical deduction and pattern recognition.' },
+      'Current Affairs': { weight: '8%', topics: 'Government schemes, awards, sports, appointments, state affairs.', style: 'Direct factual questions.' },
+    }
+  },
+  SSC: {
+    pattern: 'SSC CGL/CHSL/MTS. Paper: 100 MCQs in 60 minutes. Negative marking: 0.50 marks for wrong answer.',
+    subjects: {
+      History: { weight: '15%', topics: 'Ancient, medieval and modern Indian history.', style: 'One-liner factual recall.' },
+      Geography: { weight: '12%', topics: 'Indian geography, rivers, soils, crops, world geography basics.', style: 'Factual and conceptual.' },
+      Polity: { weight: '13%', topics: 'Constitution basics, rights, parliament, Supreme Court, amendments.', style: 'Article and amendment-based recall.' },
+      Math: { weight: '25%', topics: 'Number system, simplification, profit-loss, SI/CI, geometry, mensuration.', style: 'Speed-based calculation.' },
+      Reasoning: { weight: '25%', topics: 'Analogy, series, coding-decoding, blood relations, seating arrangements.', style: 'Pattern recognition and logic.' },
+      'Current Affairs': { weight: '10%', topics: 'National and international events, awards, sports, government schemes.', style: 'Direct factual.' },
+    }
+  },
+  Railway: {
+    pattern: 'RRB NTPC / Group D / ALP. Paper: 100 MCQs in 90 minutes. Moderate difficulty.',
+    subjects: {
+      History: { weight: '12%', topics: 'Ancient, medieval, modern India and railway history.', style: 'Chronological facts.' },
+      Geography: { weight: '12%', topics: 'Indian geography, climate, agriculture, railway geography.', style: 'Direct recall.' },
+      Polity: { weight: '10%', topics: 'Constitution basics, parliament, rights, panchayati raj.', style: 'Basic conceptual.' },
+      Math: { weight: '30%', topics: 'Percentage, ratio, SI/CI, trains, time-work, geometry.', style: 'Moderate arithmetic and train problems.' },
+      Reasoning: { weight: '25%', topics: 'Analogy, series, coding, alphabet, direction, seating.', style: 'Standard reasoning.' },
+      'Current Affairs': { weight: '11%', topics: 'National events, sports, awards, government schemes.', style: 'Factual and easy recall.' },
+    }
+  },
+  Banking: {
+    pattern: 'IBPS PO/Clerk/RRB, SBI PO/Clerk. Paper: 100 MCQs in 60 minutes with heavy quant + reasoning.',
+    subjects: {
+      History: { weight: '5%', topics: 'Banking history, RBI, nationalisation, economic events.', style: 'Banking-specific history.' },
+      Geography: { weight: '5%', topics: 'States, capitals, economic geography, agriculture.', style: 'Basic geography linked to finance.' },
+      Polity: { weight: '5%', topics: 'RBI Act, monetary policy, banking reforms, financial institutions.', style: 'Finance-focused governance.' },
+      Math: { weight: '35%', topics: 'DI, simplification, arithmetic, ratio, partnership, probability, quadratic equations.', style: 'Speed and accuracy with complex DI.' },
+      Reasoning: { weight: '35%', topics: 'Puzzles, seating, coding, blood relations, syllogism, inequality.', style: 'Complex logic and puzzle sets.' },
+      'Current Affairs': { weight: '15%', topics: 'Banking awareness, RBI, schemes, insurance, economy, fintech.', style: 'Banking and economy focus.' },
+    }
+  },
+  Police: {
+    pattern: 'State police recruitment. Paper: 100 MCQs in 90 minutes. Moderate difficulty.',
+    subjects: {
+      History: { weight: '15%', topics: 'Indian history and Bengal-specific events.', style: 'Factual recall.' },
+      Geography: { weight: '12%', topics: 'Indian and West Bengal geography.', style: 'Regional and map-based.' },
+      Polity: { weight: '12%', topics: 'Constitution, IPC, CrPC basics, police organization.', style: 'Law and constitution basics.' },
+      Math: { weight: '20%', topics: 'Number system, percentage, SI/CI, average, time-speed-distance.', style: 'Practical objective arithmetic.' },
+      Reasoning: { weight: '25%', topics: 'Analogy, series, direction, blood relations, coding, puzzles.', style: 'Standard reasoning.' },
+      'Current Affairs': { weight: '16%', topics: 'State schemes, law and order, sports, defence, national news.', style: 'Direct factual with state focus.' },
+    }
+  }
+};
+
 // ─── Groq Helper ─────────────────────────────────────────────────────────────
 
 // NOTE: openai/gpt-oss-120b is intentionally placed LAST.
@@ -496,155 +554,6 @@ async function fetchBatchWithTimeout(...args) {
 
 // Helper function to fetch a batch of questions
 async function fetchBatch(batchSize, startId, exam, subject, difficulty, language, system) {
-  // ── Exam-specific syllabus with topics, patterns, and question styles ──
-  const EXAM_SYLLABUS = {
-    WBCS: {
-      pattern: 'WBCS Prelims (West Bengal Civil Service). Paper: 200 MCQs in 2.5 hours. Negative marking: 1/3 per wrong answer. Medium-Hard difficulty. Questions test in-depth knowledge of Indian + Bengal-specific topics.',
-      subjects: {
-        History: {
-          weight: '15%', topics: 'Ancient India (Indus Valley, Vedic age, Maurya, Gupta), Medieval India (Delhi Sultanate, Mughal administration, Vijayanagara), Modern India (1857 revolt, Indian National Congress sessions, Gandhian movements, Quit India, INA), History of Bengal (Pala, Sena dynasty, Bengal Renaissance, Permanent Settlement, Partition of Bengal 1905, Swadeshi movement), World History (French Revolution, Industrial Revolution, World Wars)',
-          style: 'Factual recall + analytical. E.g. "Which Act introduced dyarchy?" "Arrange these events chronologically."'
-        },
-        Geography: {
-          weight: '12%', topics: 'Physical geography of India (rivers, mountains, passes, soils, climate zones), West Bengal geography (districts, rivers, crops, industries), Indian economic geography (minerals, industries, agriculture, irrigation), World geography (continents, ocean currents, climate), Map-based questions',
-          style: 'Direct factual + map-based. E.g. "Which river forms the boundary between WB and Jharkhand?" "Laterite soil is found in which region?"'
-        },
-        Polity: {
-          weight: '13%', topics: 'Indian Constitution (Preamble, Fundamental Rights Art 14-32, DPSP Art 36-51, Fundamental Duties), Constitutional bodies (Election Commission, CAG, UPSC, Finance Commission), Parliamentary system (Lok Sabha, Rajya Sabha, Speaker, committees), Amendments (1st, 42nd, 44th, 73rd, 74th, 86th, 101st), State government, Panchayati Raj, Local self-government in WB',
-          style: 'Article-specific + analytical. E.g. "Under which Article can President declare Emergency?" "73rd Amendment relates to?"'
-        },
-        Math: {
-          weight: '10%', topics: 'Number system (HCF/LCM, divisibility), Percentage, Profit-Loss, Simple & Compound Interest, Ratio-Proportion, Time-Work, Time-Speed-Distance, Average, Algebra (linear & quadratic), Mensuration (area, volume of 2D/3D shapes), Data Interpretation (tables, bar/pie charts)',
-          style: 'Multi-step calculation. NEVER trivial arithmetic. E.g. "A train 150m long crosses a bridge in 30s at 54 km/h. Length of bridge?" "CI on Rs.8000 at 10% for 2 years compounded annually?"'
-        },
-        Reasoning: {
-          weight: '7%', topics: 'Syllogism, Blood Relations, Coding-Decoding (letter/number shifting), Direction & Distance, Seating Arrangement (linear/circular), Series completion (number/letter), Analogy, Classification, Statement-Conclusion, Venn Diagram, Calendar & Clock problems',
-          style: 'Logical deduction. E.g. "If APPLE is coded as 50, MANGO is coded as?" "A is south of B, B is east of C..."'
-        },
-        'Current Affairs': {
-          weight: '8%', topics: 'Last 12 months: Government schemes (PM Vishwakarma, PM Surya Ghar, Ayushman Bharat), International summits (G20, BRICS, COP), Awards (Bharat Ratna, Padma, Nobel), Sports (Olympics, Cricket WC, Asian Games), Science discoveries, New laws/bills, West Bengal state schemes, Important appointments',
-          style: 'Direct factual. E.g. "Who won Nobel Peace Prize 2025?" "Which state launched XYZ scheme?"'
-        },
-      }
-    },
-    SSC: {
-      pattern: 'SSC CGL/CHSL/MTS (Staff Selection Commission). Paper: 100 MCQs in 60 minutes. Negative marking: 0.50 marks for wrong answer. Tests speed + accuracy. Questions are straightforward but time-pressured.',
-      subjects: {
-        History: {
-          weight: '15%', topics: 'Ancient India (Harappa, Maurya, Gupta empires, Sangam age), Medieval India (Sultanate, Mughal rulers & battles), Modern India (Governor Generals, Acts 1773-1947, Freedom fighters, Revolts), Cultural history (temples, paintings, dance forms)',
-          style: 'Direct factual one-liners. E.g. "Battle of Plassey was fought in which year?" "Who founded Arya Samaj?"'
-        },
-        Geography: {
-          weight: '12%', topics: 'Indian physical geography (Himalayas, Peninsular plateau, Coastal plains, Islands), Rivers & dams, Soils & crops, Minerals & industries, National parks & wildlife sanctuaries, Census data, World geography basics',
-          style: 'Factual recall. E.g. "Nathula Pass connects India with?" "Longest river of peninsular India?"'
-        },
-        Polity: {
-          weight: '13%', topics: 'Constitution basics (Preamble, Parts, Schedules), Fundamental Rights & Duties, DPSP, President/PM/Governor powers, Parliament, Supreme Court & High Courts, Important Articles & Amendments, Citizenship, Elections',
-          style: 'Article/Amendment-based. E.g. "Right to Education is under which Article?" "Rajya Sabha members are elected for how many years?"'
-        },
-        Math: {
-          weight: '25%', topics: 'Number System, HCF/LCM, Simplification (BODMAS), Percentage, Profit-Loss, SI/CI, Ratio-Proportion-Mixture, Average, Time-Work, Pipes & Cisterns, Time-Speed-Distance (trains, boats), Algebra, Trigonometry (heights & distances), Geometry (circles, triangles, quadrilaterals), Mensuration (2D+3D), Data Interpretation (pie/bar/line charts)',
-          style: 'Speed-based calculation. Multi-step but solvable in 1-2 minutes. E.g. "If a:b=3:4, b:c=5:6, find a:b:c?" "A cistern is filled in 12 min, emptied in 15 min..."'
-        },
-        Reasoning: {
-          weight: '25%', topics: 'Analogy (word/number/letter), Classification, Series (number/letter/alpha-numeric), Coding-Decoding, Blood Relations, Direction, Seating Arrangement, Syllogism, Statement-Conclusion, Paper Folding/Cutting, Mirror/Water Image, Embedded Figures, Dice & Cube, Venn Diagram, Mathematical Operations',
-          style: 'Quick pattern recognition. E.g. "2,6,12,20,30,?" "Find the odd one out: 121, 169, 225, __(mistake)__, 361"'
-        },
-        'Current Affairs': {
-          weight: '10%', topics: 'National & International events (last 6-12 months), Awards & honors, Sports championships, Government schemes, Books & authors, Important days, Science & technology, Defence, Economy (budget, GDP), Appointments',
-          style: 'Direct factual. E.g. "Who is the current Chief Justice of India?" "India ranked ___ in Global Hunger Index 2025?"'
-        },
-      }
-    },
-    Railway: {
-      pattern: 'RRB NTPC / Group D / ALP (Indian Railways). Paper: 100 MCQs in 90 minutes. No negative marking in some, 1/3 in others. Mix of GK + Math + Reasoning. Questions are moderate difficulty.',
-      subjects: {
-        History: {
-          weight: '12%', topics: 'Ancient India (Indus Valley, Vedic, Maurya, Gupta), Medieval India (Delhi Sultanate, Mughal), Modern India (British rule, Freedom movement, Important Acts), Indian National Movement leaders & events, History of Indian Railways',
-          style: 'Factual + chronological. E.g. "First railway line in India was between?" "Who gave the slogan Jai Hind?"'
-        },
-        Geography: {
-          weight: '12%', topics: 'Indian geography (rivers, mountains, states & capitals, dams, soil types), World geography basics, Climate & monsoon, Agriculture & crops, Census, Railway geography (zones, headquarters)',
-          style: 'Direct recall. E.g. "Headquarters of South Eastern Railway?" "Which state is largest producer of rice?"'
-        },
-        Polity: {
-          weight: '10%', topics: 'Indian Constitution basics, Fundamental Rights, DPSP, Parliament, President, PM, Election Commission, Important Articles, Amendments, Panchayati Raj',
-          style: 'Basic conceptual. E.g. "Minimum age to become PM?" "How many Fundamental Rights are there?"'
-        },
-        Math: {
-          weight: '30%', topics: 'Number System, BODMAS, HCF/LCM, Percentage, Profit-Loss, SI/CI, Ratio-Proportion, Average, Time-Work, Time-Speed-Distance (trains problems are key), Algebra, Geometry, Mensuration, Data Interpretation',
-          style: 'Moderate difficulty. Train problems are signature RRB questions. E.g. "Two trains running in opposite directions at 50 & 60 km/h cross each other in 12 seconds..."'
-        },
-        Reasoning: {
-          weight: '25%', topics: 'Analogy, Classification, Series, Coding-Decoding, Blood Relations, Direction, Calendar, Clock, Syllogism, Statement-Conclusion, Non-verbal (mirror image, paper cutting, pattern), Alphabet test, Mathematical operations',
-          style: 'Standard reasoning. E.g. "In a certain code MOBILE is written as KQFOIG, then PHONE is?" "Day after tomorrow is Friday, what was day before yesterday?"'
-        },
-        'Current Affairs': {
-          weight: '11%', topics: 'National events, International affairs, Sports, Awards (Arjuna, Dronacharya, Khel Ratna), Government schemes, Science & Tech, Books & authors, Important days, Indian Railways developments',
-          style: 'Factual. E.g. "Which is the fastest train in India?" "Who won Dronacharya Award 2025 for Cricket?"'
-        },
-      }
-    },
-    Banking: {
-      pattern: 'IBPS PO/Clerk/RRB, SBI PO/Clerk. Paper: 100 MCQs in 60 minutes (sectional timing). Negative marking: 0.25 per wrong answer. Heavy on Quant + Reasoning. Banking awareness is unique.',
-      subjects: {
-        History: {
-          weight: '5%', topics: 'History of banking in India, Nationalization of banks (1969, 1980), RBI history & governors, Important economic events, Modern Indian history relevant to economy',
-          style: 'Banking-specific history. E.g. "In which year were 14 banks nationalized?" "First Governor of RBI?"'
-        },
-        Geography: {
-          weight: '5%', topics: 'Indian states & capitals, Important cities & rivers, Agricultural geography, Economic geography, Census data',
-          style: 'Basic geography linked to economics. E.g. "Which state leads in IT exports?" "Jute is primarily grown in?"'
-        },
-        Polity: {
-          weight: '5%', topics: 'Financial legislation (Finance Bill, Money Bill), RBI Act, Banking Regulation Act, SEBI, IRDAI, Financial inclusion policies, Monetary policy tools (CRR, SLR, Repo Rate)',
-          style: 'Finance-focused governance. E.g. "Who decides Repo Rate?" "Section 7 of RBI Act deals with?"'
-        },
-        Math: {
-          weight: '35%', topics: 'Number Series (complex patterns), Data Interpretation (tables, caselet, mixed charts), Simplification/Approximation, Percentage, Profit-Loss, SI/CI (compounded quarterly/half-yearly), Ratio-Proportion-Partnership, Time-Work (efficiency-based), Mixture-Alligation, Probability, Permutation-Combination, Quadratic Equations (inequality-based)',
-          style: 'Speed + complexity. Heavy DI. E.g. "Study the table showing 5 banks loan disbursement..." "What is approximate value of 34.97% of 6251 + 17.99% of 3499?"'
-        },
-        Reasoning: {
-          weight: '35%', topics: 'Seating Arrangement (linear, circular, square — 7-8 persons), Puzzle (floor/box/scheduling), Syllogism (3-4 statements), Blood Relations, Direction & Distance, Coding-Decoding (new pattern), Inequality (coded), Input-Output, Data Sufficiency, Statement-Assumption, Critical Reasoning',
-          style: 'Complex puzzles. E.g. "8 persons sit around a circular table. A sits 3rd to left of B..." "If A>B, B≥C, C=D..."'
-        },
-        'Current Affairs': {
-          weight: '15%', topics: 'Banking awareness (types of accounts, NPA, Basel norms, NBFC), Financial inclusion (Jan Dhan, MUDRA, Stand Up India), Insurance (PMJJBY, PMSBY), Recent RBI circulars, Mergers of banks, Fintech & UPI, Government budget highlights, International financial bodies (IMF, World Bank, ADB, AIIB)',
-          style: 'Banking + economy focus. E.g. "PMJJBY premium is Rs.___?" "What is the full form of SARFAESI?" "Current CRR rate is?"'
-        },
-      }
-    },
-    Police: {
-      pattern: 'WBP SI/Constable, State Police exams. Paper: 100 MCQs in 90 minutes. No negative marking (varies by state). Tests General Knowledge + Basic Math + Reasoning. Moderate difficulty.',
-      subjects: {
-        History: {
-          weight: '15%', topics: 'Ancient India, Medieval India, Modern India (British rule, Freedom movement), Bengal history (Nawabs, British Bengal, Bengal Renaissance, Partition), Post-independence events, Important dates & leaders',
-          style: 'Factual recall. E.g. "Who was the last Nawab of Bengal?" "Quit India Movement started in which year?" "Battle of Buxar was fought between?"'
-        },
-        Geography: {
-          weight: '12%', topics: 'India physical features, West Bengal geography (rivers, districts, crops), States & capitals, Rivers & dams, Soils, Climate, National parks, Census, Map-based',
-          style: 'Regional focus. E.g. "How many districts in West Bengal?" "Teesta river originates from?" "Sundarbans is in which district?"'
-        },
-        Polity: {
-          weight: '12%', topics: 'Indian Constitution basics, Fundamental Rights, Criminal law basics (IPC sections for police), Indian Penal Code, CrPC basics, Police organization structure, State Police Act, RTI Act, POCSO Act',
-          style: 'Law enforcement + constitution. E.g. "Section 302 of IPC deals with?" "FIR is filed under which section of CrPC?" "Article 21 guarantees?"'
-        },
-        Math: {
-          weight: '20%', topics: 'Number System, Simplification, Percentage, Profit-Loss, SI/CI, Ratio-Proportion, Average, Time-Work, Time-Speed-Distance, Basic Algebra, Geometry basics, Mensuration (area/perimeter)',
-          style: 'Moderate. Practical problems. E.g. "A policeman runs at 10 km/h and catches a thief running at 8 km/h who has 200m head start. Time taken?"'
-        },
-        Reasoning: {
-          weight: '25%', topics: 'Analogy, Classification, Series, Coding-Decoding, Blood Relations, Direction & Distance, Calendar, Clock, Syllogism, Mirror/Water Image, Embedded Figures, Pattern completion, Venn Diagram',
-          style: 'Standard + visual. E.g. "Complete the pattern: Z, X, V, T, ?" "Find mirror image of POLICE"'
-        },
-        'Current Affairs': {
-          weight: '16%', topics: 'National events, State government schemes, Police reforms, Sports, Awards, Important days, Science & tech, Defence, West Bengal current affairs, Law & order events',
-          style: 'Direct factual with state focus. E.g. "Duare Sarkar is a scheme of which state?" "Who is current DGP of West Bengal?"'
-        },
-      }
-    },
-  };
-
   // Get exam-specific data or default
   const examData = EXAM_SYLLABUS[exam] || EXAM_SYLLABUS['WBCS'];
   const subjectData = examData.subjects[subject] || {};
