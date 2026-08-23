@@ -64,7 +64,7 @@ export async function callLLMWithFallback(apiKey, messages, options = {}, signal
   } = options;
 
   const laysoApiKey = process.env.LAYSO_API_KEY;
-  const laysoModel = process.env.LAYSO_MODEL || 'grok-4.6';
+  const laysoModel = process.env.LAYSO_MODEL || 'gpt-5.4';
 
   // LAYSO is the primary gateway; it uses the OpenAI-compatible request format.
   if (laysoApiKey) {
@@ -231,7 +231,7 @@ export async function streamLLMWithFallback(res, groqApiKey, messages, options =
   let usedGemini = false;
 
   const laysoApiKey = process.env.LAYSO_API_KEY;
-  const laysoModel = process.env.LAYSO_MODEL || 'grok-4.6';
+  const laysoModel = process.env.LAYSO_MODEL || 'gpt-5.4';
 
   if (laysoApiKey) {
     try {
