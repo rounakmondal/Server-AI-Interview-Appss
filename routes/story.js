@@ -1,4 +1,5 @@
 import { Router } from 'express';
+import { queryAI } from '../services/aiAgent.js';
 
 const router = Router();
 
@@ -37,6 +38,23 @@ router.post('/', async (req, res) => {
   }
 
   const trimmedTopic = topic.trim();
+
+  if (process.env.LAYSO_API_KEY || process.env.GROQ_API_KEY) {
+    try {
+      const story = await queryAI(
+        SYSTEM_PROMPT,
+        `এই বিষয়ে বাংলায় একটি গল্প বলো: ${trimmedTopic}`,
+        { maxTokens: 1200 }
+      );
+      return res.json({ story: story.trim() });
+    } catch (err) {
+      console.warn('[story] shared AI provider chain failed:', err.message);
+      return res.status(500).json({
+        error: 'গল্প তৈরিতে সমস্যা হয়েছে',
+        story: 'দুঃখিত, এই মুহূর্তে গল্পটি তৈরি করা সম্ভব হচ্ছে না। একটু পরে আবার চেষ্টা করুন.',
+      });
+    }
+  }
 
   // Fallback when no API key
   const apiKey = process.env.GROQ_API_KEY;

@@ -1,6 +1,7 @@
 import { Router } from 'express';
 import { getDb } from '../database/mongo.js';
 import { authMiddleware } from '../middleware/auth.js';
+import { callLLMWithFallback, convertGeminiToOpenAI } from '../utils/llmFallback.js';
 
 const router = Router();
 
@@ -32,122 +33,24 @@ const SKILL_TOPICS = {
   behavioral:     'Tell Me About Yourself, Strengths/Weaknesses, STAR Method, Teamwork, Conflict Resolution, Why This Company, Leadership',
 };
 
-// ─── AI helper: Groq → SambaNova fallback ────────────────────────────────────
-const GROQ_MODELS = [
-  process.env.GROQ_MODEL || 'llama-3.1-8b-instant',
-  'openai/gpt-oss-120b',
-  'openai/gpt-oss-20b',
-  'llama-3.1-8b-instant',
-];
-
-const SAMBANOVA_MODELS = [
-  'Meta-Llama-3.3-70B-Instruct',
-  'Meta-Llama-3.1-70B-Instruct',
-  'Meta-Llama-3.1-8B-Instruct',
-];
-
-const MODEL_TOKEN_CAPS = {
-  'llama-3.1-8b-instant': 4000,
-  'openai/gpt-oss-120b':     4000,
-  'openai/gpt-oss-20b':      4000,
-  'llama-3.1-8b-instant':    4000,
-  'Meta-Llama-3.3-70B-Instruct': 6000,
-  'Meta-Llama-3.1-70B-Instruct': 6000,
-  'Meta-Llama-3.1-8B-Instruct':  4000,
-};
-
 async function callGroq(systemPrompt, userPrompt, maxTokens = 6000) {
-  const groqKey = process.env.GROQ_API_KEY;
-  const sambaKey = process.env.SAMBANOVA_API_KEY;
-
-  const messages = [
-    { role: 'system', content: systemPrompt },
-    { role: 'user',   content: userPrompt },
-  ];
-
-  // ── Try Groq models ──
-  if (groqKey) {
-    for (const model of GROQ_MODELS) {
-      const controller = new AbortController();
-      const timer = setTimeout(() => controller.abort(), 60000);
-      const effectiveTokens = Math.min(maxTokens, MODEL_TOKEN_CAPS[model] ?? 4000);
-
-      try {
-        const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
-          method: 'POST',
-          headers: { Authorization: `Bearer ${groqKey}`, 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            model,
-            temperature: 0.7,
-            max_tokens: effectiveTokens,
-            top_p: 0.9,
-            messages,
-          }),
-          signal: controller.signal,
-        });
-        clearTimeout(timer);
-
-        if (!res.ok) {
-          const errText = await res.text().catch(() => '');
-          console.warn(`[skill-matrix] Groq ${model} HTTP ${res.status}: ${errText.slice(0, 120)}`);
-          continue;
-        }
-
-        const data    = await res.json();
-        const content = data.choices?.[0]?.message?.content?.trim();
-        if (!content) { console.warn(`[skill-matrix] Groq ${model} empty content`); continue; }
-
-        console.log(`[skill-matrix] success with Groq ${model}`);
-        return content;
-      } catch (err) {
-        clearTimeout(timer);
-        console.warn(`[skill-matrix] Groq ${model} error:`, err.message);
-      }
-    }
-  }
-
-  // ── Try SambaNova models ──
-  if (sambaKey) {
-    for (const model of SAMBANOVA_MODELS) {
-      const controller = new AbortController();
-      const timer = setTimeout(() => controller.abort(), 60000);
-      const effectiveTokens = Math.min(maxTokens, MODEL_TOKEN_CAPS[model] ?? 4000);
-
-      try {
-        const res = await fetch('https://api.sambanova.ai/v1/chat/completions', {
-          method: 'POST',
-          headers: { Authorization: `Bearer ${sambaKey}`, 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            model,
-            temperature: 0.7,
-            max_tokens: effectiveTokens,
-            top_p: 0.9,
-            messages,
-          }),
-          signal: controller.signal,
-        });
-        clearTimeout(timer);
-
-        if (!res.ok) {
-          const errText = await res.text().catch(() => '');
-          console.warn(`[skill-matrix] SambaNova ${model} HTTP ${res.status}: ${errText.slice(0, 120)}`);
-          continue;
-        }
-
-        const data    = await res.json();
-        const content = data.choices?.[0]?.message?.content?.trim();
-        if (!content) { console.warn(`[skill-matrix] SambaNova ${model} empty content`); continue; }
-
-        console.log(`[skill-matrix] success with SambaNova ${model}`);
-        return content;
-      } catch (err) {
-        clearTimeout(timer);
-        console.warn(`[skill-matrix] SambaNova ${model} error:`, err.message);
-      }
-    }
-  }
-
-  throw new Error('All AI providers failed (Groq + SambaNova)');
+  const apiKey = process.env.GROQ_API_KEY || process.env.LAYSO_API_KEY;
+  if (!apiKey) throw new Error('No AI provider API key is configured');
+  const response = await callLLMWithFallback(
+    apiKey,
+    [
+      { role: 'system', content: systemPrompt },
+      { role: 'user', content: userPrompt },
+    ],
+    { model: process.env.GROQ_MODEL || 'llama-3.1-8b-instant', temperature: 0.7, max_tokens: maxTokens },
+    null,
+    'skill-matrix'
+  );
+  const data = await response.json();
+  const normalized = data.candidates ? convertGeminiToOpenAI(data) : data;
+  const content = normalized.choices?.[0]?.message?.content?.trim();
+  if (!content) throw new Error('AI returned empty content');
+  return content;
 }
 
 // ─── JSON extraction with truncation repair ──────────────────────────────────

@@ -65,6 +65,7 @@ export async function callLLMWithFallback(apiKey, messages, options = {}, signal
 
   const laysoApiKey = process.env.LAYSO_API_KEY;
   const laysoModel = process.env.LAYSO_MODEL || 'gpt-5.4';
+  const groqApiKey = process.env.GROQ_API_KEY || (apiKey && !laysoApiKey ? apiKey : null);
 
   // LAYSO is the primary gateway; it uses the OpenAI-compatible request format.
   if (laysoApiKey) {
@@ -96,13 +97,13 @@ export async function callLLMWithFallback(apiKey, messages, options = {}, signal
   const groqModels = [model, ...GROQ_FALLBACK_MODELS.filter(m => m !== model)];
 
   // ── Try all Groq models ──
-  for (const groqModel of groqModels) {
+  for (const groqModel of groqApiKey ? groqModels : []) {
     try {
       console.log(`[LLM-Fallback] Trying Groq ${groqModel} (${source})`);
       const groqResponse = await fetch(GROQ_API_BASE, {
         method: 'POST',
         headers: {
-          'Authorization': `Bearer ${apiKey}`,
+          'Authorization': `Bearer ${groqApiKey}`,
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
@@ -232,6 +233,7 @@ export async function streamLLMWithFallback(res, groqApiKey, messages, options =
 
   const laysoApiKey = process.env.LAYSO_API_KEY;
   const laysoModel = process.env.LAYSO_MODEL || 'gpt-5.4';
+  const configuredGroqApiKey = process.env.GROQ_API_KEY || (groqApiKey && !laysoApiKey ? groqApiKey : null);
 
   if (laysoApiKey) {
     try {
@@ -261,13 +263,13 @@ export async function streamLLMWithFallback(res, groqApiKey, messages, options =
   // Try Groq first (streaming)
   const groqModels = [model, ...GROQ_FALLBACK_MODELS.filter(m => m !== model)];
   
-  for (const groqModel of groqModels) {
+  for (const groqModel of configuredGroqApiKey ? groqModels : []) {
     try {
       console.log(`[LLM-Fallback-Stream] Trying Groq ${groqModel}`);
       apiResponse = await fetch(GROQ_API_BASE, {
         method: 'POST',
         headers: {
-          'Authorization': `Bearer ${groqApiKey}`,
+          'Authorization': `Bearer ${configuredGroqApiKey}`,
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({

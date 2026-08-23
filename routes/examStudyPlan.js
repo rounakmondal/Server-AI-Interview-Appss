@@ -5,59 +5,28 @@ import {
     chapterQueries,
     studyPlanQueries,
 } from '../database/examDb.js';
+import { callLLMWithFallback, convertGeminiToOpenAI } from '../utils/llmFallback.js';
 
 const router = Router();
 
-// ─── Groq helper (non-streaming) ─────────────────────────────────────────────
-
-const GROQ_MODELS = [
-    process.env.GROQ_MODEL || 'llama-3.1-8b-instant',
-    'llama-3.1-8b-instant',
-    'openai/gpt-oss-120b',
-    'openai/gpt-oss-20b'
-];
-
 async function callGroq(systemPrompt, userPrompt, maxTokens = 4000) {
-    const apiKey = process.env.GROQ_API_KEY;
-    if (!apiKey) throw new Error('GROQ_API_KEY is not configured');
-
-    for (const model of GROQ_MODELS) {
-        const controller = new AbortController();
-        const timer      = setTimeout(() => controller.abort(), 60_000);
-        try {
-            const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
-                method:  'POST',
-                headers: {
-                    Authorization:  `Bearer ${apiKey}`,
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    model,
-                    temperature: 0.7,
-                    max_tokens:  maxTokens,
-                    messages: [
-                        { role: 'system', content: systemPrompt },
-                        { role: 'user',   content: userPrompt   },
-                    ],
-                }),
-                signal: controller.signal,
-            });
-            clearTimeout(timer);
-
-            if (!res.ok) {
-                console.warn(`[studyplan] ${model} HTTP ${res.status}`);
-                continue;
-            }
-            const data    = await res.json();
-            const content = data.choices?.[0]?.message?.content?.trim();
-            if (!content) { console.warn(`[studyplan] ${model} empty content`); continue; }
-            return content;
-        } catch (err) {
-            clearTimeout(timer);
-            console.warn(`[studyplan] ${model} error:`, err.message);
-        }
-    }
-    throw new Error('All Groq models failed for study plan generation');
+    const apiKey = process.env.GROQ_API_KEY || process.env.LAYSO_API_KEY;
+    if (!apiKey) throw new Error('No AI provider API key is configured');
+    const response = await callLLMWithFallback(
+        apiKey,
+        [
+            { role: 'system', content: systemPrompt },
+            { role: 'user', content: userPrompt },
+        ],
+        { model: process.env.GROQ_MODEL || 'llama-3.1-8b-instant', temperature: 0.7, max_tokens: maxTokens },
+        null,
+        'study-plan'
+    );
+    const data = await response.json();
+    const normalized = data.candidates ? convertGeminiToOpenAI(data) : data;
+    const content = normalized.choices?.[0]?.message?.content?.trim();
+    if (!content) throw new Error('AI returned empty content');
+    return content;
 }
 
 function extractJSON(text) {

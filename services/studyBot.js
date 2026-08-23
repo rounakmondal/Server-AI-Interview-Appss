@@ -122,9 +122,9 @@ async function callVisionWithFallback(userText, imageBase64) {
 
 // Fallback to Groq for text-only if OpenAI not available, with Gemini fallback
 async function getGroqChatCompletion(messages, maxTokens = 500) {
-    const apiKey = process.env.GROQ_API_KEY;
+    const apiKey = process.env.GROQ_API_KEY || process.env.LAYSO_API_KEY;
     if (!apiKey) {
-        throw new Error('GROQ_API_KEY not found in .env');
+        throw new Error('No AI provider API key found in .env');
     }
 
     const models = [
