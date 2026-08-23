@@ -17,9 +17,9 @@ const GROQ_MODELS = [
  * @throws {Error} If API key is not configured
  */
 function getApiKey() {
-    const apiKey = process.env.GROQ_API_KEY;
+    const apiKey = process.env.GROQ_API_KEY || process.env.LAYSO_API_KEY;
     if (!apiKey) {
-        throw new Error('AI service not configured: GROQ_API_KEY is missing');
+        throw new Error('AI service not configured: set LAYSO_API_KEY or GROQ_API_KEY');
     }
     return apiKey;
 }
@@ -120,7 +120,10 @@ export async function streamChapterGuide(res, req, chapterId, userQuery, chapter
         if (req) req.on('close', () => controller.abort());
 
         // Call Groq API with streaming
-        await streamGroqResponse(res, apiKey, systemPrompt, safeQuery, timer, controller);
+        await streamLLMWithFallback(res, apiKey, [
+            { role: 'system', content: systemPrompt },
+            { role: 'user', content: safeQuery },
+        ], { model: GROQ_MODELS[0], temperature: 0.7, max_tokens: 1000 }, controller, timer);
     } catch (err) {
         if (!res.headersSent) {
             res.status(500).json({ success: false, error: err.message });

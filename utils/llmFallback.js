@@ -5,6 +5,7 @@
  */
 
 const GROQ_API_BASE = 'https://api.groq.com/openai/v1/chat/completions';
+const LAYSO_API_BASE = 'https://laysoai.com/v1/chat/completions';
 const GEMINI_API_BASE = 'https://generativelanguage.googleapis.com/v1beta/models';
 const SAMBANOVA_API_BASE = 'https://api.sambanova.ai/v1/chat/completions';
 
@@ -61,6 +62,35 @@ export async function callLLMWithFallback(apiKey, messages, options = {}, signal
     top_p = 0.9,
     stream = false
   } = options;
+
+  const laysoApiKey = process.env.LAYSO_API_KEY;
+  const laysoModel = process.env.LAYSO_MODEL || 'grok-4.6';
+
+  // LAYSO is the primary gateway; it uses the OpenAI-compatible request format.
+  if (laysoApiKey) {
+    try {
+      console.log(`[LLM-Fallback] Trying LAYSO ${laysoModel} (${source})`);
+      const laysoResponse = await fetch(LAYSO_API_BASE, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${laysoApiKey}`,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ model: laysoModel, temperature, max_tokens, top_p, messages, stream }),
+        signal
+      });
+
+      if (laysoResponse.ok) {
+        console.log(`[LLM-Fallback] LAYSO ${laysoModel} succeeded (${source})`);
+        return laysoResponse;
+      }
+
+      const errText = await laysoResponse.text().catch(() => '');
+      console.warn(`[LLM-Fallback] LAYSO ${laysoModel} -> ${laysoResponse.status}: ${errText.slice(0, 160)}`);
+    } catch (err) {
+      console.warn(`[LLM-Fallback] LAYSO ${laysoModel} error:`, err.message);
+    }
+  }
 
   // Build Groq model list: requested model first, then fallbacks
   const groqModels = [model, ...GROQ_FALLBACK_MODELS.filter(m => m !== model)];
@@ -199,6 +229,34 @@ export async function streamLLMWithFallback(res, groqApiKey, messages, options =
 
   let apiResponse = null;
   let usedGemini = false;
+
+  const laysoApiKey = process.env.LAYSO_API_KEY;
+  const laysoModel = process.env.LAYSO_MODEL || 'grok-4.6';
+
+  if (laysoApiKey) {
+    try {
+      console.log(`[LLM-Fallback-Stream] Trying LAYSO ${laysoModel}`);
+      apiResponse = await fetch(LAYSO_API_BASE, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${laysoApiKey}`,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ model: laysoModel, temperature, max_tokens, top_p, messages, stream: true }),
+        signal: controller.signal
+      });
+
+      if (apiResponse.ok) {
+        console.log(`[LLM-Fallback-Stream] LAYSO ${laysoModel} succeeded`);
+        return handleGroqStream(res, apiResponse, timer, controller);
+      }
+
+      const laysoError = await apiResponse.text().catch(() => '');
+      console.warn(`[LLM-Fallback-Stream] LAYSO ${laysoModel} -> ${apiResponse.status}: ${laysoError.slice(0, 160)}`);
+    } catch (err) {
+      console.warn(`[LLM-Fallback-Stream] LAYSO ${laysoModel} error:`, err.message);
+    }
+  }
 
   // Try Groq first (streaming)
   const groqModels = [model, ...GROQ_FALLBACK_MODELS.filter(m => m !== model)];
