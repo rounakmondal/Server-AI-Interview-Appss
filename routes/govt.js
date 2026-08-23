@@ -667,9 +667,6 @@ async function generateQuestionsBatched(exam, subject, difficulty, totalCount, l
     : 'HARD: advanced — complex multi-step problems, tricky distractor options designed to catch unprepared students.';
 
   // Build exam-aware system prompt
-  if (!EXAM_SYLLABUS || typeof EXAM_SYLLABUS !== 'object') {
-    throw new Error('EXAM_SYLLABUS is not properly initialized in generateQuestionsBatched');
-  }
   const EXAM_SYL = getExamSyllabus();
   const examSyllabus = EXAM_SYL[exam] || EXAM_SYL['WBCS'];
   const examPattern = examSyllabus.pattern;
@@ -1708,8 +1705,16 @@ router.get('/questions', async (req, res) => {
     } catch (err) {
       console.error('[govt /questions] Streaming failed:', err.message);
       console.error('[govt /questions] Stack:', err.stack);
-      console.error('[govt /questions] EXAM_SYLLABUS exists:', !!EXAM_SYLLABUS);
-      res.write(`event: error\ndata: ${JSON.stringify({ error: 'Failed to generate questions: ' + err.message })}\n\n`);
+      const fallback = (await loadLocalExamQuestions(exam, n))
+        .filter(isValidQuestion)
+        .slice(0, n)
+        .map((question, index) => ({ ...question, id: index + 1, exam, subject, difficulty }));
+      if (fallback.length > 0) {
+        res.write(`data: ${JSON.stringify(fallback)}\n\n`);
+        res.write('event: end\ndata: \n\n');
+      } else {
+        res.write(`event: error\ndata: ${JSON.stringify({ error: 'Failed to generate questions' })}\n\n`);
+      }
       res.end();
     }
   } catch (err) {
