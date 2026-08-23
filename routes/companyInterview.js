@@ -369,14 +369,14 @@ const CACHE_TTL_MS = 24 * 60 * 60 * 1000; // 24 hours
 
 // ─── Groq helper ─────────────────────────────────────────────────────────────
 const GROQ_MODELS = [
-  process.env.GROQ_MODEL || 'llama-3.3-70b-versatile',
+  process.env.GROQ_MODEL || 'llama-3.1-8b-instant',
   'openai/gpt-oss-120b',
   'openai/gpt-oss-20b',
   'llama-3.1-8b-instant',
 ];
 
 const MODEL_TOKEN_CAPS = {
-  'llama-3.3-70b-versatile': 8000,
+  'llama-3.1-8b-instant': 4000,
   'openai/gpt-oss-120b':     4000,
   'openai/gpt-oss-20b':      4000,
   'llama-3.1-8b-instant':    4000,

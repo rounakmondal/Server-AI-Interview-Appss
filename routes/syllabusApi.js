@@ -55,7 +55,7 @@ router.get('/exams-list', (req, res) => {
 // ─── Helper: AI API with Groq → SambaNova fallback ──────────────────────────
 
 const GROQ_MODELS = [
-    'llama-3.3-70b-versatile',
+    process.env.GROQ_MODEL || 'llama-3.1-8b-instant',
     'llama-3.1-8b-instant',
 ];
 
@@ -593,7 +593,7 @@ Format:
                     { role: 'system', content: systemPrompt },
                     { role: 'user', content: userPrompt }
                 ],
-                { model: 'llama-3.3-70b-versatile', temperature: 0.7, max_tokens: 6000, stream: false },
+                { model: process.env.GROQ_MODEL || 'llama-3.1-8b-instant', temperature: 0.7, max_tokens: 6000, stream: false },
                 null,
                 'chapter-ai-questions'
             );

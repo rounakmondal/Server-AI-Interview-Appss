@@ -153,7 +153,7 @@ Output JSON:
             { role: 'system', content: systemPrompt },
             { role: 'user',   content: userPrompt },
           ],
-          { model: 'llama-3.3-70b-versatile', temperature: 0.3, max_tokens: 1000, stream: false },
+          { model: process.env.GROQ_MODEL || 'llama-3.1-8b-instant', temperature: 0.3, max_tokens: 1000, stream: false },
           null,
           'personal-dashboard',
         );
@@ -225,7 +225,7 @@ Return JSON array only:
         { role: 'system', content: systemPrompt },
         { role: 'user',   content: userPrompt },
       ],
-      { model: 'llama-3.3-70b-versatile', temperature: 0.7, max_tokens: 4000, stream: false },
+      { model: process.env.GROQ_MODEL || 'llama-3.1-8b-instant', temperature: 0.7, max_tokens: 4000, stream: false },
       null,
       'weak-area-test',
     );
@@ -514,7 +514,7 @@ router.post('/post-test-analytics', async (req, res) => {
           { role: 'system', content: systemPrompt },
           { role: 'user',   content: userPrompt },
         ],
-        { model: 'llama-3.3-70b-versatile', temperature: 0.6, max_tokens: 900, stream: false },
+        { model: process.env.GROQ_MODEL || 'llama-3.1-8b-instant', temperature: 0.6, max_tokens: 900, stream: false },
         null,
         'post-test-analytics',
       );

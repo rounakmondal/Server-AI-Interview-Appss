@@ -87,7 +87,7 @@ Format:
     const resp = await callLLMWithFallback(
         process.env.GROQ_API_KEY,
         [{ role: 'system', content: systemPrompt }, { role: 'user', content: `Generate ${count} ${difficulty} MCQ questions on ${chapter.name} for ${exam.name}.` }],
-        { model: 'llama-3.3-70b-versatile', temperature: 0.7, max_tokens: 6000, stream: false },
+        { model: process.env.GROQ_MODEL || 'llama-3.1-8b-instant', temperature: 0.7, max_tokens: 6000, stream: false },
         null,
         'exam-room-questions',
     );

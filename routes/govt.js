@@ -107,7 +107,7 @@ function getExamSyllabus() {
 // NOTE: openai/gpt-oss-120b is intentionally placed LAST.
 // It tends to truncate large JSON responses. We prefer llama models first.
 const GROQ_MODELS = [
-  'llama-3.3-70b-versatile',
+  process.env.GROQ_MODEL || 'llama-3.1-8b-instant',
   'llama-3.1-8b-instant',
   'openai/gpt-oss-120b',
 ];
@@ -115,7 +115,7 @@ const GROQ_MODELS = [
 // Max tokens each model can reliably produce without truncation.
 // openai/gpt-oss-120b consistently truncates above ~1500 tokens.
 const MODEL_TOKEN_CAPS = {
-  'llama-3.3-70b-versatile': 8000,
+  'llama-3.1-8b-instant': 4000,
   'llama-3.1-8b-instant':    4000,
   'openai/gpt-oss-120b':     1200, // conservative cap to avoid truncation
 };
@@ -132,7 +132,7 @@ async function callGroq(systemPrompt, userPrompt, maxTokens = 2000) {
       { role: 'user', content: userPrompt }
     ],
     {
-      model: 'llama-3.3-70b-versatile',
+      model: process.env.GROQ_MODEL || 'llama-3.1-8b-instant',
       temperature: 0.7,
       max_tokens: maxTokens,
       top_p: 0.9,

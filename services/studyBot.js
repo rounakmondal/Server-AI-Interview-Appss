@@ -128,7 +128,7 @@ async function getGroqChatCompletion(messages, maxTokens = 500) {
     }
 
     const models = [
-        process.env.GROQ_MODEL || 'llama-3.3-70b-versatile',
+        process.env.GROQ_MODEL || 'llama-3.1-8b-instant',
         'openai/gpt-oss-120b',
         'openai/gpt-oss-20b',
         'llama-3.1-8b-instant'

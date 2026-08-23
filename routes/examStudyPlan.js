@@ -11,10 +11,10 @@ const router = Router();
 // ─── Groq helper (non-streaming) ─────────────────────────────────────────────
 
 const GROQ_MODELS = [
-    'llama-3.3-70b-versatile',
+    process.env.GROQ_MODEL || 'llama-3.1-8b-instant',
     'llama-3.1-8b-instant',
     'openai/gpt-oss-120b',
-    'meta-llama/llama-4-scout-17b-16e-instruct'
+    'openai/gpt-oss-20b'
 ];
 
 async function callGroq(systemPrompt, userPrompt, maxTokens = 4000) {

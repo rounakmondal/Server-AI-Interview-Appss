@@ -34,7 +34,7 @@ const SKILL_TOPICS = {
 
 // ─── AI helper: Groq → SambaNova fallback ────────────────────────────────────
 const GROQ_MODELS = [
-  process.env.GROQ_MODEL || 'llama-3.3-70b-versatile',
+  process.env.GROQ_MODEL || 'llama-3.1-8b-instant',
   'openai/gpt-oss-120b',
   'openai/gpt-oss-20b',
   'llama-3.1-8b-instant',
@@ -47,7 +47,7 @@ const SAMBANOVA_MODELS = [
 ];
 
 const MODEL_TOKEN_CAPS = {
-  'llama-3.3-70b-versatile': 6000,
+  'llama-3.1-8b-instant': 4000,
   'openai/gpt-oss-120b':     4000,
   'openai/gpt-oss-20b':      4000,
   'llama-3.1-8b-instant':    4000,

@@ -7,7 +7,7 @@ import { callLLMWithFallback, streamLLMWithFallback, convertGeminiToOpenAI } fro
  */
 
 const GROQ_MODELS = [
-    'llama-3.3-70b-versatile',
+    process.env.GROQ_MODEL || 'llama-3.1-8b-instant',
     'llama-3.1-8b-instant',
 ];
 

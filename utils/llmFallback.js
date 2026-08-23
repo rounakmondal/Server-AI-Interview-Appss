@@ -10,9 +10,9 @@ const SAMBANOVA_API_BASE = 'https://api.sambanova.ai/v1/chat/completions';
 
 // Groq models to try in order (429 is per-model, so rotating helps)
 const GROQ_FALLBACK_MODELS = [
-  'llama-3.3-70b-versatile',
-  'meta-llama/llama-4-scout-17b-16e-instruct',
-  'llama-3.1-70b-versatile',
+  'llama-3.1-8b-instant',
+  'openai/gpt-oss-20b',
+  'openai/gpt-oss-120b',
 ];
 
 // Gemini models to try in order (quota may differ per model)
@@ -55,7 +55,7 @@ function convertToGeminiFormat(messages) {
  */
 export async function callLLMWithFallback(apiKey, messages, options = {}, signal = null, source = 'standard') {
   const {
-    model = 'llama-3.3-70b-versatile',
+    model = process.env.GROQ_MODEL || 'llama-3.1-8b-instant',
     temperature = 0.7,
     max_tokens = 1000,
     top_p = 0.9,
@@ -191,7 +191,7 @@ export async function callLLMWithFallback(apiKey, messages, options = {}, signal
  */
 export async function streamLLMWithFallback(res, groqApiKey, messages, options = {}, controller, timer) {
   const {
-    model = 'llama-3.3-70b-versatile',
+    model = process.env.GROQ_MODEL || 'llama-3.1-8b-instant',
     temperature = 0.7,
     max_tokens = 1000,
     top_p = 0.9
