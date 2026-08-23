@@ -11,7 +11,11 @@ const GROQ_MODELS = [
     'llama-3.1-8b-instant',
 ];
 
-/**
+
+
+
+
+/**  
  * Validates API key configuration
  * @returns {string} API key
  * @throws {Error} If API key is not configured
