@@ -9,6 +9,11 @@ import { callLLMWithFallback } from '../utils/llmFallback.js';
 
 const router = Router();
 
+// Verify EXAM_SYLLABUS is defined before using it
+if (!global.EXAM_SYLLABUS_INITIALIZED) {
+  global.EXAM_SYLLABUS_INITIALIZED = true;
+}
+
 // ─── Valid Enums ──────────────────────────────────────────────────────────────
 
 const VALID_EXAMS        = ['WBCS', 'SSC', 'Railway', 'Banking', 'Police', 'Panchayat'];
@@ -74,6 +79,30 @@ const EXAM_SYLLABUS = {
 };
 
 // ─── Groq Helper ─────────────────────────────────────────────────────────────
+
+// Safe getter for EXAM_SYLLABUS
+function getExamSyllabus() {
+  if (typeof EXAM_SYLLABUS !== 'object' || EXAM_SYLLABUS === null) {
+    console.error('[govt] CRITICAL: EXAM_SYLLABUS is not properly initialized!');
+    console.error('[govt] Type:', typeof EXAM_SYLLABUS);
+    console.error('[govt] Value:', EXAM_SYLLABUS);
+    // Return a minimal fallback
+    return {
+      WBCS: {
+        pattern: 'WBCS Prelims',
+        subjects: {
+          History: { weight: '15%', topics: '', style: '' },
+          Geography: { weight: '12%', topics: '', style: '' },
+          Polity: { weight: '13%', topics: '', style: '' },
+          Math: { weight: '10%', topics: '', style: '' },
+          Reasoning: { weight: '7%', topics: '', style: '' },
+          'Current Affairs': { weight: '8%', topics: '', style: '' },
+        }
+      }
+    };
+  }
+  return EXAM_SYLLABUS;
+}
 
 // NOTE: openai/gpt-oss-120b is intentionally placed LAST.
 // It tends to truncate large JSON responses. We prefer llama models first.
@@ -555,7 +584,8 @@ async function fetchBatchWithTimeout(...args) {
 // Helper function to fetch a batch of questions
 async function fetchBatch(batchSize, startId, exam, subject, difficulty, language, system) {
   // Get exam-specific data or default
-  const examData = EXAM_SYLLABUS[exam] || EXAM_SYLLABUS['WBCS'];
+  const EXAM_SYL = getExamSyllabus();
+  const examData = EXAM_SYL[exam] || EXAM_SYL['WBCS'];
   const subjectData = examData.subjects[subject] || {};
   const topicHint = subjectData.topics
     ? `\n- SYLLABUS TOPICS (cover these): ${subjectData.topics}`
@@ -637,7 +667,11 @@ async function generateQuestionsBatched(exam, subject, difficulty, totalCount, l
     : 'HARD: advanced — complex multi-step problems, tricky distractor options designed to catch unprepared students.';
 
   // Build exam-aware system prompt
-  const examSyllabus = EXAM_SYLLABUS[exam] || EXAM_SYLLABUS['WBCS'];
+  if (!EXAM_SYLLABUS || typeof EXAM_SYLLABUS !== 'object') {
+    throw new Error('EXAM_SYLLABUS is not properly initialized in generateQuestionsBatched');
+  }
+  const EXAM_SYL = getExamSyllabus();
+  const examSyllabus = EXAM_SYL[exam] || EXAM_SYL['WBCS'];
   const examPattern = examSyllabus.pattern;
   const subjectMeta = examSyllabus.subjects[subject] || {};
 
@@ -1673,11 +1707,19 @@ router.get('/questions', async (req, res) => {
       res.end();
     } catch (err) {
       console.error('[govt /questions] Streaming failed:', err.message);
-      res.write(`event: error\ndata: ${JSON.stringify({ error: 'Failed to generate questions' })}\n\n`);
+      console.error('[govt /questions] Stack:', err.stack);
+      console.error('[govt /questions] EXAM_SYLLABUS exists:', !!EXAM_SYLLABUS);
+      res.write(`event: error\ndata: ${JSON.stringify({ error: 'Failed to generate questions: ' + err.message })}\n\n`);
       res.end();
     }
   } catch (err) {
     console.error('[govt /questions] AI+cache failed, using fallback chain:', err.message);
+    console.error('[govt /questions] Error details:', {
+      message: err.message,
+      stack: err.stack,
+      exam_syllabus_exists: !!EXAM_SYLLABUS,
+      exam_parameter: exam
+    });
 
     // ── Fallback Tier A: Local JSON files from public/ directory ──
     let pool = await loadLocalExamQuestions(exam, n);

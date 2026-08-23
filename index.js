@@ -69,7 +69,7 @@ const ALLOWED_ORIGINS = [
     'http://127.0.0.1:5002',
     'http://localhost:8080',
     'https://medhahub.in',
-    'https://medhahub.in'
+    'https://www.medhahub.in',
 ];
 app.use(cors({
     origin: (origin, callback) => {
