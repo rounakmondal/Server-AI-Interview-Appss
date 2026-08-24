@@ -279,6 +279,14 @@ function extractJSON(text) {
  */
 function repairTruncatedJSON(partial, isArray) {
   try {
+    if (isArray) {
+      const recovered = salvageCompleteArrayObjects(partial);
+      if (recovered.length > 0) {
+        console.log(`[repairJSON] Recovered ${recovered.length} complete array items`);
+        return recovered;
+      }
+    }
+
     // Track bracket stack to know what needs closing
     const stack    = [];
     let inString   = false;
@@ -332,6 +340,48 @@ function repairTruncatedJSON(partial, isArray) {
     console.error(`[repairJSON] Repair failed: ${err.message}`);
     return null;
   }
+}
+
+function salvageCompleteArrayObjects(partial) {
+  const recovered = [];
+  let objectStart = -1;
+  let depth = 0;
+  let inString = false;
+  let escapeNext = false;
+
+  for (let i = 1; i < partial.length; i++) {
+    const char = partial[i];
+    if (escapeNext) {
+      escapeNext = false;
+      continue;
+    }
+    if (char === '\\') {
+      escapeNext = true;
+      continue;
+    }
+    if (char === '"') {
+      inString = !inString;
+      continue;
+    }
+    if (inString) continue;
+
+    if (char === '{') {
+      if (depth === 0) objectStart = i;
+      depth++;
+    } else if (char === '}') {
+      depth--;
+      if (depth === 0 && objectStart !== -1) {
+        try {
+          recovered.push(JSON.parse(partial.slice(objectStart, i + 1)));
+        } catch {
+          // Ignore an incomplete or malformed object and keep earlier items.
+        }
+        objectStart = -1;
+      }
+    }
+  }
+
+  return recovered;
 }
 
 // ─── MongoDB Question Cache ───────────────────────────────────────────────────
@@ -621,7 +671,8 @@ ${language !== 'English' ? `\nIMPORTANT: Write the "question" and "options" valu
 Return ONLY a JSON array of exactly ${batchSize} objects. No markdown fences. No preamble.`;
 
   // ~350 tokens per question for optimized token usage
-  const tokenBudget = batchSize * 350 + 200;
+  // Leave enough room for explanations without truncating the JSON array.
+  const tokenBudget = batchSize * 650 + 300;
 
   const questions = await fetchJSONFromGroq(system, user, tokenBudget, 2);
 
