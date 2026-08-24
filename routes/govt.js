@@ -107,8 +107,8 @@ function getExamSyllabus() {
 // NOTE: openai/gpt-oss-120b is intentionally placed LAST.
 // It tends to truncate large JSON responses. We prefer llama models first.
 const GROQ_MODELS = [
-  process.env.GROQ_MODEL || 'llama-3.1-8b-instant',
-  'llama-3.1-8b-instant',
+  process.env.GROQ_MODEL || 'openai/gpt-oss-20b',
+  'openai/gpt-oss-20b',
   'openai/gpt-oss-120b',
 ];
 
@@ -132,7 +132,7 @@ async function callGroq(systemPrompt, userPrompt, maxTokens = 2000) {
       { role: 'user', content: userPrompt }
     ],
     {
-      model: process.env.GROQ_MODEL || 'llama-3.1-8b-instant',
+      model: process.env.GROQ_MODEL || 'openai/gpt-oss-20b',
       temperature: 0.7,
       max_tokens: maxTokens,
       top_p: 0.9,
