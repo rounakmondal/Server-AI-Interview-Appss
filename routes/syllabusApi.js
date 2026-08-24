@@ -52,111 +52,40 @@ router.get('/exams-list', (req, res) => {
     }
 });
 
-// ─── Helper: AI API with Groq → SambaNova fallback ──────────────────────────
-
-const GROQ_MODELS = [
-    process.env.GROQ_MODEL || 'llama-3.1-8b-instant',
-    'llama-3.1-8b-instant',
-];
-
-const SAMBANOVA_MODELS = [
-    'Meta-Llama-3.3-70B-Instruct',
-    'Meta-Llama-3.1-70B-Instruct',
-    'Meta-Llama-3.1-8B-Instruct',
-];
-
+// ─── Helper: use the centralized Layso-first provider chain ─────────────────
 async function callGroq(systemPrompt, userPrompt, maxTokens = 4000) {
-    const groqKey = process.env.GROQ_API_KEY;
-    const sambaKey = process.env.SAMBANOVA_API_KEY;
-
     const messages = [
         { role: 'system', content: systemPrompt },
         { role: 'user', content: userPrompt },
     ];
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 60_000);
 
-    // ── Try Groq models ──
-    if (groqKey) {
-        for (const model of GROQ_MODELS) {
-            const controller = new AbortController();
-            const timer = setTimeout(() => controller.abort(), 60_000);
-            try {
-                const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
-                    method: 'POST',
-                    headers: {
-                        Authorization: `Bearer ${groqKey}`,
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        model,
-                        temperature: 0.7,
-                        max_tokens: maxTokens,
-                        messages,
-                    }),
-                    signal: controller.signal,
-                });
-                clearTimeout(timer);
+    try {
+        const response = await callLLMWithFallback(
+            process.env.LAYSO_API_KEY || process.env.GROQ_API_KEY,
+            messages,
+            {
+                model: process.env.LAYSO_MODEL || process.env.GROQ_MODEL || 'llama-3.1-8b-instant',
+                temperature: 0.7,
+                max_tokens: maxTokens,
+            },
+            controller.signal,
+            'syllabus'
+        );
 
-                if (!res.ok) {
-                    console.warn(`[syllabusApi] Groq ${model} HTTP ${res.status}`);
-                    continue;
-                }
-                const data = await res.json();
-                const content = data.choices?.[0]?.message?.content?.trim();
-                if (!content) {
-                    console.warn(`[syllabusApi] Groq ${model} empty content`);
-                    continue;
-                }
-                console.log(`[syllabusApi] success with Groq ${model}`);
-                return content;
-            } catch (err) {
-                clearTimeout(timer);
-                console.warn(`[syllabusApi] Groq ${model} error:`, err.message);
-            }
+        if (!response.ok) {
+            throw new Error(`AI API error: ${response.status}`);
         }
+
+        const data = await response.json();
+        const normalized = data.candidates ? convertGeminiToOpenAI(data) : data;
+        const content = normalized.choices?.[0]?.message?.content?.trim();
+        if (!content) throw new Error('AI API returned empty content');
+        return content;
+    } finally {
+        clearTimeout(timer);
     }
-
-    // ── Try SambaNova models ──
-    if (sambaKey) {
-        for (const model of SAMBANOVA_MODELS) {
-            const controller = new AbortController();
-            const timer = setTimeout(() => controller.abort(), 60_000);
-            try {
-                const res = await fetch('https://api.sambanova.ai/v1/chat/completions', {
-                    method: 'POST',
-                    headers: {
-                        Authorization: `Bearer ${sambaKey}`,
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        model,
-                        temperature: 0.7,
-                        max_tokens: maxTokens,
-                        messages,
-                    }),
-                    signal: controller.signal,
-                });
-                clearTimeout(timer);
-
-                if (!res.ok) {
-                    console.warn(`[syllabusApi] SambaNova ${model} HTTP ${res.status}`);
-                    continue;
-                }
-                const data = await res.json();
-                const content = data.choices?.[0]?.message?.content?.trim();
-                if (!content) {
-                    console.warn(`[syllabusApi] SambaNova ${model} empty content`);
-                    continue;
-                }
-                console.log(`[syllabusApi] success with SambaNova ${model}`);
-                return content;
-            } catch (err) {
-                clearTimeout(timer);
-                console.warn(`[syllabusApi] SambaNova ${model} error:`, err.message);
-            }
-        }
-    }
-
-    throw new Error('All AI providers failed (Groq + SambaNova)');
 }
 
 function extractJSON(text) {

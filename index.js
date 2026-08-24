@@ -100,7 +100,11 @@ app.get('/api/health', (req, res) => {
     res.json({
         status: 'ok',
         timestamp: new Date().toISOString(),
-        version: '1.0.0'
+        version: '1.0.0',
+        aiProvider: process.env.LAYSO_API_KEY ? 'layso' : process.env.GROQ_API_KEY ? 'groq' : 'unconfigured',
+        aiModel: process.env.LAYSO_API_KEY
+            ? (process.env.LAYSO_MODEL || 'gpt-5.4')
+            : (process.env.GROQ_MODEL || 'llama-3.1-8b-instant')
     });
 });
 

@@ -6,99 +6,57 @@ import {
 } from '../prompts/interviewer.js';
 import { callLLMWithFallback, convertGeminiToOpenAI } from '../utils/llmFallback.js';
 
-// Initialize LLM API client with Groq → Gemini fallback
+// Initialize the configured LLM provider with fallback handling.
 async function getGroqChatCompletion(messages, maxTokens = 500) {
-    const apiKey = process.env.GROQ_API_KEY;
+    const apiKey = process.env.LAYSO_API_KEY || process.env.GROQ_API_KEY;
     if (!apiKey) {
-        throw new Error('GROQ_API_KEY not found in .env');
+        throw new Error('No AI provider configured: set LAYSO_API_KEY or GROQ_API_KEY');
     }
-    
-    // Try multiple models in order of preference (only currently active production models)
-    const models = [
-        process.env.GROQ_MODEL || 'llama-3.1-8b-instant',
-        'openai/gpt-oss-120b',
-        'openai/gpt-oss-20b',
-        'llama-3.1-8b-instant'
-    ];
-    
-    let lastError = null;
-    
-    for (const model of models) {
-        console.log(`Trying LLM model: ${model}`);
 
-        // Add timeout using AbortController
-        const controller = new AbortController();
-        const timeoutId = setTimeout(() => controller.abort(), 30000); // 30 second timeout
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 30_000);
 
-        try {
-            const response = await callLLMWithFallback(
-                apiKey,
-                messages,
-                {
-                    model: model,
-                    temperature: 0.7,
-                    max_tokens: maxTokens,
-                    top_p: 0.9
-                },
-                controller.signal,
-                'interview'
-            );
+    try {
+        const response = await callLLMWithFallback(
+            apiKey,
+            messages,
+            {
+                model: process.env.LAYSO_MODEL || process.env.GROQ_MODEL || 'llama-3.1-8b-instant',
+                temperature: 0.7,
+                max_tokens: maxTokens,
+                top_p: 0.9
+            },
+            controller.signal,
+            'interview'
+        );
 
-            clearTimeout(timeoutId);
-
-            if (!response.ok) {
-                const error = await response.json();
-                console.warn(`Model ${model} API error:`, error.error?.message || response.statusText);
-                lastError = new Error(`API error: ${error.error?.message || response.statusText}`);
-                continue; // Try next model
-            }
-
-            const data = await response.json();
-            
-            // Handle Gemini response format (different from OpenAI)
-            const finalData = data.candidates ? convertGeminiToOpenAI(data) : data;
-            
-            // Log token usage (compact)
-            console.log(`Model ${model} - tokens: ${finalData.usage?.total_tokens || '?'}, finish: ${finalData.choices?.[0]?.finish_reason || '?'}`);
-            
-            if (!finalData.choices || !finalData.choices[0] || !finalData.choices[0].message) {
-                console.warn(`Model ${model} invalid response structure`);
-                lastError = new Error('Invalid API response structure: ' + JSON.stringify(finalData));
-                continue; // Try next model
-            }
-            
-            let content = finalData.choices[0].message.content;
-            const finishReason = finalData.choices[0].finish_reason;
-
-            // Strip <think>...</think> reasoning tokens (e.g. DeepSeek-R1 via SambaNova)
-            if (content) {
-                content = content.replace(/<think>[\s\S]*?<\/think>/g, '').trim();
-            }
-            
-            // Check if content is null or empty
-            if (content === null || content === undefined || content.trim() === '') {
-                console.warn(`Model ${model} returned empty content. Finish reason: ${finishReason}`);
-                lastError = new Error(`API returned empty content. Finish reason: ${finishReason || 'unknown'}`);
-                continue; // Try next model
-            }
-            
-            console.log(`Success with model: ${model}`);
-            return content.trim();
-            
-        } catch (error) {
-            clearTimeout(timeoutId);
-            if (error.name === 'AbortError') {
-                lastError = new Error('API request timed out after 30 seconds');
-            } else {
-                lastError = error;
-            }
-            console.warn(`Model ${model} failed:`, lastError.message);
-            continue; // Try next model
+        if (!response.ok) {
+            const error = await response.json().catch(() => ({}));
+            throw new Error(`AI API error: ${error.error?.message || response.statusText}`);
         }
+
+        const data = await response.json();
+        const finalData = data.candidates ? convertGeminiToOpenAI(data) : data;
+        let content = finalData.choices?.[0]?.message?.content;
+
+        if (content) {
+            content = content.replace(/<think>[\s\S]*?<\/think>/g, '').trim();
+        }
+
+        if (!content) {
+            throw new Error('AI API returned empty content');
+        }
+
+        console.log(`Interview AI response received: ${content.length} chars`);
+        return content;
+    } catch (error) {
+        if (error.name === 'AbortError') {
+            throw new Error('AI request timed out after 30 seconds');
+        }
+        throw error;
+    } finally {
+        clearTimeout(timeoutId);
     }
-    
-    // All models failed
-    throw lastError || new Error('All models failed');
 }
 
 // Analyze if answer needs follow-up
